@@ -1,0 +1,749 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="dc/d4c/ConsoleCommand_8h" kind="file">
+    <compoundname>ConsoleCommand.h</compoundname>
+    <includes refid="d1/db6/ErrorManager_8h" local="yes">../../Lib/Error/ErrorManager.h</includes>
+    <includes refid="d0/d10/Scalar_8h" local="yes">../../Lib/Math/Formats/Scalar.h</includes>
+    <includes local="yes">ConsoleCommand.inl</includes>
+    <includedby refid="d3/d63/ConsoleManager_8h" local="yes">ConsoleManager.h</includedby>
+    <includedby refid="da/dbc/ConsoleEnvironment_8h" local="yes">ConsoleEnvironment.h</includedby>
+    <includedby refid="d2/db9/CommandHelp_8h" local="yes">CommandHelp.h</includedby>
+    <includedby refid="dc/db5/CommandLookup_8h" local="yes">CommandLookup.h</includedby>
+    <includedby refid="d9/dcf/CommandEcho_8h" local="yes">CommandEcho.h</includedby>
+    <includedby refid="d2/d3d/CommandClear_8h" local="yes">CommandClear.h</includedby>
+    <includedby refid="d4/d7d/CommandDump_8h" local="yes">CommandDump.h</includedby>
+    <includedby refid="d3/d0e/CommandRun_8h" local="yes">CommandRun.h</includedby>
+    <includedby refid="d0/d26/CommandVar_8h" local="yes">CommandVar.h</includedby>
+    <includedby refid="db/db6/CommandVarNew_8h" local="yes">CommandVarNew.h</includedby>
+    <includedby refid="d8/d1e/CommandVarDel_8h" local="yes">CommandVarDel.h</includedby>
+    <includedby refid="df/d73/CommandVarSet_8h" local="yes">CommandVarSet.h</includedby>
+    <includedby refid="d8/d84/CommandShowTree_8h" local="yes">CommandShowTree.h</includedby>
+    <includedby refid="db/d8b/CommandRDB_8h" local="yes">CommandRDB.h</includedby>
+    <includedby refid="dc/db1/CommandOpen_8h" local="yes">CommandOpen.h</includedby>
+    <includedby refid="db/d14/CommandClose_8h" local="yes">CommandClose.h</includedby>
+    <includedby refid="d4/d98/CommandCreate_8h" local="yes">CommandCreate.h</includedby>
+    <includedby refid="da/d5c/CommandDestroy_8h" local="yes">CommandDestroy.h</includedby>
+    <includedby refid="d6/da1/CommandCWD_8h" local="yes">CommandCWD.h</includedby>
+    <includedby refid="db/da2/CommandList_8h" local="yes">CommandList.h</includedby>
+    <includedby refid="d2/d08/CommandInspect_8h" local="yes">CommandInspect.h</includedby>
+    <includedby refid="da/d4c/CommandRename_8h" local="yes">CommandRename.h</includedby>
+    <includedby refid="d5/d5b/CommandMove_8h" local="yes">CommandMove.h</includedby>
+    <includedby refid="dc/db1/CommandLoad_8h" local="yes">CommandLoad.h</includedby>
+    <includedby refid="d1/df6/CommandSave_8h" local="yes">CommandSave.h</includedby>
+    <includedby refid="d5/d90/CommandImport_8h" local="yes">CommandImport.h</includedby>
+    <includedby refid="d3/dd7/CommandExport_8h" local="yes">CommandExport.h</includedby>
+    <incdepgraph>
+      <node id="6125">
+        <label>SSE.inl</label>
+      </node>
+      <node id="6131">
+        <label>Threading.h</label>
+        <link refid="dd/d0e/Threading_8h"/>
+        <childnode refid="6117" relation="include">
+        </childnode>
+        <childnode refid="6119" relation="include">
+        </childnode>
+        <childnode refid="6132" relation="include">
+        </childnode>
+      </node>
+      <node id="6114">
+        <label>ConsoleCommand.h</label>
+        <link refid="ConsoleCommand.h"/>
+        <childnode refid="6115" relation="include">
+        </childnode>
+        <childnode refid="6137" relation="include">
+        </childnode>
+        <childnode refid="6139" relation="include">
+        </childnode>
+      </node>
+      <node id="6116">
+        <label>../../ThirdParty/System/System.h</label>
+        <link refid="db/d39/System_8h"/>
+        <childnode refid="6117" relation="include">
+        </childnode>
+        <childnode refid="6119" relation="include">
+        </childnode>
+        <childnode refid="6121" relation="include">
+        </childnode>
+        <childnode refid="6127" relation="include">
+        </childnode>
+        <childnode refid="6129" relation="include">
+        </childnode>
+        <childnode refid="6131" relation="include">
+        </childnode>
+        <childnode refid="6133" relation="include">
+        </childnode>
+        <childnode refid="6135" relation="include">
+        </childnode>
+      </node>
+      <node id="6132">
+        <label>Threading.inl</label>
+      </node>
+      <node id="6119">
+        <label>Platform.h</label>
+        <link refid="d9/dd0/Platform_8h"/>
+        <childnode refid="6120" relation="include">
+        </childnode>
+      </node>
+      <node id="6123">
+        <label>FPU.inl</label>
+      </node>
+      <node id="6137">
+        <label>../../Lib/Math/Formats/Scalar.h</label>
+        <link refid="d0/d10/Scalar_8h"/>
+        <childnode refid="6119" relation="include">
+        </childnode>
+        <childnode refid="6138" relation="include">
+        </childnode>
+      </node>
+      <node id="6130">
+        <label>File.inl</label>
+      </node>
+      <node id="6121">
+        <label>Hardware/Hardware.h</label>
+        <link refid="da/dec/Hardware_8h"/>
+        <childnode refid="6119" relation="include">
+        </childnode>
+        <childnode refid="6122" relation="include">
+        </childnode>
+        <childnode refid="6124" relation="include">
+        </childnode>
+        <childnode refid="6126" relation="include">
+        </childnode>
+      </node>
+      <node id="6126">
+        <label>Hardware.inl</label>
+      </node>
+      <node id="6138">
+        <label>Scalar.inl</label>
+      </node>
+      <node id="6128">
+        <label>String.inl</label>
+      </node>
+      <node id="6139">
+        <label>ConsoleCommand.inl</label>
+      </node>
+      <node id="6122">
+        <label>FPU.h</label>
+        <link refid="dd/d2f/FPU_8h"/>
+        <childnode refid="6119" relation="include">
+        </childnode>
+        <childnode refid="6123" relation="include">
+        </childnode>
+      </node>
+      <node id="6127">
+        <label>String.h</label>
+        <link refid="d9/dba/String_8h"/>
+        <childnode refid="6117" relation="include">
+        </childnode>
+        <childnode refid="6119" relation="include">
+        </childnode>
+        <childnode refid="6122" relation="include">
+        </childnode>
+        <childnode refid="6128" relation="include">
+        </childnode>
+      </node>
+      <node id="6120">
+        <label>Platform.inl</label>
+      </node>
+      <node id="6135">
+        <label>System.inl</label>
+      </node>
+      <node id="6133">
+        <label>Networking.h</label>
+        <link refid="df/dfb/Networking_8h"/>
+        <childnode refid="6117" relation="include">
+        </childnode>
+        <childnode refid="6119" relation="include">
+        </childnode>
+        <childnode refid="6134" relation="include">
+        </childnode>
+      </node>
+      <node id="6129">
+        <label>File.h</label>
+        <link refid="d6/db7/File_8h"/>
+        <childnode refid="6117" relation="include">
+        </childnode>
+        <childnode refid="6119" relation="include">
+        </childnode>
+        <childnode refid="6127" relation="include">
+        </childnode>
+        <childnode refid="6130" relation="include">
+        </childnode>
+      </node>
+      <node id="6118">
+        <label>ForwardWin32.inl</label>
+      </node>
+      <node id="6124">
+        <label>SSE.h</label>
+        <link refid="d0/d02/SSE_8h"/>
+        <childnode refid="6119" relation="include">
+        </childnode>
+        <childnode refid="6125" relation="include">
+        </childnode>
+      </node>
+      <node id="6134">
+        <label>Networking.inl</label>
+      </node>
+      <node id="6136">
+        <label>ErrorManager.inl</label>
+      </node>
+      <node id="6117">
+        <label>../Forwards/ForwardWin32.h</label>
+        <link refid="d5/dea/ForwardWin32_8h"/>
+        <childnode refid="6118" relation="include">
+        </childnode>
+      </node>
+      <node id="6115">
+        <label>../../Lib/Error/ErrorManager.h</label>
+        <link refid="d1/db6/ErrorManager_8h"/>
+        <childnode refid="6116" relation="include">
+        </childnode>
+        <childnode refid="6136" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="6152">
+        <label>CommandClear.h</label>
+        <link refid="d2/d3d/CommandClear_8h"/>
+        <childnode refid="6141" relation="include">
+        </childnode>
+      </node>
+      <node id="6172">
+        <label>CommandImport.h</label>
+        <link refid="d5/d90/CommandImport_8h"/>
+        <childnode refid="6141" relation="include">
+        </childnode>
+      </node>
+      <node id="6147">
+        <label>MyDungeon.h</label>
+        <link refid="d0/de7/MyDungeon_8h"/>
+        <childnode refid="6145" relation="include">
+        </childnode>
+      </node>
+      <node id="6140">
+        <label>ConsoleCommand.h</label>
+        <link refid="ConsoleCommand.h"/>
+        <childnode refid="6141" relation="include">
+        </childnode>
+        <childnode refid="6148" relation="include">
+        </childnode>
+        <childnode refid="6149" relation="include">
+        </childnode>
+        <childnode refid="6150" relation="include">
+        </childnode>
+        <childnode refid="6151" relation="include">
+        </childnode>
+        <childnode refid="6152" relation="include">
+        </childnode>
+        <childnode refid="6153" relation="include">
+        </childnode>
+        <childnode refid="6154" relation="include">
+        </childnode>
+        <childnode refid="6155" relation="include">
+        </childnode>
+        <childnode refid="6156" relation="include">
+        </childnode>
+        <childnode refid="6157" relation="include">
+        </childnode>
+        <childnode refid="6158" relation="include">
+        </childnode>
+        <childnode refid="6159" relation="include">
+        </childnode>
+        <childnode refid="6160" relation="include">
+        </childnode>
+        <childnode refid="6161" relation="include">
+        </childnode>
+        <childnode refid="6162" relation="include">
+        </childnode>
+        <childnode refid="6163" relation="include">
+        </childnode>
+        <childnode refid="6164" relation="include">
+        </childnode>
+        <childnode refid="6165" relation="include">
+        </childnode>
+        <childnode refid="6166" relation="include">
+        </childnode>
+        <childnode refid="6167" relation="include">
+        </childnode>
+        <childnode refid="6168" relation="include">
+        </childnode>
+        <childnode refid="6169" relation="include">
+        </childnode>
+        <childnode refid="6170" relation="include">
+        </childnode>
+        <childnode refid="6171" relation="include">
+        </childnode>
+        <childnode refid="6172" relation="include">
+        </childnode>
+        <childnode refid="6173" relation="include">
+        </childnode>
+      </node>
+      <node id="6162">
+        <label>CommandClose.h</label>
+        <link refid="db/d14/CommandClose_8h"/>
+        <childnode refid="6141" relation="include">
+        </childnode>
+      </node>
+      <node id="6171">
+        <label>CommandSave.h</label>
+        <link refid="d1/df6/CommandSave_8h"/>
+        <childnode refid="6141" relation="include">
+        </childnode>
+      </node>
+      <node id="6155">
+        <label>CommandVar.h</label>
+        <link refid="d0/d26/CommandVar_8h"/>
+        <childnode refid="6141" relation="include">
+        </childnode>
+      </node>
+      <node id="6167">
+        <label>CommandInspect.h</label>
+        <link refid="d2/d08/CommandInspect_8h"/>
+        <childnode refid="6141" relation="include">
+        </childnode>
+      </node>
+      <node id="6145">
+        <label>Main.h</label>
+        <link refid="da/d94/Main_8h"/>
+      </node>
+      <node id="6158">
+        <label>CommandVarSet.h</label>
+        <link refid="df/d73/CommandVarSet_8h"/>
+        <childnode refid="6141" relation="include">
+        </childnode>
+      </node>
+      <node id="6166">
+        <label>CommandList.h</label>
+        <link refid="db/da2/CommandList_8h"/>
+        <childnode refid="6141" relation="include">
+        </childnode>
+      </node>
+      <node id="6153">
+        <label>CommandDump.h</label>
+        <link refid="d4/d7d/CommandDump_8h"/>
+        <childnode refid="6141" relation="include">
+        </childnode>
+      </node>
+      <node id="6148">
+        <label>ConsoleEnvironment.h</label>
+        <link refid="da/dbc/ConsoleEnvironment_8h"/>
+        <childnode refid="6141" relation="include">
+        </childnode>
+      </node>
+      <node id="6164">
+        <label>CommandDestroy.h</label>
+        <link refid="da/d5c/CommandDestroy_8h"/>
+        <childnode refid="6141" relation="include">
+        </childnode>
+      </node>
+      <node id="6149">
+        <label>CommandHelp.h</label>
+        <link refid="d2/db9/CommandHelp_8h"/>
+        <childnode refid="6141" relation="include">
+        </childnode>
+      </node>
+      <node id="6159">
+        <label>CommandShowTree.h</label>
+        <link refid="d8/d84/CommandShowTree_8h"/>
+        <childnode refid="6141" relation="include">
+        </childnode>
+      </node>
+      <node id="6146">
+        <label>MyLandscape.h</label>
+        <link refid="d7/d2b/MyLandscape_8h"/>
+        <childnode refid="6145" relation="include">
+        </childnode>
+      </node>
+      <node id="6143">
+        <label>ApplicationManager.h</label>
+        <link refid="d2/d9d/ApplicationManager_8h"/>
+        <childnode refid="6144" relation="include">
+        </childnode>
+        <childnode refid="6145" relation="include">
+        </childnode>
+        <childnode refid="6146" relation="include">
+        </childnode>
+        <childnode refid="6147" relation="include">
+        </childnode>
+      </node>
+      <node id="6151">
+        <label>CommandEcho.h</label>
+        <link refid="d9/dcf/CommandEcho_8h"/>
+        <childnode refid="6141" relation="include">
+        </childnode>
+      </node>
+      <node id="6169">
+        <label>CommandMove.h</label>
+        <link refid="d5/d5b/CommandMove_8h"/>
+        <childnode refid="6141" relation="include">
+        </childnode>
+      </node>
+      <node id="6142">
+        <label>WindowApplication.h</label>
+        <link refid="d4/d72/WindowApplication_8h"/>
+        <childnode refid="6143" relation="include">
+        </childnode>
+      </node>
+      <node id="6160">
+        <label>CommandRDB.h</label>
+        <link refid="db/d8b/CommandRDB_8h"/>
+        <childnode refid="6141" relation="include">
+        </childnode>
+      </node>
+      <node id="6168">
+        <label>CommandRename.h</label>
+        <link refid="da/d4c/CommandRename_8h"/>
+        <childnode refid="6141" relation="include">
+        </childnode>
+      </node>
+      <node id="6156">
+        <label>CommandVarNew.h</label>
+        <link refid="db/db6/CommandVarNew_8h"/>
+        <childnode refid="6141" relation="include">
+        </childnode>
+      </node>
+      <node id="6150">
+        <label>CommandLookup.h</label>
+        <link refid="dc/db5/CommandLookup_8h"/>
+        <childnode refid="6141" relation="include">
+        </childnode>
+      </node>
+      <node id="6163">
+        <label>CommandCreate.h</label>
+        <link refid="d4/d98/CommandCreate_8h"/>
+        <childnode refid="6141" relation="include">
+        </childnode>
+      </node>
+      <node id="6144">
+        <label>Entities.h</label>
+        <link refid="d7/d5d/Entities_8h"/>
+        <childnode refid="6145" relation="include">
+        </childnode>
+      </node>
+      <node id="6170">
+        <label>CommandLoad.h</label>
+        <link refid="dc/db1/CommandLoad_8h"/>
+        <childnode refid="6141" relation="include">
+        </childnode>
+      </node>
+      <node id="6141">
+        <label>ConsoleManager.h</label>
+        <link refid="d3/d63/ConsoleManager_8h"/>
+        <childnode refid="6142" relation="include">
+        </childnode>
+      </node>
+      <node id="6161">
+        <label>CommandOpen.h</label>
+        <link refid="dc/db1/CommandOpen_8h"/>
+        <childnode refid="6141" relation="include">
+        </childnode>
+      </node>
+      <node id="6157">
+        <label>CommandVarDel.h</label>
+        <link refid="d8/d1e/CommandVarDel_8h"/>
+        <childnode refid="6141" relation="include">
+        </childnode>
+      </node>
+      <node id="6154">
+        <label>CommandRun.h</label>
+        <link refid="d3/d0e/CommandRun_8h"/>
+        <childnode refid="6141" relation="include">
+        </childnode>
+      </node>
+      <node id="6165">
+        <label>CommandCWD.h</label>
+        <link refid="d6/da1/CommandCWD_8h"/>
+        <childnode refid="6141" relation="include">
+        </childnode>
+      </node>
+      <node id="6173">
+        <label>CommandExport.h</label>
+        <link refid="d3/dd7/CommandExport_8h"/>
+        <childnode refid="6141" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d2/d07/structConsoleCommandArgument" prot="public">ConsoleCommandArgument</innerclass>
+    <innerclass refid="db/df6/classConsoleCommand" prot="public">ConsoleCommand</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="dc/d4c/ConsoleCommand_8h_1a0b920a4930ac6dfa63f5a3b6070061c7" prot="public" static="no">
+        <name>CONSOLECOMMAND_MAGIC_CHAR</name>
+        <initializer><ref refid="d9/dd0/Platform_8h_1a73bc5d2c175e0e221460a8b524c0412b" kindref="member">TEXT</ref>(&apos;/&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleCommand.h" line="35" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleCommand.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dc/d4c/ConsoleCommand_8h_1a6bdd14ebac467d55efcdf9a0247d1be9" prot="public" static="no">
+        <name>CONSOLECOMMAND_NAME_LENGTH</name>
+        <initializer>16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleCommand.h" line="38" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleCommand.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dc/d4c/ConsoleCommand_8h_1a22dd9aeba1b97804f466ea0cc5166153" prot="public" static="no">
+        <name>CONSOLECOMMAND_INPUT_LENGTH</name>
+        <initializer><ref refid="dd/d0b/GUITextInput_8h_1a0c8304a86778ca2d79c0c465afb2f1af" kindref="member">GUITEXTINPUT_MAX_LENGTH</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleCommand.h" line="40" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleCommand.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dc/d4c/ConsoleCommand_8h_1a10f4005c4e8a764b5b3dac9e14b90494" prot="public" static="no">
+        <name>CONSOLECOMMAND_OUTPUT_LENGTH</name>
+        <initializer><ref refid="d1/ddc/GUITextLog_8h_1ae818296a02cead75072e02316007b145" kindref="member">GUITEXTLOG_LINE_LENGTH</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleCommand.h" line="41" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleCommand.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dc/d4c/ConsoleCommand_8h_1adb575235842719814ea6114784693e7a" prot="public" static="no">
+        <name>CONSOLECOMMAND_MAX_ARGUMENTS</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleCommand.h" line="74" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleCommand.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dc/d4c/ConsoleCommand_8h_1ab86088b3b93ad8b6f164e88b43ef283f" prot="public" static="no">
+        <name>CONSOLECOMMAND_ARG_INTEGER</name>
+        <initializer>0x00000001</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleCommand.h" line="77" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleCommand.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dc/d4c/ConsoleCommand_8h_1aff524e13e99fd423986857fe59a3c10d" prot="public" static="no">
+        <name>CONSOLECOMMAND_ARG_SCALAR</name>
+        <initializer>0x00000002</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleCommand.h" line="78" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleCommand.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dc/d4c/ConsoleCommand_8h_1a552db5e190e99cf261931aedb57ff994" prot="public" static="no">
+        <name>CONSOLECOMMAND_ARG_STRING</name>
+        <initializer>0x00000004</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleCommand.h" line="79" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleCommand.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dc/d4c/ConsoleCommand_8h_1afa41b82ac09fd513320b8eb95f2b71b9" prot="public" static="no">
+        <name>CONSOLECOMMAND_ARG_TYPE_COUNT</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleCommand.h" line="80" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleCommand.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dc/d4c/ConsoleCommand_8h_1ab453727faa25710d020683227d062304" prot="public" static="no">
+        <name>CONSOLECOMMAND_ARG_OPTIONAL</name>
+        <initializer>0x80000000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleCommand.h" line="83" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleCommand.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dc/d4c/ConsoleCommand_8h_1a2f0c2540120d80c92c46f1677812a593" prot="public" static="no">
+        <name>CONSOLECOMMAND_ARG_MUTEX</name>
+        <initializer>0x00000100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleCommand.h" line="84" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleCommand.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="dc/d4c/ConsoleCommand_8h_1a26cd916c6bea524f3a16ffedbe235e8e" prot="public" static="no">
+        <name>ConsoleCommandCategory</name>
+        <enumvalue id="dc/d4c/ConsoleCommand_8h_1a26cd916c6bea524f3a16ffedbe235e8ea712af0086d41e495420843361995161f" prot="public">
+          <name>CONSOLECOMMAND_GLOBAL</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d4c/ConsoleCommand_8h_1a26cd916c6bea524f3a16ffedbe235e8eafb0810c2046508093c33e238cfb91482" prot="public">
+          <name>CONSOLECOMMAND_RESOURCE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d4c/ConsoleCommand_8h_1a26cd916c6bea524f3a16ffedbe235e8ea2d0a65f92438921044b4cb44ac34a25c" prot="public">
+          <name>CONSOLECOMMAND_RENDERING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d4c/ConsoleCommand_8h_1a26cd916c6bea524f3a16ffedbe235e8ea2c7c91cd03fe9a5d7aab1a1cf2bb795d" prot="public">
+          <name>CONSOLECOMMAND_MODELING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d4c/ConsoleCommand_8h_1a26cd916c6bea524f3a16ffedbe235e8ea671e39c998b589f20df929e6d98c3970" prot="public">
+          <name>CONSOLECOMMAND_PHYSICS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d4c/ConsoleCommand_8h_1a26cd916c6bea524f3a16ffedbe235e8ea3b26de2e537ee80f032b7de6c056731a" prot="public">
+          <name>CONSOLECOMMAND_WORLD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d4c/ConsoleCommand_8h_1a26cd916c6bea524f3a16ffedbe235e8ea974f0850b1de135b35756942f31f5995" prot="public">
+          <name>CONSOLECOMMAND_INPUT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d4c/ConsoleCommand_8h_1a26cd916c6bea524f3a16ffedbe235e8ea9860742bd956b940e91b3819f9b4b50e" prot="public">
+          <name>CONSOLECOMMAND_GUI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d4c/ConsoleCommand_8h_1a26cd916c6bea524f3a16ffedbe235e8ead3c6a6564c459ea05d0fb49030e56b95" prot="public">
+          <name>CONSOLECOMMAND_CATEGORY_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleCommand.h" line="45" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleCommand.h" bodystart="44" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="enum" id="dc/d4c/ConsoleCommand_8h_1aa2b582b52be0c73c3712544a163d1c3c" prot="public" static="no">
+        <name>ConsoleCommandLevel</name>
+        <enumvalue id="dc/d4c/ConsoleCommand_8h_1aa2b582b52be0c73c3712544a163d1c3ca7b2999e4266573e0837416785c10863b" prot="public">
+          <name>CONSOLECOMMAND_LEVEL_DEV</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d4c/ConsoleCommand_8h_1aa2b582b52be0c73c3712544a163d1c3cac15b23bc2f5ea1eb9fcb7b8064881502" prot="public">
+          <name>CONSOLECOMMAND_LEVEL_ADMIN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d4c/ConsoleCommand_8h_1aa2b582b52be0c73c3712544a163d1c3cabe38d5c436636513387ad04931820bfb" prot="public">
+          <name>CONSOLECOMMAND_LEVEL_GM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d4c/ConsoleCommand_8h_1aa2b582b52be0c73c3712544a163d1c3cab52d106dca9c5f6eb0bf2532b75a2dd6" prot="public">
+          <name>CONSOLECOMMAND_LEVEL_PLAYER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d4c/ConsoleCommand_8h_1aa2b582b52be0c73c3712544a163d1c3ca535fbda0b16492315091b1b3dd6d128b" prot="public">
+          <name>CONSOLECOMMAND_LEVEL_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleCommand.h" line="63" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleCommand.h" bodystart="62" bodyend="71"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="dc/d4c/ConsoleCommand_8h_1acddd35f176ce648d628db8205af11602" prot="public" static="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>typedef DWord ConsoleCommandArgType</definition>
+        <argsstring></argsstring>
+        <name>ConsoleCommandArgType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleCommand.h" line="76" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleCommand.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="dc/d4c/ConsoleCommand_8h_1a5d4a7b2ddf8f5d8347ab31fa108f30a7" prot="public" static="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>typedef DWord ConsoleCommandArgFlag</definition>
+        <argsstring></argsstring>
+        <name>ConsoleCommandArgFlag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleCommand.h" line="82" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleCommand.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleCommand.h"/>
+  </compounddef>
+</doxygen>

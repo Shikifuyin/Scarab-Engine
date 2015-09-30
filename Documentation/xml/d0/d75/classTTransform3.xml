@@ -1,0 +1,804 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d0/d75/classTTransform3" kind="class" prot="public">
+    <compoundname>TTransform3</compoundname>
+    <includes refid="d2/d67/Transform3_8h" local="no">Transform3.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>Real</declname>
+        <defname>Real</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="d0/d75/classTTransform3_1acb2cb8aa1e38b3023bcb20a4394e93bd" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="d0/d75/classTTransform3" kindref="compound">TTransform3</ref>&lt; Real &gt;</type>
+        <definition>const TTransform3&lt;Real&gt; Identity</definition>
+        <argsstring></argsstring>
+        <name>Identity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="42" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d0/d75/classTTransform3_1a114eb5f01d4c50f457d43a63963f6ea6" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool m_bIsIdentity</definition>
+        <argsstring></argsstring>
+        <name>m_bIsIdentity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="99" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d75/classTTransform3_1a6859b13aee18dbbe5ebde87196d86333" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool m_bIsRotScale</definition>
+        <argsstring></argsstring>
+        <name>m_bIsRotScale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="100" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d75/classTTransform3_1a2c15c6b4f103ea7c993c1b03c0fa475a" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool m_bIsUniformScale</definition>
+        <argsstring></argsstring>
+        <name>m_bIsUniformScale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="101" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d75/classTTransform3_1ac20597cb4f16f287591dc91440933ada" prot="private" static="no" mutable="yes">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool m_bUpdateInverse</definition>
+        <argsstring></argsstring>
+        <name>m_bUpdateInverse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="102" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d75/classTTransform3_1a7d1cd00674f91c44215fa08b4a495f3c" prot="private" static="no" mutable="no">
+        <type><ref refid="d7/dee/classTMatrix3" kindref="compound">TMatrix3</ref>&lt; Real &gt;</type>
+        <definition>TMatrix3&lt;Real&gt; m_matTransform</definition>
+        <argsstring></argsstring>
+        <name>m_matTransform</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="105" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d75/classTTransform3_1a610dffb2bba8e374a233a28610cc7a37" prot="private" static="no" mutable="no">
+        <type><ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt;</type>
+        <definition>TVector3&lt;Real&gt; m_vScale</definition>
+        <argsstring></argsstring>
+        <name>m_vScale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="106" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d75/classTTransform3_1a4b3f5a3725b6855b632c28d64d181c4f" prot="private" static="no" mutable="no">
+        <type><ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt;</type>
+        <definition>TVector3&lt;Real&gt; m_vTranslate</definition>
+        <argsstring></argsstring>
+        <name>m_vTranslate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="107" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d75/classTTransform3_1a5a757a4e723c7ed787276bbb46154851" prot="private" static="no" mutable="no">
+        <type><ref refid="d5/d09/classTMatrix4" kindref="compound">TMatrix4</ref>&lt; Real &gt;</type>
+        <definition>TMatrix4&lt;Real&gt; m_matHMatrix</definition>
+        <argsstring></argsstring>
+        <name>m_matHMatrix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="111" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d75/classTTransform3_1a83cad9816aee1f9445df821f7068b751" prot="private" static="no" mutable="yes">
+        <type><ref refid="d7/dee/classTMatrix3" kindref="compound">TMatrix3</ref>&lt; Real &gt;</type>
+        <definition>TMatrix3&lt;Real&gt; m_matInvTransform</definition>
+        <argsstring></argsstring>
+        <name>m_matInvTransform</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="114" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d75/classTTransform3_1a224f26bf672d4b42c97f5d3bae9bf7c2" prot="private" static="no" mutable="yes">
+        <type><ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt;</type>
+        <definition>TVector3&lt;Real&gt; m_vInvScale</definition>
+        <argsstring></argsstring>
+        <name>m_vInvScale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="115" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d75/classTTransform3_1a54f772095d96d9759ceda00db56d0041" prot="private" static="no" mutable="yes">
+        <type><ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt;</type>
+        <definition>TVector3&lt;Real&gt; m_vInvTranslate</definition>
+        <argsstring></argsstring>
+        <name>m_vInvTranslate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="116" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d0/d75/classTTransform3_1a7652797c3f3f3c2f6cfed2434f81fe98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TTransform3</definition>
+        <argsstring>()</argsstring>
+        <name>TTransform3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="45"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d75/classTTransform3_1a68cb3b158044ddf5c9b10691cce4d149" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TTransform3</definition>
+        <argsstring>(const TMatrix3&lt; Real &gt; &amp;matRotate, const TVector3&lt; Real &gt; &amp;vScale, const TVector3&lt; Real &gt; &amp;vTranslate)</argsstring>
+        <name>TTransform3</name>
+        <param>
+          <type>const <ref refid="d7/dee/classTMatrix3" kindref="compound">TMatrix3</ref>&lt; Real &gt; &amp;</type>
+          <declname>matRotate</declname>
+        </param>
+        <param>
+          <type>const <ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt; &amp;</type>
+          <declname>vScale</declname>
+        </param>
+        <param>
+          <type>const <ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt; &amp;</type>
+          <declname>vTranslate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="46"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d75/classTTransform3_1aee56114dc47d00aff33ae5e28599b939" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TTransform3</definition>
+        <argsstring>(const TMatrix3&lt; Real &gt; &amp;matRotate, Real fUniformScale, const TVector3&lt; Real &gt; &amp;vTranslate)</argsstring>
+        <name>TTransform3</name>
+        <param>
+          <type>const <ref refid="d7/dee/classTMatrix3" kindref="compound">TMatrix3</ref>&lt; Real &gt; &amp;</type>
+          <declname>matRotate</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fUniformScale</declname>
+        </param>
+        <param>
+          <type>const <ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt; &amp;</type>
+          <declname>vTranslate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d75/classTTransform3_1ac3f94fcb89b76d7e43c92a333fe7c49e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TTransform3</definition>
+        <argsstring>(const TMatrix3&lt; Real &gt; &amp;matTransform, const TVector3&lt; Real &gt; &amp;vTranslate)</argsstring>
+        <name>TTransform3</name>
+        <param>
+          <type>const <ref refid="d7/dee/classTMatrix3" kindref="compound">TMatrix3</ref>&lt; Real &gt; &amp;</type>
+          <declname>matTransform</declname>
+        </param>
+        <param>
+          <type>const <ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt; &amp;</type>
+          <declname>vTranslate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="48"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d75/classTTransform3_1aa23a86002ce16c30056e42b945e748bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TTransform3</definition>
+        <argsstring>(const TTransform3&lt; Real &gt; &amp;rhs)</argsstring>
+        <name>TTransform3</name>
+        <param>
+          <type>const <ref refid="d0/d75/classTTransform3" kindref="compound">TTransform3</ref>&lt; Real &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="49"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d75/classTTransform3_1a5e609efb307320c1bd957c093bbb726a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~TTransform3</definition>
+        <argsstring>()</argsstring>
+        <name>~TTransform3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="50"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d75/classTTransform3_1a46703d5924921c2b61f20a04259ad4ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d0/d75/classTTransform3" kindref="compound">TTransform3</ref>&lt; Real &gt; &amp;</type>
+        <definition>TTransform3&lt;Real&gt;&amp; operator=</definition>
+        <argsstring>(const TTransform3&lt; Real &gt; &amp;rhs)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="d0/d75/classTTransform3" kindref="compound">TTransform3</ref>&lt; Real &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="53"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d75/classTTransform3_1a0f7080fe6de0ea6fb0e56183ea2a3e26" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/d87/classTVertex4" kindref="compound">TVertex4</ref>&lt; Real &gt;</type>
+        <definition>TVertex4&lt;Real&gt; operator*</definition>
+        <argsstring>(const TVertex4&lt; Real &gt; &amp;rhs) const </argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="d9/d87/classTVertex4" kindref="compound">TVertex4</ref>&lt; Real &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="56"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d75/classTTransform3_1a78e6c36ff961697542a4ca8b25736604" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="dc/d75/classTVertex3" kindref="compound">TVertex3</ref>&lt; Real &gt;</type>
+        <definition>TVertex3&lt;Real&gt; operator*</definition>
+        <argsstring>(const TVertex3&lt; Real &gt; &amp;rhs) const </argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="dc/d75/classTVertex3" kindref="compound">TVertex3</ref>&lt; Real &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="57"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d75/classTTransform3_1a6e2a54af7732736707d15c7652e0fc39" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d6/d56/classTVector4" kindref="compound">TVector4</ref>&lt; Real &gt;</type>
+        <definition>TVector4&lt;Real&gt; operator*</definition>
+        <argsstring>(const TVector4&lt; Real &gt; &amp;rhs) const </argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="d6/d56/classTVector4" kindref="compound">TVector4</ref>&lt; Real &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="60"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d75/classTTransform3_1a784e3d0a94a0300d44c4e770dfbf6cf5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt;</type>
+        <definition>TVector3&lt;Real&gt; operator*</definition>
+        <argsstring>(const TVector3&lt; Real &gt; &amp;rhs) const </argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="61"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d75/classTTransform3_1aae58359c3242d7e74cae2c4b16509a3a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d0/d75/classTTransform3" kindref="compound">TTransform3</ref>&lt; Real &gt;</type>
+        <definition>TTransform3&lt;Real&gt; operator*</definition>
+        <argsstring>(const TTransform3&lt; Real &gt; &amp;rhs) const </argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="d0/d75/classTTransform3" kindref="compound">TTransform3</ref>&lt; Real &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="64"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d75/classTTransform3_1aac859edc283b01512502f1839552323e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetTransform</definition>
+        <argsstring>(const TMatrix3&lt; Real &gt; &amp;matTransform)</argsstring>
+        <name>SetTransform</name>
+        <param>
+          <type>const <ref refid="d7/dee/classTMatrix3" kindref="compound">TMatrix3</ref>&lt; Real &gt; &amp;</type>
+          <declname>matTransform</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="67"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d75/classTTransform3_1a505c93c5b66a3c3bae1af05f361a4ea8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetRotate</definition>
+        <argsstring>(const TMatrix3&lt; Real &gt; &amp;matRotate)</argsstring>
+        <name>SetRotate</name>
+        <param>
+          <type>const <ref refid="d7/dee/classTMatrix3" kindref="compound">TMatrix3</ref>&lt; Real &gt; &amp;</type>
+          <declname>matRotate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="68"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d75/classTTransform3_1a62988b574996161def78332c039f67a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetScale</definition>
+        <argsstring>(const TVector3&lt; Real &gt; &amp;vScale)</argsstring>
+        <name>SetScale</name>
+        <param>
+          <type>const <ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt; &amp;</type>
+          <declname>vScale</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="69"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d75/classTTransform3_1af4b40c729e5d66628f8894bf194df4c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetUniformScale</definition>
+        <argsstring>(Real fScale)</argsstring>
+        <name>SetUniformScale</name>
+        <param>
+          <type>Real</type>
+          <declname>fScale</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="70"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d75/classTTransform3_1a03eb437b8e166aa845885bfb3c848639" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetTranslate</definition>
+        <argsstring>(const TVector3&lt; Real &gt; &amp;vTranslate)</argsstring>
+        <name>SetTranslate</name>
+        <param>
+          <type>const <ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt; &amp;</type>
+          <declname>vTranslate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="71"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d75/classTTransform3_1a44eaaadf96b5acf9f8652eecf061cf7b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool IsIdentity</definition>
+        <argsstring>() const </argsstring>
+        <name>IsIdentity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="74"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d75/classTTransform3_1a5b5acf079f9e36142250e3f95b809d13" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool IsRotScale</definition>
+        <argsstring>() const </argsstring>
+        <name>IsRotScale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="75"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d75/classTTransform3_1aeb7837afe9268d6b0ee8359b3606b487" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool IsUniformScale</definition>
+        <argsstring>() const </argsstring>
+        <name>IsUniformScale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="76"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d75/classTTransform3_1a10363549e730192ffd98294bdd2c4810" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d7/dee/classTMatrix3" kindref="compound">TMatrix3</ref>&lt; Real &gt; &amp;</type>
+        <definition>const TMatrix3&lt;Real&gt;&amp; GetTransform</definition>
+        <argsstring>() const </argsstring>
+        <name>GetTransform</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="78"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d75/classTTransform3_1abc0e31cccbc3b8146c948e6969b3392a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d7/dee/classTMatrix3" kindref="compound">TMatrix3</ref>&lt; Real &gt; &amp;</type>
+        <definition>const TMatrix3&lt;Real&gt;&amp; GetRotate</definition>
+        <argsstring>() const </argsstring>
+        <name>GetRotate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="79"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d75/classTTransform3_1aeff3d9d7586b475b472b030871bf7617" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt; &amp;</type>
+        <definition>const TVector3&lt;Real&gt;&amp; GetScale</definition>
+        <argsstring>() const </argsstring>
+        <name>GetScale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="80"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d75/classTTransform3_1a708f84132700eadfcaa591e42c2667a3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real GetUniformScale</definition>
+        <argsstring>() const </argsstring>
+        <name>GetUniformScale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="81"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d75/classTTransform3_1a74e83c162d214eda9d54f82da2f7d029" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt; &amp;</type>
+        <definition>const TVector3&lt;Real&gt;&amp; GetTranslate</definition>
+        <argsstring>() const </argsstring>
+        <name>GetTranslate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="82"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d75/classTTransform3_1a3be1d1d89f806c3be637d69a8848f02d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d5/d09/classTMatrix4" kindref="compound">TMatrix4</ref>&lt; Real &gt; &amp;</type>
+        <definition>const TMatrix4&lt;Real&gt;&amp; GetHMatrix</definition>
+        <argsstring>() const </argsstring>
+        <name>GetHMatrix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="84"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d75/classTTransform3_1a1a2be532f2f092c6acf89a35d273201d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void MakeIdentity</definition>
+        <argsstring>()</argsstring>
+        <name>MakeIdentity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="87"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d75/classTTransform3_1a0cb65b8b929168762d4452f53ae7d628" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void MakeUnitScale</definition>
+        <argsstring>()</argsstring>
+        <name>MakeUnitScale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="88"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d75/classTTransform3_1ab4bb1706ec06f8b0fcd232e61afba1c6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real GetMaxScale</definition>
+        <argsstring>() const </argsstring>
+        <name>GetMaxScale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="90"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d75/classTTransform3_1a30bdba2870bbd0e4be29ef16e44a9ac8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool Invert</definition>
+        <argsstring>(TTransform3&lt; Real &gt; &amp;outInvTransform) const </argsstring>
+        <name>Invert</name>
+        <param>
+          <type><ref refid="d0/d75/classTTransform3" kindref="compound">TTransform3</ref>&lt; Real &gt; &amp;</type>
+          <declname>outInvTransform</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="92"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d0/d75/classTTransform3_1a62591efb79d8467201eaedf26220a217" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _UpdateHMatrix</definition>
+        <argsstring>()</argsstring>
+        <name>_UpdateHMatrix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="95"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d75/classTTransform3_1aa85d629a2619e24dc29ccf8e5d93cabd" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool _UpdateInverse</definition>
+        <argsstring>() const </argsstring>
+        <name>_UpdateInverse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="96"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d75/classTTransform3_1a6bd0ca055f457e1090233fb476ef046e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _UpdateHMatrix</definition>
+        <argsstring>()</argsstring>
+        <name>_UpdateHMatrix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="126"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d75/classTTransform3_1a6bd0ca055f457e1090233fb476ef046e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _UpdateHMatrix</definition>
+        <argsstring>()</argsstring>
+        <name>_UpdateHMatrix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="128"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="13350">
+        <label>TMatrix4&lt; Real &gt;</label>
+      </node>
+      <node id="13348">
+        <label>TTransform3&lt; Real &gt;</label>
+        <link refid="d0/d75/classTTransform3"/>
+        <childnode refid="13349" relation="usage">
+          <edgelabel>m_vScale</edgelabel>
+          <edgelabel>m_vInvScale</edgelabel>
+          <edgelabel>m_vInvTranslate</edgelabel>
+          <edgelabel>m_vTranslate</edgelabel>
+        </childnode>
+        <childnode refid="13350" relation="usage">
+          <edgelabel>m_matHMatrix</edgelabel>
+        </childnode>
+        <childnode refid="13351" relation="usage">
+          <edgelabel>m_matInvTransform</edgelabel>
+          <edgelabel>m_matTransform</edgelabel>
+        </childnode>
+        <childnode refid="13352" relation="usage">
+          <edgelabel>m_bIsUniformScale</edgelabel>
+          <edgelabel>m_bIsIdentity</edgelabel>
+          <edgelabel>m_bUpdateInverse</edgelabel>
+          <edgelabel>m_bIsRotScale</edgelabel>
+        </childnode>
+        <childnode refid="13353" relation="usage">
+          <edgelabel>Identity</edgelabel>
+        </childnode>
+      </node>
+      <node id="13349">
+        <label>TVector3&lt; Real &gt;</label>
+      </node>
+      <node id="13351">
+        <label>TMatrix3&lt; Real &gt;</label>
+      </node>
+      <node id="13352">
+        <label>bool</label>
+      </node>
+      <node id="13353">
+        <label>static const TTransform3&lt; Real &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" line="39" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Transform/Transform3.h" bodystart="38" bodyend="117"/>
+    <listofallmembers>
+      <member refid="d0/d75/classTTransform3_1a62591efb79d8467201eaedf26220a217" prot="private" virt="non-virtual"><scope>TTransform3</scope><name>_UpdateHMatrix</name></member>
+      <member refid="d0/d75/classTTransform3_1a6bd0ca055f457e1090233fb476ef046e" prot="private" virt="non-virtual"><scope>TTransform3</scope><name>_UpdateHMatrix</name></member>
+      <member refid="d0/d75/classTTransform3_1a6bd0ca055f457e1090233fb476ef046e" prot="private" virt="non-virtual"><scope>TTransform3</scope><name>_UpdateHMatrix</name></member>
+      <member refid="d0/d75/classTTransform3_1aa85d629a2619e24dc29ccf8e5d93cabd" prot="private" virt="non-virtual"><scope>TTransform3</scope><name>_UpdateInverse</name></member>
+      <member refid="d0/d75/classTTransform3_1a3be1d1d89f806c3be637d69a8848f02d" prot="public" virt="non-virtual"><scope>TTransform3</scope><name>GetHMatrix</name></member>
+      <member refid="d0/d75/classTTransform3_1ab4bb1706ec06f8b0fcd232e61afba1c6" prot="public" virt="non-virtual"><scope>TTransform3</scope><name>GetMaxScale</name></member>
+      <member refid="d0/d75/classTTransform3_1abc0e31cccbc3b8146c948e6969b3392a" prot="public" virt="non-virtual"><scope>TTransform3</scope><name>GetRotate</name></member>
+      <member refid="d0/d75/classTTransform3_1aeff3d9d7586b475b472b030871bf7617" prot="public" virt="non-virtual"><scope>TTransform3</scope><name>GetScale</name></member>
+      <member refid="d0/d75/classTTransform3_1a10363549e730192ffd98294bdd2c4810" prot="public" virt="non-virtual"><scope>TTransform3</scope><name>GetTransform</name></member>
+      <member refid="d0/d75/classTTransform3_1a74e83c162d214eda9d54f82da2f7d029" prot="public" virt="non-virtual"><scope>TTransform3</scope><name>GetTranslate</name></member>
+      <member refid="d0/d75/classTTransform3_1a708f84132700eadfcaa591e42c2667a3" prot="public" virt="non-virtual"><scope>TTransform3</scope><name>GetUniformScale</name></member>
+      <member refid="d0/d75/classTTransform3_1acb2cb8aa1e38b3023bcb20a4394e93bd" prot="public" virt="non-virtual"><scope>TTransform3</scope><name>Identity</name></member>
+      <member refid="d0/d75/classTTransform3_1a30bdba2870bbd0e4be29ef16e44a9ac8" prot="public" virt="non-virtual"><scope>TTransform3</scope><name>Invert</name></member>
+      <member refid="d0/d75/classTTransform3_1a44eaaadf96b5acf9f8652eecf061cf7b" prot="public" virt="non-virtual"><scope>TTransform3</scope><name>IsIdentity</name></member>
+      <member refid="d0/d75/classTTransform3_1a5b5acf079f9e36142250e3f95b809d13" prot="public" virt="non-virtual"><scope>TTransform3</scope><name>IsRotScale</name></member>
+      <member refid="d0/d75/classTTransform3_1aeb7837afe9268d6b0ee8359b3606b487" prot="public" virt="non-virtual"><scope>TTransform3</scope><name>IsUniformScale</name></member>
+      <member refid="d0/d75/classTTransform3_1a114eb5f01d4c50f457d43a63963f6ea6" prot="private" virt="non-virtual"><scope>TTransform3</scope><name>m_bIsIdentity</name></member>
+      <member refid="d0/d75/classTTransform3_1a6859b13aee18dbbe5ebde87196d86333" prot="private" virt="non-virtual"><scope>TTransform3</scope><name>m_bIsRotScale</name></member>
+      <member refid="d0/d75/classTTransform3_1a2c15c6b4f103ea7c993c1b03c0fa475a" prot="private" virt="non-virtual"><scope>TTransform3</scope><name>m_bIsUniformScale</name></member>
+      <member refid="d0/d75/classTTransform3_1ac20597cb4f16f287591dc91440933ada" prot="private" virt="non-virtual"><scope>TTransform3</scope><name>m_bUpdateInverse</name></member>
+      <member refid="d0/d75/classTTransform3_1a5a757a4e723c7ed787276bbb46154851" prot="private" virt="non-virtual"><scope>TTransform3</scope><name>m_matHMatrix</name></member>
+      <member refid="d0/d75/classTTransform3_1a83cad9816aee1f9445df821f7068b751" prot="private" virt="non-virtual"><scope>TTransform3</scope><name>m_matInvTransform</name></member>
+      <member refid="d0/d75/classTTransform3_1a7d1cd00674f91c44215fa08b4a495f3c" prot="private" virt="non-virtual"><scope>TTransform3</scope><name>m_matTransform</name></member>
+      <member refid="d0/d75/classTTransform3_1a224f26bf672d4b42c97f5d3bae9bf7c2" prot="private" virt="non-virtual"><scope>TTransform3</scope><name>m_vInvScale</name></member>
+      <member refid="d0/d75/classTTransform3_1a54f772095d96d9759ceda00db56d0041" prot="private" virt="non-virtual"><scope>TTransform3</scope><name>m_vInvTranslate</name></member>
+      <member refid="d0/d75/classTTransform3_1a610dffb2bba8e374a233a28610cc7a37" prot="private" virt="non-virtual"><scope>TTransform3</scope><name>m_vScale</name></member>
+      <member refid="d0/d75/classTTransform3_1a4b3f5a3725b6855b632c28d64d181c4f" prot="private" virt="non-virtual"><scope>TTransform3</scope><name>m_vTranslate</name></member>
+      <member refid="d0/d75/classTTransform3_1a1a2be532f2f092c6acf89a35d273201d" prot="public" virt="non-virtual"><scope>TTransform3</scope><name>MakeIdentity</name></member>
+      <member refid="d0/d75/classTTransform3_1a0cb65b8b929168762d4452f53ae7d628" prot="public" virt="non-virtual"><scope>TTransform3</scope><name>MakeUnitScale</name></member>
+      <member refid="d0/d75/classTTransform3_1a0f7080fe6de0ea6fb0e56183ea2a3e26" prot="public" virt="non-virtual"><scope>TTransform3</scope><name>operator*</name></member>
+      <member refid="d0/d75/classTTransform3_1a78e6c36ff961697542a4ca8b25736604" prot="public" virt="non-virtual"><scope>TTransform3</scope><name>operator*</name></member>
+      <member refid="d0/d75/classTTransform3_1a6e2a54af7732736707d15c7652e0fc39" prot="public" virt="non-virtual"><scope>TTransform3</scope><name>operator*</name></member>
+      <member refid="d0/d75/classTTransform3_1a784e3d0a94a0300d44c4e770dfbf6cf5" prot="public" virt="non-virtual"><scope>TTransform3</scope><name>operator*</name></member>
+      <member refid="d0/d75/classTTransform3_1aae58359c3242d7e74cae2c4b16509a3a" prot="public" virt="non-virtual"><scope>TTransform3</scope><name>operator*</name></member>
+      <member refid="d0/d75/classTTransform3_1a46703d5924921c2b61f20a04259ad4ea" prot="public" virt="non-virtual"><scope>TTransform3</scope><name>operator=</name></member>
+      <member refid="d0/d75/classTTransform3_1a505c93c5b66a3c3bae1af05f361a4ea8" prot="public" virt="non-virtual"><scope>TTransform3</scope><name>SetRotate</name></member>
+      <member refid="d0/d75/classTTransform3_1a62988b574996161def78332c039f67a7" prot="public" virt="non-virtual"><scope>TTransform3</scope><name>SetScale</name></member>
+      <member refid="d0/d75/classTTransform3_1aac859edc283b01512502f1839552323e" prot="public" virt="non-virtual"><scope>TTransform3</scope><name>SetTransform</name></member>
+      <member refid="d0/d75/classTTransform3_1a03eb437b8e166aa845885bfb3c848639" prot="public" virt="non-virtual"><scope>TTransform3</scope><name>SetTranslate</name></member>
+      <member refid="d0/d75/classTTransform3_1af4b40c729e5d66628f8894bf194df4c0" prot="public" virt="non-virtual"><scope>TTransform3</scope><name>SetUniformScale</name></member>
+      <member refid="d0/d75/classTTransform3_1a7652797c3f3f3c2f6cfed2434f81fe98" prot="public" virt="non-virtual"><scope>TTransform3</scope><name>TTransform3</name></member>
+      <member refid="d0/d75/classTTransform3_1a68cb3b158044ddf5c9b10691cce4d149" prot="public" virt="non-virtual"><scope>TTransform3</scope><name>TTransform3</name></member>
+      <member refid="d0/d75/classTTransform3_1aee56114dc47d00aff33ae5e28599b939" prot="public" virt="non-virtual"><scope>TTransform3</scope><name>TTransform3</name></member>
+      <member refid="d0/d75/classTTransform3_1ac3f94fcb89b76d7e43c92a333fe7c49e" prot="public" virt="non-virtual"><scope>TTransform3</scope><name>TTransform3</name></member>
+      <member refid="d0/d75/classTTransform3_1aa23a86002ce16c30056e42b945e748bc" prot="public" virt="non-virtual"><scope>TTransform3</scope><name>TTransform3</name></member>
+      <member refid="d0/d75/classTTransform3_1a5e609efb307320c1bd957c093bbb726a" prot="public" virt="non-virtual"><scope>TTransform3</scope><name>~TTransform3</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

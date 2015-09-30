@@ -1,0 +1,304 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="dc/dfc/classVertexShaderProgram" kind="class" prot="public">
+    <compoundname>VertexShaderProgram</compoundname>
+    <basecompoundref refid="d0/d2d/classShaderProgram" prot="public" virt="non-virtual">ShaderProgram</basecompoundref>
+    <includes refid="dd/d99/ShaderProgram_8h" local="no">ShaderProgram.h</includes>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="dc/dfc/classVertexShaderProgram_1ae5c9597c29cf027c7c3e08e2dcfaf60f" prot="private" static="yes" mutable="no">
+        <type><ref refid="dd/d99/ShaderProgram_8h_1abbbb0b9e31063d55ddeade4f78bebbae" kindref="member">VertexShaderProfile</ref></type>
+        <definition>VertexShaderProfile sm_iVSProfile</definition>
+        <argsstring></argsstring>
+        <name>sm_iVSProfile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="284" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" bodystart="284" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="dc/dfc/classVertexShaderProgram_1afd3e0760b8c9e291df1c01da631bdbf1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>VertexShaderProgram</definition>
+        <argsstring>(const GChar *strProgramName, UInt iInputCount, UInt iOutputCount, UInt iConstantCount, UInt iSamplerCount)</argsstring>
+        <name>VertexShaderProgram</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strProgramName</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iInputCount</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iOutputCount</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iConstantCount</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iSamplerCount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="277"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/dfc/classVertexShaderProgram_1a4fdcd15f3d7b13ecdd45c7d215cb700f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~VertexShaderProgram</definition>
+        <argsstring>()</argsstring>
+        <name>~VertexShaderProgram</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="278"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="dc/dfc/classVertexShaderProgram_1a0b234a063269417d3f0011dd4f1ab192" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>static Void SetProfile</definition>
+        <argsstring>(VertexShaderProfile iVSProfile)</argsstring>
+        <name>SetProfile</name>
+        <param>
+          <type><ref refid="dd/d99/ShaderProgram_8h_1abbbb0b9e31063d55ddeade4f78bebbae" kindref="member">VertexShaderProfile</ref></type>
+          <declname>iVSProfile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="280"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/dfc/classVertexShaderProgram_1aa9c1b37331e18c3e54c196cccf583e27" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="dd/d99/ShaderProgram_8h_1abbbb0b9e31063d55ddeade4f78bebbae" kindref="member">VertexShaderProfile</ref></type>
+        <definition>static VertexShaderProfile GetProfile</definition>
+        <argsstring>()</argsstring>
+        <name>GetProfile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="281"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="13500">
+        <label>VertexShaderProgram</label>
+        <link refid="dc/dfc/classVertexShaderProgram"/>
+        <childnode refid="13501" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13501">
+        <label>ShaderProgram</label>
+        <link refid="d0/d2d/classShaderProgram"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="13517">
+        <label>static VertexShaderProfile</label>
+      </node>
+      <node id="13502">
+        <label>VertexShaderProgram</label>
+        <link refid="dc/dfc/classVertexShaderProgram"/>
+        <childnode refid="13503" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13517" relation="usage">
+          <edgelabel>sm_iVSProfile</edgelabel>
+        </childnode>
+      </node>
+      <node id="13516">
+        <label>ShaderProgramConstant</label>
+        <link refid="d2/d9e/structShaderProgramConstant"/>
+        <childnode refid="13505" relation="usage">
+          <edgelabel>strName</edgelabel>
+        </childnode>
+        <childnode refid="13509" relation="usage">
+          <edgelabel>iRegisterCount</edgelabel>
+          <edgelabel>iBaseRegister</edgelabel>
+        </childnode>
+      </node>
+      <node id="13513">
+        <label>float</label>
+      </node>
+      <node id="13515">
+        <label>ULong</label>
+      </node>
+      <node id="13507">
+        <label>ShaderVarType</label>
+      </node>
+      <node id="13510">
+        <label>ShaderProgramSampler</label>
+        <link refid="d5/d69/structShaderProgramSampler"/>
+        <childnode refid="13511" relation="usage">
+          <edgelabel>iType</edgelabel>
+        </childnode>
+        <childnode refid="13512" relation="usage">
+          <edgelabel>iWrapMode</edgelabel>
+        </childnode>
+        <childnode refid="13513" relation="usage">
+          <edgelabel>fLODBias</edgelabel>
+          <edgelabel>fAnisotropy</edgelabel>
+        </childnode>
+        <childnode refid="13505" relation="usage">
+          <edgelabel>strName</edgelabel>
+        </childnode>
+        <childnode refid="13514" relation="usage">
+          <edgelabel>iFilter</edgelabel>
+        </childnode>
+        <childnode refid="13509" relation="usage">
+          <edgelabel>iTextureUnit</edgelabel>
+        </childnode>
+        <childnode refid="13515" relation="usage">
+          <edgelabel>dwBorderColor</edgelabel>
+        </childnode>
+      </node>
+      <node id="13509">
+        <label>int</label>
+      </node>
+      <node id="13511">
+        <label>ShaderSamplingType</label>
+      </node>
+      <node id="13506">
+        <label>ShaderVarSemantic</label>
+      </node>
+      <node id="13508">
+        <label>ShaderProgramOutputVar</label>
+        <link refid="df/df0/structShaderProgramOutputVar"/>
+        <childnode refid="13505" relation="usage">
+          <edgelabel>strName</edgelabel>
+        </childnode>
+        <childnode refid="13506" relation="usage">
+          <edgelabel>iSemantic</edgelabel>
+        </childnode>
+        <childnode refid="13507" relation="usage">
+          <edgelabel>iType</edgelabel>
+        </childnode>
+      </node>
+      <node id="13514">
+        <label>ShaderSamplingFilter</label>
+      </node>
+      <node id="13503">
+        <label>ShaderProgram</label>
+        <link refid="d0/d2d/classShaderProgram"/>
+        <childnode refid="13504" relation="usage">
+          <edgelabel>m_arrInputs</edgelabel>
+        </childnode>
+        <childnode refid="13505" relation="usage">
+          <edgelabel>m_arrProgramTexts</edgelabel>
+          <edgelabel>m_strProgramName</edgelabel>
+        </childnode>
+        <childnode refid="13508" relation="usage">
+          <edgelabel>m_arrOutputs</edgelabel>
+        </childnode>
+        <childnode refid="13509" relation="usage">
+          <edgelabel>m_iSamplerCount</edgelabel>
+          <edgelabel>m_iInputCount</edgelabel>
+          <edgelabel>m_iOutputCount</edgelabel>
+          <edgelabel>m_iConstantCount</edgelabel>
+        </childnode>
+        <childnode refid="13510" relation="usage">
+          <edgelabel>m_arrSamplers</edgelabel>
+        </childnode>
+        <childnode refid="13516" relation="usage">
+          <edgelabel>m_arrConstants</edgelabel>
+        </childnode>
+      </node>
+      <node id="13505">
+        <label>char</label>
+      </node>
+      <node id="13504">
+        <label>ShaderProgramInputVar</label>
+        <link refid="d9/dbd/structShaderProgramInputVar"/>
+        <childnode refid="13505" relation="usage">
+          <edgelabel>strName</edgelabel>
+        </childnode>
+        <childnode refid="13506" relation="usage">
+          <edgelabel>iSemantic</edgelabel>
+        </childnode>
+        <childnode refid="13507" relation="usage">
+          <edgelabel>iType</edgelabel>
+        </childnode>
+      </node>
+      <node id="13512">
+        <label>ShaderSamplingWrapMode</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="274" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" bodystart="273" bodyend="285"/>
+    <listofallmembers>
+      <member refid="d0/d2d/classShaderProgram_1a424c02f5808a060a9d716388e4353ae7" prot="public" virt="non-virtual"><scope>VertexShaderProgram</scope><name>GetConstantBaseReg</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a74638d02f19da1c627e3edefd59c0642" prot="public" virt="non-virtual"><scope>VertexShaderProgram</scope><name>GetConstantCount</name></member>
+      <member refid="d0/d2d/classShaderProgram_1af6ea668505b75b7949a77474c831b2bd" prot="public" virt="non-virtual"><scope>VertexShaderProgram</scope><name>GetConstantName</name></member>
+      <member refid="d0/d2d/classShaderProgram_1afb61bac12d0139fa14125b4c50efe3bd" prot="public" virt="non-virtual"><scope>VertexShaderProgram</scope><name>GetConstantRegCount</name></member>
+      <member refid="d0/d2d/classShaderProgram_1ac588fbca3cfb1aa8a0e82e07f8911e1b" prot="public" virt="non-virtual"><scope>VertexShaderProgram</scope><name>GetInputCount</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a41c5744a4b32a4bd40a22e1d38c9e103" prot="public" virt="non-virtual"><scope>VertexShaderProgram</scope><name>GetInputName</name></member>
+      <member refid="d0/d2d/classShaderProgram_1abd3274ac09c0e984ba3666a7967cfedf" prot="public" virt="non-virtual"><scope>VertexShaderProgram</scope><name>GetInputSemantic</name></member>
+      <member refid="d0/d2d/classShaderProgram_1ae003d9fb1a864d73d0d8adecdb11c021" prot="public" virt="non-virtual"><scope>VertexShaderProgram</scope><name>GetInputType</name></member>
+      <member refid="d0/d2d/classShaderProgram_1ad95db115b10bceb3b6e3a7ee61fa566c" prot="public" virt="non-virtual"><scope>VertexShaderProgram</scope><name>GetOutputCount</name></member>
+      <member refid="d0/d2d/classShaderProgram_1abcfa4b899e9b8d0b6cb82c457ddefeb7" prot="public" virt="non-virtual"><scope>VertexShaderProgram</scope><name>GetOutputName</name></member>
+      <member refid="d0/d2d/classShaderProgram_1ac1ad89f6a94f6ea2c8710941f03a24b1" prot="public" virt="non-virtual"><scope>VertexShaderProgram</scope><name>GetOutputSemantic</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a249ca530d9528b7210e9fd6c17ed8592" prot="public" virt="non-virtual"><scope>VertexShaderProgram</scope><name>GetOutputType</name></member>
+      <member refid="dc/dfc/classVertexShaderProgram_1aa9c1b37331e18c3e54c196cccf583e27" prot="public" virt="non-virtual"><scope>VertexShaderProgram</scope><name>GetProfile</name></member>
+      <member refid="d0/d2d/classShaderProgram_1ae4688b20ca217b4b38b69882727ce57b" prot="public" virt="non-virtual"><scope>VertexShaderProgram</scope><name>GetProgramText</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a1f8369a5a5f07a80014a51c4ff71e669" prot="public" virt="non-virtual"><scope>VertexShaderProgram</scope><name>GetSamplerAnisotropy</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a2566c070976de50fd54cdbcfeb373330" prot="public" virt="non-virtual"><scope>VertexShaderProgram</scope><name>GetSamplerBorderColor</name></member>
+      <member refid="d0/d2d/classShaderProgram_1aeee33ef1dc45125ec690126037b159f6" prot="public" virt="non-virtual"><scope>VertexShaderProgram</scope><name>GetSamplerCount</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a50e4061035934ff68f3b26c3a846d5be" prot="public" virt="non-virtual"><scope>VertexShaderProgram</scope><name>GetSamplerFilter</name></member>
+      <member refid="d0/d2d/classShaderProgram_1ad53db81a9651f43a25420f3507792d27" prot="public" virt="non-virtual"><scope>VertexShaderProgram</scope><name>GetSamplerLODBias</name></member>
+      <member refid="d0/d2d/classShaderProgram_1abc2e2dec809cbbf57f7fc08cd5f7e304" prot="public" virt="non-virtual"><scope>VertexShaderProgram</scope><name>GetSamplerName</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a3f236ba6daaced3ff2ee01476574e5f7" prot="public" virt="non-virtual"><scope>VertexShaderProgram</scope><name>GetSamplerTextureUnit</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a8033c79d4e93c704b76e5b5e57217745" prot="public" virt="non-virtual"><scope>VertexShaderProgram</scope><name>GetSamplerType</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a5357a9bc7f61dba18f32f4c32e33fac5" prot="public" virt="non-virtual"><scope>VertexShaderProgram</scope><name>GetSamplerWrapMode</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a53c8065ca4a71d95de2ce3affe2158c6" prot="public" virt="non-virtual"><scope>VertexShaderProgram</scope><name>GetSamplerWrapMode</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a7959e2c9a815669537b72814c0cd6e4a" prot="protected" virt="non-virtual"><scope>VertexShaderProgram</scope><name>m_arrConstants</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a59300c30cd7b84b5bc22ac19ead0fac5" prot="protected" virt="non-virtual"><scope>VertexShaderProgram</scope><name>m_arrInputs</name></member>
+      <member refid="d0/d2d/classShaderProgram_1ad03aecb7b9e81661c506d80db9fc0615" prot="protected" virt="non-virtual"><scope>VertexShaderProgram</scope><name>m_arrOutputs</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a7979b815b17ba7bf0ba6081d6425e057" prot="protected" virt="non-virtual"><scope>VertexShaderProgram</scope><name>m_arrProgramTexts</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a47c4dbb9067b54403bf3c8fcb2cbe941" prot="protected" virt="non-virtual"><scope>VertexShaderProgram</scope><name>m_arrSamplers</name></member>
+      <member refid="d0/d2d/classShaderProgram_1ac80b1927f8154305928fbbd392e78591" prot="protected" virt="non-virtual"><scope>VertexShaderProgram</scope><name>m_iConstantCount</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a341c068ba27c529139a293337be99e8c" prot="protected" virt="non-virtual"><scope>VertexShaderProgram</scope><name>m_iInputCount</name></member>
+      <member refid="d0/d2d/classShaderProgram_1abf20a9edd05b6e7e990ebed6cabed545" prot="protected" virt="non-virtual"><scope>VertexShaderProgram</scope><name>m_iOutputCount</name></member>
+      <member refid="d0/d2d/classShaderProgram_1af0ab0d89b93e705587b0aba751ca4b18" prot="protected" virt="non-virtual"><scope>VertexShaderProgram</scope><name>m_iSamplerCount</name></member>
+      <member refid="d0/d2d/classShaderProgram_1aa58700e31708b48fe788eec60be11bd9" prot="protected" virt="non-virtual"><scope>VertexShaderProgram</scope><name>m_strProgramName</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a3352333dee152946a3f87a3c610d45b2" prot="public" virt="non-virtual"><scope>VertexShaderProgram</scope><name>SetConstant</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a21e8803a2a26eb2cb153529954d5c479" prot="public" virt="non-virtual"><scope>VertexShaderProgram</scope><name>SetConstantBaseReg</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a2aa91ec158f3a1b3bbec34fcd4aed03d" prot="public" virt="non-virtual"><scope>VertexShaderProgram</scope><name>SetInput</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a575956760ffe5d4e360a5ba265589e27" prot="public" virt="non-virtual"><scope>VertexShaderProgram</scope><name>SetOutput</name></member>
+      <member refid="dc/dfc/classVertexShaderProgram_1a0b234a063269417d3f0011dd4f1ab192" prot="public" virt="non-virtual"><scope>VertexShaderProgram</scope><name>SetProfile</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a7fe540560c8cdec422c161713f72f03e" prot="public" virt="non-virtual"><scope>VertexShaderProgram</scope><name>SetProgramText</name></member>
+      <member refid="d0/d2d/classShaderProgram_1ac9770536bc1bcd67a4c5eb9417436da7" prot="public" virt="non-virtual"><scope>VertexShaderProgram</scope><name>SetSampler</name></member>
+      <member refid="d0/d2d/classShaderProgram_1aca61dabbb85b30954bd6273c05531b16" prot="public" virt="non-virtual"><scope>VertexShaderProgram</scope><name>SetSamplerAnisotropy</name></member>
+      <member refid="d0/d2d/classShaderProgram_1ad915cffb28ded8fd36969d7c267088bc" prot="public" virt="non-virtual"><scope>VertexShaderProgram</scope><name>SetSamplerBorderColor</name></member>
+      <member refid="d0/d2d/classShaderProgram_1aa6ca650c19a838c92cac126ed510be4c" prot="public" virt="non-virtual"><scope>VertexShaderProgram</scope><name>SetSamplerFilter</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a5f425908a3d7025cd726955e7b662dd4" prot="public" virt="non-virtual"><scope>VertexShaderProgram</scope><name>SetSamplerLODBias</name></member>
+      <member refid="d0/d2d/classShaderProgram_1add8c97a28c702f831925e93770426ea7" prot="public" virt="non-virtual"><scope>VertexShaderProgram</scope><name>SetSamplerTextureUnit</name></member>
+      <member refid="d0/d2d/classShaderProgram_1ad2e03b947bba6c9ce81cd1e1cd163017" prot="public" virt="non-virtual"><scope>VertexShaderProgram</scope><name>SetSamplerWrapMode</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a41aec7b1f376573338d99f75fff3d956" prot="public" virt="non-virtual"><scope>VertexShaderProgram</scope><name>ShaderProgram</name></member>
+      <member refid="dc/dfc/classVertexShaderProgram_1ae5c9597c29cf027c7c3e08e2dcfaf60f" prot="private" virt="non-virtual"><scope>VertexShaderProgram</scope><name>sm_iVSProfile</name></member>
+      <member refid="dc/dfc/classVertexShaderProgram_1afd3e0760b8c9e291df1c01da631bdbf1" prot="public" virt="non-virtual"><scope>VertexShaderProgram</scope><name>VertexShaderProgram</name></member>
+      <member refid="d0/d2d/classShaderProgram_1afd638be5c36a62fe9310baa04e8ca464" prot="public" virt="virtual"><scope>VertexShaderProgram</scope><name>~ShaderProgram</name></member>
+      <member refid="dc/dfc/classVertexShaderProgram_1a4fdcd15f3d7b13ecdd45c7d215cb700f" prot="public" virt="virtual"><scope>VertexShaderProgram</scope><name>~VertexShaderProgram</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

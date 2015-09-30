@@ -1,0 +1,510 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d5/d9d/classGCPointer" kind="class" prot="public">
+    <compoundname>GCPointer</compoundname>
+    <includes refid="dd/d4a/SmartPointer_8h" local="no">SmartPointer.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+      <param>
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <declname>ARRAYSIZE</declname>
+        <defname>ARRAYSIZE</defname>
+        <defval>0</defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="d5/d9d/classGCPointer_1aab78b76bc0bfd93445e359ccf84cad14" prot="private" static="yes" mutable="no">
+        <type><ref refid="dd/d4a/SmartPointer_8h_1a8d0cb73da89fdae1646d82a1275a27b4" kindref="member">GarbageCollectorMode</ref></type>
+        <definition>GarbageCollectorMode sm_iGCMode</definition>
+        <argsstring></argsstring>
+        <name>sm_iGCMode</name>
+        <initializer>= <ref refid="dd/d4a/SmartPointer_8h_1a4f05a6d647e60ab6b08d11ae02b1cd27" kindref="member">GCMODE_STRICT</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" line="114" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d5/d9d/classGCPointer_1a3bf00ed3aba917436d5eb6716f65d43a" prot="private" static="yes" mutable="no">
+        <type><ref refid="d7/d8d/class__GCList" kindref="compound">_GCList</ref>&lt; T &gt;</type>
+        <definition>_GCList&lt; T &gt; sm_listGC</definition>
+        <argsstring></argsstring>
+        <name>sm_listGC</name>
+        <initializer>= <ref refid="d7/d8d/class__GCList" kindref="compound">_GCList</ref>&lt;T&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" line="115" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d5/d9d/classGCPointer_1a0bc8667557061048b4d65ae734450f4f" prot="private" static="yes" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt sm_iGCUnrefCount</definition>
+        <argsstring></argsstring>
+        <name>sm_iGCUnrefCount</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" line="116" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d5/d9d/classGCPointer_1a76129ca7b243fac2735ac2711b454d82" prot="private" static="yes" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt sm_iGCMaxListSize</definition>
+        <argsstring></argsstring>
+        <name>sm_iGCMaxListSize</name>
+        <initializer>= 1024</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" line="118" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d5/d9d/classGCPointer_1a35f2523dd155bbfff2556928a5b05747" prot="private" static="yes" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt sm_iGCMaxUnref</definition>
+        <argsstring></argsstring>
+        <name>sm_iGCMaxUnref</name>
+        <initializer>= 64</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" line="119" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d5/d9d/classGCPointer_1ae6fbd38f5633440f5cd447ce26eedf2e" prot="private" static="yes" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt sm_iGCMaxMemoryUse</definition>
+        <argsstring></argsstring>
+        <name>sm_iGCMaxMemoryUse</name>
+        <initializer>= 4194304</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" line="120" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d5/d9d/classGCPointer_1af573391811288e99fd9ec40e0aebb7cd" prot="private" static="no" mutable="no">
+        <type>T *</type>
+        <definition>T* m_pAddress</definition>
+        <argsstring></argsstring>
+        <name>m_pAddress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" line="122" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d5/d9d/classGCPointer_1a2ca4aeed27664066de70858ae712928e" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool m_bIsArray</definition>
+        <argsstring></argsstring>
+        <name>m_bIsArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" line="123" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d5/d9d/classGCPointer_1a96aea95f861bb3c3909e79becf566d51" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iArraySize</definition>
+        <argsstring></argsstring>
+        <name>m_iArraySize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" line="124" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d5/d9d/classGCPointer_1a7b4ebf92f32a58b887bec64fe83f8ef2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GCPointer</definition>
+        <argsstring>(T *pAddress=NULL)</argsstring>
+        <name>GCPointer</name>
+        <param>
+          <type>T *</type>
+          <declname>pAddress</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" line="87"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d9d/classGCPointer_1a1d73e1b24d770db9fb9484a18a1f4e51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GCPointer</definition>
+        <argsstring>(const GCPointer&lt; T, ARRAYSIZE &gt; &amp;rhs)</argsstring>
+        <name>GCPointer</name>
+        <param>
+          <type>const <ref refid="d5/d9d/classGCPointer" kindref="compound">GCPointer</ref>&lt; T, ARRAYSIZE &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" line="88"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d9d/classGCPointer_1aa57814c8b413fd35a7c9f88755a6610f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~GCPointer</definition>
+        <argsstring>()</argsstring>
+        <name>~GCPointer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" line="89"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d9d/classGCPointer_1a5b6e76bfd9b7d262c841e9369e3c63af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>T *</type>
+        <definition>T* operator=</definition>
+        <argsstring>(T *rhs)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>T *</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" line="92"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d9d/classGCPointer_1a1ab664ac2fd542580489168a9fa3fee0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d5/d9d/classGCPointer" kindref="compound">GCPointer</ref>&lt; T, ARRAYSIZE &gt; &amp;</type>
+        <definition>GCPointer&lt;T,ARRAYSIZE&gt;&amp; operator=</definition>
+        <argsstring>(const GCPointer&lt; T, ARRAYSIZE &gt; &amp;rhs)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="d5/d9d/classGCPointer" kindref="compound">GCPointer</ref>&lt; T, ARRAYSIZE &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" line="93"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d9d/classGCPointer_1abcc36ef133f26e7e3145b785df23eb18" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>T &amp;</type>
+        <definition>T&amp; operator*</definition>
+        <argsstring>() const </argsstring>
+        <name>operator*</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" line="94"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d9d/classGCPointer_1ac0ddd007dfcfef3121f74d0665dfd0cd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>T *</type>
+        <definition>T* operator-&gt;</definition>
+        <argsstring>() const </argsstring>
+        <name>operator-&gt;</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" line="95"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d9d/classGCPointer_1a9fe0b73af7dd9cb5a4d94a05dcec77bf" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>T &amp;</type>
+        <definition>T&amp; operator[]</definition>
+        <argsstring>(UInt i) const </argsstring>
+        <name>operator[]</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" line="96"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d9d/classGCPointer_1a826c82b72ca2d624342ce5c06405af8d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>operator T *</definition>
+        <argsstring>() const </argsstring>
+        <name>operator T *</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" line="97"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="d5/d9d/classGCPointer_1abb11c0102f84d1a925edc0bbf410a6bc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="dd/d4a/SmartPointer_8h_1a8d0cb73da89fdae1646d82a1275a27b4" kindref="member">GarbageCollectorMode</ref></type>
+        <definition>static GarbageCollectorMode GetMode</definition>
+        <argsstring>()</argsstring>
+        <name>GetMode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" line="100"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d9d/classGCPointer_1a577ce3ea7cd5331f2284255a9ef7570e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>static UInt GetMaxListSize</definition>
+        <argsstring>()</argsstring>
+        <name>GetMaxListSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" line="101"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d9d/classGCPointer_1ad7a26c72c7844487b22d67c1896fc512" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>static UInt GetMaxUnrefs</definition>
+        <argsstring>()</argsstring>
+        <name>GetMaxUnrefs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" line="102"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d9d/classGCPointer_1ae69c7454a79ac828d79b790a28d27341" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>static UInt GetMaxMemoryUse</definition>
+        <argsstring>()</argsstring>
+        <name>GetMaxMemoryUse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" line="103"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d9d/classGCPointer_1a3366cdac03c4c7a6d963c55ed6e52336" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>static Void SetMode</definition>
+        <argsstring>(GarbageCollectorMode iMode)</argsstring>
+        <name>SetMode</name>
+        <param>
+          <type><ref refid="dd/d4a/SmartPointer_8h_1a8d0cb73da89fdae1646d82a1275a27b4" kindref="member">GarbageCollectorMode</ref></type>
+          <declname>iMode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" line="104"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d9d/classGCPointer_1aa9d0af8ee14e4e3e3a0d45dad034d206" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>static Void SetMaxListSize</definition>
+        <argsstring>(UInt iMaxListSize)</argsstring>
+        <name>SetMaxListSize</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iMaxListSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" line="105"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d9d/classGCPointer_1a4deda763356c398920a4c29c0f7c7fce" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>static Void SetMaxUnrefs</definition>
+        <argsstring>(UInt iMaxUnrefs)</argsstring>
+        <name>SetMaxUnrefs</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iMaxUnrefs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" line="106"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d9d/classGCPointer_1a9204066f39aeae3838d119b2b85ff386" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>static Void SetMaxMemoryUse</definition>
+        <argsstring>(UInt iMaxMemoryUse)</argsstring>
+        <name>SetMaxMemoryUse</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iMaxMemoryUse</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" line="107"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d9d/classGCPointer_1a04b10ba071ba71ad75f951b4d7ac04d1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>static Bool CollectGarbage</definition>
+        <argsstring>()</argsstring>
+        <name>CollectGarbage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" line="110"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d9d/classGCPointer_1aea14df23f8bd7e000d59f8bf005c9606" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>static Void CollectRemaining</definition>
+        <argsstring>()</argsstring>
+        <name>CollectRemaining</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" line="111"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3006">
+        <label>T</label>
+      </node>
+      <node id="3005">
+        <label>unsigned int</label>
+      </node>
+      <node id="3003">
+        <label>int</label>
+      </node>
+      <node id="3001">
+        <label>GCPointer&lt; T, ARRAYSIZE &gt;</label>
+        <link refid="d5/d9d/classGCPointer"/>
+        <childnode refid="3002" relation="usage">
+          <edgelabel>sm_listGC</edgelabel>
+        </childnode>
+        <childnode refid="3003" relation="usage">
+          <edgelabel>m_iArraySize</edgelabel>
+        </childnode>
+        <childnode refid="3004" relation="usage">
+          <edgelabel>m_bIsArray</edgelabel>
+        </childnode>
+        <childnode refid="3005" relation="usage">
+          <edgelabel>sm_iGCUnrefCount</edgelabel>
+          <edgelabel>sm_iGCMaxMemoryUse</edgelabel>
+          <edgelabel>sm_iGCMode</edgelabel>
+          <edgelabel>sm_iGCMaxUnref</edgelabel>
+          <edgelabel>sm_iGCMaxListSize</edgelabel>
+        </childnode>
+        <childnode refid="3006" relation="usage">
+          <edgelabel>m_pAddress</edgelabel>
+        </childnode>
+      </node>
+      <node id="3004">
+        <label>bool</label>
+      </node>
+      <node id="3002">
+        <label>static _GCList&lt; T &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" line="84" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" bodystart="83" bodyend="125"/>
+    <listofallmembers>
+      <member refid="d5/d9d/classGCPointer_1a04b10ba071ba71ad75f951b4d7ac04d1" prot="public" virt="non-virtual"><scope>GCPointer</scope><name>CollectGarbage</name></member>
+      <member refid="d5/d9d/classGCPointer_1aea14df23f8bd7e000d59f8bf005c9606" prot="public" virt="non-virtual"><scope>GCPointer</scope><name>CollectRemaining</name></member>
+      <member refid="d5/d9d/classGCPointer_1a7b4ebf92f32a58b887bec64fe83f8ef2" prot="public" virt="non-virtual"><scope>GCPointer</scope><name>GCPointer</name></member>
+      <member refid="d5/d9d/classGCPointer_1a1d73e1b24d770db9fb9484a18a1f4e51" prot="public" virt="non-virtual"><scope>GCPointer</scope><name>GCPointer</name></member>
+      <member refid="d5/d9d/classGCPointer_1a577ce3ea7cd5331f2284255a9ef7570e" prot="public" virt="non-virtual"><scope>GCPointer</scope><name>GetMaxListSize</name></member>
+      <member refid="d5/d9d/classGCPointer_1ae69c7454a79ac828d79b790a28d27341" prot="public" virt="non-virtual"><scope>GCPointer</scope><name>GetMaxMemoryUse</name></member>
+      <member refid="d5/d9d/classGCPointer_1ad7a26c72c7844487b22d67c1896fc512" prot="public" virt="non-virtual"><scope>GCPointer</scope><name>GetMaxUnrefs</name></member>
+      <member refid="d5/d9d/classGCPointer_1abb11c0102f84d1a925edc0bbf410a6bc" prot="public" virt="non-virtual"><scope>GCPointer</scope><name>GetMode</name></member>
+      <member refid="d5/d9d/classGCPointer_1a2ca4aeed27664066de70858ae712928e" prot="private" virt="non-virtual"><scope>GCPointer</scope><name>m_bIsArray</name></member>
+      <member refid="d5/d9d/classGCPointer_1a96aea95f861bb3c3909e79becf566d51" prot="private" virt="non-virtual"><scope>GCPointer</scope><name>m_iArraySize</name></member>
+      <member refid="d5/d9d/classGCPointer_1af573391811288e99fd9ec40e0aebb7cd" prot="private" virt="non-virtual"><scope>GCPointer</scope><name>m_pAddress</name></member>
+      <member refid="d5/d9d/classGCPointer_1a826c82b72ca2d624342ce5c06405af8d" prot="public" virt="non-virtual"><scope>GCPointer</scope><name>operator T *</name></member>
+      <member refid="d5/d9d/classGCPointer_1abcc36ef133f26e7e3145b785df23eb18" prot="public" virt="non-virtual"><scope>GCPointer</scope><name>operator*</name></member>
+      <member refid="d5/d9d/classGCPointer_1ac0ddd007dfcfef3121f74d0665dfd0cd" prot="public" virt="non-virtual"><scope>GCPointer</scope><name>operator-&gt;</name></member>
+      <member refid="d5/d9d/classGCPointer_1a5b6e76bfd9b7d262c841e9369e3c63af" prot="public" virt="non-virtual"><scope>GCPointer</scope><name>operator=</name></member>
+      <member refid="d5/d9d/classGCPointer_1a1ab664ac2fd542580489168a9fa3fee0" prot="public" virt="non-virtual"><scope>GCPointer</scope><name>operator=</name></member>
+      <member refid="d5/d9d/classGCPointer_1a9fe0b73af7dd9cb5a4d94a05dcec77bf" prot="public" virt="non-virtual"><scope>GCPointer</scope><name>operator[]</name></member>
+      <member refid="d5/d9d/classGCPointer_1aa9d0af8ee14e4e3e3a0d45dad034d206" prot="public" virt="non-virtual"><scope>GCPointer</scope><name>SetMaxListSize</name></member>
+      <member refid="d5/d9d/classGCPointer_1a9204066f39aeae3838d119b2b85ff386" prot="public" virt="non-virtual"><scope>GCPointer</scope><name>SetMaxMemoryUse</name></member>
+      <member refid="d5/d9d/classGCPointer_1a4deda763356c398920a4c29c0f7c7fce" prot="public" virt="non-virtual"><scope>GCPointer</scope><name>SetMaxUnrefs</name></member>
+      <member refid="d5/d9d/classGCPointer_1a3366cdac03c4c7a6d963c55ed6e52336" prot="public" virt="non-virtual"><scope>GCPointer</scope><name>SetMode</name></member>
+      <member refid="d5/d9d/classGCPointer_1a76129ca7b243fac2735ac2711b454d82" prot="private" virt="non-virtual"><scope>GCPointer</scope><name>sm_iGCMaxListSize</name></member>
+      <member refid="d5/d9d/classGCPointer_1ae6fbd38f5633440f5cd447ce26eedf2e" prot="private" virt="non-virtual"><scope>GCPointer</scope><name>sm_iGCMaxMemoryUse</name></member>
+      <member refid="d5/d9d/classGCPointer_1a35f2523dd155bbfff2556928a5b05747" prot="private" virt="non-virtual"><scope>GCPointer</scope><name>sm_iGCMaxUnref</name></member>
+      <member refid="d5/d9d/classGCPointer_1aab78b76bc0bfd93445e359ccf84cad14" prot="private" virt="non-virtual"><scope>GCPointer</scope><name>sm_iGCMode</name></member>
+      <member refid="d5/d9d/classGCPointer_1a0bc8667557061048b4d65ae734450f4f" prot="private" virt="non-virtual"><scope>GCPointer</scope><name>sm_iGCUnrefCount</name></member>
+      <member refid="d5/d9d/classGCPointer_1a3bf00ed3aba917436d5eb6716f65d43a" prot="private" virt="non-virtual"><scope>GCPointer</scope><name>sm_listGC</name></member>
+      <member refid="d5/d9d/classGCPointer_1aa57814c8b413fd35a7c9f88755a6610f" prot="public" virt="non-virtual"><scope>GCPointer</scope><name>~GCPointer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

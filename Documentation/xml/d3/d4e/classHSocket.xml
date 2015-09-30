@@ -1,0 +1,457 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d3/d4e/classHSocket" kind="class" prot="public">
+    <compoundname>HSocket</compoundname>
+    <includes refid="df/dfb/Networking_8h" local="no">Networking.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="d3/d4e/classHSocket_1af18a9ee98e70982bfe2975391d7221a5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class System</definition>
+        <argsstring></argsstring>
+        <name>System</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Networking.h" line="235" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Networking.h" bodystart="235" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d3/d4e/classHSocket_1a966af48a119fcac62fa3ac243265d0ad" prot="private" static="no" mutable="no">
+        <type><ref refid="d5/dea/ForwardWin32_8h_1a7d68bb01e985882c1c12dbc3b0468c9a" kindref="member">SOCKET</ref></type>
+        <definition>SOCKET m_hSocket</definition>
+        <argsstring></argsstring>
+        <name>m_hSocket</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Networking.h" line="243" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Networking.h" bodystart="243" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d3/d4e/classHSocket_1ad9e4d86e41c1a9bd15867e0c82013670" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~HSocket</definition>
+        <argsstring>()</argsstring>
+        <name>~HSocket</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Networking.h" line="210"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d4e/classHSocket_1a3a0a97b91f8e7b8f5965a15592ebc7e7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Shutdown</definition>
+        <argsstring>(SocketShutdownType iType) const </argsstring>
+        <name>Shutdown</name>
+        <param>
+          <type><ref refid="df/dfb/Networking_8h_1abf9d0e583446024b5cba06dfe0be9b4a" kindref="member">SocketShutdownType</ref></type>
+          <declname>iType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Networking.h" line="212"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d4e/classHSocket_1a081397d9552f403c149ec899adc37486" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Close</definition>
+        <argsstring>()</argsstring>
+        <name>Close</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Networking.h" line="213"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d4e/classHSocket_1ab678fb0209e6be3af66c28f5349c5733" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="df/dfb/Networking_8h_1a34e02d47f955b652362d2cf8eb08730b" kindref="member">NetworkError</ref></type>
+        <definition>NetworkError GetOption</definition>
+        <argsstring>(SocketOption iOption, Void *outValue) const </argsstring>
+        <name>GetOption</name>
+        <param>
+          <type><ref refid="df/dfb/Networking_8h_1a497e132f91c064dddcb331861b7aa952" kindref="member">SocketOption</ref></type>
+          <declname>iOption</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> *</type>
+          <declname>outValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Networking.h" line="215"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d4e/classHSocket_1a78775efd489fb45d904ab3c3c49b3391" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="df/dfb/Networking_8h_1a34e02d47f955b652362d2cf8eb08730b" kindref="member">NetworkError</ref></type>
+        <definition>NetworkError SetOption</definition>
+        <argsstring>(SocketOption iOption, const Void *pValue) const </argsstring>
+        <name>SetOption</name>
+        <param>
+          <type><ref refid="df/dfb/Networking_8h_1a497e132f91c064dddcb331861b7aa952" kindref="member">SocketOption</ref></type>
+          <declname>iOption</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> *</type>
+          <declname>pValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Networking.h" line="216"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d4e/classHSocket_1a1f53774ce8181b2fe7f451960d717ed7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetMode</definition>
+        <argsstring>(Bool bNonBlocking) const </argsstring>
+        <name>SetMode</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+          <declname>bNonBlocking</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Networking.h" line="218"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d4e/classHSocket_1a82ec7f1d152f616c6e5bb61abcc158b8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void GetPendingData</definition>
+        <argsstring>(ULong *outPendingBytes) const </argsstring>
+        <name>GetPendingData</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref> *</type>
+          <declname>outPendingBytes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Networking.h" line="219"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d4e/classHSocket_1a6e440a3f1f3c4ea66a0bfe95e120f99f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="df/dfb/Networking_8h_1a34e02d47f955b652362d2cf8eb08730b" kindref="member">NetworkError</ref></type>
+        <definition>NetworkError Connect</definition>
+        <argsstring>(const NetAddress *pRemoteAddress) const </argsstring>
+        <name>Connect</name>
+        <param>
+          <type>const <ref refid="d9/d80/structNetAddress" kindref="compound">NetAddress</ref> *</type>
+          <declname>pRemoteAddress</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Networking.h" line="221"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d4e/classHSocket_1a2b86acc257216a425acf6b677e864527" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="df/dfb/Networking_8h_1a34e02d47f955b652362d2cf8eb08730b" kindref="member">NetworkError</ref></type>
+        <definition>NetworkError Bind</definition>
+        <argsstring>(const NetAddress *pLocalAddress) const </argsstring>
+        <name>Bind</name>
+        <param>
+          <type>const <ref refid="d9/d80/structNetAddress" kindref="compound">NetAddress</ref> *</type>
+          <declname>pLocalAddress</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Networking.h" line="223"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d4e/classHSocket_1a41a3e697d4d89b87b912d5dccbfd4f3a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="df/dfb/Networking_8h_1a34e02d47f955b652362d2cf8eb08730b" kindref="member">NetworkError</ref></type>
+        <definition>NetworkError Listen</definition>
+        <argsstring>(UInt iMaxPending) const </argsstring>
+        <name>Listen</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iMaxPending</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Networking.h" line="224"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d4e/classHSocket_1a531a88ce19e55c1d16f67265a3f9f344" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="df/dfb/Networking_8h_1a34e02d47f955b652362d2cf8eb08730b" kindref="member">NetworkError</ref></type>
+        <definition>NetworkError Accept</definition>
+        <argsstring>(HSocket *outClientSocket, NetAddress *outClientAddress=NULL) const </argsstring>
+        <name>Accept</name>
+        <param>
+          <type><ref refid="d3/d4e/classHSocket" kindref="compound">HSocket</ref> *</type>
+          <declname>outClientSocket</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/d80/structNetAddress" kindref="compound">NetAddress</ref> *</type>
+          <declname>outClientAddress</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Networking.h" line="225"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d4e/classHSocket_1a93d2b9f0c24faca0f8751688cddb90f7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="df/dfb/Networking_8h_1a34e02d47f955b652362d2cf8eb08730b" kindref="member">NetworkError</ref></type>
+        <definition>NetworkError Send</definition>
+        <argsstring>(const Byte *streamData, UInt iLength, UInt *outBytesSent=NULL) const </argsstring>
+        <name>Send</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+          <declname>streamData</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iLength</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref> *</type>
+          <declname>outBytesSent</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Networking.h" line="227"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d4e/classHSocket_1ad08df412aa6246f9cf6a1338aff77e63" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="df/dfb/Networking_8h_1a34e02d47f955b652362d2cf8eb08730b" kindref="member">NetworkError</ref></type>
+        <definition>NetworkError Receive</definition>
+        <argsstring>(Byte *streamData, UInt iLength, UInt *outBytesReceived=NULL) const </argsstring>
+        <name>Receive</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+          <declname>streamData</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iLength</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref> *</type>
+          <declname>outBytesReceived</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Networking.h" line="228"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d4e/classHSocket_1a0699bb546e3469e7f9461689ab915cc5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="df/dfb/Networking_8h_1a34e02d47f955b652362d2cf8eb08730b" kindref="member">NetworkError</ref></type>
+        <definition>NetworkError SendTo</definition>
+        <argsstring>(const NetAddress *pRemoteAddress, const Byte *packetData, UInt iLength, UInt *outBytesSent=NULL) const </argsstring>
+        <name>SendTo</name>
+        <param>
+          <type>const <ref refid="d9/d80/structNetAddress" kindref="compound">NetAddress</ref> *</type>
+          <declname>pRemoteAddress</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+          <declname>packetData</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iLength</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref> *</type>
+          <declname>outBytesSent</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Networking.h" line="230"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d4e/classHSocket_1a00a390317707bc468440f17ea26ba3df" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="df/dfb/Networking_8h_1a34e02d47f955b652362d2cf8eb08730b" kindref="member">NetworkError</ref></type>
+        <definition>NetworkError ReceiveFrom</definition>
+        <argsstring>(NetAddress *outRemoteAddress, Byte *packetData, UInt iLength, UInt *outBytesReceived=NULL) const </argsstring>
+        <name>ReceiveFrom</name>
+        <param>
+          <type><ref refid="d9/d80/structNetAddress" kindref="compound">NetAddress</ref> *</type>
+          <declname>outRemoteAddress</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+          <declname>packetData</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iLength</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref> *</type>
+          <declname>outBytesReceived</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Networking.h" line="231"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d3/d4e/classHSocket_1a89a6cb213a2c518d669e70e4c8b3b70a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HSocket</definition>
+        <argsstring>(SocketProtocol iProtocol)</argsstring>
+        <name>HSocket</name>
+        <param>
+          <type><ref refid="df/dfb/Networking_8h_1a8413f2d8de9652f25713761efcc44c31" kindref="member">SocketProtocol</ref></type>
+          <declname>iProtocol</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Networking.h" line="236"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="d3/d4e/classHSocket_1a9505483d5ae8ce18a82196cbaec69a47" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="df/dfb/Networking_8h_1a8413f2d8de9652f25713761efcc44c31" kindref="member">SocketProtocol</ref></type>
+        <definition>static SocketProtocol _BuildSocketProtocol</definition>
+        <argsstring>(DWord dwSockType, DWord dwFamily, DWord dwProtocol)</argsstring>
+        <name>_BuildSocketProtocol</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+          <declname>dwSockType</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+          <declname>dwFamily</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+          <declname>dwProtocol</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Networking.h" line="239"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d4e/classHSocket_1ad4a0f153d1bb0f94eee591a2a77e3c75" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>static Void _BuildSocketOption</definition>
+        <argsstring>(Int *outLevel, Int *outOptionName, Int *outOptionLength, SocketOption iOption)</argsstring>
+        <name>_BuildSocketOption</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref> *</type>
+          <declname>outLevel</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref> *</type>
+          <declname>outOptionName</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref> *</type>
+          <declname>outOptionLength</declname>
+        </param>
+        <param>
+          <type><ref refid="df/dfb/Networking_8h_1a497e132f91c064dddcb331861b7aa952" kindref="member">SocketOption</ref></type>
+          <declname>iOption</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Networking.h" line="240"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4851">
+        <label>HSocket</label>
+        <link refid="d3/d4e/classHSocket"/>
+        <childnode refid="4852" relation="usage">
+          <edgelabel>m_hSocket</edgelabel>
+        </childnode>
+      </node>
+      <node id="4852">
+        <label>int</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Networking.h" line="208" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Networking.h" bodystart="207" bodyend="244"/>
+    <listofallmembers>
+      <member refid="d3/d4e/classHSocket_1ad4a0f153d1bb0f94eee591a2a77e3c75" prot="private" virt="non-virtual"><scope>HSocket</scope><name>_BuildSocketOption</name></member>
+      <member refid="d3/d4e/classHSocket_1a9505483d5ae8ce18a82196cbaec69a47" prot="private" virt="non-virtual"><scope>HSocket</scope><name>_BuildSocketProtocol</name></member>
+      <member refid="d3/d4e/classHSocket_1a531a88ce19e55c1d16f67265a3f9f344" prot="public" virt="non-virtual"><scope>HSocket</scope><name>Accept</name></member>
+      <member refid="d3/d4e/classHSocket_1a2b86acc257216a425acf6b677e864527" prot="public" virt="non-virtual"><scope>HSocket</scope><name>Bind</name></member>
+      <member refid="d3/d4e/classHSocket_1a081397d9552f403c149ec899adc37486" prot="public" virt="non-virtual"><scope>HSocket</scope><name>Close</name></member>
+      <member refid="d3/d4e/classHSocket_1a6e440a3f1f3c4ea66a0bfe95e120f99f" prot="public" virt="non-virtual"><scope>HSocket</scope><name>Connect</name></member>
+      <member refid="d3/d4e/classHSocket_1ab678fb0209e6be3af66c28f5349c5733" prot="public" virt="non-virtual"><scope>HSocket</scope><name>GetOption</name></member>
+      <member refid="d3/d4e/classHSocket_1a82ec7f1d152f616c6e5bb61abcc158b8" prot="public" virt="non-virtual"><scope>HSocket</scope><name>GetPendingData</name></member>
+      <member refid="d3/d4e/classHSocket_1a89a6cb213a2c518d669e70e4c8b3b70a" prot="private" virt="non-virtual"><scope>HSocket</scope><name>HSocket</name></member>
+      <member refid="d3/d4e/classHSocket_1a41a3e697d4d89b87b912d5dccbfd4f3a" prot="public" virt="non-virtual"><scope>HSocket</scope><name>Listen</name></member>
+      <member refid="d3/d4e/classHSocket_1a966af48a119fcac62fa3ac243265d0ad" prot="private" virt="non-virtual"><scope>HSocket</scope><name>m_hSocket</name></member>
+      <member refid="d3/d4e/classHSocket_1ad08df412aa6246f9cf6a1338aff77e63" prot="public" virt="non-virtual"><scope>HSocket</scope><name>Receive</name></member>
+      <member refid="d3/d4e/classHSocket_1a00a390317707bc468440f17ea26ba3df" prot="public" virt="non-virtual"><scope>HSocket</scope><name>ReceiveFrom</name></member>
+      <member refid="d3/d4e/classHSocket_1a93d2b9f0c24faca0f8751688cddb90f7" prot="public" virt="non-virtual"><scope>HSocket</scope><name>Send</name></member>
+      <member refid="d3/d4e/classHSocket_1a0699bb546e3469e7f9461689ab915cc5" prot="public" virt="non-virtual"><scope>HSocket</scope><name>SendTo</name></member>
+      <member refid="d3/d4e/classHSocket_1a1f53774ce8181b2fe7f451960d717ed7" prot="public" virt="non-virtual"><scope>HSocket</scope><name>SetMode</name></member>
+      <member refid="d3/d4e/classHSocket_1a78775efd489fb45d904ab3c3c49b3391" prot="public" virt="non-virtual"><scope>HSocket</scope><name>SetOption</name></member>
+      <member refid="d3/d4e/classHSocket_1a3a0a97b91f8e7b8f5965a15592ebc7e7" prot="public" virt="non-virtual"><scope>HSocket</scope><name>Shutdown</name></member>
+      <member refid="d3/d4e/classHSocket_1af18a9ee98e70982bfe2975391d7221a5" prot="private" virt="non-virtual"><scope>HSocket</scope><name>System</name></member>
+      <member refid="d3/d4e/classHSocket_1ad9e4d86e41c1a9bd15867e0c82013670" prot="public" virt="non-virtual"><scope>HSocket</scope><name>~HSocket</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

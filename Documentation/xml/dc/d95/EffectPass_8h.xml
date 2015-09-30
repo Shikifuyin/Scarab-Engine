@@ -1,0 +1,666 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="dc/d95/EffectPass_8h" kind="file">
+    <compoundname>EffectPass.h</compoundname>
+    <includes refid="d7/dde/ClippingState_8h" local="yes">../States/ClippingState.h</includes>
+    <includes refid="d9/db7/CullingState_8h" local="yes">../States/CullingState.h</includes>
+    <includes refid="d8/d4b/DepthState_8h" local="yes">../States/DepthState.h</includes>
+    <includes refid="d1/db8/StencilState_8h" local="yes">../States/StencilState.h</includes>
+    <includes refid="d0/d5e/BlendingState_8h" local="yes">../States/BlendingState.h</includes>
+    <includes refid="df/d5d/PolygonState_8h" local="yes">../States/PolygonState.h</includes>
+    <includes refid="dd/d99/ShaderProgram_8h" local="yes">../Shaders/ShaderProgram.h</includes>
+    <includes local="yes">EffectPass.inl</includes>
+    <includedby refid="d3/d77/EffectTechnique_8h" local="yes">EffectTechnique.h</includedby>
+    <incdepgraph>
+      <node id="10355">
+        <label>../States/CullingState.h</label>
+        <link refid="d9/db7/CullingState_8h"/>
+        <childnode refid="10352" relation="include">
+        </childnode>
+        <childnode refid="10356" relation="include">
+        </childnode>
+      </node>
+      <node id="10394">
+        <label>ShaderProgram.inl</label>
+      </node>
+      <node id="10382">
+        <label>SSE.inl</label>
+      </node>
+      <node id="10388">
+        <label>Threading.h</label>
+        <link refid="dd/d0e/Threading_8h"/>
+        <childnode refid="10378" relation="include">
+        </childnode>
+        <childnode refid="10352" relation="include">
+        </childnode>
+        <childnode refid="10389" relation="include">
+        </childnode>
+      </node>
+      <node id="10377">
+        <label>../../ThirdParty/System/System.h</label>
+        <link refid="db/d39/System_8h"/>
+        <childnode refid="10378" relation="include">
+        </childnode>
+        <childnode refid="10352" relation="include">
+        </childnode>
+        <childnode refid="10380" relation="include">
+        </childnode>
+        <childnode refid="10384" relation="include">
+        </childnode>
+        <childnode refid="10386" relation="include">
+        </childnode>
+        <childnode refid="10388" relation="include">
+        </childnode>
+        <childnode refid="10390" relation="include">
+        </childnode>
+        <childnode refid="10392" relation="include">
+        </childnode>
+      </node>
+      <node id="10362">
+        <label>../../../Lib/Math/Types/Color/Color4.h</label>
+        <link refid="d7/d4d/Color4_8h"/>
+        <childnode refid="10363" relation="include">
+        </childnode>
+        <childnode refid="10371" relation="include">
+        </childnode>
+      </node>
+      <node id="10389">
+        <label>Threading.inl</label>
+      </node>
+      <node id="10354">
+        <label>ClippingState.inl</label>
+      </node>
+      <node id="10359">
+        <label>../States/StencilState.h</label>
+        <link refid="d1/db8/StencilState_8h"/>
+        <childnode refid="10352" relation="include">
+        </childnode>
+        <childnode refid="10360" relation="include">
+        </childnode>
+      </node>
+      <node id="10352">
+        <label>../../../ThirdParty/System/Platform.h</label>
+        <link refid="d9/dd0/Platform_8h"/>
+        <childnode refid="10353" relation="include">
+        </childnode>
+      </node>
+      <node id="10372">
+        <label>BlendingState.inl</label>
+      </node>
+      <node id="10365">
+        <label>FPU.inl</label>
+      </node>
+      <node id="10370">
+        <label>MathFunction.inl</label>
+      </node>
+      <node id="10366">
+        <label>../Formats/Scalar.h</label>
+        <link refid="d0/d10/Scalar_8h"/>
+        <childnode refid="10352" relation="include">
+        </childnode>
+        <childnode refid="10367" relation="include">
+        </childnode>
+      </node>
+      <node id="10375">
+        <label>../Shaders/ShaderProgram.h</label>
+        <link refid="dd/d99/ShaderProgram_8h"/>
+        <childnode refid="10376" relation="include">
+        </childnode>
+        <childnode refid="10394" relation="include">
+        </childnode>
+      </node>
+      <node id="10373">
+        <label>../States/PolygonState.h</label>
+        <link refid="df/d5d/PolygonState_8h"/>
+        <childnode refid="10366" relation="include">
+        </childnode>
+        <childnode refid="10374" relation="include">
+        </childnode>
+      </node>
+      <node id="10387">
+        <label>File.inl</label>
+      </node>
+      <node id="10380">
+        <label>Hardware/Hardware.h</label>
+        <link refid="da/dec/Hardware_8h"/>
+        <childnode refid="10352" relation="include">
+        </childnode>
+        <childnode refid="10364" relation="include">
+        </childnode>
+        <childnode refid="10381" relation="include">
+        </childnode>
+        <childnode refid="10383" relation="include">
+        </childnode>
+      </node>
+      <node id="10383">
+        <label>Hardware.inl</label>
+      </node>
+      <node id="10367">
+        <label>Scalar.inl</label>
+      </node>
+      <node id="10385">
+        <label>String.inl</label>
+      </node>
+      <node id="10358">
+        <label>DepthState.inl</label>
+      </node>
+      <node id="10395">
+        <label>EffectPass.inl</label>
+      </node>
+      <node id="10351">
+        <label>../States/ClippingState.h</label>
+        <link refid="d7/dde/ClippingState_8h"/>
+        <childnode refid="10352" relation="include">
+        </childnode>
+        <childnode refid="10354" relation="include">
+        </childnode>
+      </node>
+      <node id="10364">
+        <label>../../../ThirdParty/System/Hardware/FPU.h</label>
+        <link refid="dd/d2f/FPU_8h"/>
+        <childnode refid="10352" relation="include">
+        </childnode>
+        <childnode refid="10365" relation="include">
+        </childnode>
+      </node>
+      <node id="10384">
+        <label>String.h</label>
+        <link refid="d9/dba/String_8h"/>
+        <childnode refid="10378" relation="include">
+        </childnode>
+        <childnode refid="10352" relation="include">
+        </childnode>
+        <childnode refid="10364" relation="include">
+        </childnode>
+        <childnode refid="10385" relation="include">
+        </childnode>
+      </node>
+      <node id="10353">
+        <label>Platform.inl</label>
+      </node>
+      <node id="10374">
+        <label>PolygonState.inl</label>
+      </node>
+      <node id="10392">
+        <label>System.inl</label>
+      </node>
+      <node id="10390">
+        <label>Networking.h</label>
+        <link refid="df/dfb/Networking_8h"/>
+        <childnode refid="10378" relation="include">
+        </childnode>
+        <childnode refid="10352" relation="include">
+        </childnode>
+        <childnode refid="10391" relation="include">
+        </childnode>
+      </node>
+      <node id="10386">
+        <label>File.h</label>
+        <link refid="d6/db7/File_8h"/>
+        <childnode refid="10378" relation="include">
+        </childnode>
+        <childnode refid="10352" relation="include">
+        </childnode>
+        <childnode refid="10384" relation="include">
+        </childnode>
+        <childnode refid="10387" relation="include">
+        </childnode>
+      </node>
+      <node id="10350">
+        <label>EffectPass.h</label>
+        <link refid="EffectPass.h"/>
+        <childnode refid="10351" relation="include">
+        </childnode>
+        <childnode refid="10355" relation="include">
+        </childnode>
+        <childnode refid="10357" relation="include">
+        </childnode>
+        <childnode refid="10359" relation="include">
+        </childnode>
+        <childnode refid="10361" relation="include">
+        </childnode>
+        <childnode refid="10373" relation="include">
+        </childnode>
+        <childnode refid="10375" relation="include">
+        </childnode>
+        <childnode refid="10395" relation="include">
+        </childnode>
+      </node>
+      <node id="10379">
+        <label>ForwardWin32.inl</label>
+      </node>
+      <node id="10357">
+        <label>../States/DepthState.h</label>
+        <link refid="d8/d4b/DepthState_8h"/>
+        <childnode refid="10352" relation="include">
+        </childnode>
+        <childnode refid="10358" relation="include">
+        </childnode>
+      </node>
+      <node id="10360">
+        <label>StencilState.inl</label>
+      </node>
+      <node id="10381">
+        <label>SSE.h</label>
+        <link refid="d0/d02/SSE_8h"/>
+        <childnode refid="10352" relation="include">
+        </childnode>
+        <childnode refid="10382" relation="include">
+        </childnode>
+      </node>
+      <node id="10371">
+        <label>Color4.inl</label>
+      </node>
+      <node id="10391">
+        <label>Networking.inl</label>
+      </node>
+      <node id="10361">
+        <label>../States/BlendingState.h</label>
+        <link refid="d0/d5e/BlendingState_8h"/>
+        <childnode refid="10362" relation="include">
+        </childnode>
+        <childnode refid="10372" relation="include">
+        </childnode>
+      </node>
+      <node id="10369">
+        <label>Fixed.inl</label>
+      </node>
+      <node id="10363">
+        <label>../../Functions/MathFunction.h</label>
+        <link refid="d1/d98/MathFunction_8h"/>
+        <childnode refid="10364" relation="include">
+        </childnode>
+        <childnode refid="10366" relation="include">
+        </childnode>
+        <childnode refid="10368" relation="include">
+        </childnode>
+        <childnode refid="10370" relation="include">
+        </childnode>
+      </node>
+      <node id="10368">
+        <label>../Formats/Fixed.h</label>
+        <link refid="d4/d76/Fixed_8h"/>
+        <childnode refid="10366" relation="include">
+        </childnode>
+        <childnode refid="10369" relation="include">
+        </childnode>
+      </node>
+      <node id="10393">
+        <label>ErrorManager.inl</label>
+      </node>
+      <node id="10356">
+        <label>CullingState.inl</label>
+      </node>
+      <node id="10378">
+        <label>../Forwards/ForwardWin32.h</label>
+        <link refid="d5/dea/ForwardWin32_8h"/>
+        <childnode refid="10379" relation="include">
+        </childnode>
+      </node>
+      <node id="10376">
+        <label>../../../Lib/Error/ErrorManager.h</label>
+        <link refid="d1/db6/ErrorManager_8h"/>
+        <childnode refid="10377" relation="include">
+        </childnode>
+        <childnode refid="10393" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="10407">
+        <label>WorldManager.h</label>
+        <link refid="db/d98/WorldManager_8h"/>
+        <childnode refid="10400" relation="include">
+        </childnode>
+      </node>
+      <node id="10428">
+        <label>EffectPlanarReflection.h</label>
+        <link refid="d1/d6b/EffectPlanarReflection_8h"/>
+      </node>
+      <node id="10405">
+        <label>MyDungeon.h</label>
+        <link refid="d0/de7/MyDungeon_8h"/>
+        <childnode refid="10403" relation="include">
+        </childnode>
+      </node>
+      <node id="10429">
+        <label>WorldDLODNode.h</label>
+        <link refid="df/d7d/WorldDLODNode_8h"/>
+      </node>
+      <node id="10398">
+        <label>Effect.h</label>
+        <link refid="d3/d24/Effect_8h"/>
+        <childnode refid="10399" relation="include">
+        </childnode>
+        <childnode refid="10411" relation="include">
+        </childnode>
+        <childnode refid="10412" relation="include">
+        </childnode>
+        <childnode refid="10413" relation="include">
+        </childnode>
+        <childnode refid="10414" relation="include">
+        </childnode>
+        <childnode refid="10415" relation="include">
+        </childnode>
+        <childnode refid="10431" relation="include">
+        </childnode>
+        <childnode refid="10432" relation="include">
+        </childnode>
+        <childnode refid="10433" relation="include">
+        </childnode>
+        <childnode refid="10434" relation="include">
+        </childnode>
+        <childnode refid="10435" relation="include">
+        </childnode>
+        <childnode refid="10436" relation="include">
+        </childnode>
+        <childnode refid="10437" relation="include">
+        </childnode>
+        <childnode refid="10438" relation="include">
+        </childnode>
+      </node>
+      <node id="10425">
+        <label>WorldConvexRoom.h</label>
+        <link refid="d0/d27/WorldConvexRoom_8h"/>
+        <childnode refid="10423" relation="include">
+        </childnode>
+      </node>
+      <node id="10417">
+        <label>WorldLight.h</label>
+        <link refid="d3/d85/WorldLight_8h"/>
+        <childnode refid="10407" relation="include">
+        </childnode>
+        <childnode refid="10418" relation="include">
+        </childnode>
+      </node>
+      <node id="10430">
+        <label>WorldCaster.h</label>
+        <link refid="d9/d6f/WorldCaster_8h"/>
+        <childnode refid="10407" relation="include">
+        </childnode>
+      </node>
+      <node id="10399">
+        <label>RenderingManager.h</label>
+        <link refid="de/d07/RenderingManager_8h"/>
+        <childnode refid="10400" relation="include">
+        </childnode>
+        <childnode refid="10406" relation="include">
+        </childnode>
+        <childnode refid="10407" relation="include">
+        </childnode>
+        <childnode refid="10408" relation="include">
+        </childnode>
+      </node>
+      <node id="10415">
+        <label>EffectColor.h</label>
+        <link refid="db/d7c/EffectColor_8h"/>
+        <childnode refid="10399" relation="include">
+        </childnode>
+      </node>
+      <node id="10403">
+        <label>Main.h</label>
+        <link refid="da/d94/Main_8h"/>
+      </node>
+      <node id="10422">
+        <label>WorldPortalCuller.h</label>
+        <link refid="d1/d27/WorldPortalCuller_8h"/>
+        <childnode refid="10423" relation="include">
+        </childnode>
+        <childnode refid="10424" relation="include">
+        </childnode>
+        <childnode refid="10425" relation="include">
+        </childnode>
+      </node>
+      <node id="10410">
+        <label>CommandShowTree.h</label>
+        <link refid="d8/d84/CommandShowTree_8h"/>
+        <childnode refid="10409" relation="include">
+        </childnode>
+      </node>
+      <node id="10436">
+        <label>EffectTexture1D.h</label>
+        <link refid="db/df9/EffectTexture1D_8h"/>
+      </node>
+      <node id="10404">
+        <label>MyLandscape.h</label>
+        <link refid="d7/d2b/MyLandscape_8h"/>
+        <childnode refid="10403" relation="include">
+        </childnode>
+      </node>
+      <node id="10397">
+        <label>EffectTechnique.h</label>
+        <link refid="d3/d77/EffectTechnique_8h"/>
+        <childnode refid="10398" relation="include">
+        </childnode>
+      </node>
+      <node id="10401">
+        <label>ApplicationManager.h</label>
+        <link refid="d2/d9d/ApplicationManager_8h"/>
+        <childnode refid="10402" relation="include">
+        </childnode>
+        <childnode refid="10403" relation="include">
+        </childnode>
+        <childnode refid="10404" relation="include">
+        </childnode>
+        <childnode refid="10405" relation="include">
+        </childnode>
+      </node>
+      <node id="10421">
+        <label>WorldCuller.h</label>
+        <link refid="da/daf/WorldCuller_8h"/>
+        <childnode refid="10422" relation="include">
+        </childnode>
+        <childnode refid="10426" relation="include">
+        </childnode>
+        <childnode refid="10407" relation="include">
+        </childnode>
+        <childnode refid="10429" relation="include">
+        </childnode>
+      </node>
+      <node id="10437">
+        <label>EffectTexture2D.h</label>
+        <link refid="db/d40/EffectTexture2D_8h"/>
+      </node>
+      <node id="10438">
+        <label>EffectTexture3D.h</label>
+        <link refid="d7/d48/EffectTexture3D_8h"/>
+      </node>
+      <node id="10400">
+        <label>WindowApplication.h</label>
+        <link refid="d4/d72/WindowApplication_8h"/>
+        <childnode refid="10401" relation="include">
+        </childnode>
+      </node>
+      <node id="10412">
+        <label>EffectDefault.h</label>
+        <link refid="da/d69/EffectDefault_8h"/>
+        <childnode refid="10399" relation="include">
+        </childnode>
+      </node>
+      <node id="10434">
+        <label>EffectLightPointGouraud.h</label>
+        <link refid="de/da9/EffectLightPointGouraud_8h"/>
+      </node>
+      <node id="10419">
+        <label>WorldOutdoorRegion.h</label>
+        <link refid="d0/d1d/WorldOutdoorRegion_8h"/>
+        <childnode refid="10420" relation="include">
+        </childnode>
+      </node>
+      <node id="10414">
+        <label>EffectText.h</label>
+        <link refid="d8/d5f/EffectText_8h"/>
+        <childnode refid="10399" relation="include">
+        </childnode>
+      </node>
+      <node id="10418">
+        <label>WorldDebugDraw.h</label>
+        <link refid="d1/df3/WorldDebugDraw_8h"/>
+        <childnode refid="10407" relation="include">
+        </childnode>
+      </node>
+      <node id="10420">
+        <label>WorldOutdoorArea.h</label>
+        <link refid="dd/d4f/WorldOutdoorArea_8h"/>
+        <childnode refid="10407" relation="include">
+        </childnode>
+        <childnode refid="10418" relation="include">
+        </childnode>
+      </node>
+      <node id="10402">
+        <label>Entities.h</label>
+        <link refid="d7/d5d/Entities_8h"/>
+        <childnode refid="10403" relation="include">
+        </childnode>
+      </node>
+      <node id="10426">
+        <label>GlobalEffect.h</label>
+        <link refid="d2/d5d/GlobalEffect_8h"/>
+        <childnode refid="10427" relation="include">
+        </childnode>
+        <childnode refid="10428" relation="include">
+        </childnode>
+      </node>
+      <node id="10423">
+        <label>WorldIndoorArea.h</label>
+        <link refid="d2/d61/WorldIndoorArea_8h"/>
+        <childnode refid="10407" relation="include">
+        </childnode>
+        <childnode refid="10418" relation="include">
+        </childnode>
+      </node>
+      <node id="10413">
+        <label>Effect2D.h</label>
+        <link refid="db/d27/Effect2D_8h"/>
+        <childnode refid="10399" relation="include">
+        </childnode>
+      </node>
+      <node id="10427">
+        <label>EffectPlanarShadows.h</label>
+        <link refid="d6/d73/EffectPlanarShadows_8h"/>
+        <childnode refid="10407" relation="include">
+        </childnode>
+      </node>
+      <node id="10406">
+        <label>ModelingManager.h</label>
+        <link refid="dc/ddb/ModelingManager_8h"/>
+        <childnode refid="10400" relation="include">
+        </childnode>
+        <childnode refid="10407" relation="include">
+        </childnode>
+      </node>
+      <node id="10409">
+        <label>ConsoleManager.h</label>
+        <link refid="d3/d63/ConsoleManager_8h"/>
+        <childnode refid="10400" relation="include">
+        </childnode>
+      </node>
+      <node id="10408">
+        <label>GUIManager.h</label>
+        <link refid="d6/db3/GUIManager_8h"/>
+        <childnode refid="10400" relation="include">
+        </childnode>
+        <childnode refid="10409" relation="include">
+        </childnode>
+        <childnode refid="10410" relation="include">
+        </childnode>
+      </node>
+      <node id="10431">
+        <label>EffectMaterial.h</label>
+        <link refid="d6/d58/EffectMaterial_8h"/>
+        <childnode refid="10427" relation="include">
+        </childnode>
+        <childnode refid="10403" relation="include">
+        </childnode>
+      </node>
+      <node id="10396">
+        <label>EffectPass.h</label>
+        <link refid="EffectPass.h"/>
+        <childnode refid="10397" relation="include">
+        </childnode>
+      </node>
+      <node id="10424">
+        <label>WorldPortal.h</label>
+        <link refid="df/d65/WorldPortal_8h"/>
+        <childnode refid="10423" relation="include">
+        </childnode>
+        <childnode refid="10425" relation="include">
+        </childnode>
+      </node>
+      <node id="10411">
+        <label>EffectInstance.h</label>
+        <link refid="dc/d13/EffectInstance_8h"/>
+        <childnode refid="10399" relation="include">
+        </childnode>
+        <childnode refid="10412" relation="include">
+        </childnode>
+        <childnode refid="10413" relation="include">
+        </childnode>
+        <childnode refid="10414" relation="include">
+        </childnode>
+        <childnode refid="10415" relation="include">
+        </childnode>
+        <childnode refid="10416" relation="include">
+        </childnode>
+        <childnode refid="10419" relation="include">
+        </childnode>
+        <childnode refid="10431" relation="include">
+        </childnode>
+        <childnode refid="10432" relation="include">
+        </childnode>
+        <childnode refid="10433" relation="include">
+        </childnode>
+        <childnode refid="10434" relation="include">
+        </childnode>
+        <childnode refid="10435" relation="include">
+        </childnode>
+        <childnode refid="10436" relation="include">
+        </childnode>
+        <childnode refid="10437" relation="include">
+        </childnode>
+        <childnode refid="10438" relation="include">
+        </childnode>
+      </node>
+      <node id="10435">
+        <label>EffectLightPointPhong.h</label>
+        <link refid="dc/d62/EffectLightPointPhong_8h"/>
+        <childnode refid="10405" relation="include">
+        </childnode>
+        <childnode refid="10403" relation="include">
+        </childnode>
+      </node>
+      <node id="10433">
+        <label>EffectLightAmbient.h</label>
+        <link refid="da/d0a/EffectLightAmbient_8h"/>
+      </node>
+      <node id="10432">
+        <label>EffectMaterialTexture.h</label>
+        <link refid="d1/d26/EffectMaterialTexture_8h"/>
+      </node>
+      <node id="10416">
+        <label>WorldLeaf.h</label>
+        <link refid="de/d75/WorldLeaf_8h"/>
+        <childnode refid="10407" relation="include">
+        </childnode>
+        <childnode refid="10417" relation="include">
+        </childnode>
+        <childnode refid="10419" relation="include">
+        </childnode>
+        <childnode refid="10421" relation="include">
+        </childnode>
+        <childnode refid="10427" relation="include">
+        </childnode>
+        <childnode refid="10430" relation="include">
+        </childnode>
+        <childnode refid="10418" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="dc/dfd/classEffectPass" prot="public">EffectPass</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Effects/EffectPass.h"/>
+  </compounddef>
+</doxygen>

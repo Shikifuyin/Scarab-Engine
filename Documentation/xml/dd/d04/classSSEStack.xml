@@ -1,0 +1,2556 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="dd/d04/classSSEStack" kind="class" prot="public">
+    <compoundname>SSEStack</compoundname>
+    <includes refid="d0/d02/SSE_8h" local="no">SSE.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="dd/d04/classSSEStack_1a37f4ebd251d1db08f6ccc5856671264e" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref></type>
+        <definition>Byte m_arrUnalignedScratch[32]</definition>
+        <argsstring>[32]</argsstring>
+        <name>m_arrUnalignedScratch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="1012" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" bodystart="1012" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d04/classSSEStack_1a904adac0a02bd44ed3f9620ccd578813" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref> *</type>
+        <definition>Float* m_pAlignedFloatScratch</definition>
+        <argsstring></argsstring>
+        <name>m_pAlignedFloatScratch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="1013" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" bodystart="1013" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d04/classSSEStack_1a6c7b35bc73ae7d60d6aab3095c22a521" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a1f2c5f02159fb28428e23074cc04166d" kindref="member">Double</ref> *</type>
+        <definition>Double* m_pAlignedDoubleScratch</definition>
+        <argsstring></argsstring>
+        <name>m_pAlignedDoubleScratch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="1014" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" bodystart="1014" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d04/classSSEStack_1a4ead625ac2ccce4c29ad93ea51d60768" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iTop</definition>
+        <argsstring></argsstring>
+        <name>m_iTop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="1017" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" bodystart="1017" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a4ca0f70e0ef5bd84dc1e699cd1a13f2f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="dd/d04/classSSEStack" kindref="compound">SSEStack</ref> *</type>
+        <definition>static SSEStack* GetInstancePtr</definition>
+        <argsstring>()</argsstring>
+        <name>GetInstancePtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="845"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="dd/d04/classSSEStack_1abb0f38d184fe9f9e80bf0a49bcde5043" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SSEStack</definition>
+        <argsstring>()</argsstring>
+        <name>SSEStack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="848"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a683f8428be8acc9a8ca71104f96da595" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~SSEStack</definition>
+        <argsstring>()</argsstring>
+        <name>~SSEStack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="849"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a47bb244b474b75143017303fa0598494" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _IPush</definition>
+        <argsstring>(UInt iVariant, QWord inMem128[2])</argsstring>
+        <name>_IPush</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iVariant</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a557c9c5ae94abf5436f9c39c049c8f72" kindref="member">QWord</ref></type>
+          <declname>inMem128</declname>
+          <array>[2]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="1008"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a68f44d3e47436c6e3247bb552639f0c4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _IPop</definition>
+        <argsstring>(UInt iVariant, QWord outMem128[2])</argsstring>
+        <name>_IPop</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iVariant</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a557c9c5ae94abf5436f9c39c049c8f72" kindref="member">QWord</ref></type>
+          <declname>outMem128</declname>
+          <array>[2]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="1009"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a6326b07e367ef24467a69fc6df1130f0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Push</definition>
+        <argsstring>(Float fValue0)</argsstring>
+        <name>Push</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref></type>
+          <declname>fValue0</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="852"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a20b7b6d1f38c5d3ea99172000a3a8a64" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Push</definition>
+        <argsstring>(Float fValue0, Float fValue1)</argsstring>
+        <name>Push</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref></type>
+          <declname>fValue0</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref></type>
+          <declname>fValue1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="853"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a0735c245255f44f340ce6958e3ef019b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Push</definition>
+        <argsstring>(Float fValue0, Float fValue1, Float fValue2)</argsstring>
+        <name>Push</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref></type>
+          <declname>fValue0</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref></type>
+          <declname>fValue1</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref></type>
+          <declname>fValue2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="854"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1ab27e6fe29a50acc3d6c3ab311bbfac2f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Push</definition>
+        <argsstring>(Float fValue0, Float fValue1, Float fValue2, Float fValue3)</argsstring>
+        <name>Push</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref></type>
+          <declname>fValue0</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref></type>
+          <declname>fValue1</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref></type>
+          <declname>fValue2</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref></type>
+          <declname>fValue3</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="855"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a93351f3d166cec6c14cd1b25dec566f4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Push</definition>
+        <argsstring>(Float *fValues)</argsstring>
+        <name>Push</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref> *</type>
+          <declname>fValues</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="856"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1aadefecebc781ce0e0b00ea56a9047167" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Push</definition>
+        <argsstring>(Double fValue0)</argsstring>
+        <name>Push</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a1f2c5f02159fb28428e23074cc04166d" kindref="member">Double</ref></type>
+          <declname>fValue0</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="858"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a5bcf7f2150deb2b10820c74c4b34f320" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Push</definition>
+        <argsstring>(Double fValue0, Double fValue1)</argsstring>
+        <name>Push</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a1f2c5f02159fb28428e23074cc04166d" kindref="member">Double</ref></type>
+          <declname>fValue0</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a1f2c5f02159fb28428e23074cc04166d" kindref="member">Double</ref></type>
+          <declname>fValue1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="859"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1ae62e0b2686285f34713d319860597330" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Push</definition>
+        <argsstring>(Double *fValues)</argsstring>
+        <name>Push</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a1f2c5f02159fb28428e23074cc04166d" kindref="member">Double</ref> *</type>
+          <declname>fValues</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="860"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a10b8ef3199ee2c5685dad653e26aa45f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void PopF</definition>
+        <argsstring>()</argsstring>
+        <name>PopF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="862"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1ac80c5d7a9848c2afa0bad5e72c54dc85" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Pop</definition>
+        <argsstring>(Float &amp;outValue0)</argsstring>
+        <name>Pop</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref> &amp;</type>
+          <declname>outValue0</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="863"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a0c9b3c613fa7f45b1eb2bb64f16cf972" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Pop</definition>
+        <argsstring>(Float &amp;outValue0, Float &amp;outValue1)</argsstring>
+        <name>Pop</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref> &amp;</type>
+          <declname>outValue0</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref> &amp;</type>
+          <declname>outValue1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="864"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a29a0b5e36456a9f669fd2e2bbfef0e59" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Pop</definition>
+        <argsstring>(Float &amp;outValue0, Float &amp;outValue1, Float &amp;outValue2)</argsstring>
+        <name>Pop</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref> &amp;</type>
+          <declname>outValue0</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref> &amp;</type>
+          <declname>outValue1</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref> &amp;</type>
+          <declname>outValue2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="865"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a6ddb14c1aee26a9a306de42bf1f9d8ae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Pop</definition>
+        <argsstring>(Float &amp;outValue0, Float &amp;outValue1, Float &amp;outValue2, Float &amp;outValue3)</argsstring>
+        <name>Pop</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref> &amp;</type>
+          <declname>outValue0</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref> &amp;</type>
+          <declname>outValue1</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref> &amp;</type>
+          <declname>outValue2</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref> &amp;</type>
+          <declname>outValue3</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="866"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a654d74bdb33c99da89476da66323b827" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Pop</definition>
+        <argsstring>(Float *outValues)</argsstring>
+        <name>Pop</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref> *</type>
+          <declname>outValues</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="867"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a67d0e2bc2311f98bb38ef23a00b2fcd0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void PopD</definition>
+        <argsstring>()</argsstring>
+        <name>PopD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="869"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1aa8c3ee8350b003f7d4ebeaee3efeffdb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Pop</definition>
+        <argsstring>(Double &amp;outValue0)</argsstring>
+        <name>Pop</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a1f2c5f02159fb28428e23074cc04166d" kindref="member">Double</ref> &amp;</type>
+          <declname>outValue0</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="870"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a4f1beb17f6ca67d5016edf4df582ef06" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Pop</definition>
+        <argsstring>(Double &amp;outValue0, Double &amp;outValue1)</argsstring>
+        <name>Pop</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a1f2c5f02159fb28428e23074cc04166d" kindref="member">Double</ref> &amp;</type>
+          <declname>outValue0</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a1f2c5f02159fb28428e23074cc04166d" kindref="member">Double</ref> &amp;</type>
+          <declname>outValue1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="871"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1afc9576660ceae09ac8ca91f298c22607" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Pop</definition>
+        <argsstring>(Double *outValues)</argsstring>
+        <name>Pop</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a1f2c5f02159fb28428e23074cc04166d" kindref="member">Double</ref> *</type>
+          <declname>outValues</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="872"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a00ee103ce4de046d8e2ce0612647db86" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Set</definition>
+        <argsstring>(UInt iStackIndex, Float fValue0)</argsstring>
+        <name>Set</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iStackIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref></type>
+          <declname>fValue0</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="874"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a6432a80d1fe679d9009bf18c9af33e12" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Set</definition>
+        <argsstring>(UInt iStackIndex, Float fValue0, Float fValue1)</argsstring>
+        <name>Set</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iStackIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref></type>
+          <declname>fValue0</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref></type>
+          <declname>fValue1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="875"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a311d6b83d69955cf01e58100ca5a632e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Set</definition>
+        <argsstring>(UInt iStackIndex, Float fValue0, Float fValue1, Float fValue2)</argsstring>
+        <name>Set</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iStackIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref></type>
+          <declname>fValue0</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref></type>
+          <declname>fValue1</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref></type>
+          <declname>fValue2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="876"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a8c2fe288b5e17d2ef84b3b3949348f7f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Set</definition>
+        <argsstring>(UInt iStackIndex, Float fValue0, Float fValue1, Float fValue2, Float fValue3)</argsstring>
+        <name>Set</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iStackIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref></type>
+          <declname>fValue0</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref></type>
+          <declname>fValue1</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref></type>
+          <declname>fValue2</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref></type>
+          <declname>fValue3</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="877"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a82cc3dda0bcc5244b93861c641606d91" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Set</definition>
+        <argsstring>(UInt iStackIndex, Float *fValues)</argsstring>
+        <name>Set</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iStackIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref> *</type>
+          <declname>fValues</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="878"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a095eb715c882c8e40adde76e589293f3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Set</definition>
+        <argsstring>(UInt iStackIndex, Double fValue0)</argsstring>
+        <name>Set</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iStackIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a1f2c5f02159fb28428e23074cc04166d" kindref="member">Double</ref></type>
+          <declname>fValue0</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="880"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a0cf7cc718f957e996ece978549eddb47" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Set</definition>
+        <argsstring>(UInt iStackIndex, Double fValue0, Double fValue1)</argsstring>
+        <name>Set</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iStackIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a1f2c5f02159fb28428e23074cc04166d" kindref="member">Double</ref></type>
+          <declname>fValue0</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a1f2c5f02159fb28428e23074cc04166d" kindref="member">Double</ref></type>
+          <declname>fValue1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="881"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a549fe1a1027f468b41702d625990ce92" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Set</definition>
+        <argsstring>(UInt iStackIndex, Double *fValues)</argsstring>
+        <name>Set</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iStackIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a1f2c5f02159fb28428e23074cc04166d" kindref="member">Double</ref> *</type>
+          <declname>fValues</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="882"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1abcdef6d945add63aec963e875d86825c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Get</definition>
+        <argsstring>(UInt iStackIndex, Float &amp;outValue0)</argsstring>
+        <name>Get</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iStackIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref> &amp;</type>
+          <declname>outValue0</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="884"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a3a616ce718d4443a9f8ed1e0a04dd998" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Get</definition>
+        <argsstring>(UInt iStackIndex, Float &amp;outValue0, Float &amp;outValue1)</argsstring>
+        <name>Get</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iStackIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref> &amp;</type>
+          <declname>outValue0</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref> &amp;</type>
+          <declname>outValue1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="885"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1ada4315f4a190740f4acd67bb3e16068c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Get</definition>
+        <argsstring>(UInt iStackIndex, Float &amp;outValue0, Float &amp;outValue1, Float &amp;outValue2)</argsstring>
+        <name>Get</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iStackIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref> &amp;</type>
+          <declname>outValue0</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref> &amp;</type>
+          <declname>outValue1</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref> &amp;</type>
+          <declname>outValue2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="886"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1af5a063d5df9a9b24d7775c10dc0646b9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Get</definition>
+        <argsstring>(UInt iStackIndex, Float &amp;outValue0, Float &amp;outValue1, Float &amp;outValue2, Float &amp;outValue3)</argsstring>
+        <name>Get</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iStackIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref> &amp;</type>
+          <declname>outValue0</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref> &amp;</type>
+          <declname>outValue1</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref> &amp;</type>
+          <declname>outValue2</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref> &amp;</type>
+          <declname>outValue3</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="887"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1acf6e7eb74b49a2a453cd6bd9b3c56d07" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Get</definition>
+        <argsstring>(UInt iStackIndex, Float *outValues)</argsstring>
+        <name>Get</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iStackIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref> *</type>
+          <declname>outValues</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="888"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a909b83a378c48fe6ba103a1cdf265fa1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Get</definition>
+        <argsstring>(UInt iStackIndex, Double &amp;outValue0)</argsstring>
+        <name>Get</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iStackIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a1f2c5f02159fb28428e23074cc04166d" kindref="member">Double</ref> &amp;</type>
+          <declname>outValue0</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="890"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a037e607b5d0610f8d37e495e06660761" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Get</definition>
+        <argsstring>(UInt iStackIndex, Double &amp;outValue0, Double &amp;outValue1)</argsstring>
+        <name>Get</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iStackIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a1f2c5f02159fb28428e23074cc04166d" kindref="member">Double</ref> &amp;</type>
+          <declname>outValue0</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a1f2c5f02159fb28428e23074cc04166d" kindref="member">Double</ref> &amp;</type>
+          <declname>outValue1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="891"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a5288995a05d57e57d46fb10c56871043" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Get</definition>
+        <argsstring>(UInt iStackIndex, Double *outValues)</argsstring>
+        <name>Get</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iStackIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a1f2c5f02159fb28428e23074cc04166d" kindref="member">Double</ref> *</type>
+          <declname>outValues</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="892"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a355f62feca1869882bac95b505aad586" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void PushF</definition>
+        <argsstring>(UInt iSrcIndex)</argsstring>
+        <name>PushF</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iSrcIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="894"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a443232dfbaa2c6c67b272087cd776e10" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void PushD</definition>
+        <argsstring>(UInt iSrcIndex)</argsstring>
+        <name>PushD</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iSrcIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="895"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1ae4d91d46243d22c8c94c53fb3307902a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void PopF</definition>
+        <argsstring>(UInt iDestIndex)</argsstring>
+        <name>PopF</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="896"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a974f83b62d12cea49f0a8e0f41bb6c4b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void PopD</definition>
+        <argsstring>(UInt iDestIndex)</argsstring>
+        <name>PopD</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="897"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a5d70f4def9767e45194b41f92b6e77a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void MovF</definition>
+        <argsstring>(UInt iDestIndex, UInt iSrcIndex)</argsstring>
+        <name>MovF</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iSrcIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="898"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a7f2a2681714bc2e6f0cb33b2458de118" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void MovD</definition>
+        <argsstring>(UInt iDestIndex, UInt iSrcIndex)</argsstring>
+        <name>MovD</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iSrcIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="899"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a20731f80de79ee78568a3116114d8500" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void AddF</definition>
+        <argsstring>()</argsstring>
+        <name>AddF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="901"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a7a90b390740c68a0b383f08926090052" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void AddD</definition>
+        <argsstring>()</argsstring>
+        <name>AddD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="902"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1ac6a639af80f81e312301f575f1954888" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SubF</definition>
+        <argsstring>()</argsstring>
+        <name>SubF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="903"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a5933f7546fbc0f52ed321ae779cb9b30" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SubD</definition>
+        <argsstring>()</argsstring>
+        <name>SubD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="904"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1ab7a8e15e27b462a8bcac57995d5b9532" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void MulF</definition>
+        <argsstring>()</argsstring>
+        <name>MulF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="905"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a215535dc72f1a4351d6a5fc783c2858e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void MulD</definition>
+        <argsstring>()</argsstring>
+        <name>MulD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="906"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1aa1727c482a30b697e4f0450852a26047" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void DivF</definition>
+        <argsstring>()</argsstring>
+        <name>DivF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="907"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a689cb1e068e691fe0f71ee39258adc9b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void DivD</definition>
+        <argsstring>()</argsstring>
+        <name>DivD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="908"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a877c7d8f536636aa9589d3724c4d2e8e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void AddF</definition>
+        <argsstring>(UInt iDestIndex)</argsstring>
+        <name>AddF</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="910"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a88f04a0dd79244dd60c68489c1f3f5bb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void AddD</definition>
+        <argsstring>(UInt iDestIndex)</argsstring>
+        <name>AddD</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="911"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a318e64a65720bb35bdcce16fd4eef841" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SubF</definition>
+        <argsstring>(UInt iDestIndex)</argsstring>
+        <name>SubF</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="912"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1ad2eb356a1b1b0e2f0ce8cae21a576c6e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SubD</definition>
+        <argsstring>(UInt iDestIndex)</argsstring>
+        <name>SubD</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="913"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1ab9dae6671287fdb7b52a093a86db3d0b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void MulF</definition>
+        <argsstring>(UInt iDestIndex)</argsstring>
+        <name>MulF</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="914"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1aa66b0e02eb9c1c3fe6c2765a7775b06b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void MulD</definition>
+        <argsstring>(UInt iDestIndex)</argsstring>
+        <name>MulD</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="915"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a967f67eee112ebdabec81e33c61248eb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void DivF</definition>
+        <argsstring>(UInt iDestIndex)</argsstring>
+        <name>DivF</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="916"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1ac41aa2e60f6e15cddbf1f7d49c945661" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void DivD</definition>
+        <argsstring>(UInt iDestIndex)</argsstring>
+        <name>DivD</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="917"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a24aee073ce279776fc1c02a734ada1f1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void AddF</definition>
+        <argsstring>(UInt iDestIndex, UInt iSrcIndex)</argsstring>
+        <name>AddF</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iSrcIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="919"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a4d6fe4250243495d7bd72400c28b3c22" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void AddD</definition>
+        <argsstring>(UInt iDestIndex, UInt iSrcIndex)</argsstring>
+        <name>AddD</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iSrcIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="920"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a3624b19eb3b7c0f527af4cf6161c77ec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SubF</definition>
+        <argsstring>(UInt iDestIndex, UInt iSrcIndex)</argsstring>
+        <name>SubF</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iSrcIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="921"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a7c54287f2d99995b39353ca161ae5bdf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SubD</definition>
+        <argsstring>(UInt iDestIndex, UInt iSrcIndex)</argsstring>
+        <name>SubD</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iSrcIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="922"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1ace467333d84a8457600b1051e37ebbd5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void MulF</definition>
+        <argsstring>(UInt iDestIndex, UInt iSrcIndex)</argsstring>
+        <name>MulF</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iSrcIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="923"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a761395bf7679119d7e2071667dd0dfce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void MulD</definition>
+        <argsstring>(UInt iDestIndex, UInt iSrcIndex)</argsstring>
+        <name>MulD</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iSrcIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="924"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a271709d17da076d9eaf8d98826c39777" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void DivF</definition>
+        <argsstring>(UInt iDestIndex, UInt iSrcIndex)</argsstring>
+        <name>DivF</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iSrcIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="925"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1afdfcd1a2d9759176f07002646d27349f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void DivD</definition>
+        <argsstring>(UInt iDestIndex, UInt iSrcIndex)</argsstring>
+        <name>DivD</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iSrcIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="926"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a0ed8c74768b480e5051155d3d28b62a2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SubRF</definition>
+        <argsstring>()</argsstring>
+        <name>SubRF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="931"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1ae08722ed8111ab136d384fccd4871294" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SubRD</definition>
+        <argsstring>()</argsstring>
+        <name>SubRD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="932"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a5dbc4f55fa9d29ddfa4f2ce14986ca64" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void DivRF</definition>
+        <argsstring>()</argsstring>
+        <name>DivRF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="933"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a5e7f38935dfc727c917f4c0c0424c857" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void DivRD</definition>
+        <argsstring>()</argsstring>
+        <name>DivRD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="934"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1adab7c2a06a95bcac907029632c136cf5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SubRF</definition>
+        <argsstring>(UInt iDestIndex)</argsstring>
+        <name>SubRF</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="936"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a15d615b157c78f97b378211df5e7b095" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SubRD</definition>
+        <argsstring>(UInt iDestIndex)</argsstring>
+        <name>SubRD</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="937"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a7e5f91c2e4db15b548ad01042d6aad18" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void DivRF</definition>
+        <argsstring>(UInt iDestIndex)</argsstring>
+        <name>DivRF</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="938"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a3fd95a42b065c81a24a54d8d1f71151b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void DivRD</definition>
+        <argsstring>(UInt iDestIndex)</argsstring>
+        <name>DivRD</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="939"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a5e425636751bb17bd2161f0aaebee742" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SubRF</definition>
+        <argsstring>(UInt iDestIndex, UInt iSrcIndex)</argsstring>
+        <name>SubRF</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iSrcIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="941"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1ae7a9875b17542681eeccc0f6cd16b1ec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SubRD</definition>
+        <argsstring>(UInt iDestIndex, UInt iSrcIndex)</argsstring>
+        <name>SubRD</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iSrcIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="942"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1ada8d59ae2497e2065edc817a2d58af1a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void DivRF</definition>
+        <argsstring>(UInt iDestIndex, UInt iSrcIndex)</argsstring>
+        <name>DivRF</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iSrcIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="943"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1aff431af3a7283a5e8277d97127e071b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void DivRD</definition>
+        <argsstring>(UInt iDestIndex, UInt iSrcIndex)</argsstring>
+        <name>DivRD</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iSrcIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="944"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a5fd8f7b1e4a260c04b26dc426d713095" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void AddPF</definition>
+        <argsstring>()</argsstring>
+        <name>AddPF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="946"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a44b134aef44b185fff8bb394d7804c17" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void AddPD</definition>
+        <argsstring>()</argsstring>
+        <name>AddPD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="947"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1ad571cbae916300e50ea5f181f4005d47" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SubPF</definition>
+        <argsstring>()</argsstring>
+        <name>SubPF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="948"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a02d60adf296008edf7f24d4a2a2e8640" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SubPD</definition>
+        <argsstring>()</argsstring>
+        <name>SubPD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="949"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a9c92494eb073724d05ff01f10179539f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void MulPF</definition>
+        <argsstring>()</argsstring>
+        <name>MulPF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="950"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1ae35259975b9ee1d9e14515e7ad620149" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void MulPD</definition>
+        <argsstring>()</argsstring>
+        <name>MulPD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="951"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a4d36b72baea8418980d24bccad981646" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void DivPF</definition>
+        <argsstring>()</argsstring>
+        <name>DivPF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="952"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1aeb7571000c67c7a09013b7c1a03f1fe9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void DivPD</definition>
+        <argsstring>()</argsstring>
+        <name>DivPD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="953"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a9afdd7b88887743ca68bd4ad39c9556a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void AddPF</definition>
+        <argsstring>(UInt iDestIndex)</argsstring>
+        <name>AddPF</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="955"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a486f2839059f46d28993c6300d088bec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void AddPD</definition>
+        <argsstring>(UInt iDestIndex)</argsstring>
+        <name>AddPD</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="956"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1ab472ab29a6f2dc4c29e15c35f11fec96" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SubPF</definition>
+        <argsstring>(UInt iDestIndex)</argsstring>
+        <name>SubPF</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="957"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a679f7987ff47911e4b93b33868150738" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SubPD</definition>
+        <argsstring>(UInt iDestIndex)</argsstring>
+        <name>SubPD</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="958"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1af00739eb375de5ca3395f92e0d315bdf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void MulPF</definition>
+        <argsstring>(UInt iDestIndex)</argsstring>
+        <name>MulPF</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="959"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1ae89c6c5cbf2e4e30553bdaca8d74ad0c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void MulPD</definition>
+        <argsstring>(UInt iDestIndex)</argsstring>
+        <name>MulPD</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="960"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1acbf38ddde3502e8ce5388f1d2eada332" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void DivPF</definition>
+        <argsstring>(UInt iDestIndex)</argsstring>
+        <name>DivPF</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="961"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1acb07c3b99b634709a8bc90cf785fe45c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void DivPD</definition>
+        <argsstring>(UInt iDestIndex)</argsstring>
+        <name>DivPD</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="962"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1abcd3c92789cbcdfa0d5eebd7f2770970" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SubRPF</definition>
+        <argsstring>()</argsstring>
+        <name>SubRPF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="964"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1aba5e3130645b107af49ab39940ec450d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SubRPD</definition>
+        <argsstring>()</argsstring>
+        <name>SubRPD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="965"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a39a1cba26007df636823c4ef143d1a4f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void DivRPF</definition>
+        <argsstring>()</argsstring>
+        <name>DivRPF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="966"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1ab76ae2684800dff472ed53c25ef16139" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void DivRPD</definition>
+        <argsstring>()</argsstring>
+        <name>DivRPD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="967"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1afe0181e99c3c4e0315e9ad270367fb74" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SubRPF</definition>
+        <argsstring>(UInt iDestIndex)</argsstring>
+        <name>SubRPF</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="969"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1afd53ed5342697ed9715c2a753b7619fb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SubRPD</definition>
+        <argsstring>(UInt iDestIndex)</argsstring>
+        <name>SubRPD</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="970"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a623831f7d349624e76fd5456a6a5a9f1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void DivRPF</definition>
+        <argsstring>(UInt iDestIndex)</argsstring>
+        <name>DivRPF</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="971"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a4b4f7b58b936ca6a0ba1a24e72975539" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void DivRPD</definition>
+        <argsstring>(UInt iDestIndex)</argsstring>
+        <name>DivRPD</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="972"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1ae5cd3d8a9bcbb1c7dbd6ef9c1d341b64" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void HAddF</definition>
+        <argsstring>()</argsstring>
+        <name>HAddF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="974"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a144334895b5d6e23075fab4df40a508b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void HAddD</definition>
+        <argsstring>()</argsstring>
+        <name>HAddD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="975"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1ab49951e78eb63d0af18a6ee421f2bc4c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void HSubF</definition>
+        <argsstring>()</argsstring>
+        <name>HSubF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="976"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a57c1cdd5a1d19fd4883ca3d056cc7e4c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void HSubD</definition>
+        <argsstring>()</argsstring>
+        <name>HSubD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="977"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a3cc750d38577b9e3aae111bf9c28c482" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void HAddF</definition>
+        <argsstring>(UInt iDestIndex)</argsstring>
+        <name>HAddF</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="979"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1af7e894a0eb541042399ed3aa1b0c794e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void HAddD</definition>
+        <argsstring>(UInt iDestIndex)</argsstring>
+        <name>HAddD</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="980"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a2eda172d9cb45a7f573a19d1cbaf435d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void HSubF</definition>
+        <argsstring>(UInt iDestIndex)</argsstring>
+        <name>HSubF</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="981"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1adcd47355ac5c1924a1358b41aee73669" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void HSubD</definition>
+        <argsstring>(UInt iDestIndex)</argsstring>
+        <name>HSubD</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="982"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a3894e627cdf1d5ef081017973ffb1c47" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void HAddF</definition>
+        <argsstring>(UInt iDestIndex, UInt iSrcIndex)</argsstring>
+        <name>HAddF</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iSrcIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="984"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a8f13aeb3e76d5db6eaced540a3ce61b0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void HAddD</definition>
+        <argsstring>(UInt iDestIndex, UInt iSrcIndex)</argsstring>
+        <name>HAddD</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iSrcIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="985"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1ac12b7acdbbea954780bdc81d805d0092" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void HSubF</definition>
+        <argsstring>(UInt iDestIndex, UInt iSrcIndex)</argsstring>
+        <name>HSubF</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iSrcIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="986"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1afb95308f74dbdbb5be737b0eda7920c1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void HSubD</definition>
+        <argsstring>(UInt iDestIndex, UInt iSrcIndex)</argsstring>
+        <name>HSubD</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iSrcIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="987"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1abffcf78bdedca8fcf0eb53a90762fd9b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SqrtF</definition>
+        <argsstring>()</argsstring>
+        <name>SqrtF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="989"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a5a19327248a30e8043894fe89fadef12" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SqrtD</definition>
+        <argsstring>()</argsstring>
+        <name>SqrtD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="990"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a25550602e28eb9680d3dbcfaac561565" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void InvF</definition>
+        <argsstring>()</argsstring>
+        <name>InvF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="991"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a18c6af5df3899dce09bb4ad533900c43" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void InvSqrtF</definition>
+        <argsstring>()</argsstring>
+        <name>InvSqrtF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="992"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a99921510ee7a7690f3d2ff1a2ea45e9a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SqrtF</definition>
+        <argsstring>(UInt iStackIndex)</argsstring>
+        <name>SqrtF</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iStackIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="994"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1ac4834fcec5731eb89cfd903477c7854a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SqrtD</definition>
+        <argsstring>(UInt iStackIndex)</argsstring>
+        <name>SqrtD</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iStackIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="995"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a2934f9aa6ec94c0f5e45eecdcf70c9a9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void InvF</definition>
+        <argsstring>(UInt iStackIndex)</argsstring>
+        <name>InvF</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iStackIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="996"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a22a85d10f10ffe96cf2735025b0601c9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void InvSqrtF</definition>
+        <argsstring>(UInt iStackIndex)</argsstring>
+        <name>InvSqrtF</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iStackIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="997"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a8b196c66955131adffd6e02af4f5354d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SqrtF</definition>
+        <argsstring>(UInt iDestIndex, UInt iSrcIndex)</argsstring>
+        <name>SqrtF</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iSrcIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="999"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1aad1ade86852b1e97debe23f534d68e1a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SqrtD</definition>
+        <argsstring>(UInt iDestIndex, UInt iSrcIndex)</argsstring>
+        <name>SqrtD</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iSrcIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="1000"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1a46ff2409a896c22237376a96f8a1b387" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void InvF</definition>
+        <argsstring>(UInt iDestIndex, UInt iSrcIndex)</argsstring>
+        <name>InvF</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iSrcIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="1001"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d04/classSSEStack_1aabf9adceed448c68e523d592865985a6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void InvSqrtF</definition>
+        <argsstring>(UInt iDestIndex, UInt iSrcIndex)</argsstring>
+        <name>InvSqrtF</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDestIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iSrcIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="1002"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="12082">
+        <label>float</label>
+      </node>
+      <node id="12081">
+        <label>unsigned char</label>
+      </node>
+      <node id="12083">
+        <label>int</label>
+      </node>
+      <node id="12080">
+        <label>double</label>
+      </node>
+      <node id="12079">
+        <label>SSEStack</label>
+        <link refid="dd/d04/classSSEStack"/>
+        <childnode refid="12080" relation="usage">
+          <edgelabel>m_pAlignedDoubleScratch</edgelabel>
+        </childnode>
+        <childnode refid="12081" relation="usage">
+          <edgelabel>m_arrUnalignedScratch</edgelabel>
+        </childnode>
+        <childnode refid="12082" relation="usage">
+          <edgelabel>m_pAlignedFloatScratch</edgelabel>
+        </childnode>
+        <childnode refid="12083" relation="usage">
+          <edgelabel>m_iTop</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" line="842" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Hardware/SSE.h" bodystart="841" bodyend="1018"/>
+    <listofallmembers>
+      <member refid="dd/d04/classSSEStack_1a68f44d3e47436c6e3247bb552639f0c4" prot="private" virt="non-virtual"><scope>SSEStack</scope><name>_IPop</name></member>
+      <member refid="dd/d04/classSSEStack_1a47bb244b474b75143017303fa0598494" prot="private" virt="non-virtual"><scope>SSEStack</scope><name>_IPush</name></member>
+      <member refid="dd/d04/classSSEStack_1a7a90b390740c68a0b383f08926090052" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>AddD</name></member>
+      <member refid="dd/d04/classSSEStack_1a88f04a0dd79244dd60c68489c1f3f5bb" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>AddD</name></member>
+      <member refid="dd/d04/classSSEStack_1a4d6fe4250243495d7bd72400c28b3c22" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>AddD</name></member>
+      <member refid="dd/d04/classSSEStack_1a20731f80de79ee78568a3116114d8500" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>AddF</name></member>
+      <member refid="dd/d04/classSSEStack_1a877c7d8f536636aa9589d3724c4d2e8e" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>AddF</name></member>
+      <member refid="dd/d04/classSSEStack_1a24aee073ce279776fc1c02a734ada1f1" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>AddF</name></member>
+      <member refid="dd/d04/classSSEStack_1a44b134aef44b185fff8bb394d7804c17" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>AddPD</name></member>
+      <member refid="dd/d04/classSSEStack_1a486f2839059f46d28993c6300d088bec" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>AddPD</name></member>
+      <member refid="dd/d04/classSSEStack_1a5fd8f7b1e4a260c04b26dc426d713095" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>AddPF</name></member>
+      <member refid="dd/d04/classSSEStack_1a9afdd7b88887743ca68bd4ad39c9556a" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>AddPF</name></member>
+      <member refid="dd/d04/classSSEStack_1a689cb1e068e691fe0f71ee39258adc9b" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>DivD</name></member>
+      <member refid="dd/d04/classSSEStack_1ac41aa2e60f6e15cddbf1f7d49c945661" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>DivD</name></member>
+      <member refid="dd/d04/classSSEStack_1afdfcd1a2d9759176f07002646d27349f" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>DivD</name></member>
+      <member refid="dd/d04/classSSEStack_1aa1727c482a30b697e4f0450852a26047" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>DivF</name></member>
+      <member refid="dd/d04/classSSEStack_1a967f67eee112ebdabec81e33c61248eb" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>DivF</name></member>
+      <member refid="dd/d04/classSSEStack_1a271709d17da076d9eaf8d98826c39777" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>DivF</name></member>
+      <member refid="dd/d04/classSSEStack_1aeb7571000c67c7a09013b7c1a03f1fe9" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>DivPD</name></member>
+      <member refid="dd/d04/classSSEStack_1acb07c3b99b634709a8bc90cf785fe45c" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>DivPD</name></member>
+      <member refid="dd/d04/classSSEStack_1a4d36b72baea8418980d24bccad981646" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>DivPF</name></member>
+      <member refid="dd/d04/classSSEStack_1acbf38ddde3502e8ce5388f1d2eada332" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>DivPF</name></member>
+      <member refid="dd/d04/classSSEStack_1a5e7f38935dfc727c917f4c0c0424c857" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>DivRD</name></member>
+      <member refid="dd/d04/classSSEStack_1a3fd95a42b065c81a24a54d8d1f71151b" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>DivRD</name></member>
+      <member refid="dd/d04/classSSEStack_1aff431af3a7283a5e8277d97127e071b7" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>DivRD</name></member>
+      <member refid="dd/d04/classSSEStack_1a5dbc4f55fa9d29ddfa4f2ce14986ca64" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>DivRF</name></member>
+      <member refid="dd/d04/classSSEStack_1a7e5f91c2e4db15b548ad01042d6aad18" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>DivRF</name></member>
+      <member refid="dd/d04/classSSEStack_1ada8d59ae2497e2065edc817a2d58af1a" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>DivRF</name></member>
+      <member refid="dd/d04/classSSEStack_1ab76ae2684800dff472ed53c25ef16139" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>DivRPD</name></member>
+      <member refid="dd/d04/classSSEStack_1a4b4f7b58b936ca6a0ba1a24e72975539" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>DivRPD</name></member>
+      <member refid="dd/d04/classSSEStack_1a39a1cba26007df636823c4ef143d1a4f" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>DivRPF</name></member>
+      <member refid="dd/d04/classSSEStack_1a623831f7d349624e76fd5456a6a5a9f1" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>DivRPF</name></member>
+      <member refid="dd/d04/classSSEStack_1abcdef6d945add63aec963e875d86825c" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>Get</name></member>
+      <member refid="dd/d04/classSSEStack_1a3a616ce718d4443a9f8ed1e0a04dd998" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>Get</name></member>
+      <member refid="dd/d04/classSSEStack_1ada4315f4a190740f4acd67bb3e16068c" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>Get</name></member>
+      <member refid="dd/d04/classSSEStack_1af5a063d5df9a9b24d7775c10dc0646b9" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>Get</name></member>
+      <member refid="dd/d04/classSSEStack_1acf6e7eb74b49a2a453cd6bd9b3c56d07" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>Get</name></member>
+      <member refid="dd/d04/classSSEStack_1a909b83a378c48fe6ba103a1cdf265fa1" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>Get</name></member>
+      <member refid="dd/d04/classSSEStack_1a037e607b5d0610f8d37e495e06660761" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>Get</name></member>
+      <member refid="dd/d04/classSSEStack_1a5288995a05d57e57d46fb10c56871043" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>Get</name></member>
+      <member refid="dd/d04/classSSEStack_1a4ca0f70e0ef5bd84dc1e699cd1a13f2f" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>GetInstancePtr</name></member>
+      <member refid="dd/d04/classSSEStack_1a144334895b5d6e23075fab4df40a508b" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>HAddD</name></member>
+      <member refid="dd/d04/classSSEStack_1af7e894a0eb541042399ed3aa1b0c794e" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>HAddD</name></member>
+      <member refid="dd/d04/classSSEStack_1a8f13aeb3e76d5db6eaced540a3ce61b0" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>HAddD</name></member>
+      <member refid="dd/d04/classSSEStack_1ae5cd3d8a9bcbb1c7dbd6ef9c1d341b64" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>HAddF</name></member>
+      <member refid="dd/d04/classSSEStack_1a3cc750d38577b9e3aae111bf9c28c482" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>HAddF</name></member>
+      <member refid="dd/d04/classSSEStack_1a3894e627cdf1d5ef081017973ffb1c47" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>HAddF</name></member>
+      <member refid="dd/d04/classSSEStack_1a57c1cdd5a1d19fd4883ca3d056cc7e4c" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>HSubD</name></member>
+      <member refid="dd/d04/classSSEStack_1adcd47355ac5c1924a1358b41aee73669" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>HSubD</name></member>
+      <member refid="dd/d04/classSSEStack_1afb95308f74dbdbb5be737b0eda7920c1" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>HSubD</name></member>
+      <member refid="dd/d04/classSSEStack_1ab49951e78eb63d0af18a6ee421f2bc4c" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>HSubF</name></member>
+      <member refid="dd/d04/classSSEStack_1a2eda172d9cb45a7f573a19d1cbaf435d" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>HSubF</name></member>
+      <member refid="dd/d04/classSSEStack_1ac12b7acdbbea954780bdc81d805d0092" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>HSubF</name></member>
+      <member refid="dd/d04/classSSEStack_1a25550602e28eb9680d3dbcfaac561565" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>InvF</name></member>
+      <member refid="dd/d04/classSSEStack_1a2934f9aa6ec94c0f5e45eecdcf70c9a9" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>InvF</name></member>
+      <member refid="dd/d04/classSSEStack_1a46ff2409a896c22237376a96f8a1b387" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>InvF</name></member>
+      <member refid="dd/d04/classSSEStack_1a18c6af5df3899dce09bb4ad533900c43" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>InvSqrtF</name></member>
+      <member refid="dd/d04/classSSEStack_1a22a85d10f10ffe96cf2735025b0601c9" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>InvSqrtF</name></member>
+      <member refid="dd/d04/classSSEStack_1aabf9adceed448c68e523d592865985a6" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>InvSqrtF</name></member>
+      <member refid="dd/d04/classSSEStack_1a37f4ebd251d1db08f6ccc5856671264e" prot="private" virt="non-virtual"><scope>SSEStack</scope><name>m_arrUnalignedScratch</name></member>
+      <member refid="dd/d04/classSSEStack_1a4ead625ac2ccce4c29ad93ea51d60768" prot="private" virt="non-virtual"><scope>SSEStack</scope><name>m_iTop</name></member>
+      <member refid="dd/d04/classSSEStack_1a6c7b35bc73ae7d60d6aab3095c22a521" prot="private" virt="non-virtual"><scope>SSEStack</scope><name>m_pAlignedDoubleScratch</name></member>
+      <member refid="dd/d04/classSSEStack_1a904adac0a02bd44ed3f9620ccd578813" prot="private" virt="non-virtual"><scope>SSEStack</scope><name>m_pAlignedFloatScratch</name></member>
+      <member refid="dd/d04/classSSEStack_1a7f2a2681714bc2e6f0cb33b2458de118" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>MovD</name></member>
+      <member refid="dd/d04/classSSEStack_1a5d70f4def9767e45194b41f92b6e77a1" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>MovF</name></member>
+      <member refid="dd/d04/classSSEStack_1a215535dc72f1a4351d6a5fc783c2858e" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>MulD</name></member>
+      <member refid="dd/d04/classSSEStack_1aa66b0e02eb9c1c3fe6c2765a7775b06b" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>MulD</name></member>
+      <member refid="dd/d04/classSSEStack_1a761395bf7679119d7e2071667dd0dfce" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>MulD</name></member>
+      <member refid="dd/d04/classSSEStack_1ab7a8e15e27b462a8bcac57995d5b9532" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>MulF</name></member>
+      <member refid="dd/d04/classSSEStack_1ab9dae6671287fdb7b52a093a86db3d0b" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>MulF</name></member>
+      <member refid="dd/d04/classSSEStack_1ace467333d84a8457600b1051e37ebbd5" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>MulF</name></member>
+      <member refid="dd/d04/classSSEStack_1ae35259975b9ee1d9e14515e7ad620149" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>MulPD</name></member>
+      <member refid="dd/d04/classSSEStack_1ae89c6c5cbf2e4e30553bdaca8d74ad0c" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>MulPD</name></member>
+      <member refid="dd/d04/classSSEStack_1a9c92494eb073724d05ff01f10179539f" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>MulPF</name></member>
+      <member refid="dd/d04/classSSEStack_1af00739eb375de5ca3395f92e0d315bdf" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>MulPF</name></member>
+      <member refid="dd/d04/classSSEStack_1ac80c5d7a9848c2afa0bad5e72c54dc85" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>Pop</name></member>
+      <member refid="dd/d04/classSSEStack_1a0c9b3c613fa7f45b1eb2bb64f16cf972" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>Pop</name></member>
+      <member refid="dd/d04/classSSEStack_1a29a0b5e36456a9f669fd2e2bbfef0e59" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>Pop</name></member>
+      <member refid="dd/d04/classSSEStack_1a6ddb14c1aee26a9a306de42bf1f9d8ae" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>Pop</name></member>
+      <member refid="dd/d04/classSSEStack_1a654d74bdb33c99da89476da66323b827" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>Pop</name></member>
+      <member refid="dd/d04/classSSEStack_1aa8c3ee8350b003f7d4ebeaee3efeffdb" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>Pop</name></member>
+      <member refid="dd/d04/classSSEStack_1a4f1beb17f6ca67d5016edf4df582ef06" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>Pop</name></member>
+      <member refid="dd/d04/classSSEStack_1afc9576660ceae09ac8ca91f298c22607" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>Pop</name></member>
+      <member refid="dd/d04/classSSEStack_1a67d0e2bc2311f98bb38ef23a00b2fcd0" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>PopD</name></member>
+      <member refid="dd/d04/classSSEStack_1a974f83b62d12cea49f0a8e0f41bb6c4b" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>PopD</name></member>
+      <member refid="dd/d04/classSSEStack_1a10b8ef3199ee2c5685dad653e26aa45f" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>PopF</name></member>
+      <member refid="dd/d04/classSSEStack_1ae4d91d46243d22c8c94c53fb3307902a" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>PopF</name></member>
+      <member refid="dd/d04/classSSEStack_1a6326b07e367ef24467a69fc6df1130f0" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>Push</name></member>
+      <member refid="dd/d04/classSSEStack_1a20b7b6d1f38c5d3ea99172000a3a8a64" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>Push</name></member>
+      <member refid="dd/d04/classSSEStack_1a0735c245255f44f340ce6958e3ef019b" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>Push</name></member>
+      <member refid="dd/d04/classSSEStack_1ab27e6fe29a50acc3d6c3ab311bbfac2f" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>Push</name></member>
+      <member refid="dd/d04/classSSEStack_1a93351f3d166cec6c14cd1b25dec566f4" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>Push</name></member>
+      <member refid="dd/d04/classSSEStack_1aadefecebc781ce0e0b00ea56a9047167" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>Push</name></member>
+      <member refid="dd/d04/classSSEStack_1a5bcf7f2150deb2b10820c74c4b34f320" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>Push</name></member>
+      <member refid="dd/d04/classSSEStack_1ae62e0b2686285f34713d319860597330" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>Push</name></member>
+      <member refid="dd/d04/classSSEStack_1a443232dfbaa2c6c67b272087cd776e10" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>PushD</name></member>
+      <member refid="dd/d04/classSSEStack_1a355f62feca1869882bac95b505aad586" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>PushF</name></member>
+      <member refid="dd/d04/classSSEStack_1a00ee103ce4de046d8e2ce0612647db86" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>Set</name></member>
+      <member refid="dd/d04/classSSEStack_1a6432a80d1fe679d9009bf18c9af33e12" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>Set</name></member>
+      <member refid="dd/d04/classSSEStack_1a311d6b83d69955cf01e58100ca5a632e" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>Set</name></member>
+      <member refid="dd/d04/classSSEStack_1a8c2fe288b5e17d2ef84b3b3949348f7f" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>Set</name></member>
+      <member refid="dd/d04/classSSEStack_1a82cc3dda0bcc5244b93861c641606d91" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>Set</name></member>
+      <member refid="dd/d04/classSSEStack_1a095eb715c882c8e40adde76e589293f3" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>Set</name></member>
+      <member refid="dd/d04/classSSEStack_1a0cf7cc718f957e996ece978549eddb47" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>Set</name></member>
+      <member refid="dd/d04/classSSEStack_1a549fe1a1027f468b41702d625990ce92" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>Set</name></member>
+      <member refid="dd/d04/classSSEStack_1a5a19327248a30e8043894fe89fadef12" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>SqrtD</name></member>
+      <member refid="dd/d04/classSSEStack_1ac4834fcec5731eb89cfd903477c7854a" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>SqrtD</name></member>
+      <member refid="dd/d04/classSSEStack_1aad1ade86852b1e97debe23f534d68e1a" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>SqrtD</name></member>
+      <member refid="dd/d04/classSSEStack_1abffcf78bdedca8fcf0eb53a90762fd9b" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>SqrtF</name></member>
+      <member refid="dd/d04/classSSEStack_1a99921510ee7a7690f3d2ff1a2ea45e9a" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>SqrtF</name></member>
+      <member refid="dd/d04/classSSEStack_1a8b196c66955131adffd6e02af4f5354d" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>SqrtF</name></member>
+      <member refid="dd/d04/classSSEStack_1abb0f38d184fe9f9e80bf0a49bcde5043" prot="private" virt="non-virtual"><scope>SSEStack</scope><name>SSEStack</name></member>
+      <member refid="dd/d04/classSSEStack_1a5933f7546fbc0f52ed321ae779cb9b30" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>SubD</name></member>
+      <member refid="dd/d04/classSSEStack_1ad2eb356a1b1b0e2f0ce8cae21a576c6e" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>SubD</name></member>
+      <member refid="dd/d04/classSSEStack_1a7c54287f2d99995b39353ca161ae5bdf" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>SubD</name></member>
+      <member refid="dd/d04/classSSEStack_1ac6a639af80f81e312301f575f1954888" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>SubF</name></member>
+      <member refid="dd/d04/classSSEStack_1a318e64a65720bb35bdcce16fd4eef841" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>SubF</name></member>
+      <member refid="dd/d04/classSSEStack_1a3624b19eb3b7c0f527af4cf6161c77ec" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>SubF</name></member>
+      <member refid="dd/d04/classSSEStack_1a02d60adf296008edf7f24d4a2a2e8640" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>SubPD</name></member>
+      <member refid="dd/d04/classSSEStack_1a679f7987ff47911e4b93b33868150738" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>SubPD</name></member>
+      <member refid="dd/d04/classSSEStack_1ad571cbae916300e50ea5f181f4005d47" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>SubPF</name></member>
+      <member refid="dd/d04/classSSEStack_1ab472ab29a6f2dc4c29e15c35f11fec96" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>SubPF</name></member>
+      <member refid="dd/d04/classSSEStack_1ae08722ed8111ab136d384fccd4871294" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>SubRD</name></member>
+      <member refid="dd/d04/classSSEStack_1a15d615b157c78f97b378211df5e7b095" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>SubRD</name></member>
+      <member refid="dd/d04/classSSEStack_1ae7a9875b17542681eeccc0f6cd16b1ec" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>SubRD</name></member>
+      <member refid="dd/d04/classSSEStack_1a0ed8c74768b480e5051155d3d28b62a2" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>SubRF</name></member>
+      <member refid="dd/d04/classSSEStack_1adab7c2a06a95bcac907029632c136cf5" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>SubRF</name></member>
+      <member refid="dd/d04/classSSEStack_1a5e425636751bb17bd2161f0aaebee742" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>SubRF</name></member>
+      <member refid="dd/d04/classSSEStack_1aba5e3130645b107af49ab39940ec450d" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>SubRPD</name></member>
+      <member refid="dd/d04/classSSEStack_1afd53ed5342697ed9715c2a753b7619fb" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>SubRPD</name></member>
+      <member refid="dd/d04/classSSEStack_1abcd3c92789cbcdfa0d5eebd7f2770970" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>SubRPF</name></member>
+      <member refid="dd/d04/classSSEStack_1afe0181e99c3c4e0315e9ad270367fb74" prot="public" virt="non-virtual"><scope>SSEStack</scope><name>SubRPF</name></member>
+      <member refid="dd/d04/classSSEStack_1a683f8428be8acc9a8ca71104f96da595" prot="private" virt="non-virtual"><scope>SSEStack</scope><name>~SSEStack</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

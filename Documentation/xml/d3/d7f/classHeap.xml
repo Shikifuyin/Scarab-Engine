@@ -1,0 +1,458 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d3/d7f/classHeap" kind="class" prot="public">
+    <compoundname>Heap</compoundname>
+    <basecompoundref refid="dc/d51/classDatastruct" prot="public" virt="non-virtual">Datastruct</basecompoundref>
+    <includes refid="d1/d1c/Heap_8h" local="no">Heap.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="d3/d7f/classHeap_1a43c6116a0570847d9df8230cf058f8c6" prot="public" static="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref>(*</type>
+        <definition>typedef Int(* Comparator)(const T &amp;rLeft, const T &amp;rRight)</definition>
+        <argsstring>)(const T &amp;rLeft, const T &amp;rRight)</argsstring>
+        <name>Comparator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/Heap.h" line="41" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/Heap.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d3/d7f/classHeap_1a6153496f8138eab73c508a1e7709e0de" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iPageSize</definition>
+        <argsstring></argsstring>
+        <name>m_iPageSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/Heap.h" line="75" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/Heap.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d7f/classHeap_1a27d1e78c521dfa3bb17788c5ad7c8792" prot="private" static="no" mutable="no">
+        <type><ref refid="d3/d7f/classHeap_1a43c6116a0570847d9df8230cf058f8c6" kindref="member">Comparator</ref></type>
+        <definition>Comparator m_pfCompare</definition>
+        <argsstring></argsstring>
+        <name>m_pfCompare</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/Heap.h" line="76" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/Heap.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d7f/classHeap_1abbeb11e8c07494978ca540d66d87c759" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iBufferSize</definition>
+        <argsstring></argsstring>
+        <name>m_iBufferSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/Heap.h" line="78" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/Heap.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d7f/classHeap_1a32f4f162b630fc335b02821beaebbaf4" prot="private" static="no" mutable="no">
+        <type>T *</type>
+        <definition>T* m_arrBuffer</definition>
+        <argsstring></argsstring>
+        <name>m_arrBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/Heap.h" line="79" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/Heap.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d7f/classHeap_1ae790f6907d70c0f2ab54678596711df3" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iHeapSize</definition>
+        <argsstring></argsstring>
+        <name>m_iHeapSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/Heap.h" line="81" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/Heap.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d3/d7f/classHeap_1a8fe71fdc0f0b4f7cff62448cfc14c3d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Heap</definition>
+        <argsstring>(UInt iPageSize=HEAP_DEFAULT_PAGESIZE)</argsstring>
+        <name>Heap</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iPageSize</declname>
+          <defval><ref refid="d1/d1c/Heap_8h_1af117e9f76c3ec854b104027de3265f88" kindref="member">HEAP_DEFAULT_PAGESIZE</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/Heap.h" line="44"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d7f/classHeap_1a8bd70656c85a77320abdd0de666630b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~Heap</definition>
+        <argsstring>()</argsstring>
+        <name>~Heap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/Heap.h" line="45"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d7f/classHeap_1accece030fd7dc9eee4914b59fafbb8ed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetComparator</definition>
+        <argsstring>(Comparator pfCompare)</argsstring>
+        <name>SetComparator</name>
+        <param>
+          <type><ref refid="d3/d7f/classHeap_1a43c6116a0570847d9df8230cf058f8c6" kindref="member">Comparator</ref></type>
+          <declname>pfCompare</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/Heap.h" line="48"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d7f/classHeap_1aab77352722e193be864ad3e317f0a967" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void Create</definition>
+        <argsstring>()</argsstring>
+        <name>Create</name>
+        <reimplements refid="dc/d51/classDatastruct_1a0609a196f6f3d0c6b77f63eb850c0ac7">Create</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/Heap.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d7f/classHeap_1a04b98e1741147ccd8731588392091ac0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void Destroy</definition>
+        <argsstring>()</argsstring>
+        <name>Destroy</name>
+        <reimplements refid="dc/d51/classDatastruct_1a5f87413a244467d525a1e593ff2c1c27">Destroy</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/Heap.h" line="52"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d7f/classHeap_1abe6db4496cfdd90f917f4ca76d4bdcb1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>virtual UInt MemorySize</definition>
+        <argsstring>() const </argsstring>
+        <name>MemorySize</name>
+        <reimplements refid="dc/d51/classDatastruct_1a9797d1e194be5ac1f59da06f4017ab52">MemorySize</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/Heap.h" line="54"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d7f/classHeap_1a0956cac53fbbd2baead454e29106a8cd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>virtual UInt Count</definition>
+        <argsstring>() const </argsstring>
+        <name>Count</name>
+        <reimplements refid="dc/d51/classDatastruct_1a64d0429c6ea513aff9aed72a84ac5e07">Count</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/Heap.h" line="55"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d7f/classHeap_1aa31f188be923c718868036f9486390ea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void Clear</definition>
+        <argsstring>()</argsstring>
+        <name>Clear</name>
+        <reimplements refid="dc/d51/classDatastruct_1a12a20256ada86a94610094792cbc6e2b">Clear</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/Heap.h" line="57"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d7f/classHeap_1ad92495c71fb9647d9745807e02747387" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Merge</definition>
+        <argsstring>(const T &amp;rItem)</argsstring>
+        <name>Merge</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>rItem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/Heap.h" line="60"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d7f/classHeap_1a5d8f99c0fa9f1fd47b3d5a3d06bde3bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Extract</definition>
+        <argsstring>(T &amp;rOut, Bool bRemove=true)</argsstring>
+        <name>Extract</name>
+        <param>
+          <type>T &amp;</type>
+          <declname>rOut</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+          <declname>bRemove</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1a08f175a5505a10b9ed657defeb050e4b" kindref="member">true</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/Heap.h" line="61"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d7f/classHeap_1a06037639e77ae5e919771ff4a1636e01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Discard</definition>
+        <argsstring>()</argsstring>
+        <name>Discard</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/Heap.h" line="62"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d3/d7f/classHeap_1aad14b3b6dafee187e60b63d583072061" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt _AlignSize</definition>
+        <argsstring>(UInt iSize) const </argsstring>
+        <name>_AlignSize</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/Heap.h" line="66"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d7f/classHeap_1a27ac4498b775bbcb5ec19245e1af4632" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool _ArrayResize</definition>
+        <argsstring>(UInt iAlignedSize, Bool bKeepData)</argsstring>
+        <name>_ArrayResize</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iAlignedSize</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+          <declname>bKeepData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/Heap.h" line="67"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d7f/classHeap_1aa9492cb248021d93ea0919cb41fd9c76" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool _ArrayGrow</definition>
+        <argsstring>(UInt iGrowCount)</argsstring>
+        <name>_ArrayGrow</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iGrowCount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/Heap.h" line="68"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d7f/classHeap_1acd52232946f5a57e3bb09546a4e0cdf5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _ArrayShrink</definition>
+        <argsstring>()</argsstring>
+        <name>_ArrayShrink</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/Heap.h" line="69"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d7f/classHeap_1af5b7d1f42dc6298a86d89fb6e226b2ff" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _rec_PercolateUp</definition>
+        <argsstring>(UInt iNode)</argsstring>
+        <name>_rec_PercolateUp</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iNode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/Heap.h" line="71"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d7f/classHeap_1a508041356b529170deab334b1c33b8a6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _rec_PercolateDown</definition>
+        <argsstring>(UInt iNode)</argsstring>
+        <name>_rec_PercolateDown</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iNode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/Heap.h" line="72"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4786">
+        <label>Heap&lt; T &gt;</label>
+        <link refid="d3/d7f/classHeap"/>
+        <childnode refid="4787" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4787">
+        <label>Datastruct</label>
+        <link refid="dc/d51/classDatastruct"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4793">
+        <label>T</label>
+      </node>
+      <node id="4791">
+        <label>unsigned int</label>
+      </node>
+      <node id="4792">
+        <label>int</label>
+      </node>
+      <node id="4788">
+        <label>Heap&lt; T &gt;</label>
+        <link refid="d3/d7f/classHeap"/>
+        <childnode refid="4789" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4792" relation="usage">
+          <edgelabel>m_iBufferSize</edgelabel>
+          <edgelabel>m_iPageSize</edgelabel>
+          <edgelabel>m_iHeapSize</edgelabel>
+          <edgelabel>m_pfCompare</edgelabel>
+        </childnode>
+        <childnode refid="4793" relation="usage">
+          <edgelabel>m_arrBuffer</edgelabel>
+        </childnode>
+      </node>
+      <node id="4790">
+        <label>char</label>
+      </node>
+      <node id="4789">
+        <label>Datastruct</label>
+        <link refid="dc/d51/classDatastruct"/>
+        <childnode refid="4790" relation="usage">
+          <edgelabel>m_strAllocatorName</edgelabel>
+        </childnode>
+        <childnode refid="4791" relation="usage">
+          <edgelabel>m_idMemoryContext</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/Heap.h" line="37" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/Heap.h" bodystart="36" bodyend="82"/>
+    <listofallmembers>
+      <member refid="d3/d7f/classHeap_1aad14b3b6dafee187e60b63d583072061" prot="private" virt="non-virtual"><scope>Heap</scope><name>_AlignSize</name></member>
+      <member refid="d3/d7f/classHeap_1aa9492cb248021d93ea0919cb41fd9c76" prot="private" virt="non-virtual"><scope>Heap</scope><name>_ArrayGrow</name></member>
+      <member refid="d3/d7f/classHeap_1a27ac4498b775bbcb5ec19245e1af4632" prot="private" virt="non-virtual"><scope>Heap</scope><name>_ArrayResize</name></member>
+      <member refid="d3/d7f/classHeap_1acd52232946f5a57e3bb09546a4e0cdf5" prot="private" virt="non-virtual"><scope>Heap</scope><name>_ArrayShrink</name></member>
+      <member refid="d3/d7f/classHeap_1a508041356b529170deab334b1c33b8a6" prot="private" virt="non-virtual"><scope>Heap</scope><name>_rec_PercolateDown</name></member>
+      <member refid="d3/d7f/classHeap_1af5b7d1f42dc6298a86d89fb6e226b2ff" prot="private" virt="non-virtual"><scope>Heap</scope><name>_rec_PercolateUp</name></member>
+      <member refid="dc/d51/classDatastruct_1a4208dfdad6dc1178ee1f80481598500c" prot="protected" virt="non-virtual"><scope>Heap</scope><name>_SelectMemory</name></member>
+      <member refid="dc/d51/classDatastruct_1ae0aad9bef0dc76ed43f8c4fc59a10d78" prot="protected" virt="non-virtual"><scope>Heap</scope><name>_UnSelectMemory</name></member>
+      <member refid="d3/d7f/classHeap_1aa31f188be923c718868036f9486390ea" prot="public" virt="virtual"><scope>Heap</scope><name>Clear</name></member>
+      <member refid="d3/d7f/classHeap_1a43c6116a0570847d9df8230cf058f8c6" prot="public" virt="non-virtual"><scope>Heap</scope><name>Comparator</name></member>
+      <member refid="d3/d7f/classHeap_1a0956cac53fbbd2baead454e29106a8cd" prot="public" virt="virtual"><scope>Heap</scope><name>Count</name></member>
+      <member refid="d3/d7f/classHeap_1aab77352722e193be864ad3e317f0a967" prot="public" virt="virtual"><scope>Heap</scope><name>Create</name></member>
+      <member refid="dc/d51/classDatastruct_1aebb55795e668a005cf660ce216962a2f" prot="public" virt="non-virtual"><scope>Heap</scope><name>Datastruct</name></member>
+      <member refid="d3/d7f/classHeap_1a04b98e1741147ccd8731588392091ac0" prot="public" virt="virtual"><scope>Heap</scope><name>Destroy</name></member>
+      <member refid="d3/d7f/classHeap_1a06037639e77ae5e919771ff4a1636e01" prot="public" virt="non-virtual"><scope>Heap</scope><name>Discard</name></member>
+      <member refid="d3/d7f/classHeap_1a5d8f99c0fa9f1fd47b3d5a3d06bde3bf" prot="public" virt="non-virtual"><scope>Heap</scope><name>Extract</name></member>
+      <member refid="d3/d7f/classHeap_1a8fe71fdc0f0b4f7cff62448cfc14c3d6" prot="public" virt="non-virtual"><scope>Heap</scope><name>Heap</name></member>
+      <member refid="dc/d51/classDatastruct_1a4e2abc9751fdc8571b9d9a1d02639ebe" prot="public" virt="non-virtual"><scope>Heap</scope><name>IsEmpty</name></member>
+      <member refid="d3/d7f/classHeap_1a32f4f162b630fc335b02821beaebbaf4" prot="private" virt="non-virtual"><scope>Heap</scope><name>m_arrBuffer</name></member>
+      <member refid="d3/d7f/classHeap_1abbeb11e8c07494978ca540d66d87c759" prot="private" virt="non-virtual"><scope>Heap</scope><name>m_iBufferSize</name></member>
+      <member refid="d3/d7f/classHeap_1ae790f6907d70c0f2ab54678596711df3" prot="private" virt="non-virtual"><scope>Heap</scope><name>m_iHeapSize</name></member>
+      <member refid="d3/d7f/classHeap_1a6153496f8138eab73c508a1e7709e0de" prot="private" virt="non-virtual"><scope>Heap</scope><name>m_iPageSize</name></member>
+      <member refid="d3/d7f/classHeap_1a27d1e78c521dfa3bb17788c5ad7c8792" prot="private" virt="non-virtual"><scope>Heap</scope><name>m_pfCompare</name></member>
+      <member refid="d3/d7f/classHeap_1abe6db4496cfdd90f917f4ca76d4bdcb1" prot="public" virt="virtual"><scope>Heap</scope><name>MemorySize</name></member>
+      <member refid="d3/d7f/classHeap_1ad92495c71fb9647d9745807e02747387" prot="public" virt="non-virtual"><scope>Heap</scope><name>Merge</name></member>
+      <member refid="d3/d7f/classHeap_1accece030fd7dc9eee4914b59fafbb8ed" prot="public" virt="non-virtual"><scope>Heap</scope><name>SetComparator</name></member>
+      <member refid="dc/d51/classDatastruct_1a605325d1c1fc3f3c761365595701f9c4" prot="public" virt="virtual"><scope>Heap</scope><name>UseMemoryContext</name></member>
+      <member refid="dc/d51/classDatastruct_1a59e1e9769598d5606e0a335692f89c15" prot="public" virt="virtual"><scope>Heap</scope><name>~Datastruct</name></member>
+      <member refid="d3/d7f/classHeap_1a8bd70656c85a77320abdd0de666630b4" prot="public" virt="virtual"><scope>Heap</scope><name>~Heap</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

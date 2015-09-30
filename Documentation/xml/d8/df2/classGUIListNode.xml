@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d8/df2/classGUIListNode" kind="class" prot="public">
+    <compoundname>GUIListNode</compoundname>
+    <includes refid="d3/dae/GUIList_8h" local="no">GUIList.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="d8/df2/classGUIListNode_1a4287c71ebaae49c3c15df6eda4de18e6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class GUIListModel</definition>
+        <argsstring></argsstring>
+        <name>GUIListModel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUIList.h" line="52" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUIList.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d8/df2/classGUIListNode_1ada32429967bb703a4ddf1275e31a8dcc" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool m_bSelected</definition>
+        <argsstring></argsstring>
+        <name>m_bSelected</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUIList.h" line="55" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUIList.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/df2/classGUIListNode_1acc3512734a93c31534597f5f29cba401" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref></type>
+        <definition>GChar m_strName[GUI_NAME_LENGTH]</definition>
+        <argsstring>[GUI_NAME_LENGTH]</argsstring>
+        <name>m_strName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUIList.h" line="58" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUIList.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/df2/classGUIListNode_1a0427c2600e152068118fbdf1201a6d71" prot="private" static="no" mutable="no">
+        <type><ref refid="d4/deb/GUISkin_8h_1a65a8f0b464f4b1b7ec4e49e99ca6107c" kindref="member">GUISkinImage</ref></type>
+        <definition>GUISkinImage m_idIcon</definition>
+        <argsstring></argsstring>
+        <name>m_idIcon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUIList.h" line="59" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUIList.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d8/df2/classGUIListNode_1ace7cfaaf73e596af150fe1260b4c36f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GUIListNode</definition>
+        <argsstring>()</argsstring>
+        <name>GUIListNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUIList.h" line="41"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/df2/classGUIListNode_1a8ea02340eaa2c635f1643b6e5da1e3ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GUIListNode</definition>
+        <argsstring>(const GChar *strName, GUISkinImage idIcon=GUISKIN_IMAGE_ICON_UNDEFINED)</argsstring>
+        <name>GUIListNode</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strName</declname>
+        </param>
+        <param>
+          <type><ref refid="d4/deb/GUISkin_8h_1a65a8f0b464f4b1b7ec4e49e99ca6107c" kindref="member">GUISkinImage</ref></type>
+          <declname>idIcon</declname>
+          <defval><ref refid="d4/deb/GUISkin_8h_1a65a8f0b464f4b1b7ec4e49e99ca6107cafd3105269ce7c61c88a49f8a77609837" kindref="member">GUISKIN_IMAGE_ICON_UNDEFINED</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUIList.h" line="42"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/df2/classGUIListNode_1a44d6deedd23a6e8a5036fda5e0897bcf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~GUIListNode</definition>
+        <argsstring>()</argsstring>
+        <name>~GUIListNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUIList.h" line="43"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/df2/classGUIListNode_1aad72872bcf68bc65a64b3f38d1a9dfab" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool IsSelected</definition>
+        <argsstring>() const </argsstring>
+        <name>IsSelected</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUIList.h" line="46"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/df2/classGUIListNode_1acb24949ad36a8ed7b0008515d78ac5ae" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+        <definition>const GChar* GetName</definition>
+        <argsstring>() const </argsstring>
+        <name>GetName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUIList.h" line="48"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/df2/classGUIListNode_1a1791aa92336017e7e7367eae659dd497" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d4/deb/GUISkin_8h_1a65a8f0b464f4b1b7ec4e49e99ca6107c" kindref="member">GUISkinImage</ref></type>
+        <definition>GUISkinImage GetIcon</definition>
+        <argsstring>() const </argsstring>
+        <name>GetIcon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUIList.h" line="49"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3620">
+        <label>GUIListNode</label>
+        <link refid="d8/df2/classGUIListNode"/>
+        <childnode refid="3621" relation="usage">
+          <edgelabel>m_strName</edgelabel>
+        </childnode>
+        <childnode refid="3622" relation="usage">
+          <edgelabel>m_bSelected</edgelabel>
+        </childnode>
+        <childnode refid="3623" relation="usage">
+          <edgelabel>m_idIcon</edgelabel>
+        </childnode>
+      </node>
+      <node id="3622">
+        <label>bool</label>
+      </node>
+      <node id="3623">
+        <label>GUISkinImage</label>
+      </node>
+      <node id="3621">
+        <label>char</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUIList.h" line="39" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUIList.h" bodystart="38" bodyend="60"/>
+    <listofallmembers>
+      <member refid="d8/df2/classGUIListNode_1a1791aa92336017e7e7367eae659dd497" prot="public" virt="non-virtual"><scope>GUIListNode</scope><name>GetIcon</name></member>
+      <member refid="d8/df2/classGUIListNode_1acb24949ad36a8ed7b0008515d78ac5ae" prot="public" virt="non-virtual"><scope>GUIListNode</scope><name>GetName</name></member>
+      <member refid="d8/df2/classGUIListNode_1a4287c71ebaae49c3c15df6eda4de18e6" prot="private" virt="non-virtual"><scope>GUIListNode</scope><name>GUIListModel</name></member>
+      <member refid="d8/df2/classGUIListNode_1ace7cfaaf73e596af150fe1260b4c36f2" prot="public" virt="non-virtual"><scope>GUIListNode</scope><name>GUIListNode</name></member>
+      <member refid="d8/df2/classGUIListNode_1a8ea02340eaa2c635f1643b6e5da1e3ad" prot="public" virt="non-virtual"><scope>GUIListNode</scope><name>GUIListNode</name></member>
+      <member refid="d8/df2/classGUIListNode_1aad72872bcf68bc65a64b3f38d1a9dfab" prot="public" virt="non-virtual"><scope>GUIListNode</scope><name>IsSelected</name></member>
+      <member refid="d8/df2/classGUIListNode_1ada32429967bb703a4ddf1275e31a8dcc" prot="private" virt="non-virtual"><scope>GUIListNode</scope><name>m_bSelected</name></member>
+      <member refid="d8/df2/classGUIListNode_1a0427c2600e152068118fbdf1201a6d71" prot="private" virt="non-virtual"><scope>GUIListNode</scope><name>m_idIcon</name></member>
+      <member refid="d8/df2/classGUIListNode_1acc3512734a93c31534597f5f29cba401" prot="private" virt="non-virtual"><scope>GUIListNode</scope><name>m_strName</name></member>
+      <member refid="d8/df2/classGUIListNode_1a44d6deedd23a6e8a5036fda5e0897bcf" prot="public" virt="non-virtual"><scope>GUIListNode</scope><name>~GUIListNode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

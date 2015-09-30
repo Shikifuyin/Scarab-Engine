@@ -1,0 +1,754 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d7/ddb/classTQuadricSurface" kind="class" prot="public">
+    <compoundname>TQuadricSurface</compoundname>
+    <basecompoundref refid="d5/d35/classTImplicitSurface" prot="public" virt="non-virtual">TImplicitSurface&lt; Real &gt;</basecompoundref>
+    <includes refid="df/dc4/QuadricSurface_8h" local="no">QuadricSurface.h</includes>
+    <innerclass refid="d0/d81/classTQuadricSurface_1_1EqRootRepr" prot="private">TQuadricSurface::EqRootRepr</innerclass>
+    <templateparamlist>
+      <param>
+        <type>typename Real</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="d7/ddb/classTQuadricSurface_1aa66244720524e78af62f5563bf26ca34" prot="private" static="no">
+        <type><ref refid="d8/da7/classRational" kindref="compound">Rational</ref>&lt; 16 &gt;</type>
+        <definition>typedef Rational&lt;16&gt; QRational</definition>
+        <argsstring></argsstring>
+        <name>QRational</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" line="108" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d7/ddb/classTQuadricSurface_1a2d83fe73e7f88deda478d5fa56174ac2" prot="private" static="no">
+        <type><ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; <ref refid="d7/ddb/classTQuadricSurface_1aa66244720524e78af62f5563bf26ca34" kindref="member">QRational</ref> &gt;</type>
+        <definition>typedef TVector3&lt;QRational&gt; QVector</definition>
+        <argsstring></argsstring>
+        <name>QVector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" line="109" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="d7/ddb/classTQuadricSurface_1a6b2e461e7a3da912f4b51945846a97b9" prot="protected" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real m_arrCoefficients[10]</definition>
+        <argsstring>[10]</argsstring>
+        <name>m_arrCoefficients</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" line="101" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/ddb/classTQuadricSurface_1a541c55175fd4dda68bfe309e153df124" prot="protected" static="no" mutable="no">
+        <type><ref refid="d7/dee/classTMatrix3" kindref="compound">TMatrix3</ref>&lt; Real &gt;</type>
+        <definition>TMatrix3&lt;Real&gt; m_matA</definition>
+        <argsstring></argsstring>
+        <name>m_matA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" line="102" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/ddb/classTQuadricSurface_1ab93eef20e125a4f6be72c693c6b7f450" prot="protected" static="no" mutable="no">
+        <type><ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt;</type>
+        <definition>TVector3&lt;Real&gt; m_vB</definition>
+        <argsstring></argsstring>
+        <name>m_vB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" line="103" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/ddb/classTQuadricSurface_1a03f5b183f3219f4f99254e9643bdd38e" prot="protected" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real m_fC</definition>
+        <argsstring></argsstring>
+        <name>m_fC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" line="104" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d7/ddb/classTQuadricSurface_1a019e2cb2e7de76ffedcdfbcc7d360189" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TQuadricSurface</definition>
+        <argsstring>()</argsstring>
+        <name>TQuadricSurface</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" line="68"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/ddb/classTQuadricSurface_1a90d61c65e4cca8908111bb093fc49d3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TQuadricSurface</definition>
+        <argsstring>(const Real arrCoeffs[10])</argsstring>
+        <name>TQuadricSurface</name>
+        <param>
+          <type>const Real</type>
+          <declname>arrCoeffs</declname>
+          <array>[10]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" line="69"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/ddb/classTQuadricSurface_1a5e7bb665eb41fa3d7c2b6f04a69861d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~TQuadricSurface</definition>
+        <argsstring>()</argsstring>
+        <name>~TQuadricSurface</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" line="70"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/ddb/classTQuadricSurface_1aef4a07677fd9fafe04b7d9b759d78f61" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real GetCoefficient</definition>
+        <argsstring>(UInt iCoeff) const </argsstring>
+        <name>GetCoefficient</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iCoeff</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" line="73"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/ddb/classTQuadricSurface_1ad4be7acfb0223f402a6ae887c6be282c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetCoefficient</definition>
+        <argsstring>(UInt iCoeff, Real fValue)</argsstring>
+        <name>SetCoefficient</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iCoeff</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" line="74"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/ddb/classTQuadricSurface_1af7deb3e47d4828433124f16578b7dbf3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d7/dee/classTMatrix3" kindref="compound">TMatrix3</ref>&lt; Real &gt; &amp;</type>
+        <definition>const TMatrix3&lt;Real&gt;&amp; GetA</definition>
+        <argsstring>() const </argsstring>
+        <name>GetA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" line="76"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/ddb/classTQuadricSurface_1a25dfb05e2c51dc61b0aa86164f688b83" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetA</definition>
+        <argsstring>(const TMatrix3&lt; Real &gt; &amp;matValue)</argsstring>
+        <name>SetA</name>
+        <param>
+          <type>const <ref refid="d7/dee/classTMatrix3" kindref="compound">TMatrix3</ref>&lt; Real &gt; &amp;</type>
+          <declname>matValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" line="77"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/ddb/classTQuadricSurface_1aaa41fdc10327a4d238be43b920ee8172" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt; &amp;</type>
+        <definition>const TVector3&lt;Real&gt;&amp; GetB</definition>
+        <argsstring>() const </argsstring>
+        <name>GetB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" line="79"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/ddb/classTQuadricSurface_1a3883d222206a8a517e84949e90d2d11c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetB</definition>
+        <argsstring>(const TVector3&lt; Real &gt; &amp;vValue)</argsstring>
+        <name>SetB</name>
+        <param>
+          <type>const <ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt; &amp;</type>
+          <declname>vValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" line="80"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/ddb/classTQuadricSurface_1a5aeb55a769364c6ae850981a89c6c7b9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real GetC</definition>
+        <argsstring>() const </argsstring>
+        <name>GetC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" line="82"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/ddb/classTQuadricSurface_1aad2aeb0c3fd6dd80f5c0436b0b736013" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetC</definition>
+        <argsstring>(Real fValue)</argsstring>
+        <name>SetC</name>
+        <param>
+          <type>Real</type>
+          <declname>fValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" line="83"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/ddb/classTQuadricSurface_1aa75cde92de80b0700eb72da1f95febfe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>Real</type>
+        <definition>virtual Real F</definition>
+        <argsstring>(const TVertex3&lt; Real &gt; &amp;vPosition) const </argsstring>
+        <name>F</name>
+        <reimplements refid="d5/d35/classTImplicitSurface_1aa2fdd92511a517e73bc7c26ab67e0ff9">F</reimplements>
+        <param>
+          <type>const <ref refid="dc/d75/classTVertex3" kindref="compound">TVertex3</ref>&lt; Real &gt; &amp;</type>
+          <declname>vPosition</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" line="86"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/ddb/classTQuadricSurface_1a2fac417b82b2409a640775723e5823b1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>Real</type>
+        <definition>virtual Real FdX</definition>
+        <argsstring>(const TVertex3&lt; Real &gt; &amp;vPosition) const </argsstring>
+        <name>FdX</name>
+        <reimplements refid="d5/d35/classTImplicitSurface_1adb2ffb7fdeed5e338d7f8a8e880f7e81">FdX</reimplements>
+        <param>
+          <type>const <ref refid="dc/d75/classTVertex3" kindref="compound">TVertex3</ref>&lt; Real &gt; &amp;</type>
+          <declname>vPosition</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" line="87"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/ddb/classTQuadricSurface_1af69b689f178c1e5d47be73e698caab39" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>Real</type>
+        <definition>virtual Real FdY</definition>
+        <argsstring>(const TVertex3&lt; Real &gt; &amp;vPosition) const </argsstring>
+        <name>FdY</name>
+        <reimplements refid="d5/d35/classTImplicitSurface_1a7e458f96144ee9e123ae963401a68b1a">FdY</reimplements>
+        <param>
+          <type>const <ref refid="dc/d75/classTVertex3" kindref="compound">TVertex3</ref>&lt; Real &gt; &amp;</type>
+          <declname>vPosition</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" line="88"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/ddb/classTQuadricSurface_1a2c78afd8bbb0798969e42a82c4565136" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>Real</type>
+        <definition>virtual Real FdZ</definition>
+        <argsstring>(const TVertex3&lt; Real &gt; &amp;vPosition) const </argsstring>
+        <name>FdZ</name>
+        <reimplements refid="d5/d35/classTImplicitSurface_1a2f5560d7a534b285a16f9c8b0792da3a">FdZ</reimplements>
+        <param>
+          <type>const <ref refid="dc/d75/classTVertex3" kindref="compound">TVertex3</ref>&lt; Real &gt; &amp;</type>
+          <declname>vPosition</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" line="89"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/ddb/classTQuadricSurface_1a8d6f82f5c4f0132ee45dee402f2ffc9b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>Real</type>
+        <definition>virtual Real FdX2</definition>
+        <argsstring>(const TVertex3&lt; Real &gt; &amp;vPosition) const </argsstring>
+        <name>FdX2</name>
+        <reimplements refid="d5/d35/classTImplicitSurface_1ac2d2be0492732c19f63bf3daea8818cc">FdX2</reimplements>
+        <param>
+          <type>const <ref refid="dc/d75/classTVertex3" kindref="compound">TVertex3</ref>&lt; Real &gt; &amp;</type>
+          <declname>vPosition</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" line="90"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/ddb/classTQuadricSurface_1ab3b6c75612ccd09c3548f34d91ed7fa2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>Real</type>
+        <definition>virtual Real FdY2</definition>
+        <argsstring>(const TVertex3&lt; Real &gt; &amp;vPosition) const </argsstring>
+        <name>FdY2</name>
+        <reimplements refid="d5/d35/classTImplicitSurface_1a4d056a0516571df4db94865e1b8d21b3">FdY2</reimplements>
+        <param>
+          <type>const <ref refid="dc/d75/classTVertex3" kindref="compound">TVertex3</ref>&lt; Real &gt; &amp;</type>
+          <declname>vPosition</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" line="91"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/ddb/classTQuadricSurface_1ad7912b4e6344b7ef94064e882c6ec8a2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>Real</type>
+        <definition>virtual Real FdZ2</definition>
+        <argsstring>(const TVertex3&lt; Real &gt; &amp;vPosition) const </argsstring>
+        <name>FdZ2</name>
+        <reimplements refid="d5/d35/classTImplicitSurface_1ae7dda17e1a9505adc5753dcf41a381c2">FdZ2</reimplements>
+        <param>
+          <type>const <ref refid="dc/d75/classTVertex3" kindref="compound">TVertex3</ref>&lt; Real &gt; &amp;</type>
+          <declname>vPosition</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" line="92"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/ddb/classTQuadricSurface_1ab3508a1923cd1a3214022a7d5ccf2c28" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>Real</type>
+        <definition>virtual Real FdXdY</definition>
+        <argsstring>(const TVertex3&lt; Real &gt; &amp;vPosition) const </argsstring>
+        <name>FdXdY</name>
+        <reimplements refid="d5/d35/classTImplicitSurface_1a8771d7e26378f77fb8111f0f411974f6">FdXdY</reimplements>
+        <param>
+          <type>const <ref refid="dc/d75/classTVertex3" kindref="compound">TVertex3</ref>&lt; Real &gt; &amp;</type>
+          <declname>vPosition</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" line="93"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/ddb/classTQuadricSurface_1a4bbd4b81a0dcf276878c5a0d66577208" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>Real</type>
+        <definition>virtual Real FdXdZ</definition>
+        <argsstring>(const TVertex3&lt; Real &gt; &amp;vPosition) const </argsstring>
+        <name>FdXdZ</name>
+        <reimplements refid="d5/d35/classTImplicitSurface_1a9e8e5b191c7eb6ad7aa503db661f6c88">FdXdZ</reimplements>
+        <param>
+          <type>const <ref refid="dc/d75/classTVertex3" kindref="compound">TVertex3</ref>&lt; Real &gt; &amp;</type>
+          <declname>vPosition</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" line="94"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/ddb/classTQuadricSurface_1a2abdc5512ddb74a8914ee482361d62f5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>Real</type>
+        <definition>virtual Real FdYdZ</definition>
+        <argsstring>(const TVertex3&lt; Real &gt; &amp;vPosition) const </argsstring>
+        <name>FdYdZ</name>
+        <reimplements refid="d5/d35/classTImplicitSurface_1ac6bfb94793f883afb1797dfe69c5d80c">FdYdZ</reimplements>
+        <param>
+          <type>const <ref refid="dc/d75/classTVertex3" kindref="compound">TVertex3</ref>&lt; Real &gt; &amp;</type>
+          <declname>vPosition</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" line="95"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/ddb/classTQuadricSurface_1a166d48bdc735660158f6b168a54fe62c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="df/dc4/QuadricSurface_8h_1a0da46f37ec6d67f175dc0a7d8b1db882" kindref="member">QuadricSurfaceType</ref></type>
+        <definition>QuadricSurfaceType GetType</definition>
+        <argsstring>() const </argsstring>
+        <name>GetType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" line="98"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="d7/ddb/classTQuadricSurface_1a89b78fc56724678805d01c0fa21280c8" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>static UInt _Compute_SignChanges</definition>
+        <argsstring>(const QRational *arrValues, UInt iCount)</argsstring>
+        <name>_Compute_SignChanges</name>
+        <param>
+          <type>const <ref refid="d7/ddb/classTQuadricSurface_1aa66244720524e78af62f5563bf26ca34" kindref="member">QRational</ref> *</type>
+          <declname>arrValues</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iCount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" line="132"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/ddb/classTQuadricSurface_1aae467dd264a005a832f16ded14309b00" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>static Void _Compute_RootSigns</definition>
+        <argsstring>(EqRootRepr &amp;rootRepr, UInt &amp;outPositiveRoots, UInt &amp;outNegativeRoots, UInt &amp;outZeroRoots)</argsstring>
+        <name>_Compute_RootSigns</name>
+        <param>
+          <type><ref refid="d0/d81/classTQuadricSurface_1_1EqRootRepr" kindref="compound">EqRootRepr</ref> &amp;</type>
+          <declname>rootRepr</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref> &amp;</type>
+          <declname>outPositiveRoots</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref> &amp;</type>
+          <declname>outNegativeRoots</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref> &amp;</type>
+          <declname>outZeroRoots</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" line="133"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/ddb/classTQuadricSurface_1a562209e50d3a6017ab53c107672d1b25" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="df/dc4/QuadricSurface_8h_1a0da46f37ec6d67f175dc0a7d8b1db882" kindref="member">QuadricSurfaceType</ref></type>
+        <definition>static QuadricSurfaceType _Classify_Roots0</definition>
+        <argsstring>(const EqRootRepr &amp;rootRepr, UInt iPositiveRoots)</argsstring>
+        <name>_Classify_Roots0</name>
+        <param>
+          <type>const <ref refid="d0/d81/classTQuadricSurface_1_1EqRootRepr" kindref="compound">EqRootRepr</ref> &amp;</type>
+          <declname>rootRepr</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iPositiveRoots</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" line="136"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/ddb/classTQuadricSurface_1ae8dbd856337f9d0dcff8f86a83eb3791" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="df/dc4/QuadricSurface_8h_1a0da46f37ec6d67f175dc0a7d8b1db882" kindref="member">QuadricSurfaceType</ref></type>
+        <definition>static QuadricSurfaceType _Classify_Roots1</definition>
+        <argsstring>(const EqRootRepr &amp;rootRepr, UInt iPositiveRoots)</argsstring>
+        <name>_Classify_Roots1</name>
+        <param>
+          <type>const <ref refid="d0/d81/classTQuadricSurface_1_1EqRootRepr" kindref="compound">EqRootRepr</ref> &amp;</type>
+          <declname>rootRepr</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iPositiveRoots</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" line="138"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/ddb/classTQuadricSurface_1a4e65fb2e3b9f9a316e52cd03260ad748" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="df/dc4/QuadricSurface_8h_1a0da46f37ec6d67f175dc0a7d8b1db882" kindref="member">QuadricSurfaceType</ref></type>
+        <definition>static QuadricSurfaceType _Classify_Roots1</definition>
+        <argsstring>(const EqRootRepr &amp;rootRepr, UInt iPositiveRoots, const QVector &amp;vI, const QVector &amp;vJ, const QVector &amp;vK)</argsstring>
+        <name>_Classify_Roots1</name>
+        <param>
+          <type>const <ref refid="d0/d81/classTQuadricSurface_1_1EqRootRepr" kindref="compound">EqRootRepr</ref> &amp;</type>
+          <declname>rootRepr</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iPositiveRoots</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d7/ddb/classTQuadricSurface_1a2d83fe73e7f88deda478d5fa56174ac2" kindref="member">QVector</ref> &amp;</type>
+          <declname>vI</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d7/ddb/classTQuadricSurface_1a2d83fe73e7f88deda478d5fa56174ac2" kindref="member">QVector</ref> &amp;</type>
+          <declname>vJ</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d7/ddb/classTQuadricSurface_1a2d83fe73e7f88deda478d5fa56174ac2" kindref="member">QVector</ref> &amp;</type>
+          <declname>vK</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" line="140"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/ddb/classTQuadricSurface_1a91341eeb8fdec68879541af2638ddf3f" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="df/dc4/QuadricSurface_8h_1a0da46f37ec6d67f175dc0a7d8b1db882" kindref="member">QuadricSurfaceType</ref></type>
+        <definition>static QuadricSurfaceType _Classify_Roots2</definition>
+        <argsstring>(const EqRootRepr &amp;rootRepr, UInt iPositiveRoots)</argsstring>
+        <name>_Classify_Roots2</name>
+        <param>
+          <type>const <ref refid="d0/d81/classTQuadricSurface_1_1EqRootRepr" kindref="compound">EqRootRepr</ref> &amp;</type>
+          <declname>rootRepr</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iPositiveRoots</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" line="142"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/ddb/classTQuadricSurface_1ab374ba5e7fb12e0ed404986a7d23767c" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="df/dc4/QuadricSurface_8h_1a0da46f37ec6d67f175dc0a7d8b1db882" kindref="member">QuadricSurfaceType</ref></type>
+        <definition>static QuadricSurfaceType _Classify_Roots2</definition>
+        <argsstring>(const EqRootRepr &amp;rootRepr, UInt iPositiveRoots, const QVector &amp;vI, const QVector &amp;vJ, const QVector &amp;vK)</argsstring>
+        <name>_Classify_Roots2</name>
+        <param>
+          <type>const <ref refid="d0/d81/classTQuadricSurface_1_1EqRootRepr" kindref="compound">EqRootRepr</ref> &amp;</type>
+          <declname>rootRepr</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iPositiveRoots</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d7/ddb/classTQuadricSurface_1a2d83fe73e7f88deda478d5fa56174ac2" kindref="member">QVector</ref> &amp;</type>
+          <declname>vI</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d7/ddb/classTQuadricSurface_1a2d83fe73e7f88deda478d5fa56174ac2" kindref="member">QVector</ref> &amp;</type>
+          <declname>vJ</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d7/ddb/classTQuadricSurface_1a2d83fe73e7f88deda478d5fa56174ac2" kindref="member">QVector</ref> &amp;</type>
+          <declname>vK</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" line="144"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/ddb/classTQuadricSurface_1a74d29a4de1c5b9c6f6d7bcd85150c0ce" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="df/dc4/QuadricSurface_8h_1a0da46f37ec6d67f175dc0a7d8b1db882" kindref="member">QuadricSurfaceType</ref></type>
+        <definition>static QuadricSurfaceType _Classify_Roots3</definition>
+        <argsstring>(const EqRootRepr &amp;rootRepr)</argsstring>
+        <name>_Classify_Roots3</name>
+        <param>
+          <type>const <ref refid="d0/d81/classTQuadricSurface_1_1EqRootRepr" kindref="compound">EqRootRepr</ref> &amp;</type>
+          <declname>rootRepr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" line="146"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="12912">
+        <label>TImplicitSurface&lt; Real &gt;</label>
+        <link refid="d5/d35/classTImplicitSurface"/>
+      </node>
+      <node id="12911">
+        <label>TQuadricSurface&lt; Real &gt;</label>
+        <link refid="d7/ddb/classTQuadricSurface"/>
+        <childnode refid="12912" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="12917">
+        <label>Real</label>
+      </node>
+      <node id="12914">
+        <label>TImplicitSurface&lt; Real &gt;</label>
+        <link refid="d5/d35/classTImplicitSurface"/>
+      </node>
+      <node id="12915">
+        <label>TVector3&lt; Real &gt;</label>
+      </node>
+      <node id="12913">
+        <label>TQuadricSurface&lt; Real &gt;</label>
+        <link refid="d7/ddb/classTQuadricSurface"/>
+        <childnode refid="12914" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12915" relation="usage">
+          <edgelabel>m_vB</edgelabel>
+        </childnode>
+        <childnode refid="12916" relation="usage">
+          <edgelabel>m_matA</edgelabel>
+        </childnode>
+        <childnode refid="12917" relation="usage">
+          <edgelabel>m_fC</edgelabel>
+          <edgelabel>m_arrCoefficients</edgelabel>
+        </childnode>
+      </node>
+      <node id="12916">
+        <label>TMatrix3&lt; Real &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" line="56" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Surfaces/SurfaceLibrary/QuadricSurface.h" bodystart="55" bodyend="147"/>
+    <listofallmembers>
+      <member refid="d7/ddb/classTQuadricSurface_1a562209e50d3a6017ab53c107672d1b25" prot="private" virt="non-virtual"><scope>TQuadricSurface</scope><name>_Classify_Roots0</name></member>
+      <member refid="d7/ddb/classTQuadricSurface_1ae8dbd856337f9d0dcff8f86a83eb3791" prot="private" virt="non-virtual"><scope>TQuadricSurface</scope><name>_Classify_Roots1</name></member>
+      <member refid="d7/ddb/classTQuadricSurface_1a4e65fb2e3b9f9a316e52cd03260ad748" prot="private" virt="non-virtual"><scope>TQuadricSurface</scope><name>_Classify_Roots1</name></member>
+      <member refid="d7/ddb/classTQuadricSurface_1a91341eeb8fdec68879541af2638ddf3f" prot="private" virt="non-virtual"><scope>TQuadricSurface</scope><name>_Classify_Roots2</name></member>
+      <member refid="d7/ddb/classTQuadricSurface_1ab374ba5e7fb12e0ed404986a7d23767c" prot="private" virt="non-virtual"><scope>TQuadricSurface</scope><name>_Classify_Roots2</name></member>
+      <member refid="d7/ddb/classTQuadricSurface_1a74d29a4de1c5b9c6f6d7bcd85150c0ce" prot="private" virt="non-virtual"><scope>TQuadricSurface</scope><name>_Classify_Roots3</name></member>
+      <member refid="d7/ddb/classTQuadricSurface_1aae467dd264a005a832f16ded14309b00" prot="private" virt="non-virtual"><scope>TQuadricSurface</scope><name>_Compute_RootSigns</name></member>
+      <member refid="d7/ddb/classTQuadricSurface_1a89b78fc56724678805d01c0fa21280c8" prot="private" virt="non-virtual"><scope>TQuadricSurface</scope><name>_Compute_SignChanges</name></member>
+      <member refid="d5/d35/classTImplicitSurface_1a3fe48176dcb4fb87e00bbb584845a142" prot="public" virt="non-virtual"><scope>TQuadricSurface</scope><name>ClassifyPoint</name></member>
+      <member refid="d7/ddb/classTQuadricSurface_1aa75cde92de80b0700eb72da1f95febfe" prot="public" virt="virtual"><scope>TQuadricSurface</scope><name>F</name></member>
+      <member refid="d7/ddb/classTQuadricSurface_1a2fac417b82b2409a640775723e5823b1" prot="public" virt="virtual"><scope>TQuadricSurface</scope><name>FdX</name></member>
+      <member refid="d7/ddb/classTQuadricSurface_1a8d6f82f5c4f0132ee45dee402f2ffc9b" prot="public" virt="virtual"><scope>TQuadricSurface</scope><name>FdX2</name></member>
+      <member refid="d7/ddb/classTQuadricSurface_1ab3508a1923cd1a3214022a7d5ccf2c28" prot="public" virt="virtual"><scope>TQuadricSurface</scope><name>FdXdY</name></member>
+      <member refid="d7/ddb/classTQuadricSurface_1a4bbd4b81a0dcf276878c5a0d66577208" prot="public" virt="virtual"><scope>TQuadricSurface</scope><name>FdXdZ</name></member>
+      <member refid="d7/ddb/classTQuadricSurface_1af69b689f178c1e5d47be73e698caab39" prot="public" virt="virtual"><scope>TQuadricSurface</scope><name>FdY</name></member>
+      <member refid="d7/ddb/classTQuadricSurface_1ab3b6c75612ccd09c3548f34d91ed7fa2" prot="public" virt="virtual"><scope>TQuadricSurface</scope><name>FdY2</name></member>
+      <member refid="d7/ddb/classTQuadricSurface_1a2abdc5512ddb74a8914ee482361d62f5" prot="public" virt="virtual"><scope>TQuadricSurface</scope><name>FdYdZ</name></member>
+      <member refid="d7/ddb/classTQuadricSurface_1a2c78afd8bbb0798969e42a82c4565136" prot="public" virt="virtual"><scope>TQuadricSurface</scope><name>FdZ</name></member>
+      <member refid="d7/ddb/classTQuadricSurface_1ad7912b4e6344b7ef94064e882c6ec8a2" prot="public" virt="virtual"><scope>TQuadricSurface</scope><name>FdZ2</name></member>
+      <member refid="d5/d35/classTImplicitSurface_1aa739d415d145075fcbe4d266890f9537" prot="public" virt="non-virtual"><scope>TQuadricSurface</scope><name>Frame</name></member>
+      <member refid="d7/ddb/classTQuadricSurface_1af7deb3e47d4828433124f16578b7dbf3" prot="public" virt="non-virtual"><scope>TQuadricSurface</scope><name>GetA</name></member>
+      <member refid="d7/ddb/classTQuadricSurface_1aaa41fdc10327a4d238be43b920ee8172" prot="public" virt="non-virtual"><scope>TQuadricSurface</scope><name>GetB</name></member>
+      <member refid="d7/ddb/classTQuadricSurface_1a5aeb55a769364c6ae850981a89c6c7b9" prot="public" virt="non-virtual"><scope>TQuadricSurface</scope><name>GetC</name></member>
+      <member refid="d7/ddb/classTQuadricSurface_1aef4a07677fd9fafe04b7d9b759d78f61" prot="public" virt="non-virtual"><scope>TQuadricSurface</scope><name>GetCoefficient</name></member>
+      <member refid="d5/d35/classTImplicitSurface_1a4fc16598ede4c3cc62df3aca23947352" prot="public" virt="non-virtual"><scope>TQuadricSurface</scope><name>GetGradient</name></member>
+      <member refid="d5/d35/classTImplicitSurface_1a089cb217fcad289487479c32054ee5e3" prot="public" virt="non-virtual"><scope>TQuadricSurface</scope><name>GetHessian</name></member>
+      <member refid="d7/ddb/classTQuadricSurface_1a166d48bdc735660158f6b168a54fe62c" prot="public" virt="non-virtual"><scope>TQuadricSurface</scope><name>GetType</name></member>
+      <member refid="d7/ddb/classTQuadricSurface_1a6b2e461e7a3da912f4b51945846a97b9" prot="protected" virt="non-virtual"><scope>TQuadricSurface</scope><name>m_arrCoefficients</name></member>
+      <member refid="d7/ddb/classTQuadricSurface_1a03f5b183f3219f4f99254e9643bdd38e" prot="protected" virt="non-virtual"><scope>TQuadricSurface</scope><name>m_fC</name></member>
+      <member refid="d7/ddb/classTQuadricSurface_1a541c55175fd4dda68bfe309e153df124" prot="protected" virt="non-virtual"><scope>TQuadricSurface</scope><name>m_matA</name></member>
+      <member refid="d7/ddb/classTQuadricSurface_1ab93eef20e125a4f6be72c693c6b7f450" prot="protected" virt="non-virtual"><scope>TQuadricSurface</scope><name>m_vB</name></member>
+      <member refid="d5/d35/classTImplicitSurface_1a34c27f535a5d9c3eb1dfebcaa0a224b9" prot="public" virt="non-virtual"><scope>TQuadricSurface</scope><name>PrincipalCurvature</name></member>
+      <member refid="d7/ddb/classTQuadricSurface_1aa66244720524e78af62f5563bf26ca34" prot="private" virt="non-virtual"><scope>TQuadricSurface</scope><name>QRational</name></member>
+      <member refid="d7/ddb/classTQuadricSurface_1a2d83fe73e7f88deda478d5fa56174ac2" prot="private" virt="non-virtual"><scope>TQuadricSurface</scope><name>QVector</name></member>
+      <member refid="d7/ddb/classTQuadricSurface_1a25dfb05e2c51dc61b0aa86164f688b83" prot="public" virt="non-virtual"><scope>TQuadricSurface</scope><name>SetA</name></member>
+      <member refid="d7/ddb/classTQuadricSurface_1a3883d222206a8a517e84949e90d2d11c" prot="public" virt="non-virtual"><scope>TQuadricSurface</scope><name>SetB</name></member>
+      <member refid="d7/ddb/classTQuadricSurface_1aad2aeb0c3fd6dd80f5c0436b0b736013" prot="public" virt="non-virtual"><scope>TQuadricSurface</scope><name>SetC</name></member>
+      <member refid="d7/ddb/classTQuadricSurface_1ad4be7acfb0223f402a6ae887c6be282c" prot="public" virt="non-virtual"><scope>TQuadricSurface</scope><name>SetCoefficient</name></member>
+      <member refid="d5/d35/classTImplicitSurface_1aa891ddaab1186893b9fc2c425038f583" prot="public" virt="non-virtual"><scope>TQuadricSurface</scope><name>TImplicitSurface</name></member>
+      <member refid="d7/ddb/classTQuadricSurface_1a019e2cb2e7de76ffedcdfbcc7d360189" prot="public" virt="non-virtual"><scope>TQuadricSurface</scope><name>TQuadricSurface</name></member>
+      <member refid="d7/ddb/classTQuadricSurface_1a90d61c65e4cca8908111bb093fc49d3d" prot="public" virt="non-virtual"><scope>TQuadricSurface</scope><name>TQuadricSurface</name></member>
+      <member refid="d5/d35/classTImplicitSurface_1ad19041cbe61886d96be859442dc5e37f" prot="public" virt="virtual"><scope>TQuadricSurface</scope><name>~TImplicitSurface</name></member>
+      <member refid="d7/ddb/classTQuadricSurface_1a5e7bb665eb41fa3d7c2b6f04a69861d7" prot="public" virt="virtual"><scope>TQuadricSurface</scope><name>~TQuadricSurface</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

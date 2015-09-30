@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d8/d40/structRDB__BlockAllocator" kind="struct" prot="public">
+    <compoundname>RDB_BlockAllocator</compoundname>
+    <includes refid="d5/dae/RDBFileStructure_8h" local="no">RDBFileStructure.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d8/d40/structRDB__BlockAllocator_1a8a8af87398561376a467db3b3af95285" prot="public" static="no" mutable="no">
+        <type><ref refid="d5/dae/RDBFileStructure_8h_1a754c3cc9b8ee3595569630cad83f515d" kindref="member">RDB_BlockID</ref></type>
+        <definition>RDB_BlockID idNextFreeBlock</definition>
+        <argsstring></argsstring>
+        <name>idNextFreeBlock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBFileStructure.h" line="143" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBFileStructure.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d40/structRDB__BlockAllocator_1a324d5208afba50fffd96537b4b74ed6f" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt iTotalBlocks</definition>
+        <argsstring></argsstring>
+        <name>iTotalBlocks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBFileStructure.h" line="144" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBFileStructure.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d40/structRDB__BlockAllocator_1a2fbb3958e8998eb5e4177e2580e62e65" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt iFreeBlocks</definition>
+        <argsstring></argsstring>
+        <name>iFreeBlocks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBFileStructure.h" line="145" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBFileStructure.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="10079">
+        <label>RDB_BlockAllocator</label>
+        <link refid="d8/d40/structRDB__BlockAllocator"/>
+        <childnode refid="10080" relation="usage">
+          <edgelabel>iTotalBlocks</edgelabel>
+          <edgelabel>iFreeBlocks</edgelabel>
+        </childnode>
+        <childnode refid="10081" relation="usage">
+          <edgelabel>idNextFreeBlock</edgelabel>
+        </childnode>
+      </node>
+      <node id="10081">
+        <label>unsigned int</label>
+      </node>
+      <node id="10080">
+        <label>int</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBFileStructure.h" line="142" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBFileStructure.h" bodystart="141" bodyend="146"/>
+    <listofallmembers>
+      <member refid="d8/d40/structRDB__BlockAllocator_1a8a8af87398561376a467db3b3af95285" prot="public" virt="non-virtual"><scope>RDB_BlockAllocator</scope><name>idNextFreeBlock</name></member>
+      <member refid="d8/d40/structRDB__BlockAllocator_1a2fbb3958e8998eb5e4177e2580e62e65" prot="public" virt="non-virtual"><scope>RDB_BlockAllocator</scope><name>iFreeBlocks</name></member>
+      <member refid="d8/d40/structRDB__BlockAllocator_1a324d5208afba50fffd96537b4b74ed6f" prot="public" virt="non-virtual"><scope>RDB_BlockAllocator</scope><name>iTotalBlocks</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

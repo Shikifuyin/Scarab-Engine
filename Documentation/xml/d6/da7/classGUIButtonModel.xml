@@ -1,0 +1,442 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d6/da7/classGUIButtonModel" kind="class" prot="public">
+    <compoundname>GUIButtonModel</compoundname>
+    <basecompoundref refid="d0/d61/classGUIWidgetModel" prot="public" virt="non-virtual">GUIWidgetModel</basecompoundref>
+    <derivedcompoundref refid="dd/d1b/classGUIMsgBoxButtonModel" prot="public" virt="non-virtual">GUIMsgBoxButtonModel</derivedcompoundref>
+    <derivedcompoundref refid="d1/d0a/classGUISwitchTabsButtonModel" prot="public" virt="non-virtual">GUISwitchTabsButtonModel</derivedcompoundref>
+    <includes refid="d3/df9/GUIButton_8h" local="no">GUIButton.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="d6/da7/classGUIButtonModel_1ac4bbe05598e16174b290be18c45c8966" prot="protected" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool m_bPressed</definition>
+        <argsstring></argsstring>
+        <name>m_bPressed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Common/GUIButton.h" line="57" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Common/GUIButton.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/da7/classGUIButtonModel_1a8434bb72ec54436d0cb9627f959897df" prot="protected" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref></type>
+        <definition>GChar m_strText[GUIBUTTON_MAX_LENGTH]</definition>
+        <argsstring>[GUIBUTTON_MAX_LENGTH]</argsstring>
+        <name>m_strText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Common/GUIButton.h" line="58" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Common/GUIButton.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d6/da7/classGUIButtonModel_1a11229304b9efb20807d417d5cb098c63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GUIButtonModel</definition>
+        <argsstring>(const GChar *strText)</argsstring>
+        <name>GUIButtonModel</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strText</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Common/GUIButton.h" line="38"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/da7/classGUIButtonModel_1a7c6f5049624b83f80fe7d1df05586ab6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~GUIButtonModel</definition>
+        <argsstring>()</argsstring>
+        <name>~GUIButtonModel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Common/GUIButton.h" line="39"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/da7/classGUIButtonModel_1adb24643ae30efb2f86cc3cfe328393ce" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool IsPressed</definition>
+        <argsstring>() const </argsstring>
+        <name>IsPressed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Common/GUIButton.h" line="42"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/da7/classGUIButtonModel_1a4f5e8b3952757e2bd3f37b8fc7a5dded" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+        <definition>const GChar* GetText</definition>
+        <argsstring>() const </argsstring>
+        <name>GetText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Common/GUIButton.h" line="44"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/da7/classGUIButtonModel_1a5543f60d5f22563d4b9d533590151f2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetText</definition>
+        <argsstring>(const GChar *strText)</argsstring>
+        <name>SetText</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strText</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Common/GUIButton.h" line="45"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/da7/classGUIButtonModel_1ad7821750126b444a522a57f8e56a4015" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnMousePress</definition>
+        <argsstring>(const Point2 &amp;ptLocalPos, KeyCode iKey, GUIEventFlag iFlags)</argsstring>
+        <name>OnMousePress</name>
+        <reimplements refid="dd/d40/classGUIEventProcessorModel_1ad7821750126b444a522a57f8e56a4015">OnMousePress</reimplements>
+        <param>
+          <type>const <ref refid="dd/d98/classPoint2" kindref="compound">Point2</ref> &amp;</type>
+          <declname>ptLocalPos</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a414bae0861cbf75db6ba1081cee1e663" kindref="member">KeyCode</ref></type>
+          <declname>iKey</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/df0/GUIEvent_8h_1a1fb329d664687b0a665d348b7b1ed134" kindref="member">GUIEventFlag</ref></type>
+          <declname>iFlags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Common/GUIButton.h" line="48"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/da7/classGUIButtonModel_1a0d16663cc3afe04b2fb14462cc20aded" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnMouseRelease</definition>
+        <argsstring>(const Point2 &amp;ptLocalPos, KeyCode iKey, GUIEventFlag iFlags)</argsstring>
+        <name>OnMouseRelease</name>
+        <reimplements refid="dd/d40/classGUIEventProcessorModel_1a0d16663cc3afe04b2fb14462cc20aded">OnMouseRelease</reimplements>
+        <param>
+          <type>const <ref refid="dd/d98/classPoint2" kindref="compound">Point2</ref> &amp;</type>
+          <declname>ptLocalPos</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a414bae0861cbf75db6ba1081cee1e663" kindref="member">KeyCode</ref></type>
+          <declname>iKey</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/df0/GUIEvent_8h_1a1fb329d664687b0a665d348b7b1ed134" kindref="member">GUIEventFlag</ref></type>
+          <declname>iFlags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Common/GUIButton.h" line="49"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/da7/classGUIButtonModel_1aef6289d8ef69e714dabad61f7c46797d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnClick</definition>
+        <argsstring>(const Point2 &amp;ptLocalPos, KeyCode iKey, GUIEventFlag iFlags)</argsstring>
+        <name>OnClick</name>
+        <reimplements refid="d0/d61/classGUIWidgetModel_1aef6289d8ef69e714dabad61f7c46797d">OnClick</reimplements>
+        <param>
+          <type>const <ref refid="dd/d98/classPoint2" kindref="compound">Point2</ref> &amp;</type>
+          <declname>ptLocalPos</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a414bae0861cbf75db6ba1081cee1e663" kindref="member">KeyCode</ref></type>
+          <declname>iKey</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/df0/GUIEvent_8h_1a1fb329d664687b0a665d348b7b1ed134" kindref="member">GUIEventFlag</ref></type>
+          <declname>iFlags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Common/GUIButton.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/da7/classGUIButtonModel_1ae31a24ca00dc6cc1fea588f33d0002ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnPress</definition>
+        <argsstring>()</argsstring>
+        <name>OnPress</name>
+        <reimplementedby refid="d1/d0a/classGUISwitchTabsButtonModel_1ae31a24ca00dc6cc1fea588f33d0002ee">OnPress</reimplementedby>
+        <reimplementedby refid="dd/d1b/classGUIMsgBoxButtonModel_1ae31a24ca00dc6cc1fea588f33d0002ee">OnPress</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Common/GUIButton.h" line="53"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/da7/classGUIButtonModel_1a6ecfe3bc5f3084403639b9478578a141" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnTextChange</definition>
+        <argsstring>()</argsstring>
+        <name>OnTextChange</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Common/GUIButton.h" line="54"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3173">
+        <label>GUIButtonModel</label>
+        <link refid="d6/da7/classGUIButtonModel"/>
+        <childnode refid="3174" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3174">
+        <label>GUIWidgetModel</label>
+        <link refid="d0/d61/classGUIWidgetModel"/>
+        <childnode refid="3175" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3177">
+        <label>GUISwitchTabsButtonModel</label>
+        <link refid="d1/d0a/classGUISwitchTabsButtonModel"/>
+        <childnode refid="3173" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3176">
+        <label>GUIMsgBoxButtonModel</label>
+        <link refid="dd/d1b/classGUIMsgBoxButtonModel"/>
+        <childnode refid="3173" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3175">
+        <label>GUIEventProcessorModel</label>
+        <link refid="dd/d40/classGUIEventProcessorModel"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3183">
+        <label>RingBuffer&lt; GUIEvent &gt;</label>
+        <link refid="d8/d2d/classRingBuffer"/>
+        <childnode refid="3184" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3186" relation="usage">
+          <edgelabel>m_arrBuffer</edgelabel>
+        </childnode>
+        <childnode refid="3189" relation="usage">
+          <edgelabel>m_iRead</edgelabel>
+          <edgelabel>m_iBufferSize</edgelabel>
+          <edgelabel>m_iCount</edgelabel>
+          <edgelabel>m_iWrite</edgelabel>
+        </childnode>
+      </node>
+      <node id="3186">
+        <label>GUIEvent</label>
+        <link refid="d9/d68/classGUIEvent"/>
+        <childnode refid="3187" relation="usage">
+          <edgelabel>m_arrParameters</edgelabel>
+        </childnode>
+        <childnode refid="3188" relation="usage">
+          <edgelabel>m_iType</edgelabel>
+        </childnode>
+        <childnode refid="3189" relation="usage">
+          <edgelabel>m_arrParamOffsets</edgelabel>
+          <edgelabel>m_iParamCount</edgelabel>
+          <edgelabel>m_iParamTotalSize</edgelabel>
+        </childnode>
+        <childnode refid="3185" relation="usage">
+          <edgelabel>m_iFlags</edgelabel>
+        </childnode>
+      </node>
+      <node id="3178">
+        <label>GUIButtonModel</label>
+        <link refid="d6/da7/classGUIButtonModel"/>
+        <childnode refid="3179" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3182" relation="usage">
+          <edgelabel>m_strText</edgelabel>
+        </childnode>
+        <childnode refid="3190" relation="usage">
+          <edgelabel>m_bPressed</edgelabel>
+        </childnode>
+      </node>
+      <node id="3191">
+        <label>GUIMenuModel</label>
+        <link refid="da/dfd/classGUIMenuModel"/>
+        <childnode refid="3192" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3193" relation="usage">
+          <edgelabel>m_arrItems</edgelabel>
+        </childnode>
+        <childnode refid="3189" relation="usage">
+          <edgelabel>m_iItemCount</edgelabel>
+          <edgelabel>m_iItemHeight</edgelabel>
+          <edgelabel>m_iSelectedItem</edgelabel>
+        </childnode>
+      </node>
+      <node id="3193">
+        <label>GUIMenuItem</label>
+        <link refid="d0/db3/classGUIMenuItem"/>
+        <childnode refid="3182" relation="usage">
+          <edgelabel>m_strName</edgelabel>
+        </childnode>
+        <childnode refid="3191" relation="usage">
+          <edgelabel>m_pSubMenu</edgelabel>
+        </childnode>
+        <childnode refid="3190" relation="usage">
+          <edgelabel>m_bActive</edgelabel>
+        </childnode>
+        <childnode refid="3194" relation="usage">
+          <edgelabel>m_idIcon</edgelabel>
+        </childnode>
+      </node>
+      <node id="3185">
+        <label>unsigned int</label>
+      </node>
+      <node id="3187">
+        <label>unsigned char</label>
+      </node>
+      <node id="3179">
+        <label>GUIWidgetModel</label>
+        <link refid="d0/d61/classGUIWidgetModel"/>
+        <childnode refid="3180" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3191" relation="usage">
+          <edgelabel>m_pContextMenuModel</edgelabel>
+        </childnode>
+      </node>
+      <node id="3189">
+        <label>int</label>
+      </node>
+      <node id="3188">
+        <label>GUIEventType</label>
+      </node>
+      <node id="3180">
+        <label>GUIEventProcessorModel</label>
+        <link refid="dd/d40/classGUIEventProcessorModel"/>
+        <childnode refid="3181" relation="usage">
+          <edgelabel>m_pEventProcessor</edgelabel>
+        </childnode>
+      </node>
+      <node id="3190">
+        <label>bool</label>
+      </node>
+      <node id="3194">
+        <label>GUISkinImage</label>
+      </node>
+      <node id="3192">
+        <label>GUIOverlayModel</label>
+        <link refid="d5/db8/classGUIOverlayModel"/>
+        <childnode refid="3180" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3182">
+        <label>char</label>
+      </node>
+      <node id="3181">
+        <label>GUIEventProcessor</label>
+        <link refid="d2/de5/classGUIEventProcessor"/>
+        <childnode refid="3182" relation="usage">
+          <edgelabel>m_strName</edgelabel>
+        </childnode>
+        <childnode refid="3183" relation="usage">
+          <edgelabel>m_bufEventQueue</edgelabel>
+        </childnode>
+        <childnode refid="3190" relation="usage">
+          <edgelabel>m_bHasFocus</edgelabel>
+          <edgelabel>m_bHasMouseOver</edgelabel>
+        </childnode>
+        <childnode refid="3180" relation="usage">
+          <edgelabel>m_pModel</edgelabel>
+        </childnode>
+      </node>
+      <node id="3184">
+        <label>Datastruct</label>
+        <link refid="dc/d51/classDatastruct"/>
+        <childnode refid="3182" relation="usage">
+          <edgelabel>m_strAllocatorName</edgelabel>
+        </childnode>
+        <childnode refid="3185" relation="usage">
+          <edgelabel>m_idMemoryContext</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Common/GUIButton.h" line="36" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Common/GUIButton.h" bodystart="35" bodyend="59"/>
+    <listofallmembers>
+      <member refid="d0/d61/classGUIWidgetModel_1a0cfcd212c5dbd89df05440fcfc8b3259" prot="protected" virt="non-virtual"><scope>GUIButtonModel</scope><name>_GetWidget</name></member>
+      <member refid="d0/d61/classGUIWidgetModel_1ada3476b951856b88db0a4fdddebfc41b" prot="public" virt="non-virtual"><scope>GUIButtonModel</scope><name>GetContextMenu</name></member>
+      <member refid="d6/da7/classGUIButtonModel_1a4f5e8b3952757e2bd3f37b8fc7a5dded" prot="public" virt="non-virtual"><scope>GUIButtonModel</scope><name>GetText</name></member>
+      <member refid="d6/da7/classGUIButtonModel_1a11229304b9efb20807d417d5cb098c63" prot="public" virt="non-virtual"><scope>GUIButtonModel</scope><name>GUIButtonModel</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a8fbad42b0ba391346a20d145a1f1aaff" prot="public" virt="non-virtual"><scope>GUIButtonModel</scope><name>GUIEventProcessorModel</name></member>
+      <member refid="d0/d61/classGUIWidgetModel_1acce77924f3db1ced0014096279f42047" prot="public" virt="non-virtual"><scope>GUIButtonModel</scope><name>GUIWidgetModel</name></member>
+      <member refid="d0/d61/classGUIWidgetModel_1a4487fdc4888d33d45357ad1bd13b6719" prot="public" virt="non-virtual"><scope>GUIButtonModel</scope><name>HasContextMenu</name></member>
+      <member refid="d6/da7/classGUIButtonModel_1adb24643ae30efb2f86cc3cfe328393ce" prot="public" virt="non-virtual"><scope>GUIButtonModel</scope><name>IsPressed</name></member>
+      <member refid="d6/da7/classGUIButtonModel_1ac4bbe05598e16174b290be18c45c8966" prot="protected" virt="non-virtual"><scope>GUIButtonModel</scope><name>m_bPressed</name></member>
+      <member refid="d0/d61/classGUIWidgetModel_1a883d1ee59fad61a6177438b18bb3b9ac" prot="protected" virt="non-virtual"><scope>GUIButtonModel</scope><name>m_pContextMenuModel</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1ad88dbcc21870be5c934a7ed0492ab408" prot="protected" virt="non-virtual"><scope>GUIButtonModel</scope><name>m_pEventProcessor</name></member>
+      <member refid="d6/da7/classGUIButtonModel_1a8434bb72ec54436d0cb9627f959897df" prot="protected" virt="non-virtual"><scope>GUIButtonModel</scope><name>m_strText</name></member>
+      <member refid="d6/da7/classGUIButtonModel_1aef6289d8ef69e714dabad61f7c46797d" prot="public" virt="virtual"><scope>GUIButtonModel</scope><name>OnClick</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1aa3e35f6c52afce88f987f7b3b812f3a0" prot="public" virt="virtual"><scope>GUIButtonModel</scope><name>OnDblClick</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1aa636c946eeaa7b724fdde67f1ca97fca" prot="public" virt="virtual"><scope>GUIButtonModel</scope><name>OnDragBoth</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a17ce7ae06efbafb91cc5caa6a4df3769" prot="public" virt="virtual"><scope>GUIButtonModel</scope><name>OnDragLeft</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a7c836a58d5d3e22ce14266d8a34abca6" prot="public" virt="virtual"><scope>GUIButtonModel</scope><name>OnDragRight</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1afab7f7032d2bdef0e41ebfac22a78ac3" prot="public" virt="virtual"><scope>GUIButtonModel</scope><name>OnExit</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a2016e258f2f1da5dde1355ec22551d06" prot="public" virt="virtual"><scope>GUIButtonModel</scope><name>OnFocusGain</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1aa13f09676e6e63fe2a1d111810eb6188" prot="public" virt="virtual"><scope>GUIButtonModel</scope><name>OnFocusLoss</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1ac03d9dd79678d679ecc8eaf2868be2e7" prot="public" virt="virtual"><scope>GUIButtonModel</scope><name>OnKeyPress</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a9e381a03ac30f24336437ea469463e7d" prot="public" virt="virtual"><scope>GUIButtonModel</scope><name>OnKeyRelease</name></member>
+      <member refid="d6/da7/classGUIButtonModel_1ad7821750126b444a522a57f8e56a4015" prot="public" virt="virtual"><scope>GUIButtonModel</scope><name>OnMousePress</name></member>
+      <member refid="d6/da7/classGUIButtonModel_1a0d16663cc3afe04b2fb14462cc20aded" prot="public" virt="virtual"><scope>GUIButtonModel</scope><name>OnMouseRelease</name></member>
+      <member refid="d6/da7/classGUIButtonModel_1ae31a24ca00dc6cc1fea588f33d0002ee" prot="public" virt="virtual"><scope>GUIButtonModel</scope><name>OnPress</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a96979342e0e260ea683f2e279c17f08b" prot="public" virt="virtual"><scope>GUIButtonModel</scope><name>OnResize</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a76f49c66bd121837ceb5e8044d1e7d43" prot="public" virt="virtual"><scope>GUIButtonModel</scope><name>OnRollIn</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a1349de895d5bfe49c31c84803e390e69" prot="public" virt="virtual"><scope>GUIButtonModel</scope><name>OnRollOut</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a0acd59231d41981eb8903f53b9da820d" prot="public" virt="virtual"><scope>GUIButtonModel</scope><name>OnRollOver</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a84a8c413e7f1bdff0e95e486c4b4c701" prot="public" virt="virtual"><scope>GUIButtonModel</scope><name>OnScroll</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1ad41fa7e90b05e9abb22d88e3328e0144" prot="public" virt="virtual"><scope>GUIButtonModel</scope><name>OnStartDrag</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a5ab23add485081eabc565545b600fa0e" prot="public" virt="virtual"><scope>GUIButtonModel</scope><name>OnStopDrag</name></member>
+      <member refid="d6/da7/classGUIButtonModel_1a6ecfe3bc5f3084403639b9478578a141" prot="public" virt="virtual"><scope>GUIButtonModel</scope><name>OnTextChange</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1ae55129b32f59b72142aabfb4bbba3978" prot="public" virt="virtual"><scope>GUIButtonModel</scope><name>OnTick</name></member>
+      <member refid="d0/d61/classGUIWidgetModel_1ab4f51346fc92a0441fd9e1a622b4916c" prot="public" virt="non-virtual"><scope>GUIButtonModel</scope><name>SetContextMenu</name></member>
+      <member refid="d6/da7/classGUIButtonModel_1a5543f60d5f22563d4b9d533590151f2e" prot="public" virt="non-virtual"><scope>GUIButtonModel</scope><name>SetText</name></member>
+      <member refid="d6/da7/classGUIButtonModel_1a7c6f5049624b83f80fe7d1df05586ab6" prot="public" virt="virtual"><scope>GUIButtonModel</scope><name>~GUIButtonModel</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a9c07c36b72b8ae06d38a2e6de5afe226" prot="public" virt="virtual"><scope>GUIButtonModel</scope><name>~GUIEventProcessorModel</name></member>
+      <member refid="d0/d61/classGUIWidgetModel_1ab68e97ff84b087fd0eaab0fc88f8ebea" prot="public" virt="virtual"><scope>GUIButtonModel</scope><name>~GUIWidgetModel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

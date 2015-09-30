@@ -1,0 +1,272 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="dd/d10/classHProcess" kind="class" prot="public">
+    <compoundname>HProcess</compoundname>
+    <basecompoundref refid="da/d6b/classHThreadingObject" prot="public" virt="non-virtual">HThreadingObject</basecompoundref>
+    <includes refid="dd/d0e/Threading_8h" local="no">Threading.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="dd/d10/classHProcess_1af18a9ee98e70982bfe2975391d7221a5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class System</definition>
+        <argsstring></argsstring>
+        <name>System</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Threading.h" line="142" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Threading.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="dd/d10/classHProcess_1a5b44c3ce039f01adfe25c2d6c29c7448" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class HThread</definition>
+        <argsstring></argsstring>
+        <name>HThread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Threading.h" line="149" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Threading.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="dd/d10/classHProcess_1a08326e7276ed6a87d5941db6858da9a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~HProcess</definition>
+        <argsstring>()</argsstring>
+        <name>~HProcess</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Threading.h" line="130"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d10/classHProcess_1a9ba45314e6b4a283cb77444f4c733d2b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Terminate</definition>
+        <argsstring>(DWord dwExitCode) const </argsstring>
+        <name>Terminate</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+          <declname>dwExitCode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Threading.h" line="132"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d10/classHProcess_1aadc26b5285a9f67902f79301a8206b14" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dd/d0e/Threading_8h_1aef936fc13b0af34de9209a1e2a15f3c7" kindref="member">ProcessID</ref></type>
+        <definition>ProcessID GetID</definition>
+        <argsstring>() const </argsstring>
+        <name>GetID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Threading.h" line="134"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d10/classHProcess_1a05da23a01ac0c3bb633beb493083e40f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord GetExitCode</definition>
+        <argsstring>() const </argsstring>
+        <name>GetExitCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Threading.h" line="135"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d10/classHProcess_1a77301e5afbd40089c9015d247c226e97" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dd/d0e/Threading_8h_1a5e14e71e8f5d4107da75207e9f8ebca4" kindref="member">ProcessPriority</ref></type>
+        <definition>ProcessPriority GetPriority</definition>
+        <argsstring>() const </argsstring>
+        <name>GetPriority</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Threading.h" line="137"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d10/classHProcess_1aad427aea5f3a22fa06ba6c2cd8ac2d66" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetPriority</definition>
+        <argsstring>(ProcessPriority iPriority) const </argsstring>
+        <name>SetPriority</name>
+        <param>
+          <type><ref refid="dd/d0e/Threading_8h_1a5e14e71e8f5d4107da75207e9f8ebca4" kindref="member">ProcessPriority</ref></type>
+          <declname>iPriority</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Threading.h" line="138"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="dd/d10/classHProcess_1a1f4f25119a6a5d6a923c4ff426545517" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HProcess</definition>
+        <argsstring>(ProcessCreationFlags iFlags, GChar *strCmdLine, Void *pEnvironment, HThread *outMainThread, ProcessID *outProcessID, ThreadID *outMainThreadID)</argsstring>
+        <name>HProcess</name>
+        <param>
+          <type><ref refid="dd/d0e/Threading_8h_1a9fa374a399fe33c92525053a2989c4b7" kindref="member">ProcessCreationFlags</ref></type>
+          <declname>iFlags</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strCmdLine</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> *</type>
+          <declname>pEnvironment</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d2c/classHThread" kindref="compound">HThread</ref> *</type>
+          <declname>outMainThread</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d0e/Threading_8h_1aef936fc13b0af34de9209a1e2a15f3c7" kindref="member">ProcessID</ref> *</type>
+          <declname>outProcessID</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d0e/Threading_8h_1a70a52387c619a651ae9f89fd524b6187" kindref="member">ThreadID</ref> *</type>
+          <declname>outMainThreadID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Threading.h" line="144"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d10/classHProcess_1a28af29969117ddb8ecf7a14ed70e93b9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HProcess</definition>
+        <argsstring>(ProcessID iProcessID, ThreadingAccess iAccessFlags)</argsstring>
+        <name>HProcess</name>
+        <param>
+          <type><ref refid="dd/d0e/Threading_8h_1aef936fc13b0af34de9209a1e2a15f3c7" kindref="member">ProcessID</ref></type>
+          <declname>iProcessID</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d0e/Threading_8h_1a5d84810ba385bd8b3a5dd5eacf899a20" kindref="member">ThreadingAccess</ref></type>
+          <declname>iAccessFlags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Threading.h" line="145"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d10/classHProcess_1a7d011b061fadc6a636230aff655877a3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HProcess</definition>
+        <argsstring>(HANDLE hProcess)</argsstring>
+        <name>HProcess</name>
+        <param>
+          <type><ref refid="d5/dea/ForwardWin32_8h_1aa8c0374618b33785ccb02f74bcfebc46" kindref="member">HANDLE</ref></type>
+          <declname>hProcess</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Threading.h" line="146"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d10/classHProcess_1a209a6877313b0914716b672ca621f21e" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord _BuildThreadingAccess</definition>
+        <argsstring>(ThreadingAccess iAccessFlags) const </argsstring>
+        <name>_BuildThreadingAccess</name>
+        <param>
+          <type><ref refid="dd/d0e/Threading_8h_1a5d84810ba385bd8b3a5dd5eacf899a20" kindref="member">ThreadingAccess</ref></type>
+          <declname>iAccessFlags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Threading.h" line="150"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4837">
+        <label>HProcess</label>
+        <link refid="dd/d10/classHProcess"/>
+        <childnode refid="4838" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4838">
+        <label>HThreadingObject</label>
+        <link refid="da/d6b/classHThreadingObject"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4841">
+        <label>void *</label>
+      </node>
+      <node id="4839">
+        <label>HProcess</label>
+        <link refid="dd/d10/classHProcess"/>
+        <childnode refid="4840" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4840">
+        <label>HThreadingObject</label>
+        <link refid="da/d6b/classHThreadingObject"/>
+        <childnode refid="4841" relation="usage">
+          <edgelabel>m_hThreadingObject</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Threading.h" line="128" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/System/Threading.h" bodystart="127" bodyend="151"/>
+    <listofallmembers>
+      <member refid="dd/d10/classHProcess_1a209a6877313b0914716b672ca621f21e" prot="private" virt="non-virtual"><scope>HProcess</scope><name>_BuildThreadingAccess</name></member>
+      <member refid="da/d6b/classHThreadingObject_1a137ce1d72d9bb92ee94e12823de83ff8" prot="protected" virt="non-virtual"><scope>HProcess</scope><name>_BuildThreadingAccess_Common</name></member>
+      <member refid="da/d6b/classHThreadingObject_1a081397d9552f403c149ec899adc37486" prot="public" virt="non-virtual"><scope>HProcess</scope><name>Close</name></member>
+      <member refid="dd/d10/classHProcess_1a05da23a01ac0c3bb633beb493083e40f" prot="public" virt="non-virtual"><scope>HProcess</scope><name>GetExitCode</name></member>
+      <member refid="dd/d10/classHProcess_1aadc26b5285a9f67902f79301a8206b14" prot="public" virt="non-virtual"><scope>HProcess</scope><name>GetID</name></member>
+      <member refid="dd/d10/classHProcess_1a77301e5afbd40089c9015d247c226e97" prot="public" virt="non-virtual"><scope>HProcess</scope><name>GetPriority</name></member>
+      <member refid="dd/d10/classHProcess_1a1f4f25119a6a5d6a923c4ff426545517" prot="private" virt="non-virtual"><scope>HProcess</scope><name>HProcess</name></member>
+      <member refid="dd/d10/classHProcess_1a28af29969117ddb8ecf7a14ed70e93b9" prot="private" virt="non-virtual"><scope>HProcess</scope><name>HProcess</name></member>
+      <member refid="dd/d10/classHProcess_1a7d011b061fadc6a636230aff655877a3" prot="private" virt="non-virtual"><scope>HProcess</scope><name>HProcess</name></member>
+      <member refid="dd/d10/classHProcess_1a5b44c3ce039f01adfe25c2d6c29c7448" prot="private" virt="non-virtual"><scope>HProcess</scope><name>HThread</name></member>
+      <member refid="da/d6b/classHThreadingObject_1a2b66767a4af152b78a3f7b3b2ac1bca7" prot="protected" virt="non-virtual"><scope>HProcess</scope><name>HThreadingObject</name></member>
+      <member refid="da/d6b/classHThreadingObject_1afd2dcb4695f255aac1756a82c424d25e" prot="protected" virt="non-virtual"><scope>HProcess</scope><name>m_hThreadingObject</name></member>
+      <member refid="dd/d10/classHProcess_1aad427aea5f3a22fa06ba6c2cd8ac2d66" prot="public" virt="non-virtual"><scope>HProcess</scope><name>SetPriority</name></member>
+      <member refid="dd/d10/classHProcess_1af18a9ee98e70982bfe2975391d7221a5" prot="private" virt="non-virtual"><scope>HProcess</scope><name>System</name></member>
+      <member refid="dd/d10/classHProcess_1a9ba45314e6b4a283cb77444f4c733d2b" prot="public" virt="non-virtual"><scope>HProcess</scope><name>Terminate</name></member>
+      <member refid="dd/d10/classHProcess_1a08326e7276ed6a87d5941db6858da9a1" prot="public" virt="virtual"><scope>HProcess</scope><name>~HProcess</name></member>
+      <member refid="da/d6b/classHThreadingObject_1a8ee3fc30cfddcb2536028e7de60017e8" prot="public" virt="virtual"><scope>HProcess</scope><name>~HThreadingObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

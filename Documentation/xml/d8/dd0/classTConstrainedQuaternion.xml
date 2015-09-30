@@ -1,0 +1,499 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d8/dd0/classTConstrainedQuaternion" kind="class" prot="public">
+    <compoundname>TConstrainedQuaternion</compoundname>
+    <includes refid="d2/df1/ConstrainedQuaternion_8h" local="no">ConstrainedQuaternion.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename Real</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d8/dd0/classTConstrainedQuaternion_1a15588eea940c254c383433246cc901ac" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real ZeroTolerance</definition>
+        <argsstring></argsstring>
+        <name>ZeroTolerance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Quaternion/ConstrainedQuaternion.h" line="61" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Quaternion/ConstrainedQuaternion.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="d8/dd0/classTConstrainedQuaternion_1a861ab6a3627bfe53ae2453e2a5e1fca8" prot="private" static="yes" mutable="no">
+        <type>const Real</type>
+        <definition>const Real ZERO</definition>
+        <argsstring></argsstring>
+        <name>ZERO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Quaternion/ConstrainedQuaternion.h" line="99" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Quaternion/ConstrainedQuaternion.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/dd0/classTConstrainedQuaternion_1acac09fd02521e2a1297f6dde618fb5ca" prot="private" static="yes" mutable="no">
+        <type>const Real</type>
+        <definition>const Real ONE</definition>
+        <argsstring></argsstring>
+        <name>ONE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Quaternion/ConstrainedQuaternion.h" line="100" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Quaternion/ConstrainedQuaternion.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/dd0/classTConstrainedQuaternion_1a68c0d58de491c8a9c960a96d9b5ed52e" prot="private" static="yes" mutable="no">
+        <type>const Real</type>
+        <definition>const Real HALF</definition>
+        <argsstring></argsstring>
+        <name>HALF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Quaternion/ConstrainedQuaternion.h" line="101" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Quaternion/ConstrainedQuaternion.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d8/dd0/classTConstrainedQuaternion_1a0dcf7faea4d291453e8dfacf9077725f" prot="private" static="no" mutable="no">
+        <type><ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt;</type>
+        <definition>TQuaternion&lt;Real&gt; m_qOrientation</definition>
+        <argsstring></argsstring>
+        <name>m_qOrientation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Quaternion/ConstrainedQuaternion.h" line="103" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Quaternion/ConstrainedQuaternion.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d8/dd0/classTConstrainedQuaternion_1a333790d0e2f7834a83bfb4b9363660bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TConstrainedQuaternion</definition>
+        <argsstring>(const TQuaternion&lt; Real &gt; &amp;qOrientation, Real fZeroTolerance=(Real) SCALAR_ERROR)</argsstring>
+        <name>TConstrainedQuaternion</name>
+        <param>
+          <type>const <ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>qOrientation</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fZeroTolerance</declname>
+          <defval>(Real) <ref refid="d0/d10/Scalar_8h_1ab84e60710e7c3a93246b807ac524d38b" kindref="member">SCALAR_ERROR</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Quaternion/ConstrainedQuaternion.h" line="57"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/dd0/classTConstrainedQuaternion_1a6899af8f84133e76008d8b5bef928137" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~TConstrainedQuaternion</definition>
+        <argsstring>()</argsstring>
+        <name>~TConstrainedQuaternion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Quaternion/ConstrainedQuaternion.h" line="58"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/dd0/classTConstrainedQuaternion_1a71112061dfc87bd95669dea091ff8e29" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void ClosestX</definition>
+        <argsstring>(TQuaternion&lt; Real &gt; &amp;outClosest, const AngleConstraint &amp;constraintX) const </argsstring>
+        <name>ClosestX</name>
+        <param>
+          <type><ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>outClosest</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/d0f/structAngleConstraint" kindref="compound">AngleConstraint</ref> &amp;</type>
+          <declname>constraintX</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Quaternion/ConstrainedQuaternion.h" line="65"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/dd0/classTConstrainedQuaternion_1a45b7954001c97c39f26c585af1e9a9db" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void ClosestY</definition>
+        <argsstring>(TQuaternion&lt; Real &gt; &amp;outClosest, const AngleConstraint &amp;constraintY) const </argsstring>
+        <name>ClosestY</name>
+        <param>
+          <type><ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>outClosest</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/d0f/structAngleConstraint" kindref="compound">AngleConstraint</ref> &amp;</type>
+          <declname>constraintY</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Quaternion/ConstrainedQuaternion.h" line="66"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/dd0/classTConstrainedQuaternion_1ad45a4cd1877ac55bb1281ae4d627cf4a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void ClosestZ</definition>
+        <argsstring>(TQuaternion&lt; Real &gt; &amp;outClosest, const AngleConstraint &amp;constraintZ) const </argsstring>
+        <name>ClosestZ</name>
+        <param>
+          <type><ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>outClosest</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/d0f/structAngleConstraint" kindref="compound">AngleConstraint</ref> &amp;</type>
+          <declname>constraintZ</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Quaternion/ConstrainedQuaternion.h" line="67"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/dd0/classTConstrainedQuaternion_1a55e6485c3753727f575d18f96b65fb0d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void ClosestXY</definition>
+        <argsstring>(TQuaternion&lt; Real &gt; &amp;outClosest, const AngleConstraint &amp;constraintX, const AngleConstraint &amp;constraintY) const </argsstring>
+        <name>ClosestXY</name>
+        <param>
+          <type><ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>outClosest</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/d0f/structAngleConstraint" kindref="compound">AngleConstraint</ref> &amp;</type>
+          <declname>constraintX</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/d0f/structAngleConstraint" kindref="compound">AngleConstraint</ref> &amp;</type>
+          <declname>constraintY</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Quaternion/ConstrainedQuaternion.h" line="70"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/dd0/classTConstrainedQuaternion_1a70b06cf2356bb1547c9e510cbb9acb11" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void ClosestXZ</definition>
+        <argsstring>(TQuaternion&lt; Real &gt; &amp;outClosest, const AngleConstraint &amp;constraintX, const AngleConstraint &amp;constraintZ) const </argsstring>
+        <name>ClosestXZ</name>
+        <param>
+          <type><ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>outClosest</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/d0f/structAngleConstraint" kindref="compound">AngleConstraint</ref> &amp;</type>
+          <declname>constraintX</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/d0f/structAngleConstraint" kindref="compound">AngleConstraint</ref> &amp;</type>
+          <declname>constraintZ</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Quaternion/ConstrainedQuaternion.h" line="72"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/dd0/classTConstrainedQuaternion_1aea8d94543c7d4cf234354c669e0aad67" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void ClosestYX</definition>
+        <argsstring>(TQuaternion&lt; Real &gt; &amp;outClosest, const AngleConstraint &amp;constraintY, const AngleConstraint &amp;constraintX) const </argsstring>
+        <name>ClosestYX</name>
+        <param>
+          <type><ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>outClosest</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/d0f/structAngleConstraint" kindref="compound">AngleConstraint</ref> &amp;</type>
+          <declname>constraintY</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/d0f/structAngleConstraint" kindref="compound">AngleConstraint</ref> &amp;</type>
+          <declname>constraintX</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Quaternion/ConstrainedQuaternion.h" line="74"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/dd0/classTConstrainedQuaternion_1a5d7916cb7bb430f8853e57e74a629024" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void ClosestYZ</definition>
+        <argsstring>(TQuaternion&lt; Real &gt; &amp;outClosest, const AngleConstraint &amp;constraintY, const AngleConstraint &amp;constraintZ) const </argsstring>
+        <name>ClosestYZ</name>
+        <param>
+          <type><ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>outClosest</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/d0f/structAngleConstraint" kindref="compound">AngleConstraint</ref> &amp;</type>
+          <declname>constraintY</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/d0f/structAngleConstraint" kindref="compound">AngleConstraint</ref> &amp;</type>
+          <declname>constraintZ</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Quaternion/ConstrainedQuaternion.h" line="76"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/dd0/classTConstrainedQuaternion_1a8bea54dcc82abb614e2bb6ee1fe55ac7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void ClosestZX</definition>
+        <argsstring>(TQuaternion&lt; Real &gt; &amp;outClosest, const AngleConstraint &amp;constraintZ, const AngleConstraint &amp;constraintX) const </argsstring>
+        <name>ClosestZX</name>
+        <param>
+          <type><ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>outClosest</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/d0f/structAngleConstraint" kindref="compound">AngleConstraint</ref> &amp;</type>
+          <declname>constraintZ</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/d0f/structAngleConstraint" kindref="compound">AngleConstraint</ref> &amp;</type>
+          <declname>constraintX</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Quaternion/ConstrainedQuaternion.h" line="78"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/dd0/classTConstrainedQuaternion_1aa4a0bf9b8204e91d558448983df17036" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void ClosestZY</definition>
+        <argsstring>(TQuaternion&lt; Real &gt; &amp;outClosest, const AngleConstraint &amp;constraintZ, const AngleConstraint &amp;constraintY) const </argsstring>
+        <name>ClosestZY</name>
+        <param>
+          <type><ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>outClosest</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/d0f/structAngleConstraint" kindref="compound">AngleConstraint</ref> &amp;</type>
+          <declname>constraintZ</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/d0f/structAngleConstraint" kindref="compound">AngleConstraint</ref> &amp;</type>
+          <declname>constraintY</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Quaternion/ConstrainedQuaternion.h" line="80"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d8/dd0/classTConstrainedQuaternion_1a72f817b1cbc31f9d62746abe9f716435" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _SolveClosest</definition>
+        <argsstring>(TQuaternion&lt; Real &gt; &amp;outClosest, const TQuaternion&lt; Real &gt; &amp;qOrientation, Axis iAxis, const AngleConstraint &amp;constraintAxis) const </argsstring>
+        <name>_SolveClosest</name>
+        <param>
+          <type><ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>outClosest</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>qOrientation</declname>
+        </param>
+        <param>
+          <type><ref refid="dc/d1a/Matrix2_8h_1ae3996976d8ffb3e58d88f58227473f8e" kindref="member">Axis</ref></type>
+          <declname>iAxis</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/d0f/structAngleConstraint" kindref="compound">AngleConstraint</ref> &amp;</type>
+          <declname>constraintAxis</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Quaternion/ConstrainedQuaternion.h" line="88"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/dd0/classTConstrainedQuaternion_1a60559e3159c5e9959aa8c1c6586b6686" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _SolveClosestXY</definition>
+        <argsstring>(TQuaternion&lt; Real &gt; &amp;outClosest, const TQuaternion&lt; Real &gt; &amp;qOrientation, const AngleConstraint &amp;constraintX, const AngleConstraint &amp;constraintY) const </argsstring>
+        <name>_SolveClosestXY</name>
+        <param>
+          <type><ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>outClosest</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>qOrientation</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/d0f/structAngleConstraint" kindref="compound">AngleConstraint</ref> &amp;</type>
+          <declname>constraintX</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/d0f/structAngleConstraint" kindref="compound">AngleConstraint</ref> &amp;</type>
+          <declname>constraintY</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Quaternion/ConstrainedQuaternion.h" line="93"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/dd0/classTConstrainedQuaternion_1a255cf1ba779f8f74aab852f664c62ae7" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _SolveClosestZX</definition>
+        <argsstring>(TQuaternion&lt; Real &gt; &amp;outClosest, const TQuaternion&lt; Real &gt; &amp;qOrientation, const AngleConstraint &amp;constraintZ, const AngleConstraint &amp;constraintX) const </argsstring>
+        <name>_SolveClosestZX</name>
+        <param>
+          <type><ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>outClosest</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>qOrientation</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/d0f/structAngleConstraint" kindref="compound">AngleConstraint</ref> &amp;</type>
+          <declname>constraintZ</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/d0f/structAngleConstraint" kindref="compound">AngleConstraint</ref> &amp;</type>
+          <declname>constraintX</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Quaternion/ConstrainedQuaternion.h" line="95"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/dd0/classTConstrainedQuaternion_1a7178e15d35cf7f9372e70b0fd7437706" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _SolveClosestZY</definition>
+        <argsstring>(TQuaternion&lt; Real &gt; &amp;outClosest, const TQuaternion&lt; Real &gt; &amp;qOrientation, const AngleConstraint &amp;constraintZ, const AngleConstraint &amp;constraintY) const </argsstring>
+        <name>_SolveClosestZY</name>
+        <param>
+          <type><ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>outClosest</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>qOrientation</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/d0f/structAngleConstraint" kindref="compound">AngleConstraint</ref> &amp;</type>
+          <declname>constraintZ</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/d0f/structAngleConstraint" kindref="compound">AngleConstraint</ref> &amp;</type>
+          <declname>constraintY</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Quaternion/ConstrainedQuaternion.h" line="97"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="12311">
+        <label>TQuaternion&lt; Real &gt;</label>
+      </node>
+      <node id="12312">
+        <label>Real</label>
+      </node>
+      <node id="12310">
+        <label>TConstrainedQuaternion&lt; Real &gt;</label>
+        <link refid="d8/dd0/classTConstrainedQuaternion"/>
+        <childnode refid="12311" relation="usage">
+          <edgelabel>m_qOrientation</edgelabel>
+        </childnode>
+        <childnode refid="12312" relation="usage">
+          <edgelabel>ONE</edgelabel>
+          <edgelabel>HALF</edgelabel>
+          <edgelabel>ZeroTolerance</edgelabel>
+          <edgelabel>ZERO</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Quaternion/ConstrainedQuaternion.h" line="36" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Quaternion/ConstrainedQuaternion.h" bodystart="35" bodyend="104"/>
+    <listofallmembers>
+      <member refid="d8/dd0/classTConstrainedQuaternion_1a72f817b1cbc31f9d62746abe9f716435" prot="private" virt="non-virtual"><scope>TConstrainedQuaternion</scope><name>_SolveClosest</name></member>
+      <member refid="d8/dd0/classTConstrainedQuaternion_1a60559e3159c5e9959aa8c1c6586b6686" prot="private" virt="non-virtual"><scope>TConstrainedQuaternion</scope><name>_SolveClosestXY</name></member>
+      <member refid="d8/dd0/classTConstrainedQuaternion_1a255cf1ba779f8f74aab852f664c62ae7" prot="private" virt="non-virtual"><scope>TConstrainedQuaternion</scope><name>_SolveClosestZX</name></member>
+      <member refid="d8/dd0/classTConstrainedQuaternion_1a7178e15d35cf7f9372e70b0fd7437706" prot="private" virt="non-virtual"><scope>TConstrainedQuaternion</scope><name>_SolveClosestZY</name></member>
+      <member refid="d8/dd0/classTConstrainedQuaternion_1a71112061dfc87bd95669dea091ff8e29" prot="public" virt="non-virtual"><scope>TConstrainedQuaternion</scope><name>ClosestX</name></member>
+      <member refid="d8/dd0/classTConstrainedQuaternion_1a55e6485c3753727f575d18f96b65fb0d" prot="public" virt="non-virtual"><scope>TConstrainedQuaternion</scope><name>ClosestXY</name></member>
+      <member refid="d8/dd0/classTConstrainedQuaternion_1a70b06cf2356bb1547c9e510cbb9acb11" prot="public" virt="non-virtual"><scope>TConstrainedQuaternion</scope><name>ClosestXZ</name></member>
+      <member refid="d8/dd0/classTConstrainedQuaternion_1a45b7954001c97c39f26c585af1e9a9db" prot="public" virt="non-virtual"><scope>TConstrainedQuaternion</scope><name>ClosestY</name></member>
+      <member refid="d8/dd0/classTConstrainedQuaternion_1aea8d94543c7d4cf234354c669e0aad67" prot="public" virt="non-virtual"><scope>TConstrainedQuaternion</scope><name>ClosestYX</name></member>
+      <member refid="d8/dd0/classTConstrainedQuaternion_1a5d7916cb7bb430f8853e57e74a629024" prot="public" virt="non-virtual"><scope>TConstrainedQuaternion</scope><name>ClosestYZ</name></member>
+      <member refid="d8/dd0/classTConstrainedQuaternion_1ad45a4cd1877ac55bb1281ae4d627cf4a" prot="public" virt="non-virtual"><scope>TConstrainedQuaternion</scope><name>ClosestZ</name></member>
+      <member refid="d8/dd0/classTConstrainedQuaternion_1a8bea54dcc82abb614e2bb6ee1fe55ac7" prot="public" virt="non-virtual"><scope>TConstrainedQuaternion</scope><name>ClosestZX</name></member>
+      <member refid="d8/dd0/classTConstrainedQuaternion_1aa4a0bf9b8204e91d558448983df17036" prot="public" virt="non-virtual"><scope>TConstrainedQuaternion</scope><name>ClosestZY</name></member>
+      <member refid="d8/dd0/classTConstrainedQuaternion_1a68c0d58de491c8a9c960a96d9b5ed52e" prot="private" virt="non-virtual"><scope>TConstrainedQuaternion</scope><name>HALF</name></member>
+      <member refid="d8/dd0/classTConstrainedQuaternion_1a0dcf7faea4d291453e8dfacf9077725f" prot="private" virt="non-virtual"><scope>TConstrainedQuaternion</scope><name>m_qOrientation</name></member>
+      <member refid="d8/dd0/classTConstrainedQuaternion_1acac09fd02521e2a1297f6dde618fb5ca" prot="private" virt="non-virtual"><scope>TConstrainedQuaternion</scope><name>ONE</name></member>
+      <member refid="d8/dd0/classTConstrainedQuaternion_1a333790d0e2f7834a83bfb4b9363660bf" prot="public" virt="non-virtual"><scope>TConstrainedQuaternion</scope><name>TConstrainedQuaternion</name></member>
+      <member refid="d8/dd0/classTConstrainedQuaternion_1a861ab6a3627bfe53ae2453e2a5e1fca8" prot="private" virt="non-virtual"><scope>TConstrainedQuaternion</scope><name>ZERO</name></member>
+      <member refid="d8/dd0/classTConstrainedQuaternion_1a15588eea940c254c383433246cc901ac" prot="public" virt="non-virtual"><scope>TConstrainedQuaternion</scope><name>ZeroTolerance</name></member>
+      <member refid="d8/dd0/classTConstrainedQuaternion_1a6899af8f84133e76008d8b5bef928137" prot="public" virt="non-virtual"><scope>TConstrainedQuaternion</scope><name>~TConstrainedQuaternion</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

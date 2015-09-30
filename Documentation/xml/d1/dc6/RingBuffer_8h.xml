@@ -1,0 +1,581 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d1/dc6/RingBuffer_8h" kind="file">
+    <compoundname>RingBuffer.h</compoundname>
+    <includes refid="d5/db1/Datastruct_8h" local="yes">../Datastruct.h</includes>
+    <includes local="yes">RingBuffer.inl</includes>
+    <includedby refid="d4/dd6/GUIEventProcessor_8h" local="yes">GUIEventProcessor.h</includedby>
+    <incdepgraph>
+      <node id="34996">
+        <label>SSE.inl</label>
+      </node>
+      <node id="35000">
+        <label>Threading.h</label>
+        <link refid="dd/d0e/Threading_8h"/>
+        <childnode refid="34978" relation="include">
+        </childnode>
+        <childnode refid="34980" relation="include">
+        </childnode>
+        <childnode refid="35001" relation="include">
+        </childnode>
+      </node>
+      <node id="35012">
+        <label>Allocators/BreakAllocator.h</label>
+        <link refid="d4/dac/BreakAllocator_8h"/>
+        <childnode refid="35007" relation="include">
+        </childnode>
+        <childnode refid="35013" relation="include">
+        </childnode>
+      </node>
+      <node id="34975">
+        <label>../Memory/MemoryManager.h</label>
+        <link refid="d7/d7b/MemoryManager_8h"/>
+        <childnode refid="34976" relation="include">
+        </childnode>
+        <childnode refid="34986" relation="include">
+        </childnode>
+        <childnode refid="34992" relation="include">
+        </childnode>
+        <childnode refid="35006" relation="include">
+        </childnode>
+        <childnode refid="35010" relation="include">
+        </childnode>
+        <childnode refid="35012" relation="include">
+        </childnode>
+        <childnode refid="35014" relation="include">
+        </childnode>
+        <childnode refid="35016" relation="include">
+        </childnode>
+      </node>
+      <node id="34993">
+        <label>../../ThirdParty/System/System.h</label>
+        <link refid="db/d39/System_8h"/>
+        <childnode refid="34978" relation="include">
+        </childnode>
+        <childnode refid="34980" relation="include">
+        </childnode>
+        <childnode refid="34994" relation="include">
+        </childnode>
+        <childnode refid="34977" relation="include">
+        </childnode>
+        <childnode refid="34998" relation="include">
+        </childnode>
+        <childnode refid="35000" relation="include">
+        </childnode>
+        <childnode refid="35002" relation="include">
+        </childnode>
+        <childnode refid="35004" relation="include">
+        </childnode>
+      </node>
+      <node id="35001">
+        <label>Threading.inl</label>
+      </node>
+      <node id="35018">
+        <label>RingBuffer.inl</label>
+      </node>
+      <node id="35013">
+        <label>BreakAllocator.inl</label>
+      </node>
+      <node id="34974">
+        <label>../Datastruct.h</label>
+        <link refid="d5/db1/Datastruct_8h"/>
+        <childnode refid="34975" relation="include">
+        </childnode>
+        <childnode refid="35017" relation="include">
+        </childnode>
+      </node>
+      <node id="35017">
+        <label>Datastruct.inl</label>
+      </node>
+      <node id="34980">
+        <label>Platform.h</label>
+        <link refid="d9/dd0/Platform_8h"/>
+        <childnode refid="34981" relation="include">
+        </childnode>
+      </node>
+      <node id="35010">
+        <label>Allocators/PoolAllocator.h</label>
+        <link refid="d3/d03/PoolAllocator_8h"/>
+        <childnode refid="35007" relation="include">
+        </childnode>
+        <childnode refid="35011" relation="include">
+        </childnode>
+      </node>
+      <node id="34983">
+        <label>FPU.inl</label>
+      </node>
+      <node id="34985">
+        <label>Hashing.inl</label>
+      </node>
+      <node id="34991">
+        <label>MathFunction.inl</label>
+      </node>
+      <node id="34987">
+        <label>../Formats/Scalar.h</label>
+        <link refid="d0/d10/Scalar_8h"/>
+        <childnode refid="34980" relation="include">
+        </childnode>
+        <childnode refid="34988" relation="include">
+        </childnode>
+      </node>
+      <node id="35008">
+        <label>MemoryAllocator.inl</label>
+      </node>
+      <node id="34976">
+        <label>../Math/Hash/Hashing.h</label>
+        <link refid="d0/d4e/Hashing_8h"/>
+        <childnode refid="34977" relation="include">
+        </childnode>
+        <childnode refid="34985" relation="include">
+        </childnode>
+      </node>
+      <node id="35007">
+        <label>MemoryAllocator.h</label>
+        <link refid="d2/d75/MemoryAllocator_8h"/>
+        <childnode refid="34992" relation="include">
+        </childnode>
+        <childnode refid="35008" relation="include">
+        </childnode>
+      </node>
+      <node id="34999">
+        <label>File.inl</label>
+      </node>
+      <node id="34994">
+        <label>Hardware/Hardware.h</label>
+        <link refid="da/dec/Hardware_8h"/>
+        <childnode refid="34980" relation="include">
+        </childnode>
+        <childnode refid="34982" relation="include">
+        </childnode>
+        <childnode refid="34995" relation="include">
+        </childnode>
+        <childnode refid="34997" relation="include">
+        </childnode>
+      </node>
+      <node id="35006">
+        <label>Allocators/StackAllocator.h</label>
+        <link refid="db/d84/StackAllocator_8h"/>
+        <childnode refid="35007" relation="include">
+        </childnode>
+        <childnode refid="35009" relation="include">
+        </childnode>
+      </node>
+      <node id="34997">
+        <label>Hardware.inl</label>
+      </node>
+      <node id="34973">
+        <label>RingBuffer.h</label>
+        <link refid="RingBuffer.h"/>
+        <childnode refid="34974" relation="include">
+        </childnode>
+        <childnode refid="35018" relation="include">
+        </childnode>
+      </node>
+      <node id="35011">
+        <label>PoolAllocator.inl</label>
+      </node>
+      <node id="34988">
+        <label>Scalar.inl</label>
+      </node>
+      <node id="34984">
+        <label>String.inl</label>
+      </node>
+      <node id="34982">
+        <label>Hardware/FPU.h</label>
+        <link refid="dd/d2f/FPU_8h"/>
+        <childnode refid="34980" relation="include">
+        </childnode>
+        <childnode refid="34983" relation="include">
+        </childnode>
+      </node>
+      <node id="35014">
+        <label>Allocators/HeapAllocator.h</label>
+        <link refid="d3/d89/HeapAllocator_8h"/>
+        <childnode refid="35007" relation="include">
+        </childnode>
+        <childnode refid="35015" relation="include">
+        </childnode>
+      </node>
+      <node id="34977">
+        <label>../../../ThirdParty/System/String.h</label>
+        <link refid="d9/dba/String_8h"/>
+        <childnode refid="34978" relation="include">
+        </childnode>
+        <childnode refid="34980" relation="include">
+        </childnode>
+        <childnode refid="34982" relation="include">
+        </childnode>
+        <childnode refid="34984" relation="include">
+        </childnode>
+      </node>
+      <node id="34981">
+        <label>Platform.inl</label>
+      </node>
+      <node id="35016">
+        <label>MemoryManager.inl</label>
+      </node>
+      <node id="35004">
+        <label>System.inl</label>
+      </node>
+      <node id="35002">
+        <label>Networking.h</label>
+        <link refid="df/dfb/Networking_8h"/>
+        <childnode refid="34978" relation="include">
+        </childnode>
+        <childnode refid="34980" relation="include">
+        </childnode>
+        <childnode refid="35003" relation="include">
+        </childnode>
+      </node>
+      <node id="34998">
+        <label>File.h</label>
+        <link refid="d6/db7/File_8h"/>
+        <childnode refid="34978" relation="include">
+        </childnode>
+        <childnode refid="34980" relation="include">
+        </childnode>
+        <childnode refid="34977" relation="include">
+        </childnode>
+        <childnode refid="34999" relation="include">
+        </childnode>
+      </node>
+      <node id="35009">
+        <label>StackAllocator.inl</label>
+      </node>
+      <node id="34979">
+        <label>ForwardWin32.inl</label>
+      </node>
+      <node id="34995">
+        <label>SSE.h</label>
+        <link refid="d0/d02/SSE_8h"/>
+        <childnode refid="34980" relation="include">
+        </childnode>
+        <childnode refid="34996" relation="include">
+        </childnode>
+      </node>
+      <node id="35003">
+        <label>Networking.inl</label>
+      </node>
+      <node id="34990">
+        <label>Fixed.inl</label>
+      </node>
+      <node id="34986">
+        <label>../Math/Functions/MathFunction.h</label>
+        <link refid="d1/d98/MathFunction_8h"/>
+        <childnode refid="34982" relation="include">
+        </childnode>
+        <childnode refid="34987" relation="include">
+        </childnode>
+        <childnode refid="34989" relation="include">
+        </childnode>
+        <childnode refid="34991" relation="include">
+        </childnode>
+      </node>
+      <node id="34989">
+        <label>../Formats/Fixed.h</label>
+        <link refid="d4/d76/Fixed_8h"/>
+        <childnode refid="34987" relation="include">
+        </childnode>
+        <childnode refid="34990" relation="include">
+        </childnode>
+      </node>
+      <node id="35005">
+        <label>ErrorManager.inl</label>
+      </node>
+      <node id="35015">
+        <label>HeapAllocator.inl</label>
+      </node>
+      <node id="34978">
+        <label>../Forwards/ForwardWin32.h</label>
+        <link refid="d5/dea/ForwardWin32_8h"/>
+        <childnode refid="34979" relation="include">
+        </childnode>
+      </node>
+      <node id="34992">
+        <label>../Error/ErrorManager.h</label>
+        <link refid="d1/db6/ErrorManager_8h"/>
+        <childnode refid="34993" relation="include">
+        </childnode>
+        <childnode refid="35005" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="35035">
+        <label>GUISection.h</label>
+        <link refid="d3/d84/GUISection_8h"/>
+        <childnode refid="35032" relation="include">
+        </childnode>
+        <childnode refid="35022" relation="include">
+        </childnode>
+        <childnode refid="35036" relation="include">
+        </childnode>
+      </node>
+      <node id="35028">
+        <label>MyDungeon.h</label>
+        <link refid="d0/de7/MyDungeon_8h"/>
+        <childnode refid="35026" relation="include">
+        </childnode>
+      </node>
+      <node id="35031">
+        <label>GUIWindow.h</label>
+        <link refid="d4/dd5/GUIWindow_8h"/>
+        <childnode refid="35022" relation="include">
+        </childnode>
+        <childnode refid="35032" relation="include">
+        </childnode>
+      </node>
+      <node id="35021">
+        <label>GUIWidget.h</label>
+        <link refid="da/daa/GUIWidget_8h"/>
+        <childnode refid="35022" relation="include">
+        </childnode>
+        <childnode refid="35031" relation="include">
+        </childnode>
+        <childnode refid="35033" relation="include">
+        </childnode>
+        <childnode refid="35034" relation="include">
+        </childnode>
+        <childnode refid="35035" relation="include">
+        </childnode>
+        <childnode refid="35037" relation="include">
+        </childnode>
+        <childnode refid="35038" relation="include">
+        </childnode>
+        <childnode refid="35039" relation="include">
+        </childnode>
+        <childnode refid="35040" relation="include">
+        </childnode>
+        <childnode refid="35041" relation="include">
+        </childnode>
+        <childnode refid="35042" relation="include">
+        </childnode>
+        <childnode refid="35043" relation="include">
+        </childnode>
+        <childnode refid="35044" relation="include">
+        </childnode>
+        <childnode refid="35045" relation="include">
+        </childnode>
+        <childnode refid="35046" relation="include">
+        </childnode>
+      </node>
+      <node id="35042">
+        <label>GUIRadioButton.h</label>
+        <link refid="d9/da2/GUIRadioButton_8h"/>
+        <childnode refid="35022" relation="include">
+        </childnode>
+      </node>
+      <node id="35026">
+        <label>Main.h</label>
+        <link refid="da/d94/Main_8h"/>
+      </node>
+      <node id="35033">
+        <label>GUIBorders.h</label>
+        <link refid="d1/d55/GUIBorders_8h"/>
+        <childnode refid="35031" relation="include">
+        </childnode>
+      </node>
+      <node id="35034">
+        <label>GUITitleBar.h</label>
+        <link refid="dd/d52/GUITitleBar_8h"/>
+        <childnode refid="35031" relation="include">
+        </childnode>
+      </node>
+      <node id="35047">
+        <label>GUIBackboard.h</label>
+        <link refid="d3/d36/GUIBackboard_8h"/>
+        <childnode refid="35022" relation="include">
+        </childnode>
+      </node>
+      <node id="35030">
+        <label>CommandShowTree.h</label>
+        <link refid="d8/d84/CommandShowTree_8h"/>
+        <childnode refid="35029" relation="include">
+        </childnode>
+      </node>
+      <node id="35027">
+        <label>MyLandscape.h</label>
+        <link refid="d7/d2b/MyLandscape_8h"/>
+        <childnode refid="35026" relation="include">
+        </childnode>
+      </node>
+      <node id="35049">
+        <label>GUIMenu.h</label>
+        <link refid="d1/d51/GUIMenu_8h"/>
+        <childnode refid="35022" relation="include">
+        </childnode>
+      </node>
+      <node id="35024">
+        <label>ApplicationManager.h</label>
+        <link refid="d2/d9d/ApplicationManager_8h"/>
+        <childnode refid="35025" relation="include">
+        </childnode>
+        <childnode refid="35026" relation="include">
+        </childnode>
+        <childnode refid="35027" relation="include">
+        </childnode>
+        <childnode refid="35028" relation="include">
+        </childnode>
+      </node>
+      <node id="35036">
+        <label>GUISwitchTabs.h</label>
+        <link refid="da/d04/GUISwitchTabs_8h"/>
+        <childnode refid="35022" relation="include">
+        </childnode>
+      </node>
+      <node id="35050">
+        <label>GUISkin.h</label>
+        <link refid="d4/deb/GUISkin_8h"/>
+        <childnode refid="35022" relation="include">
+        </childnode>
+        <childnode refid="35049" relation="include">
+        </childnode>
+        <childnode refid="35045" relation="include">
+        </childnode>
+        <childnode refid="35046" relation="include">
+        </childnode>
+      </node>
+      <node id="35032">
+        <label>GUIMessageBox.h</label>
+        <link refid="dc/d89/GUIMessageBox_8h"/>
+        <childnode refid="35022" relation="include">
+        </childnode>
+      </node>
+      <node id="35040">
+        <label>GUIContainer.h</label>
+        <link refid="dc/ddb/GUIContainer_8h"/>
+        <childnode refid="35022" relation="include">
+        </childnode>
+      </node>
+      <node id="35023">
+        <label>WindowApplication.h</label>
+        <link refid="d4/d72/WindowApplication_8h"/>
+        <childnode refid="35024" relation="include">
+        </childnode>
+      </node>
+      <node id="35019">
+        <label>RingBuffer.h</label>
+        <link refid="RingBuffer.h"/>
+        <childnode refid="35020" relation="include">
+        </childnode>
+      </node>
+      <node id="35046">
+        <label>GUITree.h</label>
+        <link refid="d1/d0d/GUITree_8h"/>
+        <childnode refid="35022" relation="include">
+        </childnode>
+      </node>
+      <node id="35048">
+        <label>GUIOverlay.h</label>
+        <link refid="da/db5/GUIOverlay_8h"/>
+        <childnode refid="35022" relation="include">
+        </childnode>
+        <childnode refid="35049" relation="include">
+        </childnode>
+      </node>
+      <node id="35038">
+        <label>GUIText.h</label>
+        <link refid="dc/d97/GUIText_8h"/>
+        <childnode refid="35032" relation="include">
+        </childnode>
+        <childnode refid="35022" relation="include">
+        </childnode>
+      </node>
+      <node id="35025">
+        <label>Entities.h</label>
+        <link refid="d7/d5d/Entities_8h"/>
+        <childnode refid="35026" relation="include">
+        </childnode>
+      </node>
+      <node id="35045">
+        <label>GUIList.h</label>
+        <link refid="d3/dae/GUIList_8h"/>
+        <childnode refid="35022" relation="include">
+        </childnode>
+      </node>
+      <node id="35029">
+        <label>ConsoleManager.h</label>
+        <link refid="d3/d63/ConsoleManager_8h"/>
+        <childnode refid="35023" relation="include">
+        </childnode>
+      </node>
+      <node id="35020">
+        <label>GUIEventProcessor.h</label>
+        <link refid="d4/dd6/GUIEventProcessor_8h"/>
+        <childnode refid="35021" relation="include">
+        </childnode>
+        <childnode refid="35047" relation="include">
+        </childnode>
+        <childnode refid="35048" relation="include">
+        </childnode>
+        <childnode refid="35050" relation="include">
+        </childnode>
+      </node>
+      <node id="35022">
+        <label>GUIManager.h</label>
+        <link refid="d6/db3/GUIManager_8h"/>
+        <childnode refid="35023" relation="include">
+        </childnode>
+        <childnode refid="35029" relation="include">
+        </childnode>
+        <childnode refid="35030" relation="include">
+        </childnode>
+      </node>
+      <node id="35044">
+        <label>GUITextLog.h</label>
+        <link refid="d1/ddc/GUITextLog_8h"/>
+        <childnode refid="35022" relation="include">
+        </childnode>
+      </node>
+      <node id="35037">
+        <label>GUILabel.h</label>
+        <link refid="d0/de3/GUILabel_8h"/>
+        <childnode refid="35032" relation="include">
+        </childnode>
+        <childnode refid="35022" relation="include">
+        </childnode>
+      </node>
+      <node id="35041">
+        <label>GUICheckBox.h</label>
+        <link refid="d4/df2/GUICheckBox_8h"/>
+        <childnode refid="35022" relation="include">
+        </childnode>
+      </node>
+      <node id="35039">
+        <label>GUIButton.h</label>
+        <link refid="d3/df9/GUIButton_8h"/>
+        <childnode refid="35032" relation="include">
+        </childnode>
+        <childnode refid="35022" relation="include">
+        </childnode>
+        <childnode refid="35036" relation="include">
+        </childnode>
+      </node>
+      <node id="35043">
+        <label>GUITextInput.h</label>
+        <link refid="dd/d0b/GUITextInput_8h"/>
+        <childnode refid="35022" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d8/d2d/classRingBuffer" prot="public">RingBuffer</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="d1/dc6/RingBuffer_8h_1a006928aac66bfc88e5c5b4f7b30f6155" prot="public" static="no">
+        <name>RINGBUFFER_DEFAULT_SIZE</name>
+        <initializer>256</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Array/RingBuffer.h" line="32" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Array/RingBuffer.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Array/RingBuffer.h"/>
+  </compounddef>
+</doxygen>

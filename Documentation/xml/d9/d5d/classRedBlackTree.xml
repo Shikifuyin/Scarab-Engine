@@ -1,0 +1,625 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d9/d5d/classRedBlackTree" kind="class" prot="public">
+    <compoundname>RedBlackTree</compoundname>
+    <basecompoundref refid="dc/d51/classDatastruct" prot="public" virt="non-virtual">Datastruct</basecompoundref>
+    <includes refid="d6/dff/RedBlackTree_8h" local="no">RedBlackTree.h</includes>
+    <innerclass refid="d0/de3/classRedBlackTree_1_1Iterator" prot="public">RedBlackTree::Iterator</innerclass>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="d9/d5d/classRedBlackTree_1aa0e36037535c03dc0e22cbc1d96ea595" prot="public" static="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref>(*</type>
+        <definition>typedef Int(* Comparator)(const T &amp;rLeft, const T &amp;rRight, Void *pUserData)</definition>
+        <argsstring>)(const T &amp;rLeft, const T &amp;rRight, Void *pUserData)</argsstring>
+        <name>Comparator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/RedBlackTree.h" line="66" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/RedBlackTree.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d9/d5d/classRedBlackTree_1a27d1e78c521dfa3bb17788c5ad7c8792" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/d5d/classRedBlackTree_1aa0e36037535c03dc0e22cbc1d96ea595" kindref="member">Comparator</ref></type>
+        <definition>Comparator m_pfCompare</definition>
+        <argsstring></argsstring>
+        <name>m_pfCompare</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/RedBlackTree.h" line="205" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/RedBlackTree.h" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d5d/classRedBlackTree_1a91f0e9a4012edb773b7a59705e4e90a0" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> *</type>
+        <definition>Void* m_pUserData</definition>
+        <argsstring></argsstring>
+        <name>m_pUserData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/RedBlackTree.h" line="206" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/RedBlackTree.h" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d5d/classRedBlackTree_1a23a17f6bf3b4f3c796e3ca5429557a43" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iNodeCount</definition>
+        <argsstring></argsstring>
+        <name>m_iNodeCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/RedBlackTree.h" line="208" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/RedBlackTree.h" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d5d/classRedBlackTree_1accd43d1fd7c403406d3956a726337347" prot="private" static="no" mutable="no">
+        <type><ref refid="da/d9d/structRedBlackNode" kindref="compound">RedBlackNode</ref> *</type>
+        <definition>RedBlackNode* m_pRoot</definition>
+        <argsstring></argsstring>
+        <name>m_pRoot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/RedBlackTree.h" line="209" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/RedBlackTree.h" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d5d/classRedBlackTree_1a3c97c51fbb3109f67c78ceb58d10b78b" prot="private" static="no" mutable="no">
+        <type><ref refid="da/d9d/structRedBlackNode" kindref="compound">RedBlackNode</ref> *</type>
+        <definition>RedBlackNode* m_pHead</definition>
+        <argsstring></argsstring>
+        <name>m_pHead</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/RedBlackTree.h" line="211" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/RedBlackTree.h" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d5d/classRedBlackTree_1acaaec64493e4679cd35596e86d93b04c" prot="private" static="no" mutable="no">
+        <type><ref refid="da/d9d/structRedBlackNode" kindref="compound">RedBlackNode</ref> *</type>
+        <definition>RedBlackNode * m_pEnd</definition>
+        <argsstring></argsstring>
+        <name>m_pEnd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/RedBlackTree.h" line="211" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/RedBlackTree.h" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="d9/d5d/classRedBlackTree_1a3a16bc0803f633c09110bc29c76158f0" prot="private" static="yes" mutable="no">
+        <type><ref refid="da/d9d/structRedBlackNode" kindref="compound">RedBlackNode</ref></type>
+        <definition>RedBlackNode sm_SentinelNode</definition>
+        <argsstring></argsstring>
+        <name>sm_SentinelNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/RedBlackTree.h" line="213" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/RedBlackTree.h" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d5d/classRedBlackTree_1aed9eadf9a896f261fe1480a5c7aefe86" prot="private" static="yes" mutable="no">
+        <type><ref refid="da/d9d/structRedBlackNode" kindref="compound">RedBlackNode</ref> *</type>
+        <definition>RedBlackNode* RBTREE_LEAF</definition>
+        <argsstring></argsstring>
+        <name>RBTREE_LEAF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/RedBlackTree.h" line="214" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/RedBlackTree.h" bodystart="214" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d9/d5d/classRedBlackTree_1af0cb91dbb91af031f85263e6928415ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RedBlackTree</definition>
+        <argsstring>()</argsstring>
+        <name>RedBlackTree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/RedBlackTree.h" line="151"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d5d/classRedBlackTree_1a32f7076fdc2725b9cb9a3934a695838c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~RedBlackTree</definition>
+        <argsstring>()</argsstring>
+        <name>~RedBlackTree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/RedBlackTree.h" line="152"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d5d/classRedBlackTree_1af0882680fadfbb5788e66f0107535ee2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetComparator</definition>
+        <argsstring>(Comparator pfCompare, Void *pUserData=NULL)</argsstring>
+        <name>SetComparator</name>
+        <param>
+          <type><ref refid="d9/d5d/classRedBlackTree_1aa0e36037535c03dc0e22cbc1d96ea595" kindref="member">Comparator</ref></type>
+          <declname>pfCompare</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> *</type>
+          <declname>pUserData</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/RedBlackTree.h" line="155"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d5d/classRedBlackTree_1aab77352722e193be864ad3e317f0a967" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void Create</definition>
+        <argsstring>()</argsstring>
+        <name>Create</name>
+        <reimplements refid="dc/d51/classDatastruct_1a0609a196f6f3d0c6b77f63eb850c0ac7">Create</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/RedBlackTree.h" line="158"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d5d/classRedBlackTree_1a04b98e1741147ccd8731588392091ac0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void Destroy</definition>
+        <argsstring>()</argsstring>
+        <name>Destroy</name>
+        <reimplements refid="dc/d51/classDatastruct_1a5f87413a244467d525a1e593ff2c1c27">Destroy</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/RedBlackTree.h" line="159"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d5d/classRedBlackTree_1abe6db4496cfdd90f917f4ca76d4bdcb1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>virtual UInt MemorySize</definition>
+        <argsstring>() const </argsstring>
+        <name>MemorySize</name>
+        <reimplements refid="dc/d51/classDatastruct_1a9797d1e194be5ac1f59da06f4017ab52">MemorySize</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/RedBlackTree.h" line="161"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d5d/classRedBlackTree_1a0956cac53fbbd2baead454e29106a8cd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>virtual UInt Count</definition>
+        <argsstring>() const </argsstring>
+        <name>Count</name>
+        <reimplements refid="dc/d51/classDatastruct_1a64d0429c6ea513aff9aed72a84ac5e07">Count</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/RedBlackTree.h" line="162"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d5d/classRedBlackTree_1aa31f188be923c718868036f9486390ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void Clear</definition>
+        <argsstring>()</argsstring>
+        <name>Clear</name>
+        <reimplements refid="dc/d51/classDatastruct_1a12a20256ada86a94610094792cbc6e2b">Clear</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/RedBlackTree.h" line="164"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d5d/classRedBlackTree_1a20dc36ef2b63ac619a86ba91041952b5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool Search</definition>
+        <argsstring>(const T &amp;rItem, Iterator *outItem=NULL) const </argsstring>
+        <name>Search</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>rItem</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/de3/classRedBlackTree_1_1Iterator" kindref="compound">Iterator</ref> *</type>
+          <declname>outItem</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/RedBlackTree.h" line="170"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d5d/classRedBlackTree_1a01cbdaf4a323ee39ab80499cab1c8732" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool Insert</definition>
+        <argsstring>(const T &amp;rItem, Iterator *outItem=NULL)</argsstring>
+        <name>Insert</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>rItem</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/de3/classRedBlackTree_1_1Iterator" kindref="compound">Iterator</ref> *</type>
+          <declname>outItem</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/RedBlackTree.h" line="175"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d5d/classRedBlackTree_1a17d4f4ea41cf27e010faeb8dfe347fad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool Remove</definition>
+        <argsstring>(const T &amp;rItem, T *outItem=NULL)</argsstring>
+        <name>Remove</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>rItem</declname>
+        </param>
+        <param>
+          <type>T *</type>
+          <declname>outItem</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/RedBlackTree.h" line="180"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d5d/classRedBlackTree_1ab893ae3f0a02bb26ea0120e6c7d09a2b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d0/de3/classRedBlackTree_1_1Iterator" kindref="compound">Iterator</ref></type>
+        <definition>Iterator Begin</definition>
+        <argsstring>() const </argsstring>
+        <name>Begin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/RedBlackTree.h" line="183"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d5d/classRedBlackTree_1ae0f83c629acc7673b972d04d32c4b23d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d0/de3/classRedBlackTree_1_1Iterator" kindref="compound">Iterator</ref></type>
+        <definition>Iterator End</definition>
+        <argsstring>() const </argsstring>
+        <name>End</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/RedBlackTree.h" line="184"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d9/d5d/classRedBlackTree_1a58ebef2408a362f9c4f91911a11c4c1b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _DeleteAll</definition>
+        <argsstring>(RedBlackNode *pNode)</argsstring>
+        <name>_DeleteAll</name>
+        <param>
+          <type><ref refid="da/d9d/structRedBlackNode" kindref="compound">RedBlackNode</ref> *</type>
+          <declname>pNode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/RedBlackTree.h" line="188"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d5d/classRedBlackTree_1a3200492d393113fdcbc4a12e315b3590" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _RotateOnce</definition>
+        <argsstring>(RedBlackNode *pNode, RBTreeChild rotDir)</argsstring>
+        <name>_RotateOnce</name>
+        <param>
+          <type><ref refid="da/d9d/structRedBlackNode" kindref="compound">RedBlackNode</ref> *</type>
+          <declname>pNode</declname>
+        </param>
+        <param>
+          <type><ref refid="d6/dff/RedBlackTree_8h_1aed1e8300559ef582a51d4ce5ea65d635" kindref="member">RBTreeChild</ref></type>
+          <declname>rotDir</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/RedBlackTree.h" line="189"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d5d/classRedBlackTree_1a0121d1f62f3897fd5dd9b9efd79b5b2a" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool _Insert_Search</definition>
+        <argsstring>(RedBlackNode **outParentNode, RBTreeChild *outLeaf, const T &amp;rItem) const </argsstring>
+        <name>_Insert_Search</name>
+        <param>
+          <type><ref refid="da/d9d/structRedBlackNode" kindref="compound">RedBlackNode</ref> **</type>
+          <declname>outParentNode</declname>
+        </param>
+        <param>
+          <type><ref refid="d6/dff/RedBlackTree_8h_1aed1e8300559ef582a51d4ce5ea65d635" kindref="member">RBTreeChild</ref> *</type>
+          <declname>outLeaf</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>rItem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/RedBlackTree.h" line="192"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d5d/classRedBlackTree_1a4fc12eb8bb27ce47710588f8114a5196" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _Insert_Rebalance</definition>
+        <argsstring>(RedBlackNode *pNode)</argsstring>
+        <name>_Insert_Rebalance</name>
+        <param>
+          <type><ref refid="da/d9d/structRedBlackNode" kindref="compound">RedBlackNode</ref> *</type>
+          <declname>pNode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/RedBlackTree.h" line="193"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d5d/classRedBlackTree_1af928a2766575c4267aaeeb93fb103841" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool _Remove_Search</definition>
+        <argsstring>(RedBlackNode **outNode, RBTreeChild *outNodeDir, const T &amp;rItem) const </argsstring>
+        <name>_Remove_Search</name>
+        <param>
+          <type><ref refid="da/d9d/structRedBlackNode" kindref="compound">RedBlackNode</ref> **</type>
+          <declname>outNode</declname>
+        </param>
+        <param>
+          <type><ref refid="d6/dff/RedBlackTree_8h_1aed1e8300559ef582a51d4ce5ea65d635" kindref="member">RBTreeChild</ref> *</type>
+          <declname>outNodeDir</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>rItem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/RedBlackTree.h" line="196"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d5d/classRedBlackTree_1a0bbf9905365147f3046a592744463737" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _Remove_Swap</definition>
+        <argsstring>(RedBlackNode **ppNode, RBTreeChild iNodeDir)</argsstring>
+        <name>_Remove_Swap</name>
+        <param>
+          <type><ref refid="da/d9d/structRedBlackNode" kindref="compound">RedBlackNode</ref> **</type>
+          <declname>ppNode</declname>
+        </param>
+        <param>
+          <type><ref refid="d6/dff/RedBlackTree_8h_1aed1e8300559ef582a51d4ce5ea65d635" kindref="member">RBTreeChild</ref></type>
+          <declname>iNodeDir</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/RedBlackTree.h" line="197"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d5d/classRedBlackTree_1a5e60171d5ecde8293dc4f9626bf32533" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _Remove_Rebalance</definition>
+        <argsstring>(RedBlackNode *pParent, RBTreeChild iNodeDir)</argsstring>
+        <name>_Remove_Rebalance</name>
+        <param>
+          <type><ref refid="da/d9d/structRedBlackNode" kindref="compound">RedBlackNode</ref> *</type>
+          <declname>pParent</declname>
+        </param>
+        <param>
+          <type><ref refid="d6/dff/RedBlackTree_8h_1aed1e8300559ef582a51d4ce5ea65d635" kindref="member">RBTreeChild</ref></type>
+          <declname>iNodeDir</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/RedBlackTree.h" line="198"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="10309">
+        <label>RedBlackTree&lt; T &gt;</label>
+        <link refid="d9/d5d/classRedBlackTree"/>
+        <childnode refid="10310" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10310">
+        <label>Datastruct</label>
+        <link refid="dc/d51/classDatastruct"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="10318">
+        <label>T</label>
+      </node>
+      <node id="10317">
+        <label>RBTreeColor</label>
+      </node>
+      <node id="10315">
+        <label>RedBlackNode&lt; T &gt;</label>
+        <link refid="da/d9d/structRedBlackNode"/>
+        <childnode refid="10316" relation="usage">
+          <edgelabel>pPrev</edgelabel>
+          <edgelabel>pNext</edgelabel>
+          <edgelabel>pParent</edgelabel>
+          <edgelabel>pChild</edgelabel>
+        </childnode>
+        <childnode refid="10317" relation="usage">
+          <edgelabel>iColor</edgelabel>
+        </childnode>
+        <childnode refid="10318" relation="usage">
+          <edgelabel>Item</edgelabel>
+        </childnode>
+      </node>
+      <node id="10314">
+        <label>unsigned int</label>
+      </node>
+      <node id="10316">
+        <label>struct _red_black_node *</label>
+      </node>
+      <node id="10319">
+        <label>int</label>
+      </node>
+      <node id="10311">
+        <label>RedBlackTree&lt; T &gt;</label>
+        <link refid="d9/d5d/classRedBlackTree"/>
+        <childnode refid="10312" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10315" relation="usage">
+          <edgelabel>m_pEnd</edgelabel>
+          <edgelabel>m_pHead</edgelabel>
+          <edgelabel>m_pRoot</edgelabel>
+          <edgelabel>sm_SentinelNode</edgelabel>
+          <edgelabel>RBTREE_LEAF</edgelabel>
+        </childnode>
+        <childnode refid="10319" relation="usage">
+          <edgelabel>m_iNodeCount</edgelabel>
+        </childnode>
+        <childnode refid="10320" relation="usage">
+          <edgelabel>m_pUserData</edgelabel>
+        </childnode>
+        <childnode refid="10318" relation="usage">
+          <edgelabel>m_pfCompare</edgelabel>
+        </childnode>
+      </node>
+      <node id="10313">
+        <label>char</label>
+      </node>
+      <node id="10320">
+        <label>Void *</label>
+      </node>
+      <node id="10312">
+        <label>Datastruct</label>
+        <link refid="dc/d51/classDatastruct"/>
+        <childnode refid="10313" relation="usage">
+          <edgelabel>m_strAllocatorName</edgelabel>
+        </childnode>
+        <childnode refid="10314" relation="usage">
+          <edgelabel>m_idMemoryContext</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/RedBlackTree.h" line="50" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Tree/RedBlackTree.h" bodystart="49" bodyend="215"/>
+    <listofallmembers>
+      <member refid="d9/d5d/classRedBlackTree_1a58ebef2408a362f9c4f91911a11c4c1b" prot="private" virt="non-virtual"><scope>RedBlackTree</scope><name>_DeleteAll</name></member>
+      <member refid="d9/d5d/classRedBlackTree_1a4fc12eb8bb27ce47710588f8114a5196" prot="private" virt="non-virtual"><scope>RedBlackTree</scope><name>_Insert_Rebalance</name></member>
+      <member refid="d9/d5d/classRedBlackTree_1a0121d1f62f3897fd5dd9b9efd79b5b2a" prot="private" virt="non-virtual"><scope>RedBlackTree</scope><name>_Insert_Search</name></member>
+      <member refid="d9/d5d/classRedBlackTree_1a5e60171d5ecde8293dc4f9626bf32533" prot="private" virt="non-virtual"><scope>RedBlackTree</scope><name>_Remove_Rebalance</name></member>
+      <member refid="d9/d5d/classRedBlackTree_1af928a2766575c4267aaeeb93fb103841" prot="private" virt="non-virtual"><scope>RedBlackTree</scope><name>_Remove_Search</name></member>
+      <member refid="d9/d5d/classRedBlackTree_1a0bbf9905365147f3046a592744463737" prot="private" virt="non-virtual"><scope>RedBlackTree</scope><name>_Remove_Swap</name></member>
+      <member refid="d9/d5d/classRedBlackTree_1a3200492d393113fdcbc4a12e315b3590" prot="private" virt="non-virtual"><scope>RedBlackTree</scope><name>_RotateOnce</name></member>
+      <member refid="dc/d51/classDatastruct_1a4208dfdad6dc1178ee1f80481598500c" prot="protected" virt="non-virtual"><scope>RedBlackTree</scope><name>_SelectMemory</name></member>
+      <member refid="dc/d51/classDatastruct_1ae0aad9bef0dc76ed43f8c4fc59a10d78" prot="protected" virt="non-virtual"><scope>RedBlackTree</scope><name>_UnSelectMemory</name></member>
+      <member refid="d9/d5d/classRedBlackTree_1ab893ae3f0a02bb26ea0120e6c7d09a2b" prot="public" virt="non-virtual"><scope>RedBlackTree</scope><name>Begin</name></member>
+      <member refid="d9/d5d/classRedBlackTree_1aa31f188be923c718868036f9486390ea" prot="public" virt="virtual"><scope>RedBlackTree</scope><name>Clear</name></member>
+      <member refid="d9/d5d/classRedBlackTree_1aa0e36037535c03dc0e22cbc1d96ea595" prot="public" virt="non-virtual"><scope>RedBlackTree</scope><name>Comparator</name></member>
+      <member refid="d9/d5d/classRedBlackTree_1a0956cac53fbbd2baead454e29106a8cd" prot="public" virt="virtual"><scope>RedBlackTree</scope><name>Count</name></member>
+      <member refid="d9/d5d/classRedBlackTree_1aab77352722e193be864ad3e317f0a967" prot="public" virt="virtual"><scope>RedBlackTree</scope><name>Create</name></member>
+      <member refid="dc/d51/classDatastruct_1aebb55795e668a005cf660ce216962a2f" prot="public" virt="non-virtual"><scope>RedBlackTree</scope><name>Datastruct</name></member>
+      <member refid="d9/d5d/classRedBlackTree_1a04b98e1741147ccd8731588392091ac0" prot="public" virt="virtual"><scope>RedBlackTree</scope><name>Destroy</name></member>
+      <member refid="d9/d5d/classRedBlackTree_1ae0f83c629acc7673b972d04d32c4b23d" prot="public" virt="non-virtual"><scope>RedBlackTree</scope><name>End</name></member>
+      <member refid="d9/d5d/classRedBlackTree_1a01cbdaf4a323ee39ab80499cab1c8732" prot="public" virt="non-virtual"><scope>RedBlackTree</scope><name>Insert</name></member>
+      <member refid="dc/d51/classDatastruct_1a4e2abc9751fdc8571b9d9a1d02639ebe" prot="public" virt="non-virtual"><scope>RedBlackTree</scope><name>IsEmpty</name></member>
+      <member refid="d9/d5d/classRedBlackTree_1a23a17f6bf3b4f3c796e3ca5429557a43" prot="private" virt="non-virtual"><scope>RedBlackTree</scope><name>m_iNodeCount</name></member>
+      <member refid="d9/d5d/classRedBlackTree_1acaaec64493e4679cd35596e86d93b04c" prot="private" virt="non-virtual"><scope>RedBlackTree</scope><name>m_pEnd</name></member>
+      <member refid="d9/d5d/classRedBlackTree_1a27d1e78c521dfa3bb17788c5ad7c8792" prot="private" virt="non-virtual"><scope>RedBlackTree</scope><name>m_pfCompare</name></member>
+      <member refid="d9/d5d/classRedBlackTree_1a3c97c51fbb3109f67c78ceb58d10b78b" prot="private" virt="non-virtual"><scope>RedBlackTree</scope><name>m_pHead</name></member>
+      <member refid="d9/d5d/classRedBlackTree_1accd43d1fd7c403406d3956a726337347" prot="private" virt="non-virtual"><scope>RedBlackTree</scope><name>m_pRoot</name></member>
+      <member refid="d9/d5d/classRedBlackTree_1a91f0e9a4012edb773b7a59705e4e90a0" prot="private" virt="non-virtual"><scope>RedBlackTree</scope><name>m_pUserData</name></member>
+      <member refid="d9/d5d/classRedBlackTree_1abe6db4496cfdd90f917f4ca76d4bdcb1" prot="public" virt="virtual"><scope>RedBlackTree</scope><name>MemorySize</name></member>
+      <member refid="d9/d5d/classRedBlackTree_1aed9eadf9a896f261fe1480a5c7aefe86" prot="private" virt="non-virtual"><scope>RedBlackTree</scope><name>RBTREE_LEAF</name></member>
+      <member refid="d9/d5d/classRedBlackTree_1af0cb91dbb91af031f85263e6928415ad" prot="public" virt="non-virtual"><scope>RedBlackTree</scope><name>RedBlackTree</name></member>
+      <member refid="d9/d5d/classRedBlackTree_1a17d4f4ea41cf27e010faeb8dfe347fad" prot="public" virt="non-virtual"><scope>RedBlackTree</scope><name>Remove</name></member>
+      <member refid="d9/d5d/classRedBlackTree_1a20dc36ef2b63ac619a86ba91041952b5" prot="public" virt="non-virtual"><scope>RedBlackTree</scope><name>Search</name></member>
+      <member refid="d9/d5d/classRedBlackTree_1af0882680fadfbb5788e66f0107535ee2" prot="public" virt="non-virtual"><scope>RedBlackTree</scope><name>SetComparator</name></member>
+      <member refid="d9/d5d/classRedBlackTree_1a3a16bc0803f633c09110bc29c76158f0" prot="private" virt="non-virtual"><scope>RedBlackTree</scope><name>sm_SentinelNode</name></member>
+      <member refid="dc/d51/classDatastruct_1a605325d1c1fc3f3c761365595701f9c4" prot="public" virt="virtual"><scope>RedBlackTree</scope><name>UseMemoryContext</name></member>
+      <member refid="dc/d51/classDatastruct_1a59e1e9769598d5606e0a335692f89c15" prot="public" virt="virtual"><scope>RedBlackTree</scope><name>~Datastruct</name></member>
+      <member refid="d9/d5d/classRedBlackTree_1a32f7076fdc2725b9cb9a3934a695838c" prot="public" virt="virtual"><scope>RedBlackTree</scope><name>~RedBlackTree</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

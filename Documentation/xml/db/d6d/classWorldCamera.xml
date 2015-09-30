@@ -1,0 +1,380 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="db/d6d/classWorldCamera" kind="class" prot="public" abstract="yes">
+    <compoundname>WorldCamera</compoundname>
+    <derivedcompoundref refid="d4/d39/classWorldCamera3rdPerson" prot="public" virt="non-virtual">WorldCamera3rdPerson</derivedcompoundref>
+    <derivedcompoundref refid="d9/d11/classWorldCameraSubjective" prot="public" virt="non-virtual">WorldCameraSubjective</derivedcompoundref>
+    <includes refid="d2/d2e/WorldCamera_8h" local="no">WorldCamera.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="db/d6d/classWorldCamera_1a38f2bc39326c1842f7c2951f02187d21" prot="protected" static="no" mutable="no">
+        <type><ref refid="d1/df0/classCamera" kindref="compound">Camera</ref> *</type>
+        <definition>Camera* m_pCamera</definition>
+        <argsstring></argsstring>
+        <name>m_pCamera</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/WorldCamera.h" line="67" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/WorldCamera.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d6d/classWorldCamera_1a53cf451650ef2e1b29c553b7beed0dbd" prot="protected" static="no" mutable="no">
+        <type><ref refid="de/d40/classWorldBaseNode" kindref="compound">WorldBaseNode</ref> *</type>
+        <definition>WorldBaseNode* m_pTarget</definition>
+        <argsstring></argsstring>
+        <name>m_pTarget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/WorldCamera.h" line="68" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/WorldCamera.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="db/d6d/classWorldCamera_1a7226b1898a82bf8afcad6a7fd7e77a6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>WorldCamera</definition>
+        <argsstring>(Camera *pCamera, WorldBaseNode *pTarget)</argsstring>
+        <name>WorldCamera</name>
+        <param>
+          <type><ref refid="d1/df0/classCamera" kindref="compound">Camera</ref> *</type>
+          <declname>pCamera</declname>
+        </param>
+        <param>
+          <type><ref refid="de/d40/classWorldBaseNode" kindref="compound">WorldBaseNode</ref> *</type>
+          <declname>pTarget</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/WorldCamera.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d6d/classWorldCamera_1a9215a3985a853541435d222ea19867ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~WorldCamera</definition>
+        <argsstring>()</argsstring>
+        <name>~WorldCamera</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/WorldCamera.h" line="52"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d6d/classWorldCamera_1a3f3e97f66c39e35f1501b7a451d7dac0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d2/d2e/WorldCamera_8h_1ac96958ad03ac9d8b95e54909401183c4" kindref="member">WorldCameraType</ref></type>
+        <definition>virtual WorldCameraType GetCameraType</definition>
+        <argsstring>() const =0</argsstring>
+        <name>GetCameraType</name>
+        <reimplementedby refid="d9/d11/classWorldCameraSubjective_1aff66907b2134a9a7b44cbf724a11c3ef">GetCameraType</reimplementedby>
+        <reimplementedby refid="d4/d39/classWorldCamera3rdPerson_1aff66907b2134a9a7b44cbf724a11c3ef">GetCameraType</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/WorldCamera.h" line="55"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d6d/classWorldCamera_1aaec0a3f9e3cc179e587eeb74cebd1bd7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d1/df0/classCamera" kindref="compound">Camera</ref> *</type>
+        <definition>Camera* GetCamera</definition>
+        <argsstring>() const </argsstring>
+        <name>GetCamera</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/WorldCamera.h" line="58"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d6d/classWorldCamera_1abab2b9f1eb367c67ed3c111a2145ea61" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="de/d40/classWorldBaseNode" kindref="compound">WorldBaseNode</ref> *</type>
+        <definition>WorldBaseNode* GetTarget</definition>
+        <argsstring>() const </argsstring>
+        <name>GetTarget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/WorldCamera.h" line="61"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d6d/classWorldCamera_1a6a3c7e3afa0db50767976e47de725e98" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void Update</definition>
+        <argsstring>(Scalar fTimeStep)=0</argsstring>
+        <name>Update</name>
+        <reimplementedby refid="d9/d11/classWorldCameraSubjective_1a4f5303c165e6f3689e58639dbf40d9c6">Update</reimplementedby>
+        <reimplementedby refid="d4/d39/classWorldCamera3rdPerson_1a4f5303c165e6f3689e58639dbf40d9c6">Update</reimplementedby>
+        <param>
+          <type><ref refid="d0/d10/Scalar_8h_1abee0aca51a3a3e16c628155aa4ac6f12" kindref="member">Scalar</ref></type>
+          <declname>fTimeStep</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/WorldCamera.h" line="64"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="13759">
+        <label>WorldCamera</label>
+        <link refid="db/d6d/classWorldCamera"/>
+      </node>
+      <node id="13760">
+        <label>WorldCamera3rdPerson</label>
+        <link refid="d4/d39/classWorldCamera3rdPerson"/>
+        <childnode refid="13759" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13761">
+        <label>WorldCameraSubjective</label>
+        <link refid="d9/d11/classWorldCameraSubjective"/>
+        <childnode refid="13759" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="13778">
+        <label>WorldCulling</label>
+      </node>
+      <node id="13770">
+        <label>ProjectionDepthMapping</label>
+      </node>
+      <node id="13763">
+        <label>Camera</label>
+        <link refid="d1/df0/classCamera"/>
+        <childnode refid="13764" relation="usage">
+          <edgelabel>m_vSide</edgelabel>
+          <edgelabel>m_vUp</edgelabel>
+          <edgelabel>m_vView</edgelabel>
+        </childnode>
+        <childnode refid="13766" relation="usage">
+          <edgelabel>m_matView</edgelabel>
+          <edgelabel>m_matPostProjection</edgelabel>
+          <edgelabel>m_matCamera</edgelabel>
+          <edgelabel>m_matProjection</edgelabel>
+          <edgelabel>m_matInvView</edgelabel>
+          <edgelabel>m_matPreView</edgelabel>
+          <edgelabel>m_matBillboard</edgelabel>
+        </childnode>
+        <childnode refid="13767" relation="usage">
+          <edgelabel>m_fFrustrum</edgelabel>
+        </childnode>
+        <childnode refid="13768" relation="usage">
+          <edgelabel>m_bHasPostProjection</edgelabel>
+          <edgelabel>m_bPerspective</edgelabel>
+          <edgelabel>m_bHasPreView</edgelabel>
+        </childnode>
+        <childnode refid="13769" relation="usage">
+          <edgelabel>m_vEye</edgelabel>
+        </childnode>
+        <childnode refid="13770" relation="usage">
+          <edgelabel>m_iDepthMapping</edgelabel>
+        </childnode>
+        <childnode refid="13771" relation="usage">
+          <edgelabel>sm_iDefaultDepthMapping</edgelabel>
+        </childnode>
+      </node>
+      <node id="13780">
+        <label>TMatrix3&lt; Scalar &gt;</label>
+        <link refid="d7/dee/classTMatrix3"/>
+        <childnode refid="13780" relation="usage">
+          <edgelabel>Identity</edgelabel>
+          <edgelabel>Null</edgelabel>
+        </childnode>
+        <childnode refid="13767" relation="usage">
+          <edgelabel>ONE</edgelabel>
+          <edgelabel>m20</edgelabel>
+          <edgelabel>m21</edgelabel>
+          <edgelabel>m10</edgelabel>
+          <edgelabel>m22</edgelabel>
+          <edgelabel>m11</edgelabel>
+          <edgelabel>m00</edgelabel>
+          <edgelabel>TWO</edgelabel>
+          <edgelabel>m12</edgelabel>
+          <edgelabel>m01</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="13767">
+        <label>float</label>
+      </node>
+      <node id="13766">
+        <label>TMatrix4&lt; Scalar &gt;</label>
+        <link refid="d5/d09/classTMatrix4"/>
+        <childnode refid="13766" relation="usage">
+          <edgelabel>Identity</edgelabel>
+          <edgelabel>Null</edgelabel>
+        </childnode>
+        <childnode refid="13767" relation="usage">
+          <edgelabel>ONE</edgelabel>
+          <edgelabel>m30</edgelabel>
+          <edgelabel>m31</edgelabel>
+          <edgelabel>m20</edgelabel>
+          <edgelabel>m32</edgelabel>
+          <edgelabel>m21</edgelabel>
+          <edgelabel>m10</edgelabel>
+          <edgelabel>m33</edgelabel>
+          <edgelabel>m22</edgelabel>
+          <edgelabel>m11</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="13771">
+        <label>static ProjectionDepthMapping</label>
+      </node>
+      <node id="13776">
+        <label>ULong</label>
+      </node>
+      <node id="13777">
+        <label>unsigned int</label>
+      </node>
+      <node id="13762">
+        <label>WorldCamera</label>
+        <link refid="db/d6d/classWorldCamera"/>
+        <childnode refid="13763" relation="usage">
+          <edgelabel>m_pCamera</edgelabel>
+        </childnode>
+        <childnode refid="13772" relation="usage">
+          <edgelabel>m_pTarget</edgelabel>
+        </childnode>
+      </node>
+      <node id="13773">
+        <label>TBVAABox&lt; Scalar &gt;</label>
+        <link refid="d9/d90/classTBVAABox"/>
+        <childnode refid="13774" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13764" relation="usage">
+          <edgelabel>m_vExtents</edgelabel>
+        </childnode>
+        <childnode refid="13769" relation="usage">
+          <edgelabel>m_vCenter</edgelabel>
+        </childnode>
+      </node>
+      <node id="13765">
+        <label>Scalar</label>
+      </node>
+      <node id="13772">
+        <label>WorldBaseNode</label>
+        <link refid="de/d40/classWorldBaseNode"/>
+        <childnode refid="13773" relation="usage">
+          <edgelabel>WorldBV</edgelabel>
+        </childnode>
+        <childnode refid="13775" relation="usage">
+          <edgelabel>m_strName</edgelabel>
+        </childnode>
+        <childnode refid="13768" relation="usage">
+          <edgelabel>UpdateWorldTransform</edgelabel>
+          <edgelabel>UpdateWorldBV</edgelabel>
+        </childnode>
+        <childnode refid="13776" relation="usage">
+          <edgelabel>m_dwDebugFlags</edgelabel>
+        </childnode>
+        <childnode refid="13777" relation="usage">
+          <edgelabel>sm_iNoNameCount</edgelabel>
+        </childnode>
+        <childnode refid="13778" relation="usage">
+          <edgelabel>CullMode</edgelabel>
+        </childnode>
+        <childnode refid="13772" relation="usage">
+          <edgelabel>m_pParent</edgelabel>
+        </childnode>
+        <childnode refid="13779" relation="usage">
+          <edgelabel>WorldTransform</edgelabel>
+        </childnode>
+      </node>
+      <node id="13779">
+        <label>TTransform3&lt; Scalar &gt;</label>
+        <link refid="d0/d75/classTTransform3"/>
+        <childnode refid="13764" relation="usage">
+          <edgelabel>m_vScale</edgelabel>
+          <edgelabel>m_vInvScale</edgelabel>
+          <edgelabel>m_vInvTranslate</edgelabel>
+          <edgelabel>m_vTranslate</edgelabel>
+        </childnode>
+        <childnode refid="13766" relation="usage">
+          <edgelabel>m_matHMatrix</edgelabel>
+        </childnode>
+        <childnode refid="13780" relation="usage">
+          <edgelabel>m_matInvTransform</edgelabel>
+          <edgelabel>m_matTransform</edgelabel>
+        </childnode>
+        <childnode refid="13768" relation="usage">
+          <edgelabel>m_bIsUniformScale</edgelabel>
+          <edgelabel>m_bIsIdentity</edgelabel>
+          <edgelabel>m_bUpdateInverse</edgelabel>
+          <edgelabel>m_bIsRotScale</edgelabel>
+        </childnode>
+        <childnode refid="13779" relation="usage">
+          <edgelabel>Identity</edgelabel>
+        </childnode>
+      </node>
+      <node id="13764">
+        <label>TVector3&lt; Scalar &gt;</label>
+        <link refid="de/d40/classTVector3"/>
+        <childnode refid="13764" relation="usage">
+          <edgelabel>Null</edgelabel>
+          <edgelabel>eI</edgelabel>
+          <edgelabel>eJ</edgelabel>
+          <edgelabel>eK</edgelabel>
+        </childnode>
+        <childnode refid="13765" relation="usage">
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+          <edgelabel>Z</edgelabel>
+        </childnode>
+      </node>
+      <node id="13769">
+        <label>TVertex3&lt; Scalar &gt;</label>
+        <link refid="dc/d75/classTVertex3"/>
+        <childnode refid="13765" relation="usage">
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+          <edgelabel>Z</edgelabel>
+        </childnode>
+        <childnode refid="13769" relation="usage">
+          <edgelabel>Null</edgelabel>
+        </childnode>
+      </node>
+      <node id="13768">
+        <label>bool</label>
+      </node>
+      <node id="13774">
+        <label>TBoundingVolume&lt; Scalar &gt;</label>
+        <link refid="d6/d19/classTBoundingVolume"/>
+      </node>
+      <node id="13775">
+        <label>char</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/WorldCamera.h" line="49" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/WorldCamera.h" bodystart="48" bodyend="69"/>
+    <listofallmembers>
+      <member refid="db/d6d/classWorldCamera_1aaec0a3f9e3cc179e587eeb74cebd1bd7" prot="public" virt="non-virtual"><scope>WorldCamera</scope><name>GetCamera</name></member>
+      <member refid="db/d6d/classWorldCamera_1a3f3e97f66c39e35f1501b7a451d7dac0" prot="public" virt="pure-virtual"><scope>WorldCamera</scope><name>GetCameraType</name></member>
+      <member refid="db/d6d/classWorldCamera_1abab2b9f1eb367c67ed3c111a2145ea61" prot="public" virt="non-virtual"><scope>WorldCamera</scope><name>GetTarget</name></member>
+      <member refid="db/d6d/classWorldCamera_1a38f2bc39326c1842f7c2951f02187d21" prot="protected" virt="non-virtual"><scope>WorldCamera</scope><name>m_pCamera</name></member>
+      <member refid="db/d6d/classWorldCamera_1a53cf451650ef2e1b29c553b7beed0dbd" prot="protected" virt="non-virtual"><scope>WorldCamera</scope><name>m_pTarget</name></member>
+      <member refid="db/d6d/classWorldCamera_1a6a3c7e3afa0db50767976e47de725e98" prot="public" virt="pure-virtual"><scope>WorldCamera</scope><name>Update</name></member>
+      <member refid="db/d6d/classWorldCamera_1a7226b1898a82bf8afcad6a7fd7e77a6c" prot="public" virt="non-virtual"><scope>WorldCamera</scope><name>WorldCamera</name></member>
+      <member refid="db/d6d/classWorldCamera_1a9215a3985a853541435d222ea19867ac" prot="public" virt="virtual"><scope>WorldCamera</scope><name>~WorldCamera</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

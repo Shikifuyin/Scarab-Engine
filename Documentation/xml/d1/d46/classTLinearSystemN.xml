@@ -1,0 +1,265 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d1/d46/classTLinearSystemN" kind="class" prot="public">
+    <compoundname>TLinearSystemN</compoundname>
+    <includes refid="d8/d03/LinearSystemN_8h" local="no">LinearSystemN.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename Real</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d1/d46/classTLinearSystemN_1a15588eea940c254c383433246cc901ac" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real ZeroTolerance</definition>
+        <argsstring></argsstring>
+        <name>ZeroTolerance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/LinearSystemN.h" line="44" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/LinearSystemN.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d1/d46/classTLinearSystemN_1a4e628ce8415a69b65bba8ef146eb6d80" prot="private" static="no" mutable="no">
+        <type><ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt;</type>
+        <definition>TMatrixN&lt;Real&gt; m_matA</definition>
+        <argsstring></argsstring>
+        <name>m_matA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/LinearSystemN.h" line="59" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/LinearSystemN.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d46/classTLinearSystemN_1a497b4777831214c52db031dd58a7d4b6" prot="private" static="no" mutable="no">
+        <type><ref refid="d4/d23/classTVectorN" kindref="compound">TVectorN</ref>&lt; Real &gt;</type>
+        <definition>TVectorN&lt;Real&gt; m_vB</definition>
+        <argsstring></argsstring>
+        <name>m_vB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/LinearSystemN.h" line="60" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/LinearSystemN.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d46/classTLinearSystemN_1a0d21ab805cb6f567662506a1817d3bc2" prot="private" static="no" mutable="no">
+        <type><ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt;</type>
+        <definition>TMatrixN&lt;Real&gt; m_matInvA</definition>
+        <argsstring></argsstring>
+        <name>m_matInvA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/LinearSystemN.h" line="62" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/LinearSystemN.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d46/classTLinearSystemN_1a02dc0aad5149e41850c9f3d5bc470f82" prot="private" static="no" mutable="no">
+        <type><ref refid="d4/d23/classTVectorN" kindref="compound">TVectorN</ref>&lt; Real &gt;</type>
+        <definition>TVectorN&lt;Real&gt; m_vX</definition>
+        <argsstring></argsstring>
+        <name>m_vX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/LinearSystemN.h" line="63" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/LinearSystemN.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d1/d46/classTLinearSystemN_1aa537ab5ead9293e05b3a6998b480925c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TLinearSystemN</definition>
+        <argsstring>(Real fZeroTolerance=(Real) SCALAR_ERROR)</argsstring>
+        <name>TLinearSystemN</name>
+        <param>
+          <type>Real</type>
+          <declname>fZeroTolerance</declname>
+          <defval>(Real) <ref refid="d0/d10/Scalar_8h_1ab84e60710e7c3a93246b807ac524d38b" kindref="member">SCALAR_ERROR</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/LinearSystemN.h" line="38"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d46/classTLinearSystemN_1ac19a1dd12099578ba4808be8a77a1bcd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TLinearSystemN</definition>
+        <argsstring>(const TMatrixN&lt; Real &gt; &amp;matA, const TVectorN&lt; Real &gt; &amp;vB, Real fZeroTolerance=(Real) SCALAR_ERROR)</argsstring>
+        <name>TLinearSystemN</name>
+        <param>
+          <type>const <ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt; &amp;</type>
+          <declname>matA</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d4/d23/classTVectorN" kindref="compound">TVectorN</ref>&lt; Real &gt; &amp;</type>
+          <declname>vB</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fZeroTolerance</declname>
+          <defval>(Real) <ref refid="d0/d10/Scalar_8h_1ab84e60710e7c3a93246b807ac524d38b" kindref="member">SCALAR_ERROR</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/LinearSystemN.h" line="40"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d46/classTLinearSystemN_1ac6b5fba0025ca31f572eabc7e7a6858c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~TLinearSystemN</definition>
+        <argsstring>()</argsstring>
+        <name>~TLinearSystemN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/LinearSystemN.h" line="41"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d46/classTLinearSystemN_1a032abc0507f05e0578488889bc4b8a86" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt; &amp;</type>
+        <definition>TMatrixN&lt;Real&gt;&amp; GetA</definition>
+        <argsstring>()</argsstring>
+        <name>GetA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/LinearSystemN.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d46/classTLinearSystemN_1a7fff4d7b8a6c4f96ea292297ccbc51f8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d4/d23/classTVectorN" kindref="compound">TVectorN</ref>&lt; Real &gt; &amp;</type>
+        <definition>TVectorN&lt;Real&gt;&amp; GetB</definition>
+        <argsstring>()</argsstring>
+        <name>GetB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/LinearSystemN.h" line="48"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d46/classTLinearSystemN_1a61a3a2eef7f00ae093b10528213644ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool SolveSystem</definition>
+        <argsstring>()</argsstring>
+        <name>SolveSystem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/LinearSystemN.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d46/classTLinearSystemN_1af8cb3458ebe5ef93c177b94b6e4cb2d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool SolveSymmetricSystem</definition>
+        <argsstring>()</argsstring>
+        <name>SolveSymmetricSystem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/LinearSystemN.h" line="52"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d46/classTLinearSystemN_1a2a69664be67dcae866214901b45b2461" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt; &amp;</type>
+        <definition>const TMatrixN&lt;Real&gt;&amp; GetInvA</definition>
+        <argsstring>() const </argsstring>
+        <name>GetInvA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/LinearSystemN.h" line="55"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d46/classTLinearSystemN_1af4deb7238c5bb4eeb2fcaf19df951b24" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d4/d23/classTVectorN" kindref="compound">TVectorN</ref>&lt; Real &gt; &amp;</type>
+        <definition>const TVectorN&lt;Real&gt;&amp; GetX</definition>
+        <argsstring>() const </argsstring>
+        <name>GetX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/LinearSystemN.h" line="56"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="12698">
+        <label>TLinearSystemN&lt; Real &gt;</label>
+        <link refid="d1/d46/classTLinearSystemN"/>
+        <childnode refid="12699" relation="usage">
+          <edgelabel>m_matInvA</edgelabel>
+          <edgelabel>m_matA</edgelabel>
+        </childnode>
+        <childnode refid="12700" relation="usage">
+          <edgelabel>ZeroTolerance</edgelabel>
+        </childnode>
+        <childnode refid="12701" relation="usage">
+          <edgelabel>m_vB</edgelabel>
+          <edgelabel>m_vX</edgelabel>
+        </childnode>
+      </node>
+      <node id="12700">
+        <label>Real</label>
+      </node>
+      <node id="12699">
+        <label>TMatrixN&lt; Real &gt;</label>
+      </node>
+      <node id="12701">
+        <label>TVectorN&lt; Real &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/LinearSystemN.h" line="36" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/LinearSystemN.h" bodystart="35" bodyend="64"/>
+    <listofallmembers>
+      <member refid="d1/d46/classTLinearSystemN_1a032abc0507f05e0578488889bc4b8a86" prot="public" virt="non-virtual"><scope>TLinearSystemN</scope><name>GetA</name></member>
+      <member refid="d1/d46/classTLinearSystemN_1a7fff4d7b8a6c4f96ea292297ccbc51f8" prot="public" virt="non-virtual"><scope>TLinearSystemN</scope><name>GetB</name></member>
+      <member refid="d1/d46/classTLinearSystemN_1a2a69664be67dcae866214901b45b2461" prot="public" virt="non-virtual"><scope>TLinearSystemN</scope><name>GetInvA</name></member>
+      <member refid="d1/d46/classTLinearSystemN_1af4deb7238c5bb4eeb2fcaf19df951b24" prot="public" virt="non-virtual"><scope>TLinearSystemN</scope><name>GetX</name></member>
+      <member refid="d1/d46/classTLinearSystemN_1a4e628ce8415a69b65bba8ef146eb6d80" prot="private" virt="non-virtual"><scope>TLinearSystemN</scope><name>m_matA</name></member>
+      <member refid="d1/d46/classTLinearSystemN_1a0d21ab805cb6f567662506a1817d3bc2" prot="private" virt="non-virtual"><scope>TLinearSystemN</scope><name>m_matInvA</name></member>
+      <member refid="d1/d46/classTLinearSystemN_1a497b4777831214c52db031dd58a7d4b6" prot="private" virt="non-virtual"><scope>TLinearSystemN</scope><name>m_vB</name></member>
+      <member refid="d1/d46/classTLinearSystemN_1a02dc0aad5149e41850c9f3d5bc470f82" prot="private" virt="non-virtual"><scope>TLinearSystemN</scope><name>m_vX</name></member>
+      <member refid="d1/d46/classTLinearSystemN_1af8cb3458ebe5ef93c177b94b6e4cb2d8" prot="public" virt="non-virtual"><scope>TLinearSystemN</scope><name>SolveSymmetricSystem</name></member>
+      <member refid="d1/d46/classTLinearSystemN_1a61a3a2eef7f00ae093b10528213644ac" prot="public" virt="non-virtual"><scope>TLinearSystemN</scope><name>SolveSystem</name></member>
+      <member refid="d1/d46/classTLinearSystemN_1aa537ab5ead9293e05b3a6998b480925c" prot="public" virt="non-virtual"><scope>TLinearSystemN</scope><name>TLinearSystemN</name></member>
+      <member refid="d1/d46/classTLinearSystemN_1ac19a1dd12099578ba4808be8a77a1bcd" prot="public" virt="non-virtual"><scope>TLinearSystemN</scope><name>TLinearSystemN</name></member>
+      <member refid="d1/d46/classTLinearSystemN_1a15588eea940c254c383433246cc901ac" prot="public" virt="non-virtual"><scope>TLinearSystemN</scope><name>ZeroTolerance</name></member>
+      <member refid="d1/d46/classTLinearSystemN_1ac6b5fba0025ca31f572eabc7e7a6858c" prot="public" virt="non-virtual"><scope>TLinearSystemN</scope><name>~TLinearSystemN</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

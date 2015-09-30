@@ -1,0 +1,384 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d6/d84/LCPSolver_8h" kind="file">
+    <compoundname>LCPSolver.h</compoundname>
+    <includes refid="d7/d7b/MemoryManager_8h" local="yes">../../../Memory/MemoryManager.h</includes>
+    <includes refid="d1/d98/MathFunction_8h" local="yes">../../Functions/MathFunction.h</includes>
+    <includes local="yes">LCPSolver.inl</includes>
+    <incdepgraph>
+      <node id="20935">
+        <label>LCPSolver.inl</label>
+      </node>
+      <node id="20914">
+        <label>SSE.inl</label>
+      </node>
+      <node id="20918">
+        <label>Threading.h</label>
+        <link refid="dd/d0e/Threading_8h"/>
+        <childnode refid="20896" relation="include">
+        </childnode>
+        <childnode refid="20898" relation="include">
+        </childnode>
+        <childnode refid="20919" relation="include">
+        </childnode>
+      </node>
+      <node id="20930">
+        <label>Allocators/BreakAllocator.h</label>
+        <link refid="d4/dac/BreakAllocator_8h"/>
+        <childnode refid="20925" relation="include">
+        </childnode>
+        <childnode refid="20931" relation="include">
+        </childnode>
+      </node>
+      <node id="20893">
+        <label>../../../Memory/MemoryManager.h</label>
+        <link refid="d7/d7b/MemoryManager_8h"/>
+        <childnode refid="20894" relation="include">
+        </childnode>
+        <childnode refid="20904" relation="include">
+        </childnode>
+        <childnode refid="20910" relation="include">
+        </childnode>
+        <childnode refid="20924" relation="include">
+        </childnode>
+        <childnode refid="20928" relation="include">
+        </childnode>
+        <childnode refid="20930" relation="include">
+        </childnode>
+        <childnode refid="20932" relation="include">
+        </childnode>
+        <childnode refid="20934" relation="include">
+        </childnode>
+      </node>
+      <node id="20911">
+        <label>../../ThirdParty/System/System.h</label>
+        <link refid="db/d39/System_8h"/>
+        <childnode refid="20896" relation="include">
+        </childnode>
+        <childnode refid="20898" relation="include">
+        </childnode>
+        <childnode refid="20912" relation="include">
+        </childnode>
+        <childnode refid="20895" relation="include">
+        </childnode>
+        <childnode refid="20916" relation="include">
+        </childnode>
+        <childnode refid="20918" relation="include">
+        </childnode>
+        <childnode refid="20920" relation="include">
+        </childnode>
+        <childnode refid="20922" relation="include">
+        </childnode>
+      </node>
+      <node id="20919">
+        <label>Threading.inl</label>
+      </node>
+      <node id="20931">
+        <label>BreakAllocator.inl</label>
+      </node>
+      <node id="20898">
+        <label>Platform.h</label>
+        <link refid="d9/dd0/Platform_8h"/>
+        <childnode refid="20899" relation="include">
+        </childnode>
+      </node>
+      <node id="20928">
+        <label>Allocators/PoolAllocator.h</label>
+        <link refid="d3/d03/PoolAllocator_8h"/>
+        <childnode refid="20925" relation="include">
+        </childnode>
+        <childnode refid="20929" relation="include">
+        </childnode>
+      </node>
+      <node id="20901">
+        <label>FPU.inl</label>
+      </node>
+      <node id="20903">
+        <label>Hashing.inl</label>
+      </node>
+      <node id="20909">
+        <label>MathFunction.inl</label>
+      </node>
+      <node id="20905">
+        <label>../Formats/Scalar.h</label>
+        <link refid="d0/d10/Scalar_8h"/>
+        <childnode refid="20898" relation="include">
+        </childnode>
+        <childnode refid="20906" relation="include">
+        </childnode>
+      </node>
+      <node id="20926">
+        <label>MemoryAllocator.inl</label>
+      </node>
+      <node id="20894">
+        <label>../Math/Hash/Hashing.h</label>
+        <link refid="d0/d4e/Hashing_8h"/>
+        <childnode refid="20895" relation="include">
+        </childnode>
+        <childnode refid="20903" relation="include">
+        </childnode>
+      </node>
+      <node id="20925">
+        <label>MemoryAllocator.h</label>
+        <link refid="d2/d75/MemoryAllocator_8h"/>
+        <childnode refid="20910" relation="include">
+        </childnode>
+        <childnode refid="20926" relation="include">
+        </childnode>
+      </node>
+      <node id="20917">
+        <label>File.inl</label>
+      </node>
+      <node id="20912">
+        <label>Hardware/Hardware.h</label>
+        <link refid="da/dec/Hardware_8h"/>
+        <childnode refid="20898" relation="include">
+        </childnode>
+        <childnode refid="20900" relation="include">
+        </childnode>
+        <childnode refid="20913" relation="include">
+        </childnode>
+        <childnode refid="20915" relation="include">
+        </childnode>
+      </node>
+      <node id="20924">
+        <label>Allocators/StackAllocator.h</label>
+        <link refid="db/d84/StackAllocator_8h"/>
+        <childnode refid="20925" relation="include">
+        </childnode>
+        <childnode refid="20927" relation="include">
+        </childnode>
+      </node>
+      <node id="20915">
+        <label>Hardware.inl</label>
+      </node>
+      <node id="20929">
+        <label>PoolAllocator.inl</label>
+      </node>
+      <node id="20906">
+        <label>Scalar.inl</label>
+      </node>
+      <node id="20902">
+        <label>String.inl</label>
+      </node>
+      <node id="20892">
+        <label>LCPSolver.h</label>
+        <link refid="LCPSolver.h"/>
+        <childnode refid="20893" relation="include">
+        </childnode>
+        <childnode refid="20904" relation="include">
+        </childnode>
+        <childnode refid="20935" relation="include">
+        </childnode>
+      </node>
+      <node id="20900">
+        <label>Hardware/FPU.h</label>
+        <link refid="dd/d2f/FPU_8h"/>
+        <childnode refid="20898" relation="include">
+        </childnode>
+        <childnode refid="20901" relation="include">
+        </childnode>
+      </node>
+      <node id="20932">
+        <label>Allocators/HeapAllocator.h</label>
+        <link refid="d3/d89/HeapAllocator_8h"/>
+        <childnode refid="20925" relation="include">
+        </childnode>
+        <childnode refid="20933" relation="include">
+        </childnode>
+      </node>
+      <node id="20895">
+        <label>../../../ThirdParty/System/String.h</label>
+        <link refid="d9/dba/String_8h"/>
+        <childnode refid="20896" relation="include">
+        </childnode>
+        <childnode refid="20898" relation="include">
+        </childnode>
+        <childnode refid="20900" relation="include">
+        </childnode>
+        <childnode refid="20902" relation="include">
+        </childnode>
+      </node>
+      <node id="20899">
+        <label>Platform.inl</label>
+      </node>
+      <node id="20934">
+        <label>MemoryManager.inl</label>
+      </node>
+      <node id="20922">
+        <label>System.inl</label>
+      </node>
+      <node id="20920">
+        <label>Networking.h</label>
+        <link refid="df/dfb/Networking_8h"/>
+        <childnode refid="20896" relation="include">
+        </childnode>
+        <childnode refid="20898" relation="include">
+        </childnode>
+        <childnode refid="20921" relation="include">
+        </childnode>
+      </node>
+      <node id="20916">
+        <label>File.h</label>
+        <link refid="d6/db7/File_8h"/>
+        <childnode refid="20896" relation="include">
+        </childnode>
+        <childnode refid="20898" relation="include">
+        </childnode>
+        <childnode refid="20895" relation="include">
+        </childnode>
+        <childnode refid="20917" relation="include">
+        </childnode>
+      </node>
+      <node id="20927">
+        <label>StackAllocator.inl</label>
+      </node>
+      <node id="20897">
+        <label>ForwardWin32.inl</label>
+      </node>
+      <node id="20913">
+        <label>SSE.h</label>
+        <link refid="d0/d02/SSE_8h"/>
+        <childnode refid="20898" relation="include">
+        </childnode>
+        <childnode refid="20914" relation="include">
+        </childnode>
+      </node>
+      <node id="20921">
+        <label>Networking.inl</label>
+      </node>
+      <node id="20908">
+        <label>Fixed.inl</label>
+      </node>
+      <node id="20904">
+        <label>../Math/Functions/MathFunction.h</label>
+        <link refid="d1/d98/MathFunction_8h"/>
+        <childnode refid="20900" relation="include">
+        </childnode>
+        <childnode refid="20905" relation="include">
+        </childnode>
+        <childnode refid="20907" relation="include">
+        </childnode>
+        <childnode refid="20909" relation="include">
+        </childnode>
+      </node>
+      <node id="20907">
+        <label>../Formats/Fixed.h</label>
+        <link refid="d4/d76/Fixed_8h"/>
+        <childnode refid="20905" relation="include">
+        </childnode>
+        <childnode refid="20908" relation="include">
+        </childnode>
+      </node>
+      <node id="20923">
+        <label>ErrorManager.inl</label>
+      </node>
+      <node id="20933">
+        <label>HeapAllocator.inl</label>
+      </node>
+      <node id="20896">
+        <label>../Forwards/ForwardWin32.h</label>
+        <link refid="d5/dea/ForwardWin32_8h"/>
+        <childnode refid="20897" relation="include">
+        </childnode>
+      </node>
+      <node id="20910">
+        <label>../Error/ErrorManager.h</label>
+        <link refid="d1/db6/ErrorManager_8h"/>
+        <childnode refid="20911" relation="include">
+        </childnode>
+        <childnode refid="20923" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="df/d5f/classTLCPSolver" prot="public">TLCPSolver</innerclass>
+    <innerclass refid="d1/dad/structLCPConstraint" prot="private">LCPConstraint</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="d6/d84/LCPSolver_8h_1a364f768ee0acc1e74d1bfa56fd57797f" prot="public" static="no">
+        <name>LCPState</name>
+        <enumvalue id="d6/d84/LCPSolver_8h_1a364f768ee0acc1e74d1bfa56fd57797fadaf652e61dd4ec8075475b156a799e78" prot="public">
+          <name>LCP_FOUND</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d6/d84/LCPSolver_8h_1a364f768ee0acc1e74d1bfa56fd57797fae745fc80ea42fc17a021cf46d9b459e4" prot="public">
+          <name>LCP_FOUND_TRIVIAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d6/d84/LCPSolver_8h_1a364f768ee0acc1e74d1bfa56fd57797fa9d237e67cc0d91521dd5823c8783c952" prot="public">
+          <name>LCP_CANT_SOLVE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d6/d84/LCPSolver_8h_1a364f768ee0acc1e74d1bfa56fd57797fa606c03e309a2c4694dc3d5117791782a" prot="public">
+          <name>LCP_MAX_RETRIES_REACHED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LCPSolver/LCPSolver.h" line="38" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LCPSolver/LCPSolver.h" bodystart="37" bodyend="43"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="d6/d84/LCPSolver_8h_1a3f019b6c65a606e6d3657e926cb890ad" prot="public" static="no">
+        <type><ref refid="df/d5f/classTLCPSolver" kindref="compound">TLCPSolver</ref>&lt; <ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref> &gt;</type>
+        <definition>typedef TLCPSolver&lt;Float&gt; LCPSolverf</definition>
+        <argsstring></argsstring>
+        <name>LCPSolverf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LCPSolver/LCPSolver.h" line="120" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LCPSolver/LCPSolver.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d6/d84/LCPSolver_8h_1a62dc6f678ba2c9b38e56964464a870cd" prot="public" static="no">
+        <type><ref refid="df/d5f/classTLCPSolver" kindref="compound">TLCPSolver</ref>&lt; <ref refid="d9/dd0/Platform_8h_1a1f2c5f02159fb28428e23074cc04166d" kindref="member">Double</ref> &gt;</type>
+        <definition>typedef TLCPSolver&lt;Double&gt; LCPSolverd</definition>
+        <argsstring></argsstring>
+        <name>LCPSolverd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LCPSolver/LCPSolver.h" line="121" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LCPSolver/LCPSolver.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d6/d84/LCPSolver_8h_1a66c5e0d3dbef8dd22ccc26424a87f507" prot="public" static="no">
+        <type><ref refid="df/d5f/classTLCPSolver" kindref="compound">TLCPSolver</ref>&lt; <ref refid="d0/d10/Scalar_8h_1abee0aca51a3a3e16c628155aa4ac6f12" kindref="member">Scalar</ref> &gt;</type>
+        <definition>typedef TLCPSolver&lt;Scalar&gt; LCPSolver</definition>
+        <argsstring></argsstring>
+        <name>LCPSolver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LCPSolver/LCPSolver.h" line="122" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LCPSolver/LCPSolver.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LCPSolver/LCPSolver.h"/>
+  </compounddef>
+</doxygen>

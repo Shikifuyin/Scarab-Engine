@@ -1,0 +1,321 @@
+/*///////////////////////////////////////////////////////////////////////////////
+// File : <Root>/CSS/CodeDoc.css
+/////////////////////////////////////////////////////////////////////////////////
+// Version : 1.0
+// Began Code : 05/06/2012
+// Status : Alpha
+// Portability : Any
+/////////////////////////////////////////////////////////////////////////////////
+// Description : CodeDoc integration
+/////////////////////////////////////////////////////////////////////////////////
+// Part of Scarab-Engine, licensed under the
+// Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License
+//   http://creativecommons.org/licenses/by-nc-nd/3.0/
+/////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////////
+// Known Bugs : None.
+///////////////////////////////////////////////////////////////////////////////*/
+
+/*///////////////////////////////////////////////////////////////////////////////
+// CodeDoc Integration : Hierarchic containment classes */
+.CodeDocContainer_Level0 {
+    /* Dimensions */
+    width:100%;
+	height:auto;
+
+    /* Positioning */
+    position:relative;
+
+    margin-top:16px;
+    margin-bottom:16px;
+    
+    /* Skinning */
+    background-color:#4a516d;
+    
+    border-radius:8px;
+}
+
+.CodeDocContainer_Level1H {
+    /* Dimensions */
+    width:96%;
+    height:auto;
+    
+    /* Positioning */
+    position:relative;
+
+    margin-left:2%;
+    margin-top:8px;
+    margin-bottom:8px;
+}
+.CodeDocContainer_Level1C {
+    /* Dimensions */
+    width:98%;
+    height:auto;
+    
+    /* Positioning */
+    position:relative;
+
+    margin-left:1%;
+    margin-top:8px;
+    margin-bottom:8px;
+
+    /* Skinning */
+    line-height:22px;
+    /*font:;*/
+}
+
+.CodeDocContainer_Level2H {
+    /* Dimensions */
+    width:100%;
+    height:auto;
+    
+    /* Positioning */
+    position:relative;
+
+    margin-left:0%;
+    margin-top:4px;
+    margin-bottom:4px;
+    
+    /* Skinning */
+    line-height:22px;
+    /*font:;*/
+}
+.CodeDocContainer_Level2C {
+    /* Dimensions */
+    width:100%;
+    height:auto;
+
+    /* Positioning */
+    position:relative;
+
+    margin-left:0%;
+    margin-top:4px;
+    margin-bottom:4px;
+}
+
+.CodeDocContainer_Level3C {
+    /* Dimensions */
+    width:100%;
+    height:auto;
+
+    /* Positioning */
+    position:relative;
+
+	margin-left:0%;
+    margin-top:4px;
+    margin-bottom:4px;
+
+    /* Skinning */
+    line-height:22px;
+    /*font:;*/
+}
+
+/*///////////////////////////////////////////////////////////////////////////////
+// CodeDoc Integration : Property affectation classes */
+.CodeDocProperties_NavTree_Link {
+    /* Skinning */
+    cursor:pointer;
+    
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+.CodeDocProperties_NavTree_Text {
+    /* Skinning */
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+.CodeDocProperties_NavTree_ParentLink {
+    /* Skinning */
+    font-size:16px;
+    font-weight:bold;
+    color:#a8a8a8;
+}
+
+.CodeDocProperties_NavTree_NodeLink {
+    /* Skinning */
+    background-color:#1c1f2d;
+    
+    border-radius:4px;
+
+    line-height:28px;
+    font-size:18px;
+    font-weight:bold;
+    color:#ffffff;
+}
+
+.CodeDocProperties_NavTree_Level0Text {
+    /* Dimensions */
+    width:96%;
+    
+    /* Positioning */
+    position:relative;
+
+    margin-left:4%;
+    
+    /* Skinning */
+    font-size:18px;
+    text-decoration:underline;
+    color:#ee8a86;
+}
+
+.CodeDocProperties_NavTree_Level1Text {
+    /* Dimensions */
+    width:92%;
+    
+     /* Positioning */
+    position:relative;
+
+    margin-left:8%;
+    
+    /* Skinning */
+    font-size:16px;
+    font-style:italic;
+    color:#ee8122;
+}
+
+.CodeDocProperties_NavTree_ChildLink {
+    /* Dimensions */
+    width:88%;
+    
+    /* Positioning */
+    position:relative;
+
+    margin-left:12%;
+    
+    /* Skinning */
+    font-size:14px;
+    color:#ffffff;
+}
+
+.CodeDocProperties_HeaderText {        
+    /* Skinning */
+    font-size:18px;
+    font-weight:bold;
+    color:#ee8122;
+
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+.CodeDocProperties_ContentText {
+    /* Dimensions */
+    width:92%;
+    
+    /* Positioning */
+    position:relative;
+
+    margin-left:8%;
+    
+    /* Skinning */
+    font-size:14px;
+    color:#ffffff;
+}
+
+.CodeDocProperties_Item_HeaderText {
+    /* Dimensions */
+    width:16%;
+
+    /* Positioning */
+    position:relative;
+    float:left;
+
+    margin-left:0%;
+    
+    /* Skinning */
+    font-size:18px;
+    font-weight:bold;
+    color:#ee8122;
+
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+.CodeDocProperties_Item_SubHeaderText {
+    /* Dimensions */
+    width:14%;
+
+    /* Positioning */
+    position:relative;
+    float:left;
+
+    margin-left:2%;
+    
+     /* Skinning */
+    font-size:16px;
+    font-weight:bold;
+    color:#ffffff;
+
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+.CodeDocProperties_Item_ContentText {
+    /* Dimensions */
+    width:84%;
+
+    /* Positioning */
+    position:relative;
+    float:right;
+
+    margin-right:0%;
+
+    /* Skinning */
+    font-size:14px;
+    color:#ffffff;
+}
+
+.CodeDocProperties_CrossedLink {
+    /* Skinning */
+    color:#ee8a86;
+
+    cursor:pointer;
+    
+    white-space:nowrap;
+}
+
+/*///////////////////////////////////////////////////////////////////////////////
+// CodeDoc Integration : Specific styling */
+
+/* Root ************************************************************************/
+#CodeDocHeader {
+    /* Dimensions */
+    width:22%;
+
+	/* Positioning */
+    position:relative;
+    float:left;
+    
+    margin-left:1%;
+}
+
+#CodeDocContent {
+    /* Dimensions */
+    width:75%;
+
+    /* Positioning */
+    position:relative;
+    float:right;
+    
+    margin-right:1%;
+}
+
+/* CodeDocHeader : Commands ****************************************************/
+#CodeDocHeader_Commands_Generator {
+    /* Skinning */
+    text-align:center;
+}
+
+#CodeDocHeader_Commands_Updater {
+    /* Skinning */
+    text-align:center;
+}
+
+

@@ -1,0 +1,674 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="df/d01/classJointEdge" kind="class" prot="public">
+    <compoundname>JointEdge</compoundname>
+    <basecompoundref refid="da/d63/classIslandEdge" prot="public" virt="non-virtual">IslandEdge</basecompoundref>
+    <includes refid="dd/d75/JointEdge_8h" local="no">JointEdge.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="df/d01/classJointEdge_1a1b9205e64c8eea6b30ff05db5d08c807" prot="private" static="no" mutable="no">
+        <type><ref refid="d8/dcd/classConstraint" kindref="compound">Constraint</ref> *</type>
+        <definition>Constraint* m_pConstraint</definition>
+        <argsstring></argsstring>
+        <name>m_pConstraint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/IslandSolver/Edges/JointEdge.h" line="55" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/IslandSolver/Edges/JointEdge.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="df/d01/classJointEdge_1ad80fb2da58ec34fda24cf4dc17ed6e35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>JointEdge</definition>
+        <argsstring>(BodyNode *pNodeA, BodyNode *pNodeB, Constraint *pConstraint)</argsstring>
+        <name>JointEdge</name>
+        <param>
+          <type><ref refid="de/df0/classBodyNode" kindref="compound">BodyNode</ref> *</type>
+          <declname>pNodeA</declname>
+        </param>
+        <param>
+          <type><ref refid="de/df0/classBodyNode" kindref="compound">BodyNode</ref> *</type>
+          <declname>pNodeB</declname>
+        </param>
+        <param>
+          <type><ref refid="d8/dcd/classConstraint" kindref="compound">Constraint</ref> *</type>
+          <declname>pConstraint</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/IslandSolver/Edges/JointEdge.h" line="41"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d01/classJointEdge_1aaadee3a085741202535d32d5253ad42e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~JointEdge</definition>
+        <argsstring>()</argsstring>
+        <name>~JointEdge</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/IslandSolver/Edges/JointEdge.h" line="42"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d01/classJointEdge_1ad17aa026b1a0578bdc68e2ff6117240a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="df/dbc/IslandEdge_8h_1af4927d3c7187a5be68e1695260af153e" kindref="member">IslandEdgeType</ref></type>
+        <definition>virtual IslandEdgeType GetType</definition>
+        <argsstring>() const </argsstring>
+        <name>GetType</name>
+        <reimplements refid="da/d63/classIslandEdge_1a215ba6b92eeb448a962ec510ac0821e1">GetType</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/IslandSolver/Edges/JointEdge.h" line="45"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d01/classJointEdge_1aa1bade1897064fed8fdcebd11565fa3d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="de/df0/classBodyNode" kindref="compound">BodyNode</ref> *</type>
+        <definition>BodyNode* GetBodyA</definition>
+        <argsstring>() const </argsstring>
+        <name>GetBodyA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/IslandSolver/Edges/JointEdge.h" line="48"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d01/classJointEdge_1a6fcf215b14ce2c55db2a94b95e87b905" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="de/df0/classBodyNode" kindref="compound">BodyNode</ref> *</type>
+        <definition>BodyNode* GetBodyB</definition>
+        <argsstring>() const </argsstring>
+        <name>GetBodyB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/IslandSolver/Edges/JointEdge.h" line="49"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d01/classJointEdge_1a6e82680b4784cb77305941701ac3c37d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d8/dcd/classConstraint" kindref="compound">Constraint</ref> *</type>
+        <definition>Constraint* GetConstraint</definition>
+        <argsstring>() const </argsstring>
+        <name>GetConstraint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/IslandSolver/Edges/JointEdge.h" line="52"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="5480">
+        <label>JointEdge</label>
+        <link refid="df/d01/classJointEdge"/>
+        <childnode refid="5481" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5481">
+        <label>IslandEdge</label>
+        <link refid="da/d63/classIslandEdge"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5484">
+        <label>IslandEdgeID</label>
+        <link refid="dd/d41/classIslandEdgeID"/>
+        <childnode refid="5485" relation="usage">
+          <edgelabel>pNodeA</edgelabel>
+          <edgelabel>pNodeB</edgelabel>
+        </childnode>
+      </node>
+      <node id="5504">
+        <label>Mesh</label>
+        <link refid="d9/d5e/classMesh"/>
+        <childnode refid="5505" relation="usage">
+          <edgelabel>m_pVF</edgelabel>
+        </childnode>
+        <childnode refid="5495" relation="usage">
+          <edgelabel>m_iIndexOffset</edgelabel>
+          <edgelabel>m_iVertexOffset</edgelabel>
+        </childnode>
+        <childnode refid="5497" relation="usage">
+          <edgelabel>m_bDynamicUpdate</edgelabel>
+        </childnode>
+        <childnode refid="5510" relation="usage">
+          <edgelabel>m_pIB</edgelabel>
+        </childnode>
+        <childnode refid="5512" relation="usage">
+          <edgelabel>m_pVB</edgelabel>
+        </childnode>
+      </node>
+      <node id="5520">
+        <label>JacobianConstraint</label>
+        <link refid="d2/d61/classJacobianConstraint"/>
+        <childnode refid="5489" relation="usage">
+          <edgelabel>vJAngularA</edgelabel>
+          <edgelabel>vJLinearAxis</edgelabel>
+          <edgelabel>vJAngularB</edgelabel>
+          <edgelabel>vInvIBxJtAngB</edgelabel>
+          <edgelabel>vInvIAxJtAngA</edgelabel>
+        </childnode>
+        <childnode refid="5492" relation="usage">
+          <edgelabel>fInvDiagJWJtAB</edgelabel>
+        </childnode>
+      </node>
+      <node id="5494">
+        <label>static const Scalar</label>
+      </node>
+      <node id="5513">
+        <label>VertexBufferUsage</label>
+      </node>
+      <node id="5488">
+        <label>BodyNode</label>
+        <link refid="de/df0/classBodyNode"/>
+        <childnode refid="5485" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5489" relation="usage">
+          <edgelabel>m_vTorqueBuffer</edgelabel>
+          <edgelabel>m_vLinearCorrectionBuffer</edgelabel>
+          <edgelabel>m_vForceBuffer</edgelabel>
+          <edgelabel>m_vAngularCorrectionBuffer</edgelabel>
+          <edgelabel>m_vLinearImpulseBuffer</edgelabel>
+          <edgelabel>m_vAngularSpeed</edgelabel>
+          <edgelabel>m_vLinearSpeed</edgelabel>
+          <edgelabel>m_vAngularImpulseBuffer</edgelabel>
+        </childnode>
+        <childnode refid="5491" relation="usage">
+          <edgelabel>m_matInvInertiaTensor</edgelabel>
+          <edgelabel>m_matInertiaTensor</edgelabel>
+          <edgelabel>sm_matInfinity</edgelabel>
+        </childnode>
+        <childnode refid="5492" relation="usage">
+          <edgelabel>m_fDensity</edgelabel>
+          <edgelabel>m_fMass</edgelabel>
+          <edgelabel>m_fAngularDamping</edgelabel>
+          <edgelabel>m_fRestitution</edgelabel>
+          <edgelabel>m_fFriction</edgelabel>
+          <edgelabel>m_fInvMass</edgelabel>
+          <edgelabel>m_fLinearDamping</edgelabel>
+        </childnode>
+        <childnode refid="5493" relation="usage">
+          <edgelabel>m_qOrientation</edgelabel>
+        </childnode>
+        <childnode refid="5495" relation="usage">
+          <edgelabel>m_iSleepTime</edgelabel>
+        </childnode>
+        <childnode refid="5496" relation="usage">
+          <edgelabel>m_iCollisionMask</edgelabel>
+          <edgelabel>m_iCollisionGroup</edgelabel>
+        </childnode>
+        <childnode refid="5497" relation="usage">
+          <edgelabel>m_bSensor</edgelabel>
+          <edgelabel>m_bSleeping</edgelabel>
+          <edgelabel>m_bStatic</edgelabel>
+        </childnode>
+        <childnode refid="5498" relation="usage">
+          <edgelabel>m_vTransform</edgelabel>
+        </childnode>
+        <childnode refid="5500" relation="usage">
+          <edgelabel>m_vCenterOfMass</edgelabel>
+          <edgelabel>m_vPosition</edgelabel>
+        </childnode>
+        <childnode refid="5501" relation="usage">
+          <edgelabel>m_pLocalShape</edgelabel>
+        </childnode>
+        <childnode refid="5514" relation="usage">
+          <edgelabel>m_pWorldShape</edgelabel>
+        </childnode>
+      </node>
+      <node id="5491">
+        <label>TMatrix3&lt; Scalar &gt;</label>
+        <link refid="d7/dee/classTMatrix3"/>
+        <childnode refid="5491" relation="usage">
+          <edgelabel>Identity</edgelabel>
+          <edgelabel>Null</edgelabel>
+        </childnode>
+        <childnode refid="5492" relation="usage">
+          <edgelabel>ONE</edgelabel>
+          <edgelabel>m20</edgelabel>
+          <edgelabel>m21</edgelabel>
+          <edgelabel>m10</edgelabel>
+          <edgelabel>m22</edgelabel>
+          <edgelabel>m11</edgelabel>
+          <edgelabel>m00</edgelabel>
+          <edgelabel>TWO</edgelabel>
+          <edgelabel>m12</edgelabel>
+          <edgelabel>m01</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="5492">
+        <label>float</label>
+      </node>
+      <node id="5496">
+        <label>UInt64</label>
+      </node>
+      <node id="5499">
+        <label>TMatrix4&lt; Scalar &gt;</label>
+        <link refid="d5/d09/classTMatrix4"/>
+        <childnode refid="5499" relation="usage">
+          <edgelabel>Identity</edgelabel>
+          <edgelabel>Null</edgelabel>
+        </childnode>
+        <childnode refid="5492" relation="usage">
+          <edgelabel>ONE</edgelabel>
+          <edgelabel>m30</edgelabel>
+          <edgelabel>m31</edgelabel>
+          <edgelabel>m20</edgelabel>
+          <edgelabel>m32</edgelabel>
+          <edgelabel>m21</edgelabel>
+          <edgelabel>m10</edgelabel>
+          <edgelabel>m33</edgelabel>
+          <edgelabel>m22</edgelabel>
+          <edgelabel>m11</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="5505">
+        <label>VertexFormat</label>
+        <link refid="da/dc2/classVertexFormat"/>
+        <childnode refid="5506" relation="usage">
+          <edgelabel>m_arrFields</edgelabel>
+        </childnode>
+        <childnode refid="5495" relation="usage">
+          <edgelabel>m_iSize</edgelabel>
+          <edgelabel>m_iFieldCount</edgelabel>
+          <edgelabel>m_arrUsageLUT</edgelabel>
+        </childnode>
+        <childnode refid="5497" relation="usage">
+          <edgelabel>m_bFinalized</edgelabel>
+        </childnode>
+        <childnode refid="5509" relation="usage">
+          <edgelabel>sm_arrComponentCount</edgelabel>
+          <edgelabel>sm_arrTypeSize</edgelabel>
+          <edgelabel>sm_arrComponentSize</edgelabel>
+        </childnode>
+      </node>
+      <node id="5493">
+        <label>TQuaternion&lt; Scalar &gt;</label>
+        <link refid="d5/dad/classTQuaternion"/>
+        <childnode refid="5493" relation="usage">
+          <edgelabel>Identity</edgelabel>
+          <edgelabel>Null</edgelabel>
+        </childnode>
+        <childnode refid="5494" relation="usage">
+          <edgelabel>ONE</edgelabel>
+          <edgelabel>TWO</edgelabel>
+          <edgelabel>ZERO</edgelabel>
+        </childnode>
+        <childnode refid="5490" relation="usage">
+          <edgelabel>W</edgelabel>
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+          <edgelabel>Z</edgelabel>
+        </childnode>
+      </node>
+      <node id="5506">
+        <label>VFField</label>
+        <link refid="de/d92/structVFField"/>
+        <childnode refid="5507" relation="usage">
+          <edgelabel>iUsage</edgelabel>
+        </childnode>
+        <childnode refid="5495" relation="usage">
+          <edgelabel>iSize</edgelabel>
+          <edgelabel>iUsageIndex</edgelabel>
+          <edgelabel>iOffset</edgelabel>
+        </childnode>
+        <childnode refid="5508" relation="usage">
+          <edgelabel>iType</edgelabel>
+        </childnode>
+      </node>
+      <node id="5509">
+        <label>unsigned int</label>
+      </node>
+      <node id="5487">
+        <label>unsigned char</label>
+      </node>
+      <node id="5514">
+        <label>TransformedShape</label>
+        <link refid="d2/d1b/classTransformedShape"/>
+        <childnode refid="5502" relation="usage">
+          <edgelabel>m_bvWorldAAB</edgelabel>
+        </childnode>
+        <childnode refid="5498" relation="usage">
+          <edgelabel>m_vTransform</edgelabel>
+        </childnode>
+        <childnode refid="5501" relation="usage">
+          <edgelabel>m_pShape</edgelabel>
+        </childnode>
+      </node>
+      <node id="5495">
+        <label>int</label>
+      </node>
+      <node id="5502">
+        <label>TBVAABox&lt; Scalar &gt;</label>
+        <link refid="d9/d90/classTBVAABox"/>
+        <childnode refid="5503" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5489" relation="usage">
+          <edgelabel>m_vExtents</edgelabel>
+        </childnode>
+        <childnode refid="5500" relation="usage">
+          <edgelabel>m_vCenter</edgelabel>
+        </childnode>
+      </node>
+      <node id="5516">
+        <label>ContactManifold</label>
+        <link refid="d2/d6f/classContactManifold"/>
+      </node>
+      <node id="5490">
+        <label>Scalar</label>
+      </node>
+      <node id="5482">
+        <label>JointEdge</label>
+        <link refid="df/d01/classJointEdge"/>
+        <childnode refid="5483" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5518" relation="usage">
+          <edgelabel>m_pConstraint</edgelabel>
+        </childnode>
+      </node>
+      <node id="5508">
+        <label>VFFieldType</label>
+      </node>
+      <node id="5521">
+        <label>RigidBody</label>
+        <link refid="d6/d88/classRigidBody"/>
+        <childnode refid="5488" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5511">
+        <label>IndexBufferUsage</label>
+      </node>
+      <node id="5498">
+        <label>TTransform3&lt; Scalar &gt;</label>
+        <link refid="d0/d75/classTTransform3"/>
+        <childnode refid="5489" relation="usage">
+          <edgelabel>m_vScale</edgelabel>
+          <edgelabel>m_vInvScale</edgelabel>
+          <edgelabel>m_vInvTranslate</edgelabel>
+          <edgelabel>m_vTranslate</edgelabel>
+        </childnode>
+        <childnode refid="5499" relation="usage">
+          <edgelabel>m_matHMatrix</edgelabel>
+        </childnode>
+        <childnode refid="5491" relation="usage">
+          <edgelabel>m_matInvTransform</edgelabel>
+          <edgelabel>m_matTransform</edgelabel>
+        </childnode>
+        <childnode refid="5497" relation="usage">
+          <edgelabel>m_bIsUniformScale</edgelabel>
+          <edgelabel>m_bIsIdentity</edgelabel>
+          <edgelabel>m_bUpdateInverse</edgelabel>
+          <edgelabel>m_bIsRotScale</edgelabel>
+        </childnode>
+        <childnode refid="5498" relation="usage">
+          <edgelabel>Identity</edgelabel>
+        </childnode>
+      </node>
+      <node id="5489">
+        <label>TVector3&lt; Scalar &gt;</label>
+        <link refid="de/d40/classTVector3"/>
+        <childnode refid="5489" relation="usage">
+          <edgelabel>Null</edgelabel>
+          <edgelabel>eI</edgelabel>
+          <edgelabel>eJ</edgelabel>
+          <edgelabel>eK</edgelabel>
+        </childnode>
+        <childnode refid="5490" relation="usage">
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+          <edgelabel>Z</edgelabel>
+        </childnode>
+      </node>
+      <node id="5486">
+        <label>Island</label>
+        <link refid="d0/dd6/classIsland"/>
+        <childnode refid="5486" relation="usage">
+          <edgelabel>m_pNextInWorld</edgelabel>
+          <edgelabel>m_pPrevInWorld</edgelabel>
+        </childnode>
+        <childnode refid="5487" relation="usage">
+          <edgelabel>m_iColor</edgelabel>
+        </childnode>
+        <childnode refid="5488" relation="usage">
+          <edgelabel>m_pListBodies</edgelabel>
+        </childnode>
+        <childnode refid="5495" relation="usage">
+          <edgelabel>m_iContactCount</edgelabel>
+          <edgelabel>m_iJointCount</edgelabel>
+          <edgelabel>m_iBodyCount</edgelabel>
+          <edgelabel>m_iStackLayerCount</edgelabel>
+        </childnode>
+        <childnode refid="5482" relation="usage">
+          <edgelabel>m_pListJoints</edgelabel>
+        </childnode>
+        <childnode refid="5515" relation="usage">
+          <edgelabel>m_pListContacts</edgelabel>
+        </childnode>
+      </node>
+      <node id="5500">
+        <label>TVertex3&lt; Scalar &gt;</label>
+        <link refid="dc/d75/classTVertex3"/>
+        <childnode refid="5490" relation="usage">
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+          <edgelabel>Z</edgelabel>
+        </childnode>
+        <childnode refid="5500" relation="usage">
+          <edgelabel>Null</edgelabel>
+        </childnode>
+      </node>
+      <node id="5501">
+        <label>Shape</label>
+        <link refid="de/d0a/classShape"/>
+        <childnode refid="5502" relation="usage">
+          <edgelabel>m_bvLocalAAB</edgelabel>
+        </childnode>
+        <childnode refid="5504" relation="usage">
+          <edgelabel>m_pMesh</edgelabel>
+        </childnode>
+      </node>
+      <node id="5515">
+        <label>ContactEdge</label>
+        <link refid="dc/d79/classContactEdge"/>
+        <childnode refid="5483" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5516" relation="usage">
+          <edgelabel>m_pContactManifold</edgelabel>
+        </childnode>
+        <childnode refid="5517" relation="usage">
+          <edgelabel>m_pNarrowPhase</edgelabel>
+        </childnode>
+      </node>
+      <node id="5507">
+        <label>VFFieldUsage</label>
+      </node>
+      <node id="5483">
+        <label>IslandEdge</label>
+        <link refid="da/d63/classIslandEdge"/>
+        <childnode refid="5484" relation="usage">
+          <edgelabel>m_idEdge</edgelabel>
+        </childnode>
+        <childnode refid="5486" relation="usage">
+          <edgelabel>m_pIsland</edgelabel>
+        </childnode>
+        <childnode refid="5487" relation="usage">
+          <edgelabel>m_iColor</edgelabel>
+        </childnode>
+        <childnode refid="5485" relation="usage">
+          <edgelabel>m_pNodeA</edgelabel>
+          <edgelabel>m_pNodeB</edgelabel>
+        </childnode>
+        <childnode refid="5495" relation="usage">
+          <edgelabel>m_iStackLayer</edgelabel>
+        </childnode>
+        <childnode refid="5483" relation="usage">
+          <edgelabel>m_pNextInWorld</edgelabel>
+          <edgelabel>m_pNextInIsland</edgelabel>
+          <edgelabel>m_pPrevInNodeA</edgelabel>
+          <edgelabel>m_pNextInNodeA</edgelabel>
+          <edgelabel>m_pPrevInNodeB</edgelabel>
+          <edgelabel>m_pNextInNodeB</edgelabel>
+          <edgelabel>m_pPrevInWorld</edgelabel>
+          <edgelabel>m_pPrevInIsland</edgelabel>
+        </childnode>
+      </node>
+      <node id="5512">
+        <label>VertexBuffer</label>
+        <link refid="d7/d72/classVertexBuffer"/>
+        <childnode refid="5487" relation="usage">
+          <edgelabel>m_arrVertices</edgelabel>
+        </childnode>
+        <childnode refid="5495" relation="usage">
+          <edgelabel>m_iSize</edgelabel>
+          <edgelabel>m_iVertexCount</edgelabel>
+          <edgelabel>m_iVertexSize</edgelabel>
+        </childnode>
+        <childnode refid="5513" relation="usage">
+          <edgelabel>m_iUsage</edgelabel>
+        </childnode>
+      </node>
+      <node id="5497">
+        <label>bool</label>
+      </node>
+      <node id="5518">
+        <label>Constraint</label>
+        <link refid="d8/dcd/classConstraint"/>
+        <childnode refid="5519" relation="usage">
+          <edgelabel>m_arrRows</edgelabel>
+        </childnode>
+        <childnode refid="5495" relation="usage">
+          <edgelabel>m_iRowCount</edgelabel>
+        </childnode>
+        <childnode refid="5521" relation="usage">
+          <edgelabel>m_pRigidBodyA</edgelabel>
+          <edgelabel>m_pRigidBodyB</edgelabel>
+        </childnode>
+      </node>
+      <node id="5503">
+        <label>TBoundingVolume&lt; Scalar &gt;</label>
+        <link refid="d6/d19/classTBoundingVolume"/>
+      </node>
+      <node id="5517">
+        <label>NarrowPhase</label>
+        <link refid="dd/d93/classNarrowPhase"/>
+        <childnode refid="5492" relation="usage">
+          <edgelabel>ZeroTolerance</edgelabel>
+        </childnode>
+        <childnode refid="5516" relation="usage">
+          <edgelabel>m_pCollisionManifold</edgelabel>
+        </childnode>
+        <childnode refid="5514" relation="usage">
+          <edgelabel>m_pShapeA</edgelabel>
+          <edgelabel>m_pShapeB</edgelabel>
+        </childnode>
+      </node>
+      <node id="5510">
+        <label>IndexBuffer</label>
+        <link refid="dd/df7/classIndexBuffer"/>
+        <childnode refid="5487" relation="usage">
+          <edgelabel>m_arrIndices</edgelabel>
+        </childnode>
+        <childnode refid="5495" relation="usage">
+          <edgelabel>m_iIndexSize</edgelabel>
+          <edgelabel>m_iSize</edgelabel>
+          <edgelabel>m_iIndexCount</edgelabel>
+        </childnode>
+        <childnode refid="5511" relation="usage">
+          <edgelabel>m_iUsage</edgelabel>
+        </childnode>
+      </node>
+      <node id="5519">
+        <label>ConstraintRow</label>
+        <link refid="dd/d74/structConstraintRow"/>
+        <childnode refid="5520" relation="usage">
+          <edgelabel>constrJacobian</edgelabel>
+        </childnode>
+        <childnode refid="5492" relation="usage">
+          <edgelabel>fUpperLimit</edgelabel>
+          <edgelabel>fLowerLimit</edgelabel>
+          <edgelabel>fError</edgelabel>
+          <edgelabel>fCFM</edgelabel>
+          <edgelabel>fImpulse</edgelabel>
+        </childnode>
+      </node>
+      <node id="5485">
+        <label>IslandNode</label>
+        <link refid="d4/d8c/classIslandNode"/>
+        <childnode refid="5486" relation="usage">
+          <edgelabel>m_pIsland</edgelabel>
+        </childnode>
+        <childnode refid="5485" relation="usage">
+          <edgelabel>m_pNextInWorld</edgelabel>
+          <edgelabel>m_pNextInIsland</edgelabel>
+          <edgelabel>m_pPrevInWorld</edgelabel>
+          <edgelabel>m_pPrevInIsland</edgelabel>
+        </childnode>
+        <childnode refid="5495" relation="usage">
+          <edgelabel>m_iContactCount</edgelabel>
+          <edgelabel>m_iJointCount</edgelabel>
+          <edgelabel>m_iStackLayer</edgelabel>
+          <edgelabel>m_iIslandRefCount</edgelabel>
+        </childnode>
+        <childnode refid="5497" relation="usage">
+          <edgelabel>m_bFixed</edgelabel>
+        </childnode>
+        <childnode refid="5482" relation="usage">
+          <edgelabel>m_pListJoints</edgelabel>
+        </childnode>
+        <childnode refid="5515" relation="usage">
+          <edgelabel>m_pListContacts</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/IslandSolver/Edges/JointEdge.h" line="39" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/IslandSolver/Edges/JointEdge.h" bodystart="38" bodyend="56"/>
+    <listofallmembers>
+      <member refid="df/d01/classJointEdge_1aa1bade1897064fed8fdcebd11565fa3d" prot="public" virt="non-virtual"><scope>JointEdge</scope><name>GetBodyA</name></member>
+      <member refid="df/d01/classJointEdge_1a6fcf215b14ce2c55db2a94b95e87b905" prot="public" virt="non-virtual"><scope>JointEdge</scope><name>GetBodyB</name></member>
+      <member refid="da/d63/classIslandEdge_1adfcf1fd51bc72ee1f2c0f12ba3ae9449" prot="public" virt="non-virtual"><scope>JointEdge</scope><name>GetColor</name></member>
+      <member refid="df/d01/classJointEdge_1a6e82680b4784cb77305941701ac3c37d" prot="public" virt="non-virtual"><scope>JointEdge</scope><name>GetConstraint</name></member>
+      <member refid="da/d63/classIslandEdge_1a3f765aa24e5dcd4683e2744b20914005" prot="public" virt="non-virtual"><scope>JointEdge</scope><name>GetID</name></member>
+      <member refid="da/d63/classIslandEdge_1a0e2e4787130914dd9be42df3330e25be" prot="public" virt="non-virtual"><scope>JointEdge</scope><name>GetIsland</name></member>
+      <member refid="da/d63/classIslandEdge_1a9af145f1814499376b8cc503c837de04" prot="public" virt="non-virtual"><scope>JointEdge</scope><name>GetNextInIsland</name></member>
+      <member refid="da/d63/classIslandEdge_1ac9f7532772267643c8d0a5f6c5ec8a66" prot="public" virt="non-virtual"><scope>JointEdge</scope><name>GetNextInNode</name></member>
+      <member refid="da/d63/classIslandEdge_1adb5d3af999ba796fe712ae31b5173085" prot="public" virt="non-virtual"><scope>JointEdge</scope><name>GetNextInNodeA</name></member>
+      <member refid="da/d63/classIslandEdge_1a2832a8ffc6e1751b41fb482df4df5875" prot="public" virt="non-virtual"><scope>JointEdge</scope><name>GetNextInNodeB</name></member>
+      <member refid="da/d63/classIslandEdge_1a2008c452ca27331428af0ec90acd55ff" prot="public" virt="non-virtual"><scope>JointEdge</scope><name>GetNextInWorld</name></member>
+      <member refid="da/d63/classIslandEdge_1afce80e7839bafa37bd489e434fc6da1c" prot="public" virt="non-virtual"><scope>JointEdge</scope><name>GetNodeA</name></member>
+      <member refid="da/d63/classIslandEdge_1aa9e8a378b7c44c55efe52748542f0bae" prot="public" virt="non-virtual"><scope>JointEdge</scope><name>GetNodeB</name></member>
+      <member refid="da/d63/classIslandEdge_1a0b434a1fad03d9732ff82f1689625408" prot="public" virt="non-virtual"><scope>JointEdge</scope><name>GetPrevInIsland</name></member>
+      <member refid="da/d63/classIslandEdge_1a5bfaee0f6fe60d31752000183deefc59" prot="public" virt="non-virtual"><scope>JointEdge</scope><name>GetPrevInNode</name></member>
+      <member refid="da/d63/classIslandEdge_1a9e7e0f2167a66a1bfed3107867aead06" prot="public" virt="non-virtual"><scope>JointEdge</scope><name>GetPrevInNodeA</name></member>
+      <member refid="da/d63/classIslandEdge_1a9d4c65ebc2f0fe6a5ec83f258e6a6603" prot="public" virt="non-virtual"><scope>JointEdge</scope><name>GetPrevInNodeB</name></member>
+      <member refid="da/d63/classIslandEdge_1a0f9d7e777ffd8200baec97089029e5fc" prot="public" virt="non-virtual"><scope>JointEdge</scope><name>GetPrevInWorld</name></member>
+      <member refid="da/d63/classIslandEdge_1ad10e2503934cd7e353d810831ce849d1" prot="public" virt="non-virtual"><scope>JointEdge</scope><name>GetStackLayer</name></member>
+      <member refid="df/d01/classJointEdge_1ad17aa026b1a0578bdc68e2ff6117240a" prot="public" virt="virtual"><scope>JointEdge</scope><name>GetType</name></member>
+      <member refid="da/d63/classIslandEdge_1a140b505a180b5bd79eb63d6ddc2b7641" prot="public" virt="non-virtual"><scope>JointEdge</scope><name>IslandEdge</name></member>
+      <member refid="df/d01/classJointEdge_1ad80fb2da58ec34fda24cf4dc17ed6e35" prot="public" virt="non-virtual"><scope>JointEdge</scope><name>JointEdge</name></member>
+      <member refid="df/d01/classJointEdge_1a1b9205e64c8eea6b30ff05db5d08c807" prot="private" virt="non-virtual"><scope>JointEdge</scope><name>m_pConstraint</name></member>
+      <member refid="da/d63/classIslandEdge_1ab86fbf6d17c8cb864f498cbfd9772d39" prot="public" virt="non-virtual"><scope>JointEdge</scope><name>SetColor</name></member>
+      <member refid="da/d63/classIslandEdge_1a6d56cb41c959fd22607e27bfe3598fc7" prot="public" virt="virtual"><scope>JointEdge</scope><name>~IslandEdge</name></member>
+      <member refid="df/d01/classJointEdge_1aaadee3a085741202535d32d5253ad42e" prot="public" virt="virtual"><scope>JointEdge</scope><name>~JointEdge</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

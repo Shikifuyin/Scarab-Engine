@@ -1,0 +1,264 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="dc/d94/classGUIBackboard" kind="class" prot="public">
+    <compoundname>GUIBackboard</compoundname>
+    <basecompoundref refid="d2/de5/classGUIEventProcessor" prot="public" virt="non-virtual">GUIEventProcessor</basecompoundref>
+    <includes refid="d3/d36/GUIBackboard_8h" local="no">GUIBackboard.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="dc/d94/classGUIBackboard_1a92159a7b7e89a3c9c85c2cac3e63cf77" prot="private" static="no" mutable="no">
+        <type><ref refid="d0/de5/classRectangle2" kindref="compound">Rectangle2</ref></type>
+        <definition>Rectangle2 m_rectScreen</definition>
+        <argsstring></argsstring>
+        <name>m_rectScreen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIBackboard.h" line="86" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIBackboard.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="dc/d94/classGUIBackboard_1a43d807164f0302dbc4ac148d88cb767f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GUIBackboard</definition>
+        <argsstring>(GUIBackboardModel *pModel)</argsstring>
+        <name>GUIBackboard</name>
+        <param>
+          <type><ref refid="db/d58/classGUIBackboardModel" kindref="compound">GUIBackboardModel</ref> *</type>
+          <declname>pModel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIBackboard.h" line="72"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d94/classGUIBackboard_1a5031a022fe823c116b3af6df65b7b60b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~GUIBackboard</definition>
+        <argsstring>()</argsstring>
+        <name>~GUIBackboard</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIBackboard.h" line="73"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d94/classGUIBackboard_1afe8a6b043490dc3f5326857ecc551f7b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d0/de5/classRectangle2" kindref="compound">Rectangle2</ref> &amp;</type>
+        <definition>const Rectangle2&amp; GetScreenRect</definition>
+        <argsstring>() const </argsstring>
+        <name>GetScreenRect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIBackboard.h" line="76"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d94/classGUIBackboard_1a804da0a910545504741917d2874b8418" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetModel</definition>
+        <argsstring>(GUIBackboardModel *pModel)</argsstring>
+        <name>SetModel</name>
+        <param>
+          <type><ref refid="db/d58/classGUIBackboardModel" kindref="compound">GUIBackboardModel</ref> *</type>
+          <declname>pModel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIBackboard.h" line="79"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="dc/d94/classGUIBackboard_1a1f83fbf16fee86e063622d2ddb9a61c0" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void _ToLocalCoords</definition>
+        <argsstring>(Point2 *outLocalPos, const Point2 &amp;ptScreenPos) const </argsstring>
+        <name>_ToLocalCoords</name>
+        <reimplements refid="d2/de5/classGUIEventProcessor_1ae965138d75de512a4fd6e93ed46912fa">_ToLocalCoords</reimplements>
+        <param>
+          <type><ref refid="dd/d98/classPoint2" kindref="compound">Point2</ref> *</type>
+          <declname>outLocalPos</declname>
+        </param>
+        <param>
+          <type>const <ref refid="dd/d98/classPoint2" kindref="compound">Point2</ref> &amp;</type>
+          <declname>ptScreenPos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIBackboard.h" line="83"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3030">
+        <label>GUIBackboard</label>
+        <link refid="dc/d94/classGUIBackboard"/>
+        <childnode refid="3031" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3031">
+        <label>GUIEventProcessor</label>
+        <link refid="d2/de5/classGUIEventProcessor"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3046">
+        <label>@19</label>
+      </node>
+      <node id="3035">
+        <label>RingBuffer&lt; GUIEvent &gt;</label>
+        <link refid="d8/d2d/classRingBuffer"/>
+        <childnode refid="3036" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3038" relation="usage">
+          <edgelabel>m_arrBuffer</edgelabel>
+        </childnode>
+        <childnode refid="3041" relation="usage">
+          <edgelabel>m_iRead</edgelabel>
+          <edgelabel>m_iBufferSize</edgelabel>
+          <edgelabel>m_iCount</edgelabel>
+          <edgelabel>m_iWrite</edgelabel>
+        </childnode>
+      </node>
+      <node id="3044">
+        <label>Rectangle2</label>
+        <link refid="d0/de5/classRectangle2"/>
+        <childnode refid="3045" relation="usage">
+          <edgelabel>DownRight</edgelabel>
+          <edgelabel>TopLeft</edgelabel>
+        </childnode>
+      </node>
+      <node id="3038">
+        <label>GUIEvent</label>
+        <link refid="d9/d68/classGUIEvent"/>
+        <childnode refid="3039" relation="usage">
+          <edgelabel>m_arrParameters</edgelabel>
+        </childnode>
+        <childnode refid="3040" relation="usage">
+          <edgelabel>m_iType</edgelabel>
+        </childnode>
+        <childnode refid="3041" relation="usage">
+          <edgelabel>m_arrParamOffsets</edgelabel>
+          <edgelabel>m_iParamCount</edgelabel>
+          <edgelabel>m_iParamTotalSize</edgelabel>
+        </childnode>
+        <childnode refid="3037" relation="usage">
+          <edgelabel>m_iFlags</edgelabel>
+        </childnode>
+      </node>
+      <node id="3037">
+        <label>unsigned int</label>
+      </node>
+      <node id="3039">
+        <label>unsigned char</label>
+      </node>
+      <node id="3032">
+        <label>GUIBackboard</label>
+        <link refid="dc/d94/classGUIBackboard"/>
+        <childnode refid="3033" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3044" relation="usage">
+          <edgelabel>m_rectScreen</edgelabel>
+        </childnode>
+      </node>
+      <node id="3045">
+        <label>Point2</label>
+        <link refid="dd/d98/classPoint2"/>
+        <childnode refid="3045" relation="usage">
+          <edgelabel>Null</edgelabel>
+        </childnode>
+        <childnode refid="3041" relation="usage">
+          <edgelabel>Values</edgelabel>
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+        </childnode>
+        <childnode refid="3046" relation="usage">
+          <edgelabel>@20</edgelabel>
+        </childnode>
+      </node>
+      <node id="3041">
+        <label>int</label>
+      </node>
+      <node id="3040">
+        <label>GUIEventType</label>
+      </node>
+      <node id="3043">
+        <label>GUIEventProcessorModel</label>
+        <link refid="dd/d40/classGUIEventProcessorModel"/>
+        <childnode refid="3033" relation="usage">
+          <edgelabel>m_pEventProcessor</edgelabel>
+        </childnode>
+      </node>
+      <node id="3042">
+        <label>bool</label>
+      </node>
+      <node id="3034">
+        <label>char</label>
+      </node>
+      <node id="3033">
+        <label>GUIEventProcessor</label>
+        <link refid="d2/de5/classGUIEventProcessor"/>
+        <childnode refid="3034" relation="usage">
+          <edgelabel>m_strName</edgelabel>
+        </childnode>
+        <childnode refid="3035" relation="usage">
+          <edgelabel>m_bufEventQueue</edgelabel>
+        </childnode>
+        <childnode refid="3042" relation="usage">
+          <edgelabel>m_bHasFocus</edgelabel>
+          <edgelabel>m_bHasMouseOver</edgelabel>
+        </childnode>
+        <childnode refid="3043" relation="usage">
+          <edgelabel>m_pModel</edgelabel>
+        </childnode>
+      </node>
+      <node id="3036">
+        <label>Datastruct</label>
+        <link refid="dc/d51/classDatastruct"/>
+        <childnode refid="3034" relation="usage">
+          <edgelabel>m_strAllocatorName</edgelabel>
+        </childnode>
+        <childnode refid="3037" relation="usage">
+          <edgelabel>m_idMemoryContext</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIBackboard.h" line="70" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIBackboard.h" bodystart="69" bodyend="87"/>
+    <listofallmembers>
+      <member refid="d2/de5/classGUIEventProcessor_1a9993868ef8d0dd88b2a2f8f355f8770a" prot="protected" virt="virtual"><scope>GUIBackboard</scope><name>_ProcessNextEvent</name></member>
+      <member refid="dc/d94/classGUIBackboard_1a1f83fbf16fee86e063622d2ddb9a61c0" prot="private" virt="virtual"><scope>GUIBackboard</scope><name>_ToLocalCoords</name></member>
+      <member refid="d2/de5/classGUIEventProcessor_1a23a6a517f805b9a6b0f86083d107a6f1" prot="public" virt="non-virtual"><scope>GUIBackboard</scope><name>GetModel</name></member>
+      <member refid="d2/de5/classGUIEventProcessor_1acb24949ad36a8ed7b0008515d78ac5ae" prot="public" virt="non-virtual"><scope>GUIBackboard</scope><name>GetName</name></member>
+      <member refid="dc/d94/classGUIBackboard_1afe8a6b043490dc3f5326857ecc551f7b" prot="public" virt="non-virtual"><scope>GUIBackboard</scope><name>GetScreenRect</name></member>
+      <member refid="dc/d94/classGUIBackboard_1a43d807164f0302dbc4ac148d88cb767f" prot="public" virt="non-virtual"><scope>GUIBackboard</scope><name>GUIBackboard</name></member>
+      <member refid="d2/de5/classGUIEventProcessor_1a2eb2f4943fc0a348670704b3293a8c86" prot="public" virt="non-virtual"><scope>GUIBackboard</scope><name>GUIEventProcessor</name></member>
+      <member refid="d2/de5/classGUIEventProcessor_1ac4aff9207c080bbdd197035e57432722" prot="public" virt="non-virtual"><scope>GUIBackboard</scope><name>HasFocus</name></member>
+      <member refid="d2/de5/classGUIEventProcessor_1a79da1b0a3e1b232fd54ebfda341284b2" prot="public" virt="non-virtual"><scope>GUIBackboard</scope><name>HasMouseOver</name></member>
+      <member refid="d2/de5/classGUIEventProcessor_1a81aecbf23c2114735288e14d1e1c2f50" prot="protected" virt="non-virtual"><scope>GUIBackboard</scope><name>m_pModel</name></member>
+      <member refid="dc/d94/classGUIBackboard_1a92159a7b7e89a3c9c85c2cac3e63cf77" prot="private" virt="non-virtual"><scope>GUIBackboard</scope><name>m_rectScreen</name></member>
+      <member refid="dc/d94/classGUIBackboard_1a804da0a910545504741917d2874b8418" prot="public" virt="non-virtual"><scope>GUIBackboard</scope><name>SetModel</name></member>
+      <member refid="dc/d94/classGUIBackboard_1a5031a022fe823c116b3af6df65b7b60b" prot="public" virt="virtual"><scope>GUIBackboard</scope><name>~GUIBackboard</name></member>
+      <member refid="d2/de5/classGUIEventProcessor_1a089a853814dde33933ca9a34e961473f" prot="public" virt="virtual"><scope>GUIBackboard</scope><name>~GUIEventProcessor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

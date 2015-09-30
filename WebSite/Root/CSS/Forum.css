@@ -1,0 +1,438 @@
+/*///////////////////////////////////////////////////////////////////////////////
+// File : <Root>/CSS/Forum.css
+/////////////////////////////////////////////////////////////////////////////////
+// Version : 1.0
+// Began Code : 05/06/2012
+// Status : Alpha
+// Portability : Any
+/////////////////////////////////////////////////////////////////////////////////
+// Description : Forum integration
+/////////////////////////////////////////////////////////////////////////////////
+// Part of Scarab-Engine, licensed under the
+// Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License
+//   http://creativecommons.org/licenses/by-nc-nd/3.0/
+/////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////////
+// Known Bugs : TODO : Skin Admin form ...
+///////////////////////////////////////////////////////////////////////////////*/
+
+/*///////////////////////////////////////////////////////////////////////////////
+// Forum Integration : Hierarchic containment classes */
+.ForumContainer_Level0 {
+    /* Dimensions */
+    width:96%;
+	height:auto;
+
+    /* Positioning */
+    position:relative;
+
+	margin-left:2%;
+    margin-top:16px;
+    margin-bottom:16px;
+    
+    /* Skinning */
+    background-color:#4a516d;
+    
+    border-radius:8px;
+}
+
+.ForumContainer_Level1H {
+    /* Dimensions */
+    width:98%;
+    height:auto;
+    
+    /* Positioning */
+    position:relative;
+
+    margin-top:8px;
+    margin-bottom:8px;
+}
+.ForumContainer_Level1C {
+    /* Dimensions */
+    width:98%;
+    height:auto;
+
+	/* Positioning */
+    position:relative;
+
+    margin-left:1%;
+    margin-top:8px;
+    margin-bottom:8px;
+}
+
+.ForumContainer_Level2H {
+    /* Dimensions */
+    width:100%;
+    height:auto;
+
+    /* Positioning */
+    position:relative;
+    
+    margin-top:4px;
+    margin-bottom:4px;
+
+    /* Skinning */
+    line-height:22px;
+    /*font:;*/
+}
+.ForumContainer_Level2C {
+    /* Dimensions */
+    width:100%;
+    height:auto;
+    
+    /* Positioning */
+    position:relative;
+
+    margin-left:0%;
+    margin-top:4px;
+    margin-bottom:4px;
+}
+.ForumContainer_Level2CH {
+    /* Dimensions */
+    width:100%;
+    height:auto;
+
+    /* Positioning */
+    position:relative;
+    
+    margin-top:4px;
+    margin-bottom:4px;
+}
+.ForumContainer_Level2CF {
+    /* Dimensions */
+    width:100%;
+    height:auto;
+
+    /* Positioning */
+    position:relative;
+    
+    margin-top:4px;
+    margin-bottom:4px;
+}
+
+.ForumContainer_Level3C {
+    /* Dimensions */
+    width:100%;
+    height:auto;
+    
+    /* Positioning */
+    position:relative;
+    
+    margin-left:0%;
+    margin-top:4px;
+    margin-bottom:4px;
+
+    /* Skinning */
+    line-height:22px;
+    /*font:;*/
+}
+.ForumContainer_Level3CH {
+    /* Dimensions */
+    width:auto;
+    height:auto;
+
+    /* Positioning */
+    position:relative;
+
+    margin-top:4px;
+    margin-bottom:4px;
+    
+    /* Skinning */
+    line-height:22px;
+    /*font:;*/
+}
+.ForumContainer_Level3CF {
+    /* Dimensions */
+    width:auto;
+    height:auto;
+
+    /* Positioning */
+    position:relative;
+
+    margin-top:4px;
+    margin-bottom:4px;
+    
+    /* Skinning */
+    line-height:22px;
+    /*font:;*/
+}
+
+.ForumContainer_Level4CF {
+    /* Dimensions */
+    width:auto;
+    height:auto;
+
+    /* Positioning */
+    position:relative;
+
+    margin-top:0px;
+    margin-bottom:0px;
+    
+    /* Skinning */
+    line-height:22px;
+    /*font:;*/
+}
+
+.ForumContainer_TableHeadCell {
+    /* Dimensions */
+    width:100%;
+    height:auto;
+
+    /* Skinning */
+    text-align:center;
+    line-height:22px;
+    /*font:;*/
+    font-size:16px;
+    font-weight:bold;
+    color:#ee8122;
+    
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+.ForumContainer_TableCell {
+    /* Dimensions */
+    width:100%;
+    height:auto;
+
+    /* Skinning */
+    line-height:22px;
+    /*font:;*/
+    font-size:14px;
+    color:#ffffff;
+}
+
+/*///////////////////////////////////////////////////////////////////////////////
+// Forum Integration : Property affectation classes */
+.ForumProperties_H_LeftContainer {
+    /* Dimensions */
+    width:39%;
+
+	/* Positioning */
+    position:relative;
+    float:left;
+
+    margin-left:1%;
+}
+.ForumProperties_H_LeftItem {
+    /* Dimensions */
+    width:auto;
+
+    /* Positioning */
+    position:relative;
+    float:left;
+    
+    margin-left:1%;
+    
+    /* Skinning */
+    font-size:14px;
+    font-weight:bold;
+    color:#ee8122;
+    
+    cursor:pointer;
+}
+.ForumProperties_H_RightContainer {
+    /* Dimensions */
+    width:58%;
+    
+    /* Positioning */
+    position:relative;
+    float:right;
+
+    margin-right:1%;
+}
+.ForumProperties_H_RightItem {
+    /* Dimensions */
+    width:auto;
+
+    /* Positioning */
+    position:relative;
+    float:right;
+
+    margin-right:1%;
+}
+
+.ForumProperties_C_HeaderText {
+    /* Skinning */
+    text-align:center;
+    line-height:22px;
+    /*font:;*/
+    font-size:18px;
+    font-weight:bold;
+    color:#ee8a86;
+    
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+.ForumProperties_CH_LeftText {
+    /* Dimensions */
+    width:66%;
+
+    /* Positioning */
+    position:relative;
+    float:left;
+
+    margin-left:0%;
+
+    /* Skinning */
+    line-height:22px;
+    /*font:;*/
+    font-size:16px;
+    font-weight:bold;
+    color:#ee8a86;
+}
+.ForumProperties_CH_RightContainer {
+    /* Dimensions */
+    width:34%;
+    
+    /* Positioning */
+    position:relative;
+    float:right;
+
+    margin-right:0%;
+}
+.ForumProperties_CH_RightItem {
+    /* Dimensions */
+    width:auto;
+
+    /* Positioning */
+    position:relative;
+    float:right;
+    
+    margin-right:1%;
+}
+
+.ForumProperties_CF_LeftContainer {
+    /* Dimensions */
+    width:66%;
+
+    /* Positioning */
+    position:relative;
+    float:left;
+    
+    margin-left:0%;
+}
+.ForumProperties_CF_LeftItem {
+    /* Dimensions */
+    width:auto;
+
+    /* Positioning */
+    position:relative;
+    float:left;
+    
+    margin-left:1%;
+}
+.ForumProperties_CF_RightContainer {
+    /* Dimensions */
+    width:34%;
+    
+    /* Positioning */
+    position:relative;
+    float:right;
+    
+    margin-right:0%;
+}
+.ForumProperties_CF_RightItem {
+    /* Dimensions */
+    width:auto;
+
+    /* Positioning */
+    position:relative;
+    float:right;
+    
+    margin-right:1%;
+}
+.ForumProperties_CF_PageIndex {
+    /* Skinning */
+    text-align:center;
+    font-size:14px;
+    font-weight:bold;
+    color:#ffffff;
+}
+
+.ForumProperties_C_UserViewItem {
+    /* Skinning */
+    text-align:center;
+    font-size:16px;
+    font-weight:bold;
+    color:#ffffff;
+}
+.ForumProperties_C_UserLogin {
+    /* Skinning */
+    color:#ee8122;
+}
+.ForumProperties_C_UserRank {
+    /* Skinning */
+    color:#ee8a86;
+}
+
+.ForumProperties_C_NewContent {
+    /* Skinning */
+    border:0px none red;
+
+    line-height:22px;
+    /*font:;*/
+    font-size:14px;
+}
+
+.ForumProperties_C_SubjectInput {
+}
+
+.ForumProperties_C_MessageInput {
+}
+
+.ForumProperties_CF_NewContentButton {
+}
+
+.ForumProperties_LinkCell {
+    /* Skinning */
+    cursor:pointer;
+}
+
+.ForumProperties_TextCell {
+    /* Skinning */
+    text-align:center;
+}
+
+.ForumProperties_UserViewCell {
+    /* Dimensions */
+    min-width:192px;
+    min-height:192px;
+}
+
+.ForumProperties_MessageCell {
+    /* Dimensions */
+    min-height:162px;
+}
+
+/*///////////////////////////////////////////////////////////////////////////////
+// Forum Integration : Specific styling */
+
+/* ForumContent : ThreadNew ****************************************************/
+#ThreadNew_Subject {
+    /* Dimensions */
+    width:98%;
+}
+
+#ThreadNew_Message {
+    /* Dimensions */
+    width:98%;
+}
+
+/* ForumContent : MessageNew ***************************************************/
+#MessageNew_Message {
+    /* Dimensions */
+    width:98%;
+}
+
+/* ForumContent : MessageEdit **************************************************/
+#MessageEdit_Message {
+    /* Dimensions */
+    width:98%;
+}
+
+

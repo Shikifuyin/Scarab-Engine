@@ -1,0 +1,236 @@
+/*///////////////////////////////////////////////////////////////////////////////
+// File : <Root>/CSS/Global.css
+/////////////////////////////////////////////////////////////////////////////////
+// Version : 1.0
+// Began Code : 05/06/2012
+// Status : Alpha
+// Portability : Any
+/////////////////////////////////////////////////////////////////////////////////
+// Description : Global integration
+/////////////////////////////////////////////////////////////////////////////////
+// Part of Scarab-Engine, licensed under the
+// Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License
+//   http://creativecommons.org/licenses/by-nc-nd/3.0/
+/////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////////
+// Known Bugs : None.
+///////////////////////////////////////////////////////////////////////////////*/
+
+/*///////////////////////////////////////////////////////////////////////////////
+// Global Integration : Generic styling */
+
+/* Cleanup *********************************************************************/
+html, body {
+    /* True window dimensions */
+    width:100%;
+    height:100%;
+    
+    /* Clear margins & padding */
+    margin:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+    
+    /* Font */
+    /*font-family:'Fjalla One', sans-serif;*/
+    font-family:'Open Sans', sans-serif;
+}
+
+    /* Resizable <textarea> fix */
+textarea {
+    resize:none;
+}
+
+/* ClearFix hack (fixes floats and overlapping margins) ************************/
+.ClearFix:before, .ClearFix:after {
+    content:" ";
+    display:table;
+}
+.ClearFix:after {
+    clear:both;
+}
+.ClearFix {
+    *zoom:1;
+}
+
+/* Text styling ****************************************************************/
+.code_block {
+    /* Dimensions */
+    width:92%;
+    height:auto;
+    
+    /* Positioning */
+    position:relative;
+
+    margin-left:4%;
+    margin-top:4px;
+    margin-bottom:4px;
+    
+    /* Skinning */
+    background-color:#1c1f2d;
+}
+.code_content {
+    /* Dimensions */
+    width:100%;
+    height:auto;
+    
+    /* Positioning */
+    position:relative;
+
+	margin:0px 0px 0px 0px;
+
+    /* Skinning */
+    line-height:22px;
+    font:"Courier New", Courier, monospace;
+    font-size:14px;
+    color:#ffffff;
+}
+
+.quote_block {
+    /* Dimensions */
+    width:92%;
+    height:auto;
+    
+    /* Positioning */
+    position:relative;
+
+    margin-left:4%;
+    margin-top:4px;
+    margin-bottom:4px;
+    
+    /* Skinning */
+    background-color:#a8a8a8;
+}
+.quote_content {
+    /* Dimensions */
+    width:100%;
+    height:auto;
+    
+    /* Positioning */
+    position:relative;
+
+	margin:0px 0px 0px 0px;
+
+    /* Skinning */
+    line-height:22px;
+    /*font:;*/
+    font-size:14px;
+    color:#000000;
+}
+
+/* Link styling ****************************************************************/
+a:unvisited {
+    color:#ee8122;
+}
+a:visited {
+    color:#a8a8a8;
+}
+
+/* Table styling ***************************************************************/
+table {
+    /* Dimensions */
+    width:100%;
+    height:auto;
+}
+
+/* GUI styling *****************************************************************/
+img {
+    /* nothing for now */
+}
+
+input[type=text], input[type=password], input[type=email], input[type=url], textarea {
+    /* Dimensions */
+    width:192px;
+    height:auto;
+
+	/* Skinning */
+    background-color:#1c1f2d;
+
+	border:0px solid red;
+    border-radius:4px;
+
+    padding:4px;
+
+	line-height:22px;
+    /*font:;*/
+    font-size:14px;
+    color:#ffffff;
+}
+
+input[type=button] {
+    /* Dimensions */
+    width:96px;
+    height:auto;
+
+	/* Skinning */
+    background-image:url("../Medias/Images/Button_Generic.png");
+	background-size:96px 32px;
+    background-repeat:no-repeat;
+    background-position:center;
+    
+    border:1px solid #888888;
+    border-radius:4px;
+
+	text-align:center;
+	line-height:22px;
+    /*font:;*/
+    font-size:14px;
+    font-weight:bold;
+    color:#ffffff;
+
+	cursor:pointer;
+}
+/*input[type=checkbox] {
+    width:auto;
+    height:auto;
+
+   	background-color:#1c1f2d;
+
+	border:0px solid #1c1f2d;
+    border-radius:4px;
+
+	line-height:22px;
+    font:;
+    font-size:14px;
+    font-weight:bold;
+    color:#ffffff;
+}*/
+.SelectStyler {
+    /* Real Dimensions */
+    width:200px;
+    height:auto;
+
+	/* Hide pushed icon */
+    overflow:hidden;
+
+	/* Arrow icon goes here */
+    background-image:url("../Medias/Images/Button_ComboList.png");
+    background-size:30px 30px;
+    background-repeat:no-repeat;
+    background-position:right center;
+
+	/* Background & border goes here */
+	background-color:#1c1f2d;
+
+    border:0px solid #1c1f2d;
+    border-radius:4px;
+}
+select {
+    /* Fake Dimensions */
+    width:232px; /* Push the icon outside styler's width scope */
+    height:auto;
+
+	/* Remove background & border */
+    background-color:transparent;
+    background-size:0px 0px;
+
+	border:0px solid #1c1f2d;
+
+	/* Skinning */
+    padding:4px;
+
+	line-height:22px;
+    /*font:;*/
+    font-size:14px;
+    color:#ffffff;
+}
+

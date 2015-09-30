@@ -1,0 +1,463 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="da/dfd/classGUIMenuModel" kind="class" prot="public">
+    <compoundname>GUIMenuModel</compoundname>
+    <basecompoundref refid="d5/db8/classGUIOverlayModel" prot="public" virt="non-virtual">GUIOverlayModel</basecompoundref>
+    <includes refid="d1/d51/GUIMenu_8h" local="no">GUIMenu.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="da/dfd/classGUIMenuModel_1a1d8ec0adef861a4c605cca11b221a7e0" prot="protected" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iItemHeight</definition>
+        <argsstring></argsstring>
+        <name>m_iItemHeight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Overlays/GUIMenu.h" line="98" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Overlays/GUIMenu.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/dfd/classGUIMenuModel_1af4faf68723106dfe07aece5435ee1187" prot="protected" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iSelectedItem</definition>
+        <argsstring></argsstring>
+        <name>m_iSelectedItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Overlays/GUIMenu.h" line="100" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Overlays/GUIMenu.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/dfd/classGUIMenuModel_1a180a31cc9d0c03491eb2fcbce30cb0f1" prot="protected" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iItemCount</definition>
+        <argsstring></argsstring>
+        <name>m_iItemCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Overlays/GUIMenu.h" line="102" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Overlays/GUIMenu.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/dfd/classGUIMenuModel_1a43673d301b54125edbe90a4dbdfc21e4" prot="protected" static="no" mutable="no">
+        <type><ref refid="d0/db3/classGUIMenuItem" kindref="compound">GUIMenuItem</ref> *</type>
+        <definition>GUIMenuItem* m_arrItems</definition>
+        <argsstring></argsstring>
+        <name>m_arrItems</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Overlays/GUIMenu.h" line="103" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Overlays/GUIMenu.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="da/dfd/classGUIMenuModel_1ac2c87cdbbfc387b6fc0c72d4f7b4a5dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GUIMenuModel</definition>
+        <argsstring>(UInt iItemHeight, UInt iItemCount, const GChar *arrNames[], GUISkinImage arrIcons[], GUIMenuModel *arrSubMenus[]=NULL)</argsstring>
+        <name>GUIMenuModel</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iItemHeight</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iItemCount</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>arrNames</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type><ref refid="d4/deb/GUISkin_8h_1a65a8f0b464f4b1b7ec4e49e99ca6107c" kindref="member">GUISkinImage</ref></type>
+          <declname>arrIcons</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type><ref refid="da/dfd/classGUIMenuModel" kindref="compound">GUIMenuModel</ref> *</type>
+          <declname>arrSubMenus</declname>
+          <array>[]</array>
+          <defval><ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Overlays/GUIMenu.h" line="76"/>
+      </memberdef>
+      <memberdef kind="function" id="da/dfd/classGUIMenuModel_1a0b6db8ab15a87dbeec45396ab13344ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~GUIMenuModel</definition>
+        <argsstring>()</argsstring>
+        <name>~GUIMenuModel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Overlays/GUIMenu.h" line="77"/>
+      </memberdef>
+      <memberdef kind="function" id="da/dfd/classGUIMenuModel_1a98e739a04cebfbed310a644b704010df" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetItemHeight</definition>
+        <argsstring>() const </argsstring>
+        <name>GetItemHeight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Overlays/GUIMenu.h" line="80"/>
+      </memberdef>
+      <memberdef kind="function" id="da/dfd/classGUIMenuModel_1a946b7b20eeb1b3ca34e805211fcbee29" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetItemCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetItemCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Overlays/GUIMenu.h" line="82"/>
+      </memberdef>
+      <memberdef kind="function" id="da/dfd/classGUIMenuModel_1a308a95eb215993e84977f064c49f5c77" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d0/db3/classGUIMenuItem" kindref="compound">GUIMenuItem</ref> *</type>
+        <definition>const GUIMenuItem* GetItem</definition>
+        <argsstring>(UInt iItem) const </argsstring>
+        <name>GetItem</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iItem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Overlays/GUIMenu.h" line="83"/>
+      </memberdef>
+      <memberdef kind="function" id="da/dfd/classGUIMenuModel_1a973a6ab173d0d04c51eac7aa91264597" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetActive</definition>
+        <argsstring>(UInt iItem, Bool bActive)</argsstring>
+        <name>SetActive</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iItem</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+          <declname>bActive</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Overlays/GUIMenu.h" line="85"/>
+      </memberdef>
+      <memberdef kind="function" id="da/dfd/classGUIMenuModel_1a0ea65c70b35fbd89358ff74c7b4ddf52" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetSelectedItem</definition>
+        <argsstring>() const </argsstring>
+        <name>GetSelectedItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Overlays/GUIMenu.h" line="87"/>
+      </memberdef>
+      <memberdef kind="function" id="da/dfd/classGUIMenuModel_1a9f561223d5159ff8570d5ca1ab42f1a9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SelectItem</definition>
+        <argsstring>(UInt iItem)</argsstring>
+        <name>SelectItem</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iItem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Overlays/GUIMenu.h" line="88"/>
+      </memberdef>
+      <memberdef kind="function" id="da/dfd/classGUIMenuModel_1aef6289d8ef69e714dabad61f7c46797d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnClick</definition>
+        <argsstring>(const Point2 &amp;ptLocalPos, KeyCode iKey, GUIEventFlag iFlags)</argsstring>
+        <name>OnClick</name>
+        <reimplements refid="dd/d40/classGUIEventProcessorModel_1aef6289d8ef69e714dabad61f7c46797d">OnClick</reimplements>
+        <param>
+          <type>const <ref refid="dd/d98/classPoint2" kindref="compound">Point2</ref> &amp;</type>
+          <declname>ptLocalPos</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a414bae0861cbf75db6ba1081cee1e663" kindref="member">KeyCode</ref></type>
+          <declname>iKey</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/df0/GUIEvent_8h_1a1fb329d664687b0a665d348b7b1ed134" kindref="member">GUIEventFlag</ref></type>
+          <declname>iFlags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Overlays/GUIMenu.h" line="91"/>
+      </memberdef>
+      <memberdef kind="function" id="da/dfd/classGUIMenuModel_1a0acd59231d41981eb8903f53b9da820d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnRollOver</definition>
+        <argsstring>(const Point2 &amp;ptLocalPos, GUIEventFlag iFlags)</argsstring>
+        <name>OnRollOver</name>
+        <reimplements refid="dd/d40/classGUIEventProcessorModel_1a0acd59231d41981eb8903f53b9da820d">OnRollOver</reimplements>
+        <param>
+          <type>const <ref refid="dd/d98/classPoint2" kindref="compound">Point2</ref> &amp;</type>
+          <declname>ptLocalPos</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/df0/GUIEvent_8h_1a1fb329d664687b0a665d348b7b1ed134" kindref="member">GUIEventFlag</ref></type>
+          <declname>iFlags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Overlays/GUIMenu.h" line="93"/>
+      </memberdef>
+      <memberdef kind="function" id="da/dfd/classGUIMenuModel_1ab52483fdd71f1d7cf85392165a4a0f3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnValidate</definition>
+        <argsstring>(UInt iItem)</argsstring>
+        <name>OnValidate</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iItem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Overlays/GUIMenu.h" line="95"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3755">
+        <label>GUIMenuModel</label>
+        <link refid="da/dfd/classGUIMenuModel"/>
+        <childnode refid="3756" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3757">
+        <label>GUIEventProcessorModel</label>
+        <link refid="dd/d40/classGUIEventProcessorModel"/>
+      </node>
+      <node id="3756">
+        <label>GUIOverlayModel</label>
+        <link refid="d5/db8/classGUIOverlayModel"/>
+        <childnode refid="3757" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3763">
+        <label>RingBuffer&lt; GUIEvent &gt;</label>
+        <link refid="d8/d2d/classRingBuffer"/>
+        <childnode refid="3764" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3766" relation="usage">
+          <edgelabel>m_arrBuffer</edgelabel>
+        </childnode>
+        <childnode refid="3769" relation="usage">
+          <edgelabel>m_iRead</edgelabel>
+          <edgelabel>m_iBufferSize</edgelabel>
+          <edgelabel>m_iCount</edgelabel>
+          <edgelabel>m_iWrite</edgelabel>
+        </childnode>
+      </node>
+      <node id="3766">
+        <label>GUIEvent</label>
+        <link refid="d9/d68/classGUIEvent"/>
+        <childnode refid="3767" relation="usage">
+          <edgelabel>m_arrParameters</edgelabel>
+        </childnode>
+        <childnode refid="3768" relation="usage">
+          <edgelabel>m_iType</edgelabel>
+        </childnode>
+        <childnode refid="3769" relation="usage">
+          <edgelabel>m_arrParamOffsets</edgelabel>
+          <edgelabel>m_iParamCount</edgelabel>
+          <edgelabel>m_iParamTotalSize</edgelabel>
+        </childnode>
+        <childnode refid="3765" relation="usage">
+          <edgelabel>m_iFlags</edgelabel>
+        </childnode>
+      </node>
+      <node id="3758">
+        <label>GUIMenuModel</label>
+        <link refid="da/dfd/classGUIMenuModel"/>
+        <childnode refid="3759" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3771" relation="usage">
+          <edgelabel>m_arrItems</edgelabel>
+        </childnode>
+        <childnode refid="3769" relation="usage">
+          <edgelabel>m_iItemCount</edgelabel>
+          <edgelabel>m_iItemHeight</edgelabel>
+          <edgelabel>m_iSelectedItem</edgelabel>
+        </childnode>
+      </node>
+      <node id="3771">
+        <label>GUIMenuItem</label>
+        <link refid="d0/db3/classGUIMenuItem"/>
+        <childnode refid="3762" relation="usage">
+          <edgelabel>m_strName</edgelabel>
+        </childnode>
+        <childnode refid="3758" relation="usage">
+          <edgelabel>m_pSubMenu</edgelabel>
+        </childnode>
+        <childnode refid="3770" relation="usage">
+          <edgelabel>m_bActive</edgelabel>
+        </childnode>
+        <childnode refid="3772" relation="usage">
+          <edgelabel>m_idIcon</edgelabel>
+        </childnode>
+      </node>
+      <node id="3765">
+        <label>unsigned int</label>
+      </node>
+      <node id="3767">
+        <label>unsigned char</label>
+      </node>
+      <node id="3769">
+        <label>int</label>
+      </node>
+      <node id="3768">
+        <label>GUIEventType</label>
+      </node>
+      <node id="3760">
+        <label>GUIEventProcessorModel</label>
+        <link refid="dd/d40/classGUIEventProcessorModel"/>
+        <childnode refid="3761" relation="usage">
+          <edgelabel>m_pEventProcessor</edgelabel>
+        </childnode>
+      </node>
+      <node id="3770">
+        <label>bool</label>
+      </node>
+      <node id="3772">
+        <label>GUISkinImage</label>
+      </node>
+      <node id="3759">
+        <label>GUIOverlayModel</label>
+        <link refid="d5/db8/classGUIOverlayModel"/>
+        <childnode refid="3760" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3762">
+        <label>char</label>
+      </node>
+      <node id="3761">
+        <label>GUIEventProcessor</label>
+        <link refid="d2/de5/classGUIEventProcessor"/>
+        <childnode refid="3762" relation="usage">
+          <edgelabel>m_strName</edgelabel>
+        </childnode>
+        <childnode refid="3763" relation="usage">
+          <edgelabel>m_bufEventQueue</edgelabel>
+        </childnode>
+        <childnode refid="3770" relation="usage">
+          <edgelabel>m_bHasFocus</edgelabel>
+          <edgelabel>m_bHasMouseOver</edgelabel>
+        </childnode>
+        <childnode refid="3760" relation="usage">
+          <edgelabel>m_pModel</edgelabel>
+        </childnode>
+      </node>
+      <node id="3764">
+        <label>Datastruct</label>
+        <link refid="dc/d51/classDatastruct"/>
+        <childnode refid="3762" relation="usage">
+          <edgelabel>m_strAllocatorName</edgelabel>
+        </childnode>
+        <childnode refid="3765" relation="usage">
+          <edgelabel>m_idMemoryContext</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Overlays/GUIMenu.h" line="74" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Overlays/GUIMenu.h" bodystart="73" bodyend="104"/>
+    <listofallmembers>
+      <member refid="d5/db8/classGUIOverlayModel_1a9219d9f2c0afeeb296a3376abfa936a6" prot="protected" virt="non-virtual"><scope>GUIMenuModel</scope><name>_GetOverlay</name></member>
+      <member refid="da/dfd/classGUIMenuModel_1a308a95eb215993e84977f064c49f5c77" prot="public" virt="non-virtual"><scope>GUIMenuModel</scope><name>GetItem</name></member>
+      <member refid="da/dfd/classGUIMenuModel_1a946b7b20eeb1b3ca34e805211fcbee29" prot="public" virt="non-virtual"><scope>GUIMenuModel</scope><name>GetItemCount</name></member>
+      <member refid="da/dfd/classGUIMenuModel_1a98e739a04cebfbed310a644b704010df" prot="public" virt="non-virtual"><scope>GUIMenuModel</scope><name>GetItemHeight</name></member>
+      <member refid="da/dfd/classGUIMenuModel_1a0ea65c70b35fbd89358ff74c7b4ddf52" prot="public" virt="non-virtual"><scope>GUIMenuModel</scope><name>GetSelectedItem</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a8fbad42b0ba391346a20d145a1f1aaff" prot="public" virt="non-virtual"><scope>GUIMenuModel</scope><name>GUIEventProcessorModel</name></member>
+      <member refid="da/dfd/classGUIMenuModel_1ac2c87cdbbfc387b6fc0c72d4f7b4a5dd" prot="public" virt="non-virtual"><scope>GUIMenuModel</scope><name>GUIMenuModel</name></member>
+      <member refid="d5/db8/classGUIOverlayModel_1aa453a84bb793926259bd58af511567c4" prot="public" virt="non-virtual"><scope>GUIMenuModel</scope><name>GUIOverlayModel</name></member>
+      <member refid="da/dfd/classGUIMenuModel_1a43673d301b54125edbe90a4dbdfc21e4" prot="protected" virt="non-virtual"><scope>GUIMenuModel</scope><name>m_arrItems</name></member>
+      <member refid="da/dfd/classGUIMenuModel_1a180a31cc9d0c03491eb2fcbce30cb0f1" prot="protected" virt="non-virtual"><scope>GUIMenuModel</scope><name>m_iItemCount</name></member>
+      <member refid="da/dfd/classGUIMenuModel_1a1d8ec0adef861a4c605cca11b221a7e0" prot="protected" virt="non-virtual"><scope>GUIMenuModel</scope><name>m_iItemHeight</name></member>
+      <member refid="da/dfd/classGUIMenuModel_1af4faf68723106dfe07aece5435ee1187" prot="protected" virt="non-virtual"><scope>GUIMenuModel</scope><name>m_iSelectedItem</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1ad88dbcc21870be5c934a7ed0492ab408" prot="protected" virt="non-virtual"><scope>GUIMenuModel</scope><name>m_pEventProcessor</name></member>
+      <member refid="da/dfd/classGUIMenuModel_1aef6289d8ef69e714dabad61f7c46797d" prot="public" virt="virtual"><scope>GUIMenuModel</scope><name>OnClick</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1aa3e35f6c52afce88f987f7b3b812f3a0" prot="public" virt="virtual"><scope>GUIMenuModel</scope><name>OnDblClick</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1aa636c946eeaa7b724fdde67f1ca97fca" prot="public" virt="virtual"><scope>GUIMenuModel</scope><name>OnDragBoth</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a17ce7ae06efbafb91cc5caa6a4df3769" prot="public" virt="virtual"><scope>GUIMenuModel</scope><name>OnDragLeft</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a7c836a58d5d3e22ce14266d8a34abca6" prot="public" virt="virtual"><scope>GUIMenuModel</scope><name>OnDragRight</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1afab7f7032d2bdef0e41ebfac22a78ac3" prot="public" virt="virtual"><scope>GUIMenuModel</scope><name>OnExit</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a2016e258f2f1da5dde1355ec22551d06" prot="public" virt="virtual"><scope>GUIMenuModel</scope><name>OnFocusGain</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1aa13f09676e6e63fe2a1d111810eb6188" prot="public" virt="virtual"><scope>GUIMenuModel</scope><name>OnFocusLoss</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1ac03d9dd79678d679ecc8eaf2868be2e7" prot="public" virt="virtual"><scope>GUIMenuModel</scope><name>OnKeyPress</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a9e381a03ac30f24336437ea469463e7d" prot="public" virt="virtual"><scope>GUIMenuModel</scope><name>OnKeyRelease</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1ad7821750126b444a522a57f8e56a4015" prot="public" virt="virtual"><scope>GUIMenuModel</scope><name>OnMousePress</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a0d16663cc3afe04b2fb14462cc20aded" prot="public" virt="virtual"><scope>GUIMenuModel</scope><name>OnMouseRelease</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a96979342e0e260ea683f2e279c17f08b" prot="public" virt="virtual"><scope>GUIMenuModel</scope><name>OnResize</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a76f49c66bd121837ceb5e8044d1e7d43" prot="public" virt="virtual"><scope>GUIMenuModel</scope><name>OnRollIn</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a1349de895d5bfe49c31c84803e390e69" prot="public" virt="virtual"><scope>GUIMenuModel</scope><name>OnRollOut</name></member>
+      <member refid="da/dfd/classGUIMenuModel_1a0acd59231d41981eb8903f53b9da820d" prot="public" virt="virtual"><scope>GUIMenuModel</scope><name>OnRollOver</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a84a8c413e7f1bdff0e95e486c4b4c701" prot="public" virt="virtual"><scope>GUIMenuModel</scope><name>OnScroll</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1ad41fa7e90b05e9abb22d88e3328e0144" prot="public" virt="virtual"><scope>GUIMenuModel</scope><name>OnStartDrag</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a5ab23add485081eabc565545b600fa0e" prot="public" virt="virtual"><scope>GUIMenuModel</scope><name>OnStopDrag</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1ae55129b32f59b72142aabfb4bbba3978" prot="public" virt="virtual"><scope>GUIMenuModel</scope><name>OnTick</name></member>
+      <member refid="da/dfd/classGUIMenuModel_1ab52483fdd71f1d7cf85392165a4a0f3d" prot="public" virt="virtual"><scope>GUIMenuModel</scope><name>OnValidate</name></member>
+      <member refid="da/dfd/classGUIMenuModel_1a9f561223d5159ff8570d5ca1ab42f1a9" prot="public" virt="non-virtual"><scope>GUIMenuModel</scope><name>SelectItem</name></member>
+      <member refid="da/dfd/classGUIMenuModel_1a973a6ab173d0d04c51eac7aa91264597" prot="public" virt="non-virtual"><scope>GUIMenuModel</scope><name>SetActive</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a9c07c36b72b8ae06d38a2e6de5afe226" prot="public" virt="virtual"><scope>GUIMenuModel</scope><name>~GUIEventProcessorModel</name></member>
+      <member refid="da/dfd/classGUIMenuModel_1a0b6db8ab15a87dbeec45396ab13344ca" prot="public" virt="virtual"><scope>GUIMenuModel</scope><name>~GUIMenuModel</name></member>
+      <member refid="d5/db8/classGUIOverlayModel_1a899b6e1f46763b16519153d84c20a42a" prot="public" virt="virtual"><scope>GUIMenuModel</scope><name>~GUIOverlayModel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

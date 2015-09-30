@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="dd/d4a/SmartPointer_8h" kind="file">
+    <compoundname>SmartPointer.h</compoundname>
+    <includes refid="d9/dd0/Platform_8h" local="yes">../../../ThirdParty/System/Platform.h</includes>
+    <includes local="yes">SmartPointer.inl</includes>
+    <incdepgraph>
+      <node id="37925">
+        <label>SmartPointer.h</label>
+        <link refid="SmartPointer.h"/>
+        <childnode refid="37926" relation="include">
+        </childnode>
+        <childnode refid="37928" relation="include">
+        </childnode>
+      </node>
+      <node id="37926">
+        <label>../../../ThirdParty/System/Platform.h</label>
+        <link refid="d9/dd0/Platform_8h"/>
+        <childnode refid="37927" relation="include">
+        </childnode>
+      </node>
+      <node id="37928">
+        <label>SmartPointer.inl</label>
+      </node>
+      <node id="37927">
+        <label>Platform.inl</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="d2/db8/class__GCInfo" prot="public">_GCInfo</innerclass>
+    <innerclass refid="d7/d8d/class__GCList" prot="public">_GCList</innerclass>
+    <innerclass refid="d5/d9d/classGCPointer" prot="public">GCPointer</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="dd/d4a/SmartPointer_8h_1ae834276123e9f3d3f5fa213463897cb1" prot="public" static="no">
+        <name>GCMODE_PARANOID</name>
+        <initializer>0xff</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" line="32" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dd/d4a/SmartPointer_8h_1a4f05a6d647e60ab6b08d11ae02b1cd27" prot="public" static="no">
+        <name>GCMODE_STRICT</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" line="33" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dd/d4a/SmartPointer_8h_1a35dee4d76981ce3ff0633c57cd2ff688" prot="public" static="no">
+        <name>GCMODE_LISTSIZE</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" line="34" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dd/d4a/SmartPointer_8h_1a1f7209fdd6734512af69241d75f69d07" prot="public" static="no">
+        <name>GCMODE_UNREFCOUNT</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" line="35" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dd/d4a/SmartPointer_8h_1ad921a95efaad72dd42174a3ee11fa861" prot="public" static="no">
+        <name>GCMODE_MEMORYUSAGE</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" line="36" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="dd/d4a/SmartPointer_8h_1a8d0cb73da89fdae1646d82a1275a27b4" prot="public" static="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>typedef UInt GarbageCollectorMode</definition>
+        <argsstring></argsstring>
+        <name>GarbageCollectorMode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" line="31" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/SmartPointer/SmartPointer.h"/>
+  </compounddef>
+</doxygen>

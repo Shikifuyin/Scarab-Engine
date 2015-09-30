@@ -1,0 +1,392 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d3/dc1/classConvexConvexCollision" kind="class" prot="public">
+    <compoundname>ConvexConvexCollision</compoundname>
+    <basecompoundref refid="d9/ddc/classVoronoiClip" prot="public" virt="non-virtual">VoronoiClip</basecompoundref>
+    <includes refid="dd/ded/ConvexConvexCollision_8h" local="no">ConvexConvexCollision.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d3/dc1/classConvexConvexCollision_1aae3156403d11edfd24f0b17cf9e0c92f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ConvexConvexCollision</definition>
+        <argsstring>(TransformedShapeConvex *pShapeA, TransformedShapeConvex *pShapeB)</argsstring>
+        <name>ConvexConvexCollision</name>
+        <param>
+          <type><ref refid="d7/d30/classTransformedShapeConvex" kindref="compound">TransformedShapeConvex</ref> *</type>
+          <declname>pShapeA</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d30/classTransformedShapeConvex" kindref="compound">TransformedShapeConvex</ref> *</type>
+          <declname>pShapeB</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/Convex/ConvexConvexCollision.h" line="37"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/dc1/classConvexConvexCollision_1a407ce8c824990dee4f986470575c5d17" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~ConvexConvexCollision</definition>
+        <argsstring>()</argsstring>
+        <name>~ConvexConvexCollision</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/Convex/ConvexConvexCollision.h" line="38"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1715">
+        <label>ConvexConvexCollision</label>
+        <link refid="d3/dc1/classConvexConvexCollision"/>
+        <childnode refid="1716" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1716">
+        <label>VoronoiClip</label>
+        <link refid="d9/ddc/classVoronoiClip"/>
+        <childnode refid="1717" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1717">
+        <label>NarrowPhase</label>
+        <link refid="dd/d93/classNarrowPhase"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1746">
+        <label>VClipState</label>
+      </node>
+      <node id="1734">
+        <label>Mesh</label>
+        <link refid="d9/d5e/classMesh"/>
+        <childnode refid="1735" relation="usage">
+          <edgelabel>m_pVF</edgelabel>
+        </childnode>
+        <childnode refid="1738" relation="usage">
+          <edgelabel>m_iIndexOffset</edgelabel>
+          <edgelabel>m_iVertexOffset</edgelabel>
+        </childnode>
+        <childnode refid="1732" relation="usage">
+          <edgelabel>m_bDynamicUpdate</edgelabel>
+        </childnode>
+        <childnode refid="1741" relation="usage">
+          <edgelabel>m_pIB</edgelabel>
+        </childnode>
+        <childnode refid="1744" relation="usage">
+          <edgelabel>m_pVB</edgelabel>
+        </childnode>
+      </node>
+      <node id="1747">
+        <label>MeshFeature</label>
+        <link refid="dc/dcb/classMeshFeature"/>
+      </node>
+      <node id="1745">
+        <label>VertexBufferUsage</label>
+      </node>
+      <node id="1731">
+        <label>TMatrix3&lt; Scalar &gt;</label>
+        <link refid="d7/dee/classTMatrix3"/>
+        <childnode refid="1731" relation="usage">
+          <edgelabel>Identity</edgelabel>
+          <edgelabel>Null</edgelabel>
+        </childnode>
+        <childnode refid="1721" relation="usage">
+          <edgelabel>ONE</edgelabel>
+          <edgelabel>m20</edgelabel>
+          <edgelabel>m21</edgelabel>
+          <edgelabel>m10</edgelabel>
+          <edgelabel>m22</edgelabel>
+          <edgelabel>m11</edgelabel>
+          <edgelabel>m00</edgelabel>
+          <edgelabel>TWO</edgelabel>
+          <edgelabel>m12</edgelabel>
+          <edgelabel>m01</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="1721">
+        <label>float</label>
+      </node>
+      <node id="1730">
+        <label>TMatrix4&lt; Scalar &gt;</label>
+        <link refid="d5/d09/classTMatrix4"/>
+        <childnode refid="1730" relation="usage">
+          <edgelabel>Identity</edgelabel>
+          <edgelabel>Null</edgelabel>
+        </childnode>
+        <childnode refid="1721" relation="usage">
+          <edgelabel>ONE</edgelabel>
+          <edgelabel>m30</edgelabel>
+          <edgelabel>m31</edgelabel>
+          <edgelabel>m20</edgelabel>
+          <edgelabel>m32</edgelabel>
+          <edgelabel>m21</edgelabel>
+          <edgelabel>m10</edgelabel>
+          <edgelabel>m33</edgelabel>
+          <edgelabel>m22</edgelabel>
+          <edgelabel>m11</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="1735">
+        <label>VertexFormat</label>
+        <link refid="da/dc2/classVertexFormat"/>
+        <childnode refid="1736" relation="usage">
+          <edgelabel>m_arrFields</edgelabel>
+        </childnode>
+        <childnode refid="1738" relation="usage">
+          <edgelabel>m_iSize</edgelabel>
+          <edgelabel>m_iFieldCount</edgelabel>
+          <edgelabel>m_arrUsageLUT</edgelabel>
+        </childnode>
+        <childnode refid="1732" relation="usage">
+          <edgelabel>m_bFinalized</edgelabel>
+        </childnode>
+        <childnode refid="1740" relation="usage">
+          <edgelabel>sm_arrComponentCount</edgelabel>
+          <edgelabel>sm_arrTypeSize</edgelabel>
+          <edgelabel>sm_arrComponentSize</edgelabel>
+        </childnode>
+      </node>
+      <node id="1736">
+        <label>VFField</label>
+        <link refid="de/d92/structVFField"/>
+        <childnode refid="1737" relation="usage">
+          <edgelabel>iUsage</edgelabel>
+        </childnode>
+        <childnode refid="1738" relation="usage">
+          <edgelabel>iSize</edgelabel>
+          <edgelabel>iUsageIndex</edgelabel>
+          <edgelabel>iOffset</edgelabel>
+        </childnode>
+        <childnode refid="1739" relation="usage">
+          <edgelabel>iType</edgelabel>
+        </childnode>
+      </node>
+      <node id="1740">
+        <label>unsigned int</label>
+      </node>
+      <node id="1742">
+        <label>unsigned char</label>
+      </node>
+      <node id="1723">
+        <label>TransformedShape</label>
+        <link refid="d2/d1b/classTransformedShape"/>
+        <childnode refid="1724" relation="usage">
+          <edgelabel>m_bvWorldAAB</edgelabel>
+        </childnode>
+        <childnode refid="1729" relation="usage">
+          <edgelabel>m_vTransform</edgelabel>
+        </childnode>
+        <childnode refid="1733" relation="usage">
+          <edgelabel>m_pShape</edgelabel>
+        </childnode>
+      </node>
+      <node id="1738">
+        <label>int</label>
+      </node>
+      <node id="1724">
+        <label>TBVAABox&lt; Scalar &gt;</label>
+        <link refid="d9/d90/classTBVAABox"/>
+        <childnode refid="1725" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1726" relation="usage">
+          <edgelabel>m_vExtents</edgelabel>
+        </childnode>
+        <childnode refid="1728" relation="usage">
+          <edgelabel>m_vCenter</edgelabel>
+        </childnode>
+      </node>
+      <node id="1722">
+        <label>ContactManifold</label>
+        <link refid="d2/d6f/classContactManifold"/>
+      </node>
+      <node id="1748">
+        <label>TransformedShapeConvex</label>
+        <link refid="d7/d30/classTransformedShapeConvex"/>
+        <childnode refid="1723" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1727">
+        <label>Scalar</label>
+      </node>
+      <node id="1739">
+        <label>VFFieldType</label>
+      </node>
+      <node id="1743">
+        <label>IndexBufferUsage</label>
+      </node>
+      <node id="1729">
+        <label>TTransform3&lt; Scalar &gt;</label>
+        <link refid="d0/d75/classTTransform3"/>
+        <childnode refid="1726" relation="usage">
+          <edgelabel>m_vScale</edgelabel>
+          <edgelabel>m_vInvScale</edgelabel>
+          <edgelabel>m_vInvTranslate</edgelabel>
+          <edgelabel>m_vTranslate</edgelabel>
+        </childnode>
+        <childnode refid="1730" relation="usage">
+          <edgelabel>m_matHMatrix</edgelabel>
+        </childnode>
+        <childnode refid="1731" relation="usage">
+          <edgelabel>m_matInvTransform</edgelabel>
+          <edgelabel>m_matTransform</edgelabel>
+        </childnode>
+        <childnode refid="1732" relation="usage">
+          <edgelabel>m_bIsUniformScale</edgelabel>
+          <edgelabel>m_bIsIdentity</edgelabel>
+          <edgelabel>m_bUpdateInverse</edgelabel>
+          <edgelabel>m_bIsRotScale</edgelabel>
+        </childnode>
+        <childnode refid="1729" relation="usage">
+          <edgelabel>Identity</edgelabel>
+        </childnode>
+      </node>
+      <node id="1726">
+        <label>TVector3&lt; Scalar &gt;</label>
+        <link refid="de/d40/classTVector3"/>
+        <childnode refid="1726" relation="usage">
+          <edgelabel>Null</edgelabel>
+          <edgelabel>eI</edgelabel>
+          <edgelabel>eJ</edgelabel>
+          <edgelabel>eK</edgelabel>
+        </childnode>
+        <childnode refid="1727" relation="usage">
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+          <edgelabel>Z</edgelabel>
+        </childnode>
+      </node>
+      <node id="1728">
+        <label>TVertex3&lt; Scalar &gt;</label>
+        <link refid="dc/d75/classTVertex3"/>
+        <childnode refid="1727" relation="usage">
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+          <edgelabel>Z</edgelabel>
+        </childnode>
+        <childnode refid="1728" relation="usage">
+          <edgelabel>Null</edgelabel>
+        </childnode>
+      </node>
+      <node id="1733">
+        <label>Shape</label>
+        <link refid="de/d0a/classShape"/>
+        <childnode refid="1724" relation="usage">
+          <edgelabel>m_bvLocalAAB</edgelabel>
+        </childnode>
+        <childnode refid="1734" relation="usage">
+          <edgelabel>m_pMesh</edgelabel>
+        </childnode>
+      </node>
+      <node id="1737">
+        <label>VFFieldUsage</label>
+      </node>
+      <node id="1744">
+        <label>VertexBuffer</label>
+        <link refid="d7/d72/classVertexBuffer"/>
+        <childnode refid="1742" relation="usage">
+          <edgelabel>m_arrVertices</edgelabel>
+        </childnode>
+        <childnode refid="1738" relation="usage">
+          <edgelabel>m_iSize</edgelabel>
+          <edgelabel>m_iVertexCount</edgelabel>
+          <edgelabel>m_iVertexSize</edgelabel>
+        </childnode>
+        <childnode refid="1745" relation="usage">
+          <edgelabel>m_iUsage</edgelabel>
+        </childnode>
+      </node>
+      <node id="1718">
+        <label>ConvexConvexCollision</label>
+        <link refid="d3/dc1/classConvexConvexCollision"/>
+        <childnode refid="1719" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1732">
+        <label>bool</label>
+      </node>
+      <node id="1725">
+        <label>TBoundingVolume&lt; Scalar &gt;</label>
+        <link refid="d6/d19/classTBoundingVolume"/>
+      </node>
+      <node id="1719">
+        <label>VoronoiClip</label>
+        <link refid="d9/ddc/classVoronoiClip"/>
+        <childnode refid="1720" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1746" relation="usage">
+          <edgelabel>m_vcLastRunState</edgelabel>
+          <edgelabel>m_vcState</edgelabel>
+        </childnode>
+        <childnode refid="1747" relation="usage">
+          <edgelabel>m_pClosestFeature</edgelabel>
+          <edgelabel>RaisedPenetration</edgelabel>
+        </childnode>
+        <childnode refid="1738" relation="usage">
+          <edgelabel>NullDerivationFlag</edgelabel>
+        </childnode>
+        <childnode refid="1748" relation="usage">
+          <edgelabel>m_pConvex</edgelabel>
+        </childnode>
+      </node>
+      <node id="1720">
+        <label>NarrowPhase</label>
+        <link refid="dd/d93/classNarrowPhase"/>
+        <childnode refid="1721" relation="usage">
+          <edgelabel>ZeroTolerance</edgelabel>
+        </childnode>
+        <childnode refid="1722" relation="usage">
+          <edgelabel>m_pCollisionManifold</edgelabel>
+        </childnode>
+        <childnode refid="1723" relation="usage">
+          <edgelabel>m_pShapeA</edgelabel>
+          <edgelabel>m_pShapeB</edgelabel>
+        </childnode>
+      </node>
+      <node id="1741">
+        <label>IndexBuffer</label>
+        <link refid="dd/df7/classIndexBuffer"/>
+        <childnode refid="1742" relation="usage">
+          <edgelabel>m_arrIndices</edgelabel>
+        </childnode>
+        <childnode refid="1738" relation="usage">
+          <edgelabel>m_iIndexSize</edgelabel>
+          <edgelabel>m_iSize</edgelabel>
+          <edgelabel>m_iIndexCount</edgelabel>
+        </childnode>
+        <childnode refid="1743" relation="usage">
+          <edgelabel>m_iUsage</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/Convex/ConvexConvexCollision.h" line="35" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/Convex/ConvexConvexCollision.h" bodystart="34" bodyend="39"/>
+    <listofallmembers>
+      <member refid="d3/dc1/classConvexConvexCollision_1aae3156403d11edfd24f0b17cf9e0c92f" prot="public" virt="non-virtual"><scope>ConvexConvexCollision</scope><name>ConvexConvexCollision</name></member>
+      <member refid="d9/ddc/classVoronoiClip_1aa1006524ebb0fcd1803715afd55265c7" prot="public" virt="virtual"><scope>ConvexConvexCollision</scope><name>DetectCollision</name></member>
+      <member refid="dd/d93/classNarrowPhase_1abce7f163b35f9433ab6e35da57ae91a6" prot="public" virt="non-virtual"><scope>ConvexConvexCollision</scope><name>GetManifold</name></member>
+      <member refid="dd/d93/classNarrowPhase_1abc1a34b5130538ff93d61d62380b4fda" prot="public" virt="non-virtual"><scope>ConvexConvexCollision</scope><name>GetShapeA</name></member>
+      <member refid="dd/d93/classNarrowPhase_1a2e29939a57f222eff8ae14cf6da51154" prot="public" virt="non-virtual"><scope>ConvexConvexCollision</scope><name>GetShapeB</name></member>
+      <member refid="d9/ddc/classVoronoiClip_1a8cc82ad908e5eb178e948965349b55b4" prot="public" virt="virtual"><scope>ConvexConvexCollision</scope><name>Initialize</name></member>
+      <member refid="dd/d93/classNarrowPhase_1a1e56bfb17b637586d3e50a53900096bd" prot="protected" virt="non-virtual"><scope>ConvexConvexCollision</scope><name>m_pCollisionManifold</name></member>
+      <member refid="dd/d93/classNarrowPhase_1ad3b1f9ddd11f4305af588f493601fcdd" prot="protected" virt="non-virtual"><scope>ConvexConvexCollision</scope><name>m_pShapeA</name></member>
+      <member refid="dd/d93/classNarrowPhase_1acd16f875b1d782b34a8b495def982084" prot="protected" virt="non-virtual"><scope>ConvexConvexCollision</scope><name>m_pShapeB</name></member>
+      <member refid="dd/d93/classNarrowPhase_1a9b481554f0543f5ba3f2bbfb6cda72d1" prot="public" virt="non-virtual"><scope>ConvexConvexCollision</scope><name>NarrowPhase</name></member>
+      <member refid="d9/ddc/classVoronoiClip_1a2590646de03c6f41c9153648f941b3e5" prot="public" virt="non-virtual"><scope>ConvexConvexCollision</scope><name>VoronoiClip</name></member>
+      <member refid="dd/d93/classNarrowPhase_1a2d47bbceffd2cea232b0a4746ed29ff6" prot="public" virt="non-virtual"><scope>ConvexConvexCollision</scope><name>ZeroTolerance</name></member>
+      <member refid="d3/dc1/classConvexConvexCollision_1a407ce8c824990dee4f986470575c5d17" prot="public" virt="virtual"><scope>ConvexConvexCollision</scope><name>~ConvexConvexCollision</name></member>
+      <member refid="dd/d93/classNarrowPhase_1a281c7cadd2f5f7c248f689d28e25635d" prot="public" virt="virtual"><scope>ConvexConvexCollision</scope><name>~NarrowPhase</name></member>
+      <member refid="d9/ddc/classVoronoiClip_1aa192e31f3378f66676eadcb8e19bc2cc" prot="public" virt="virtual"><scope>ConvexConvexCollision</scope><name>~VoronoiClip</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

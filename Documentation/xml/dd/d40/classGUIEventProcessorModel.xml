@@ -1,0 +1,752 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="dd/d40/classGUIEventProcessorModel" kind="class" prot="public">
+    <compoundname>GUIEventProcessorModel</compoundname>
+    <derivedcompoundref refid="db/d58/classGUIBackboardModel" prot="public" virt="non-virtual">GUIBackboardModel</derivedcompoundref>
+    <derivedcompoundref refid="d5/db8/classGUIOverlayModel" prot="public" virt="non-virtual">GUIOverlayModel</derivedcompoundref>
+    <derivedcompoundref refid="d0/d61/classGUIWidgetModel" prot="public" virt="non-virtual">GUIWidgetModel</derivedcompoundref>
+    <includes refid="d4/dd6/GUIEventProcessor_8h" local="no">GUIEventProcessor.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="dd/d40/classGUIEventProcessorModel_1a4510e5d99d3ab6565b683f568b5a2615" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class GUIEventProcessor</definition>
+        <argsstring></argsstring>
+        <name>GUIEventProcessor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIEventProcessor.h" line="83" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIEventProcessor.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="dd/d40/classGUIEventProcessorModel_1ad88dbcc21870be5c934a7ed0492ab408" prot="protected" static="no" mutable="no">
+        <type><ref refid="d2/de5/classGUIEventProcessor" kindref="compound">GUIEventProcessor</ref> *</type>
+        <definition>GUIEventProcessor* m_pEventProcessor</definition>
+        <argsstring></argsstring>
+        <name>m_pEventProcessor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIEventProcessor.h" line="84" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIEventProcessor.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="dd/d40/classGUIEventProcessorModel_1a8fbad42b0ba391346a20d145a1f1aaff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GUIEventProcessorModel</definition>
+        <argsstring>()</argsstring>
+        <name>GUIEventProcessorModel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIEventProcessor.h" line="49"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d40/classGUIEventProcessorModel_1a9c07c36b72b8ae06d38a2e6de5afe226" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~GUIEventProcessorModel</definition>
+        <argsstring>()</argsstring>
+        <name>~GUIEventProcessorModel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIEventProcessor.h" line="50"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d40/classGUIEventProcessorModel_1ae55129b32f59b72142aabfb4bbba3978" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnTick</definition>
+        <argsstring>(UInt iTimerID)</argsstring>
+        <name>OnTick</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iTimerID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIEventProcessor.h" line="53"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d40/classGUIEventProcessorModel_1ac03d9dd79678d679ecc8eaf2868be2e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnKeyPress</definition>
+        <argsstring>(KeyCode iKey, GUIEventFlag iFlags)</argsstring>
+        <name>OnKeyPress</name>
+        <reimplementedby refid="df/d6d/classGUITextInputModel_1ac03d9dd79678d679ecc8eaf2868be2e7">OnKeyPress</reimplementedby>
+        <reimplementedby refid="dc/d72/classMyBackboardModel_1ac03d9dd79678d679ecc8eaf2868be2e7">OnKeyPress</reimplementedby>
+        <reimplementedby refid="d8/d96/classConsoleInputModel_1ac03d9dd79678d679ecc8eaf2868be2e7">OnKeyPress</reimplementedby>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a414bae0861cbf75db6ba1081cee1e663" kindref="member">KeyCode</ref></type>
+          <declname>iKey</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/df0/GUIEvent_8h_1a1fb329d664687b0a665d348b7b1ed134" kindref="member">GUIEventFlag</ref></type>
+          <declname>iFlags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIEventProcessor.h" line="55"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d40/classGUIEventProcessorModel_1a9e381a03ac30f24336437ea469463e7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnKeyRelease</definition>
+        <argsstring>(KeyCode iKey, GUIEventFlag iFlags)</argsstring>
+        <name>OnKeyRelease</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a414bae0861cbf75db6ba1081cee1e663" kindref="member">KeyCode</ref></type>
+          <declname>iKey</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/df0/GUIEvent_8h_1a1fb329d664687b0a665d348b7b1ed134" kindref="member">GUIEventFlag</ref></type>
+          <declname>iFlags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIEventProcessor.h" line="56"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d40/classGUIEventProcessorModel_1ad7821750126b444a522a57f8e56a4015" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnMousePress</definition>
+        <argsstring>(const Point2 &amp;ptLocalPos, KeyCode iKey, GUIEventFlag iFlags)</argsstring>
+        <name>OnMousePress</name>
+        <reimplementedby refid="d6/da7/classGUIButtonModel_1ad7821750126b444a522a57f8e56a4015">OnMousePress</reimplementedby>
+        <reimplementedby refid="dc/d72/classMyBackboardModel_1ac0d68f0ad1fa5c9c335e41c56467adb2">OnMousePress</reimplementedby>
+        <param>
+          <type>const <ref refid="dd/d98/classPoint2" kindref="compound">Point2</ref> &amp;</type>
+          <declname>ptLocalPos</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a414bae0861cbf75db6ba1081cee1e663" kindref="member">KeyCode</ref></type>
+          <declname>iKey</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/df0/GUIEvent_8h_1a1fb329d664687b0a665d348b7b1ed134" kindref="member">GUIEventFlag</ref></type>
+          <declname>iFlags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIEventProcessor.h" line="58"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d40/classGUIEventProcessorModel_1a0d16663cc3afe04b2fb14462cc20aded" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnMouseRelease</definition>
+        <argsstring>(const Point2 &amp;ptLocalPos, KeyCode iKey, GUIEventFlag iFlags)</argsstring>
+        <name>OnMouseRelease</name>
+        <reimplementedby refid="d6/da7/classGUIButtonModel_1a0d16663cc3afe04b2fb14462cc20aded">OnMouseRelease</reimplementedby>
+        <param>
+          <type>const <ref refid="dd/d98/classPoint2" kindref="compound">Point2</ref> &amp;</type>
+          <declname>ptLocalPos</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a414bae0861cbf75db6ba1081cee1e663" kindref="member">KeyCode</ref></type>
+          <declname>iKey</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/df0/GUIEvent_8h_1a1fb329d664687b0a665d348b7b1ed134" kindref="member">GUIEventFlag</ref></type>
+          <declname>iFlags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIEventProcessor.h" line="59"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d40/classGUIEventProcessorModel_1aef6289d8ef69e714dabad61f7c46797d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnClick</definition>
+        <argsstring>(const Point2 &amp;ptLocalPos, KeyCode iKey, GUIEventFlag iFlags)</argsstring>
+        <name>OnClick</name>
+        <reimplementedby refid="d6/da7/classGUIButtonModel_1aef6289d8ef69e714dabad61f7c46797d">OnClick</reimplementedby>
+        <reimplementedby refid="db/d58/classGUIBackboardModel_1aef6289d8ef69e714dabad61f7c46797d">OnClick</reimplementedby>
+        <reimplementedby refid="d0/d38/classGUICheckBoxModel_1aef6289d8ef69e714dabad61f7c46797d">OnClick</reimplementedby>
+        <reimplementedby refid="df/d6d/classGUITextInputModel_1aef6289d8ef69e714dabad61f7c46797d">OnClick</reimplementedby>
+        <reimplementedby refid="dd/d96/classGUIRadioButtonModel_1aef6289d8ef69e714dabad61f7c46797d">OnClick</reimplementedby>
+        <reimplementedby refid="da/dfd/classGUIMenuModel_1aef6289d8ef69e714dabad61f7c46797d">OnClick</reimplementedby>
+        <reimplementedby refid="d0/d61/classGUIWidgetModel_1aef6289d8ef69e714dabad61f7c46797d">OnClick</reimplementedby>
+        <reimplementedby refid="d4/d2c/classGUIListModel_1aef6289d8ef69e714dabad61f7c46797d">OnClick</reimplementedby>
+        <reimplementedby refid="d7/d13/classGUITreeModel_1aef6289d8ef69e714dabad61f7c46797d">OnClick</reimplementedby>
+        <param>
+          <type>const <ref refid="dd/d98/classPoint2" kindref="compound">Point2</ref> &amp;</type>
+          <declname>ptLocalPos</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a414bae0861cbf75db6ba1081cee1e663" kindref="member">KeyCode</ref></type>
+          <declname>iKey</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/df0/GUIEvent_8h_1a1fb329d664687b0a665d348b7b1ed134" kindref="member">GUIEventFlag</ref></type>
+          <declname>iFlags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIEventProcessor.h" line="61"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d40/classGUIEventProcessorModel_1aa3e35f6c52afce88f987f7b3b812f3a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnDblClick</definition>
+        <argsstring>(const Point2 &amp;ptLocalPos, KeyCode iKey, GUIEventFlag iFlags)</argsstring>
+        <name>OnDblClick</name>
+        <param>
+          <type>const <ref refid="dd/d98/classPoint2" kindref="compound">Point2</ref> &amp;</type>
+          <declname>ptLocalPos</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a414bae0861cbf75db6ba1081cee1e663" kindref="member">KeyCode</ref></type>
+          <declname>iKey</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/df0/GUIEvent_8h_1a1fb329d664687b0a665d348b7b1ed134" kindref="member">GUIEventFlag</ref></type>
+          <declname>iFlags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIEventProcessor.h" line="62"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d40/classGUIEventProcessorModel_1a84a8c413e7f1bdff0e95e486c4b4c701" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnScroll</definition>
+        <argsstring>(const Point2 &amp;ptLocalPos, Int iWheelDelta, GUIEventFlag iFlags)</argsstring>
+        <name>OnScroll</name>
+        <reimplementedby refid="d4/d2d/classGUITextLogModel_1a84a8c413e7f1bdff0e95e486c4b4c701">OnScroll</reimplementedby>
+        <reimplementedby refid="d4/d2c/classGUIListModel_1a84a8c413e7f1bdff0e95e486c4b4c701">OnScroll</reimplementedby>
+        <reimplementedby refid="d7/d13/classGUITreeModel_1a84a8c413e7f1bdff0e95e486c4b4c701">OnScroll</reimplementedby>
+        <param>
+          <type>const <ref refid="dd/d98/classPoint2" kindref="compound">Point2</ref> &amp;</type>
+          <declname>ptLocalPos</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref></type>
+          <declname>iWheelDelta</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/df0/GUIEvent_8h_1a1fb329d664687b0a665d348b7b1ed134" kindref="member">GUIEventFlag</ref></type>
+          <declname>iFlags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIEventProcessor.h" line="64"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d40/classGUIEventProcessorModel_1a76f49c66bd121837ceb5e8044d1e7d43" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnRollIn</definition>
+        <argsstring>()</argsstring>
+        <name>OnRollIn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIEventProcessor.h" line="66"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d40/classGUIEventProcessorModel_1a1349de895d5bfe49c31c84803e390e69" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnRollOut</definition>
+        <argsstring>()</argsstring>
+        <name>OnRollOut</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIEventProcessor.h" line="67"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d40/classGUIEventProcessorModel_1a0acd59231d41981eb8903f53b9da820d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnRollOver</definition>
+        <argsstring>(const Point2 &amp;ptLocalPos, GUIEventFlag iFlags)</argsstring>
+        <name>OnRollOver</name>
+        <reimplementedby refid="da/dfd/classGUIMenuModel_1a0acd59231d41981eb8903f53b9da820d">OnRollOver</reimplementedby>
+        <param>
+          <type>const <ref refid="dd/d98/classPoint2" kindref="compound">Point2</ref> &amp;</type>
+          <declname>ptLocalPos</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/df0/GUIEvent_8h_1a1fb329d664687b0a665d348b7b1ed134" kindref="member">GUIEventFlag</ref></type>
+          <declname>iFlags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIEventProcessor.h" line="68"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d40/classGUIEventProcessorModel_1ad41fa7e90b05e9abb22d88e3328e0144" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnStartDrag</definition>
+        <argsstring>(const Point2 &amp;ptLocalPos, KeyCode iKey, GUIEventFlag iFlags)</argsstring>
+        <name>OnStartDrag</name>
+        <reimplementedby refid="d2/d3e/classGUITitleBarModel_1ad41fa7e90b05e9abb22d88e3328e0144">OnStartDrag</reimplementedby>
+        <reimplementedby refid="d9/dd8/classGUIBorderModel_1ad41fa7e90b05e9abb22d88e3328e0144">OnStartDrag</reimplementedby>
+        <reimplementedby refid="de/d7e/classGUICornerModel_1ad41fa7e90b05e9abb22d88e3328e0144">OnStartDrag</reimplementedby>
+        <param>
+          <type>const <ref refid="dd/d98/classPoint2" kindref="compound">Point2</ref> &amp;</type>
+          <declname>ptLocalPos</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a414bae0861cbf75db6ba1081cee1e663" kindref="member">KeyCode</ref></type>
+          <declname>iKey</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/df0/GUIEvent_8h_1a1fb329d664687b0a665d348b7b1ed134" kindref="member">GUIEventFlag</ref></type>
+          <declname>iFlags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIEventProcessor.h" line="70"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d40/classGUIEventProcessorModel_1a17ce7ae06efbafb91cc5caa6a4df3769" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnDragLeft</definition>
+        <argsstring>(const Point2 &amp;ptLocalPos, GUIEventFlag iFlags)</argsstring>
+        <name>OnDragLeft</name>
+        <param>
+          <type>const <ref refid="dd/d98/classPoint2" kindref="compound">Point2</ref> &amp;</type>
+          <declname>ptLocalPos</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/df0/GUIEvent_8h_1a1fb329d664687b0a665d348b7b1ed134" kindref="member">GUIEventFlag</ref></type>
+          <declname>iFlags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIEventProcessor.h" line="71"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d40/classGUIEventProcessorModel_1a7c836a58d5d3e22ce14266d8a34abca6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnDragRight</definition>
+        <argsstring>(const Point2 &amp;ptLocalPos, GUIEventFlag iFlags)</argsstring>
+        <name>OnDragRight</name>
+        <param>
+          <type>const <ref refid="dd/d98/classPoint2" kindref="compound">Point2</ref> &amp;</type>
+          <declname>ptLocalPos</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/df0/GUIEvent_8h_1a1fb329d664687b0a665d348b7b1ed134" kindref="member">GUIEventFlag</ref></type>
+          <declname>iFlags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIEventProcessor.h" line="72"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d40/classGUIEventProcessorModel_1aa636c946eeaa7b724fdde67f1ca97fca" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnDragBoth</definition>
+        <argsstring>(const Point2 &amp;ptLocalPos, GUIEventFlag iFlags)</argsstring>
+        <name>OnDragBoth</name>
+        <param>
+          <type>const <ref refid="dd/d98/classPoint2" kindref="compound">Point2</ref> &amp;</type>
+          <declname>ptLocalPos</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/df0/GUIEvent_8h_1a1fb329d664687b0a665d348b7b1ed134" kindref="member">GUIEventFlag</ref></type>
+          <declname>iFlags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIEventProcessor.h" line="73"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d40/classGUIEventProcessorModel_1a5ab23add485081eabc565545b600fa0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnStopDrag</definition>
+        <argsstring>(const Point2 &amp;ptLocalPos, KeyCode iKey, GUIEventFlag iFlags)</argsstring>
+        <name>OnStopDrag</name>
+        <param>
+          <type>const <ref refid="dd/d98/classPoint2" kindref="compound">Point2</ref> &amp;</type>
+          <declname>ptLocalPos</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a414bae0861cbf75db6ba1081cee1e663" kindref="member">KeyCode</ref></type>
+          <declname>iKey</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/df0/GUIEvent_8h_1a1fb329d664687b0a665d348b7b1ed134" kindref="member">GUIEventFlag</ref></type>
+          <declname>iFlags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIEventProcessor.h" line="74"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d40/classGUIEventProcessorModel_1a2016e258f2f1da5dde1355ec22551d06" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnFocusGain</definition>
+        <argsstring>()</argsstring>
+        <name>OnFocusGain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIEventProcessor.h" line="76"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d40/classGUIEventProcessorModel_1aa13f09676e6e63fe2a1d111810eb6188" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnFocusLoss</definition>
+        <argsstring>()</argsstring>
+        <name>OnFocusLoss</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIEventProcessor.h" line="77"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d40/classGUIEventProcessorModel_1a96979342e0e260ea683f2e279c17f08b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnResize</definition>
+        <argsstring>()</argsstring>
+        <name>OnResize</name>
+        <reimplementedby refid="df/d6d/classGUITextInputModel_1a96979342e0e260ea683f2e279c17f08b">OnResize</reimplementedby>
+        <reimplementedby refid="d4/d2d/classGUITextLogModel_1a96979342e0e260ea683f2e279c17f08b">OnResize</reimplementedby>
+        <reimplementedby refid="d4/d2c/classGUIListModel_1a96979342e0e260ea683f2e279c17f08b">OnResize</reimplementedby>
+        <reimplementedby refid="d7/d13/classGUITreeModel_1a96979342e0e260ea683f2e279c17f08b">OnResize</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIEventProcessor.h" line="79"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d40/classGUIEventProcessorModel_1afab7f7032d2bdef0e41ebfac22a78ac3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnExit</definition>
+        <argsstring>()</argsstring>
+        <name>OnExit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIEventProcessor.h" line="80"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3463">
+        <label>GUITitleBarModel</label>
+        <link refid="d2/d3e/classGUITitleBarModel"/>
+        <childnode refid="3446" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3452">
+        <label>GUICornerModel</label>
+        <link refid="de/d7e/classGUICornerModel"/>
+        <childnode refid="3446" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3461">
+        <label>ConsoleLogModel</label>
+        <link refid="dd/ddf/classConsoleLogModel"/>
+        <childnode refid="3460" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3464">
+        <label>GUITreeModel</label>
+        <link refid="d7/d13/classGUITreeModel"/>
+        <childnode refid="3446" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3448">
+        <label>GUIButtonModel</label>
+        <link refid="d6/da7/classGUIButtonModel"/>
+        <childnode refid="3446" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3445">
+        <label>GUIMenuModel</label>
+        <link refid="da/dfd/classGUIMenuModel"/>
+        <childnode refid="3444" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3446">
+        <label>GUIWidgetModel</label>
+        <link refid="d0/d61/classGUIWidgetModel"/>
+        <childnode refid="3441" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3442">
+        <label>GUIBackboardModel</label>
+        <link refid="db/d58/classGUIBackboardModel"/>
+        <childnode refid="3441" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3459">
+        <label>ConsoleInputModel</label>
+        <link refid="d8/d96/classConsoleInputModel"/>
+        <childnode refid="3458" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3450">
+        <label>GUISwitchTabsButtonModel</label>
+        <link refid="d1/d0a/classGUISwitchTabsButtonModel"/>
+        <childnode refid="3448" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3457">
+        <label>GUISwitchTabsModel</label>
+        <link refid="df/dbd/classGUISwitchTabsModel"/>
+        <childnode refid="3446" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3462">
+        <label>GUITextModel</label>
+        <link refid="de/dab/classGUITextModel"/>
+        <childnode refid="3446" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3454">
+        <label>GUIListModel</label>
+        <link refid="d4/d2c/classGUIListModel"/>
+        <childnode refid="3446" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3460">
+        <label>GUITextLogModel</label>
+        <link refid="d4/d2d/classGUITextLogModel"/>
+        <childnode refid="3446" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3455">
+        <label>GUIRadioButtonModel</label>
+        <link refid="dd/d96/classGUIRadioButtonModel"/>
+        <childnode refid="3446" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3449">
+        <label>GUIMsgBoxButtonModel</label>
+        <link refid="dd/d1b/classGUIMsgBoxButtonModel"/>
+        <childnode refid="3448" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3441">
+        <label>GUIEventProcessorModel</label>
+        <link refid="dd/d40/classGUIEventProcessorModel"/>
+      </node>
+      <node id="3451">
+        <label>GUICheckBoxModel</label>
+        <link refid="d0/d38/classGUICheckBoxModel"/>
+        <childnode refid="3446" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3444">
+        <label>GUIOverlayModel</label>
+        <link refid="d5/db8/classGUIOverlayModel"/>
+        <childnode refid="3441" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3447">
+        <label>GUIBorderModel</label>
+        <link refid="d9/dd8/classGUIBorderModel"/>
+        <childnode refid="3446" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3453">
+        <label>GUILabelModel</label>
+        <link refid="da/d8b/classGUILabelModel"/>
+        <childnode refid="3446" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3456">
+        <label>GUISectionModel</label>
+        <link refid="dd/dd3/classGUISectionModel"/>
+        <childnode refid="3446" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3443">
+        <label>MyBackboardModel</label>
+        <link refid="dc/d72/classMyBackboardModel"/>
+        <childnode refid="3442" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3458">
+        <label>GUITextInputModel</label>
+        <link refid="df/d6d/classGUITextInputModel"/>
+        <childnode refid="3446" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3468">
+        <label>RingBuffer&lt; GUIEvent &gt;</label>
+        <link refid="d8/d2d/classRingBuffer"/>
+        <childnode refid="3469" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3471" relation="usage">
+          <edgelabel>m_arrBuffer</edgelabel>
+        </childnode>
+        <childnode refid="3474" relation="usage">
+          <edgelabel>m_iRead</edgelabel>
+          <edgelabel>m_iBufferSize</edgelabel>
+          <edgelabel>m_iCount</edgelabel>
+          <edgelabel>m_iWrite</edgelabel>
+        </childnode>
+      </node>
+      <node id="3471">
+        <label>GUIEvent</label>
+        <link refid="d9/d68/classGUIEvent"/>
+        <childnode refid="3472" relation="usage">
+          <edgelabel>m_arrParameters</edgelabel>
+        </childnode>
+        <childnode refid="3473" relation="usage">
+          <edgelabel>m_iType</edgelabel>
+        </childnode>
+        <childnode refid="3474" relation="usage">
+          <edgelabel>m_arrParamOffsets</edgelabel>
+          <edgelabel>m_iParamCount</edgelabel>
+          <edgelabel>m_iParamTotalSize</edgelabel>
+        </childnode>
+        <childnode refid="3470" relation="usage">
+          <edgelabel>m_iFlags</edgelabel>
+        </childnode>
+      </node>
+      <node id="3470">
+        <label>unsigned int</label>
+      </node>
+      <node id="3472">
+        <label>unsigned char</label>
+      </node>
+      <node id="3474">
+        <label>int</label>
+      </node>
+      <node id="3473">
+        <label>GUIEventType</label>
+      </node>
+      <node id="3465">
+        <label>GUIEventProcessorModel</label>
+        <link refid="dd/d40/classGUIEventProcessorModel"/>
+        <childnode refid="3466" relation="usage">
+          <edgelabel>m_pEventProcessor</edgelabel>
+        </childnode>
+      </node>
+      <node id="3475">
+        <label>bool</label>
+      </node>
+      <node id="3467">
+        <label>char</label>
+      </node>
+      <node id="3466">
+        <label>GUIEventProcessor</label>
+        <link refid="d2/de5/classGUIEventProcessor"/>
+        <childnode refid="3467" relation="usage">
+          <edgelabel>m_strName</edgelabel>
+        </childnode>
+        <childnode refid="3468" relation="usage">
+          <edgelabel>m_bufEventQueue</edgelabel>
+        </childnode>
+        <childnode refid="3475" relation="usage">
+          <edgelabel>m_bHasFocus</edgelabel>
+          <edgelabel>m_bHasMouseOver</edgelabel>
+        </childnode>
+        <childnode refid="3465" relation="usage">
+          <edgelabel>m_pModel</edgelabel>
+        </childnode>
+      </node>
+      <node id="3469">
+        <label>Datastruct</label>
+        <link refid="dc/d51/classDatastruct"/>
+        <childnode refid="3467" relation="usage">
+          <edgelabel>m_strAllocatorName</edgelabel>
+        </childnode>
+        <childnode refid="3470" relation="usage">
+          <edgelabel>m_idMemoryContext</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIEventProcessor.h" line="47" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIEventProcessor.h" bodystart="46" bodyend="85"/>
+    <listofallmembers>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a4510e5d99d3ab6565b683f568b5a2615" prot="protected" virt="non-virtual"><scope>GUIEventProcessorModel</scope><name>GUIEventProcessor</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a8fbad42b0ba391346a20d145a1f1aaff" prot="public" virt="non-virtual"><scope>GUIEventProcessorModel</scope><name>GUIEventProcessorModel</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1ad88dbcc21870be5c934a7ed0492ab408" prot="protected" virt="non-virtual"><scope>GUIEventProcessorModel</scope><name>m_pEventProcessor</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1aef6289d8ef69e714dabad61f7c46797d" prot="public" virt="virtual"><scope>GUIEventProcessorModel</scope><name>OnClick</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1aa3e35f6c52afce88f987f7b3b812f3a0" prot="public" virt="virtual"><scope>GUIEventProcessorModel</scope><name>OnDblClick</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1aa636c946eeaa7b724fdde67f1ca97fca" prot="public" virt="virtual"><scope>GUIEventProcessorModel</scope><name>OnDragBoth</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a17ce7ae06efbafb91cc5caa6a4df3769" prot="public" virt="virtual"><scope>GUIEventProcessorModel</scope><name>OnDragLeft</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a7c836a58d5d3e22ce14266d8a34abca6" prot="public" virt="virtual"><scope>GUIEventProcessorModel</scope><name>OnDragRight</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1afab7f7032d2bdef0e41ebfac22a78ac3" prot="public" virt="virtual"><scope>GUIEventProcessorModel</scope><name>OnExit</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a2016e258f2f1da5dde1355ec22551d06" prot="public" virt="virtual"><scope>GUIEventProcessorModel</scope><name>OnFocusGain</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1aa13f09676e6e63fe2a1d111810eb6188" prot="public" virt="virtual"><scope>GUIEventProcessorModel</scope><name>OnFocusLoss</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1ac03d9dd79678d679ecc8eaf2868be2e7" prot="public" virt="virtual"><scope>GUIEventProcessorModel</scope><name>OnKeyPress</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a9e381a03ac30f24336437ea469463e7d" prot="public" virt="virtual"><scope>GUIEventProcessorModel</scope><name>OnKeyRelease</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1ad7821750126b444a522a57f8e56a4015" prot="public" virt="virtual"><scope>GUIEventProcessorModel</scope><name>OnMousePress</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a0d16663cc3afe04b2fb14462cc20aded" prot="public" virt="virtual"><scope>GUIEventProcessorModel</scope><name>OnMouseRelease</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a96979342e0e260ea683f2e279c17f08b" prot="public" virt="virtual"><scope>GUIEventProcessorModel</scope><name>OnResize</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a76f49c66bd121837ceb5e8044d1e7d43" prot="public" virt="virtual"><scope>GUIEventProcessorModel</scope><name>OnRollIn</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a1349de895d5bfe49c31c84803e390e69" prot="public" virt="virtual"><scope>GUIEventProcessorModel</scope><name>OnRollOut</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a0acd59231d41981eb8903f53b9da820d" prot="public" virt="virtual"><scope>GUIEventProcessorModel</scope><name>OnRollOver</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a84a8c413e7f1bdff0e95e486c4b4c701" prot="public" virt="virtual"><scope>GUIEventProcessorModel</scope><name>OnScroll</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1ad41fa7e90b05e9abb22d88e3328e0144" prot="public" virt="virtual"><scope>GUIEventProcessorModel</scope><name>OnStartDrag</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a5ab23add485081eabc565545b600fa0e" prot="public" virt="virtual"><scope>GUIEventProcessorModel</scope><name>OnStopDrag</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1ae55129b32f59b72142aabfb4bbba3978" prot="public" virt="virtual"><scope>GUIEventProcessorModel</scope><name>OnTick</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a9c07c36b72b8ae06d38a2e6de5afe226" prot="public" virt="virtual"><scope>GUIEventProcessorModel</scope><name>~GUIEventProcessorModel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

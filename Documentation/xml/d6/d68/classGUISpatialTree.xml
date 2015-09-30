@@ -1,0 +1,339 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d6/d68/classGUISpatialTree" kind="class" prot="public">
+    <compoundname>GUISpatialTree</compoundname>
+    <includes refid="d4/de6/GUISpatialTree_8h" local="no">GUISpatialTree.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d6/d68/classGUISpatialTree_1a42560fa3e95af6197297e1623331b5dc" prot="private" static="no" mutable="no">
+        <type><ref refid="dc/d88/structGUISpatialNode" kindref="compound">GUISpatialNode</ref> *</type>
+        <definition>GUISpatialNode* m_pRoot</definition>
+        <argsstring></argsstring>
+        <name>m_pRoot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUISpatialTree.h" line="111" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUISpatialTree.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d68/classGUISpatialTree_1a4e5482593b6d59be59eb99bcc8857b5e" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool m_bAllowOverlaps</definition>
+        <argsstring></argsstring>
+        <name>m_bAllowOverlaps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUISpatialTree.h" line="113" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUISpatialTree.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d6/d68/classGUISpatialTree_1a6a73f61c4cdea3da53223ad7634ae135" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GUISpatialTree</definition>
+        <argsstring>(Bool bAllowOverlaps)</argsstring>
+        <name>GUISpatialTree</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+          <declname>bAllowOverlaps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUISpatialTree.h" line="63"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d68/classGUISpatialTree_1acf723503a84e0e78e79c565031f4dcdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~GUISpatialTree</definition>
+        <argsstring>()</argsstring>
+        <name>~GUISpatialTree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUISpatialTree.h" line="64"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d68/classGUISpatialTree_1ab87a5e87a230a1e6bee0ca05e61a78e1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> *</type>
+        <definition>Void* SpatialSearch</definition>
+        <argsstring>(const Point2 &amp;ptCoords) const </argsstring>
+        <name>SpatialSearch</name>
+        <param>
+          <type>const <ref refid="dd/d98/classPoint2" kindref="compound">Point2</ref> &amp;</type>
+          <declname>ptCoords</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUISpatialTree.h" line="66"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d68/classGUISpatialTree_1a99ed4d1a101f710b88426ebd57b597ea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Insert</definition>
+        <argsstring>(const Rectangle2 &amp;rectRegion, UInt iDepth, Void *pItem)</argsstring>
+        <name>Insert</name>
+        <param>
+          <type>const <ref refid="d0/de5/classRectangle2" kindref="compound">Rectangle2</ref> &amp;</type>
+          <declname>rectRegion</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDepth</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> *</type>
+          <declname>pItem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUISpatialTree.h" line="68" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUISpatialTree.h" bodystart="67" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d68/classGUISpatialTree_1ac0004559c553ab19057790fef9960d80" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool Remove</definition>
+        <argsstring>(const Rectangle2 &amp;rectRegion, UInt iDepth, Void *pItem)</argsstring>
+        <name>Remove</name>
+        <param>
+          <type>const <ref refid="d0/de5/classRectangle2" kindref="compound">Rectangle2</ref> &amp;</type>
+          <declname>rectRegion</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDepth</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> *</type>
+          <declname>pItem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUISpatialTree.h" line="87" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUISpatialTree.h" bodystart="86" bodyend="88"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d6/d68/classGUISpatialTree_1a710603ff16d8e27e367867b9e8440dae" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dc/d88/structGUISpatialNode" kindref="compound">GUISpatialNode</ref> *</type>
+        <definition>GUISpatialNode* _SearchNode</definition>
+        <argsstring>(GUISpatialNode *pNode, const Point2 &amp;ptCoords) const </argsstring>
+        <name>_SearchNode</name>
+        <param>
+          <type><ref refid="dc/d88/structGUISpatialNode" kindref="compound">GUISpatialNode</ref> *</type>
+          <declname>pNode</declname>
+        </param>
+        <param>
+          <type>const <ref refid="dd/d98/classPoint2" kindref="compound">Point2</ref> &amp;</type>
+          <declname>ptCoords</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUISpatialTree.h" line="92"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d68/classGUISpatialTree_1a0c1b6201ade461b4995c28a38b7a6b6b" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> *</type>
+        <definition>Void* _SearchItem</definition>
+        <argsstring>(GUISpatialNode *pNode, const Point2 &amp;ptCoords) const </argsstring>
+        <name>_SearchItem</name>
+        <param>
+          <type><ref refid="dc/d88/structGUISpatialNode" kindref="compound">GUISpatialNode</ref> *</type>
+          <declname>pNode</declname>
+        </param>
+        <param>
+          <type>const <ref refid="dd/d98/classPoint2" kindref="compound">Point2</ref> &amp;</type>
+          <declname>ptCoords</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUISpatialTree.h" line="93"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d68/classGUISpatialTree_1afd6a985c7c995fdfe607ffc232e89775" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool _SplitTestX</definition>
+        <argsstring>(GUISpatialNode *pLeaf, Scalar *outRelativeSplit, Int *outBalanceFactor)</argsstring>
+        <name>_SplitTestX</name>
+        <param>
+          <type><ref refid="dc/d88/structGUISpatialNode" kindref="compound">GUISpatialNode</ref> *</type>
+          <declname>pLeaf</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/d10/Scalar_8h_1abee0aca51a3a3e16c628155aa4ac6f12" kindref="member">Scalar</ref> *</type>
+          <declname>outRelativeSplit</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref> *</type>
+          <declname>outBalanceFactor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUISpatialTree.h" line="97" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUISpatialTree.h" bodystart="96" bodyend="108"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4147">
+        <label>@19</label>
+      </node>
+      <node id="4154">
+        <label>T</label>
+      </node>
+      <node id="4144">
+        <label>Rectangle2</label>
+        <link refid="d0/de5/classRectangle2"/>
+        <childnode refid="4145" relation="usage">
+          <edgelabel>DownRight</edgelabel>
+          <edgelabel>TopLeft</edgelabel>
+        </childnode>
+      </node>
+      <node id="4140">
+        <label>GUISpatialTree</label>
+        <link refid="d6/d68/classGUISpatialTree"/>
+        <childnode refid="4141" relation="usage">
+          <edgelabel>m_pRoot</edgelabel>
+        </childnode>
+        <childnode refid="4156" relation="usage">
+          <edgelabel>m_bAllowOverlaps</edgelabel>
+        </childnode>
+      </node>
+      <node id="4155">
+        <label>GUIQuadSplit</label>
+      </node>
+      <node id="4152">
+        <label>ListNode&lt; T &gt;</label>
+        <link refid="dd/d2d/structListNode"/>
+        <childnode refid="4153" relation="usage">
+          <edgelabel>pPrev</edgelabel>
+          <edgelabel>pNext</edgelabel>
+        </childnode>
+        <childnode refid="4154" relation="usage">
+          <edgelabel>Item</edgelabel>
+        </childnode>
+      </node>
+      <node id="4142">
+        <label>float</label>
+      </node>
+      <node id="4151">
+        <label>unsigned int</label>
+      </node>
+      <node id="4145">
+        <label>Point2</label>
+        <link refid="dd/d98/classPoint2"/>
+        <childnode refid="4145" relation="usage">
+          <edgelabel>Null</edgelabel>
+        </childnode>
+        <childnode refid="4146" relation="usage">
+          <edgelabel>Values</edgelabel>
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+        </childnode>
+        <childnode refid="4147" relation="usage">
+          <edgelabel>@20</edgelabel>
+        </childnode>
+      </node>
+      <node id="4146">
+        <label>int</label>
+      </node>
+      <node id="4148">
+        <label>List&lt; GUISpatialNodeItem &gt;</label>
+        <link refid="d6/da9/classList"/>
+        <childnode refid="4149" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4152" relation="usage">
+          <edgelabel>m_pEnd</edgelabel>
+          <edgelabel>m_pHead</edgelabel>
+        </childnode>
+        <childnode refid="4146" relation="usage">
+          <edgelabel>m_iLength</edgelabel>
+        </childnode>
+      </node>
+      <node id="4153">
+        <label>struct _list_node *</label>
+      </node>
+      <node id="4141">
+        <label>GUISpatialNode</label>
+        <link refid="dc/d88/structGUISpatialNode"/>
+        <childnode refid="4142" relation="usage">
+          <edgelabel>fRelativeSplit</edgelabel>
+        </childnode>
+        <childnode refid="4143" relation="usage">
+          <edgelabel>pLesser</edgelabel>
+          <edgelabel>pGreater</edgelabel>
+        </childnode>
+        <childnode refid="4144" relation="usage">
+          <edgelabel>rectRegion</edgelabel>
+        </childnode>
+        <childnode refid="4148" relation="usage">
+          <edgelabel>lstNodeItems</edgelabel>
+        </childnode>
+        <childnode refid="4155" relation="usage">
+          <edgelabel>iSplitAxis</edgelabel>
+        </childnode>
+      </node>
+      <node id="4156">
+        <label>bool</label>
+      </node>
+      <node id="4150">
+        <label>char</label>
+      </node>
+      <node id="4143">
+        <label>struct _gui_spatialnode *</label>
+      </node>
+      <node id="4149">
+        <label>Datastruct</label>
+        <link refid="dc/d51/classDatastruct"/>
+        <childnode refid="4150" relation="usage">
+          <edgelabel>m_strAllocatorName</edgelabel>
+        </childnode>
+        <childnode refid="4151" relation="usage">
+          <edgelabel>m_idMemoryContext</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUISpatialTree.h" line="61" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUISpatialTree.h" bodystart="60" bodyend="114"/>
+    <listofallmembers>
+      <member refid="d6/d68/classGUISpatialTree_1a0c1b6201ade461b4995c28a38b7a6b6b" prot="private" virt="non-virtual"><scope>GUISpatialTree</scope><name>_SearchItem</name></member>
+      <member refid="d6/d68/classGUISpatialTree_1a710603ff16d8e27e367867b9e8440dae" prot="private" virt="non-virtual"><scope>GUISpatialTree</scope><name>_SearchNode</name></member>
+      <member refid="d6/d68/classGUISpatialTree_1afd6a985c7c995fdfe607ffc232e89775" prot="private" virt="non-virtual"><scope>GUISpatialTree</scope><name>_SplitTestX</name></member>
+      <member refid="d6/d68/classGUISpatialTree_1a6a73f61c4cdea3da53223ad7634ae135" prot="public" virt="non-virtual"><scope>GUISpatialTree</scope><name>GUISpatialTree</name></member>
+      <member refid="d6/d68/classGUISpatialTree_1a99ed4d1a101f710b88426ebd57b597ea" prot="public" virt="non-virtual"><scope>GUISpatialTree</scope><name>Insert</name></member>
+      <member refid="d6/d68/classGUISpatialTree_1a4e5482593b6d59be59eb99bcc8857b5e" prot="private" virt="non-virtual"><scope>GUISpatialTree</scope><name>m_bAllowOverlaps</name></member>
+      <member refid="d6/d68/classGUISpatialTree_1a42560fa3e95af6197297e1623331b5dc" prot="private" virt="non-virtual"><scope>GUISpatialTree</scope><name>m_pRoot</name></member>
+      <member refid="d6/d68/classGUISpatialTree_1ac0004559c553ab19057790fef9960d80" prot="public" virt="non-virtual"><scope>GUISpatialTree</scope><name>Remove</name></member>
+      <member refid="d6/d68/classGUISpatialTree_1ab87a5e87a230a1e6bee0ca05e61a78e1" prot="public" virt="non-virtual"><scope>GUISpatialTree</scope><name>SpatialSearch</name></member>
+      <member refid="d6/d68/classGUISpatialTree_1acf723503a84e0e78e79c565031f4dcdc" prot="public" virt="non-virtual"><scope>GUISpatialTree</scope><name>~GUISpatialTree</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

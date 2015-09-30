@@ -1,0 +1,1314 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="db/d5b/classRDBPersistentStorage" kind="class" prot="public">
+    <compoundname>RDBPersistentStorage</compoundname>
+    <includes refid="d2/d3d/RDBPersistentStorage_8h" local="no">RDBPersistentStorage.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="db/d5b/classRDBPersistentStorage_1ae911dd9aa57ce237c0b064b3c8c64856" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref></type>
+        <definition>GChar m_strFileName[FILENAME_LENGTH]</definition>
+        <argsstring>[FILENAME_LENGTH]</argsstring>
+        <name>m_strFileName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="119" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d5b/classRDBPersistentStorage_1a767d6d2a2fffc21b098d2fe1e52ec392" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/da7/classHFile" kindref="compound">HFile</ref></type>
+        <definition>HFile m_hFile</definition>
+        <argsstring></argsstring>
+        <name>m_hFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="120" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d5b/classRDBPersistentStorage_1aa09d049764cf21af7eba786e47be6b55" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool m_bValidFile</definition>
+        <argsstring></argsstring>
+        <name>m_bValidFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="121" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d5b/classRDBPersistentStorage_1aba2f71fb17a041ff5aa8f9239ea05024" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool m_bLocked</definition>
+        <argsstring></argsstring>
+        <name>m_bLocked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="122" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d5b/classRDBPersistentStorage_1a9f5758568e44215a5b18e95f9badae3e" prot="private" static="no" mutable="no">
+        <type><ref refid="d2/d3d/RDBPersistentStorage_8h_1a936cf1bd10bebfb741c9aa669e3e6186" kindref="member">RDB_LockType</ref></type>
+        <definition>RDB_LockType m_iLockType</definition>
+        <argsstring></argsstring>
+        <name>m_iLockType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="123" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d5b/classRDBPersistentStorage_1a05129a742b403b19179004050eb00981" prot="private" static="no" mutable="no">
+        <type><ref refid="dd/d8c/structRDB__MasterHeader" kindref="compound">RDB_MasterHeader</ref></type>
+        <definition>RDB_MasterHeader m_dbMasterHeader</definition>
+        <argsstring></argsstring>
+        <name>m_dbMasterHeader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="133" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d5b/classRDBPersistentStorage_1ae9556d43a01e46e5d362735705e3cca4" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool m_bSyncStateData</definition>
+        <argsstring></argsstring>
+        <name>m_bSyncStateData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="134" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d5b/classRDBPersistentStorage_1a62ed6ec278d5a7f291069a7423ef4488" prot="private" static="no" mutable="no">
+        <type><ref refid="d2/d3d/RDBPersistentStorage_8h_1ac2e521578108d1b89aa91526f4280db0" kindref="member">RDB_CacheMap</ref></type>
+        <definition>RDB_CacheMap m_cacheMap</definition>
+        <argsstring></argsstring>
+        <name>m_cacheMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="136" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d5b/classRDBPersistentStorage_1a7957a9f56c052df54f5ba1d5f42ef4aa" prot="private" static="no" mutable="no">
+        <type><ref refid="d2/d3d/RDBPersistentStorage_8h_1a502a41ba088730be40978e7e6cc4ff2f" kindref="member">RDB_CacheQueue</ref></type>
+        <definition>RDB_CacheQueue m_cacheQueue</definition>
+        <argsstring></argsstring>
+        <name>m_cacheQueue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="137" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d5b/classRDBPersistentStorage_1a981f10d1750a2285be4a44180c46cc95" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iCacheSize</definition>
+        <argsstring></argsstring>
+        <name>m_iCacheSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="138" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d5b/classRDBPersistentStorage_1ac393ddbd6f74b231343464e82f5ef0ba" prot="private" static="no" mutable="no">
+        <type><ref refid="d5/dae/RDBFileStructure_8h_1a5c0ed3d90cd5ca59c8c734a000844494" kindref="member">RDB_FilePtr</ref></type>
+        <definition>RDB_FilePtr m_iTransactionOffset</definition>
+        <argsstring></argsstring>
+        <name>m_iTransactionOffset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="147" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d5b/classRDBPersistentStorage_1ad016b9343df28e2f733691be55a34a0d" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iTransactionStepCount</definition>
+        <argsstring></argsstring>
+        <name>m_iTransactionStepCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="148" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d5b/classRDBPersistentStorage_1a0f0b9bfc698f28287216c01ea951cbbf" prot="private" static="no" mutable="no">
+        <type><ref refid="db/d48/classSHA1Hasher" kindref="compound">SHA1Hasher</ref></type>
+        <definition>SHA1Hasher m_shaTransactionChecksum</definition>
+        <argsstring></argsstring>
+        <name>m_shaTransactionChecksum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="149" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1a1d56501934536ed033820750085b7276" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RDBPersistentStorage</definition>
+        <argsstring>()</argsstring>
+        <name>RDBPersistentStorage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="67"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1af9678855f1e05c2da03cd8ad17a0500a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~RDBPersistentStorage</definition>
+        <argsstring>()</argsstring>
+        <name>~RDBPersistentStorage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="68"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1a7fe6e0bfcae895be52038d0e384ce67f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+        <definition>const GChar* GetFileName</definition>
+        <argsstring>() const </argsstring>
+        <name>GetFileName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="71"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1a0b9fae1340226ded9f596fc7abeeb592" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool Create</definition>
+        <argsstring>(const GChar *strFilename)</argsstring>
+        <name>Create</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strFilename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="74"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1a872c4adb1cb2184350046397a34dab52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool Open</definition>
+        <argsstring>(const GChar *strFilename)</argsstring>
+        <name>Open</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strFilename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="75"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1a081397d9552f403c149ec899adc37486" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Close</definition>
+        <argsstring>()</argsstring>
+        <name>Close</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="76"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1a99c54450fbcc31bf3d1fa8e6384fdebf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d7/d54/structRDB__Chunk__BTreeNode" kindref="compound">RDB_Chunk_BTreeNode</ref> *</type>
+        <definition>RDB_Chunk_BTreeNode* AllocNode</definition>
+        <argsstring>(RDB_ChunkPtr *outNodePtr)</argsstring>
+        <name>AllocNode</name>
+        <param>
+          <type><ref refid="d1/df5/structRDB__ChunkPtr" kindref="compound">RDB_ChunkPtr</ref> *</type>
+          <declname>outNodePtr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="79"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1a8201e54f131d0a7c013b42a0dccfaa76" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d6/d7f/structRDB__Chunk__BTreeLeaf" kindref="compound">RDB_Chunk_BTreeLeaf</ref> *</type>
+        <definition>RDB_Chunk_BTreeLeaf* AllocLeaf</definition>
+        <argsstring>(RDB_ChunkPtr *outLeafPtr)</argsstring>
+        <name>AllocLeaf</name>
+        <param>
+          <type><ref refid="d1/df5/structRDB__ChunkPtr" kindref="compound">RDB_ChunkPtr</ref> *</type>
+          <declname>outLeafPtr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="80"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1a7b80404acb3b4f95fefb8ba0ecbe146c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="df/dec/structRDB__Chunk__Data" kindref="compound">RDB_Chunk_Data</ref> *</type>
+        <definition>RDB_Chunk_Data* AllocData</definition>
+        <argsstring>(RDB_ChunkPtr *outDataPtr)</argsstring>
+        <name>AllocData</name>
+        <param>
+          <type><ref refid="d1/df5/structRDB__ChunkPtr" kindref="compound">RDB_ChunkPtr</ref> *</type>
+          <declname>outDataPtr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="81"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1a6e91fe1b44c75ee551b5ac0d6cfccfa8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Free</definition>
+        <argsstring>(const RDB_ChunkPtr &amp;pChunkPtr)</argsstring>
+        <name>Free</name>
+        <param>
+          <type>const <ref refid="d1/df5/structRDB__ChunkPtr" kindref="compound">RDB_ChunkPtr</ref> &amp;</type>
+          <declname>pChunkPtr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="83"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1a63edd5b075de7b4ff23863130e036d7d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d7/d54/structRDB__Chunk__BTreeNode" kindref="compound">RDB_Chunk_BTreeNode</ref> *</type>
+        <definition>RDB_Chunk_BTreeNode* GetNode</definition>
+        <argsstring>(const RDB_ChunkPtr &amp;pNodePtr)</argsstring>
+        <name>GetNode</name>
+        <param>
+          <type>const <ref refid="d1/df5/structRDB__ChunkPtr" kindref="compound">RDB_ChunkPtr</ref> &amp;</type>
+          <declname>pNodePtr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="85"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1a5bcf427cb12e9758ad89d03df161fbed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d6/d7f/structRDB__Chunk__BTreeLeaf" kindref="compound">RDB_Chunk_BTreeLeaf</ref> *</type>
+        <definition>RDB_Chunk_BTreeLeaf* GetLeaf</definition>
+        <argsstring>(const RDB_ChunkPtr &amp;pLeafPtr)</argsstring>
+        <name>GetLeaf</name>
+        <param>
+          <type>const <ref refid="d1/df5/structRDB__ChunkPtr" kindref="compound">RDB_ChunkPtr</ref> &amp;</type>
+          <declname>pLeafPtr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="86"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1ab08f98858b26039e193abf5b362acd6e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="df/dec/structRDB__Chunk__Data" kindref="compound">RDB_Chunk_Data</ref> *</type>
+        <definition>RDB_Chunk_Data* GetData</definition>
+        <argsstring>(const RDB_ChunkPtr &amp;pDataPtr)</argsstring>
+        <name>GetData</name>
+        <param>
+          <type>const <ref refid="d1/df5/structRDB__ChunkPtr" kindref="compound">RDB_ChunkPtr</ref> &amp;</type>
+          <declname>pDataPtr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="87"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1ad28505c6a9394c5c93b74fce942f5d69" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d7/d54/structRDB__Chunk__BTreeNode" kindref="compound">RDB_Chunk_BTreeNode</ref> *</type>
+        <definition>const RDB_Chunk_BTreeNode* GetConstNode</definition>
+        <argsstring>(const RDB_ChunkPtr &amp;pNodePtr)</argsstring>
+        <name>GetConstNode</name>
+        <param>
+          <type>const <ref refid="d1/df5/structRDB__ChunkPtr" kindref="compound">RDB_ChunkPtr</ref> &amp;</type>
+          <declname>pNodePtr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="89"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1afebc2f13536c96959e590eaff7de603b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d6/d7f/structRDB__Chunk__BTreeLeaf" kindref="compound">RDB_Chunk_BTreeLeaf</ref> *</type>
+        <definition>const RDB_Chunk_BTreeLeaf* GetConstLeaf</definition>
+        <argsstring>(const RDB_ChunkPtr &amp;pLeafPtr)</argsstring>
+        <name>GetConstLeaf</name>
+        <param>
+          <type>const <ref refid="d1/df5/structRDB__ChunkPtr" kindref="compound">RDB_ChunkPtr</ref> &amp;</type>
+          <declname>pLeafPtr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="90"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1a068abd1e95a150aade4f96f75f9bc910" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="df/dec/structRDB__Chunk__Data" kindref="compound">RDB_Chunk_Data</ref> *</type>
+        <definition>const RDB_Chunk_Data* GetConstData</definition>
+        <argsstring>(const RDB_ChunkPtr &amp;pDataPtr)</argsstring>
+        <name>GetConstData</name>
+        <param>
+          <type>const <ref refid="d1/df5/structRDB__ChunkPtr" kindref="compound">RDB_ChunkPtr</ref> &amp;</type>
+          <declname>pDataPtr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="91"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1a87ecee0ebc364c9708be1bda50368dd2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d1/df5/structRDB__ChunkPtr" kindref="compound">RDB_ChunkPtr</ref> &amp;</type>
+        <definition>const RDB_ChunkPtr&amp; GetTableChunk</definition>
+        <argsstring>(RDB_ChunkTable iChunkTableSlot) const </argsstring>
+        <name>GetTableChunk</name>
+        <param>
+          <type><ref refid="d5/dae/RDBFileStructure_8h_1af0e65e24a40b042e4d2aed9cb551f735" kindref="member">RDB_ChunkTable</ref></type>
+          <declname>iChunkTableSlot</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="94"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1a15df752b4ef58c4fed3e5eb9282fb31e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetTableChunk</definition>
+        <argsstring>(RDB_ChunkTable iChunkTableSlot, const RDB_ChunkPtr &amp;pChunk)</argsstring>
+        <name>SetTableChunk</name>
+        <param>
+          <type><ref refid="d5/dae/RDBFileStructure_8h_1af0e65e24a40b042e4d2aed9cb551f735" kindref="member">RDB_ChunkTable</ref></type>
+          <declname>iChunkTableSlot</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d1/df5/structRDB__ChunkPtr" kindref="compound">RDB_ChunkPtr</ref> &amp;</type>
+          <declname>pChunk</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="95"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1a8ad71efec1440b0fd861374a3430825a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d5/dae/RDBFileStructure_8h_1ad3292a503b9997c14123d22beab510f3" kindref="member">RDB_DirectoryID</ref></type>
+        <definition>RDB_DirectoryID GetNextDirectoryID</definition>
+        <argsstring>() const </argsstring>
+        <name>GetNextDirectoryID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="98"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1ad696e0163294159965091e4b9e91dfef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetNextDirectoryID</definition>
+        <argsstring>(RDB_DirectoryID iNextDirectoryID)</argsstring>
+        <name>SetNextDirectoryID</name>
+        <param>
+          <type><ref refid="d5/dae/RDBFileStructure_8h_1ad3292a503b9997c14123d22beab510f3" kindref="member">RDB_DirectoryID</ref></type>
+          <declname>iNextDirectoryID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="99"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1af1d6fc32e9643f4c6278acf682c6ad51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Commit</definition>
+        <argsstring>()</argsstring>
+        <name>Commit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="102"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1a06037639e77ae5e919771ff4a1636e01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Discard</definition>
+        <argsstring>()</argsstring>
+        <name>Discard</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="103"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1a3f037f9dcd6766c65374ac13b8416641" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _File_Lock</definition>
+        <argsstring>(RDB_LockType iLock)</argsstring>
+        <name>_File_Lock</name>
+        <param>
+          <type><ref refid="d2/d3d/RDBPersistentStorage_8h_1a936cf1bd10bebfb741c9aa669e3e6186" kindref="member">RDB_LockType</ref></type>
+          <declname>iLock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="107"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1a203c4609a2c8ad7d5eb00ef36f5e9991" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _File_Unlock</definition>
+        <argsstring>()</argsstring>
+        <name>_File_Unlock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="108"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1a1f72ab778f29d4651f0471144767c383" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _File_Read</definition>
+        <argsstring>(RDB_FilePtr iStorage, UInt iSize, Byte *outData)</argsstring>
+        <name>_File_Read</name>
+        <param>
+          <type><ref refid="d5/dae/RDBFileStructure_8h_1a5c0ed3d90cd5ca59c8c734a000844494" kindref="member">RDB_FilePtr</ref></type>
+          <declname>iStorage</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iSize</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+          <declname>outData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="110"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1ab939501fc76af4f77f42309e5d0fc892" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _File_Write</definition>
+        <argsstring>(RDB_FilePtr iStorage, UInt iSize, const Byte *pData)</argsstring>
+        <name>_File_Write</name>
+        <param>
+          <type><ref refid="d5/dae/RDBFileStructure_8h_1a5c0ed3d90cd5ca59c8c734a000844494" kindref="member">RDB_FilePtr</ref></type>
+          <declname>iStorage</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iSize</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+          <declname>pData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="111"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1a731702c72783bca69cd78e1e2077e043" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d5/dae/RDBFileStructure_8h_1a5c0ed3d90cd5ca59c8c734a000844494" kindref="member">RDB_FilePtr</ref></type>
+        <definition>RDB_FilePtr _File_GetPtr_HeaderState</definition>
+        <argsstring>()</argsstring>
+        <name>_File_GetPtr_HeaderState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="113"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1ae0718619834d1cff3a1cd6a1a7185f1e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d5/dae/RDBFileStructure_8h_1a5c0ed3d90cd5ca59c8c734a000844494" kindref="member">RDB_FilePtr</ref></type>
+        <definition>RDB_FilePtr _File_GetPtr_Journal</definition>
+        <argsstring>()</argsstring>
+        <name>_File_GetPtr_Journal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="114"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1a559c1ef64eb279940d6c1ae245521302" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d5/dae/RDBFileStructure_8h_1a5c0ed3d90cd5ca59c8c734a000844494" kindref="member">RDB_FilePtr</ref></type>
+        <definition>RDB_FilePtr _File_GetPtr_BlockHeader</definition>
+        <argsstring>(RDB_BlockID idBlock)</argsstring>
+        <name>_File_GetPtr_BlockHeader</name>
+        <param>
+          <type><ref refid="d5/dae/RDBFileStructure_8h_1a754c3cc9b8ee3595569630cad83f515d" kindref="member">RDB_BlockID</ref></type>
+          <declname>idBlock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="115"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1a19fc2028dccef9faec38297f86d2fcc6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d5/dae/RDBFileStructure_8h_1a5c0ed3d90cd5ca59c8c734a000844494" kindref="member">RDB_FilePtr</ref></type>
+        <definition>RDB_FilePtr _File_GetPtr_ChunkHeader</definition>
+        <argsstring>(const RDB_ChunkPtr &amp;pChunk)</argsstring>
+        <name>_File_GetPtr_ChunkHeader</name>
+        <param>
+          <type>const <ref refid="d1/df5/structRDB__ChunkPtr" kindref="compound">RDB_ChunkPtr</ref> &amp;</type>
+          <declname>pChunk</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="116"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1a51c435c8d3c06fe673f220163f5cbfe9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d5/dae/RDBFileStructure_8h_1a5c0ed3d90cd5ca59c8c734a000844494" kindref="member">RDB_FilePtr</ref></type>
+        <definition>RDB_FilePtr _File_GetPtr_ChunkContent</definition>
+        <argsstring>(const RDB_ChunkPtr &amp;pChunk, UInt *outSize)</argsstring>
+        <name>_File_GetPtr_ChunkContent</name>
+        <param>
+          <type>const <ref refid="d1/df5/structRDB__ChunkPtr" kindref="compound">RDB_ChunkPtr</ref> &amp;</type>
+          <declname>pChunk</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref> *</type>
+          <declname>outSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="117"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1a277a3a15f5c48497f6828424e217ae84" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+        <definition>Byte* _Cache_Query</definition>
+        <argsstring>(RDB_FilePtr iStorage, UInt iSize, Bool bWillWrite)</argsstring>
+        <name>_Cache_Query</name>
+        <param>
+          <type><ref refid="d5/dae/RDBFileStructure_8h_1a5c0ed3d90cd5ca59c8c734a000844494" kindref="member">RDB_FilePtr</ref></type>
+          <declname>iStorage</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iSize</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+          <declname>bWillWrite</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="126"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1abaf855f1b7ba445bb0e089c078bd9345" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d8/d00/structRDB__CacheEntry" kindref="compound">RDB_CacheEntry</ref> *</type>
+        <definition>RDB_CacheEntry* _Cache_Load</definition>
+        <argsstring>(RDB_FilePtr iStorage, UInt iSize)</argsstring>
+        <name>_Cache_Load</name>
+        <param>
+          <type><ref refid="d5/dae/RDBFileStructure_8h_1a5c0ed3d90cd5ca59c8c734a000844494" kindref="member">RDB_FilePtr</ref></type>
+          <declname>iStorage</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="127"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1a4983b9534f83ce6c1f95b77d9f24e81c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _Cache_Journalize</definition>
+        <argsstring>()</argsstring>
+        <name>_Cache_Journalize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="128"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1ae5aea0d949edb6e98b7882e43b5754a9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _Cache_Commit</definition>
+        <argsstring>()</argsstring>
+        <name>_Cache_Commit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="129"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1ad43e297691bef34bf631b751198c22d0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _Cache_Update</definition>
+        <argsstring>()</argsstring>
+        <name>_Cache_Update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="130"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1ae922918e0d08991528ec6d09b8aa223f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _Cache_Release</definition>
+        <argsstring>()</argsstring>
+        <name>_Cache_Release</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="131"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1aa9166791af1ef678cdbb83d31b157d1f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _Journal_TransactionBegin</definition>
+        <argsstring>()</argsstring>
+        <name>_Journal_TransactionBegin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="141"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1ae06b7968a77ab64e116a341afb64965b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _Journal_TransactionStep</definition>
+        <argsstring>(RDB_FilePtr iStorage, UInt iSize, const Byte *pData)</argsstring>
+        <name>_Journal_TransactionStep</name>
+        <param>
+          <type><ref refid="d5/dae/RDBFileStructure_8h_1a5c0ed3d90cd5ca59c8c734a000844494" kindref="member">RDB_FilePtr</ref></type>
+          <declname>iStorage</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iSize</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+          <declname>pData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="142"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1ae3791322a5408af1eb4d5a4a819737da" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _Journal_TransactionEnd</definition>
+        <argsstring>()</argsstring>
+        <name>_Journal_TransactionEnd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="143"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1ab34476c3030d753e8f134e825e5bc89d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool _Journal_Replay</definition>
+        <argsstring>()</argsstring>
+        <name>_Journal_Replay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="145"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1ad335145a02b174112950c3811f46ee75" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _BlockArray_Grow</definition>
+        <argsstring>()</argsstring>
+        <name>_BlockArray_Grow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="152"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1a1365af3538371c7c4dd9593e4205e17f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d5/dae/RDBFileStructure_8h_1a754c3cc9b8ee3595569630cad83f515d" kindref="member">RDB_BlockID</ref></type>
+        <definition>RDB_BlockID _Block_Allocate</definition>
+        <argsstring>()</argsstring>
+        <name>_Block_Allocate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="154"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1a776f50f85d0cdbaa1f8013b2f0ac317a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _Block_Free</definition>
+        <argsstring>(RDB_BlockID idBlock)</argsstring>
+        <name>_Block_Free</name>
+        <param>
+          <type><ref refid="d5/dae/RDBFileStructure_8h_1a754c3cc9b8ee3595569630cad83f515d" kindref="member">RDB_BlockID</ref></type>
+          <declname>idBlock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="155"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1ae56c1f3d6fa68ff332267c9f721f68f6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _ChunkArray_Grow</definition>
+        <argsstring>(RDB_ChunkType iChunkType)</argsstring>
+        <name>_ChunkArray_Grow</name>
+        <param>
+          <type><ref refid="d5/dae/RDBFileStructure_8h_1a921b8888e836d4b03dca42ef05adc366" kindref="member">RDB_ChunkType</ref></type>
+          <declname>iChunkType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="158"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1a0bbcb1796fbec0d96e809d63cd05368b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _Chunk_Allocate</definition>
+        <argsstring>(RDB_ChunkPtr *outNewChunk, RDB_ChunkType iChunkType)</argsstring>
+        <name>_Chunk_Allocate</name>
+        <param>
+          <type><ref refid="d1/df5/structRDB__ChunkPtr" kindref="compound">RDB_ChunkPtr</ref> *</type>
+          <declname>outNewChunk</declname>
+        </param>
+        <param>
+          <type><ref refid="d5/dae/RDBFileStructure_8h_1a921b8888e836d4b03dca42ef05adc366" kindref="member">RDB_ChunkType</ref></type>
+          <declname>iChunkType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="160"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d5b/classRDBPersistentStorage_1a40df85625c65accc2d2dbc1bb64c2c2a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _Chunk_Free</definition>
+        <argsstring>(const RDB_ChunkPtr &amp;pChunk)</argsstring>
+        <name>_Chunk_Free</name>
+        <param>
+          <type>const <ref refid="d1/df5/structRDB__ChunkPtr" kindref="compound">RDB_ChunkPtr</ref> &amp;</type>
+          <declname>pChunk</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="161"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="10242">
+        <label>T</label>
+      </node>
+      <node id="10241">
+        <label>RBTreeColor</label>
+      </node>
+      <node id="10262">
+        <label>void *</label>
+      </node>
+      <node id="10239">
+        <label>RedBlackNode&lt; T &gt;</label>
+        <link refid="da/d9d/structRedBlackNode"/>
+        <childnode refid="10240" relation="usage">
+          <edgelabel>pPrev</edgelabel>
+          <edgelabel>pNext</edgelabel>
+          <edgelabel>pParent</edgelabel>
+          <edgelabel>pChild</edgelabel>
+        </childnode>
+        <childnode refid="10241" relation="usage">
+          <edgelabel>iColor</edgelabel>
+        </childnode>
+        <childnode refid="10242" relation="usage">
+          <edgelabel>Item</edgelabel>
+        </childnode>
+      </node>
+      <node id="10259">
+        <label>HFile</label>
+        <link refid="d9/da7/classHFile"/>
+        <childnode refid="10260" relation="usage">
+          <edgelabel>m_strPathName</edgelabel>
+        </childnode>
+        <childnode refid="10261" relation="usage">
+          <edgelabel>m_iAttributes</edgelabel>
+          <edgelabel>m_iMode</edgelabel>
+          <edgelabel>m_iFlags</edgelabel>
+        </childnode>
+        <childnode refid="10262" relation="usage">
+          <edgelabel>m_hFile</edgelabel>
+        </childnode>
+      </node>
+      <node id="10238">
+        <label>RedBlackTree&lt; TreeMapNode &gt;</label>
+        <link refid="d9/d5d/classRedBlackTree"/>
+        <childnode refid="10235" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10239" relation="usage">
+          <edgelabel>m_pEnd</edgelabel>
+          <edgelabel>m_pHead</edgelabel>
+          <edgelabel>m_pRoot</edgelabel>
+          <edgelabel>sm_SentinelNode</edgelabel>
+          <edgelabel>RBTREE_LEAF</edgelabel>
+        </childnode>
+        <childnode refid="10237" relation="usage">
+          <edgelabel>m_iNodeCount</edgelabel>
+        </childnode>
+        <childnode refid="10243" relation="usage">
+          <edgelabel>m_pfCompare</edgelabel>
+        </childnode>
+        <childnode refid="10245" relation="usage">
+          <edgelabel>m_pUserData</edgelabel>
+        </childnode>
+      </node>
+      <node id="10254">
+        <label>SplayNode&lt; T &gt;</label>
+        <link refid="d2/d4c/structSplayNode"/>
+        <childnode refid="10255" relation="usage">
+          <edgelabel>pParent</edgelabel>
+          <edgelabel>pChild</edgelabel>
+        </childnode>
+        <childnode refid="10242" relation="usage">
+          <edgelabel>Item</edgelabel>
+        </childnode>
+      </node>
+      <node id="10256">
+        <label>UInt64</label>
+      </node>
+      <node id="10251">
+        <label>RDB_BlockAllocator</label>
+        <link refid="d8/d40/structRDB__BlockAllocator"/>
+        <childnode refid="10246" relation="usage">
+          <edgelabel>iTotalBlocks</edgelabel>
+          <edgelabel>iFreeBlocks</edgelabel>
+        </childnode>
+        <childnode refid="10237" relation="usage">
+          <edgelabel>idNextFreeBlock</edgelabel>
+        </childnode>
+      </node>
+      <node id="10230">
+        <label>RDBPersistentStorage</label>
+        <link refid="db/d5b/classRDBPersistentStorage"/>
+        <childnode refid="10231" relation="usage">
+          <edgelabel>m_shaTransactionChecksum</edgelabel>
+        </childnode>
+        <childnode refid="10234" relation="usage">
+          <edgelabel>m_cacheMap</edgelabel>
+        </childnode>
+        <childnode refid="10247" relation="usage">
+          <edgelabel>m_dbMasterHeader</edgelabel>
+        </childnode>
+        <childnode refid="10236" relation="usage">
+          <edgelabel>m_strFileName</edgelabel>
+        </childnode>
+        <childnode refid="10253" relation="usage">
+          <edgelabel>m_cacheQueue</edgelabel>
+        </childnode>
+        <childnode refid="10256" relation="usage">
+          <edgelabel>m_iTransactionOffset</edgelabel>
+        </childnode>
+        <childnode refid="10246" relation="usage">
+          <edgelabel>m_iCacheSize</edgelabel>
+          <edgelabel>m_iTransactionStepCount</edgelabel>
+        </childnode>
+        <childnode refid="10257" relation="usage">
+          <edgelabel>m_iLockType</edgelabel>
+        </childnode>
+        <childnode refid="10258" relation="usage">
+          <edgelabel>m_bSyncStateData</edgelabel>
+          <edgelabel>m_bLocked</edgelabel>
+          <edgelabel>m_bValidFile</edgelabel>
+        </childnode>
+        <childnode refid="10259" relation="usage">
+          <edgelabel>m_hFile</edgelabel>
+        </childnode>
+      </node>
+      <node id="10234">
+        <label>TreeMap&lt; RDB_FilePtr, RDB_CacheEntry &gt;</label>
+        <link refid="d0/da4/classTreeMap"/>
+        <childnode refid="10235" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10238" relation="usage">
+          <edgelabel>m_rbTreeMap</edgelabel>
+        </childnode>
+        <childnode refid="10246" relation="usage">
+          <edgelabel>m_pfCompare</edgelabel>
+        </childnode>
+        <childnode refid="10245" relation="usage">
+          <edgelabel>m_pUserData</edgelabel>
+        </childnode>
+      </node>
+      <node id="10233">
+        <label>ULong</label>
+      </node>
+      <node id="10252">
+        <label>RDB_ChunkAllocator</label>
+        <link refid="d2/d33/structRDB__ChunkAllocator"/>
+        <childnode refid="10249" relation="usage">
+          <edgelabel>pNextFreeChunk</edgelabel>
+        </childnode>
+        <childnode refid="10246" relation="usage">
+          <edgelabel>iBlockCount</edgelabel>
+          <edgelabel>iFreeChunks</edgelabel>
+          <edgelabel>iTotalChunks</edgelabel>
+        </childnode>
+        <childnode refid="10237" relation="usage">
+          <edgelabel>idFirstBlock</edgelabel>
+          <edgelabel>idLastBlock</edgelabel>
+        </childnode>
+      </node>
+      <node id="10237">
+        <label>unsigned int</label>
+      </node>
+      <node id="10232">
+        <label>unsigned char</label>
+      </node>
+      <node id="10240">
+        <label>struct _red_black_node *</label>
+      </node>
+      <node id="10250">
+        <label>RDB_ChunkType</label>
+      </node>
+      <node id="10246">
+        <label>int</label>
+      </node>
+      <node id="10257">
+        <label>RDB_LockType</label>
+      </node>
+      <node id="10247">
+        <label>RDB_MasterHeader</label>
+        <link refid="dd/d8c/structRDB__MasterHeader"/>
+        <childnode refid="10232" relation="usage">
+          <edgelabel>iMagic</edgelabel>
+        </childnode>
+        <childnode refid="10246" relation="usage">
+          <edgelabel>iBlockGrowCount</edgelabel>
+          <edgelabel>iThisSize</edgelabel>
+          <edgelabel>iJournalSize</edgelabel>
+          <edgelabel>arrChunksByBlock</edgelabel>
+          <edgelabel>iBlockSize</edgelabel>
+          <edgelabel>arrChunkSizes</edgelabel>
+          <edgelabel>iBlockInitCount</edgelabel>
+          <edgelabel>iVersion</edgelabel>
+        </childnode>
+        <childnode refid="10248" relation="usage">
+          <edgelabel>dbStateData</edgelabel>
+        </childnode>
+      </node>
+      <node id="10243">
+        <label>TreeMapNode&lt; Key, T &gt;</label>
+        <link refid="db/dd2/structTreeMapNode"/>
+        <childnode refid="10244" relation="usage">
+          <edgelabel>nodeKey</edgelabel>
+        </childnode>
+        <childnode refid="10242" relation="usage">
+          <edgelabel>nodeItem</edgelabel>
+        </childnode>
+      </node>
+      <node id="10249">
+        <label>RDB_ChunkPtr</label>
+        <link refid="d1/df5/structRDB__ChunkPtr"/>
+        <childnode refid="10250" relation="usage">
+          <edgelabel>iType</edgelabel>
+        </childnode>
+        <childnode refid="10237" relation="usage">
+          <edgelabel>idChunk</edgelabel>
+          <edgelabel>idBlock</edgelabel>
+        </childnode>
+      </node>
+      <node id="10244">
+        <label>Key</label>
+      </node>
+      <node id="10248">
+        <label>RDB_StateData</label>
+        <link refid="d8/d56/structRDB__StateData"/>
+        <childnode refid="10249" relation="usage">
+          <edgelabel>dbChunkTable</edgelabel>
+        </childnode>
+        <childnode refid="10251" relation="usage">
+          <edgelabel>dbBlockAllocator</edgelabel>
+        </childnode>
+        <childnode refid="10237" relation="usage">
+          <edgelabel>dbNextDirectoryID</edgelabel>
+        </childnode>
+        <childnode refid="10252" relation="usage">
+          <edgelabel>dbChunkAllocator</edgelabel>
+        </childnode>
+      </node>
+      <node id="10231">
+        <label>SHA1Hasher</label>
+        <link refid="db/d48/classSHA1Hasher"/>
+        <childnode refid="10232" relation="usage">
+          <edgelabel>m_arrMsgBuffer</edgelabel>
+        </childnode>
+        <childnode refid="10233" relation="usage">
+          <edgelabel>m_arrBlok</edgelabel>
+          <edgelabel>m_iMsgSize</edgelabel>
+          <edgelabel>m_iBlokCount</edgelabel>
+        </childnode>
+      </node>
+      <node id="10258">
+        <label>bool</label>
+      </node>
+      <node id="10253">
+        <label>SplayTree&lt; RDB_FilePtr &gt;</label>
+        <link refid="d8/d50/classSplayTree"/>
+        <childnode refid="10235" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10246" relation="usage">
+          <edgelabel>m_iNodeCount</edgelabel>
+          <edgelabel>m_pfCompare</edgelabel>
+        </childnode>
+        <childnode refid="10254" relation="usage">
+          <edgelabel>m_pRoot</edgelabel>
+        </childnode>
+        <childnode refid="10245" relation="usage">
+          <edgelabel>m_pUserData</edgelabel>
+        </childnode>
+      </node>
+      <node id="10236">
+        <label>char</label>
+      </node>
+      <node id="10261">
+        <label>DWord</label>
+      </node>
+      <node id="10245">
+        <label>Void *</label>
+      </node>
+      <node id="10260">
+        <label>MBChar</label>
+      </node>
+      <node id="10235">
+        <label>Datastruct</label>
+        <link refid="dc/d51/classDatastruct"/>
+        <childnode refid="10236" relation="usage">
+          <edgelabel>m_strAllocatorName</edgelabel>
+        </childnode>
+        <childnode refid="10237" relation="usage">
+          <edgelabel>m_idMemoryContext</edgelabel>
+        </childnode>
+      </node>
+      <node id="10255">
+        <label>struct _splay_node *</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" line="65" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBPersistentStorage.h" bodystart="64" bodyend="162"/>
+    <listofallmembers>
+      <member refid="db/d5b/classRDBPersistentStorage_1a1365af3538371c7c4dd9593e4205e17f" prot="private" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>_Block_Allocate</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1a776f50f85d0cdbaa1f8013b2f0ac317a" prot="private" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>_Block_Free</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1ad335145a02b174112950c3811f46ee75" prot="private" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>_BlockArray_Grow</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1ae5aea0d949edb6e98b7882e43b5754a9" prot="private" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>_Cache_Commit</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1a4983b9534f83ce6c1f95b77d9f24e81c" prot="private" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>_Cache_Journalize</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1abaf855f1b7ba445bb0e089c078bd9345" prot="private" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>_Cache_Load</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1a277a3a15f5c48497f6828424e217ae84" prot="private" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>_Cache_Query</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1ae922918e0d08991528ec6d09b8aa223f" prot="private" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>_Cache_Release</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1ad43e297691bef34bf631b751198c22d0" prot="private" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>_Cache_Update</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1a0bbcb1796fbec0d96e809d63cd05368b" prot="private" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>_Chunk_Allocate</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1a40df85625c65accc2d2dbc1bb64c2c2a" prot="private" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>_Chunk_Free</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1ae56c1f3d6fa68ff332267c9f721f68f6" prot="private" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>_ChunkArray_Grow</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1a559c1ef64eb279940d6c1ae245521302" prot="private" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>_File_GetPtr_BlockHeader</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1a51c435c8d3c06fe673f220163f5cbfe9" prot="private" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>_File_GetPtr_ChunkContent</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1a19fc2028dccef9faec38297f86d2fcc6" prot="private" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>_File_GetPtr_ChunkHeader</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1a731702c72783bca69cd78e1e2077e043" prot="private" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>_File_GetPtr_HeaderState</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1ae0718619834d1cff3a1cd6a1a7185f1e" prot="private" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>_File_GetPtr_Journal</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1a3f037f9dcd6766c65374ac13b8416641" prot="private" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>_File_Lock</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1a1f72ab778f29d4651f0471144767c383" prot="private" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>_File_Read</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1a203c4609a2c8ad7d5eb00ef36f5e9991" prot="private" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>_File_Unlock</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1ab939501fc76af4f77f42309e5d0fc892" prot="private" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>_File_Write</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1ab34476c3030d753e8f134e825e5bc89d" prot="private" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>_Journal_Replay</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1aa9166791af1ef678cdbb83d31b157d1f" prot="private" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>_Journal_TransactionBegin</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1ae3791322a5408af1eb4d5a4a819737da" prot="private" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>_Journal_TransactionEnd</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1ae06b7968a77ab64e116a341afb64965b" prot="private" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>_Journal_TransactionStep</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1a7b80404acb3b4f95fefb8ba0ecbe146c" prot="public" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>AllocData</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1a8201e54f131d0a7c013b42a0dccfaa76" prot="public" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>AllocLeaf</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1a99c54450fbcc31bf3d1fa8e6384fdebf" prot="public" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>AllocNode</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1a081397d9552f403c149ec899adc37486" prot="public" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>Close</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1af1d6fc32e9643f4c6278acf682c6ad51" prot="public" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>Commit</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1a0b9fae1340226ded9f596fc7abeeb592" prot="public" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>Create</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1a06037639e77ae5e919771ff4a1636e01" prot="public" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>Discard</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1a6e91fe1b44c75ee551b5ac0d6cfccfa8" prot="public" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>Free</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1a068abd1e95a150aade4f96f75f9bc910" prot="public" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>GetConstData</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1afebc2f13536c96959e590eaff7de603b" prot="public" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>GetConstLeaf</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1ad28505c6a9394c5c93b74fce942f5d69" prot="public" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>GetConstNode</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1ab08f98858b26039e193abf5b362acd6e" prot="public" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>GetData</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1a7fe6e0bfcae895be52038d0e384ce67f" prot="public" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>GetFileName</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1a5bcf427cb12e9758ad89d03df161fbed" prot="public" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>GetLeaf</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1a8ad71efec1440b0fd861374a3430825a" prot="public" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>GetNextDirectoryID</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1a63edd5b075de7b4ff23863130e036d7d" prot="public" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>GetNode</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1a87ecee0ebc364c9708be1bda50368dd2" prot="public" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>GetTableChunk</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1aba2f71fb17a041ff5aa8f9239ea05024" prot="private" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>m_bLocked</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1ae9556d43a01e46e5d362735705e3cca4" prot="private" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>m_bSyncStateData</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1aa09d049764cf21af7eba786e47be6b55" prot="private" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>m_bValidFile</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1a62ed6ec278d5a7f291069a7423ef4488" prot="private" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>m_cacheMap</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1a7957a9f56c052df54f5ba1d5f42ef4aa" prot="private" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>m_cacheQueue</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1a05129a742b403b19179004050eb00981" prot="private" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>m_dbMasterHeader</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1a767d6d2a2fffc21b098d2fe1e52ec392" prot="private" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>m_hFile</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1a981f10d1750a2285be4a44180c46cc95" prot="private" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>m_iCacheSize</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1a9f5758568e44215a5b18e95f9badae3e" prot="private" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>m_iLockType</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1ac393ddbd6f74b231343464e82f5ef0ba" prot="private" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>m_iTransactionOffset</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1ad016b9343df28e2f733691be55a34a0d" prot="private" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>m_iTransactionStepCount</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1a0f0b9bfc698f28287216c01ea951cbbf" prot="private" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>m_shaTransactionChecksum</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1ae911dd9aa57ce237c0b064b3c8c64856" prot="private" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>m_strFileName</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1a872c4adb1cb2184350046397a34dab52" prot="public" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>Open</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1a1d56501934536ed033820750085b7276" prot="public" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>RDBPersistentStorage</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1ad696e0163294159965091e4b9e91dfef" prot="public" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>SetNextDirectoryID</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1a15df752b4ef58c4fed3e5eb9282fb31e" prot="public" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>SetTableChunk</name></member>
+      <member refid="db/d5b/classRDBPersistentStorage_1af9678855f1e05c2da03cd8ad17a0500a" prot="public" virt="non-virtual"><scope>RDBPersistentStorage</scope><name>~RDBPersistentStorage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

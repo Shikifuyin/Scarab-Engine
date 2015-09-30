@@ -1,0 +1,767 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d6/d97/classTexture" kind="class" prot="public" abstract="yes">
+    <compoundname>Texture</compoundname>
+    <basecompoundref refid="da/dcd/classResource" prot="public" virt="non-virtual">Resource</basecompoundref>
+    <derivedcompoundref refid="d3/dc1/classTexture1D" prot="public" virt="non-virtual">Texture1D</derivedcompoundref>
+    <derivedcompoundref refid="d3/d79/classTexture2D" prot="public" virt="non-virtual">Texture2D</derivedcompoundref>
+    <derivedcompoundref refid="d2/d3d/classTexture3D" prot="public" virt="non-virtual">Texture3D</derivedcompoundref>
+    <derivedcompoundref refid="d6/da4/classTextureCube" prot="public" virt="non-virtual">TextureCube</derivedcompoundref>
+    <includes refid="d9/dbf/Texture_8h" local="no">Texture.h</includes>
+      <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="d6/d97/classTexture_1a8c3ca82f4a5d236375bb883e19e84f93" prot="protected" static="yes" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt sm_arrDimensions[TEXTURE_COUNT]</definition>
+        <argsstring>[TEXTURE_COUNT]</argsstring>
+        <name>sm_arrDimensions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="185" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d97/classTexture_1a2bad7626f80de859920abc9c8e37ab62" prot="protected" static="yes" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool sm_arrCompressed[TEXTURE_FMT_COUNT]</definition>
+        <argsstring>[TEXTURE_FMT_COUNT]</argsstring>
+        <name>sm_arrCompressed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="186" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d97/classTexture_1a2d5d6c202556f09ce514ad795eb96f1d" prot="protected" static="yes" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool sm_arrMipMapable[TEXTURE_FMT_COUNT]</definition>
+        <argsstring>[TEXTURE_FMT_COUNT]</argsstring>
+        <name>sm_arrMipMapable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="187" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d97/classTexture_1ae702e68e37d645dd6e520de0508c377a" prot="protected" static="yes" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt sm_arrPixelBytes[TEXTURE_FMT_COUNT]</definition>
+        <argsstring>[TEXTURE_FMT_COUNT]</argsstring>
+        <name>sm_arrPixelBytes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="188" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="d6/d97/classTexture_1aa387617857a786c83d08e02d72f3e716" prot="protected" static="no" mutable="no">
+        <type><ref refid="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0f" kindref="member">TextureFormat</ref></type>
+        <definition>TextureFormat m_iFormat</definition>
+        <argsstring></argsstring>
+        <name>m_iFormat</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="190" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d97/classTexture_1ae90e2d3f604c7850ee590d8ff31748be" prot="protected" static="no" mutable="no">
+        <type><ref refid="d9/dbf/Texture_8h_1ac78ff90c8cbce819a61e65d1bb3d29f9" kindref="member">TextureUsage</ref></type>
+        <definition>TextureUsage m_iUsage</definition>
+        <argsstring></argsstring>
+        <name>m_iUsage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="191" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d97/classTexture_1a6baa6a3d29b70de8e8949946701bbbdc" prot="protected" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iMipMapLevels</definition>
+        <argsstring></argsstring>
+        <name>m_iMipMapLevels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="192" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d97/classTexture_1aa8d80db4792834dda36a0c16dd1a5194" prot="protected" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_arrLevelBounds[TEXTURE_MAX_MIPMAP_LEVELS][TEXTURE_MAX_DIMENSIONS]</definition>
+        <argsstring>[TEXTURE_MAX_MIPMAP_LEVELS][TEXTURE_MAX_DIMENSIONS]</argsstring>
+        <name>m_arrLevelBounds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="194" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d97/classTexture_1ab3af13b4447746f20c1c473b112a266c" prot="protected" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_arrLevelOffsets[TEXTURE_MAX_MIPMAP_LEVELS]</definition>
+        <argsstring>[TEXTURE_MAX_MIPMAP_LEVELS]</argsstring>
+        <name>m_arrLevelOffsets</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="195" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d97/classTexture_1a5ea6e499d38235dd7d26b2aff67cb7d6" prot="protected" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_arrLevelBytes[TEXTURE_MAX_MIPMAP_LEVELS]</definition>
+        <argsstring>[TEXTURE_MAX_MIPMAP_LEVELS]</argsstring>
+        <name>m_arrLevelBytes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="196" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d97/classTexture_1afdd2fc787b48f0351f22a7c6c7e2f84b" prot="protected" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iTotalBytes</definition>
+        <argsstring></argsstring>
+        <name>m_iTotalBytes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="198" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d97/classTexture_1a9a4be9b3f12c420d0d8cf1c8059e65a5" prot="protected" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+        <definition>Byte* m_pData</definition>
+        <argsstring></argsstring>
+        <name>m_pData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="199" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d97/classTexture_1ad2353d612ebb357678ede918bcea908e" prot="protected" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> *</type>
+        <definition>Void* m_arrUserFields[TEXTURE_MAX_USERFIELDS]</definition>
+        <argsstring>[TEXTURE_MAX_USERFIELDS]</argsstring>
+        <name>m_arrUserFields</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="201" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d6/d97/classTexture_1a5c292543baec1a3caa8a4ee3f19dbeb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Texture</definition>
+        <argsstring>()</argsstring>
+        <name>Texture</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="145"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d97/classTexture_1a2cf157c08be4b2e96e2b0c3356e92240" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Texture</definition>
+        <argsstring>(TextureFormat iFormat, TextureUsage iUsage, UInt iMipMapLevels)</argsstring>
+        <name>Texture</name>
+        <param>
+          <type><ref refid="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0f" kindref="member">TextureFormat</ref></type>
+          <declname>iFormat</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dbf/Texture_8h_1ac78ff90c8cbce819a61e65d1bb3d29f9" kindref="member">TextureUsage</ref></type>
+          <declname>iUsage</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iMipMapLevels</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="146"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d97/classTexture_1aea557b0754e3257fea5d33847205cf82" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~Texture</definition>
+        <argsstring>()</argsstring>
+        <name>~Texture</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="147"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d97/classTexture_1ac8d7faf95df94b2c4f0ec542f7bc7c73" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="d5/dae/RDBFileStructure_8h_1a8571efa4409be32e28abf3ea74a0dbb1" kindref="member">ResourceType</ref></type>
+        <definition>virtual ResourceType GetResourceType</definition>
+        <argsstring>() const </argsstring>
+        <name>GetResourceType</name>
+        <reimplements refid="da/dcd/classResource_1abcdc569930dbf5999d2c856c3cb3c429">GetResourceType</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="150"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d97/classTexture_1a3bf35f1b4278813c71a4917d35c8a7b3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d9/dbf/Texture_8h_1a65468556d79304b3a4bfc464cc12e549" kindref="member">TextureType</ref></type>
+        <definition>virtual TextureType GetType</definition>
+        <argsstring>() const =0</argsstring>
+        <name>GetType</name>
+        <reimplementedby refid="d3/dc1/classTexture1D_1ab08d0270be7148d88a1418337e0c7baf">GetType</reimplementedby>
+        <reimplementedby refid="d3/d79/classTexture2D_1ab08d0270be7148d88a1418337e0c7baf">GetType</reimplementedby>
+        <reimplementedby refid="d2/d3d/classTexture3D_1ab08d0270be7148d88a1418337e0c7baf">GetType</reimplementedby>
+        <reimplementedby refid="d6/da4/classTextureCube_1ab08d0270be7148d88a1418337e0c7baf">GetType</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="159"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d97/classTexture_1a594fb541a7318bc192eff73b0f27aa31" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0f" kindref="member">TextureFormat</ref></type>
+        <definition>TextureFormat GetFormat</definition>
+        <argsstring>() const </argsstring>
+        <name>GetFormat</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="160"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d97/classTexture_1a0699a8aff59e723bcbe01169bc0e76c4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dbf/Texture_8h_1ac78ff90c8cbce819a61e65d1bb3d29f9" kindref="member">TextureUsage</ref></type>
+        <definition>TextureUsage GetUsage</definition>
+        <argsstring>() const </argsstring>
+        <name>GetUsage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="161"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d97/classTexture_1a0bf94adae288b1d3ee8b15cf55e4af01" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetDimensions</definition>
+        <argsstring>() const </argsstring>
+        <name>GetDimensions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="162"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d97/classTexture_1aa17be248875d31d5099383e0dc1f5f10" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetStride</definition>
+        <argsstring>() const </argsstring>
+        <name>GetStride</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="163"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d97/classTexture_1af8793b9092430225c682a780b7024467" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool IsCompressed</definition>
+        <argsstring>() const </argsstring>
+        <name>IsCompressed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="164"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d97/classTexture_1af8c81de23bad1a3736bec99e7d56e3eb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool IsMipMapable</definition>
+        <argsstring>() const </argsstring>
+        <name>IsMipMapable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="165"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d97/classTexture_1aab5b0d715f5b8f645cd51083419bbeaa" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool HasMipMaps</definition>
+        <argsstring>() const </argsstring>
+        <name>HasMipMaps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="167"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d97/classTexture_1a8d8daf7673c74db7aa1b4239d0d9100e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetLevels</definition>
+        <argsstring>() const </argsstring>
+        <name>GetLevels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="168"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d97/classTexture_1a0bad2f00eeb546245e4b2940e384b248" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetLevelBound</definition>
+        <argsstring>(UInt iLevel, UInt iDimension) const </argsstring>
+        <name>GetLevelBound</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iLevel</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDimension</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="169"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d97/classTexture_1aa96a90ff3a46fc2e4452a41267c37346" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetLevelBytes</definition>
+        <argsstring>(UInt iLevel) const </argsstring>
+        <name>GetLevelBytes</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iLevel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="170"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d97/classTexture_1a11742c83cb056c09a2ede3d48e50be7c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>virtual UInt GetTotalBytes</definition>
+        <argsstring>() const </argsstring>
+        <name>GetTotalBytes</name>
+        <reimplementedby refid="d6/da4/classTextureCube_1a11742c83cb056c09a2ede3d48e50be7c">GetTotalBytes</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="171"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d97/classTexture_1affea2e1887470aca6d66664e514330bd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+        <definition>virtual Byte* GetData</definition>
+        <argsstring>() const </argsstring>
+        <name>GetData</name>
+        <reimplementedby refid="d6/da4/classTextureCube_1affea2e1887470aca6d66664e514330bd">GetData</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="174"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d97/classTexture_1a23b0491241edc85e7e7ce3a401432f70" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+        <definition>virtual Byte* GetData</definition>
+        <argsstring>(UInt iLevel) const </argsstring>
+        <name>GetData</name>
+        <reimplementedby refid="d6/da4/classTextureCube_1a23b0491241edc85e7e7ce3a401432f70">GetData</reimplementedby>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iLevel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="175"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d97/classTexture_1a2f09e8a35a372c0bbf05c627c09379d4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetUserField</definition>
+        <argsstring>(UInt iField, Void *pData)</argsstring>
+        <name>SetUserField</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iField</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> *</type>
+          <declname>pData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="178"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d97/classTexture_1a9ece5c6f2c729158765551673cc92a7d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> *</type>
+        <definition>Void* GetUserField</definition>
+        <argsstring>(UInt iField) const </argsstring>
+        <name>GetUserField</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iField</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="179"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="d6/d97/classTexture_1a73a13f9faac1e53867653d5eefdd5374" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>static UInt GetDimensions</definition>
+        <argsstring>(TextureType iType)</argsstring>
+        <name>GetDimensions</name>
+        <param>
+          <type><ref refid="d9/dbf/Texture_8h_1a65468556d79304b3a4bfc464cc12e549" kindref="member">TextureType</ref></type>
+          <declname>iType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="153"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d97/classTexture_1ab0941198f4a831cc56f60f79a69fd647" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>static UInt GetStride</definition>
+        <argsstring>(TextureFormat iFormat)</argsstring>
+        <name>GetStride</name>
+        <param>
+          <type><ref refid="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0f" kindref="member">TextureFormat</ref></type>
+          <declname>iFormat</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="154"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d97/classTexture_1a414ae1935bc2d39aeb4134217fc86050" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>static Bool IsMipMapable</definition>
+        <argsstring>(TextureFormat iFormat)</argsstring>
+        <name>IsMipMapable</name>
+        <param>
+          <type><ref refid="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0f" kindref="member">TextureFormat</ref></type>
+          <declname>iFormat</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="155"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d97/classTexture_1a1b6a8637780f470daffcd98ec0ba516f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>static Bool IsCompressed</definition>
+        <argsstring>(TextureFormat iFormat)</argsstring>
+        <name>IsCompressed</name>
+        <param>
+          <type><ref refid="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0f" kindref="member">TextureFormat</ref></type>
+          <declname>iFormat</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="156"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="d6/d97/classTexture_1ab0472dd27c7117cf17f8efd0dd3bb97a" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>virtual Bool _OnLoad</definition>
+        <argsstring>(ResourceDB *pRDB, RDB_ResourceHandle *hResource)=0</argsstring>
+        <name>_OnLoad</name>
+        <reimplements refid="da/dcd/classResource_1ab0472dd27c7117cf17f8efd0dd3bb97a">_OnLoad</reimplements>
+        <reimplementedby refid="d3/dc1/classTexture1D_1a29330cbf036fc907b35c97e1a4835595">_OnLoad</reimplementedby>
+        <reimplementedby refid="d3/d79/classTexture2D_1a29330cbf036fc907b35c97e1a4835595">_OnLoad</reimplementedby>
+        <reimplementedby refid="d2/d3d/classTexture3D_1a29330cbf036fc907b35c97e1a4835595">_OnLoad</reimplementedby>
+        <reimplementedby refid="d6/da4/classTextureCube_1a29330cbf036fc907b35c97e1a4835595">_OnLoad</reimplementedby>
+        <param>
+          <type><ref refid="d5/d53/classResourceDB" kindref="compound">ResourceDB</ref> *</type>
+          <declname>pRDB</declname>
+        </param>
+        <param>
+          <type><ref refid="d5/da4/structRDB__ResourceHandle" kindref="compound">RDB_ResourceHandle</ref> *</type>
+          <declname>hResource</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="182"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d97/classTexture_1ab30654cbbd6fbfe657c1089f6ea1c2a9" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>virtual Bool _OnSave</definition>
+        <argsstring>(ResourceDB *pRDB, RDB_ResourceHandle *hResource) const =0</argsstring>
+        <name>_OnSave</name>
+        <reimplements refid="da/dcd/classResource_1ab30654cbbd6fbfe657c1089f6ea1c2a9">_OnSave</reimplements>
+        <reimplementedby refid="d3/dc1/classTexture1D_1a206f74ba5aaa2aaa54a9143e8e63b846">_OnSave</reimplementedby>
+        <reimplementedby refid="d3/d79/classTexture2D_1a206f74ba5aaa2aaa54a9143e8e63b846">_OnSave</reimplementedby>
+        <reimplementedby refid="d2/d3d/classTexture3D_1a206f74ba5aaa2aaa54a9143e8e63b846">_OnSave</reimplementedby>
+        <reimplementedby refid="d6/da4/classTextureCube_1a206f74ba5aaa2aaa54a9143e8e63b846">_OnSave</reimplementedby>
+        <param>
+          <type><ref refid="d5/d53/classResourceDB" kindref="compound">ResourceDB</ref> *</type>
+          <declname>pRDB</declname>
+        </param>
+        <param>
+          <type><ref refid="d5/da4/structRDB__ResourceHandle" kindref="compound">RDB_ResourceHandle</ref> *</type>
+          <declname>hResource</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="183"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="12409">
+        <label>Texture</label>
+        <link refid="d6/d97/classTexture"/>
+        <childnode refid="12410" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12410">
+        <label>Resource</label>
+        <link refid="da/dcd/classResource"/>
+      </node>
+      <node id="12411">
+        <label>Texture1D</label>
+        <link refid="d3/dc1/classTexture1D"/>
+        <childnode refid="12409" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12412">
+        <label>Texture2D</label>
+        <link refid="d3/d79/classTexture2D"/>
+        <childnode refid="12409" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12413">
+        <label>Texture3D</label>
+        <link refid="d2/d3d/classTexture3D"/>
+        <childnode refid="12409" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12414">
+        <label>TextureCube</label>
+        <link refid="d6/da4/classTextureCube"/>
+        <childnode refid="12409" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="12417">
+        <label>static Bool</label>
+      </node>
+      <node id="12422">
+        <label>unsigned int</label>
+      </node>
+      <node id="12418">
+        <label>unsigned char</label>
+      </node>
+      <node id="12421">
+        <label>int</label>
+      </node>
+      <node id="12415">
+        <label>Texture</label>
+        <link refid="d6/d97/classTexture"/>
+        <childnode refid="12416" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12417" relation="usage">
+          <edgelabel>sm_arrMipMapable</edgelabel>
+          <edgelabel>sm_arrCompressed</edgelabel>
+        </childnode>
+        <childnode refid="12418" relation="usage">
+          <edgelabel>m_pData</edgelabel>
+        </childnode>
+        <childnode refid="12419" relation="usage">
+          <edgelabel>m_iFormat</edgelabel>
+        </childnode>
+        <childnode refid="12420" relation="usage">
+          <edgelabel>m_iUsage</edgelabel>
+        </childnode>
+        <childnode refid="12421" relation="usage">
+          <edgelabel>m_arrLevelOffsets</edgelabel>
+          <edgelabel>m_arrLevelBytes</edgelabel>
+          <edgelabel>m_arrLevelBounds</edgelabel>
+          <edgelabel>m_iMipMapLevels</edgelabel>
+          <edgelabel>m_iTotalBytes</edgelabel>
+        </childnode>
+        <childnode refid="12422" relation="usage">
+          <edgelabel>sm_arrDimensions</edgelabel>
+          <edgelabel>sm_arrPixelBytes</edgelabel>
+        </childnode>
+        <childnode refid="12423" relation="usage">
+          <edgelabel>m_arrUserFields</edgelabel>
+        </childnode>
+      </node>
+      <node id="12419">
+        <label>TextureFormat</label>
+      </node>
+      <node id="12416">
+        <label>Resource</label>
+        <link refid="da/dcd/classResource"/>
+      </node>
+      <node id="12420">
+        <label>TextureUsage</label>
+      </node>
+      <node id="12423">
+        <label>Void *</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="143" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" bodystart="142" bodyend="202"/>
+    <listofallmembers>
+      <member refid="d6/d97/classTexture_1ab0472dd27c7117cf17f8efd0dd3bb97a" prot="protected" virt="pure-virtual"><scope>Texture</scope><name>_OnLoad</name></member>
+      <member refid="d6/d97/classTexture_1ab30654cbbd6fbfe657c1089f6ea1c2a9" prot="protected" virt="pure-virtual"><scope>Texture</scope><name>_OnSave</name></member>
+      <member refid="d6/d97/classTexture_1affea2e1887470aca6d66664e514330bd" prot="public" virt="virtual"><scope>Texture</scope><name>GetData</name></member>
+      <member refid="d6/d97/classTexture_1a23b0491241edc85e7e7ce3a401432f70" prot="public" virt="virtual"><scope>Texture</scope><name>GetData</name></member>
+      <member refid="d6/d97/classTexture_1a73a13f9faac1e53867653d5eefdd5374" prot="public" virt="non-virtual"><scope>Texture</scope><name>GetDimensions</name></member>
+      <member refid="d6/d97/classTexture_1a0bf94adae288b1d3ee8b15cf55e4af01" prot="public" virt="non-virtual"><scope>Texture</scope><name>GetDimensions</name></member>
+      <member refid="d6/d97/classTexture_1a594fb541a7318bc192eff73b0f27aa31" prot="public" virt="non-virtual"><scope>Texture</scope><name>GetFormat</name></member>
+      <member refid="d6/d97/classTexture_1a0bad2f00eeb546245e4b2940e384b248" prot="public" virt="non-virtual"><scope>Texture</scope><name>GetLevelBound</name></member>
+      <member refid="d6/d97/classTexture_1aa96a90ff3a46fc2e4452a41267c37346" prot="public" virt="non-virtual"><scope>Texture</scope><name>GetLevelBytes</name></member>
+      <member refid="d6/d97/classTexture_1a8d8daf7673c74db7aa1b4239d0d9100e" prot="public" virt="non-virtual"><scope>Texture</scope><name>GetLevels</name></member>
+      <member refid="d6/d97/classTexture_1ac8d7faf95df94b2c4f0ec542f7bc7c73" prot="public" virt="virtual"><scope>Texture</scope><name>GetResourceType</name></member>
+      <member refid="da/dcd/classResource_1aaf654c0ece5ce8e4946f3c9729a83fc8" prot="public" virt="non-virtual" ambiguityscope="Resource::"><scope>Texture</scope><name>GetResourceType</name></member>
+      <member refid="da/dcd/classResource_1aedceee98d3eb534fcbd6ad9845b14849" prot="public" virt="non-virtual"><scope>Texture</scope><name>GetResourceTypeName</name></member>
+      <member refid="d6/d97/classTexture_1ab0941198f4a831cc56f60f79a69fd647" prot="public" virt="non-virtual"><scope>Texture</scope><name>GetStride</name></member>
+      <member refid="d6/d97/classTexture_1aa17be248875d31d5099383e0dc1f5f10" prot="public" virt="non-virtual"><scope>Texture</scope><name>GetStride</name></member>
+      <member refid="d6/d97/classTexture_1a11742c83cb056c09a2ede3d48e50be7c" prot="public" virt="virtual"><scope>Texture</scope><name>GetTotalBytes</name></member>
+      <member refid="d6/d97/classTexture_1a3bf35f1b4278813c71a4917d35c8a7b3" prot="public" virt="pure-virtual"><scope>Texture</scope><name>GetType</name></member>
+      <member refid="d6/d97/classTexture_1a0699a8aff59e723bcbe01169bc0e76c4" prot="public" virt="non-virtual"><scope>Texture</scope><name>GetUsage</name></member>
+      <member refid="d6/d97/classTexture_1a9ece5c6f2c729158765551673cc92a7d" prot="public" virt="non-virtual"><scope>Texture</scope><name>GetUserField</name></member>
+      <member refid="d6/d97/classTexture_1aab5b0d715f5b8f645cd51083419bbeaa" prot="public" virt="non-virtual"><scope>Texture</scope><name>HasMipMaps</name></member>
+      <member refid="d6/d97/classTexture_1a1b6a8637780f470daffcd98ec0ba516f" prot="public" virt="non-virtual"><scope>Texture</scope><name>IsCompressed</name></member>
+      <member refid="d6/d97/classTexture_1af8793b9092430225c682a780b7024467" prot="public" virt="non-virtual"><scope>Texture</scope><name>IsCompressed</name></member>
+      <member refid="d6/d97/classTexture_1a414ae1935bc2d39aeb4134217fc86050" prot="public" virt="non-virtual"><scope>Texture</scope><name>IsMipMapable</name></member>
+      <member refid="d6/d97/classTexture_1af8c81de23bad1a3736bec99e7d56e3eb" prot="public" virt="non-virtual"><scope>Texture</scope><name>IsMipMapable</name></member>
+      <member refid="da/dcd/classResource_1a5bbd5ffd4bff5c089c86d1f793b8e68a" prot="public" virt="non-virtual"><scope>Texture</scope><name>Load</name></member>
+      <member refid="d6/d97/classTexture_1aa8d80db4792834dda36a0c16dd1a5194" prot="protected" virt="non-virtual"><scope>Texture</scope><name>m_arrLevelBounds</name></member>
+      <member refid="d6/d97/classTexture_1a5ea6e499d38235dd7d26b2aff67cb7d6" prot="protected" virt="non-virtual"><scope>Texture</scope><name>m_arrLevelBytes</name></member>
+      <member refid="d6/d97/classTexture_1ab3af13b4447746f20c1c473b112a266c" prot="protected" virt="non-virtual"><scope>Texture</scope><name>m_arrLevelOffsets</name></member>
+      <member refid="d6/d97/classTexture_1ad2353d612ebb357678ede918bcea908e" prot="protected" virt="non-virtual"><scope>Texture</scope><name>m_arrUserFields</name></member>
+      <member refid="d6/d97/classTexture_1aa387617857a786c83d08e02d72f3e716" prot="protected" virt="non-virtual"><scope>Texture</scope><name>m_iFormat</name></member>
+      <member refid="d6/d97/classTexture_1a6baa6a3d29b70de8e8949946701bbbdc" prot="protected" virt="non-virtual"><scope>Texture</scope><name>m_iMipMapLevels</name></member>
+      <member refid="d6/d97/classTexture_1afdd2fc787b48f0351f22a7c6c7e2f84b" prot="protected" virt="non-virtual"><scope>Texture</scope><name>m_iTotalBytes</name></member>
+      <member refid="d6/d97/classTexture_1ae90e2d3f604c7850ee590d8ff31748be" prot="protected" virt="non-virtual"><scope>Texture</scope><name>m_iUsage</name></member>
+      <member refid="d6/d97/classTexture_1a9a4be9b3f12c420d0d8cf1c8059e65a5" prot="protected" virt="non-virtual"><scope>Texture</scope><name>m_pData</name></member>
+      <member refid="da/dcd/classResource_1aa7f8fafafc3d575c53591d6249a03eb5" prot="public" virt="non-virtual"><scope>Texture</scope><name>Resource</name></member>
+      <member refid="da/dcd/classResource_1a7efdc647f88fb45a75ed5df1967b7608" prot="public" virt="non-virtual"><scope>Texture</scope><name>Save</name></member>
+      <member refid="d6/d97/classTexture_1a2f09e8a35a372c0bbf05c627c09379d4" prot="public" virt="non-virtual"><scope>Texture</scope><name>SetUserField</name></member>
+      <member refid="d6/d97/classTexture_1a2bad7626f80de859920abc9c8e37ab62" prot="protected" virt="non-virtual"><scope>Texture</scope><name>sm_arrCompressed</name></member>
+      <member refid="d6/d97/classTexture_1a8c3ca82f4a5d236375bb883e19e84f93" prot="protected" virt="non-virtual"><scope>Texture</scope><name>sm_arrDimensions</name></member>
+      <member refid="d6/d97/classTexture_1a2d5d6c202556f09ce514ad795eb96f1d" prot="protected" virt="non-virtual"><scope>Texture</scope><name>sm_arrMipMapable</name></member>
+      <member refid="d6/d97/classTexture_1ae702e68e37d645dd6e520de0508c377a" prot="protected" virt="non-virtual"><scope>Texture</scope><name>sm_arrPixelBytes</name></member>
+      <member refid="d6/d97/classTexture_1a5c292543baec1a3caa8a4ee3f19dbeb7" prot="public" virt="non-virtual"><scope>Texture</scope><name>Texture</name></member>
+      <member refid="d6/d97/classTexture_1a2cf157c08be4b2e96e2b0c3356e92240" prot="public" virt="non-virtual"><scope>Texture</scope><name>Texture</name></member>
+      <member refid="da/dcd/classResource_1ab365cc4eac15642d3edc81993a826ee3" prot="public" virt="virtual"><scope>Texture</scope><name>~Resource</name></member>
+      <member refid="d6/d97/classTexture_1aea557b0754e3257fea5d33847205cf82" prot="public" virt="virtual"><scope>Texture</scope><name>~Texture</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

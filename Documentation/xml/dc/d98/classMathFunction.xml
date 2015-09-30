@@ -1,0 +1,1386 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="dc/d98/classMathFunction" kind="class" prot="public">
+    <compoundname>MathFunction</compoundname>
+    <includes refid="d1/d98/MathFunction_8h" local="no">MathFunction.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>Real</declname>
+        <defname>Real</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="dc/d98/classMathFunction_1a63d6e2e6aef7ff4044ff86728fa32fb2" prot="public" static="yes" mutable="no">
+        <type>const Real</type>
+        <definition>const Real Zero</definition>
+        <argsstring></argsstring>
+        <name>Zero</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="65" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d98/classMathFunction_1adec004848fffdd3a1d814672271932f8" prot="public" static="yes" mutable="no">
+        <type>const Real</type>
+        <definition>const Real Half</definition>
+        <argsstring></argsstring>
+        <name>Half</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="66" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d98/classMathFunction_1a0e4c219fe676e35d4495b9f8a3129638" prot="public" static="yes" mutable="no">
+        <type>const Real</type>
+        <definition>const Real One</definition>
+        <argsstring></argsstring>
+        <name>One</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="67" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d98/classMathFunction_1aabe7e02d9a38588d2f599974f56feded" prot="public" static="yes" mutable="no">
+        <type>const Real</type>
+        <definition>const Real Two</definition>
+        <argsstring></argsstring>
+        <name>Two</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="68" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d98/classMathFunction_1a11000bef68a4e72206db7e71a5cfc2a7" prot="public" static="yes" mutable="no">
+        <type>const Real</type>
+        <definition>const Real Infinity</definition>
+        <argsstring></argsstring>
+        <name>Infinity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="69" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="dc/d98/classMathFunction_1a630cfd2e608a4551b370d9c586a304f9" prot="private" static="no" mutable="yes">
+        <type><ref refid="da/d9f/unionFloatConverter" kindref="compound">FloatConverter</ref></type>
+        <definition>FloatConverter m_FloatConverter</definition>
+        <argsstring></argsstring>
+        <name>m_FloatConverter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="181" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d98/classMathFunction_1a7892ac352700ebe29b7f39421a3f8c98" prot="private" static="no" mutable="yes">
+        <type><ref refid="d4/d2f/unionDoubleConverter" kindref="compound">DoubleConverter</ref></type>
+        <definition>DoubleConverter m_DoubleConverter</definition>
+        <argsstring></argsstring>
+        <name>m_DoubleConverter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="182" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="dc/d98/classMathFunction_1a043cadd0a1557181cff028a0b47f3bc3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="dc/d98/classMathFunction" kindref="compound">MathFunction</ref>&lt; Real &gt; *</type>
+        <definition>static MathFunction&lt;Real&gt;* GetInstancePtr</definition>
+        <argsstring>()</argsstring>
+        <name>GetInstancePtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="57"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="dc/d98/classMathFunction_1a5d64d2b825820f1f9cc51da215094c98" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MathFunction</definition>
+        <argsstring>()</argsstring>
+        <name>MathFunction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="60"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1aa40c42ba14f7c74c258afd18b50da2e5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~MathFunction</definition>
+        <argsstring>()</argsstring>
+        <name>~MathFunction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="61"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1a0ef09723f27b2b85bed672a928631958" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real _Tricked_Invert</definition>
+        <argsstring>(Real f) const </argsstring>
+        <name>_Tricked_Invert</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="175"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1a0fa9ec01c295a64428e144de53e4d27f" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real _Tricked_InvSqrt</definition>
+        <argsstring>(Real f) const </argsstring>
+        <name>_Tricked_InvSqrt</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="176"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1a2a81d30cb8bdd67955b6e31640ba061d" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt _Tricked_ScaleUnit</definition>
+        <argsstring>(Float f, UInt iBits) const </argsstring>
+        <name>_Tricked_ScaleUnit</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref></type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iBits</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="178"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1a00c7c12eaca9a5c0af6b39df4b1817e0" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>UInt64</type>
+        <definition>UInt64 _Tricked_ScaleUnit64</definition>
+        <argsstring>(Double f, UInt iBits) const </argsstring>
+        <name>_Tricked_ScaleUnit64</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a1f2c5f02159fb28428e23074cc04166d" kindref="member">Double</ref></type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iBits</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="179"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1adfcb1687205c8981dcd68c3a0aad4314" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref></type>
+        <definition>Float _Tricked_Invert</definition>
+        <argsstring>(Float f) const</argsstring>
+        <name>_Tricked_Invert</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref></type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="192"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1a828d24a7fb3a237a2bdd2be5877630d9" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type><ref refid="d9/dd0/Platform_8h_1a1f2c5f02159fb28428e23074cc04166d" kindref="member">Double</ref></type>
+        <definition>Double _Tricked_Invert</definition>
+        <argsstring>(Double f) const</argsstring>
+        <name>_Tricked_Invert</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a1f2c5f02159fb28428e23074cc04166d" kindref="member">Double</ref></type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="194"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1a3417f9526bb4863e326722869a372cd1" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref></type>
+        <definition>Float _Tricked_InvSqrt</definition>
+        <argsstring>(Float f) const</argsstring>
+        <name>_Tricked_InvSqrt</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref></type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="197"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1a7ffa7230d31aa5e2b0e7edd3d030ec5f" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type><ref refid="d9/dd0/Platform_8h_1a1f2c5f02159fb28428e23074cc04166d" kindref="member">Double</ref></type>
+        <definition>Double _Tricked_InvSqrt</definition>
+        <argsstring>(Double f) const</argsstring>
+        <name>_Tricked_InvSqrt</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a1f2c5f02159fb28428e23074cc04166d" kindref="member">Double</ref></type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="199"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="dc/d98/classMathFunction_1a29b3bdd7ef7ed700db20bd46796dca15" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool EqualsZero</definition>
+        <argsstring>(Real f, Real fThreshold=(Real) SCALAR_ERROR) const </argsstring>
+        <name>EqualsZero</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fThreshold</declname>
+          <defval>(Real) <ref refid="d0/d10/Scalar_8h_1ab84e60710e7c3a93246b807ac524d38b" kindref="member">SCALAR_ERROR</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="72"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1a524bc298b1369dc72be6bbde12dd84f2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool Equals</definition>
+        <argsstring>(Real f, Real g, Real fThreshold=(Real) SCALAR_ERROR) const </argsstring>
+        <name>Equals</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fThreshold</declname>
+          <defval>(Real) <ref refid="d0/d10/Scalar_8h_1ab84e60710e7c3a93246b807ac524d38b" kindref="member">SCALAR_ERROR</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="73"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1aad0c12dba6e8fe7634f68ba93506a574" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool IsNan</definition>
+        <argsstring>(Real f) const </argsstring>
+        <name>IsNan</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="75"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1a24dd2807b0a3ab2a0b61bb9bd57f643c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool IsInfinite</definition>
+        <argsstring>(Real f) const </argsstring>
+        <name>IsInfinite</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="76"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1a05d166c6fdf3a5cfc4623ccf62dd382b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool IsZero</definition>
+        <argsstring>(Real f) const </argsstring>
+        <name>IsZero</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="77"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1a39398bccad9065401bd889bd7ad1d5fb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref></type>
+        <definition>Int Floor</definition>
+        <argsstring>(Real f) const </argsstring>
+        <name>Floor</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="79"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1aad166ee6cd4c1d5f1be04ece4f73c5eb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref></type>
+        <definition>Int Ceil</definition>
+        <argsstring>(Real f) const </argsstring>
+        <name>Ceil</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="80"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1a58af64f0a3d9d388309aa2a87e3b0dcd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref></type>
+        <definition>Int Round</definition>
+        <argsstring>(Real f) const </argsstring>
+        <name>Round</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="81"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1a6a499d1154f032c2d092d815fca5cfaf" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real Floorf</definition>
+        <argsstring>(Real f) const </argsstring>
+        <name>Floorf</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="82"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1a2b26d4cb99e8aa074e4802884bda23a6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real Ceilf</definition>
+        <argsstring>(Real f) const </argsstring>
+        <name>Ceilf</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="83"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1a36dda89f7c2a3ec0931ea94d7bfc51d2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real Roundf</definition>
+        <argsstring>(Real f) const </argsstring>
+        <name>Roundf</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="84"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1a54bda856bba3a93fe4426da7e6b70003" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real FractPart</definition>
+        <argsstring>(Real f) const </argsstring>
+        <name>FractPart</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="86"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1aa7cee13402c4add1dc4ea80fe8d2f55c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real TruncateDecimal</definition>
+        <argsstring>(Real f, UInt iLastDecimal=SCALAR_DIGITS) const </argsstring>
+        <name>TruncateDecimal</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iLastDecimal</declname>
+          <defval><ref refid="d0/d10/Scalar_8h_1ad711594de2e774d6345b0401e22f8489" kindref="member">SCALAR_DIGITS</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="87"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1ab432de3786ea91d4b725f33bc92244a3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real RoundDecimal</definition>
+        <argsstring>(Real f, UInt iLastDecimal=SCALAR_DIGITS) const </argsstring>
+        <name>RoundDecimal</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iLastDecimal</declname>
+          <defval><ref refid="d0/d10/Scalar_8h_1ad711594de2e774d6345b0401e22f8489" kindref="member">SCALAR_DIGITS</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="88"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1a67ecad52a11c4de19ab84ecc149f74a4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real Sign</definition>
+        <argsstring>(Real f) const </argsstring>
+        <name>Sign</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="90"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1ad0776875a3d717d7cdd728d92331e24e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref></type>
+        <definition>Int SignI</definition>
+        <argsstring>(Real f, Real fThreshold=(Real) SCALAR_ERROR) const </argsstring>
+        <name>SignI</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fThreshold</declname>
+          <defval>(Real) <ref refid="d0/d10/Scalar_8h_1ab84e60710e7c3a93246b807ac524d38b" kindref="member">SCALAR_ERROR</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="91"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1a46d4feabe136b7645dbbdb35f0c6c958" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real Abs</definition>
+        <argsstring>(Real f) const </argsstring>
+        <name>Abs</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="92"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1a9e85b0fc51ec66241a9922ca001129f5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real Mod</definition>
+        <argsstring>(Real f, Real g) const </argsstring>
+        <name>Mod</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>g</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="93"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1a0041ff021f0bb86ce73ef065baeed67d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real Sqr</definition>
+        <argsstring>(Real f) const </argsstring>
+        <name>Sqr</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="96"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1aff5f7bde9414a3bc4e403444cc1b516d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real Cube</definition>
+        <argsstring>(Real f) const </argsstring>
+        <name>Cube</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="97"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1add8644d5b186ce039d5ebd6b139825cb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real Invert</definition>
+        <argsstring>(Real f) const </argsstring>
+        <name>Invert</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="99"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1adbb9deae9fdb8727a054a3c2759522b9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real Sqrt</definition>
+        <argsstring>(Real f) const </argsstring>
+        <name>Sqrt</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="100"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1a08d7531c3500be5483ebc1ce03b0714f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real InvSqrt</definition>
+        <argsstring>(Real f) const </argsstring>
+        <name>InvSqrt</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="101"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1a17a03dbb73bbe3cb1d3665de1a765272" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real Ln</definition>
+        <argsstring>(Real f) const </argsstring>
+        <name>Ln</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="102"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1a6c78e030e2db349776c21f001a5b6c14" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real Log2</definition>
+        <argsstring>(Real f) const </argsstring>
+        <name>Log2</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="103"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1ae40a3eb9e2716a50611437df445683d2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real Log10</definition>
+        <argsstring>(Real f) const </argsstring>
+        <name>Log10</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="104"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1a531e678fc9f416b91c560fc3fa5c12d3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real LogN</definition>
+        <argsstring>(Real n, Real f) const </argsstring>
+        <name>LogN</name>
+        <param>
+          <type>Real</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="105"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1a3823c7d77cee549283a4cae8cd3faddc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real Exp</definition>
+        <argsstring>(Real f) const </argsstring>
+        <name>Exp</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="106"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1a6ce53517a1f4c333625b0276aa89014c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real Exp2</definition>
+        <argsstring>(Real f) const </argsstring>
+        <name>Exp2</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="107"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1ac8e80d7ec478db8d87adc3815e6eb86b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real Exp10</definition>
+        <argsstring>(Real f) const </argsstring>
+        <name>Exp10</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="108"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1add64e04a98d77873df1447604a36352f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real ExpN</definition>
+        <argsstring>(Real n, Real f) const </argsstring>
+        <name>ExpN</name>
+        <param>
+          <type>Real</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="109"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1a1afc8d1544eaa1d9d26204750be31280" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real Power2</definition>
+        <argsstring>(Int iExponent) const </argsstring>
+        <name>Power2</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref></type>
+          <declname>iExponent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="111"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1a1fa607c77fc1f8b9c4d8b287bdbfb75c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real Power10</definition>
+        <argsstring>(Int iExponent) const </argsstring>
+        <name>Power10</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref></type>
+          <declname>iExponent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="112"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1aa7f1fe31d8cd3c2e4a4bded1bd22d32d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real PowerN</definition>
+        <argsstring>(Real n, Int iExponent) const </argsstring>
+        <name>PowerN</name>
+        <param>
+          <type>Real</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref></type>
+          <declname>iExponent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="113"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1a307f84211a8a3ad529614ac46e5234ed" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real Sin</definition>
+        <argsstring>(Real f) const </argsstring>
+        <name>Sin</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="116"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1a68ccf3a777d1442e4920e99f276b1840" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real Cos</definition>
+        <argsstring>(Real f) const </argsstring>
+        <name>Cos</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="117"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1a801ad8a6272a07d308e71143da0fedae" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SinCos</definition>
+        <argsstring>(Real *pOutSin, Real *pOutCos, Real f) const </argsstring>
+        <name>SinCos</name>
+        <param>
+          <type>Real *</type>
+          <declname>pOutSin</declname>
+        </param>
+        <param>
+          <type>Real *</type>
+          <declname>pOutCos</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="118"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1ab7f7040f60fac895fe0e635295da7a92" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real Tan</definition>
+        <argsstring>(Real f) const </argsstring>
+        <name>Tan</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="119"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1ab632c15c197333422c64f10fc31d7c9c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real ArcSin</definition>
+        <argsstring>(Real f) const </argsstring>
+        <name>ArcSin</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="120"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1a7313ce0f26a49334e9875fe898b6c23e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real ArcCos</definition>
+        <argsstring>(Real f) const </argsstring>
+        <name>ArcCos</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="121"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1aaf45363bec0f6e187ec10add9a8fdcfe" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real ArcTan</definition>
+        <argsstring>(Real f) const </argsstring>
+        <name>ArcTan</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="122"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1a8b418f3211b4ce8d376a8afbcc9b88a8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real ArcTan2</definition>
+        <argsstring>(Real f, Real g) const </argsstring>
+        <name>ArcTan2</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>g</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="123"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1a1b367f318e77f101b446aa5a190f98a1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real SinH</definition>
+        <argsstring>(Real f) const </argsstring>
+        <name>SinH</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="126"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1a3c98b6fbc400ab3fb2ab33bad864ab44" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real CosH</definition>
+        <argsstring>(Real f) const </argsstring>
+        <name>CosH</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="127"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1a624119424b6a37ac23f01f265a87357a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real TanH</definition>
+        <argsstring>(Real f) const </argsstring>
+        <name>TanH</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="128"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1afe7f929c937eb831e56f7caf73c2015c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real ArgSinH</definition>
+        <argsstring>(Real f) const </argsstring>
+        <name>ArgSinH</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="129"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1aa913c7a3ea924ee6e691a6dc0f297676" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real ArgCosH</definition>
+        <argsstring>(Real f) const </argsstring>
+        <name>ArgCosH</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="130"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1ab7d9e5903a959595cd49f0efedb561fe" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real ArgTanH</definition>
+        <argsstring>(Real f) const </argsstring>
+        <name>ArgTanH</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="131"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1ac0fa7f2baa87a76cba58cc09e8406339" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool IsPower2</definition>
+        <argsstring>(UInt uiValue) const </argsstring>
+        <name>IsPower2</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>uiValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="167"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1aeacaceeee93202ecb4266226f8c36e77" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt Log2OfPower2</definition>
+        <argsstring>(UInt uiPower2Value) const </argsstring>
+        <name>Log2OfPower2</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>uiPower2Value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="168"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1acbf004e7690f608a233693e82ec9b54d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt ScaleUnit</definition>
+        <argsstring>(Real f, UInt iBits) const </argsstring>
+        <name>ScaleUnit</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iBits</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="170"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d98/classMathFunction_1a4ea6fca1f9fd9d6e68eb11ebfd507b77" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>UInt64</type>
+        <definition>UInt64 ScaleUnit64</definition>
+        <argsstring>(Real f, UInt iBits) const </argsstring>
+        <name>ScaleUnit64</name>
+        <param>
+          <type>Real</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iBits</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="171"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="6090">
+        <label>DoubleConverter</label>
+        <link refid="d4/d2f/unionDoubleConverter"/>
+        <childnode refid="6091" relation="usage">
+          <edgelabel>f</edgelabel>
+        </childnode>
+        <childnode refid="6092" relation="usage">
+          <edgelabel>i</edgelabel>
+        </childnode>
+      </node>
+      <node id="6086">
+        <label>MathFunction&lt; Real &gt;</label>
+        <link refid="dc/d98/classMathFunction"/>
+        <childnode refid="6087" relation="usage">
+          <edgelabel>m_FloatConverter</edgelabel>
+        </childnode>
+        <childnode refid="6090" relation="usage">
+          <edgelabel>m_DoubleConverter</edgelabel>
+        </childnode>
+        <childnode refid="6093" relation="usage">
+          <edgelabel>One</edgelabel>
+          <edgelabel>Half</edgelabel>
+          <edgelabel>Infinity</edgelabel>
+          <edgelabel>Two</edgelabel>
+          <edgelabel>Zero</edgelabel>
+        </childnode>
+      </node>
+      <node id="6093">
+        <label>Real</label>
+      </node>
+      <node id="6088">
+        <label>float</label>
+      </node>
+      <node id="6092">
+        <label>UInt64</label>
+      </node>
+      <node id="6087">
+        <label>FloatConverter</label>
+        <link refid="da/d9f/unionFloatConverter"/>
+        <childnode refid="6088" relation="usage">
+          <edgelabel>f</edgelabel>
+        </childnode>
+        <childnode refid="6089" relation="usage">
+          <edgelabel>i</edgelabel>
+        </childnode>
+      </node>
+      <node id="6089">
+        <label>ULong</label>
+      </node>
+      <node id="6091">
+        <label>double</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" line="54" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Functions/MathFunction.h" bodystart="53" bodyend="183"/>
+    <listofallmembers>
+      <member refid="dc/d98/classMathFunction_1a0ef09723f27b2b85bed672a928631958" prot="private" virt="non-virtual"><scope>MathFunction</scope><name>_Tricked_Invert</name></member>
+      <member refid="dc/d98/classMathFunction_1adfcb1687205c8981dcd68c3a0aad4314" prot="private" virt="non-virtual"><scope>MathFunction</scope><name>_Tricked_Invert</name></member>
+      <member refid="dc/d98/classMathFunction_1a828d24a7fb3a237a2bdd2be5877630d9" prot="private" virt="non-virtual"><scope>MathFunction</scope><name>_Tricked_Invert</name></member>
+      <member refid="dc/d98/classMathFunction_1a0fa9ec01c295a64428e144de53e4d27f" prot="private" virt="non-virtual"><scope>MathFunction</scope><name>_Tricked_InvSqrt</name></member>
+      <member refid="dc/d98/classMathFunction_1a3417f9526bb4863e326722869a372cd1" prot="private" virt="non-virtual"><scope>MathFunction</scope><name>_Tricked_InvSqrt</name></member>
+      <member refid="dc/d98/classMathFunction_1a7ffa7230d31aa5e2b0e7edd3d030ec5f" prot="private" virt="non-virtual"><scope>MathFunction</scope><name>_Tricked_InvSqrt</name></member>
+      <member refid="dc/d98/classMathFunction_1a2a81d30cb8bdd67955b6e31640ba061d" prot="private" virt="non-virtual"><scope>MathFunction</scope><name>_Tricked_ScaleUnit</name></member>
+      <member refid="dc/d98/classMathFunction_1a00c7c12eaca9a5c0af6b39df4b1817e0" prot="private" virt="non-virtual"><scope>MathFunction</scope><name>_Tricked_ScaleUnit64</name></member>
+      <member refid="dc/d98/classMathFunction_1a46d4feabe136b7645dbbdb35f0c6c958" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>Abs</name></member>
+      <member refid="dc/d98/classMathFunction_1a7313ce0f26a49334e9875fe898b6c23e" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>ArcCos</name></member>
+      <member refid="dc/d98/classMathFunction_1ab632c15c197333422c64f10fc31d7c9c" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>ArcSin</name></member>
+      <member refid="dc/d98/classMathFunction_1aaf45363bec0f6e187ec10add9a8fdcfe" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>ArcTan</name></member>
+      <member refid="dc/d98/classMathFunction_1a8b418f3211b4ce8d376a8afbcc9b88a8" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>ArcTan2</name></member>
+      <member refid="dc/d98/classMathFunction_1aa913c7a3ea924ee6e691a6dc0f297676" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>ArgCosH</name></member>
+      <member refid="dc/d98/classMathFunction_1afe7f929c937eb831e56f7caf73c2015c" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>ArgSinH</name></member>
+      <member refid="dc/d98/classMathFunction_1ab7d9e5903a959595cd49f0efedb561fe" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>ArgTanH</name></member>
+      <member refid="dc/d98/classMathFunction_1aad166ee6cd4c1d5f1be04ece4f73c5eb" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>Ceil</name></member>
+      <member refid="dc/d98/classMathFunction_1a2b26d4cb99e8aa074e4802884bda23a6" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>Ceilf</name></member>
+      <member refid="dc/d98/classMathFunction_1a68ccf3a777d1442e4920e99f276b1840" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>Cos</name></member>
+      <member refid="dc/d98/classMathFunction_1a3c98b6fbc400ab3fb2ab33bad864ab44" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>CosH</name></member>
+      <member refid="dc/d98/classMathFunction_1aff5f7bde9414a3bc4e403444cc1b516d" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>Cube</name></member>
+      <member refid="dc/d98/classMathFunction_1a524bc298b1369dc72be6bbde12dd84f2" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>Equals</name></member>
+      <member refid="dc/d98/classMathFunction_1a29b3bdd7ef7ed700db20bd46796dca15" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>EqualsZero</name></member>
+      <member refid="dc/d98/classMathFunction_1a3823c7d77cee549283a4cae8cd3faddc" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>Exp</name></member>
+      <member refid="dc/d98/classMathFunction_1ac8e80d7ec478db8d87adc3815e6eb86b" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>Exp10</name></member>
+      <member refid="dc/d98/classMathFunction_1a6ce53517a1f4c333625b0276aa89014c" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>Exp2</name></member>
+      <member refid="dc/d98/classMathFunction_1add64e04a98d77873df1447604a36352f" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>ExpN</name></member>
+      <member refid="dc/d98/classMathFunction_1a39398bccad9065401bd889bd7ad1d5fb" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>Floor</name></member>
+      <member refid="dc/d98/classMathFunction_1a6a499d1154f032c2d092d815fca5cfaf" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>Floorf</name></member>
+      <member refid="dc/d98/classMathFunction_1a54bda856bba3a93fe4426da7e6b70003" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>FractPart</name></member>
+      <member refid="dc/d98/classMathFunction_1a043cadd0a1557181cff028a0b47f3bc3" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>GetInstancePtr</name></member>
+      <member refid="dc/d98/classMathFunction_1adec004848fffdd3a1d814672271932f8" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>Half</name></member>
+      <member refid="dc/d98/classMathFunction_1a11000bef68a4e72206db7e71a5cfc2a7" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>Infinity</name></member>
+      <member refid="dc/d98/classMathFunction_1add8644d5b186ce039d5ebd6b139825cb" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>Invert</name></member>
+      <member refid="dc/d98/classMathFunction_1a08d7531c3500be5483ebc1ce03b0714f" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>InvSqrt</name></member>
+      <member refid="dc/d98/classMathFunction_1a24dd2807b0a3ab2a0b61bb9bd57f643c" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>IsInfinite</name></member>
+      <member refid="dc/d98/classMathFunction_1aad0c12dba6e8fe7634f68ba93506a574" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>IsNan</name></member>
+      <member refid="dc/d98/classMathFunction_1ac0fa7f2baa87a76cba58cc09e8406339" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>IsPower2</name></member>
+      <member refid="dc/d98/classMathFunction_1a05d166c6fdf3a5cfc4623ccf62dd382b" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>IsZero</name></member>
+      <member refid="dc/d98/classMathFunction_1a17a03dbb73bbe3cb1d3665de1a765272" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>Ln</name></member>
+      <member refid="dc/d98/classMathFunction_1ae40a3eb9e2716a50611437df445683d2" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>Log10</name></member>
+      <member refid="dc/d98/classMathFunction_1a6c78e030e2db349776c21f001a5b6c14" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>Log2</name></member>
+      <member refid="dc/d98/classMathFunction_1aeacaceeee93202ecb4266226f8c36e77" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>Log2OfPower2</name></member>
+      <member refid="dc/d98/classMathFunction_1a531e678fc9f416b91c560fc3fa5c12d3" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>LogN</name></member>
+      <member refid="dc/d98/classMathFunction_1a7892ac352700ebe29b7f39421a3f8c98" prot="private" virt="non-virtual"><scope>MathFunction</scope><name>m_DoubleConverter</name></member>
+      <member refid="dc/d98/classMathFunction_1a630cfd2e608a4551b370d9c586a304f9" prot="private" virt="non-virtual"><scope>MathFunction</scope><name>m_FloatConverter</name></member>
+      <member refid="dc/d98/classMathFunction_1a5d64d2b825820f1f9cc51da215094c98" prot="private" virt="non-virtual"><scope>MathFunction</scope><name>MathFunction</name></member>
+      <member refid="dc/d98/classMathFunction_1a9e85b0fc51ec66241a9922ca001129f5" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>Mod</name></member>
+      <member refid="dc/d98/classMathFunction_1a0e4c219fe676e35d4495b9f8a3129638" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>One</name></member>
+      <member refid="dc/d98/classMathFunction_1a1fa607c77fc1f8b9c4d8b287bdbfb75c" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>Power10</name></member>
+      <member refid="dc/d98/classMathFunction_1a1afc8d1544eaa1d9d26204750be31280" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>Power2</name></member>
+      <member refid="dc/d98/classMathFunction_1aa7f1fe31d8cd3c2e4a4bded1bd22d32d" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>PowerN</name></member>
+      <member refid="dc/d98/classMathFunction_1a58af64f0a3d9d388309aa2a87e3b0dcd" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>Round</name></member>
+      <member refid="dc/d98/classMathFunction_1ab432de3786ea91d4b725f33bc92244a3" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>RoundDecimal</name></member>
+      <member refid="dc/d98/classMathFunction_1a36dda89f7c2a3ec0931ea94d7bfc51d2" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>Roundf</name></member>
+      <member refid="dc/d98/classMathFunction_1acbf004e7690f608a233693e82ec9b54d" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>ScaleUnit</name></member>
+      <member refid="dc/d98/classMathFunction_1a4ea6fca1f9fd9d6e68eb11ebfd507b77" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>ScaleUnit64</name></member>
+      <member refid="dc/d98/classMathFunction_1a67ecad52a11c4de19ab84ecc149f74a4" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>Sign</name></member>
+      <member refid="dc/d98/classMathFunction_1ad0776875a3d717d7cdd728d92331e24e" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>SignI</name></member>
+      <member refid="dc/d98/classMathFunction_1a307f84211a8a3ad529614ac46e5234ed" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>Sin</name></member>
+      <member refid="dc/d98/classMathFunction_1a801ad8a6272a07d308e71143da0fedae" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>SinCos</name></member>
+      <member refid="dc/d98/classMathFunction_1a1b367f318e77f101b446aa5a190f98a1" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>SinH</name></member>
+      <member refid="dc/d98/classMathFunction_1a0041ff021f0bb86ce73ef065baeed67d" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>Sqr</name></member>
+      <member refid="dc/d98/classMathFunction_1adbb9deae9fdb8727a054a3c2759522b9" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>Sqrt</name></member>
+      <member refid="dc/d98/classMathFunction_1ab7f7040f60fac895fe0e635295da7a92" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>Tan</name></member>
+      <member refid="dc/d98/classMathFunction_1a624119424b6a37ac23f01f265a87357a" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>TanH</name></member>
+      <member refid="dc/d98/classMathFunction_1aa7cee13402c4add1dc4ea80fe8d2f55c" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>TruncateDecimal</name></member>
+      <member refid="dc/d98/classMathFunction_1aabe7e02d9a38588d2f599974f56feded" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>Two</name></member>
+      <member refid="dc/d98/classMathFunction_1a63d6e2e6aef7ff4044ff86728fa32fb2" prot="public" virt="non-virtual"><scope>MathFunction</scope><name>Zero</name></member>
+      <member refid="dc/d98/classMathFunction_1aa40c42ba14f7c74c258afd18b50da2e5" prot="private" virt="non-virtual"><scope>MathFunction</scope><name>~MathFunction</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

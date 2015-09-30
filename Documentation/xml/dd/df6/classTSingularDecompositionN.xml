@@ -1,0 +1,400 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="dd/df6/classTSingularDecompositionN" kind="class" prot="public">
+    <compoundname>TSingularDecompositionN</compoundname>
+    <includes refid="db/d80/SingularDecompositionN_8h" local="no">SingularDecompositionN.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename Real</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="dd/df6/classTSingularDecompositionN_1a0a3debaf4902fd0df3fcf5ef6a3e09b8" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt MaxIterations</definition>
+        <argsstring></argsstring>
+        <name>MaxIterations</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecompositionN.h" line="43" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecompositionN.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/df6/classTSingularDecompositionN_1a15588eea940c254c383433246cc901ac" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real ZeroTolerance</definition>
+        <argsstring></argsstring>
+        <name>ZeroTolerance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecompositionN.h" line="44" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecompositionN.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="dd/df6/classTSingularDecompositionN_1a861ab6a3627bfe53ae2453e2a5e1fca8" prot="private" static="yes" mutable="no">
+        <type>const Real</type>
+        <definition>const Real ZERO</definition>
+        <argsstring></argsstring>
+        <name>ZERO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecompositionN.h" line="60" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecompositionN.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/df6/classTSingularDecompositionN_1acac09fd02521e2a1297f6dde618fb5ca" prot="private" static="yes" mutable="no">
+        <type>const Real</type>
+        <definition>const Real ONE</definition>
+        <argsstring></argsstring>
+        <name>ONE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecompositionN.h" line="61" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecompositionN.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/df6/classTSingularDecompositionN_1aa2f4f55be7ca7ebf9a4cdd3f2c84cc36" prot="private" static="yes" mutable="no">
+        <type>const Real</type>
+        <definition>const Real TWO</definition>
+        <argsstring></argsstring>
+        <name>TWO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecompositionN.h" line="62" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecompositionN.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/df6/classTSingularDecompositionN_1a68c0d58de491c8a9c960a96d9b5ed52e" prot="private" static="yes" mutable="no">
+        <type>const Real</type>
+        <definition>const Real HALF</definition>
+        <argsstring></argsstring>
+        <name>HALF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecompositionN.h" line="63" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecompositionN.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="dd/df6/classTSingularDecompositionN_1ad45451e7d6c3cebe98750baf94dcec22" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iRowCount</definition>
+        <argsstring></argsstring>
+        <name>m_iRowCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecompositionN.h" line="73" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecompositionN.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/df6/classTSingularDecompositionN_1a2c211416dab6568ed3a009c0529ff096" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iColumnCount</definition>
+        <argsstring></argsstring>
+        <name>m_iColumnCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecompositionN.h" line="73" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecompositionN.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/df6/classTSingularDecompositionN_1aadfe7ec06712fc11e7c25e1cca665272" prot="private" static="no" mutable="no">
+        <type><ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt;</type>
+        <definition>TMatrixN&lt;Real&gt; m_matSystem</definition>
+        <argsstring></argsstring>
+        <name>m_matSystem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecompositionN.h" line="74" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecompositionN.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/df6/classTSingularDecompositionN_1a5af08f7bd60c9d06b527e77391dec448" prot="private" static="no" mutable="no">
+        <type><ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt;</type>
+        <definition>TMatrixN&lt;Real&gt; m_matLeft</definition>
+        <argsstring></argsstring>
+        <name>m_matLeft</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecompositionN.h" line="75" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecompositionN.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/df6/classTSingularDecompositionN_1a97a6af166a6873292076875be734e477" prot="private" static="no" mutable="no">
+        <type><ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt;</type>
+        <definition>TMatrixN&lt;Real&gt; m_matDiagonal</definition>
+        <argsstring></argsstring>
+        <name>m_matDiagonal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecompositionN.h" line="76" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecompositionN.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/df6/classTSingularDecompositionN_1ad62405efafaf1eb3525ff14b69862051" prot="private" static="no" mutable="no">
+        <type><ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt;</type>
+        <definition>TMatrixN&lt;Real&gt; m_matTransposedR</definition>
+        <argsstring></argsstring>
+        <name>m_matTransposedR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecompositionN.h" line="77" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecompositionN.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="dd/df6/classTSingularDecompositionN_1aeb9d182b542940a4f700493fbf0dce6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TSingularDecompositionN</definition>
+        <argsstring>(const TMatrixN&lt; Real &gt; &amp;matNonSymmetric, UInt iMaxIterations=32, Real fZeroTolerance=(Real) SCALAR_ERROR)</argsstring>
+        <name>TSingularDecompositionN</name>
+        <param>
+          <type>const <ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt; &amp;</type>
+          <declname>matNonSymmetric</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iMaxIterations</declname>
+          <defval>32</defval>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fZeroTolerance</declname>
+          <defval>(Real) <ref refid="d0/d10/Scalar_8h_1ab84e60710e7c3a93246b807ac524d38b" kindref="member">SCALAR_ERROR</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecompositionN.h" line="39"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/df6/classTSingularDecompositionN_1aa04d5d36a9b7119cb3a64241dcd3ee99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~TSingularDecompositionN</definition>
+        <argsstring>()</argsstring>
+        <name>~TSingularDecompositionN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecompositionN.h" line="40"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/df6/classTSingularDecompositionN_1a55fbdcf1696603f20472d34e2b85507f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt; &amp;</type>
+        <definition>TMatrixN&lt;Real&gt;&amp; GetSystem</definition>
+        <argsstring>()</argsstring>
+        <name>GetSystem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecompositionN.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/df6/classTSingularDecompositionN_1aa9db70802e63be7e88d4badff42a619e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SolveSystem</definition>
+        <argsstring>()</argsstring>
+        <name>SolveSystem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecompositionN.h" line="50"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/df6/classTSingularDecompositionN_1abdeeaf14c57fe402740b3d82b73026fe" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt; &amp;</type>
+        <definition>const TMatrixN&lt;Real&gt;&amp; GetL</definition>
+        <argsstring>() const </argsstring>
+        <name>GetL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecompositionN.h" line="53"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/df6/classTSingularDecompositionN_1aede5e8215d3903987f1a7766d40c3d6d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt; &amp;</type>
+        <definition>const TMatrixN&lt;Real&gt;&amp; GetD</definition>
+        <argsstring>() const </argsstring>
+        <name>GetD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecompositionN.h" line="54"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/df6/classTSingularDecompositionN_1ad41801b6ac214068d523c21733385e1c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt; &amp;</type>
+        <definition>const TMatrixN&lt;Real&gt;&amp; GetTrR</definition>
+        <argsstring>() const </argsstring>
+        <name>GetTrR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecompositionN.h" line="55"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/df6/classTSingularDecompositionN_1a15c0acf12776d3a89a3056f8c2f42cad" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void GetPolarDecomposition</definition>
+        <argsstring>(TMatrixN&lt; Real &gt; &amp;outQ, TMatrixN&lt; Real &gt; &amp;outS) const </argsstring>
+        <name>GetPolarDecomposition</name>
+        <param>
+          <type><ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt; &amp;</type>
+          <declname>outQ</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt; &amp;</type>
+          <declname>outS</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecompositionN.h" line="57"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="dd/df6/classTSingularDecompositionN_1aaf6ebc3760f5b92070ea9bc35d52495c" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _HouseHolder_PreMultiply</definition>
+        <argsstring>(TMatrixN&lt; Real &gt; &amp;matA, const TVectorN&lt; Real &gt; &amp;vFactor) const </argsstring>
+        <name>_HouseHolder_PreMultiply</name>
+        <param>
+          <type><ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt; &amp;</type>
+          <declname>matA</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d4/d23/classTVectorN" kindref="compound">TVectorN</ref>&lt; Real &gt; &amp;</type>
+          <declname>vFactor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecompositionN.h" line="66"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/df6/classTSingularDecompositionN_1acbe4e93440098f2882ba113473a4e8b0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _QRAlgorithm</definition>
+        <argsstring>()</argsstring>
+        <name>_QRAlgorithm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecompositionN.h" line="71"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="13304">
+        <label>Real</label>
+      </node>
+      <node id="13301">
+        <label>TSingularDecompositionN&lt; Real &gt;</label>
+        <link refid="dd/df6/classTSingularDecompositionN"/>
+        <childnode refid="13302" relation="usage">
+          <edgelabel>m_iRowCount</edgelabel>
+          <edgelabel>m_iColumnCount</edgelabel>
+          <edgelabel>MaxIterations</edgelabel>
+        </childnode>
+        <childnode refid="13303" relation="usage">
+          <edgelabel>m_matLeft</edgelabel>
+          <edgelabel>m_matSystem</edgelabel>
+          <edgelabel>m_matTransposedR</edgelabel>
+          <edgelabel>m_matDiagonal</edgelabel>
+        </childnode>
+        <childnode refid="13304" relation="usage">
+          <edgelabel>ONE</edgelabel>
+          <edgelabel>HALF</edgelabel>
+          <edgelabel>ZeroTolerance</edgelabel>
+          <edgelabel>TWO</edgelabel>
+          <edgelabel>ZERO</edgelabel>
+        </childnode>
+      </node>
+      <node id="13302">
+        <label>int</label>
+      </node>
+      <node id="13303">
+        <label>TMatrixN&lt; Real &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecompositionN.h" line="36" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecompositionN.h" bodystart="35" bodyend="78"/>
+    <listofallmembers>
+      <member refid="dd/df6/classTSingularDecompositionN_1aaf6ebc3760f5b92070ea9bc35d52495c" prot="private" virt="non-virtual"><scope>TSingularDecompositionN</scope><name>_HouseHolder_PreMultiply</name></member>
+      <member refid="dd/df6/classTSingularDecompositionN_1acbe4e93440098f2882ba113473a4e8b0" prot="private" virt="non-virtual"><scope>TSingularDecompositionN</scope><name>_QRAlgorithm</name></member>
+      <member refid="dd/df6/classTSingularDecompositionN_1aede5e8215d3903987f1a7766d40c3d6d" prot="public" virt="non-virtual"><scope>TSingularDecompositionN</scope><name>GetD</name></member>
+      <member refid="dd/df6/classTSingularDecompositionN_1abdeeaf14c57fe402740b3d82b73026fe" prot="public" virt="non-virtual"><scope>TSingularDecompositionN</scope><name>GetL</name></member>
+      <member refid="dd/df6/classTSingularDecompositionN_1a15c0acf12776d3a89a3056f8c2f42cad" prot="public" virt="non-virtual"><scope>TSingularDecompositionN</scope><name>GetPolarDecomposition</name></member>
+      <member refid="dd/df6/classTSingularDecompositionN_1a55fbdcf1696603f20472d34e2b85507f" prot="public" virt="non-virtual"><scope>TSingularDecompositionN</scope><name>GetSystem</name></member>
+      <member refid="dd/df6/classTSingularDecompositionN_1ad41801b6ac214068d523c21733385e1c" prot="public" virt="non-virtual"><scope>TSingularDecompositionN</scope><name>GetTrR</name></member>
+      <member refid="dd/df6/classTSingularDecompositionN_1a68c0d58de491c8a9c960a96d9b5ed52e" prot="private" virt="non-virtual"><scope>TSingularDecompositionN</scope><name>HALF</name></member>
+      <member refid="dd/df6/classTSingularDecompositionN_1a2c211416dab6568ed3a009c0529ff096" prot="private" virt="non-virtual"><scope>TSingularDecompositionN</scope><name>m_iColumnCount</name></member>
+      <member refid="dd/df6/classTSingularDecompositionN_1ad45451e7d6c3cebe98750baf94dcec22" prot="private" virt="non-virtual"><scope>TSingularDecompositionN</scope><name>m_iRowCount</name></member>
+      <member refid="dd/df6/classTSingularDecompositionN_1a97a6af166a6873292076875be734e477" prot="private" virt="non-virtual"><scope>TSingularDecompositionN</scope><name>m_matDiagonal</name></member>
+      <member refid="dd/df6/classTSingularDecompositionN_1a5af08f7bd60c9d06b527e77391dec448" prot="private" virt="non-virtual"><scope>TSingularDecompositionN</scope><name>m_matLeft</name></member>
+      <member refid="dd/df6/classTSingularDecompositionN_1aadfe7ec06712fc11e7c25e1cca665272" prot="private" virt="non-virtual"><scope>TSingularDecompositionN</scope><name>m_matSystem</name></member>
+      <member refid="dd/df6/classTSingularDecompositionN_1ad62405efafaf1eb3525ff14b69862051" prot="private" virt="non-virtual"><scope>TSingularDecompositionN</scope><name>m_matTransposedR</name></member>
+      <member refid="dd/df6/classTSingularDecompositionN_1a0a3debaf4902fd0df3fcf5ef6a3e09b8" prot="public" virt="non-virtual"><scope>TSingularDecompositionN</scope><name>MaxIterations</name></member>
+      <member refid="dd/df6/classTSingularDecompositionN_1acac09fd02521e2a1297f6dde618fb5ca" prot="private" virt="non-virtual"><scope>TSingularDecompositionN</scope><name>ONE</name></member>
+      <member refid="dd/df6/classTSingularDecompositionN_1aa9db70802e63be7e88d4badff42a619e" prot="public" virt="non-virtual"><scope>TSingularDecompositionN</scope><name>SolveSystem</name></member>
+      <member refid="dd/df6/classTSingularDecompositionN_1aeb9d182b542940a4f700493fbf0dce6e" prot="public" virt="non-virtual"><scope>TSingularDecompositionN</scope><name>TSingularDecompositionN</name></member>
+      <member refid="dd/df6/classTSingularDecompositionN_1aa2f4f55be7ca7ebf9a4cdd3f2c84cc36" prot="private" virt="non-virtual"><scope>TSingularDecompositionN</scope><name>TWO</name></member>
+      <member refid="dd/df6/classTSingularDecompositionN_1a861ab6a3627bfe53ae2453e2a5e1fca8" prot="private" virt="non-virtual"><scope>TSingularDecompositionN</scope><name>ZERO</name></member>
+      <member refid="dd/df6/classTSingularDecompositionN_1a15588eea940c254c383433246cc901ac" prot="public" virt="non-virtual"><scope>TSingularDecompositionN</scope><name>ZeroTolerance</name></member>
+      <member refid="dd/df6/classTSingularDecompositionN_1aa04d5d36a9b7119cb3a64241dcd3ee99" prot="public" virt="non-virtual"><scope>TSingularDecompositionN</scope><name>~TSingularDecompositionN</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

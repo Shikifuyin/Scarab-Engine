@@ -1,0 +1,566 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d0/d86/struct__RemovedBody" kind="struct" prot="private">
+    <compoundname>_RemovedBody</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d0/d86/struct__RemovedBody_1a18ec149b2b3253c07a556e877c91962b" prot="public" static="no" mutable="no">
+        <type><ref refid="de/df0/classBodyNode" kindref="compound">BodyNode</ref> *</type>
+        <definition>BodyNode* pBody</definition>
+        <argsstring></argsstring>
+        <name>pBody</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/IslandSolver/IslandSolver.h" line="174" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/IslandSolver/IslandSolver.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d86/struct__RemovedBody_1ab2fb88721de9a1942f311a55844a5e33" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool bDestroyShape</definition>
+        <argsstring></argsstring>
+        <name>bDestroyShape</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/IslandSolver/IslandSolver.h" line="175" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/IslandSolver/IslandSolver.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="89">
+        <label>IslandEdgeID</label>
+        <link refid="dd/d41/classIslandEdgeID"/>
+        <childnode refid="83" relation="usage">
+          <edgelabel>pNodeA</edgelabel>
+          <edgelabel>pNodeB</edgelabel>
+        </childnode>
+      </node>
+      <node id="109">
+        <label>Mesh</label>
+        <link refid="d9/d5e/classMesh"/>
+        <childnode refid="110" relation="usage">
+          <edgelabel>m_pVF</edgelabel>
+        </childnode>
+        <childnode refid="86" relation="usage">
+          <edgelabel>m_iIndexOffset</edgelabel>
+          <edgelabel>m_iVertexOffset</edgelabel>
+        </childnode>
+        <childnode refid="107" relation="usage">
+          <edgelabel>m_bDynamicUpdate</edgelabel>
+        </childnode>
+        <childnode refid="115" relation="usage">
+          <edgelabel>m_pIB</edgelabel>
+        </childnode>
+        <childnode refid="117" relation="usage">
+          <edgelabel>m_pVB</edgelabel>
+        </childnode>
+      </node>
+      <node id="92">
+        <label>JacobianConstraint</label>
+        <link refid="d2/d61/classJacobianConstraint"/>
+        <childnode refid="93" relation="usage">
+          <edgelabel>vJAngularA</edgelabel>
+          <edgelabel>vJLinearAxis</edgelabel>
+          <edgelabel>vJAngularB</edgelabel>
+          <edgelabel>vInvIBxJtAngB</edgelabel>
+          <edgelabel>vInvIAxJtAngA</edgelabel>
+        </childnode>
+        <childnode refid="95" relation="usage">
+          <edgelabel>fInvDiagJWJtAB</edgelabel>
+        </childnode>
+      </node>
+      <node id="120">
+        <label>static const Scalar</label>
+      </node>
+      <node id="118">
+        <label>VertexBufferUsage</label>
+      </node>
+      <node id="82">
+        <label>BodyNode</label>
+        <link refid="de/df0/classBodyNode"/>
+        <childnode refid="83" relation="public-inheritance">
+        </childnode>
+        <childnode refid="93" relation="usage">
+          <edgelabel>m_vTorqueBuffer</edgelabel>
+          <edgelabel>m_vLinearCorrectionBuffer</edgelabel>
+          <edgelabel>m_vForceBuffer</edgelabel>
+          <edgelabel>m_vAngularCorrectionBuffer</edgelabel>
+          <edgelabel>m_vLinearImpulseBuffer</edgelabel>
+          <edgelabel>m_vAngularSpeed</edgelabel>
+          <edgelabel>m_vLinearSpeed</edgelabel>
+          <edgelabel>m_vAngularImpulseBuffer</edgelabel>
+        </childnode>
+        <childnode refid="106" relation="usage">
+          <edgelabel>m_matInvInertiaTensor</edgelabel>
+          <edgelabel>m_matInertiaTensor</edgelabel>
+          <edgelabel>sm_matInfinity</edgelabel>
+        </childnode>
+        <childnode refid="95" relation="usage">
+          <edgelabel>m_fDensity</edgelabel>
+          <edgelabel>m_fMass</edgelabel>
+          <edgelabel>m_fAngularDamping</edgelabel>
+          <edgelabel>m_fRestitution</edgelabel>
+          <edgelabel>m_fFriction</edgelabel>
+          <edgelabel>m_fInvMass</edgelabel>
+          <edgelabel>m_fLinearDamping</edgelabel>
+        </childnode>
+        <childnode refid="119" relation="usage">
+          <edgelabel>m_qOrientation</edgelabel>
+        </childnode>
+        <childnode refid="86" relation="usage">
+          <edgelabel>m_iSleepTime</edgelabel>
+        </childnode>
+        <childnode refid="121" relation="usage">
+          <edgelabel>m_iCollisionMask</edgelabel>
+          <edgelabel>m_iCollisionGroup</edgelabel>
+        </childnode>
+        <childnode refid="107" relation="usage">
+          <edgelabel>m_bSensor</edgelabel>
+          <edgelabel>m_bSleeping</edgelabel>
+          <edgelabel>m_bStatic</edgelabel>
+        </childnode>
+        <childnode refid="104" relation="usage">
+          <edgelabel>m_vTransform</edgelabel>
+        </childnode>
+        <childnode refid="103" relation="usage">
+          <edgelabel>m_vCenterOfMass</edgelabel>
+          <edgelabel>m_vPosition</edgelabel>
+        </childnode>
+        <childnode refid="108" relation="usage">
+          <edgelabel>m_pLocalShape</edgelabel>
+        </childnode>
+        <childnode refid="100" relation="usage">
+          <edgelabel>m_pWorldShape</edgelabel>
+        </childnode>
+      </node>
+      <node id="106">
+        <label>TMatrix3&lt; Scalar &gt;</label>
+        <link refid="d7/dee/classTMatrix3"/>
+        <childnode refid="106" relation="usage">
+          <edgelabel>Identity</edgelabel>
+          <edgelabel>Null</edgelabel>
+        </childnode>
+        <childnode refid="95" relation="usage">
+          <edgelabel>ONE</edgelabel>
+          <edgelabel>m20</edgelabel>
+          <edgelabel>m21</edgelabel>
+          <edgelabel>m10</edgelabel>
+          <edgelabel>m22</edgelabel>
+          <edgelabel>m11</edgelabel>
+          <edgelabel>m00</edgelabel>
+          <edgelabel>TWO</edgelabel>
+          <edgelabel>m12</edgelabel>
+          <edgelabel>m01</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="95">
+        <label>float</label>
+      </node>
+      <node id="121">
+        <label>UInt64</label>
+      </node>
+      <node id="105">
+        <label>TMatrix4&lt; Scalar &gt;</label>
+        <link refid="d5/d09/classTMatrix4"/>
+        <childnode refid="105" relation="usage">
+          <edgelabel>Identity</edgelabel>
+          <edgelabel>Null</edgelabel>
+        </childnode>
+        <childnode refid="95" relation="usage">
+          <edgelabel>ONE</edgelabel>
+          <edgelabel>m30</edgelabel>
+          <edgelabel>m31</edgelabel>
+          <edgelabel>m20</edgelabel>
+          <edgelabel>m32</edgelabel>
+          <edgelabel>m21</edgelabel>
+          <edgelabel>m10</edgelabel>
+          <edgelabel>m33</edgelabel>
+          <edgelabel>m22</edgelabel>
+          <edgelabel>m11</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="110">
+        <label>VertexFormat</label>
+        <link refid="da/dc2/classVertexFormat"/>
+        <childnode refid="111" relation="usage">
+          <edgelabel>m_arrFields</edgelabel>
+        </childnode>
+        <childnode refid="86" relation="usage">
+          <edgelabel>m_iSize</edgelabel>
+          <edgelabel>m_iFieldCount</edgelabel>
+          <edgelabel>m_arrUsageLUT</edgelabel>
+        </childnode>
+        <childnode refid="107" relation="usage">
+          <edgelabel>m_bFinalized</edgelabel>
+        </childnode>
+        <childnode refid="114" relation="usage">
+          <edgelabel>sm_arrComponentCount</edgelabel>
+          <edgelabel>sm_arrTypeSize</edgelabel>
+          <edgelabel>sm_arrComponentSize</edgelabel>
+        </childnode>
+      </node>
+      <node id="119">
+        <label>TQuaternion&lt; Scalar &gt;</label>
+        <link refid="d5/dad/classTQuaternion"/>
+        <childnode refid="119" relation="usage">
+          <edgelabel>Identity</edgelabel>
+          <edgelabel>Null</edgelabel>
+        </childnode>
+        <childnode refid="120" relation="usage">
+          <edgelabel>ONE</edgelabel>
+          <edgelabel>TWO</edgelabel>
+          <edgelabel>ZERO</edgelabel>
+        </childnode>
+        <childnode refid="94" relation="usage">
+          <edgelabel>W</edgelabel>
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+          <edgelabel>Z</edgelabel>
+        </childnode>
+      </node>
+      <node id="111">
+        <label>VFField</label>
+        <link refid="de/d92/structVFField"/>
+        <childnode refid="112" relation="usage">
+          <edgelabel>iUsage</edgelabel>
+        </childnode>
+        <childnode refid="86" relation="usage">
+          <edgelabel>iSize</edgelabel>
+          <edgelabel>iUsageIndex</edgelabel>
+          <edgelabel>iOffset</edgelabel>
+        </childnode>
+        <childnode refid="113" relation="usage">
+          <edgelabel>iType</edgelabel>
+        </childnode>
+      </node>
+      <node id="114">
+        <label>unsigned int</label>
+      </node>
+      <node id="85">
+        <label>unsigned char</label>
+      </node>
+      <node id="100">
+        <label>TransformedShape</label>
+        <link refid="d2/d1b/classTransformedShape"/>
+        <childnode refid="101" relation="usage">
+          <edgelabel>m_bvWorldAAB</edgelabel>
+        </childnode>
+        <childnode refid="104" relation="usage">
+          <edgelabel>m_vTransform</edgelabel>
+        </childnode>
+        <childnode refid="108" relation="usage">
+          <edgelabel>m_pShape</edgelabel>
+        </childnode>
+      </node>
+      <node id="86">
+        <label>int</label>
+      </node>
+      <node id="101">
+        <label>TBVAABox&lt; Scalar &gt;</label>
+        <link refid="d9/d90/classTBVAABox"/>
+        <childnode refid="102" relation="public-inheritance">
+        </childnode>
+        <childnode refid="93" relation="usage">
+          <edgelabel>m_vExtents</edgelabel>
+        </childnode>
+        <childnode refid="103" relation="usage">
+          <edgelabel>m_vCenter</edgelabel>
+        </childnode>
+      </node>
+      <node id="98">
+        <label>ContactManifold</label>
+        <link refid="d2/d6f/classContactManifold"/>
+      </node>
+      <node id="94">
+        <label>Scalar</label>
+      </node>
+      <node id="87">
+        <label>JointEdge</label>
+        <link refid="df/d01/classJointEdge"/>
+        <childnode refid="88" relation="public-inheritance">
+        </childnode>
+        <childnode refid="90" relation="usage">
+          <edgelabel>m_pConstraint</edgelabel>
+        </childnode>
+      </node>
+      <node id="113">
+        <label>VFFieldType</label>
+      </node>
+      <node id="96">
+        <label>RigidBody</label>
+        <link refid="d6/d88/classRigidBody"/>
+        <childnode refid="82" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="116">
+        <label>IndexBufferUsage</label>
+      </node>
+      <node id="104">
+        <label>TTransform3&lt; Scalar &gt;</label>
+        <link refid="d0/d75/classTTransform3"/>
+        <childnode refid="93" relation="usage">
+          <edgelabel>m_vScale</edgelabel>
+          <edgelabel>m_vInvScale</edgelabel>
+          <edgelabel>m_vInvTranslate</edgelabel>
+          <edgelabel>m_vTranslate</edgelabel>
+        </childnode>
+        <childnode refid="105" relation="usage">
+          <edgelabel>m_matHMatrix</edgelabel>
+        </childnode>
+        <childnode refid="106" relation="usage">
+          <edgelabel>m_matInvTransform</edgelabel>
+          <edgelabel>m_matTransform</edgelabel>
+        </childnode>
+        <childnode refid="107" relation="usage">
+          <edgelabel>m_bIsUniformScale</edgelabel>
+          <edgelabel>m_bIsIdentity</edgelabel>
+          <edgelabel>m_bUpdateInverse</edgelabel>
+          <edgelabel>m_bIsRotScale</edgelabel>
+        </childnode>
+        <childnode refid="104" relation="usage">
+          <edgelabel>Identity</edgelabel>
+        </childnode>
+      </node>
+      <node id="93">
+        <label>TVector3&lt; Scalar &gt;</label>
+        <link refid="de/d40/classTVector3"/>
+        <childnode refid="93" relation="usage">
+          <edgelabel>Null</edgelabel>
+          <edgelabel>eI</edgelabel>
+          <edgelabel>eJ</edgelabel>
+          <edgelabel>eK</edgelabel>
+        </childnode>
+        <childnode refid="94" relation="usage">
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+          <edgelabel>Z</edgelabel>
+        </childnode>
+      </node>
+      <node id="84">
+        <label>Island</label>
+        <link refid="d0/dd6/classIsland"/>
+        <childnode refid="84" relation="usage">
+          <edgelabel>m_pNextInWorld</edgelabel>
+          <edgelabel>m_pPrevInWorld</edgelabel>
+        </childnode>
+        <childnode refid="85" relation="usage">
+          <edgelabel>m_iColor</edgelabel>
+        </childnode>
+        <childnode refid="82" relation="usage">
+          <edgelabel>m_pListBodies</edgelabel>
+        </childnode>
+        <childnode refid="86" relation="usage">
+          <edgelabel>m_iContactCount</edgelabel>
+          <edgelabel>m_iJointCount</edgelabel>
+          <edgelabel>m_iBodyCount</edgelabel>
+          <edgelabel>m_iStackLayerCount</edgelabel>
+        </childnode>
+        <childnode refid="87" relation="usage">
+          <edgelabel>m_pListJoints</edgelabel>
+        </childnode>
+        <childnode refid="97" relation="usage">
+          <edgelabel>m_pListContacts</edgelabel>
+        </childnode>
+      </node>
+      <node id="103">
+        <label>TVertex3&lt; Scalar &gt;</label>
+        <link refid="dc/d75/classTVertex3"/>
+        <childnode refid="94" relation="usage">
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+          <edgelabel>Z</edgelabel>
+        </childnode>
+        <childnode refid="103" relation="usage">
+          <edgelabel>Null</edgelabel>
+        </childnode>
+      </node>
+      <node id="108">
+        <label>Shape</label>
+        <link refid="de/d0a/classShape"/>
+        <childnode refid="101" relation="usage">
+          <edgelabel>m_bvLocalAAB</edgelabel>
+        </childnode>
+        <childnode refid="109" relation="usage">
+          <edgelabel>m_pMesh</edgelabel>
+        </childnode>
+      </node>
+      <node id="97">
+        <label>ContactEdge</label>
+        <link refid="dc/d79/classContactEdge"/>
+        <childnode refid="88" relation="public-inheritance">
+        </childnode>
+        <childnode refid="98" relation="usage">
+          <edgelabel>m_pContactManifold</edgelabel>
+        </childnode>
+        <childnode refid="99" relation="usage">
+          <edgelabel>m_pNarrowPhase</edgelabel>
+        </childnode>
+      </node>
+      <node id="112">
+        <label>VFFieldUsage</label>
+      </node>
+      <node id="88">
+        <label>IslandEdge</label>
+        <link refid="da/d63/classIslandEdge"/>
+        <childnode refid="89" relation="usage">
+          <edgelabel>m_idEdge</edgelabel>
+        </childnode>
+        <childnode refid="84" relation="usage">
+          <edgelabel>m_pIsland</edgelabel>
+        </childnode>
+        <childnode refid="85" relation="usage">
+          <edgelabel>m_iColor</edgelabel>
+        </childnode>
+        <childnode refid="83" relation="usage">
+          <edgelabel>m_pNodeA</edgelabel>
+          <edgelabel>m_pNodeB</edgelabel>
+        </childnode>
+        <childnode refid="86" relation="usage">
+          <edgelabel>m_iStackLayer</edgelabel>
+        </childnode>
+        <childnode refid="88" relation="usage">
+          <edgelabel>m_pNextInWorld</edgelabel>
+          <edgelabel>m_pNextInIsland</edgelabel>
+          <edgelabel>m_pPrevInNodeA</edgelabel>
+          <edgelabel>m_pNextInNodeA</edgelabel>
+          <edgelabel>m_pPrevInNodeB</edgelabel>
+          <edgelabel>m_pNextInNodeB</edgelabel>
+          <edgelabel>m_pPrevInWorld</edgelabel>
+          <edgelabel>m_pPrevInIsland</edgelabel>
+        </childnode>
+      </node>
+      <node id="117">
+        <label>VertexBuffer</label>
+        <link refid="d7/d72/classVertexBuffer"/>
+        <childnode refid="85" relation="usage">
+          <edgelabel>m_arrVertices</edgelabel>
+        </childnode>
+        <childnode refid="86" relation="usage">
+          <edgelabel>m_iSize</edgelabel>
+          <edgelabel>m_iVertexCount</edgelabel>
+          <edgelabel>m_iVertexSize</edgelabel>
+        </childnode>
+        <childnode refid="118" relation="usage">
+          <edgelabel>m_iUsage</edgelabel>
+        </childnode>
+      </node>
+      <node id="81">
+        <label>_RemovedBody</label>
+        <link refid="d0/d86/struct__RemovedBody"/>
+        <childnode refid="82" relation="usage">
+          <edgelabel>pBody</edgelabel>
+        </childnode>
+        <childnode refid="107" relation="usage">
+          <edgelabel>bDestroyShape</edgelabel>
+        </childnode>
+      </node>
+      <node id="107">
+        <label>bool</label>
+      </node>
+      <node id="90">
+        <label>Constraint</label>
+        <link refid="d8/dcd/classConstraint"/>
+        <childnode refid="91" relation="usage">
+          <edgelabel>m_arrRows</edgelabel>
+        </childnode>
+        <childnode refid="86" relation="usage">
+          <edgelabel>m_iRowCount</edgelabel>
+        </childnode>
+        <childnode refid="96" relation="usage">
+          <edgelabel>m_pRigidBodyA</edgelabel>
+          <edgelabel>m_pRigidBodyB</edgelabel>
+        </childnode>
+      </node>
+      <node id="102">
+        <label>TBoundingVolume&lt; Scalar &gt;</label>
+        <link refid="d6/d19/classTBoundingVolume"/>
+      </node>
+      <node id="99">
+        <label>NarrowPhase</label>
+        <link refid="dd/d93/classNarrowPhase"/>
+        <childnode refid="95" relation="usage">
+          <edgelabel>ZeroTolerance</edgelabel>
+        </childnode>
+        <childnode refid="98" relation="usage">
+          <edgelabel>m_pCollisionManifold</edgelabel>
+        </childnode>
+        <childnode refid="100" relation="usage">
+          <edgelabel>m_pShapeA</edgelabel>
+          <edgelabel>m_pShapeB</edgelabel>
+        </childnode>
+      </node>
+      <node id="115">
+        <label>IndexBuffer</label>
+        <link refid="dd/df7/classIndexBuffer"/>
+        <childnode refid="85" relation="usage">
+          <edgelabel>m_arrIndices</edgelabel>
+        </childnode>
+        <childnode refid="86" relation="usage">
+          <edgelabel>m_iIndexSize</edgelabel>
+          <edgelabel>m_iSize</edgelabel>
+          <edgelabel>m_iIndexCount</edgelabel>
+        </childnode>
+        <childnode refid="116" relation="usage">
+          <edgelabel>m_iUsage</edgelabel>
+        </childnode>
+      </node>
+      <node id="91">
+        <label>ConstraintRow</label>
+        <link refid="dd/d74/structConstraintRow"/>
+        <childnode refid="92" relation="usage">
+          <edgelabel>constrJacobian</edgelabel>
+        </childnode>
+        <childnode refid="95" relation="usage">
+          <edgelabel>fUpperLimit</edgelabel>
+          <edgelabel>fLowerLimit</edgelabel>
+          <edgelabel>fError</edgelabel>
+          <edgelabel>fCFM</edgelabel>
+          <edgelabel>fImpulse</edgelabel>
+        </childnode>
+      </node>
+      <node id="83">
+        <label>IslandNode</label>
+        <link refid="d4/d8c/classIslandNode"/>
+        <childnode refid="84" relation="usage">
+          <edgelabel>m_pIsland</edgelabel>
+        </childnode>
+        <childnode refid="83" relation="usage">
+          <edgelabel>m_pNextInWorld</edgelabel>
+          <edgelabel>m_pNextInIsland</edgelabel>
+          <edgelabel>m_pPrevInWorld</edgelabel>
+          <edgelabel>m_pPrevInIsland</edgelabel>
+        </childnode>
+        <childnode refid="86" relation="usage">
+          <edgelabel>m_iContactCount</edgelabel>
+          <edgelabel>m_iJointCount</edgelabel>
+          <edgelabel>m_iStackLayer</edgelabel>
+          <edgelabel>m_iIslandRefCount</edgelabel>
+        </childnode>
+        <childnode refid="107" relation="usage">
+          <edgelabel>m_bFixed</edgelabel>
+        </childnode>
+        <childnode refid="87" relation="usage">
+          <edgelabel>m_pListJoints</edgelabel>
+        </childnode>
+        <childnode refid="97" relation="usage">
+          <edgelabel>m_pListContacts</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/IslandSolver/IslandSolver.h" line="173" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/IslandSolver/IslandSolver.h" bodystart="173" bodyend="176"/>
+    <listofallmembers>
+      <member refid="d0/d86/struct__RemovedBody_1ab2fb88721de9a1942f311a55844a5e33" prot="public" virt="non-virtual"><scope>_RemovedBody</scope><name>bDestroyShape</name></member>
+      <member refid="d0/d86/struct__RemovedBody_1a18ec149b2b3253c07a556e877c91962b" prot="public" virt="non-virtual"><scope>_RemovedBody</scope><name>pBody</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

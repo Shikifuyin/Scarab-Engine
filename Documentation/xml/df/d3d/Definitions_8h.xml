@@ -1,0 +1,1168 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="df/d3d/Definitions_8h" kind="file">
+    <compoundname>Definitions.h</compoundname>
+    <includes refid="d9/dd0/Platform_8h" local="yes">../../../ThirdParty/System/Platform.h</includes>
+    <includes refid="d9/dba/String_8h" local="yes">../../../ThirdParty/System/String.h</includes>
+    <includes refid="d0/d4e/Hashing_8h" local="yes">../../Math/Hash/Hashing.h</includes>
+    <includes local="yes">Definitions.inl</includes>
+    <includedby refid="d6/d2f/Reflect_8h" local="yes">Reflect.h</includedby>
+    <includedby refid="d7/db7/Type_8h" local="yes">Type.h</includedby>
+    <includedby refid="df/df5/Function_8h" local="yes">Function.h</includedby>
+    <includedby refid="d8/d44/UnionStruct_8h" local="yes">UnionStruct.h</includedby>
+    <includedby refid="d4/d05/Class_8h" local="yes">Class.h</includedby>
+    <includedby refid="dd/d68/Member_8h" local="yes">Member.h</includedby>
+    <includedby refid="d4/d8f/Method_8h" local="yes">Method.h</includedby>
+    <incdepgraph>
+      <node id="8848">
+        <label>../../../ThirdParty/System/Platform.h</label>
+        <link refid="d9/dd0/Platform_8h"/>
+        <childnode refid="8849" relation="include">
+        </childnode>
+      </node>
+      <node id="8858">
+        <label>Definitions.inl</label>
+      </node>
+      <node id="8854">
+        <label>FPU.inl</label>
+      </node>
+      <node id="8857">
+        <label>Hashing.inl</label>
+      </node>
+      <node id="8856">
+        <label>../../Math/Hash/Hashing.h</label>
+        <link refid="d0/d4e/Hashing_8h"/>
+        <childnode refid="8850" relation="include">
+        </childnode>
+        <childnode refid="8857" relation="include">
+        </childnode>
+      </node>
+      <node id="8855">
+        <label>String.inl</label>
+      </node>
+      <node id="8853">
+        <label>Hardware/FPU.h</label>
+        <link refid="dd/d2f/FPU_8h"/>
+        <childnode refid="8848" relation="include">
+        </childnode>
+        <childnode refid="8854" relation="include">
+        </childnode>
+      </node>
+      <node id="8850">
+        <label>../../../ThirdParty/System/String.h</label>
+        <link refid="d9/dba/String_8h"/>
+        <childnode refid="8851" relation="include">
+        </childnode>
+        <childnode refid="8848" relation="include">
+        </childnode>
+        <childnode refid="8853" relation="include">
+        </childnode>
+        <childnode refid="8855" relation="include">
+        </childnode>
+      </node>
+      <node id="8849">
+        <label>Platform.inl</label>
+      </node>
+      <node id="8847">
+        <label>Definitions.h</label>
+        <link refid="Definitions.h"/>
+        <childnode refid="8848" relation="include">
+        </childnode>
+        <childnode refid="8850" relation="include">
+        </childnode>
+        <childnode refid="8856" relation="include">
+        </childnode>
+        <childnode refid="8858" relation="include">
+        </childnode>
+      </node>
+      <node id="8852">
+        <label>ForwardWin32.inl</label>
+      </node>
+      <node id="8851">
+        <label>../Forwards/ForwardWin32.h</label>
+        <link refid="d5/dea/ForwardWin32_8h"/>
+        <childnode refid="8852" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="8861">
+        <label>Object.h</label>
+        <link refid="db/dbf/Object_8h"/>
+      </node>
+      <node id="8860">
+        <label>Reflect.h</label>
+        <link refid="d6/d2f/Reflect_8h"/>
+        <childnode refid="8861" relation="include">
+        </childnode>
+      </node>
+      <node id="8862">
+        <label>Type.h</label>
+        <link refid="d7/db7/Type_8h"/>
+        <childnode refid="8860" relation="include">
+        </childnode>
+        <childnode refid="8863" relation="include">
+        </childnode>
+        <childnode refid="8865" relation="include">
+        </childnode>
+        <childnode refid="8866" relation="include">
+        </childnode>
+        <childnode refid="8867" relation="include">
+        </childnode>
+        <childnode refid="8864" relation="include">
+        </childnode>
+      </node>
+      <node id="8864">
+        <label>Method.h</label>
+        <link refid="d4/d8f/Method_8h"/>
+        <childnode refid="8860" relation="include">
+        </childnode>
+      </node>
+      <node id="8867">
+        <label>Member.h</label>
+        <link refid="dd/d68/Member_8h"/>
+        <childnode refid="8860" relation="include">
+        </childnode>
+      </node>
+      <node id="8865">
+        <label>UnionStruct.h</label>
+        <link refid="d8/d44/UnionStruct_8h"/>
+        <childnode refid="8860" relation="include">
+        </childnode>
+      </node>
+      <node id="8863">
+        <label>Function.h</label>
+        <link refid="df/df5/Function_8h"/>
+        <childnode refid="8860" relation="include">
+        </childnode>
+        <childnode refid="8864" relation="include">
+        </childnode>
+      </node>
+      <node id="8859">
+        <label>Definitions.h</label>
+        <link refid="Definitions.h"/>
+        <childnode refid="8860" relation="include">
+        </childnode>
+        <childnode refid="8862" relation="include">
+        </childnode>
+        <childnode refid="8863" relation="include">
+        </childnode>
+        <childnode refid="8865" relation="include">
+        </childnode>
+        <childnode refid="8866" relation="include">
+        </childnode>
+        <childnode refid="8867" relation="include">
+        </childnode>
+        <childnode refid="8864" relation="include">
+        </childnode>
+      </node>
+      <node id="8866">
+        <label>Class.h</label>
+        <link refid="d4/d05/Class_8h"/>
+        <childnode refid="8860" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d8/d89/class__Reflection_1_1Holder" prot="public">_Reflection::Holder</innerclass>
+    <innerclass refid="d6/d17/class__Reflection_1_1LookupTable" prot="public">_Reflection::LookupTable</innerclass>
+    <innerclass refid="d5/dff/structLookupItem" prot="private">LookupItem</innerclass>
+    <innernamespace refid="da/d27/namespace__Reflection">_Reflection</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1ac5c5b987805be9731d4771445ce491f6" prot="public" static="no">
+        <name>REFLECTION_STRINGSIZE</name>
+        <initializer>256</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="34" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a6bd567f414f953b50fd1037e66fdf198" prot="public" static="no">
+        <name>REFLECTION_LOOKUP_SIZE</name>
+        <initializer>4096</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="36" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1aa4b40240107f09b0a06e9d8487c31e11" prot="public" static="no">
+        <name>REFLECTION_MAX_CHILDS</name>
+        <initializer>32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="38" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1aeddf9d5d97acebea27c486df1e843d0b" prot="public" static="no">
+        <name>REFLECTION_MAX_NESTED</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="39" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a54520433f7f0b980e6167732491770d4" prot="public" static="no">
+        <name>REFLECTION_MAX_METHODS</name>
+        <initializer>128</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="40" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a4cc77c049d29310efc49647e64863c90" prot="public" static="no">
+        <name>REFLECTION_MAX_MEMBERS</name>
+        <initializer>128</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="41" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1aad03f3c1255f374fc9659cab39f926e8" prot="public" static="no">
+        <name>_SPECIFIER_TYPE_MASK</name>
+        <initializer>0x0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="44" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1aa2f7ef13e76521ba331d04fb542f8822" prot="public" static="no">
+        <name>_SPECIFIER_TYPE_SHIFT</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="45" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1acb1919218a1fdc5b4a8d8cff2ca6f7f0" prot="public" static="no">
+        <name>SPECIFIER_TYPE_NULL</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="46" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a26bd80966ca886f455d4f9e61f4e777c" prot="public" static="no">
+        <name>SPECIFIER_TYPE_VOID</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="47" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1ace7f39a4b818c3fc924ce0e2264f3a41" prot="public" static="no">
+        <name>SPECIFIER_TYPE_BUILTIN</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="48" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a0a867004e3edcd1ccd4b3a0e3c8ef1fe" prot="public" static="no">
+        <name>SPECIFIER_TYPE_FUNCTION</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="49" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a5c5c22f9141bb5331369e17e74b5ef80" prot="public" static="no">
+        <name>SPECIFIER_TYPE_TYPEDEF</name>
+        <initializer>0x04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="50" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a21ffdb457cab37fd7b7ae825d6d6da85" prot="public" static="no">
+        <name>SPECIFIER_TYPE_ENUM</name>
+        <initializer>0x05</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="51" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a903d33c03a2e6e849fb524490045a617" prot="public" static="no">
+        <name>SPECIFIER_TYPE_UNION</name>
+        <initializer>0x06</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="52" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1adc920c50b5f0601b48bc17c03f45459b" prot="public" static="no">
+        <name>SPECIFIER_TYPE_STRUCT</name>
+        <initializer>0x07</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="53" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1ad040ec87d9909535c5ef0a88665988cd" prot="public" static="no">
+        <name>SPECIFIER_TYPE_CLASS</name>
+        <initializer>0x08</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="54" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1abbbfc10a2abbc671d7aa937cbff82f2f" prot="public" static="no">
+        <name>_SPECIFIER_TYPEMOD_MASK</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="57" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a66385303e66eb400339f985e7060c5a6" prot="public" static="no">
+        <name>_SPECIFIER_TYPEMOD_SHIFT</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="58" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a407b45978d9ea18e290c2ce9effa5ce0" prot="public" static="no">
+        <name>SPECIFIER_TYPEMOD_NONE</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="59" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1ac9affc64b660defa123c59b9be47ca45" prot="public" static="no">
+        <name>SPECIFIER_TYPEMOD_INTERNAL</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="60" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1abf6d51a0c066cc7b881559b75edd77ff" prot="public" static="no">
+        <name>SPECIFIER_TYPEMOD_TEMPLATE</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="61" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a5c135c39368bb62eec2ae7fe15787f01" prot="public" static="no">
+        <name>_SPECIFIER_FUNCTIONMOD_MASK</name>
+        <initializer>0x3f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="64" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1ab01b4a9edfb257d6c1de7d24f815b942" prot="public" static="no">
+        <name>_SPECIFIER_FUNCTIONMOD_SHIFT</name>
+        <initializer>6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="65" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1ad61481ad5585294cc5bde16fd4b748ae" prot="public" static="no">
+        <name>SPECIFIER_FUNCTIONMOD_CDECL</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="66" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a73b503c4f8caadb4df413daa362eaa32" prot="public" static="no">
+        <name>SPECIFIER_FUNCTIONMOD_STDCALL</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="67" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1ad5cdd75fac15f5c6fd796efc54866746" prot="public" static="no">
+        <name>SPECIFIER_FUNCTIONMOD_FASTCALL</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="68" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1aa19e7708356f7c444b18c9a93dd2040b" prot="public" static="no">
+        <name>SPECIFIER_FUNCTIONMOD_THISCALL</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="69" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1aec5b7717beacc25f561f9f1e902e592d" prot="public" static="no">
+        <name>SPECIFIER_FUNCTIONMOD_INLINE</name>
+        <initializer>0x04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="70" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a5ea8f09d5ff9c96d7a39d27c9f1591c6" prot="public" static="no">
+        <name>SPECIFIER_FUNCTIONMOD_CONST</name>
+        <initializer>0x08</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="71" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a706e4f4f1907035e0b018e11af9a9fde" prot="public" static="no">
+        <name>SPECIFIER_FUNCTIONMOD_RECURSIVE</name>
+        <initializer>0x10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="72" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a5dcb336661292a532658a2e596ad543c" prot="public" static="no">
+        <name>SPECIFIER_FUNCTIONMOD_VARGLIST</name>
+        <initializer>0x20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="73" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a2dc061bf6f6f495309ecda67b8ff04fb" prot="public" static="no">
+        <name>_SPECIFIER_CLASSMOD_MASK</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="76" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a63e892b234f20638cc73270735bac921" prot="public" static="no">
+        <name>_SPECIFIER_CLASSMOD_SHIFT</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="77" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a02ffaa19808b85c0ddf6aa2e230dd6b3" prot="public" static="no">
+        <name>SPECIFIER_CLASSMOD_NONE</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="78" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a2838b418607a1f5f6ffd0e1f153507a9" prot="public" static="no">
+        <name>SPECIFIER_CLASSMOD_ABSTRACT</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="79" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1aee4911bb4d8f7294d40335272eae549f" prot="public" static="no">
+        <name>SPECIFIER_CLASSMOD_INTERFACE</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="80" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a3258a1f6f1c6fd6598c6f4d4d706523a" prot="public" static="no">
+        <name>SPECIFIER_CLASSMOD_SEALED</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="81" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a6ceeae78b81c06210f369accb9ccf7b8" prot="public" static="no">
+        <name>_SPECIFIER_MEMBER_MASK</name>
+        <initializer>0x07</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="84" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1af76f9dc1a0fc8d1c23ba81dea3970608" prot="public" static="no">
+        <name>_SPECIFIER_MEMBER_SHIFT</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="85" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1ae62571558716fc6f92ee79b6fb7df37a" prot="public" static="no">
+        <name>SPECIFIER_MEMBER_VALUE</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="86" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1ad08fccad6e12e3798aeeabe2b8f50f27" prot="public" static="no">
+        <name>SPECIFIER_MEMBER_REFERENCE</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="87" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1afe8d071a4bc23521fec6762709b83803" prot="public" static="no">
+        <name>SPECIFIER_MEMBER_POINTER</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="88" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1abf6d1581d0c3f415d4df381311fccefa" prot="public" static="no">
+        <name>SPECIFIER_MEMBER_ARRAY</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="89" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1aaf7e9ff04ee9a13373cdeb086a4599ce" prot="public" static="no">
+        <name>SPECIFIER_MEMBER_FUNCPTR</name>
+        <initializer>0x04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="90" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1aa0012a46097c18108931bbb8bf0e4d83" prot="public" static="no">
+        <name>SPECIFIER_MEMBER_MEMBERPTR</name>
+        <initializer>0x05</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="91" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1abefd93bfc58eb99fbc8002e95b82111a" prot="public" static="no">
+        <name>SPECIFIER_MEMBER_METHODPTR</name>
+        <initializer>0x06</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="92" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1ae8f823c614582a26d25ff3b3c9a09b04" prot="public" static="no">
+        <name>_SPECIFIER_MEMBERMOD_MASK</name>
+        <initializer>0x07</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="95" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a005bd656cb4f548328103b178c5cb0f6" prot="public" static="no">
+        <name>_SPECIFIER_MEMBERMOD_SHIFT</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="96" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1afdc2a1360a68679c60fd345ab7f6b3fe" prot="public" static="no">
+        <name>SPECIFIER_MEMBERMOD_NONE</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="97" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a41bd18674c699af333b8be85b85bfdf2" prot="public" static="no">
+        <name>SPECIFIER_MEMBERMOD_CONST</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="98" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a76a4655edd6a280327b405e7d37c4e06" prot="public" static="no">
+        <name>SPECIFIER_MEMBERMOD_VOLATILE</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="99" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a091d92c26413e2e3271fc55e91128a41" prot="public" static="no">
+        <name>SPECIFIER_MEMBERMOD_MUTABLE</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="100" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1ab0f074e12ef10542b56b64136dd2a5da" prot="public" static="no">
+        <name>SPECIFIER_MEMBERMOD_TRANSIENT</name>
+        <initializer>0x04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="101" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a61342db842a6aa43dfe054a4e3604ab4" prot="public" static="no">
+        <name>_SPECIFIER_METHOD_MASK</name>
+        <initializer>0x07</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="104" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1afae338e02d25bdbee30d3f2a16f2b411" prot="public" static="no">
+        <name>_SPECIFIER_METHOD_SHIFT</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="105" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1af3ab4d30b8c919fcd6df9cbe1251b558" prot="public" static="no">
+        <name>SPECIFIER_METHOD_NONE</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="106" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a56262da7661358b569b7412efdd64cf5" prot="public" static="no">
+        <name>SPECIFIER_METHOD_CONSTR</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="107" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a168aa0416549783f6749f2789e26cb46" prot="public" static="no">
+        <name>SPECIFIER_METHOD_CONSTRCOPY</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="108" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a6f2d01769d9ad8585548f45ce8d4dbfb" prot="public" static="no">
+        <name>SPECIFIER_METHOD_DESTR</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="109" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a3d1ef7dd22faf4ae2f7379210f9a45ba" prot="public" static="no">
+        <name>SPECIFIER_METHOD_OPERATOR</name>
+        <initializer>0x04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="110" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1addbad38c5a309463098e2e6215a6fea7" prot="public" static="no">
+        <name>SPECIFIER_METHOD_TYPECAST</name>
+        <initializer>0x05</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="111" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a9dd79e1b430becc09ac1f04aae07a1ec" prot="public" static="no">
+        <name>SPECIFIER_METHOD_GETTER</name>
+        <initializer>0x06</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="112" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1afd98f88a89a22d3eda93d81a2dea6865" prot="public" static="no">
+        <name>SPECIFIER_METHOD_SETTER</name>
+        <initializer>0x07</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="113" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a88727cab33444b8f3da09d9ec1129386" prot="public" static="no">
+        <name>_SPECIFIER_METHODMOD_MASK</name>
+        <initializer>0x07</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="116" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a036e35af798267e1b64b5e0522144bd6" prot="public" static="no">
+        <name>_SPECIFIER_METHODMOD_SHIFT</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="117" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a098271b817d07dd6a0e7acc7b485d5f7" prot="public" static="no">
+        <name>SPECIFIER_METHODMOD_NONE</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="118" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1ae05ab131a6e75e251ad2ee65ceef43f8" prot="public" static="no">
+        <name>SPECIFIER_METHODMOD_IMPLICIT</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="119" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a4e89db4e8fde6d134989aa6f00fce227" prot="public" static="no">
+        <name>SPECIFIER_METHODMOD_EXPLICIT</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="120" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1ab9a08b5f4ab7172a700f5a96f1b0fb9f" prot="public" static="no">
+        <name>SPECIFIER_METHODMOD_OVERRIDE</name>
+        <initializer>0x04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="121" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1adfa3ad65381a099ef815956bd29c79b0" prot="public" static="no">
+        <name>_SPECIFIER_SCOPE_MASK</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="124" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a3ef4b9f91eeda05ef065468990a49a44" prot="public" static="no">
+        <name>_SPECIFIER_SCOPE_SHIFT</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="125" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1ac7b0587c28c4cad1a5fdcfa93b200c22" prot="public" static="no">
+        <name>SPECIFIER_SCOPE_GLOBAL</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="126" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a191f469cdb90c696b0763c8ebc97ae18" prot="public" static="no">
+        <name>SPECIFIER_SCOPE_NESTED</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="127" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1ada0f67ff43072ed5005e0057185df4fa" prot="public" static="no">
+        <name>SPECIFIER_SCOPE_ARGUMENT</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="128" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1abc99096bdbb0fd0aff29842b858df313" prot="public" static="no">
+        <name>SPECIFIER_SCOPE_TEMPLATE</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="129" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1ae5aef9220c34769f98cd03c6fac96dae" prot="public" static="no">
+        <name>_SPECIFIER_ACCESS_MASK</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="132" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a7dd97de38cb9d8b0463184f99e4dd091" prot="public" static="no">
+        <name>_SPECIFIER_ACCESS_SHIFT</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="133" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1aaf1aa7ab685587e350dae3fcf94cbd18" prot="public" static="no">
+        <name>SPECIFIER_ACCESS_DEFAULT</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="134" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a6e8b0e977b22c747b9c080d6eac4204b" prot="public" static="no">
+        <name>SPECIFIER_ACCESS_PUBLIC</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="135" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a0f1c31a569b30dfa0587b668ffe06d2d" prot="public" static="no">
+        <name>SPECIFIER_ACCESS_PROTECTED</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="136" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a5db0cd6e15f3afd9ffd63a68ef65895f" prot="public" static="no">
+        <name>SPECIFIER_ACCESS_PRIVATE</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="137" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a5a92bcbea241423f2b2acf8375ff0784" prot="public" static="no">
+        <name>_SPECIFIER_STORAGE_MASK</name>
+        <initializer>0x07</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="140" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a617fe6401f1703ebeaf7457b121a7317" prot="public" static="no">
+        <name>_SPECIFIER_STORAGE_SHIFT</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="141" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a6577170120b2b73d561c94fbe996a173" prot="public" static="no">
+        <name>SPECIFIER_STORAGE_DEFAULT</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="142" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a1f01ed2248891713dc651097d74ea182" prot="public" static="no">
+        <name>SPECIFIER_STORAGE_STATIC</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="143" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a974ffe3e889c2ff3ad44debb27d9200e" prot="public" static="no">
+        <name>SPECIFIER_STORAGE_VIRTUAL</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="144" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a42ac6020c8f8f9a30865099c0cc92529" prot="public" static="no">
+        <name>SPECIFIER_STORAGE_VIRTUAL_PURE</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="145" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1afd04f7db6180b8a64d0872fe668a9970" prot="public" static="no">
+        <name>SPECIFIER_STORAGE_EXTERN</name>
+        <initializer>0x04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="146" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d3d/Definitions_8h_1a0f14875190dcf7da3fade71111ca231f" prot="public" static="no">
+        <name>SPECIFIER_STORAGE_REGISTER</name>
+        <initializer>0x05</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="147" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h"/>
+  </compounddef>
+</doxygen>

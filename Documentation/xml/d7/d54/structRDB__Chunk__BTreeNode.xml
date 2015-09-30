@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d7/d54/structRDB__Chunk__BTreeNode" kind="struct" prot="public">
+    <compoundname>RDB_Chunk_BTreeNode</compoundname>
+    <includes refid="d5/dae/RDBFileStructure_8h" local="no">RDBFileStructure.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d7/d54/structRDB__Chunk__BTreeNode_1a4c8208a98bc632b0d1d3c6a2205fed8d" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt iKeyCount</definition>
+        <argsstring></argsstring>
+        <name>iKeyCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBFileStructure.h" line="239" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBFileStructure.h" bodystart="239" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d54/structRDB__Chunk__BTreeNode_1a6ea1751b3b508adc8df5688821bad50a" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/d05/structRDB__BTreeKey" kindref="compound">RDB_BTreeKey</ref></type>
+        <definition>RDB_BTreeKey arrKeys[RDB_BTREE_MAX_KEYS]</definition>
+        <argsstring>[RDB_BTREE_MAX_KEYS]</argsstring>
+        <name>arrKeys</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBFileStructure.h" line="240" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBFileStructure.h" bodystart="240" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d54/structRDB__Chunk__BTreeNode_1a2d159e3976fb4b65c0a154407b8ae773" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/df5/structRDB__ChunkPtr" kindref="compound">RDB_ChunkPtr</ref></type>
+        <definition>RDB_ChunkPtr pRightChild</definition>
+        <argsstring></argsstring>
+        <name>pRightChild</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBFileStructure.h" line="241" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBFileStructure.h" bodystart="241" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="10151">
+        <label>unsigned int</label>
+      </node>
+      <node id="10150">
+        <label>RDB_ChunkType</label>
+      </node>
+      <node id="10154">
+        <label>int</label>
+      </node>
+      <node id="10152">
+        <label>RDB_BTreeKeyData</label>
+        <link refid="d2/d2a/structRDB__BTreeKeyData"/>
+        <childnode refid="10153" relation="usage">
+          <edgelabel>strName</edgelabel>
+        </childnode>
+        <childnode refid="10151" relation="usage">
+          <edgelabel>idParent</edgelabel>
+        </childnode>
+      </node>
+      <node id="10149">
+        <label>RDB_ChunkPtr</label>
+        <link refid="d1/df5/structRDB__ChunkPtr"/>
+        <childnode refid="10150" relation="usage">
+          <edgelabel>iType</edgelabel>
+        </childnode>
+        <childnode refid="10151" relation="usage">
+          <edgelabel>idChunk</edgelabel>
+          <edgelabel>idBlock</edgelabel>
+        </childnode>
+      </node>
+      <node id="10148">
+        <label>RDB_BTreeKey</label>
+        <link refid="d9/d05/structRDB__BTreeKey"/>
+        <childnode refid="10149" relation="usage">
+          <edgelabel>pLeftChild</edgelabel>
+        </childnode>
+        <childnode refid="10152" relation="usage">
+          <edgelabel>keyData</edgelabel>
+        </childnode>
+      </node>
+      <node id="10153">
+        <label>char</label>
+      </node>
+      <node id="10147">
+        <label>RDB_Chunk_BTreeNode</label>
+        <link refid="d7/d54/structRDB__Chunk__BTreeNode"/>
+        <childnode refid="10148" relation="usage">
+          <edgelabel>arrKeys</edgelabel>
+        </childnode>
+        <childnode refid="10149" relation="usage">
+          <edgelabel>pRightChild</edgelabel>
+        </childnode>
+        <childnode refid="10154" relation="usage">
+          <edgelabel>iKeyCount</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBFileStructure.h" line="237" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBFileStructure.h" bodystart="236" bodyend="242"/>
+    <listofallmembers>
+      <member refid="d7/d54/structRDB__Chunk__BTreeNode_1a6ea1751b3b508adc8df5688821bad50a" prot="public" virt="non-virtual"><scope>RDB_Chunk_BTreeNode</scope><name>arrKeys</name></member>
+      <member refid="d7/d54/structRDB__Chunk__BTreeNode_1a4c8208a98bc632b0d1d3c6a2205fed8d" prot="public" virt="non-virtual"><scope>RDB_Chunk_BTreeNode</scope><name>iKeyCount</name></member>
+      <member refid="d7/d54/structRDB__Chunk__BTreeNode_1a2d159e3976fb4b65c0a154407b8ae773" prot="public" virt="non-virtual"><scope>RDB_Chunk_BTreeNode</scope><name>pRightChild</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

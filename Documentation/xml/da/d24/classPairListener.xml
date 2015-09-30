@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="da/d24/classPairListener" kind="class" prot="public" abstract="yes">
+    <compoundname>PairListener</compoundname>
+    <derivedcompoundref refid="d7/deb/classIslandSolverListener" prot="public" virt="non-virtual">IslandSolverListener</derivedcompoundref>
+    <includes refid="d7/dff/PairListener_8h" local="no">PairListener.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="da/d24/classPairListener_1a06ee99acaeb66fa14861c1a5d5ba88f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PairListener</definition>
+        <argsstring>()</argsstring>
+        <name>PairListener</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/BroadPhase/PairListener.h" line="46"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d24/classPairListener_1a412df49c4360346ff695344e58200e95" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~PairListener</definition>
+        <argsstring>()</argsstring>
+        <name>~PairListener</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/BroadPhase/PairListener.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d24/classPairListener_1a7010c49b3ce2aa03968bef67fd8f92fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnPairCreated</definition>
+        <argsstring>(IslandNode *pNodeA, IslandNode *pNodeB)=0</argsstring>
+        <name>OnPairCreated</name>
+        <reimplementedby refid="d7/deb/classIslandSolverListener_1a0c4a26f388f66537f32397def78facba">OnPairCreated</reimplementedby>
+        <param>
+          <type><ref refid="d4/d8c/classIslandNode" kindref="compound">IslandNode</ref> *</type>
+          <declname>pNodeA</declname>
+        </param>
+        <param>
+          <type><ref refid="d4/d8c/classIslandNode" kindref="compound">IslandNode</ref> *</type>
+          <declname>pNodeB</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/BroadPhase/PairListener.h" line="49"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d24/classPairListener_1a7cf83856aa805ca17fe4f9fc30a6cf99" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnPairDestroyed</definition>
+        <argsstring>(IslandNode *pNodeA, IslandNode *pNodeB)=0</argsstring>
+        <name>OnPairDestroyed</name>
+        <reimplementedby refid="d7/deb/classIslandSolverListener_1ab7c5ce57c8f018c017cf5cc337ce237f">OnPairDestroyed</reimplementedby>
+        <param>
+          <type><ref refid="d4/d8c/classIslandNode" kindref="compound">IslandNode</ref> *</type>
+          <declname>pNodeA</declname>
+        </param>
+        <param>
+          <type><ref refid="d4/d8c/classIslandNode" kindref="compound">IslandNode</ref> *</type>
+          <declname>pNodeB</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/BroadPhase/PairListener.h" line="50"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d24/classPairListener_1a5cf1e33d8faee190c1ec65a386e56e06" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnPairPersisted</definition>
+        <argsstring>(IslandNode *pNodeA, IslandNode *pNodeB)=0</argsstring>
+        <name>OnPairPersisted</name>
+        <reimplementedby refid="d7/deb/classIslandSolverListener_1a932c5acc9615fc79185a51f2be20908d">OnPairPersisted</reimplementedby>
+        <param>
+          <type><ref refid="d4/d8c/classIslandNode" kindref="compound">IslandNode</ref> *</type>
+          <declname>pNodeA</declname>
+        </param>
+        <param>
+          <type><ref refid="d4/d8c/classIslandNode" kindref="compound">IslandNode</ref> *</type>
+          <declname>pNodeB</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/BroadPhase/PairListener.h" line="51"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="9568">
+        <label>PairListener</label>
+        <link refid="da/d24/classPairListener"/>
+      </node>
+      <node id="9569">
+        <label>IslandSolverListener</label>
+        <link refid="d7/deb/classIslandSolverListener"/>
+        <childnode refid="9568" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/BroadPhase/PairListener.h" line="44" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/BroadPhase/PairListener.h" bodystart="43" bodyend="52"/>
+    <listofallmembers>
+      <member refid="da/d24/classPairListener_1a7010c49b3ce2aa03968bef67fd8f92fe" prot="public" virt="pure-virtual"><scope>PairListener</scope><name>OnPairCreated</name></member>
+      <member refid="da/d24/classPairListener_1a7cf83856aa805ca17fe4f9fc30a6cf99" prot="public" virt="pure-virtual"><scope>PairListener</scope><name>OnPairDestroyed</name></member>
+      <member refid="da/d24/classPairListener_1a5cf1e33d8faee190c1ec65a386e56e06" prot="public" virt="pure-virtual"><scope>PairListener</scope><name>OnPairPersisted</name></member>
+      <member refid="da/d24/classPairListener_1a06ee99acaeb66fa14861c1a5d5ba88f2" prot="public" virt="non-virtual"><scope>PairListener</scope><name>PairListener</name></member>
+      <member refid="da/d24/classPairListener_1a412df49c4360346ff695344e58200e95" prot="public" virt="virtual"><scope>PairListener</scope><name>~PairListener</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

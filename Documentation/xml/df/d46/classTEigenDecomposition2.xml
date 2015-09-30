@@ -1,0 +1,539 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="df/d46/classTEigenDecomposition2" kind="class" prot="public">
+    <compoundname>TEigenDecomposition2</compoundname>
+    <includes refid="d2/da1/EigenDecomposition2_8h" local="no">EigenDecomposition2.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename Real</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="df/d46/classTEigenDecomposition2_1a0a3debaf4902fd0df3fcf5ef6a3e09b8" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt MaxIterations</definition>
+        <argsstring></argsstring>
+        <name>MaxIterations</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/EigenDecomposition2.h" line="43" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/EigenDecomposition2.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d46/classTEigenDecomposition2_1a15588eea940c254c383433246cc901ac" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real ZeroTolerance</definition>
+        <argsstring></argsstring>
+        <name>ZeroTolerance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/EigenDecomposition2.h" line="44" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/EigenDecomposition2.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="df/d46/classTEigenDecomposition2_1a861ab6a3627bfe53ae2453e2a5e1fca8" prot="private" static="yes" mutable="no">
+        <type>const Real</type>
+        <definition>const Real ZERO</definition>
+        <argsstring></argsstring>
+        <name>ZERO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/EigenDecomposition2.h" line="64" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/EigenDecomposition2.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d46/classTEigenDecomposition2_1acac09fd02521e2a1297f6dde618fb5ca" prot="private" static="yes" mutable="no">
+        <type>const Real</type>
+        <definition>const Real ONE</definition>
+        <argsstring></argsstring>
+        <name>ONE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/EigenDecomposition2.h" line="65" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/EigenDecomposition2.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d46/classTEigenDecomposition2_1aa2f4f55be7ca7ebf9a4cdd3f2c84cc36" prot="private" static="yes" mutable="no">
+        <type>const Real</type>
+        <definition>const Real TWO</definition>
+        <argsstring></argsstring>
+        <name>TWO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/EigenDecomposition2.h" line="66" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/EigenDecomposition2.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d46/classTEigenDecomposition2_1a68c0d58de491c8a9c960a96d9b5ed52e" prot="private" static="yes" mutable="no">
+        <type>const Real</type>
+        <definition>const Real HALF</definition>
+        <argsstring></argsstring>
+        <name>HALF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/EigenDecomposition2.h" line="67" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/EigenDecomposition2.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="df/d46/classTEigenDecomposition2_1a0eb04a3c5c3f2b2ff6381091c8bd45fa" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool m_bIsRotation</definition>
+        <argsstring></argsstring>
+        <name>m_bIsRotation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/EigenDecomposition2.h" line="81" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/EigenDecomposition2.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d46/classTEigenDecomposition2_1a6cd0bc589919e6afa6e52bdd4b655a15" prot="private" static="no" mutable="no">
+        <type><ref refid="d5/dac/classTMatrix2" kindref="compound">TMatrix2</ref>&lt; Real &gt;</type>
+        <definition>TMatrix2&lt;Real&gt; m_matSystem</definition>
+        <argsstring></argsstring>
+        <name>m_matSystem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/EigenDecomposition2.h" line="84" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/EigenDecomposition2.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d46/classTEigenDecomposition2_1adcdb54d55c62220d13e46241a33fc2bc" prot="private" static="no" mutable="no">
+        <type><ref refid="da/d58/classTVector2" kindref="compound">TVector2</ref>&lt; Real &gt;</type>
+        <definition>TVector2&lt;Real&gt; m_vDiagonal</definition>
+        <argsstring></argsstring>
+        <name>m_vDiagonal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/EigenDecomposition2.h" line="85" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/EigenDecomposition2.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d46/classTEigenDecomposition2_1a36043a6d122440ce643e5b195a4ce0ff" prot="private" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real m_fSubDiagonal</definition>
+        <argsstring></argsstring>
+        <name>m_fSubDiagonal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/EigenDecomposition2.h" line="86" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/EigenDecomposition2.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="df/d46/classTEigenDecomposition2_1aaa28a8da3ddc559dc60f290468e39f5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEigenDecomposition2</definition>
+        <argsstring>(const TMatrix2&lt; Real &gt; &amp;matSymmetric, UInt iMaxIterations=32, Real fZeroTolerance=(Real) SCALAR_ERROR)</argsstring>
+        <name>TEigenDecomposition2</name>
+        <param>
+          <type>const <ref refid="d5/dac/classTMatrix2" kindref="compound">TMatrix2</ref>&lt; Real &gt; &amp;</type>
+          <declname>matSymmetric</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iMaxIterations</declname>
+          <defval>32</defval>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fZeroTolerance</declname>
+          <defval>(Real) <ref refid="d0/d10/Scalar_8h_1ab84e60710e7c3a93246b807ac524d38b" kindref="member">SCALAR_ERROR</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/EigenDecomposition2.h" line="39"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d46/classTEigenDecomposition2_1aaf422d122920d4034e12f3e8af444f51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~TEigenDecomposition2</definition>
+        <argsstring>()</argsstring>
+        <name>~TEigenDecomposition2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/EigenDecomposition2.h" line="40"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d46/classTEigenDecomposition2_1acf3d23c1cdb031bea8864577fab740f0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d5/dac/classTMatrix2" kindref="compound">TMatrix2</ref>&lt; Real &gt; &amp;</type>
+        <definition>TMatrix2&lt;Real&gt;&amp; GetSystem</definition>
+        <argsstring>()</argsstring>
+        <name>GetSystem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/EigenDecomposition2.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d46/classTEigenDecomposition2_1abb78c7b3ce70cf4346bb9e48e05d9cc3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SolveSystem</definition>
+        <argsstring>(Bool bSortIncreasing=true) const </argsstring>
+        <name>SolveSystem</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+          <declname>bSortIncreasing</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1a08f175a5505a10b9ed657defeb050e4b" kindref="member">true</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/EigenDecomposition2.h" line="50"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d46/classTEigenDecomposition2_1a3703ec436ed3f53479ac30d8c1133ec8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void QuickSolveSystem</definition>
+        <argsstring>() const </argsstring>
+        <name>QuickSolveSystem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/EigenDecomposition2.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d46/classTEigenDecomposition2_1adc2f4eff1653e55a2d4b8daec1d0e5f7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real GetValue</definition>
+        <argsstring>(UInt iValue) const </argsstring>
+        <name>GetValue</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/EigenDecomposition2.h" line="54"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d46/classTEigenDecomposition2_1a7b24cb13901e093f11994520f13abae9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="da/d58/classTVector2" kindref="compound">TVector2</ref>&lt; Real &gt; &amp;</type>
+        <definition>const TVector2&lt;Real&gt;&amp; GetValues</definition>
+        <argsstring>() const </argsstring>
+        <name>GetValues</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/EigenDecomposition2.h" line="55"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d46/classTEigenDecomposition2_1aba865367c309623d5e8497b2ed9d8949" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void GetDiagonalMatrix</definition>
+        <argsstring>(TMatrix2&lt; Real &gt; &amp;outDiagonal) const </argsstring>
+        <name>GetDiagonalMatrix</name>
+        <param>
+          <type><ref refid="d5/dac/classTMatrix2" kindref="compound">TMatrix2</ref>&lt; Real &gt; &amp;</type>
+          <declname>outDiagonal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/EigenDecomposition2.h" line="56"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d46/classTEigenDecomposition2_1a9d27027100f903a8cf0130b5951f47a1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void GetVector</definition>
+        <argsstring>(TVector2&lt; Real &gt; &amp;outVector, UInt iVector) const </argsstring>
+        <name>GetVector</name>
+        <param>
+          <type><ref refid="da/d58/classTVector2" kindref="compound">TVector2</ref>&lt; Real &gt; &amp;</type>
+          <declname>outVector</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iVector</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/EigenDecomposition2.h" line="59"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d46/classTEigenDecomposition2_1aa925b3c0c464c6e31d886713cc88d853" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d5/dac/classTMatrix2" kindref="compound">TMatrix2</ref>&lt; Real &gt; &amp;</type>
+        <definition>const TMatrix2&lt;Real&gt;&amp; GetVectors</definition>
+        <argsstring>() const </argsstring>
+        <name>GetVectors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/EigenDecomposition2.h" line="60"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d46/classTEigenDecomposition2_1abcf58e6ba9fd99de0bc2cc43f59504f7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void GetRotationMatrix</definition>
+        <argsstring>(TMatrix2&lt; Real &gt; &amp;outRotation) const </argsstring>
+        <name>GetRotationMatrix</name>
+        <param>
+          <type><ref refid="d5/dac/classTMatrix2" kindref="compound">TMatrix2</ref>&lt; Real &gt; &amp;</type>
+          <declname>outRotation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/EigenDecomposition2.h" line="61"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="df/d46/classTEigenDecomposition2_1a640bb17f3691dca7b94ae930623eb6c7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _TriDiagonalize</definition>
+        <argsstring>()</argsstring>
+        <name>_TriDiagonalize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/EigenDecomposition2.h" line="70"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d46/classTEigenDecomposition2_1ad0c39e3505b52790608f6a6cc618b36c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool _QLAlgorithm</definition>
+        <argsstring>()</argsstring>
+        <name>_QLAlgorithm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/EigenDecomposition2.h" line="73"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d46/classTEigenDecomposition2_1a2ca488d6143a429f2160d6004ffdf649" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _SortIncreasing</definition>
+        <argsstring>()</argsstring>
+        <name>_SortIncreasing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/EigenDecomposition2.h" line="76"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d46/classTEigenDecomposition2_1a8e4fcd9215e6d6310e15fca80c90ea3a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _SortDecreasing</definition>
+        <argsstring>()</argsstring>
+        <name>_SortDecreasing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/EigenDecomposition2.h" line="77"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d46/classTEigenDecomposition2_1a009c7c51c22f6746a3a93551a50c8248" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _EnsureRotation</definition>
+        <argsstring>()</argsstring>
+        <name>_EnsureRotation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/EigenDecomposition2.h" line="80"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d46/classTEigenDecomposition2_1ac3f40c3e7f622525345d2d023eaaa507" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool _PositiveRank</definition>
+        <argsstring>(Real &amp;outMaxEntry, TVector2&lt; Real &gt; &amp;outMaxRow, const TMatrix2&lt; Real &gt; &amp;matM) const </argsstring>
+        <name>_PositiveRank</name>
+        <param>
+          <type>Real &amp;</type>
+          <declname>outMaxEntry</declname>
+        </param>
+        <param>
+          <type><ref refid="da/d58/classTVector2" kindref="compound">TVector2</ref>&lt; Real &gt; &amp;</type>
+          <declname>outMaxRow</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d5/dac/classTMatrix2" kindref="compound">TMatrix2</ref>&lt; Real &gt; &amp;</type>
+          <declname>matM</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/EigenDecomposition2.h" line="89"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d46/classTEigenDecomposition2_1a32b22897a08430254cf0ac5139ccb09a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _ComputeRoots</definition>
+        <argsstring>()</argsstring>
+        <name>_ComputeRoots</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/EigenDecomposition2.h" line="90"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d46/classTEigenDecomposition2_1a37c72b61d3df4a9adbf049639aadc040" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _ComputeVectors</definition>
+        <argsstring>(const TVector2&lt; Real &gt; &amp;vU1, UInt i0, UInt i1)</argsstring>
+        <name>_ComputeVectors</name>
+        <param>
+          <type>const <ref refid="da/d58/classTVector2" kindref="compound">TVector2</ref>&lt; Real &gt; &amp;</type>
+          <declname>vU1</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>i0</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>i1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/EigenDecomposition2.h" line="91"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="12388">
+        <label>Real</label>
+      </node>
+      <node id="12385">
+        <label>TVector2&lt; Real &gt;</label>
+      </node>
+      <node id="12386">
+        <label>int</label>
+      </node>
+      <node id="12383">
+        <label>TEigenDecomposition2&lt; Real &gt;</label>
+        <link refid="df/d46/classTEigenDecomposition2"/>
+        <childnode refid="12384" relation="usage">
+          <edgelabel>m_matSystem</edgelabel>
+        </childnode>
+        <childnode refid="12385" relation="usage">
+          <edgelabel>m_vDiagonal</edgelabel>
+        </childnode>
+        <childnode refid="12386" relation="usage">
+          <edgelabel>MaxIterations</edgelabel>
+        </childnode>
+        <childnode refid="12387" relation="usage">
+          <edgelabel>m_bIsRotation</edgelabel>
+        </childnode>
+        <childnode refid="12388" relation="usage">
+          <edgelabel>ONE</edgelabel>
+          <edgelabel>HALF</edgelabel>
+          <edgelabel>ZeroTolerance</edgelabel>
+          <edgelabel>TWO</edgelabel>
+          <edgelabel>ZERO</edgelabel>
+          <edgelabel>m_fSubDiagonal</edgelabel>
+        </childnode>
+      </node>
+      <node id="12387">
+        <label>bool</label>
+      </node>
+      <node id="12384">
+        <label>TMatrix2&lt; Real &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/EigenDecomposition2.h" line="36" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/EigenDecomposition2.h" bodystart="35" bodyend="92"/>
+    <listofallmembers>
+      <member refid="df/d46/classTEigenDecomposition2_1a32b22897a08430254cf0ac5139ccb09a" prot="private" virt="non-virtual"><scope>TEigenDecomposition2</scope><name>_ComputeRoots</name></member>
+      <member refid="df/d46/classTEigenDecomposition2_1a37c72b61d3df4a9adbf049639aadc040" prot="private" virt="non-virtual"><scope>TEigenDecomposition2</scope><name>_ComputeVectors</name></member>
+      <member refid="df/d46/classTEigenDecomposition2_1a009c7c51c22f6746a3a93551a50c8248" prot="private" virt="non-virtual"><scope>TEigenDecomposition2</scope><name>_EnsureRotation</name></member>
+      <member refid="df/d46/classTEigenDecomposition2_1ac3f40c3e7f622525345d2d023eaaa507" prot="private" virt="non-virtual"><scope>TEigenDecomposition2</scope><name>_PositiveRank</name></member>
+      <member refid="df/d46/classTEigenDecomposition2_1ad0c39e3505b52790608f6a6cc618b36c" prot="private" virt="non-virtual"><scope>TEigenDecomposition2</scope><name>_QLAlgorithm</name></member>
+      <member refid="df/d46/classTEigenDecomposition2_1a8e4fcd9215e6d6310e15fca80c90ea3a" prot="private" virt="non-virtual"><scope>TEigenDecomposition2</scope><name>_SortDecreasing</name></member>
+      <member refid="df/d46/classTEigenDecomposition2_1a2ca488d6143a429f2160d6004ffdf649" prot="private" virt="non-virtual"><scope>TEigenDecomposition2</scope><name>_SortIncreasing</name></member>
+      <member refid="df/d46/classTEigenDecomposition2_1a640bb17f3691dca7b94ae930623eb6c7" prot="private" virt="non-virtual"><scope>TEigenDecomposition2</scope><name>_TriDiagonalize</name></member>
+      <member refid="df/d46/classTEigenDecomposition2_1aba865367c309623d5e8497b2ed9d8949" prot="public" virt="non-virtual"><scope>TEigenDecomposition2</scope><name>GetDiagonalMatrix</name></member>
+      <member refid="df/d46/classTEigenDecomposition2_1abcf58e6ba9fd99de0bc2cc43f59504f7" prot="public" virt="non-virtual"><scope>TEigenDecomposition2</scope><name>GetRotationMatrix</name></member>
+      <member refid="df/d46/classTEigenDecomposition2_1acf3d23c1cdb031bea8864577fab740f0" prot="public" virt="non-virtual"><scope>TEigenDecomposition2</scope><name>GetSystem</name></member>
+      <member refid="df/d46/classTEigenDecomposition2_1adc2f4eff1653e55a2d4b8daec1d0e5f7" prot="public" virt="non-virtual"><scope>TEigenDecomposition2</scope><name>GetValue</name></member>
+      <member refid="df/d46/classTEigenDecomposition2_1a7b24cb13901e093f11994520f13abae9" prot="public" virt="non-virtual"><scope>TEigenDecomposition2</scope><name>GetValues</name></member>
+      <member refid="df/d46/classTEigenDecomposition2_1a9d27027100f903a8cf0130b5951f47a1" prot="public" virt="non-virtual"><scope>TEigenDecomposition2</scope><name>GetVector</name></member>
+      <member refid="df/d46/classTEigenDecomposition2_1aa925b3c0c464c6e31d886713cc88d853" prot="public" virt="non-virtual"><scope>TEigenDecomposition2</scope><name>GetVectors</name></member>
+      <member refid="df/d46/classTEigenDecomposition2_1a68c0d58de491c8a9c960a96d9b5ed52e" prot="private" virt="non-virtual"><scope>TEigenDecomposition2</scope><name>HALF</name></member>
+      <member refid="df/d46/classTEigenDecomposition2_1a0eb04a3c5c3f2b2ff6381091c8bd45fa" prot="private" virt="non-virtual"><scope>TEigenDecomposition2</scope><name>m_bIsRotation</name></member>
+      <member refid="df/d46/classTEigenDecomposition2_1a36043a6d122440ce643e5b195a4ce0ff" prot="private" virt="non-virtual"><scope>TEigenDecomposition2</scope><name>m_fSubDiagonal</name></member>
+      <member refid="df/d46/classTEigenDecomposition2_1a6cd0bc589919e6afa6e52bdd4b655a15" prot="private" virt="non-virtual"><scope>TEigenDecomposition2</scope><name>m_matSystem</name></member>
+      <member refid="df/d46/classTEigenDecomposition2_1adcdb54d55c62220d13e46241a33fc2bc" prot="private" virt="non-virtual"><scope>TEigenDecomposition2</scope><name>m_vDiagonal</name></member>
+      <member refid="df/d46/classTEigenDecomposition2_1a0a3debaf4902fd0df3fcf5ef6a3e09b8" prot="public" virt="non-virtual"><scope>TEigenDecomposition2</scope><name>MaxIterations</name></member>
+      <member refid="df/d46/classTEigenDecomposition2_1acac09fd02521e2a1297f6dde618fb5ca" prot="private" virt="non-virtual"><scope>TEigenDecomposition2</scope><name>ONE</name></member>
+      <member refid="df/d46/classTEigenDecomposition2_1a3703ec436ed3f53479ac30d8c1133ec8" prot="public" virt="non-virtual"><scope>TEigenDecomposition2</scope><name>QuickSolveSystem</name></member>
+      <member refid="df/d46/classTEigenDecomposition2_1abb78c7b3ce70cf4346bb9e48e05d9cc3" prot="public" virt="non-virtual"><scope>TEigenDecomposition2</scope><name>SolveSystem</name></member>
+      <member refid="df/d46/classTEigenDecomposition2_1aaa28a8da3ddc559dc60f290468e39f5d" prot="public" virt="non-virtual"><scope>TEigenDecomposition2</scope><name>TEigenDecomposition2</name></member>
+      <member refid="df/d46/classTEigenDecomposition2_1aa2f4f55be7ca7ebf9a4cdd3f2c84cc36" prot="private" virt="non-virtual"><scope>TEigenDecomposition2</scope><name>TWO</name></member>
+      <member refid="df/d46/classTEigenDecomposition2_1a861ab6a3627bfe53ae2453e2a5e1fca8" prot="private" virt="non-virtual"><scope>TEigenDecomposition2</scope><name>ZERO</name></member>
+      <member refid="df/d46/classTEigenDecomposition2_1a15588eea940c254c383433246cc901ac" prot="public" virt="non-virtual"><scope>TEigenDecomposition2</scope><name>ZeroTolerance</name></member>
+      <member refid="df/d46/classTEigenDecomposition2_1aaf422d122920d4034e12f3e8af444f51" prot="public" virt="non-virtual"><scope>TEigenDecomposition2</scope><name>~TEigenDecomposition2</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

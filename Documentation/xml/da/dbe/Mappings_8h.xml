@@ -1,0 +1,3821 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="da/dbe/Mappings_8h" kind="file">
+    <compoundname>Mappings.h</compoundname>
+    <includes refid="d5/d30/ForwardDirect3D9_8h" local="yes">../../Forwards/ForwardDirect3D9.h</includes>
+    <includes refid="d9/dd0/Platform_8h" local="yes">../../System/Platform.h</includes>
+    <includes local="yes">Mappings.inl</includes>
+    <includedby refid="d9/d47/Direct3D9_8h" local="yes">Direct3D9.h</includedby>
+    <includedby refid="da/dbe/D3D9VertexFormat_8h" local="yes">D3D9VertexFormat.h</includedby>
+    <includedby refid="d4/dab/D3D9Buffers_8h" local="yes">D3D9Buffers.h</includedby>
+    <includedby refid="dd/d1f/D3D9Textures_8h" local="yes">D3D9Textures.h</includedby>
+    <includedby refid="db/d6b/D3D9RenderTarget_8h" local="yes">D3D9RenderTarget.h</includedby>
+    <includedby refid="df/d76/D3D9Shaders_8h" local="yes">D3D9Shaders.h</includedby>
+    <incdepgraph>
+      <node id="22163">
+        <label>ForwardDirect3D9.inl</label>
+      </node>
+      <node id="22164">
+        <label>../../System/Platform.h</label>
+        <link refid="d9/dd0/Platform_8h"/>
+        <childnode refid="22165" relation="include">
+        </childnode>
+      </node>
+      <node id="22166">
+        <label>Mappings.inl</label>
+      </node>
+      <node id="22160">
+        <label>../../Forwards/ForwardDirect3D9.h</label>
+        <link refid="d5/d30/ForwardDirect3D9_8h"/>
+        <childnode refid="22161" relation="include">
+        </childnode>
+        <childnode refid="22163" relation="include">
+        </childnode>
+      </node>
+      <node id="22159">
+        <label>Mappings.h</label>
+        <link refid="Mappings.h"/>
+        <childnode refid="22160" relation="include">
+        </childnode>
+        <childnode refid="22164" relation="include">
+        </childnode>
+        <childnode refid="22166" relation="include">
+        </childnode>
+      </node>
+      <node id="22165">
+        <label>Platform.inl</label>
+      </node>
+      <node id="22162">
+        <label>ForwardWin32.inl</label>
+      </node>
+      <node id="22161">
+        <label>ForwardWin32.h</label>
+        <link refid="d5/dea/ForwardWin32_8h"/>
+        <childnode refid="22162" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="22168">
+        <label>Direct3D9.h</label>
+        <link refid="d9/d47/Direct3D9_8h"/>
+        <childnode refid="22169" relation="include">
+        </childnode>
+      </node>
+      <node id="22178">
+        <label>WorldManager.h</label>
+        <link refid="db/d98/WorldManager_8h"/>
+        <childnode refid="22171" relation="include">
+        </childnode>
+      </node>
+      <node id="22176">
+        <label>MyDungeon.h</label>
+        <link refid="d0/de7/MyDungeon_8h"/>
+        <childnode refid="22174" relation="include">
+        </childnode>
+      </node>
+      <node id="22170">
+        <label>RenderingManager.h</label>
+        <link refid="de/d07/RenderingManager_8h"/>
+        <childnode refid="22171" relation="include">
+        </childnode>
+        <childnode refid="22177" relation="include">
+        </childnode>
+        <childnode refid="22178" relation="include">
+        </childnode>
+        <childnode refid="22179" relation="include">
+        </childnode>
+      </node>
+      <node id="22182">
+        <label>D3D9VertexFormat.h</label>
+        <link refid="da/dbe/D3D9VertexFormat_8h"/>
+        <childnode refid="22168" relation="include">
+        </childnode>
+      </node>
+      <node id="22174">
+        <label>Main.h</label>
+        <link refid="da/d94/Main_8h"/>
+      </node>
+      <node id="22181">
+        <label>CommandShowTree.h</label>
+        <link refid="d8/d84/CommandShowTree_8h"/>
+        <childnode refid="22180" relation="include">
+        </childnode>
+      </node>
+      <node id="22175">
+        <label>MyLandscape.h</label>
+        <link refid="d7/d2b/MyLandscape_8h"/>
+        <childnode refid="22174" relation="include">
+        </childnode>
+      </node>
+      <node id="22172">
+        <label>ApplicationManager.h</label>
+        <link refid="d2/d9d/ApplicationManager_8h"/>
+        <childnode refid="22173" relation="include">
+        </childnode>
+        <childnode refid="22174" relation="include">
+        </childnode>
+        <childnode refid="22175" relation="include">
+        </childnode>
+        <childnode refid="22176" relation="include">
+        </childnode>
+      </node>
+      <node id="22184">
+        <label>D3D9Textures.h</label>
+        <link refid="dd/d1f/D3D9Textures_8h"/>
+        <childnode refid="22168" relation="include">
+        </childnode>
+      </node>
+      <node id="22169">
+        <label>DeviceRenderer.h</label>
+        <link refid="d6/d05/DeviceRenderer_8h"/>
+        <childnode refid="22170" relation="include">
+        </childnode>
+      </node>
+      <node id="22183">
+        <label>D3D9Buffers.h</label>
+        <link refid="d4/dab/D3D9Buffers_8h"/>
+        <childnode refid="22168" relation="include">
+        </childnode>
+      </node>
+      <node id="22171">
+        <label>WindowApplication.h</label>
+        <link refid="d4/d72/WindowApplication_8h"/>
+        <childnode refid="22172" relation="include">
+        </childnode>
+      </node>
+      <node id="22167">
+        <label>Mappings.h</label>
+        <link refid="Mappings.h"/>
+        <childnode refid="22168" relation="include">
+        </childnode>
+        <childnode refid="22182" relation="include">
+        </childnode>
+        <childnode refid="22183" relation="include">
+        </childnode>
+        <childnode refid="22184" relation="include">
+        </childnode>
+        <childnode refid="22185" relation="include">
+        </childnode>
+        <childnode refid="22186" relation="include">
+        </childnode>
+      </node>
+      <node id="22173">
+        <label>Entities.h</label>
+        <link refid="d7/d5d/Entities_8h"/>
+        <childnode refid="22174" relation="include">
+        </childnode>
+      </node>
+      <node id="22177">
+        <label>ModelingManager.h</label>
+        <link refid="dc/ddb/ModelingManager_8h"/>
+        <childnode refid="22171" relation="include">
+        </childnode>
+        <childnode refid="22178" relation="include">
+        </childnode>
+      </node>
+      <node id="22180">
+        <label>ConsoleManager.h</label>
+        <link refid="d3/d63/ConsoleManager_8h"/>
+        <childnode refid="22171" relation="include">
+        </childnode>
+      </node>
+      <node id="22179">
+        <label>GUIManager.h</label>
+        <link refid="d6/db3/GUIManager_8h"/>
+        <childnode refid="22171" relation="include">
+        </childnode>
+        <childnode refid="22180" relation="include">
+        </childnode>
+        <childnode refid="22181" relation="include">
+        </childnode>
+      </node>
+      <node id="22185">
+        <label>D3D9RenderTarget.h</label>
+        <link refid="db/d6b/D3D9RenderTarget_8h"/>
+        <childnode refid="22168" relation="include">
+        </childnode>
+      </node>
+      <node id="22186">
+        <label>D3D9Shaders.h</label>
+        <link refid="df/d76/D3D9Shaders_8h"/>
+        <childnode refid="22168" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="da/dbe/Mappings_8h_1a00b2f5a6d415853c3d8e52de9279687a" prot="public" static="no">
+        <name>VF_MAX_COLORS</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="51" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="da/dbe/Mappings_8h_1a52c2b010854561806251038062a1f24f" prot="public" static="no">
+        <name>VF_MAX_TEXCOORDS</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="52" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="da/dbe/Mappings_8h_1a9fc4a41657ca7b84f3bf91ec19dac527" prot="public" static="no">
+        <name>VF_MAX_USERDATAS</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="53" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="da/dbe/Mappings_8h_1ac7b9eba1d880373c669878d1f2c4ab47" prot="public" static="no">
+        <name>VF_MAX_FIELDS</name>
+        <initializer>( <ref refid="da/dbe/Mappings_8h_1a2e9f2262b2631d3a84cb5808c9cff564ae0381cee02543527924fbcc8092ff5b5" kindref="member">VFUSAGE_COUNT</ref> + <ref refid="da/dbe/Mappings_8h_1a00b2f5a6d415853c3d8e52de9279687a" kindref="member">VF_MAX_COLORS</ref> + <ref refid="da/dbe/Mappings_8h_1a52c2b010854561806251038062a1f24f" kindref="member">VF_MAX_TEXCOORDS</ref> + <ref refid="da/dbe/Mappings_8h_1a9fc4a41657ca7b84f3bf91ec19dac527" kindref="member">VF_MAX_USERDATAS</ref> - 4 )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="54" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="da/dbe/Mappings_8h_1ab2ffe910ac9514b9d2ecd7c232ffe90b" prot="public" static="no">
+        <name>RENDERTARGET_MAX_TARGETS</name>
+        <initializer>16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="110" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="da/dbe/Mappings_8h_1ab8f3e09889b67042b9305470228ee7e1" prot="public" static="no">
+        <name>SHADERPROG_MAX_ANISOTROPY</name>
+        <initializer>16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="138" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="da/dbe/Mappings_8h_1ad3b258c60b1f8222314d89a372584099" prot="public" static="no">
+        <name>VFFieldType</name>
+        <enumvalue id="da/df2/VertexFormat_8h_1ad3b258c60b1f8222314d89a372584099a06accf3a739d1102b217745179810711" prot="public">
+          <name>VFTYPE_UNDEFINED</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/df2/VertexFormat_8h_1ad3b258c60b1f8222314d89a372584099a24a59dcf5157cee4cfb188b4f51f8009" prot="public">
+          <name>VFTYPE_FLOAT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/df2/VertexFormat_8h_1ad3b258c60b1f8222314d89a372584099ae34ecc896b0332123909cf29e2cee67a" prot="public">
+          <name>VFTYPE_FLOAT2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/df2/VertexFormat_8h_1ad3b258c60b1f8222314d89a372584099a3fee3583f15b187a7a47bacacc1c54e4" prot="public">
+          <name>VFTYPE_FLOAT3</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/df2/VertexFormat_8h_1ad3b258c60b1f8222314d89a372584099a7dfa724ae1b1fa828c6fbc312b8fe8f2" prot="public">
+          <name>VFTYPE_FLOAT4</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/df2/VertexFormat_8h_1ad3b258c60b1f8222314d89a372584099a445781d35cdf3d695b686feb24011763" prot="public">
+          <name>VFTYPE_FLOAT9</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/df2/VertexFormat_8h_1ad3b258c60b1f8222314d89a372584099af0ecaf095acbf9a8b495cc7403f8a7cd" prot="public">
+          <name>VFTYPE_FLOAT16</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/df2/VertexFormat_8h_1ad3b258c60b1f8222314d89a372584099a046766d161df8ef5e80b22118e2ff8c6" prot="public">
+          <name>VFTYPE_HALF2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/df2/VertexFormat_8h_1ad3b258c60b1f8222314d89a372584099a02fe7b2a58690278193c68b4d8bacc2c" prot="public">
+          <name>VFTYPE_HALF4</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/df2/VertexFormat_8h_1ad3b258c60b1f8222314d89a372584099ad6f9753a162a1b63f078885be409f400" prot="public">
+          <name>VFTYPE_UBYTE4</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/df2/VertexFormat_8h_1ad3b258c60b1f8222314d89a372584099a3d3faa5fe25e74565856915cae78aac3" prot="public">
+          <name>VFTYPE_UBYTE4N</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/df2/VertexFormat_8h_1ad3b258c60b1f8222314d89a372584099a3f2b9bd93317e4220a62cefd7e99a0aa" prot="public">
+          <name>VFTYPE_COLOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/df2/VertexFormat_8h_1ad3b258c60b1f8222314d89a372584099a4a5c50efae7f5e4cb5bc24aa780c77d3" prot="public">
+          <name>VFTYPE_USHORT2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/df2/VertexFormat_8h_1ad3b258c60b1f8222314d89a372584099a244f6c8ba107421a88610dba9991bb09" prot="public">
+          <name>VFTYPE_USHORT4</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/df2/VertexFormat_8h_1ad3b258c60b1f8222314d89a372584099ab152beef449c22755c2909680f3a7563" prot="public">
+          <name>VFTYPE_USHORT2N</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/df2/VertexFormat_8h_1ad3b258c60b1f8222314d89a372584099ab38838488718c1eb327e201107ca94f2" prot="public">
+          <name>VFTYPE_USHORT4N</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/df2/VertexFormat_8h_1ad3b258c60b1f8222314d89a372584099a197f015fc0f4febfd32706859512cfc8" prot="public">
+          <name>VFTYPE_SHORT2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/df2/VertexFormat_8h_1ad3b258c60b1f8222314d89a372584099a30c392c241ba616c8a855b24b3b7ec69" prot="public">
+          <name>VFTYPE_SHORT4</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/df2/VertexFormat_8h_1ad3b258c60b1f8222314d89a372584099adb6a01a390576fc24b4c5897a77b235f" prot="public">
+          <name>VFTYPE_SHORT2N</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/df2/VertexFormat_8h_1ad3b258c60b1f8222314d89a372584099a59e0110269fea48f6031776e4e4ab433" prot="public">
+          <name>VFTYPE_SHORT4N</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/df2/VertexFormat_8h_1ad3b258c60b1f8222314d89a372584099a1bde03959a5a45a7f0694928981b05be" prot="public">
+          <name>VFTYPE_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ad3b258c60b1f8222314d89a372584099a06accf3a739d1102b217745179810711" prot="public">
+          <name>VFTYPE_UNDEFINED</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ad3b258c60b1f8222314d89a372584099a24a59dcf5157cee4cfb188b4f51f8009" prot="public">
+          <name>VFTYPE_FLOAT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ad3b258c60b1f8222314d89a372584099ae34ecc896b0332123909cf29e2cee67a" prot="public">
+          <name>VFTYPE_FLOAT2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ad3b258c60b1f8222314d89a372584099a3fee3583f15b187a7a47bacacc1c54e4" prot="public">
+          <name>VFTYPE_FLOAT3</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ad3b258c60b1f8222314d89a372584099a7dfa724ae1b1fa828c6fbc312b8fe8f2" prot="public">
+          <name>VFTYPE_FLOAT4</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ad3b258c60b1f8222314d89a372584099a445781d35cdf3d695b686feb24011763" prot="public">
+          <name>VFTYPE_FLOAT9</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ad3b258c60b1f8222314d89a372584099af0ecaf095acbf9a8b495cc7403f8a7cd" prot="public">
+          <name>VFTYPE_FLOAT16</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ad3b258c60b1f8222314d89a372584099a046766d161df8ef5e80b22118e2ff8c6" prot="public">
+          <name>VFTYPE_HALF2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ad3b258c60b1f8222314d89a372584099a02fe7b2a58690278193c68b4d8bacc2c" prot="public">
+          <name>VFTYPE_HALF4</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ad3b258c60b1f8222314d89a372584099ad6f9753a162a1b63f078885be409f400" prot="public">
+          <name>VFTYPE_UBYTE4</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ad3b258c60b1f8222314d89a372584099a3d3faa5fe25e74565856915cae78aac3" prot="public">
+          <name>VFTYPE_UBYTE4N</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ad3b258c60b1f8222314d89a372584099a3f2b9bd93317e4220a62cefd7e99a0aa" prot="public">
+          <name>VFTYPE_COLOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ad3b258c60b1f8222314d89a372584099a4a5c50efae7f5e4cb5bc24aa780c77d3" prot="public">
+          <name>VFTYPE_USHORT2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ad3b258c60b1f8222314d89a372584099a244f6c8ba107421a88610dba9991bb09" prot="public">
+          <name>VFTYPE_USHORT4</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ad3b258c60b1f8222314d89a372584099ab152beef449c22755c2909680f3a7563" prot="public">
+          <name>VFTYPE_USHORT2N</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ad3b258c60b1f8222314d89a372584099ab38838488718c1eb327e201107ca94f2" prot="public">
+          <name>VFTYPE_USHORT4N</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ad3b258c60b1f8222314d89a372584099a197f015fc0f4febfd32706859512cfc8" prot="public">
+          <name>VFTYPE_SHORT2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ad3b258c60b1f8222314d89a372584099a30c392c241ba616c8a855b24b3b7ec69" prot="public">
+          <name>VFTYPE_SHORT4</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ad3b258c60b1f8222314d89a372584099adb6a01a390576fc24b4c5897a77b235f" prot="public">
+          <name>VFTYPE_SHORT2N</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ad3b258c60b1f8222314d89a372584099a59e0110269fea48f6031776e4e4ab433" prot="public">
+          <name>VFTYPE_SHORT4N</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ad3b258c60b1f8222314d89a372584099a1bde03959a5a45a7f0694928981b05be" prot="public">
+          <name>VFTYPE_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="34" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" bodystart="34" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="enum" id="da/dbe/Mappings_8h_1a2e9f2262b2631d3a84cb5808c9cff564" prot="public" static="no">
+        <name>VFFieldUsage</name>
+        <enumvalue id="da/df2/VertexFormat_8h_1a2e9f2262b2631d3a84cb5808c9cff564a7f4b2814556ab42864a306fd36610021" prot="public">
+          <name>VFUSAGE_UNDEFINED</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/df2/VertexFormat_8h_1a2e9f2262b2631d3a84cb5808c9cff564aab047735fb6fa911eb3440dc28b88068" prot="public">
+          <name>VFUSAGE_POSITION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/df2/VertexFormat_8h_1a2e9f2262b2631d3a84cb5808c9cff564a790d9c25c04d35212f382f1117b09c84" prot="public">
+          <name>VFUSAGE_NORMAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/df2/VertexFormat_8h_1a2e9f2262b2631d3a84cb5808c9cff564ace978707e165e97f3b9fad07ccd5fdfb" prot="public">
+          <name>VFUSAGE_TANGENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/df2/VertexFormat_8h_1a2e9f2262b2631d3a84cb5808c9cff564a21d5fb86b33a0bba67e0a30f0c56c3cb" prot="public">
+          <name>VFUSAGE_BINORMAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/df2/VertexFormat_8h_1a2e9f2262b2631d3a84cb5808c9cff564a39a42f64d171e83ce63e63162a2d4a3d" prot="public">
+          <name>VFUSAGE_BLENDWEIGHT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/df2/VertexFormat_8h_1a2e9f2262b2631d3a84cb5808c9cff564a497ea21a33708aa10f56dadd4f42db72" prot="public">
+          <name>VFUSAGE_BLENDINDICES</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/df2/VertexFormat_8h_1a2e9f2262b2631d3a84cb5808c9cff564a184d3d5176116e1a2975a077a19ed7f2" prot="public">
+          <name>VFUSAGE_FOG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/df2/VertexFormat_8h_1a2e9f2262b2631d3a84cb5808c9cff564a02151f4d9b28e1f0648f204b78ce6905" prot="public">
+          <name>VFUSAGE_FOGCOORD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/df2/VertexFormat_8h_1a2e9f2262b2631d3a84cb5808c9cff564adbedaf9b23838d0a0b934b4077e756fa" prot="public">
+          <name>VFUSAGE_DEPTH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/df2/VertexFormat_8h_1a2e9f2262b2631d3a84cb5808c9cff564a38b32feabeb728067a71ad4d6b54e789" prot="public">
+          <name>VFUSAGE_SAMPLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/df2/VertexFormat_8h_1a2e9f2262b2631d3a84cb5808c9cff564a09e9ddf591523901ef5b12348a3c136d" prot="public">
+          <name>VFUSAGE_POINTSIZE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/df2/VertexFormat_8h_1a2e9f2262b2631d3a84cb5808c9cff564acbc94fede345373f0d7b61aa1b1c7f37" prot="public">
+          <name>VFUSAGE_TPOS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/df2/VertexFormat_8h_1a2e9f2262b2631d3a84cb5808c9cff564ade7b353b26841b55fa0954ab4262cd24" prot="public">
+          <name>VFUSAGE_COLOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/df2/VertexFormat_8h_1a2e9f2262b2631d3a84cb5808c9cff564a28abe66604b7433d94a61ccee89c3efb" prot="public">
+          <name>VFUSAGE_TEXCOORD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/df2/VertexFormat_8h_1a2e9f2262b2631d3a84cb5808c9cff564abbcd9f6975a9871ca64d63962b84dade" prot="public">
+          <name>VFUSAGE_USERDATA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/df2/VertexFormat_8h_1a2e9f2262b2631d3a84cb5808c9cff564ae0381cee02543527924fbcc8092ff5b5" prot="public">
+          <name>VFUSAGE_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a2e9f2262b2631d3a84cb5808c9cff564a7f4b2814556ab42864a306fd36610021" prot="public">
+          <name>VFUSAGE_UNDEFINED</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a2e9f2262b2631d3a84cb5808c9cff564aab047735fb6fa911eb3440dc28b88068" prot="public">
+          <name>VFUSAGE_POSITION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a2e9f2262b2631d3a84cb5808c9cff564a790d9c25c04d35212f382f1117b09c84" prot="public">
+          <name>VFUSAGE_NORMAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a2e9f2262b2631d3a84cb5808c9cff564ace978707e165e97f3b9fad07ccd5fdfb" prot="public">
+          <name>VFUSAGE_TANGENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a2e9f2262b2631d3a84cb5808c9cff564a21d5fb86b33a0bba67e0a30f0c56c3cb" prot="public">
+          <name>VFUSAGE_BINORMAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a2e9f2262b2631d3a84cb5808c9cff564a39a42f64d171e83ce63e63162a2d4a3d" prot="public">
+          <name>VFUSAGE_BLENDWEIGHT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a2e9f2262b2631d3a84cb5808c9cff564a497ea21a33708aa10f56dadd4f42db72" prot="public">
+          <name>VFUSAGE_BLENDINDICES</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a2e9f2262b2631d3a84cb5808c9cff564a184d3d5176116e1a2975a077a19ed7f2" prot="public">
+          <name>VFUSAGE_FOG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a2e9f2262b2631d3a84cb5808c9cff564a02151f4d9b28e1f0648f204b78ce6905" prot="public">
+          <name>VFUSAGE_FOGCOORD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a2e9f2262b2631d3a84cb5808c9cff564adbedaf9b23838d0a0b934b4077e756fa" prot="public">
+          <name>VFUSAGE_DEPTH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a2e9f2262b2631d3a84cb5808c9cff564a38b32feabeb728067a71ad4d6b54e789" prot="public">
+          <name>VFUSAGE_SAMPLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a2e9f2262b2631d3a84cb5808c9cff564a09e9ddf591523901ef5b12348a3c136d" prot="public">
+          <name>VFUSAGE_POINTSIZE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a2e9f2262b2631d3a84cb5808c9cff564acbc94fede345373f0d7b61aa1b1c7f37" prot="public">
+          <name>VFUSAGE_TPOS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a2e9f2262b2631d3a84cb5808c9cff564ade7b353b26841b55fa0954ab4262cd24" prot="public">
+          <name>VFUSAGE_COLOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a2e9f2262b2631d3a84cb5808c9cff564a28abe66604b7433d94a61ccee89c3efb" prot="public">
+          <name>VFUSAGE_TEXCOORD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a2e9f2262b2631d3a84cb5808c9cff564abbcd9f6975a9871ca64d63962b84dade" prot="public">
+          <name>VFUSAGE_USERDATA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a2e9f2262b2631d3a84cb5808c9cff564ae0381cee02543527924fbcc8092ff5b5" prot="public">
+          <name>VFUSAGE_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="43" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" bodystart="43" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="enum" id="da/dbe/Mappings_8h_1a1c6343bbe63d1be98f60c9de75659cd1" prot="public" static="no">
+        <name>VertexBufferUsage</name>
+        <enumvalue id="d9/d38/VertexBuffer_8h_1a1c6343bbe63d1be98f60c9de75659cd1a521d73d96d0da3df891e0384b25522c0" prot="public">
+          <name>VB_USAGE_STATIC</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/d38/VertexBuffer_8h_1a1c6343bbe63d1be98f60c9de75659cd1a1694dcc8f1892e17659f1975a938c199" prot="public">
+          <name>VB_USAGE_DYNAMIC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/d38/VertexBuffer_8h_1a1c6343bbe63d1be98f60c9de75659cd1a0b8fef1883abdc2ef65e4bb4c5093931" prot="public">
+          <name>VB_USAGE_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a1c6343bbe63d1be98f60c9de75659cd1a521d73d96d0da3df891e0384b25522c0" prot="public">
+          <name>VB_USAGE_STATIC</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a1c6343bbe63d1be98f60c9de75659cd1a1694dcc8f1892e17659f1975a938c199" prot="public">
+          <name>VB_USAGE_DYNAMIC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a1c6343bbe63d1be98f60c9de75659cd1a0b8fef1883abdc2ef65e4bb4c5093931" prot="public">
+          <name>VB_USAGE_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="58" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" bodystart="58" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="enum" id="da/dbe/Mappings_8h_1afa38e258903b029e10ce58ddfd42da70" prot="public" static="no">
+        <name>VertexBufferLock</name>
+        <enumvalue id="d9/d38/VertexBuffer_8h_1afa38e258903b029e10ce58ddfd42da70a5a382156fbebbb615d9ddec0a5abb8ae" prot="public">
+          <name>VB_LOCK_UPDATE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/d38/VertexBuffer_8h_1afa38e258903b029e10ce58ddfd42da70a7f5a2243e71a142f9d9c3a5a113a753a" prot="public">
+          <name>VB_LOCK_OVERWRITE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/d38/VertexBuffer_8h_1afa38e258903b029e10ce58ddfd42da70a24d69df48f3c6a273de82c2735803bf6" prot="public">
+          <name>VB_LOCK_APPEND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/d38/VertexBuffer_8h_1afa38e258903b029e10ce58ddfd42da70a7796858b09f55144c9519612a4b55362" prot="public">
+          <name>VB_LOCK_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1afa38e258903b029e10ce58ddfd42da70a5a382156fbebbb615d9ddec0a5abb8ae" prot="public">
+          <name>VB_LOCK_UPDATE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1afa38e258903b029e10ce58ddfd42da70a7f5a2243e71a142f9d9c3a5a113a753a" prot="public">
+          <name>VB_LOCK_OVERWRITE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1afa38e258903b029e10ce58ddfd42da70a24d69df48f3c6a273de82c2735803bf6" prot="public">
+          <name>VB_LOCK_APPEND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1afa38e258903b029e10ce58ddfd42da70a7796858b09f55144c9519612a4b55362" prot="public">
+          <name>VB_LOCK_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="62" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" bodystart="62" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="enum" id="da/dbe/Mappings_8h_1a82cd435e1ecc8c8da8c91057e5396df3" prot="public" static="no">
+        <name>IndexBufferUsage</name>
+        <enumvalue id="da/d3a/IndexBuffer_8h_1a82cd435e1ecc8c8da8c91057e5396df3a629b6e63212fd0c612d4837589eeefe5" prot="public">
+          <name>IB_USAGE_STATIC</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/d3a/IndexBuffer_8h_1a82cd435e1ecc8c8da8c91057e5396df3ae7614b0b84088931a882132e15f5ac81" prot="public">
+          <name>IB_USAGE_DYNAMIC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/d3a/IndexBuffer_8h_1a82cd435e1ecc8c8da8c91057e5396df3a5d5589e7acd8966541f6555972412858" prot="public">
+          <name>IB_USAGE_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a82cd435e1ecc8c8da8c91057e5396df3a629b6e63212fd0c612d4837589eeefe5" prot="public">
+          <name>IB_USAGE_STATIC</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a82cd435e1ecc8c8da8c91057e5396df3ae7614b0b84088931a882132e15f5ac81" prot="public">
+          <name>IB_USAGE_DYNAMIC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a82cd435e1ecc8c8da8c91057e5396df3a5d5589e7acd8966541f6555972412858" prot="public">
+          <name>IB_USAGE_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="69" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" bodystart="69" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="enum" id="da/dbe/Mappings_8h_1ae795b49f71766c8daad84f5e8ebaaa40" prot="public" static="no">
+        <name>IndexBufferLock</name>
+        <enumvalue id="da/d3a/IndexBuffer_8h_1ae795b49f71766c8daad84f5e8ebaaa40ab731bad3f103fad66e15bf696c68df5d" prot="public">
+          <name>IB_LOCK_UPDATE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/d3a/IndexBuffer_8h_1ae795b49f71766c8daad84f5e8ebaaa40af93f79f6b738f948df6fa968c4ff458a" prot="public">
+          <name>IB_LOCK_OVERWRITE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/d3a/IndexBuffer_8h_1ae795b49f71766c8daad84f5e8ebaaa40a7e7363a33520f740053918c0ac760497" prot="public">
+          <name>IB_LOCK_APPEND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/d3a/IndexBuffer_8h_1ae795b49f71766c8daad84f5e8ebaaa40a1df5c566b19c58887279929d8c77ad0c" prot="public">
+          <name>IB_LOCK_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ae795b49f71766c8daad84f5e8ebaaa40ab731bad3f103fad66e15bf696c68df5d" prot="public">
+          <name>IB_LOCK_UPDATE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ae795b49f71766c8daad84f5e8ebaaa40af93f79f6b738f948df6fa968c4ff458a" prot="public">
+          <name>IB_LOCK_OVERWRITE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ae795b49f71766c8daad84f5e8ebaaa40a7e7363a33520f740053918c0ac760497" prot="public">
+          <name>IB_LOCK_APPEND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ae795b49f71766c8daad84f5e8ebaaa40a1df5c566b19c58887279929d8c77ad0c" prot="public">
+          <name>IB_LOCK_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="73" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" bodystart="73" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="enum" id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0f" prot="public" static="no">
+        <name>TextureFormat</name>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa3bb1fcdde8db1d4222ca4c23ab90c923" prot="public">
+          <name>TEXTURE_FMT_UNDEFINED</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa8a24db401db7451921ff7be680e5e795" prot="public">
+          <name>TEXTURE_FMT_R3G3B2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa80d11e1011fa4dc8a918d8e82b757420" prot="public">
+          <name>TEXTURE_FMT_A8R3G3B2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa8b5f770b101adcb2ec16cc8e8c5f55b2" prot="public">
+          <name>TEXTURE_FMT_R5G6B5</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fab5e6f21a4ce94a8c9815b8b1391ee3a4" prot="public">
+          <name>TEXTURE_FMT_A1R5G5B5</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0faec7a16c72ced6d2a43a2040af96d9a84" prot="public">
+          <name>TEXTURE_FMT_A2R10G10B10</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa14017f50b2686db0083747cf6e10e09b" prot="public">
+          <name>TEXTURE_FMT_A2B10G10R10</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fad9ceb79c75861b1daa4306e4c172d0bb" prot="public">
+          <name>TEXTURE_FMT_AL4I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa3b6ceb7dd42ff4fc6049cc7408fdd117" prot="public">
+          <name>TEXTURE_FMT_ARGB4I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa9d1ac81f80c6d94867730ef31720811e" prot="public">
+          <name>TEXTURE_FMT_A8I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa826a438fd06f614ea1f9003e44a0af42" prot="public">
+          <name>TEXTURE_FMT_L8I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fac76b1e4e6f395569c853bdf50b4ed6d2" prot="public">
+          <name>TEXTURE_FMT_AL8I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa6ce2bae50fe6e418e6612d56623d5d37" prot="public">
+          <name>TEXTURE_FMT_VU8I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fad656166d581762556eacfe4b1e8799fe" prot="public">
+          <name>TEXTURE_FMT_QWVU8I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa4e0e209af8e25727e687c82b0aba66a6" prot="public">
+          <name>TEXTURE_FMT_RGB8I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa7afbee686b51fc3333143cfb91d87bb2" prot="public">
+          <name>TEXTURE_FMT_ARGB8I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa2b5c7a5b3b5961d9050e2cabe9fc411c" prot="public">
+          <name>TEXTURE_FMT_ABGR8I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa4d376834e6df2384be86dabaaa2d4968" prot="public">
+          <name>TEXTURE_FMT_RGBG8I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fad6b71f3764c2b4e4f53d514be3b8541f" prot="public">
+          <name>TEXTURE_FMT_GRGB8I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa65faba797ffe36761cc15bf2c287b650" prot="public">
+          <name>TEXTURE_FMT_L16I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa1cf10670e14bc131788bfd7acc8168a3" prot="public">
+          <name>TEXTURE_FMT_VU16I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fadce0f65d1801a411ff847e93b1af297c" prot="public">
+          <name>TEXTURE_FMT_QWVU16I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa1cf99b4d88cec8d89339c04358a1cdbb" prot="public">
+          <name>TEXTURE_FMT_GR16I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa3ccedae21fc080a933b8736b2d20991b" prot="public">
+          <name>TEXTURE_FMT_ABGR16I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa9a7b8c2573ef66e6441e5fdf873f3295" prot="public">
+          <name>TEXTURE_FMT_R16F</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa5588708a305cf096af38d64133a37d77" prot="public">
+          <name>TEXTURE_FMT_GR16F</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0faa896e1ba2be4159438de731047a9dd10" prot="public">
+          <name>TEXTURE_FMT_ABGR16F</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa18cca3e1bda40b811f4ada71290db614" prot="public">
+          <name>TEXTURE_FMT_R32F</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0faeaad7306bdfcb4bdc3ce1caa5854434b" prot="public">
+          <name>TEXTURE_FMT_GR32F</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa658883383bc92da2efe1efffa2fc19fc" prot="public">
+          <name>TEXTURE_FMT_ABGR32F</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fac781d8d57066215277fd993b575d017d" prot="public">
+          <name>TEXTURE_FMT_D16</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0faf1fcb23777c1d7bc40b4653a5456e2da" prot="public">
+          <name>TEXTURE_FMT_D32</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa85c5d8a6c2d901825d7cb49be0688b87" prot="public">
+          <name>TEXTURE_FMT_D15S1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa25b1104ca7e19008bf5222d95b045426" prot="public">
+          <name>TEXTURE_FMT_D24S8</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa528b132cebe960484e955289daa5d4c6" prot="public">
+          <name>TEXTURE_FMT_D24FS8</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa889ab39cc45c634f3c4a523a7be56688" prot="public">
+          <name>TEXTURE_FMT_DXT1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa6df6b952eff0df81989da35886fa6e02" prot="public">
+          <name>TEXTURE_FMT_DXT2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa716bf658213b1b1e4c936e4e5218861a" prot="public">
+          <name>TEXTURE_FMT_DXT3</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fae3e7e76d16edab135e787fc98803d374" prot="public">
+          <name>TEXTURE_FMT_DXT4</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0faeb00659f8a3aee5d308752eaf36753ca" prot="public">
+          <name>TEXTURE_FMT_DXT5</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa9805a3616884844db70c3cdb439f7cef" prot="public">
+          <name>TEXTURE_FMT_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa3bb1fcdde8db1d4222ca4c23ab90c923" prot="public">
+          <name>TEXTURE_FMT_UNDEFINED</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa8a24db401db7451921ff7be680e5e795" prot="public">
+          <name>TEXTURE_FMT_R3G3B2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa80d11e1011fa4dc8a918d8e82b757420" prot="public">
+          <name>TEXTURE_FMT_A8R3G3B2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa8b5f770b101adcb2ec16cc8e8c5f55b2" prot="public">
+          <name>TEXTURE_FMT_R5G6B5</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fab5e6f21a4ce94a8c9815b8b1391ee3a4" prot="public">
+          <name>TEXTURE_FMT_A1R5G5B5</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0faec7a16c72ced6d2a43a2040af96d9a84" prot="public">
+          <name>TEXTURE_FMT_A2R10G10B10</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa14017f50b2686db0083747cf6e10e09b" prot="public">
+          <name>TEXTURE_FMT_A2B10G10R10</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fad9ceb79c75861b1daa4306e4c172d0bb" prot="public">
+          <name>TEXTURE_FMT_AL4I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa3b6ceb7dd42ff4fc6049cc7408fdd117" prot="public">
+          <name>TEXTURE_FMT_ARGB4I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa9d1ac81f80c6d94867730ef31720811e" prot="public">
+          <name>TEXTURE_FMT_A8I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa826a438fd06f614ea1f9003e44a0af42" prot="public">
+          <name>TEXTURE_FMT_L8I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fac76b1e4e6f395569c853bdf50b4ed6d2" prot="public">
+          <name>TEXTURE_FMT_AL8I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa6ce2bae50fe6e418e6612d56623d5d37" prot="public">
+          <name>TEXTURE_FMT_VU8I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fad656166d581762556eacfe4b1e8799fe" prot="public">
+          <name>TEXTURE_FMT_QWVU8I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa4e0e209af8e25727e687c82b0aba66a6" prot="public">
+          <name>TEXTURE_FMT_RGB8I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa7afbee686b51fc3333143cfb91d87bb2" prot="public">
+          <name>TEXTURE_FMT_ARGB8I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa2b5c7a5b3b5961d9050e2cabe9fc411c" prot="public">
+          <name>TEXTURE_FMT_ABGR8I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa4d376834e6df2384be86dabaaa2d4968" prot="public">
+          <name>TEXTURE_FMT_RGBG8I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fad6b71f3764c2b4e4f53d514be3b8541f" prot="public">
+          <name>TEXTURE_FMT_GRGB8I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa65faba797ffe36761cc15bf2c287b650" prot="public">
+          <name>TEXTURE_FMT_L16I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa1cf10670e14bc131788bfd7acc8168a3" prot="public">
+          <name>TEXTURE_FMT_VU16I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fadce0f65d1801a411ff847e93b1af297c" prot="public">
+          <name>TEXTURE_FMT_QWVU16I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa1cf99b4d88cec8d89339c04358a1cdbb" prot="public">
+          <name>TEXTURE_FMT_GR16I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa3ccedae21fc080a933b8736b2d20991b" prot="public">
+          <name>TEXTURE_FMT_ABGR16I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa9a7b8c2573ef66e6441e5fdf873f3295" prot="public">
+          <name>TEXTURE_FMT_R16F</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa5588708a305cf096af38d64133a37d77" prot="public">
+          <name>TEXTURE_FMT_GR16F</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0faa896e1ba2be4159438de731047a9dd10" prot="public">
+          <name>TEXTURE_FMT_ABGR16F</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa18cca3e1bda40b811f4ada71290db614" prot="public">
+          <name>TEXTURE_FMT_R32F</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0faeaad7306bdfcb4bdc3ce1caa5854434b" prot="public">
+          <name>TEXTURE_FMT_GR32F</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa658883383bc92da2efe1efffa2fc19fc" prot="public">
+          <name>TEXTURE_FMT_ABGR32F</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fac781d8d57066215277fd993b575d017d" prot="public">
+          <name>TEXTURE_FMT_D16</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0faf1fcb23777c1d7bc40b4653a5456e2da" prot="public">
+          <name>TEXTURE_FMT_D32</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa85c5d8a6c2d901825d7cb49be0688b87" prot="public">
+          <name>TEXTURE_FMT_D15S1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa25b1104ca7e19008bf5222d95b045426" prot="public">
+          <name>TEXTURE_FMT_D24S8</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa528b132cebe960484e955289daa5d4c6" prot="public">
+          <name>TEXTURE_FMT_D24FS8</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa889ab39cc45c634f3c4a523a7be56688" prot="public">
+          <name>TEXTURE_FMT_DXT1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa6df6b952eff0df81989da35886fa6e02" prot="public">
+          <name>TEXTURE_FMT_DXT2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa716bf658213b1b1e4c936e4e5218861a" prot="public">
+          <name>TEXTURE_FMT_DXT3</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fae3e7e76d16edab135e787fc98803d374" prot="public">
+          <name>TEXTURE_FMT_DXT4</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0faeb00659f8a3aee5d308752eaf36753ca" prot="public">
+          <name>TEXTURE_FMT_DXT5</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa9805a3616884844db70c3cdb439f7cef" prot="public">
+          <name>TEXTURE_FMT_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="80" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" bodystart="80" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="enum" id="da/dbe/Mappings_8h_1ac78ff90c8cbce819a61e65d1bb3d29f9" prot="public" static="no">
+        <name>TextureUsage</name>
+        <enumvalue id="d9/dbf/Texture_8h_1ac78ff90c8cbce819a61e65d1bb3d29f9acf71c9fa4c82436d386cc5d538b85502" prot="public">
+          <name>TEXTURE_USAGE_STATIC</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1ac78ff90c8cbce819a61e65d1bb3d29f9a6582c2c6b95124130182b05f767c7090" prot="public">
+          <name>TEXTURE_USAGE_DYNAMIC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1ac78ff90c8cbce819a61e65d1bb3d29f9afeefea68578b8b514de0fb20b7d63ad2" prot="public">
+          <name>TEXTURE_USAGE_RENDERTARGET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1ac78ff90c8cbce819a61e65d1bb3d29f9a173ef46901e1c3b6aaa962367dcc23e3" prot="public">
+          <name>TEXTURE_USAGE_DEPTHSTENCIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1ac78ff90c8cbce819a61e65d1bb3d29f9a99ba2f715a051cb47d826b661499a1eb" prot="public">
+          <name>TEXTURE_USAGE_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ac78ff90c8cbce819a61e65d1bb3d29f9acf71c9fa4c82436d386cc5d538b85502" prot="public">
+          <name>TEXTURE_USAGE_STATIC</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ac78ff90c8cbce819a61e65d1bb3d29f9a6582c2c6b95124130182b05f767c7090" prot="public">
+          <name>TEXTURE_USAGE_DYNAMIC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ac78ff90c8cbce819a61e65d1bb3d29f9afeefea68578b8b514de0fb20b7d63ad2" prot="public">
+          <name>TEXTURE_USAGE_RENDERTARGET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ac78ff90c8cbce819a61e65d1bb3d29f9a173ef46901e1c3b6aaa962367dcc23e3" prot="public">
+          <name>TEXTURE_USAGE_DEPTHSTENCIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ac78ff90c8cbce819a61e65d1bb3d29f9a99ba2f715a051cb47d826b661499a1eb" prot="public">
+          <name>TEXTURE_USAGE_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="94" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" bodystart="94" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="enum" id="da/dbe/Mappings_8h_1a32b9e01c96d7e6f1040ee8dfe4df3ea5" prot="public" static="no">
+        <name>TextureLock</name>
+        <enumvalue id="d9/dbf/Texture_8h_1a32b9e01c96d7e6f1040ee8dfe4df3ea5a4d6b1cb88b1416a65f940abf8eb5e97e" prot="public">
+          <name>TEXTURE_LOCK_UPDATE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1a32b9e01c96d7e6f1040ee8dfe4df3ea5a876e540fdae5a95e8982ca79eb6256d1" prot="public">
+          <name>TEXTURE_LOCK_OVERWRITE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1a32b9e01c96d7e6f1040ee8dfe4df3ea5a9b2e9963b3fef6af13f2b8a5c6e9bfaa" prot="public">
+          <name>TEXTURE_LOCK_APPEND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1a32b9e01c96d7e6f1040ee8dfe4df3ea5a31cd3bd974ffe5068220f7aefc94a05d" prot="public">
+          <name>TEXTURE_LOCK_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a32b9e01c96d7e6f1040ee8dfe4df3ea5a4d6b1cb88b1416a65f940abf8eb5e97e" prot="public">
+          <name>TEXTURE_LOCK_UPDATE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a32b9e01c96d7e6f1040ee8dfe4df3ea5a876e540fdae5a95e8982ca79eb6256d1" prot="public">
+          <name>TEXTURE_LOCK_OVERWRITE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a32b9e01c96d7e6f1040ee8dfe4df3ea5a9b2e9963b3fef6af13f2b8a5c6e9bfaa" prot="public">
+          <name>TEXTURE_LOCK_APPEND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a32b9e01c96d7e6f1040ee8dfe4df3ea5a31cd3bd974ffe5068220f7aefc94a05d" prot="public">
+          <name>TEXTURE_LOCK_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="98" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" bodystart="98" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="enum" id="da/dbe/Mappings_8h_1adb0d0a8fe451e77a9b40b8c3e1011757" prot="public" static="no">
+        <name>TextureCubeFace</name>
+        <enumvalue id="d9/dbf/Texture_8h_1adb0d0a8fe451e77a9b40b8c3e1011757a0b02607f2440cc20773cd6705eb2a316" prot="public">
+          <name>TEXTURECUBE_FACE_XPOS</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1adb0d0a8fe451e77a9b40b8c3e1011757a5d585f4ee94c6f8b2a72dd4bde4ae550" prot="public">
+          <name>TEXTURECUBE_FACE_XNEG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1adb0d0a8fe451e77a9b40b8c3e1011757abe7f7d0c4437487fd384366885f3e136" prot="public">
+          <name>TEXTURECUBE_FACE_YPOS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1adb0d0a8fe451e77a9b40b8c3e1011757a01eb4ec032d7b97473ecbd5f297169fd" prot="public">
+          <name>TEXTURECUBE_FACE_YNEG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1adb0d0a8fe451e77a9b40b8c3e1011757ad877ea2862df5cb7fb1600ea539ba4d4" prot="public">
+          <name>TEXTURECUBE_FACE_ZPOS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1adb0d0a8fe451e77a9b40b8c3e1011757abcd6e476b9c902fc25e92c1f60b7ddb8" prot="public">
+          <name>TEXTURECUBE_FACE_ZNEG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1adb0d0a8fe451e77a9b40b8c3e1011757aed97f80d892b3ec8acd2a55e08b43985" prot="public">
+          <name>TEXTURECUBE_FACE_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1adb0d0a8fe451e77a9b40b8c3e1011757a0b02607f2440cc20773cd6705eb2a316" prot="public">
+          <name>TEXTURECUBE_FACE_XPOS</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1adb0d0a8fe451e77a9b40b8c3e1011757a5d585f4ee94c6f8b2a72dd4bde4ae550" prot="public">
+          <name>TEXTURECUBE_FACE_XNEG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1adb0d0a8fe451e77a9b40b8c3e1011757abe7f7d0c4437487fd384366885f3e136" prot="public">
+          <name>TEXTURECUBE_FACE_YPOS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1adb0d0a8fe451e77a9b40b8c3e1011757a01eb4ec032d7b97473ecbd5f297169fd" prot="public">
+          <name>TEXTURECUBE_FACE_YNEG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1adb0d0a8fe451e77a9b40b8c3e1011757ad877ea2862df5cb7fb1600ea539ba4d4" prot="public">
+          <name>TEXTURECUBE_FACE_ZPOS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1adb0d0a8fe451e77a9b40b8c3e1011757abcd6e476b9c902fc25e92c1f60b7ddb8" prot="public">
+          <name>TEXTURECUBE_FACE_ZNEG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1adb0d0a8fe451e77a9b40b8c3e1011757aed97f80d892b3ec8acd2a55e08b43985" prot="public">
+          <name>TEXTURECUBE_FACE_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="102" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" bodystart="102" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="enum" id="da/dbe/Mappings_8h_1abbbb0b9e31063d55ddeade4f78bebbae" prot="public" static="no">
+        <name>VertexShaderProfile</name>
+        <enumvalue id="dd/d99/ShaderProgram_8h_1abbbb0b9e31063d55ddeade4f78bebbaea0a739724ee109fa824e36b036af8c213" prot="public">
+          <name>VERTEXSHADER_NONE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dd/d99/ShaderProgram_8h_1abbbb0b9e31063d55ddeade4f78bebbaea79b295c6c81241b60a658e9ef5df6fb4" prot="public">
+          <name>VERTEXSHADER_3_0</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1abbbb0b9e31063d55ddeade4f78bebbaea0a739724ee109fa824e36b036af8c213" prot="public">
+          <name>VERTEXSHADER_NONE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1abbbb0b9e31063d55ddeade4f78bebbaea79b295c6c81241b60a658e9ef5df6fb4" prot="public">
+          <name>VERTEXSHADER_3_0</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1abbbb0b9e31063d55ddeade4f78bebbaea899150022e1da751b4508cd90aa75cc8" prot="public">
+          <name>VERTEXSHADER_ARBVP1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="114" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" bodystart="114" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="enum" id="da/dbe/Mappings_8h_1a4e8802a1649fce20f3b07282f568e1f6" prot="public" static="no">
+        <name>PixelShaderProfile</name>
+        <enumvalue id="dd/d99/ShaderProgram_8h_1a4e8802a1649fce20f3b07282f568e1f6a97d26a30d723aa076c569cb383005b5e" prot="public">
+          <name>PIXELSHADER_NONE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dd/d99/ShaderProgram_8h_1a4e8802a1649fce20f3b07282f568e1f6a70732152bdcaf4d5c4c53d1802f9d2da" prot="public">
+          <name>PIXELSHADER_3_0</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a4e8802a1649fce20f3b07282f568e1f6a97d26a30d723aa076c569cb383005b5e" prot="public">
+          <name>PIXELSHADER_NONE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a4e8802a1649fce20f3b07282f568e1f6a70732152bdcaf4d5c4c53d1802f9d2da" prot="public">
+          <name>PIXELSHADER_3_0</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a4e8802a1649fce20f3b07282f568e1f6a0ec1f849867f099d8d2f7512b07425b1" prot="public">
+          <name>PIXELSHADER_ARBFP1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="117" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" bodystart="117" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="enum" id="da/dbe/Mappings_8h_1a5f98c29ac15de3b2713c200368c482d1" prot="public" static="no">
+        <name>ShaderSamplingType</name>
+        <enumvalue id="dd/d99/ShaderProgram_8h_1a5f98c29ac15de3b2713c200368c482d1a541f103f0d490b6b9b0348dee9a6ba4e" prot="public">
+          <name>SHADERSAMPLING_TYPE_UNDEFINED</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dd/d99/ShaderProgram_8h_1a5f98c29ac15de3b2713c200368c482d1a87d1093286ce0934a69f8563a7a6043e" prot="public">
+          <name>SHADERSAMPLING_TYPE_1D</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dd/d99/ShaderProgram_8h_1a5f98c29ac15de3b2713c200368c482d1a192726170feb9dcdc834e188c57335f6" prot="public">
+          <name>SHADERSAMPLING_TYPE_2D</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dd/d99/ShaderProgram_8h_1a5f98c29ac15de3b2713c200368c482d1a50776c85661532f7ade806f3d72587b1" prot="public">
+          <name>SHADERSAMPLING_TYPE_3D</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dd/d99/ShaderProgram_8h_1a5f98c29ac15de3b2713c200368c482d1a36cbab4e870c696a6ecea0eab12af1ba" prot="public">
+          <name>SHADERSAMPLING_TYPE_CUBE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dd/d99/ShaderProgram_8h_1a5f98c29ac15de3b2713c200368c482d1ab9dbb84250a0e83ced0de4b0c4f2efd4" prot="public">
+          <name>SHADERSAMPLING_TYPE_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a5f98c29ac15de3b2713c200368c482d1a541f103f0d490b6b9b0348dee9a6ba4e" prot="public">
+          <name>SHADERSAMPLING_TYPE_UNDEFINED</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a5f98c29ac15de3b2713c200368c482d1a87d1093286ce0934a69f8563a7a6043e" prot="public">
+          <name>SHADERSAMPLING_TYPE_1D</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a5f98c29ac15de3b2713c200368c482d1a192726170feb9dcdc834e188c57335f6" prot="public">
+          <name>SHADERSAMPLING_TYPE_2D</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a5f98c29ac15de3b2713c200368c482d1a50776c85661532f7ade806f3d72587b1" prot="public">
+          <name>SHADERSAMPLING_TYPE_3D</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a5f98c29ac15de3b2713c200368c482d1a36cbab4e870c696a6ecea0eab12af1ba" prot="public">
+          <name>SHADERSAMPLING_TYPE_CUBE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a5f98c29ac15de3b2713c200368c482d1ab9dbb84250a0e83ced0de4b0c4f2efd4" prot="public">
+          <name>SHADERSAMPLING_TYPE_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="120" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" bodystart="120" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="enum" id="da/dbe/Mappings_8h_1a59ad6a111bbb8781c6eed45613a2c36b" prot="public" static="no">
+        <name>ShaderSamplingFilter</name>
+        <enumvalue id="dd/d99/ShaderProgram_8h_1a59ad6a111bbb8781c6eed45613a2c36baeadcd97c4cf55692c3aeaf9f17bc7914" prot="public">
+          <name>SHADERSAMPLING_FILTER_UNDEFINED</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dd/d99/ShaderProgram_8h_1a59ad6a111bbb8781c6eed45613a2c36ba8709ba8066fb1068f10578c5c5b48e98" prot="public">
+          <name>SHADERSAMPLING_FILTER_NEAREST</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dd/d99/ShaderProgram_8h_1a59ad6a111bbb8781c6eed45613a2c36ba037e496b8be40757332af87af8ee8be6" prot="public">
+          <name>SHADERSAMPLING_FILTER_LINEAR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dd/d99/ShaderProgram_8h_1a59ad6a111bbb8781c6eed45613a2c36ba20adc2122d6639e1ff28b9b969a6c268" prot="public">
+          <name>SHADERSAMPLING_FILTER_NEAREST_NEAREST</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dd/d99/ShaderProgram_8h_1a59ad6a111bbb8781c6eed45613a2c36ba228e9d2c6a57f5825b270652b198d3a5" prot="public">
+          <name>SHADERSAMPLING_FILTER_NEAREST_LINEAR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dd/d99/ShaderProgram_8h_1a59ad6a111bbb8781c6eed45613a2c36ba5201a364f869ffead501fbbb31de3783" prot="public">
+          <name>SHADERSAMPLING_FILTER_LINEAR_NEAREST</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dd/d99/ShaderProgram_8h_1a59ad6a111bbb8781c6eed45613a2c36baf9995b12f0e394c8410cab0687e799e4" prot="public">
+          <name>SHADERSAMPLING_FILTER_LINEAR_LINEAR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dd/d99/ShaderProgram_8h_1a59ad6a111bbb8781c6eed45613a2c36baf91034890fe7a2bb792faabc32678efd" prot="public">
+          <name>SHADERSAMPLING_FILTER_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a59ad6a111bbb8781c6eed45613a2c36baeadcd97c4cf55692c3aeaf9f17bc7914" prot="public">
+          <name>SHADERSAMPLING_FILTER_UNDEFINED</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a59ad6a111bbb8781c6eed45613a2c36ba8709ba8066fb1068f10578c5c5b48e98" prot="public">
+          <name>SHADERSAMPLING_FILTER_NEAREST</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a59ad6a111bbb8781c6eed45613a2c36ba037e496b8be40757332af87af8ee8be6" prot="public">
+          <name>SHADERSAMPLING_FILTER_LINEAR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a59ad6a111bbb8781c6eed45613a2c36ba20adc2122d6639e1ff28b9b969a6c268" prot="public">
+          <name>SHADERSAMPLING_FILTER_NEAREST_NEAREST</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a59ad6a111bbb8781c6eed45613a2c36ba228e9d2c6a57f5825b270652b198d3a5" prot="public">
+          <name>SHADERSAMPLING_FILTER_NEAREST_LINEAR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a59ad6a111bbb8781c6eed45613a2c36ba5201a364f869ffead501fbbb31de3783" prot="public">
+          <name>SHADERSAMPLING_FILTER_LINEAR_NEAREST</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a59ad6a111bbb8781c6eed45613a2c36baf9995b12f0e394c8410cab0687e799e4" prot="public">
+          <name>SHADERSAMPLING_FILTER_LINEAR_LINEAR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a59ad6a111bbb8781c6eed45613a2c36baf91034890fe7a2bb792faabc32678efd" prot="public">
+          <name>SHADERSAMPLING_FILTER_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="125" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" bodystart="125" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="enum" id="da/dbe/Mappings_8h_1a4e4fcef9f4cc9a41331b7710e486d042" prot="public" static="no">
+        <name>ShaderSamplingWrapMode</name>
+        <enumvalue id="dd/d99/ShaderProgram_8h_1a4e4fcef9f4cc9a41331b7710e486d042a9ddf61c145822fdddc76424e714dca03" prot="public">
+          <name>SHADERSAMPLING_WRAP_UNDEFINED</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dd/d99/ShaderProgram_8h_1a4e4fcef9f4cc9a41331b7710e486d042a95a43cb83bff8bc28ad112113b9f1654" prot="public">
+          <name>SHADERSAMPLING_WRAP_CLAMP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dd/d99/ShaderProgram_8h_1a4e4fcef9f4cc9a41331b7710e486d042a240399451796d447bcadb8cb8884510b" prot="public">
+          <name>SHADERSAMPLING_WRAP_REPEAT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dd/d99/ShaderProgram_8h_1a4e4fcef9f4cc9a41331b7710e486d042a7ec9829c04ec60941ed06bbba98cbe98" prot="public">
+          <name>SHADERSAMPLING_WRAP_REPEAT_MIRROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dd/d99/ShaderProgram_8h_1a4e4fcef9f4cc9a41331b7710e486d042a064579f4516d0038ac07faf4d7f797c2" prot="public">
+          <name>SHADERSAMPLING_WRAP_CLAMP_BORDER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dd/d99/ShaderProgram_8h_1a4e4fcef9f4cc9a41331b7710e486d042a17161e87ebc8c1e1e93f7dab7564464d" prot="public">
+          <name>SHADERSAMPLING_WRAP_CLAMP_EDGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dd/d99/ShaderProgram_8h_1a4e4fcef9f4cc9a41331b7710e486d042ad6c44e48b27ac0ab28386a90cfa64772" prot="public">
+          <name>SHADERSAMPLING_WRAP_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a4e4fcef9f4cc9a41331b7710e486d042a9ddf61c145822fdddc76424e714dca03" prot="public">
+          <name>SHADERSAMPLING_WRAP_UNDEFINED</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a4e4fcef9f4cc9a41331b7710e486d042a95a43cb83bff8bc28ad112113b9f1654" prot="public">
+          <name>SHADERSAMPLING_WRAP_CLAMP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a4e4fcef9f4cc9a41331b7710e486d042a240399451796d447bcadb8cb8884510b" prot="public">
+          <name>SHADERSAMPLING_WRAP_REPEAT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a4e4fcef9f4cc9a41331b7710e486d042a7ec9829c04ec60941ed06bbba98cbe98" prot="public">
+          <name>SHADERSAMPLING_WRAP_REPEAT_MIRROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a4e4fcef9f4cc9a41331b7710e486d042a064579f4516d0038ac07faf4d7f797c2" prot="public">
+          <name>SHADERSAMPLING_WRAP_CLAMP_BORDER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a4e4fcef9f4cc9a41331b7710e486d042a17161e87ebc8c1e1e93f7dab7564464d" prot="public">
+          <name>SHADERSAMPLING_WRAP_CLAMP_EDGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a4e4fcef9f4cc9a41331b7710e486d042ad6c44e48b27ac0ab28386a90cfa64772" prot="public">
+          <name>SHADERSAMPLING_WRAP_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="132" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" bodystart="132" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="enum" id="da/dbe/Mappings_8h_1a49b7b52088391a0002f7390b7dfbbea2" prot="public" static="no">
+        <name>CullingTest</name>
+        <enumvalue id="d9/db7/CullingState_8h_1a49b7b52088391a0002f7390b7dfbbea2ae7012acd9cb4dad6d741526191cb2357" prot="public">
+          <name>CULLING_FRONT</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/db7/CullingState_8h_1a49b7b52088391a0002f7390b7dfbbea2a800a6f60c88cfde1d5d2c236127ed860" prot="public">
+          <name>CULLING_BACK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/db7/CullingState_8h_1a49b7b52088391a0002f7390b7dfbbea2a5161c6d1187a2a6cda30c77d286fe370" prot="public">
+          <name>CULLING_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a49b7b52088391a0002f7390b7dfbbea2ae7012acd9cb4dad6d741526191cb2357" prot="public">
+          <name>CULLING_FRONT</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a49b7b52088391a0002f7390b7dfbbea2a800a6f60c88cfde1d5d2c236127ed860" prot="public">
+          <name>CULLING_BACK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a49b7b52088391a0002f7390b7dfbbea2a5161c6d1187a2a6cda30c77d286fe370" prot="public">
+          <name>CULLING_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="142" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" bodystart="142" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="enum" id="da/dbe/Mappings_8h_1a8397e02482f7bca8858dfcdbc9b6a232" prot="public" static="no">
+        <name>CullingConvention</name>
+        <enumvalue id="d9/db7/CullingState_8h_1a8397e02482f7bca8858dfcdbc9b6a232ac059a907fa18c3c587fcd80194e50d08" prot="public">
+          <name>CULLING_CONV_CLOCKWISE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/db7/CullingState_8h_1a8397e02482f7bca8858dfcdbc9b6a232a88d8b33cabc6a409c5430715a26143fc" prot="public">
+          <name>CULLING_CONV_COUNTER_CLOCKWISE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/db7/CullingState_8h_1a8397e02482f7bca8858dfcdbc9b6a232a80a9a78228a92bd99c0612fb0def28d0" prot="public">
+          <name>CULLING_CONV_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a8397e02482f7bca8858dfcdbc9b6a232ac059a907fa18c3c587fcd80194e50d08" prot="public">
+          <name>CULLING_CONV_CLOCKWISE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a8397e02482f7bca8858dfcdbc9b6a232a88d8b33cabc6a409c5430715a26143fc" prot="public">
+          <name>CULLING_CONV_COUNTER_CLOCKWISE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a8397e02482f7bca8858dfcdbc9b6a232a80a9a78228a92bd99c0612fb0def28d0" prot="public">
+          <name>CULLING_CONV_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="146" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" bodystart="146" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="enum" id="da/dbe/Mappings_8h_1afa6f9274e459df0482c5f248703493ad" prot="public" static="no">
+        <name>DepthTestMode</name>
+        <enumvalue id="d8/d4b/DepthState_8h_1afa6f9274e459df0482c5f248703493adae133820d4fd5d797940051ad53ee1796" prot="public">
+          <name>DEPTH_NEVER</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d8/d4b/DepthState_8h_1afa6f9274e459df0482c5f248703493adaeb4c3c6b2d8ffbb138d8f0c9481d596e" prot="public">
+          <name>DEPTH_ALLWAYS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d8/d4b/DepthState_8h_1afa6f9274e459df0482c5f248703493adaab563b1f3e630978d5f5aef9dc1f26e1" prot="public">
+          <name>DEPTH_EQUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d8/d4b/DepthState_8h_1afa6f9274e459df0482c5f248703493ada2ee44687fde871b41a345f976168e6a9" prot="public">
+          <name>DEPTH_NOTEQUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d8/d4b/DepthState_8h_1afa6f9274e459df0482c5f248703493ada299efafdcddd407754efe032125d0ca8" prot="public">
+          <name>DEPTH_LESSER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d8/d4b/DepthState_8h_1afa6f9274e459df0482c5f248703493ada7950bb4af37ffb8fb742b737ce2960ea" prot="public">
+          <name>DEPTH_LESSER_EQUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d8/d4b/DepthState_8h_1afa6f9274e459df0482c5f248703493adaa234ff36763eb6512902f262fd0b51a4" prot="public">
+          <name>DEPTH_GREATER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d8/d4b/DepthState_8h_1afa6f9274e459df0482c5f248703493adafa3455ad30383b19b0733ec136113f0e" prot="public">
+          <name>DEPTH_GREATER_EQUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d8/d4b/DepthState_8h_1afa6f9274e459df0482c5f248703493ada8c86360ebb0f4639408d65a6ebe99ef5" prot="public">
+          <name>DEPTH_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1afa6f9274e459df0482c5f248703493adae133820d4fd5d797940051ad53ee1796" prot="public">
+          <name>DEPTH_NEVER</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1afa6f9274e459df0482c5f248703493adaeb4c3c6b2d8ffbb138d8f0c9481d596e" prot="public">
+          <name>DEPTH_ALLWAYS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1afa6f9274e459df0482c5f248703493adaab563b1f3e630978d5f5aef9dc1f26e1" prot="public">
+          <name>DEPTH_EQUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1afa6f9274e459df0482c5f248703493ada2ee44687fde871b41a345f976168e6a9" prot="public">
+          <name>DEPTH_NOTEQUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1afa6f9274e459df0482c5f248703493ada299efafdcddd407754efe032125d0ca8" prot="public">
+          <name>DEPTH_LESSER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1afa6f9274e459df0482c5f248703493ada7950bb4af37ffb8fb742b737ce2960ea" prot="public">
+          <name>DEPTH_LESSER_EQUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1afa6f9274e459df0482c5f248703493adaa234ff36763eb6512902f262fd0b51a4" prot="public">
+          <name>DEPTH_GREATER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1afa6f9274e459df0482c5f248703493adafa3455ad30383b19b0733ec136113f0e" prot="public">
+          <name>DEPTH_GREATER_EQUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1afa6f9274e459df0482c5f248703493ada8c86360ebb0f4639408d65a6ebe99ef5" prot="public">
+          <name>DEPTH_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="153" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" bodystart="153" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="enum" id="da/dbe/Mappings_8h_1a413d02eb43037e1971bfc46719092739" prot="public" static="no">
+        <name>StencilTestMode</name>
+        <enumvalue id="d1/db8/StencilState_8h_1a413d02eb43037e1971bfc46719092739a5d1d78988b8196ee90220002c9410ff9" prot="public">
+          <name>STENCIL_TEST_NEVER</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d1/db8/StencilState_8h_1a413d02eb43037e1971bfc46719092739af44d85a6bf84d3029c49db254251aea3" prot="public">
+          <name>STENCIL_TEST_ALLWAYS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d1/db8/StencilState_8h_1a413d02eb43037e1971bfc46719092739aa912190d2de6141dd5473478690188b2" prot="public">
+          <name>STENCIL_TEST_EQUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d1/db8/StencilState_8h_1a413d02eb43037e1971bfc46719092739a7ee28d49512dea26333970b806bc813b" prot="public">
+          <name>STENCIL_TEST_NOTEQUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d1/db8/StencilState_8h_1a413d02eb43037e1971bfc46719092739ae9c9cc193048840282b406951e78b056" prot="public">
+          <name>STENCIL_TEST_LESSER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d1/db8/StencilState_8h_1a413d02eb43037e1971bfc46719092739a9491fbb4b91c9437714cca0b02e639b0" prot="public">
+          <name>STENCIL_TEST_LESSER_EQUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d1/db8/StencilState_8h_1a413d02eb43037e1971bfc46719092739af9021b4cc74155e4d8438ed5016cec73" prot="public">
+          <name>STENCIL_TEST_GREATER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d1/db8/StencilState_8h_1a413d02eb43037e1971bfc46719092739a85189e9df9500cfbaf3c0d8d1cfdd277" prot="public">
+          <name>STENCIL_TEST_GREATER_EQUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d1/db8/StencilState_8h_1a413d02eb43037e1971bfc46719092739a5ccd13aab43dfe48205cb34c1ec3c08a" prot="public">
+          <name>STENCIL_TEST_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a413d02eb43037e1971bfc46719092739a5d1d78988b8196ee90220002c9410ff9" prot="public">
+          <name>STENCIL_TEST_NEVER</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a413d02eb43037e1971bfc46719092739af44d85a6bf84d3029c49db254251aea3" prot="public">
+          <name>STENCIL_TEST_ALLWAYS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a413d02eb43037e1971bfc46719092739aa912190d2de6141dd5473478690188b2" prot="public">
+          <name>STENCIL_TEST_EQUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a413d02eb43037e1971bfc46719092739a7ee28d49512dea26333970b806bc813b" prot="public">
+          <name>STENCIL_TEST_NOTEQUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a413d02eb43037e1971bfc46719092739ae9c9cc193048840282b406951e78b056" prot="public">
+          <name>STENCIL_TEST_LESSER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a413d02eb43037e1971bfc46719092739a9491fbb4b91c9437714cca0b02e639b0" prot="public">
+          <name>STENCIL_TEST_LESSER_EQUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a413d02eb43037e1971bfc46719092739af9021b4cc74155e4d8438ed5016cec73" prot="public">
+          <name>STENCIL_TEST_GREATER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a413d02eb43037e1971bfc46719092739a85189e9df9500cfbaf3c0d8d1cfdd277" prot="public">
+          <name>STENCIL_TEST_GREATER_EQUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a413d02eb43037e1971bfc46719092739a5ccd13aab43dfe48205cb34c1ec3c08a" prot="public">
+          <name>STENCIL_TEST_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="161" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" bodystart="161" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="enum" id="da/dbe/Mappings_8h_1ac692ecc1ffb4255c8c8628a3ce6f7a4b" prot="public" static="no">
+        <name>StencilOperation</name>
+        <enumvalue id="d1/db8/StencilState_8h_1ac692ecc1ffb4255c8c8628a3ce6f7a4ba4a3564397de1258738af645157a07847" prot="public">
+          <name>STENCIL_OP_KEEP</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d1/db8/StencilState_8h_1ac692ecc1ffb4255c8c8628a3ce6f7a4ba9b41a1e2b34b3cf14221b62d4cef11ca" prot="public">
+          <name>STENCIL_OP_ZERO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d1/db8/StencilState_8h_1ac692ecc1ffb4255c8c8628a3ce6f7a4ba808969f3161f7816c93c73864d6ceb63" prot="public">
+          <name>STENCIL_OP_REPLACE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d1/db8/StencilState_8h_1ac692ecc1ffb4255c8c8628a3ce6f7a4ba81070d67335c4573f9cff461908d9fea" prot="public">
+          <name>STENCIL_OP_INCREMENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d1/db8/StencilState_8h_1ac692ecc1ffb4255c8c8628a3ce6f7a4ba0fe1e2f9e087aefc809e083b99234013" prot="public">
+          <name>STENCIL_OP_DECREMENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d1/db8/StencilState_8h_1ac692ecc1ffb4255c8c8628a3ce6f7a4ba75fb59e0488842f9db4cbfd528eb5053" prot="public">
+          <name>STENCIL_OP_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d1/db8/StencilState_8h_1ac692ecc1ffb4255c8c8628a3ce6f7a4ba8a8d854339b027c87eec879ce3a5a08d" prot="public">
+          <name>STENCIL_OP_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ac692ecc1ffb4255c8c8628a3ce6f7a4ba4a3564397de1258738af645157a07847" prot="public">
+          <name>STENCIL_OP_KEEP</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ac692ecc1ffb4255c8c8628a3ce6f7a4ba9b41a1e2b34b3cf14221b62d4cef11ca" prot="public">
+          <name>STENCIL_OP_ZERO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ac692ecc1ffb4255c8c8628a3ce6f7a4ba808969f3161f7816c93c73864d6ceb63" prot="public">
+          <name>STENCIL_OP_REPLACE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ac692ecc1ffb4255c8c8628a3ce6f7a4ba81070d67335c4573f9cff461908d9fea" prot="public">
+          <name>STENCIL_OP_INCREMENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ac692ecc1ffb4255c8c8628a3ce6f7a4ba0fe1e2f9e087aefc809e083b99234013" prot="public">
+          <name>STENCIL_OP_DECREMENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ac692ecc1ffb4255c8c8628a3ce6f7a4ba75fb59e0488842f9db4cbfd528eb5053" prot="public">
+          <name>STENCIL_OP_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ac692ecc1ffb4255c8c8628a3ce6f7a4ba8a8d854339b027c87eec879ce3a5a08d" prot="public">
+          <name>STENCIL_OP_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="166" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" bodystart="166" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="enum" id="da/dbe/Mappings_8h_1af00471f75daa6670ba48c87abf1f8347" prot="public" static="no">
+        <name>BlendingSrcMode</name>
+        <enumvalue id="d0/d5e/BlendingState_8h_1af00471f75daa6670ba48c87abf1f8347a66d4c15097149ddf5aad8fd38f63879f" prot="public">
+          <name>BLENDING_SRC_ZERO</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1af00471f75daa6670ba48c87abf1f8347a7a8fa62523b283c54866efdca8376ad9" prot="public">
+          <name>BLENDING_SRC_ONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1af00471f75daa6670ba48c87abf1f8347a0f8a99b3748d917fc729f5def1da592c" prot="public">
+          <name>BLENDING_SRC_DST_COLOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1af00471f75daa6670ba48c87abf1f8347a4de8ef81700fdc82af7bff7fb3157e8a" prot="public">
+          <name>BLENDING_SRC_DST_COLOR_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1af00471f75daa6670ba48c87abf1f8347a52e509d2b97027f944b970b7eecb5882" prot="public">
+          <name>BLENDING_SRC_SRC_ALPHA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1af00471f75daa6670ba48c87abf1f8347a03aad175800a9b43303def563445849d" prot="public">
+          <name>BLENDING_SRC_SRC_ALPHA_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1af00471f75daa6670ba48c87abf1f8347ae94fbb4a6a55aea4fc6d72e9bb7cb4c8" prot="public">
+          <name>BLENDING_SRC_SRC_ALPHA_SATURATE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1af00471f75daa6670ba48c87abf1f8347a2387cefd949641d4164efe29ffc9cfbb" prot="public">
+          <name>BLENDING_SRC_DST_ALPHA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1af00471f75daa6670ba48c87abf1f8347ac8c23081340885f97707745794a2eb0f" prot="public">
+          <name>BLENDING_SRC_DST_ALPHA_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1af00471f75daa6670ba48c87abf1f8347a24951abf5605e5dd8a0b229991b970c4" prot="public">
+          <name>BLENDING_SRC_CONST_COLOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1af00471f75daa6670ba48c87abf1f8347ad8a017d886281b3beeb7186a0babfb59" prot="public">
+          <name>BLENDING_SRC_CONST_COLOR_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1af00471f75daa6670ba48c87abf1f8347afe4415e5dbde11cab138888cebf71f10" prot="public">
+          <name>BLENDING_SRC_CONST_ALPHA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1af00471f75daa6670ba48c87abf1f8347a8d3e4454a8e31d7ffb98ed1c81af93da" prot="public">
+          <name>BLENDING_SRC_CONST_ALPHA_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1af00471f75daa6670ba48c87abf1f8347a2b5dcd38ccfced9702d7a9ba05d7a50a" prot="public">
+          <name>BLENDING_SRC_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1af00471f75daa6670ba48c87abf1f8347a66d4c15097149ddf5aad8fd38f63879f" prot="public">
+          <name>BLENDING_SRC_ZERO</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1af00471f75daa6670ba48c87abf1f8347a7a8fa62523b283c54866efdca8376ad9" prot="public">
+          <name>BLENDING_SRC_ONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1af00471f75daa6670ba48c87abf1f8347a0f8a99b3748d917fc729f5def1da592c" prot="public">
+          <name>BLENDING_SRC_DST_COLOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1af00471f75daa6670ba48c87abf1f8347a4de8ef81700fdc82af7bff7fb3157e8a" prot="public">
+          <name>BLENDING_SRC_DST_COLOR_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1af00471f75daa6670ba48c87abf1f8347a52e509d2b97027f944b970b7eecb5882" prot="public">
+          <name>BLENDING_SRC_SRC_ALPHA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1af00471f75daa6670ba48c87abf1f8347a03aad175800a9b43303def563445849d" prot="public">
+          <name>BLENDING_SRC_SRC_ALPHA_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1af00471f75daa6670ba48c87abf1f8347ae94fbb4a6a55aea4fc6d72e9bb7cb4c8" prot="public">
+          <name>BLENDING_SRC_SRC_ALPHA_SATURATE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1af00471f75daa6670ba48c87abf1f8347a2387cefd949641d4164efe29ffc9cfbb" prot="public">
+          <name>BLENDING_SRC_DST_ALPHA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1af00471f75daa6670ba48c87abf1f8347ac8c23081340885f97707745794a2eb0f" prot="public">
+          <name>BLENDING_SRC_DST_ALPHA_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1af00471f75daa6670ba48c87abf1f8347a24951abf5605e5dd8a0b229991b970c4" prot="public">
+          <name>BLENDING_SRC_CONST_COLOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1af00471f75daa6670ba48c87abf1f8347ad8a017d886281b3beeb7186a0babfb59" prot="public">
+          <name>BLENDING_SRC_CONST_COLOR_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1af00471f75daa6670ba48c87abf1f8347afe4415e5dbde11cab138888cebf71f10" prot="public">
+          <name>BLENDING_SRC_CONST_ALPHA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1af00471f75daa6670ba48c87abf1f8347a8d3e4454a8e31d7ffb98ed1c81af93da" prot="public">
+          <name>BLENDING_SRC_CONST_ALPHA_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1af00471f75daa6670ba48c87abf1f8347a2b5dcd38ccfced9702d7a9ba05d7a50a" prot="public">
+          <name>BLENDING_SRC_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="174" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" bodystart="174" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="enum" id="da/dbe/Mappings_8h_1a548269dd60a089aac50a35fe98ff3963" prot="public" static="no">
+        <name>BlendingDstMode</name>
+        <enumvalue id="d0/d5e/BlendingState_8h_1a548269dd60a089aac50a35fe98ff3963a2bfea5afbf20ae6e74595d7dc6d4e576" prot="public">
+          <name>BLENDING_DST_ZERO</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1a548269dd60a089aac50a35fe98ff3963a7a5c62db3f66eeaa04efd5f3dda91dc6" prot="public">
+          <name>BLENDING_DST_ONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1a548269dd60a089aac50a35fe98ff3963a8bc731e3460b8861bf40d6405d6880e9" prot="public">
+          <name>BLENDING_DST_SRC_COLOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1a548269dd60a089aac50a35fe98ff3963ab887e7590c3c3997b3187c8194eaa256" prot="public">
+          <name>BLENDING_DST_SRC_COLOR_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1a548269dd60a089aac50a35fe98ff3963aa19065c31c4fa3e5c1d1df0ca47f4911" prot="public">
+          <name>BLENDING_DST_SRC_ALPHA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1a548269dd60a089aac50a35fe98ff3963abe74dc6844e61cddf74992a856e955a3" prot="public">
+          <name>BLENDING_DST_SRC_ALPHA_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1a548269dd60a089aac50a35fe98ff3963a7f96eb88e38c120824f679920ca067e5" prot="public">
+          <name>BLENDING_DST_DST_ALPHA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1a548269dd60a089aac50a35fe98ff3963a9e1be5a5550adb87b24dd02f457b6160" prot="public">
+          <name>BLENDING_DST_DST_ALPHA_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1a548269dd60a089aac50a35fe98ff3963a5af9492bfdcf46ab42a8d0e70229e6f3" prot="public">
+          <name>BLENDING_DST_CONST_COLOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1a548269dd60a089aac50a35fe98ff3963af4391734fe586ef9b4d75ec67312d150" prot="public">
+          <name>BLENDING_DST_CONST_COLOR_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1a548269dd60a089aac50a35fe98ff3963a55972dd587ca0c896e249e634408dbef" prot="public">
+          <name>BLENDING_DST_CONST_ALPHA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1a548269dd60a089aac50a35fe98ff3963a72864aaac8a192c7012c6b69e24c61da" prot="public">
+          <name>BLENDING_DST_CONST_ALPHA_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1a548269dd60a089aac50a35fe98ff3963add452602f220667e017b8092cdcb70a3" prot="public">
+          <name>BLENDING_DST_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a548269dd60a089aac50a35fe98ff3963a2bfea5afbf20ae6e74595d7dc6d4e576" prot="public">
+          <name>BLENDING_DST_ZERO</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a548269dd60a089aac50a35fe98ff3963a7a5c62db3f66eeaa04efd5f3dda91dc6" prot="public">
+          <name>BLENDING_DST_ONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a548269dd60a089aac50a35fe98ff3963a8bc731e3460b8861bf40d6405d6880e9" prot="public">
+          <name>BLENDING_DST_SRC_COLOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a548269dd60a089aac50a35fe98ff3963ab887e7590c3c3997b3187c8194eaa256" prot="public">
+          <name>BLENDING_DST_SRC_COLOR_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a548269dd60a089aac50a35fe98ff3963aa19065c31c4fa3e5c1d1df0ca47f4911" prot="public">
+          <name>BLENDING_DST_SRC_ALPHA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a548269dd60a089aac50a35fe98ff3963abe74dc6844e61cddf74992a856e955a3" prot="public">
+          <name>BLENDING_DST_SRC_ALPHA_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a548269dd60a089aac50a35fe98ff3963a7f96eb88e38c120824f679920ca067e5" prot="public">
+          <name>BLENDING_DST_DST_ALPHA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a548269dd60a089aac50a35fe98ff3963a9e1be5a5550adb87b24dd02f457b6160" prot="public">
+          <name>BLENDING_DST_DST_ALPHA_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a548269dd60a089aac50a35fe98ff3963a5af9492bfdcf46ab42a8d0e70229e6f3" prot="public">
+          <name>BLENDING_DST_CONST_COLOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a548269dd60a089aac50a35fe98ff3963af4391734fe586ef9b4d75ec67312d150" prot="public">
+          <name>BLENDING_DST_CONST_COLOR_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a548269dd60a089aac50a35fe98ff3963a55972dd587ca0c896e249e634408dbef" prot="public">
+          <name>BLENDING_DST_CONST_ALPHA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a548269dd60a089aac50a35fe98ff3963a72864aaac8a192c7012c6b69e24c61da" prot="public">
+          <name>BLENDING_DST_CONST_ALPHA_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a548269dd60a089aac50a35fe98ff3963add452602f220667e017b8092cdcb70a3" prot="public">
+          <name>BLENDING_DST_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="182" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" bodystart="182" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="enum" id="da/dbe/Mappings_8h_1aba2e84fa11d964b214e0cc2f92860e23" prot="public" static="no">
+        <name>BlendingTestMode</name>
+        <enumvalue id="d0/d5e/BlendingState_8h_1aba2e84fa11d964b214e0cc2f92860e23a1f5e23916f2254ae5fa3e27dc323306c" prot="public">
+          <name>BLENDING_TEST_NEVER</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1aba2e84fa11d964b214e0cc2f92860e23ac18ffaae2f6d45597252c740435fcf12" prot="public">
+          <name>BLENDING_TEST_ALLWAYS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1aba2e84fa11d964b214e0cc2f92860e23a40189d8f80c7235940ea8616812ae396" prot="public">
+          <name>BLENDING_TEST_EQUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1aba2e84fa11d964b214e0cc2f92860e23aeaf2b5b94ff9083cf35f80a28f611b73" prot="public">
+          <name>BLENDING_TEST_NOTEQUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1aba2e84fa11d964b214e0cc2f92860e23a01191e747f2c319f85e66ab5e7fd4d30" prot="public">
+          <name>BLENDING_TEST_LESSER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1aba2e84fa11d964b214e0cc2f92860e23a20952a948d8c85d5f11ef922a41a1243" prot="public">
+          <name>BLENDING_TEST_LESSER_EQUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1aba2e84fa11d964b214e0cc2f92860e23a77583bf71eb7a1c09bb4b04cd9fcf797" prot="public">
+          <name>BLENDING_TEST_GREATER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1aba2e84fa11d964b214e0cc2f92860e23aa0b27f8da194f86f2d10040987db6d99" prot="public">
+          <name>BLENDING_TEST_GREATER_EQUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1aba2e84fa11d964b214e0cc2f92860e23aa516e914d948d007489d10fd4de1ce79" prot="public">
+          <name>BLENDING_TEST_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1aba2e84fa11d964b214e0cc2f92860e23a1f5e23916f2254ae5fa3e27dc323306c" prot="public">
+          <name>BLENDING_TEST_NEVER</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1aba2e84fa11d964b214e0cc2f92860e23ac18ffaae2f6d45597252c740435fcf12" prot="public">
+          <name>BLENDING_TEST_ALLWAYS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1aba2e84fa11d964b214e0cc2f92860e23a40189d8f80c7235940ea8616812ae396" prot="public">
+          <name>BLENDING_TEST_EQUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1aba2e84fa11d964b214e0cc2f92860e23aeaf2b5b94ff9083cf35f80a28f611b73" prot="public">
+          <name>BLENDING_TEST_NOTEQUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1aba2e84fa11d964b214e0cc2f92860e23a01191e747f2c319f85e66ab5e7fd4d30" prot="public">
+          <name>BLENDING_TEST_LESSER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1aba2e84fa11d964b214e0cc2f92860e23a20952a948d8c85d5f11ef922a41a1243" prot="public">
+          <name>BLENDING_TEST_LESSER_EQUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1aba2e84fa11d964b214e0cc2f92860e23a77583bf71eb7a1c09bb4b04cd9fcf797" prot="public">
+          <name>BLENDING_TEST_GREATER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1aba2e84fa11d964b214e0cc2f92860e23aa0b27f8da194f86f2d10040987db6d99" prot="public">
+          <name>BLENDING_TEST_GREATER_EQUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1aba2e84fa11d964b214e0cc2f92860e23aa516e914d948d007489d10fd4de1ce79" prot="public">
+          <name>BLENDING_TEST_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="190" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" bodystart="190" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="enum" id="da/dbe/Mappings_8h_1a24f376ccef7a39450a2fcdbf5ba97ced" prot="public" static="no">
+        <name>MeshType</name>
+        <enumvalue id="d9/d31/Mesh_8h_1a24f376ccef7a39450a2fcdbf5ba97ceda3088161383420928c6fb1010bc728a6c" prot="public">
+          <name>MESH_POINT_LIST</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/d31/Mesh_8h_1a24f376ccef7a39450a2fcdbf5ba97ceda24f8c7bb8e402175d82ebbc78bb5f509" prot="public">
+          <name>MESH_LINE_LIST</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/d31/Mesh_8h_1a24f376ccef7a39450a2fcdbf5ba97ceda6d56b40de2a19c37d89fc0995c2234f3" prot="public">
+          <name>MESH_LINE_STRIP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/d31/Mesh_8h_1a24f376ccef7a39450a2fcdbf5ba97cedaf1dd338dc6db8cf7455ab3e95a2376dc" prot="public">
+          <name>MESH_LINE_FAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/d31/Mesh_8h_1a24f376ccef7a39450a2fcdbf5ba97ceda43cf89fbe62a1097a38f4523b5235305" prot="public">
+          <name>MESH_TRIANGLE_LIST</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/d31/Mesh_8h_1a24f376ccef7a39450a2fcdbf5ba97cedafaf347c29a809ae528b22b6cf23d6a63" prot="public">
+          <name>MESH_TRIANGLE_STRIP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/d31/Mesh_8h_1a24f376ccef7a39450a2fcdbf5ba97ceda602a9fc2ee27d196e5fe863930f22dde" prot="public">
+          <name>MESH_TRIANGLE_FAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/d31/Mesh_8h_1a24f376ccef7a39450a2fcdbf5ba97ceda0dae3089d89ddb6900bd350e67024c12" prot="public">
+          <name>MESH_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a24f376ccef7a39450a2fcdbf5ba97ceda3088161383420928c6fb1010bc728a6c" prot="public">
+          <name>MESH_POINT_LIST</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a24f376ccef7a39450a2fcdbf5ba97ceda24f8c7bb8e402175d82ebbc78bb5f509" prot="public">
+          <name>MESH_LINE_LIST</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a24f376ccef7a39450a2fcdbf5ba97ceda6d56b40de2a19c37d89fc0995c2234f3" prot="public">
+          <name>MESH_LINE_STRIP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a24f376ccef7a39450a2fcdbf5ba97cedaf1dd338dc6db8cf7455ab3e95a2376dc" prot="public">
+          <name>MESH_LINE_FAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a24f376ccef7a39450a2fcdbf5ba97ceda43cf89fbe62a1097a38f4523b5235305" prot="public">
+          <name>MESH_TRIANGLE_LIST</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a24f376ccef7a39450a2fcdbf5ba97cedafaf347c29a809ae528b22b6cf23d6a63" prot="public">
+          <name>MESH_TRIANGLE_STRIP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a24f376ccef7a39450a2fcdbf5ba97ceda602a9fc2ee27d196e5fe863930f22dde" prot="public">
+          <name>MESH_TRIANGLE_FAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a24f376ccef7a39450a2fcdbf5ba97ceda0dae3089d89ddb6900bd350e67024c12" prot="public">
+          <name>MESH_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="198" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" bodystart="198" bodyend="203"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="da/dbe/Mappings_8h_1aaf8b0c93f8dee2883960896526169253" prot="public" static="no" mutable="no">
+        <type><ref refid="d5/d30/ForwardDirect3D9_8h_1a19c6dbd8a917034297c78fbe861f85e8" kindref="member">D3DDECLTYPE</ref></type>
+        <definition>D3DDECLTYPE Direct3D9AttributeType[VFTYPE_COUNT]</definition>
+        <argsstring>[VFTYPE_COUNT]</argsstring>
+        <name>Direct3D9AttributeType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="218"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/dbe/Mappings_8h_1afead803169d4ef6025db3c5be8c67558" prot="public" static="no" mutable="no">
+        <type><ref refid="d5/d30/ForwardDirect3D9_8h_1aca6770f05108f073242883c39e4e122e" kindref="member">D3DDECLUSAGE</ref></type>
+        <definition>D3DDECLUSAGE Direct3D9AttributeUsage[VFUSAGE_COUNT]</definition>
+        <argsstring>[VFUSAGE_COUNT]</argsstring>
+        <name>Direct3D9AttributeUsage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="219"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/dbe/Mappings_8h_1a09d65abeed93cd88818fa32922f6d145" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord Direct3D9VertexBufferUsage[VB_USAGE_COUNT]</definition>
+        <argsstring>[VB_USAGE_COUNT]</argsstring>
+        <name>Direct3D9VertexBufferUsage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="220"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/dbe/Mappings_8h_1a45364c1618646566cd22c5a3707ddcd7" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord Direct3D9VertexBufferLock[VB_LOCK_COUNT]</definition>
+        <argsstring>[VB_LOCK_COUNT]</argsstring>
+        <name>Direct3D9VertexBufferLock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="221"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/dbe/Mappings_8h_1a4b48e33b1a5a7a38517eee0f6459fad5" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord Direct3D9IndexBufferUsage[IB_USAGE_COUNT]</definition>
+        <argsstring>[IB_USAGE_COUNT]</argsstring>
+        <name>Direct3D9IndexBufferUsage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="222"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/dbe/Mappings_8h_1a86cb16318875612f8d7e4f7f5eed4279" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord Direct3D9IndexBufferLock[IB_LOCK_COUNT]</definition>
+        <argsstring>[IB_LOCK_COUNT]</argsstring>
+        <name>Direct3D9IndexBufferLock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="223"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/dbe/Mappings_8h_1a33322ac7a7b666368c41792badf91ed2" prot="public" static="no" mutable="no">
+        <type><ref refid="d5/d30/ForwardDirect3D9_8h_1ab59bc46a5291ea9734194c4994ee5cd6" kindref="member">D3DFORMAT</ref></type>
+        <definition>D3DFORMAT Direct3D9TextureFormat[TEXTURE_FMT_COUNT]</definition>
+        <argsstring>[TEXTURE_FMT_COUNT]</argsstring>
+        <name>Direct3D9TextureFormat</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="224"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/dbe/Mappings_8h_1acb2b0de6392cd758fb067e87a38891d8" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord Direct3D9TextureUsage[TEXTURE_USAGE_COUNT]</definition>
+        <argsstring>[TEXTURE_USAGE_COUNT]</argsstring>
+        <name>Direct3D9TextureUsage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="225"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/dbe/Mappings_8h_1a540f62eb5280d5ccd446ab4eb8b26376" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord Direct3D9TextureLock[TEXTURE_LOCK_COUNT]</definition>
+        <argsstring>[TEXTURE_LOCK_COUNT]</argsstring>
+        <name>Direct3D9TextureLock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="226"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/dbe/Mappings_8h_1aed1fddae14bb25f4867492fa398b6aa6" prot="public" static="no" mutable="no">
+        <type><ref refid="d5/d30/ForwardDirect3D9_8h_1afd4974e249d3837b05328567b2422d6c" kindref="member">D3DCUBEMAP_FACES</ref></type>
+        <definition>D3DCUBEMAP_FACES Direct3D9TextureCubeFace[TEXTURECUBE_FACE_COUNT]</definition>
+        <argsstring>[TEXTURECUBE_FACE_COUNT]</argsstring>
+        <name>Direct3D9TextureCubeFace</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="227"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/dbe/Mappings_8h_1a3057593fdc161e49373c6fdb7cfbc20b" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord Direct3D9MinFilter[SHADERSAMPLING_FILTER_COUNT]</definition>
+        <argsstring>[SHADERSAMPLING_FILTER_COUNT]</argsstring>
+        <name>Direct3D9MinFilter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="228"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/dbe/Mappings_8h_1a71cf86edeeab8aab1b8982a2f48523d8" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord Direct3D9MipFilter[SHADERSAMPLING_FILTER_COUNT]</definition>
+        <argsstring>[SHADERSAMPLING_FILTER_COUNT]</argsstring>
+        <name>Direct3D9MipFilter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="229"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/dbe/Mappings_8h_1a7247aa37f9b762e6c58a8cf59582cadb" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord Direct3D9WrapMode[SHADERSAMPLING_WRAP_COUNT]</definition>
+        <argsstring>[SHADERSAMPLING_WRAP_COUNT]</argsstring>
+        <name>Direct3D9WrapMode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="230"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/dbe/Mappings_8h_1a7ba762cc0b3e6b928f8ee1e1b1c71bf2" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord Direct3D9CullOrder[CULLING_CONV_COUNT]</definition>
+        <argsstring>[CULLING_CONV_COUNT]</argsstring>
+        <name>Direct3D9CullOrder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="231"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/dbe/Mappings_8h_1a0525883621be4557c63850e5330ed1fb" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord Direct3D9DepthTest[DEPTH_COUNT]</definition>
+        <argsstring>[DEPTH_COUNT]</argsstring>
+        <name>Direct3D9DepthTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="232"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/dbe/Mappings_8h_1a5dd2ca105afe55f7cfb8bc68d23b3a16" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord Direct3D9StencilTest[STENCIL_TEST_COUNT]</definition>
+        <argsstring>[STENCIL_TEST_COUNT]</argsstring>
+        <name>Direct3D9StencilTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="233"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/dbe/Mappings_8h_1ae1d260013a412aa38a1d59d47ffe9f05" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord Direct3D9StencilOp[STENCIL_OP_COUNT]</definition>
+        <argsstring>[STENCIL_OP_COUNT]</argsstring>
+        <name>Direct3D9StencilOp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="234"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/dbe/Mappings_8h_1a79795ec8bf0eca7b4b973564e7e128f8" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord Direct3D9BlendSource[BLENDING_SRC_COUNT]</definition>
+        <argsstring>[BLENDING_SRC_COUNT]</argsstring>
+        <name>Direct3D9BlendSource</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="235"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/dbe/Mappings_8h_1ab0c092f1d0fe669f1c811c989e21a5a6" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord Direct3D9BlendDestination[BLENDING_DST_COUNT]</definition>
+        <argsstring>[BLENDING_DST_COUNT]</argsstring>
+        <name>Direct3D9BlendDestination</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="236"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/dbe/Mappings_8h_1aea007b5320f42999f9a82639e11951fb" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord Direct3D9BlendTest[BLENDING_TEST_COUNT]</definition>
+        <argsstring>[BLENDING_TEST_COUNT]</argsstring>
+        <name>Direct3D9BlendTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="237"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/dbe/Mappings_8h_1a23577586c0e4a775af8e22d135f352c8" prot="public" static="no" mutable="no">
+        <type><ref refid="d5/d30/ForwardDirect3D9_8h_1a20e9e3c0f1a900f5fc619cf5bb6c0267" kindref="member">D3DPRIMITIVETYPE</ref></type>
+        <definition>D3DPRIMITIVETYPE Direct3D9PrimitiveType[MESH_COUNT]</definition>
+        <argsstring>[MESH_COUNT]</argsstring>
+        <name>Direct3D9PrimitiveType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="238"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="da/dbe/Mappings_8h_1a88c9738e42411acae4c1630469355af3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0f" kindref="member">TextureFormat</ref></type>
+        <definition>TextureFormat Direct3D9ConvertFormat</definition>
+        <argsstring>(D3DFORMAT d3dFormat)</argsstring>
+        <name>Direct3D9ConvertFormat</name>
+        <param>
+          <type><ref refid="d5/d30/ForwardDirect3D9_8h_1ab59bc46a5291ea9734194c4994ee5cd6" kindref="member">D3DFORMAT</ref></type>
+          <declname>d3dFormat</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="241"/>
+      </memberdef>
+      <memberdef kind="function" id="da/dbe/Mappings_8h_1a7919593e34cb1701965a3cbd8ea04a08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt Direct3D9FormatBits</definition>
+        <argsstring>(D3DFORMAT d3dFormat)</argsstring>
+        <name>Direct3D9FormatBits</name>
+        <param>
+          <type><ref refid="d5/d30/ForwardDirect3D9_8h_1ab59bc46a5291ea9734194c4994ee5cd6" kindref="member">D3DFORMAT</ref></type>
+          <declname>d3dFormat</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h" line="242"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Mappings.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,305 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="da/d94/classTInterpolatorLinear" kind="class" prot="public">
+    <compoundname>TInterpolatorLinear</compoundname>
+    <includes refid="df/d83/InterpolatorLinear_8h" local="no">InterpolatorLinear.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename Real</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="da/d94/classTInterpolatorLinear_1af662b20afd0f559691b5bd7c10ac04a0" prot="private" static="yes" mutable="no">
+        <type>const <ref refid="d5/dac/classTMatrix2" kindref="compound">TMatrix2</ref>&lt; Real &gt;</type>
+        <definition>const TMatrix2&lt;Real&gt; sm_matBlend</definition>
+        <argsstring></argsstring>
+        <name>sm_matBlend</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorLinear.h" line="58" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorLinear.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="da/d94/classTInterpolatorLinear_1ac02137729931e67c322dbea91a486bb3" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iBound</definition>
+        <argsstring></argsstring>
+        <name>m_iBound</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorLinear.h" line="60" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorLinear.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d94/classTInterpolatorLinear_1a6b449757d29d424a2a44a761377ef4bb" prot="private" static="no" mutable="no">
+        <type>Real *</type>
+        <definition>Real* m_arrValues</definition>
+        <argsstring></argsstring>
+        <name>m_arrValues</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorLinear.h" line="61" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorLinear.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d94/classTInterpolatorLinear_1a448eadfc6ec0e20d50846e97a16b3930" prot="private" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real m_fMin</definition>
+        <argsstring></argsstring>
+        <name>m_fMin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorLinear.h" line="63" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorLinear.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d94/classTInterpolatorLinear_1adaedc40bd16bfc4a41a6bc01cb51c8d5" prot="private" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real m_fMax</definition>
+        <argsstring></argsstring>
+        <name>m_fMax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorLinear.h" line="63" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorLinear.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d94/classTInterpolatorLinear_1a501e74b2ec3e782921aca2fee9d3d4d3" prot="private" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real m_fSpacing</definition>
+        <argsstring></argsstring>
+        <name>m_fSpacing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorLinear.h" line="64" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorLinear.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d94/classTInterpolatorLinear_1a0db35644c214d4f34d22ca4a719fceaf" prot="private" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real m_fInvSpacing</definition>
+        <argsstring></argsstring>
+        <name>m_fInvSpacing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorLinear.h" line="64" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorLinear.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="da/d94/classTInterpolatorLinear_1ac0a68f0c791478aecd3c09260cb6a2b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TInterpolatorLinear</definition>
+        <argsstring>(Real *arrValues, UInt iBound, Real fMin, Real fSpacing)</argsstring>
+        <name>TInterpolatorLinear</name>
+        <param>
+          <type>Real *</type>
+          <declname>arrValues</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iBound</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fMin</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fSpacing</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorLinear.h" line="41"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d94/classTInterpolatorLinear_1a1787f09a2ba14869754f2effef2120b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~TInterpolatorLinear</definition>
+        <argsstring>()</argsstring>
+        <name>~TInterpolatorLinear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorLinear.h" line="42"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d94/classTInterpolatorLinear_1a72179069420e5f0b67d5f34551224a25" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetBound</definition>
+        <argsstring>() const </argsstring>
+        <name>GetBound</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorLinear.h" line="45"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d94/classTInterpolatorLinear_1a9531ac4b1851db76b35a0c41c2df93d9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real *</type>
+        <definition>Real* GetValues</definition>
+        <argsstring>() const </argsstring>
+        <name>GetValues</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorLinear.h" line="46"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d94/classTInterpolatorLinear_1acf12d8611ffe8a81be09653923836e2a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real GetMin</definition>
+        <argsstring>() const </argsstring>
+        <name>GetMin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorLinear.h" line="49"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d94/classTInterpolatorLinear_1a413ca5c9f788f94f2339e95d31e97eb9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real GetMax</definition>
+        <argsstring>() const </argsstring>
+        <name>GetMax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorLinear.h" line="50"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d94/classTInterpolatorLinear_1ad9427380376ca568fb5a370da5a103be" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real GetSpacing</definition>
+        <argsstring>() const </argsstring>
+        <name>GetSpacing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorLinear.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d94/classTInterpolatorLinear_1a9d0c2d327451af983dc4a0f787df881e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real Evaluate</definition>
+        <argsstring>(Real fParameter) const </argsstring>
+        <name>Evaluate</name>
+        <param>
+          <type>Real</type>
+          <declname>fParameter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorLinear.h" line="54"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d94/classTInterpolatorLinear_1a7390e46579a3a34312e8480937a70832" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real Evaluate</definition>
+        <argsstring>(Real fParameter, UInt iOrder) const </argsstring>
+        <name>Evaluate</name>
+        <param>
+          <type>Real</type>
+          <declname>fParameter</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iOrder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorLinear.h" line="55"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="12555">
+        <label>TInterpolatorLinear&lt; Real &gt;</label>
+        <link refid="da/d94/classTInterpolatorLinear"/>
+        <childnode refid="12556" relation="usage">
+          <edgelabel>sm_matBlend</edgelabel>
+        </childnode>
+        <childnode refid="12557" relation="usage">
+          <edgelabel>m_iBound</edgelabel>
+        </childnode>
+        <childnode refid="12558" relation="usage">
+          <edgelabel>m_fMin</edgelabel>
+          <edgelabel>m_fMax</edgelabel>
+          <edgelabel>m_fInvSpacing</edgelabel>
+          <edgelabel>m_arrValues</edgelabel>
+          <edgelabel>m_fSpacing</edgelabel>
+        </childnode>
+      </node>
+      <node id="12558">
+        <label>Real</label>
+      </node>
+      <node id="12557">
+        <label>int</label>
+      </node>
+      <node id="12556">
+        <label>TMatrix2&lt; Real &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorLinear.h" line="38" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorLinear.h" bodystart="37" bodyend="65"/>
+    <listofallmembers>
+      <member refid="da/d94/classTInterpolatorLinear_1a9d0c2d327451af983dc4a0f787df881e" prot="public" virt="non-virtual"><scope>TInterpolatorLinear</scope><name>Evaluate</name></member>
+      <member refid="da/d94/classTInterpolatorLinear_1a7390e46579a3a34312e8480937a70832" prot="public" virt="non-virtual"><scope>TInterpolatorLinear</scope><name>Evaluate</name></member>
+      <member refid="da/d94/classTInterpolatorLinear_1a72179069420e5f0b67d5f34551224a25" prot="public" virt="non-virtual"><scope>TInterpolatorLinear</scope><name>GetBound</name></member>
+      <member refid="da/d94/classTInterpolatorLinear_1a413ca5c9f788f94f2339e95d31e97eb9" prot="public" virt="non-virtual"><scope>TInterpolatorLinear</scope><name>GetMax</name></member>
+      <member refid="da/d94/classTInterpolatorLinear_1acf12d8611ffe8a81be09653923836e2a" prot="public" virt="non-virtual"><scope>TInterpolatorLinear</scope><name>GetMin</name></member>
+      <member refid="da/d94/classTInterpolatorLinear_1ad9427380376ca568fb5a370da5a103be" prot="public" virt="non-virtual"><scope>TInterpolatorLinear</scope><name>GetSpacing</name></member>
+      <member refid="da/d94/classTInterpolatorLinear_1a9531ac4b1851db76b35a0c41c2df93d9" prot="public" virt="non-virtual"><scope>TInterpolatorLinear</scope><name>GetValues</name></member>
+      <member refid="da/d94/classTInterpolatorLinear_1a6b449757d29d424a2a44a761377ef4bb" prot="private" virt="non-virtual"><scope>TInterpolatorLinear</scope><name>m_arrValues</name></member>
+      <member refid="da/d94/classTInterpolatorLinear_1a0db35644c214d4f34d22ca4a719fceaf" prot="private" virt="non-virtual"><scope>TInterpolatorLinear</scope><name>m_fInvSpacing</name></member>
+      <member refid="da/d94/classTInterpolatorLinear_1adaedc40bd16bfc4a41a6bc01cb51c8d5" prot="private" virt="non-virtual"><scope>TInterpolatorLinear</scope><name>m_fMax</name></member>
+      <member refid="da/d94/classTInterpolatorLinear_1a448eadfc6ec0e20d50846e97a16b3930" prot="private" virt="non-virtual"><scope>TInterpolatorLinear</scope><name>m_fMin</name></member>
+      <member refid="da/d94/classTInterpolatorLinear_1a501e74b2ec3e782921aca2fee9d3d4d3" prot="private" virt="non-virtual"><scope>TInterpolatorLinear</scope><name>m_fSpacing</name></member>
+      <member refid="da/d94/classTInterpolatorLinear_1ac02137729931e67c322dbea91a486bb3" prot="private" virt="non-virtual"><scope>TInterpolatorLinear</scope><name>m_iBound</name></member>
+      <member refid="da/d94/classTInterpolatorLinear_1af662b20afd0f559691b5bd7c10ac04a0" prot="private" virt="non-virtual"><scope>TInterpolatorLinear</scope><name>sm_matBlend</name></member>
+      <member refid="da/d94/classTInterpolatorLinear_1ac0a68f0c791478aecd3c09260cb6a2b2" prot="public" virt="non-virtual"><scope>TInterpolatorLinear</scope><name>TInterpolatorLinear</name></member>
+      <member refid="da/d94/classTInterpolatorLinear_1a1787f09a2ba14869754f2effef2120b6" prot="public" virt="non-virtual"><scope>TInterpolatorLinear</scope><name>~TInterpolatorLinear</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

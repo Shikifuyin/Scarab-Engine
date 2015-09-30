@@ -1,0 +1,757 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d4/d72/classSingleSideVClip" kind="class" prot="public">
+    <compoundname>SingleSideVClip</compoundname>
+    <basecompoundref refid="dd/d93/classNarrowPhase" prot="public" virt="non-virtual">NarrowPhase</basecompoundref>
+    <derivedcompoundref refid="d0/d6b/classConvexSphereCollision" prot="public" virt="non-virtual">ConvexSphereCollision</derivedcompoundref>
+    <includes refid="dd/d7f/SingleSideVClip_8h" local="no">SingleSideVClip.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="d4/d72/classSingleSideVClip_1a200bc680d25937bbc059473806f017e6" prot="private" static="no">
+        <type><ref refid="d4/d9c/classShapeConvex_1a545a5364cf9145282e2b2cbe99e80468" kindref="member">ShapeConvex::Vertex</ref></type>
+        <definition>typedef ShapeConvex::Vertex Vertex</definition>
+        <argsstring></argsstring>
+        <name>Vertex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/VClip/SingleSideVClip.h" line="63" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/VClip/SingleSideVClip.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d4/d72/classSingleSideVClip_1a0bfbc42daea35240b0f16c019317f5c4" prot="private" static="no">
+        <type><ref refid="d4/d9c/classShapeConvex_1a8932d7924f30476a7c6978ff261879e1" kindref="member">ShapeConvex::Edge</ref></type>
+        <definition>typedef ShapeConvex::Edge Edge</definition>
+        <argsstring></argsstring>
+        <name>Edge</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/VClip/SingleSideVClip.h" line="64" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/VClip/SingleSideVClip.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d4/d72/classSingleSideVClip_1aed3b9beccb39d4b701d775da220b49d2" prot="private" static="no">
+        <type><ref refid="d4/d9c/classShapeConvex_1a52b7ee8f0ea2fe985a40224c5c32fb91" kindref="member">ShapeConvex::Triangle</ref></type>
+        <definition>typedef ShapeConvex::Triangle Triangle</definition>
+        <argsstring></argsstring>
+        <name>Triangle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/VClip/SingleSideVClip.h" line="65" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/VClip/SingleSideVClip.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d4/d72/classSingleSideVClip_1a0d4bd74ea73a6f3609991bb3b94be3dd" prot="private" static="no">
+        <type><ref refid="d4/d9c/classShapeConvex_1a08da9f535e078f0e451fd7b14aa6493e" kindref="member">ShapeConvex::Quad</ref></type>
+        <definition>typedef ShapeConvex::Quad Quad</definition>
+        <argsstring></argsstring>
+        <name>Quad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/VClip/SingleSideVClip.h" line="66" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/VClip/SingleSideVClip.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d4/d72/classSingleSideVClip_1a6bbccbb9bb928881d4b0fecd4f592cda" prot="private" static="no">
+        <type><ref refid="d4/d9c/classShapeConvex_1a4944bc41de6ecd27d6081c29f42d377c" kindref="member">ShapeConvex::Polygon</ref></type>
+        <definition>typedef ShapeConvex::Polygon Polygon</definition>
+        <argsstring></argsstring>
+        <name>Polygon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/VClip/SingleSideVClip.h" line="67" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/VClip/SingleSideVClip.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d4/d72/classSingleSideVClip_1adce84e25bd5c0e405743da144061081b" prot="private" static="no" mutable="no">
+        <type><ref refid="d7/d30/classTransformedShapeConvex" kindref="compound">TransformedShapeConvex</ref> *</type>
+        <definition>TransformedShapeConvex* m_pConvex</definition>
+        <argsstring></argsstring>
+        <name>m_pConvex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/VClip/SingleSideVClip.h" line="87" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/VClip/SingleSideVClip.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d72/classSingleSideVClip_1ab2adb59cc3a361c51836f14c45908f8f" prot="private" static="no" mutable="no">
+        <type><ref refid="d7/d30/classTransformedShapeConvex" kindref="compound">TransformedShapeConvex</ref> *</type>
+        <definition>TransformedShapeConvex* m_pSphere</definition>
+        <argsstring></argsstring>
+        <name>m_pSphere</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/VClip/SingleSideVClip.h" line="88" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/VClip/SingleSideVClip.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d72/classSingleSideVClip_1af49d9566dc7962e768dd942b8e2f1568" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool m_bReverseNormal</definition>
+        <argsstring></argsstring>
+        <name>m_bReverseNormal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/VClip/SingleSideVClip.h" line="90" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/VClip/SingleSideVClip.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d72/classSingleSideVClip_1a81f8cb316098f769e3441c5af23460ca" prot="private" static="no" mutable="no">
+        <type><ref refid="dd/d7f/SingleSideVClip_8h_1add7a41d256ac4dafb3421d0923f339b1" kindref="member">SingleSideVClipState</ref></type>
+        <definition>SingleSideVClipState m_vcState</definition>
+        <argsstring></argsstring>
+        <name>m_vcState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/VClip/SingleSideVClip.h" line="93" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/VClip/SingleSideVClip.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d72/classSingleSideVClip_1a6182a53c2781fc6237cb0e5c882c97c2" prot="private" static="no" mutable="no">
+        <type><ref refid="dd/d7f/SingleSideVClip_8h_1add7a41d256ac4dafb3421d0923f339b1" kindref="member">SingleSideVClipState</ref></type>
+        <definition>SingleSideVClipState m_vcLastRunState</definition>
+        <argsstring></argsstring>
+        <name>m_vcLastRunState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/VClip/SingleSideVClip.h" line="93" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/VClip/SingleSideVClip.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d72/classSingleSideVClip_1ae3da8e760c49d1837a4d4fa30cdd1eb3" prot="private" static="no" mutable="no">
+        <type>const <ref refid="dc/dcb/classMeshFeature" kindref="compound">MeshFeature</ref> *</type>
+        <definition>const MeshFeature* m_pClosestFeature</definition>
+        <argsstring></argsstring>
+        <name>m_pClosestFeature</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/VClip/SingleSideVClip.h" line="94" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/VClip/SingleSideVClip.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d4/d72/classSingleSideVClip_1aa0d64eae29f5dd795f05387135a8c802" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SingleSideVClip</definition>
+        <argsstring>(TransformedShapeConvex *pConvexA, TransformedShapeConvex *pConvexB)</argsstring>
+        <name>SingleSideVClip</name>
+        <param>
+          <type><ref refid="d7/d30/classTransformedShapeConvex" kindref="compound">TransformedShapeConvex</ref> *</type>
+          <declname>pConvexA</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d30/classTransformedShapeConvex" kindref="compound">TransformedShapeConvex</ref> *</type>
+          <declname>pConvexB</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/VClip/SingleSideVClip.h" line="54"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d72/classSingleSideVClip_1a952e553d427b4419e2e839d5bf30d1a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~SingleSideVClip</definition>
+        <argsstring>()</argsstring>
+        <name>~SingleSideVClip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/VClip/SingleSideVClip.h" line="55"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d72/classSingleSideVClip_1a8cc82ad908e5eb178e948965349b55b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void Initialize</definition>
+        <argsstring>()</argsstring>
+        <name>Initialize</name>
+        <reimplements refid="dd/d93/classNarrowPhase_1a15f94c85d5e8da0c5fb29586ec708895">Initialize</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/VClip/SingleSideVClip.h" line="58"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d72/classSingleSideVClip_1aa1006524ebb0fcd1803715afd55265c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>virtual Bool DetectCollision</definition>
+        <argsstring>(Bool bGenerateContactPoints)</argsstring>
+        <name>DetectCollision</name>
+        <reimplements refid="dd/d93/classNarrowPhase_1a64a3e36b0ff981158fa8d464e806071d">DetectCollision</reimplements>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+          <declname>bGenerateContactPoints</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/VClip/SingleSideVClip.h" line="59"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d4/d72/classSingleSideVClip_1a575d4d2cd752b4894211deb1f7f2c13a" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="dc/dcb/classMeshFeature" kindref="compound">MeshFeature</ref> *</type>
+        <definition>const MeshFeature* _ClipVertex_V</definition>
+        <argsstring>(const Vertex *pVertex, const Vertex3 &amp;vVertexV) const </argsstring>
+        <name>_ClipVertex_V</name>
+        <param>
+          <type>const <ref refid="d4/d72/classSingleSideVClip_1a200bc680d25937bbc059473806f017e6" kindref="member">Vertex</ref> *</type>
+          <declname>pVertex</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d0/df3/Vertex3_8h_1a77dfdbfba4bf6ee1a522233ccef29ff5" kindref="member">Vertex3</ref> &amp;</type>
+          <declname>vVertexV</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/VClip/SingleSideVClip.h" line="71"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d72/classSingleSideVClip_1a317a320e1b15f3209e1f96bdf116b35a" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="dc/dcb/classMeshFeature" kindref="compound">MeshFeature</ref> *</type>
+        <definition>const MeshFeature* _ClipVertex_E</definition>
+        <argsstring>(const Edge *pEdge, const Vertex3 &amp;vVertexV) const </argsstring>
+        <name>_ClipVertex_E</name>
+        <param>
+          <type>const <ref refid="d4/d72/classSingleSideVClip_1a0bfbc42daea35240b0f16c019317f5c4" kindref="member">Edge</ref> *</type>
+          <declname>pEdge</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d0/df3/Vertex3_8h_1a77dfdbfba4bf6ee1a522233ccef29ff5" kindref="member">Vertex3</ref> &amp;</type>
+          <declname>vVertexV</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/VClip/SingleSideVClip.h" line="72"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d72/classSingleSideVClip_1afbdaa2a87c1162555aee36f10ca45f51" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="dc/dcb/classMeshFeature" kindref="compound">MeshFeature</ref> *</type>
+        <definition>const MeshFeature* _ClipVertex_F</definition>
+        <argsstring>(const MeshFacet *pFacet, const Vertex3 &amp;vVertexV) const </argsstring>
+        <name>_ClipVertex_F</name>
+        <param>
+          <type>const <ref refid="d5/da2/classMeshFacet" kindref="compound">MeshFacet</ref> *</type>
+          <declname>pFacet</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d0/df3/Vertex3_8h_1a77dfdbfba4bf6ee1a522233ccef29ff5" kindref="member">Vertex3</ref> &amp;</type>
+          <declname>vVertexV</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/VClip/SingleSideVClip.h" line="73"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d72/classSingleSideVClip_1ae2445fde4604f3faae2251f51761d062" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dd/d7f/SingleSideVClip_8h_1add7a41d256ac4dafb3421d0923f339b1" kindref="member">SingleSideVClipState</ref></type>
+        <definition>SingleSideVClipState _EscapeLocalMinimum</definition>
+        <argsstring>(const MeshFacet *pFacet, const Vertex3 &amp;vPosition)</argsstring>
+        <name>_EscapeLocalMinimum</name>
+        <param>
+          <type>const <ref refid="d5/da2/classMeshFacet" kindref="compound">MeshFacet</ref> *</type>
+          <declname>pFacet</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d0/df3/Vertex3_8h_1a77dfdbfba4bf6ee1a522233ccef29ff5" kindref="member">Vertex3</ref> &amp;</type>
+          <declname>vPosition</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/VClip/SingleSideVClip.h" line="76"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d72/classSingleSideVClip_1a10cea8f1e9b53470a003e0ba78e1aa94" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dd/d7f/SingleSideVClip_8h_1add7a41d256ac4dafb3421d0923f339b1" kindref="member">SingleSideVClipState</ref></type>
+        <definition>SingleSideVClipState _ProcessState_V</definition>
+        <argsstring>(const Vertex *pVertex, const Vertex3 &amp;vSpherePosition)</argsstring>
+        <name>_ProcessState_V</name>
+        <param>
+          <type>const <ref refid="d4/d72/classSingleSideVClip_1a200bc680d25937bbc059473806f017e6" kindref="member">Vertex</ref> *</type>
+          <declname>pVertex</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d0/df3/Vertex3_8h_1a77dfdbfba4bf6ee1a522233ccef29ff5" kindref="member">Vertex3</ref> &amp;</type>
+          <declname>vSpherePosition</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/VClip/SingleSideVClip.h" line="79"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d72/classSingleSideVClip_1aba5f48d7c7a95b2b473ca75f3d190a19" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dd/d7f/SingleSideVClip_8h_1add7a41d256ac4dafb3421d0923f339b1" kindref="member">SingleSideVClipState</ref></type>
+        <definition>SingleSideVClipState _ProcessState_E</definition>
+        <argsstring>(const Edge *pEdge, const Vertex3 &amp;vSpherePosition)</argsstring>
+        <name>_ProcessState_E</name>
+        <param>
+          <type>const <ref refid="d4/d72/classSingleSideVClip_1a0bfbc42daea35240b0f16c019317f5c4" kindref="member">Edge</ref> *</type>
+          <declname>pEdge</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d0/df3/Vertex3_8h_1a77dfdbfba4bf6ee1a522233ccef29ff5" kindref="member">Vertex3</ref> &amp;</type>
+          <declname>vSpherePosition</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/VClip/SingleSideVClip.h" line="80"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d72/classSingleSideVClip_1ad808760afab3d905fe6b7cf059bb163c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dd/d7f/SingleSideVClip_8h_1add7a41d256ac4dafb3421d0923f339b1" kindref="member">SingleSideVClipState</ref></type>
+        <definition>SingleSideVClipState _ProcessState_F</definition>
+        <argsstring>(const MeshFacet *pFacet, const Vertex3 &amp;vSpherePosition)</argsstring>
+        <name>_ProcessState_F</name>
+        <param>
+          <type>const <ref refid="d5/da2/classMeshFacet" kindref="compound">MeshFacet</ref> *</type>
+          <declname>pFacet</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d0/df3/Vertex3_8h_1a77dfdbfba4bf6ee1a522233ccef29ff5" kindref="member">Vertex3</ref> &amp;</type>
+          <declname>vSpherePosition</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/VClip/SingleSideVClip.h" line="81"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d72/classSingleSideVClip_1ad1dd629ed909416d01ce75f68959539a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool _GenerateContactPoints</definition>
+        <argsstring>(const Vertex3 &amp;vSpherePosition, Scalar fSphereRadius, Bool bGenerateContactPoints)</argsstring>
+        <name>_GenerateContactPoints</name>
+        <param>
+          <type>const <ref refid="d0/df3/Vertex3_8h_1a77dfdbfba4bf6ee1a522233ccef29ff5" kindref="member">Vertex3</ref> &amp;</type>
+          <declname>vSpherePosition</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/d10/Scalar_8h_1abee0aca51a3a3e16c628155aa4ac6f12" kindref="member">Scalar</ref></type>
+          <declname>fSphereRadius</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+          <declname>bGenerateContactPoints</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/VClip/SingleSideVClip.h" line="84"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="11623">
+        <label>ConvexSphereCollision</label>
+        <link refid="d0/d6b/classConvexSphereCollision"/>
+        <childnode refid="11621" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11621">
+        <label>SingleSideVClip</label>
+        <link refid="d4/d72/classSingleSideVClip"/>
+        <childnode refid="11622" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11622">
+        <label>NarrowPhase</label>
+        <link refid="dd/d93/classNarrowPhase"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="11639">
+        <label>Mesh</label>
+        <link refid="d9/d5e/classMesh"/>
+        <childnode refid="11640" relation="usage">
+          <edgelabel>m_pVF</edgelabel>
+        </childnode>
+        <childnode refid="11643" relation="usage">
+          <edgelabel>m_iIndexOffset</edgelabel>
+          <edgelabel>m_iVertexOffset</edgelabel>
+        </childnode>
+        <childnode refid="11637" relation="usage">
+          <edgelabel>m_bDynamicUpdate</edgelabel>
+        </childnode>
+        <childnode refid="11646" relation="usage">
+          <edgelabel>m_pIB</edgelabel>
+        </childnode>
+        <childnode refid="11649" relation="usage">
+          <edgelabel>m_pVB</edgelabel>
+        </childnode>
+      </node>
+      <node id="11651">
+        <label>MeshFeature</label>
+        <link refid="dc/dcb/classMeshFeature"/>
+      </node>
+      <node id="11650">
+        <label>VertexBufferUsage</label>
+      </node>
+      <node id="11636">
+        <label>TMatrix3&lt; Scalar &gt;</label>
+        <link refid="d7/dee/classTMatrix3"/>
+        <childnode refid="11636" relation="usage">
+          <edgelabel>Identity</edgelabel>
+          <edgelabel>Null</edgelabel>
+        </childnode>
+        <childnode refid="11626" relation="usage">
+          <edgelabel>ONE</edgelabel>
+          <edgelabel>m20</edgelabel>
+          <edgelabel>m21</edgelabel>
+          <edgelabel>m10</edgelabel>
+          <edgelabel>m22</edgelabel>
+          <edgelabel>m11</edgelabel>
+          <edgelabel>m00</edgelabel>
+          <edgelabel>TWO</edgelabel>
+          <edgelabel>m12</edgelabel>
+          <edgelabel>m01</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="11626">
+        <label>float</label>
+      </node>
+      <node id="11635">
+        <label>TMatrix4&lt; Scalar &gt;</label>
+        <link refid="d5/d09/classTMatrix4"/>
+        <childnode refid="11635" relation="usage">
+          <edgelabel>Identity</edgelabel>
+          <edgelabel>Null</edgelabel>
+        </childnode>
+        <childnode refid="11626" relation="usage">
+          <edgelabel>ONE</edgelabel>
+          <edgelabel>m30</edgelabel>
+          <edgelabel>m31</edgelabel>
+          <edgelabel>m20</edgelabel>
+          <edgelabel>m32</edgelabel>
+          <edgelabel>m21</edgelabel>
+          <edgelabel>m10</edgelabel>
+          <edgelabel>m33</edgelabel>
+          <edgelabel>m22</edgelabel>
+          <edgelabel>m11</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="11640">
+        <label>VertexFormat</label>
+        <link refid="da/dc2/classVertexFormat"/>
+        <childnode refid="11641" relation="usage">
+          <edgelabel>m_arrFields</edgelabel>
+        </childnode>
+        <childnode refid="11643" relation="usage">
+          <edgelabel>m_iSize</edgelabel>
+          <edgelabel>m_iFieldCount</edgelabel>
+          <edgelabel>m_arrUsageLUT</edgelabel>
+        </childnode>
+        <childnode refid="11637" relation="usage">
+          <edgelabel>m_bFinalized</edgelabel>
+        </childnode>
+        <childnode refid="11645" relation="usage">
+          <edgelabel>sm_arrComponentCount</edgelabel>
+          <edgelabel>sm_arrTypeSize</edgelabel>
+          <edgelabel>sm_arrComponentSize</edgelabel>
+        </childnode>
+      </node>
+      <node id="11653">
+        <label>SingleSideVClipState</label>
+      </node>
+      <node id="11641">
+        <label>VFField</label>
+        <link refid="de/d92/structVFField"/>
+        <childnode refid="11642" relation="usage">
+          <edgelabel>iUsage</edgelabel>
+        </childnode>
+        <childnode refid="11643" relation="usage">
+          <edgelabel>iSize</edgelabel>
+          <edgelabel>iUsageIndex</edgelabel>
+          <edgelabel>iOffset</edgelabel>
+        </childnode>
+        <childnode refid="11644" relation="usage">
+          <edgelabel>iType</edgelabel>
+        </childnode>
+      </node>
+      <node id="11645">
+        <label>unsigned int</label>
+      </node>
+      <node id="11647">
+        <label>unsigned char</label>
+      </node>
+      <node id="11628">
+        <label>TransformedShape</label>
+        <link refid="d2/d1b/classTransformedShape"/>
+        <childnode refid="11629" relation="usage">
+          <edgelabel>m_bvWorldAAB</edgelabel>
+        </childnode>
+        <childnode refid="11634" relation="usage">
+          <edgelabel>m_vTransform</edgelabel>
+        </childnode>
+        <childnode refid="11638" relation="usage">
+          <edgelabel>m_pShape</edgelabel>
+        </childnode>
+      </node>
+      <node id="11643">
+        <label>int</label>
+      </node>
+      <node id="11629">
+        <label>TBVAABox&lt; Scalar &gt;</label>
+        <link refid="d9/d90/classTBVAABox"/>
+        <childnode refid="11630" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11631" relation="usage">
+          <edgelabel>m_vExtents</edgelabel>
+        </childnode>
+        <childnode refid="11633" relation="usage">
+          <edgelabel>m_vCenter</edgelabel>
+        </childnode>
+      </node>
+      <node id="11627">
+        <label>ContactManifold</label>
+        <link refid="d2/d6f/classContactManifold"/>
+      </node>
+      <node id="11652">
+        <label>TransformedShapeConvex</label>
+        <link refid="d7/d30/classTransformedShapeConvex"/>
+        <childnode refid="11628" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11632">
+        <label>Scalar</label>
+      </node>
+      <node id="11644">
+        <label>VFFieldType</label>
+      </node>
+      <node id="11648">
+        <label>IndexBufferUsage</label>
+      </node>
+      <node id="11634">
+        <label>TTransform3&lt; Scalar &gt;</label>
+        <link refid="d0/d75/classTTransform3"/>
+        <childnode refid="11631" relation="usage">
+          <edgelabel>m_vScale</edgelabel>
+          <edgelabel>m_vInvScale</edgelabel>
+          <edgelabel>m_vInvTranslate</edgelabel>
+          <edgelabel>m_vTranslate</edgelabel>
+        </childnode>
+        <childnode refid="11635" relation="usage">
+          <edgelabel>m_matHMatrix</edgelabel>
+        </childnode>
+        <childnode refid="11636" relation="usage">
+          <edgelabel>m_matInvTransform</edgelabel>
+          <edgelabel>m_matTransform</edgelabel>
+        </childnode>
+        <childnode refid="11637" relation="usage">
+          <edgelabel>m_bIsUniformScale</edgelabel>
+          <edgelabel>m_bIsIdentity</edgelabel>
+          <edgelabel>m_bUpdateInverse</edgelabel>
+          <edgelabel>m_bIsRotScale</edgelabel>
+        </childnode>
+        <childnode refid="11634" relation="usage">
+          <edgelabel>Identity</edgelabel>
+        </childnode>
+      </node>
+      <node id="11631">
+        <label>TVector3&lt; Scalar &gt;</label>
+        <link refid="de/d40/classTVector3"/>
+        <childnode refid="11631" relation="usage">
+          <edgelabel>Null</edgelabel>
+          <edgelabel>eI</edgelabel>
+          <edgelabel>eJ</edgelabel>
+          <edgelabel>eK</edgelabel>
+        </childnode>
+        <childnode refid="11632" relation="usage">
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+          <edgelabel>Z</edgelabel>
+        </childnode>
+      </node>
+      <node id="11633">
+        <label>TVertex3&lt; Scalar &gt;</label>
+        <link refid="dc/d75/classTVertex3"/>
+        <childnode refid="11632" relation="usage">
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+          <edgelabel>Z</edgelabel>
+        </childnode>
+        <childnode refid="11633" relation="usage">
+          <edgelabel>Null</edgelabel>
+        </childnode>
+      </node>
+      <node id="11624">
+        <label>SingleSideVClip</label>
+        <link refid="d4/d72/classSingleSideVClip"/>
+        <childnode refid="11625" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11651" relation="usage">
+          <edgelabel>m_pClosestFeature</edgelabel>
+        </childnode>
+        <childnode refid="11637" relation="usage">
+          <edgelabel>m_bReverseNormal</edgelabel>
+        </childnode>
+        <childnode refid="11652" relation="usage">
+          <edgelabel>m_pConvex</edgelabel>
+          <edgelabel>m_pSphere</edgelabel>
+        </childnode>
+        <childnode refid="11653" relation="usage">
+          <edgelabel>m_vcLastRunState</edgelabel>
+          <edgelabel>m_vcState</edgelabel>
+        </childnode>
+      </node>
+      <node id="11638">
+        <label>Shape</label>
+        <link refid="de/d0a/classShape"/>
+        <childnode refid="11629" relation="usage">
+          <edgelabel>m_bvLocalAAB</edgelabel>
+        </childnode>
+        <childnode refid="11639" relation="usage">
+          <edgelabel>m_pMesh</edgelabel>
+        </childnode>
+      </node>
+      <node id="11642">
+        <label>VFFieldUsage</label>
+      </node>
+      <node id="11649">
+        <label>VertexBuffer</label>
+        <link refid="d7/d72/classVertexBuffer"/>
+        <childnode refid="11647" relation="usage">
+          <edgelabel>m_arrVertices</edgelabel>
+        </childnode>
+        <childnode refid="11643" relation="usage">
+          <edgelabel>m_iSize</edgelabel>
+          <edgelabel>m_iVertexCount</edgelabel>
+          <edgelabel>m_iVertexSize</edgelabel>
+        </childnode>
+        <childnode refid="11650" relation="usage">
+          <edgelabel>m_iUsage</edgelabel>
+        </childnode>
+      </node>
+      <node id="11637">
+        <label>bool</label>
+      </node>
+      <node id="11630">
+        <label>TBoundingVolume&lt; Scalar &gt;</label>
+        <link refid="d6/d19/classTBoundingVolume"/>
+      </node>
+      <node id="11625">
+        <label>NarrowPhase</label>
+        <link refid="dd/d93/classNarrowPhase"/>
+        <childnode refid="11626" relation="usage">
+          <edgelabel>ZeroTolerance</edgelabel>
+        </childnode>
+        <childnode refid="11627" relation="usage">
+          <edgelabel>m_pCollisionManifold</edgelabel>
+        </childnode>
+        <childnode refid="11628" relation="usage">
+          <edgelabel>m_pShapeA</edgelabel>
+          <edgelabel>m_pShapeB</edgelabel>
+        </childnode>
+      </node>
+      <node id="11646">
+        <label>IndexBuffer</label>
+        <link refid="dd/df7/classIndexBuffer"/>
+        <childnode refid="11647" relation="usage">
+          <edgelabel>m_arrIndices</edgelabel>
+        </childnode>
+        <childnode refid="11643" relation="usage">
+          <edgelabel>m_iIndexSize</edgelabel>
+          <edgelabel>m_iSize</edgelabel>
+          <edgelabel>m_iIndexCount</edgelabel>
+        </childnode>
+        <childnode refid="11648" relation="usage">
+          <edgelabel>m_iUsage</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/VClip/SingleSideVClip.h" line="52" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/VClip/SingleSideVClip.h" bodystart="51" bodyend="95"/>
+    <listofallmembers>
+      <member refid="d4/d72/classSingleSideVClip_1a317a320e1b15f3209e1f96bdf116b35a" prot="private" virt="non-virtual"><scope>SingleSideVClip</scope><name>_ClipVertex_E</name></member>
+      <member refid="d4/d72/classSingleSideVClip_1afbdaa2a87c1162555aee36f10ca45f51" prot="private" virt="non-virtual"><scope>SingleSideVClip</scope><name>_ClipVertex_F</name></member>
+      <member refid="d4/d72/classSingleSideVClip_1a575d4d2cd752b4894211deb1f7f2c13a" prot="private" virt="non-virtual"><scope>SingleSideVClip</scope><name>_ClipVertex_V</name></member>
+      <member refid="d4/d72/classSingleSideVClip_1ae2445fde4604f3faae2251f51761d062" prot="private" virt="non-virtual"><scope>SingleSideVClip</scope><name>_EscapeLocalMinimum</name></member>
+      <member refid="d4/d72/classSingleSideVClip_1ad1dd629ed909416d01ce75f68959539a" prot="private" virt="non-virtual"><scope>SingleSideVClip</scope><name>_GenerateContactPoints</name></member>
+      <member refid="d4/d72/classSingleSideVClip_1aba5f48d7c7a95b2b473ca75f3d190a19" prot="private" virt="non-virtual"><scope>SingleSideVClip</scope><name>_ProcessState_E</name></member>
+      <member refid="d4/d72/classSingleSideVClip_1ad808760afab3d905fe6b7cf059bb163c" prot="private" virt="non-virtual"><scope>SingleSideVClip</scope><name>_ProcessState_F</name></member>
+      <member refid="d4/d72/classSingleSideVClip_1a10cea8f1e9b53470a003e0ba78e1aa94" prot="private" virt="non-virtual"><scope>SingleSideVClip</scope><name>_ProcessState_V</name></member>
+      <member refid="d4/d72/classSingleSideVClip_1aa1006524ebb0fcd1803715afd55265c7" prot="public" virt="virtual"><scope>SingleSideVClip</scope><name>DetectCollision</name></member>
+      <member refid="d4/d72/classSingleSideVClip_1a0bfbc42daea35240b0f16c019317f5c4" prot="private" virt="non-virtual"><scope>SingleSideVClip</scope><name>Edge</name></member>
+      <member refid="dd/d93/classNarrowPhase_1abce7f163b35f9433ab6e35da57ae91a6" prot="public" virt="non-virtual"><scope>SingleSideVClip</scope><name>GetManifold</name></member>
+      <member refid="dd/d93/classNarrowPhase_1abc1a34b5130538ff93d61d62380b4fda" prot="public" virt="non-virtual"><scope>SingleSideVClip</scope><name>GetShapeA</name></member>
+      <member refid="dd/d93/classNarrowPhase_1a2e29939a57f222eff8ae14cf6da51154" prot="public" virt="non-virtual"><scope>SingleSideVClip</scope><name>GetShapeB</name></member>
+      <member refid="d4/d72/classSingleSideVClip_1a8cc82ad908e5eb178e948965349b55b4" prot="public" virt="virtual"><scope>SingleSideVClip</scope><name>Initialize</name></member>
+      <member refid="d4/d72/classSingleSideVClip_1af49d9566dc7962e768dd942b8e2f1568" prot="private" virt="non-virtual"><scope>SingleSideVClip</scope><name>m_bReverseNormal</name></member>
+      <member refid="d4/d72/classSingleSideVClip_1ae3da8e760c49d1837a4d4fa30cdd1eb3" prot="private" virt="non-virtual"><scope>SingleSideVClip</scope><name>m_pClosestFeature</name></member>
+      <member refid="dd/d93/classNarrowPhase_1a1e56bfb17b637586d3e50a53900096bd" prot="protected" virt="non-virtual"><scope>SingleSideVClip</scope><name>m_pCollisionManifold</name></member>
+      <member refid="d4/d72/classSingleSideVClip_1adce84e25bd5c0e405743da144061081b" prot="private" virt="non-virtual"><scope>SingleSideVClip</scope><name>m_pConvex</name></member>
+      <member refid="dd/d93/classNarrowPhase_1ad3b1f9ddd11f4305af588f493601fcdd" prot="protected" virt="non-virtual"><scope>SingleSideVClip</scope><name>m_pShapeA</name></member>
+      <member refid="dd/d93/classNarrowPhase_1acd16f875b1d782b34a8b495def982084" prot="protected" virt="non-virtual"><scope>SingleSideVClip</scope><name>m_pShapeB</name></member>
+      <member refid="d4/d72/classSingleSideVClip_1ab2adb59cc3a361c51836f14c45908f8f" prot="private" virt="non-virtual"><scope>SingleSideVClip</scope><name>m_pSphere</name></member>
+      <member refid="d4/d72/classSingleSideVClip_1a6182a53c2781fc6237cb0e5c882c97c2" prot="private" virt="non-virtual"><scope>SingleSideVClip</scope><name>m_vcLastRunState</name></member>
+      <member refid="d4/d72/classSingleSideVClip_1a81f8cb316098f769e3441c5af23460ca" prot="private" virt="non-virtual"><scope>SingleSideVClip</scope><name>m_vcState</name></member>
+      <member refid="dd/d93/classNarrowPhase_1a9b481554f0543f5ba3f2bbfb6cda72d1" prot="public" virt="non-virtual"><scope>SingleSideVClip</scope><name>NarrowPhase</name></member>
+      <member refid="d4/d72/classSingleSideVClip_1a6bbccbb9bb928881d4b0fecd4f592cda" prot="private" virt="non-virtual"><scope>SingleSideVClip</scope><name>Polygon</name></member>
+      <member refid="d4/d72/classSingleSideVClip_1a0d4bd74ea73a6f3609991bb3b94be3dd" prot="private" virt="non-virtual"><scope>SingleSideVClip</scope><name>Quad</name></member>
+      <member refid="d4/d72/classSingleSideVClip_1aa0d64eae29f5dd795f05387135a8c802" prot="public" virt="non-virtual"><scope>SingleSideVClip</scope><name>SingleSideVClip</name></member>
+      <member refid="d4/d72/classSingleSideVClip_1aed3b9beccb39d4b701d775da220b49d2" prot="private" virt="non-virtual"><scope>SingleSideVClip</scope><name>Triangle</name></member>
+      <member refid="d4/d72/classSingleSideVClip_1a200bc680d25937bbc059473806f017e6" prot="private" virt="non-virtual"><scope>SingleSideVClip</scope><name>Vertex</name></member>
+      <member refid="dd/d93/classNarrowPhase_1a2d47bbceffd2cea232b0a4746ed29ff6" prot="public" virt="non-virtual"><scope>SingleSideVClip</scope><name>ZeroTolerance</name></member>
+      <member refid="dd/d93/classNarrowPhase_1a281c7cadd2f5f7c248f689d28e25635d" prot="public" virt="virtual"><scope>SingleSideVClip</scope><name>~NarrowPhase</name></member>
+      <member refid="d4/d72/classSingleSideVClip_1a952e553d427b4419e2e839d5bf30d1a3" prot="public" virt="virtual"><scope>SingleSideVClip</scope><name>~SingleSideVClip</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

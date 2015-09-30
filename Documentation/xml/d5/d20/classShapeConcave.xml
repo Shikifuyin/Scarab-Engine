@@ -1,0 +1,318 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d5/d20/classShapeConcave" kind="class" prot="public" abstract="yes">
+    <compoundname>ShapeConcave</compoundname>
+    <basecompoundref refid="de/d0a/classShape" prot="public" virt="non-virtual">Shape</basecompoundref>
+    <derivedcompoundref refid="d6/d21/classShapeConcaveMesh" prot="public" virt="non-virtual">ShapeConcaveMesh</derivedcompoundref>
+    <derivedcompoundref refid="d6/d0b/classShapeDeformable" prot="public" virt="non-virtual">ShapeDeformable</derivedcompoundref>
+    <derivedcompoundref refid="dd/d57/classShapeHeightField" prot="public" virt="non-virtual">ShapeHeightField</derivedcompoundref>
+    <includes refid="de/d8f/Shape_8h" local="no">Shape.h</includes>
+    <innerclass refid="d1/d88/classShapeConcave_1_1HNodeQuery" prot="public">ShapeConcave::HNodeQuery</innerclass>
+    <innerclass refid="d7/d87/classShapeConcave_1_1HTriangleQuery" prot="public">ShapeConcave::HTriangleQuery</innerclass>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d5/d20/classShapeConcave_1a12328d065d4a1104d1ed5ca49323ef8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShapeConcave</definition>
+        <argsstring>(Mesh *pMesh)</argsstring>
+        <name>ShapeConcave</name>
+        <param>
+          <type><ref refid="d9/d5e/classMesh" kindref="compound">Mesh</ref> *</type>
+          <declname>pMesh</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Shape.h" line="126"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d20/classShapeConcave_1ad5938638619081947edf54caf1c4f8f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~ShapeConcave</definition>
+        <argsstring>()</argsstring>
+        <name>~ShapeConcave</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Shape.h" line="127"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d20/classShapeConcave_1ac3baa9962dd80301dd58bd6df833bbac" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void QueryNodes</definition>
+        <argsstring>(const BVAABox &amp;bvAABox, HNodeQuery *pQuery) const =0</argsstring>
+        <name>QueryNodes</name>
+        <reimplementedby refid="dd/d57/classShapeHeightField_1a139cace71ef43512ae869d8c8456fb11">QueryNodes</reimplementedby>
+        <reimplementedby refid="d6/d21/classShapeConcaveMesh_1a139cace71ef43512ae869d8c8456fb11">QueryNodes</reimplementedby>
+        <reimplementedby refid="d6/d0b/classShapeDeformable_1a139cace71ef43512ae869d8c8456fb11">QueryNodes</reimplementedby>
+        <param>
+          <type>const <ref refid="dc/d7d/BVAABox_8h_1a74b3a18f58c8e67e4b20257d8a928716" kindref="member">BVAABox</ref> &amp;</type>
+          <declname>bvAABox</declname>
+        </param>
+        <param>
+          <type><ref refid="d1/d88/classShapeConcave_1_1HNodeQuery" kindref="compound">HNodeQuery</ref> *</type>
+          <declname>pQuery</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Shape.h" line="148"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d20/classShapeConcave_1a5b484e519635920b34c34598e9749651" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void QueryTriangles</definition>
+        <argsstring>(const BVAABox &amp;bvAABox, HTriangleQuery *pQuery) const =0</argsstring>
+        <name>QueryTriangles</name>
+        <reimplementedby refid="dd/d57/classShapeHeightField_1a5dfa0f1de2bb1ebdefe819ebab129c6b">QueryTriangles</reimplementedby>
+        <reimplementedby refid="d6/d21/classShapeConcaveMesh_1a5dfa0f1de2bb1ebdefe819ebab129c6b">QueryTriangles</reimplementedby>
+        <reimplementedby refid="d6/d0b/classShapeDeformable_1a5dfa0f1de2bb1ebdefe819ebab129c6b">QueryTriangles</reimplementedby>
+        <param>
+          <type>const <ref refid="dc/d7d/BVAABox_8h_1a74b3a18f58c8e67e4b20257d8a928716" kindref="member">BVAABox</ref> &amp;</type>
+          <declname>bvAABox</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d87/classShapeConcave_1_1HTriangleQuery" kindref="compound">HTriangleQuery</ref> *</type>
+          <declname>pQuery</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Shape.h" line="169"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="11245">
+        <label>ShapeDeformable</label>
+        <link refid="d6/d0b/classShapeDeformable"/>
+        <childnode refid="11242" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11244">
+        <label>ShapeConcaveMesh</label>
+        <link refid="d6/d21/classShapeConcaveMesh"/>
+        <childnode refid="11242" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11242">
+        <label>ShapeConcave</label>
+        <link refid="d5/d20/classShapeConcave"/>
+        <childnode refid="11243" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11243">
+        <label>Shape</label>
+        <link refid="de/d0a/classShape"/>
+      </node>
+      <node id="11246">
+        <label>ShapeHeightField</label>
+        <link refid="dd/d57/classShapeHeightField"/>
+        <childnode refid="11242" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="11254">
+        <label>Mesh</label>
+        <link refid="d9/d5e/classMesh"/>
+        <childnode refid="11255" relation="usage">
+          <edgelabel>m_pVF</edgelabel>
+        </childnode>
+        <childnode refid="11258" relation="usage">
+          <edgelabel>m_iIndexOffset</edgelabel>
+          <edgelabel>m_iVertexOffset</edgelabel>
+        </childnode>
+        <childnode refid="11260" relation="usage">
+          <edgelabel>m_bDynamicUpdate</edgelabel>
+        </childnode>
+        <childnode refid="11262" relation="usage">
+          <edgelabel>m_pIB</edgelabel>
+        </childnode>
+        <childnode refid="11265" relation="usage">
+          <edgelabel>m_pVB</edgelabel>
+        </childnode>
+      </node>
+      <node id="11266">
+        <label>VertexBufferUsage</label>
+      </node>
+      <node id="11255">
+        <label>VertexFormat</label>
+        <link refid="da/dc2/classVertexFormat"/>
+        <childnode refid="11256" relation="usage">
+          <edgelabel>m_arrFields</edgelabel>
+        </childnode>
+        <childnode refid="11258" relation="usage">
+          <edgelabel>m_iSize</edgelabel>
+          <edgelabel>m_iFieldCount</edgelabel>
+          <edgelabel>m_arrUsageLUT</edgelabel>
+        </childnode>
+        <childnode refid="11260" relation="usage">
+          <edgelabel>m_bFinalized</edgelabel>
+        </childnode>
+        <childnode refid="11261" relation="usage">
+          <edgelabel>sm_arrComponentCount</edgelabel>
+          <edgelabel>sm_arrTypeSize</edgelabel>
+          <edgelabel>sm_arrComponentSize</edgelabel>
+        </childnode>
+      </node>
+      <node id="11256">
+        <label>VFField</label>
+        <link refid="de/d92/structVFField"/>
+        <childnode refid="11257" relation="usage">
+          <edgelabel>iUsage</edgelabel>
+        </childnode>
+        <childnode refid="11258" relation="usage">
+          <edgelabel>iSize</edgelabel>
+          <edgelabel>iUsageIndex</edgelabel>
+          <edgelabel>iOffset</edgelabel>
+        </childnode>
+        <childnode refid="11259" relation="usage">
+          <edgelabel>iType</edgelabel>
+        </childnode>
+      </node>
+      <node id="11261">
+        <label>unsigned int</label>
+      </node>
+      <node id="11263">
+        <label>unsigned char</label>
+      </node>
+      <node id="11247">
+        <label>ShapeConcave</label>
+        <link refid="d5/d20/classShapeConcave"/>
+        <childnode refid="11248" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11258">
+        <label>int</label>
+      </node>
+      <node id="11249">
+        <label>TBVAABox&lt; Scalar &gt;</label>
+        <link refid="d9/d90/classTBVAABox"/>
+        <childnode refid="11250" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11251" relation="usage">
+          <edgelabel>m_vExtents</edgelabel>
+        </childnode>
+        <childnode refid="11253" relation="usage">
+          <edgelabel>m_vCenter</edgelabel>
+        </childnode>
+      </node>
+      <node id="11252">
+        <label>Scalar</label>
+      </node>
+      <node id="11259">
+        <label>VFFieldType</label>
+      </node>
+      <node id="11264">
+        <label>IndexBufferUsage</label>
+      </node>
+      <node id="11251">
+        <label>TVector3&lt; Scalar &gt;</label>
+        <link refid="de/d40/classTVector3"/>
+        <childnode refid="11251" relation="usage">
+          <edgelabel>Null</edgelabel>
+          <edgelabel>eI</edgelabel>
+          <edgelabel>eJ</edgelabel>
+          <edgelabel>eK</edgelabel>
+        </childnode>
+        <childnode refid="11252" relation="usage">
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+          <edgelabel>Z</edgelabel>
+        </childnode>
+      </node>
+      <node id="11253">
+        <label>TVertex3&lt; Scalar &gt;</label>
+        <link refid="dc/d75/classTVertex3"/>
+        <childnode refid="11252" relation="usage">
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+          <edgelabel>Z</edgelabel>
+        </childnode>
+        <childnode refid="11253" relation="usage">
+          <edgelabel>Null</edgelabel>
+        </childnode>
+      </node>
+      <node id="11248">
+        <label>Shape</label>
+        <link refid="de/d0a/classShape"/>
+        <childnode refid="11249" relation="usage">
+          <edgelabel>m_bvLocalAAB</edgelabel>
+        </childnode>
+        <childnode refid="11254" relation="usage">
+          <edgelabel>m_pMesh</edgelabel>
+        </childnode>
+      </node>
+      <node id="11257">
+        <label>VFFieldUsage</label>
+      </node>
+      <node id="11265">
+        <label>VertexBuffer</label>
+        <link refid="d7/d72/classVertexBuffer"/>
+        <childnode refid="11263" relation="usage">
+          <edgelabel>m_arrVertices</edgelabel>
+        </childnode>
+        <childnode refid="11258" relation="usage">
+          <edgelabel>m_iSize</edgelabel>
+          <edgelabel>m_iVertexCount</edgelabel>
+          <edgelabel>m_iVertexSize</edgelabel>
+        </childnode>
+        <childnode refid="11266" relation="usage">
+          <edgelabel>m_iUsage</edgelabel>
+        </childnode>
+      </node>
+      <node id="11260">
+        <label>bool</label>
+      </node>
+      <node id="11250">
+        <label>TBoundingVolume&lt; Scalar &gt;</label>
+        <link refid="d6/d19/classTBoundingVolume"/>
+      </node>
+      <node id="11262">
+        <label>IndexBuffer</label>
+        <link refid="dd/df7/classIndexBuffer"/>
+        <childnode refid="11263" relation="usage">
+          <edgelabel>m_arrIndices</edgelabel>
+        </childnode>
+        <childnode refid="11258" relation="usage">
+          <edgelabel>m_iIndexSize</edgelabel>
+          <edgelabel>m_iSize</edgelabel>
+          <edgelabel>m_iIndexCount</edgelabel>
+        </childnode>
+        <childnode refid="11264" relation="usage">
+          <edgelabel>m_iUsage</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Shape.h" line="124" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Shape.h" bodystart="123" bodyend="170"/>
+    <listofallmembers>
+      <member refid="de/d0a/classShape_1a912b5df73c43efbe2d1f01088875e0f5" prot="public" virt="pure-virtual"><scope>ShapeConcave</scope><name>ComputeMassProperties</name></member>
+      <member refid="de/d0a/classShape_1a39e02093801770e75999c765e55a27e5" prot="public" virt="non-virtual"><scope>ShapeConcave</scope><name>GetAAB</name></member>
+      <member refid="de/d0a/classShape_1abdecaac893d9dedf89328c62a3fb66c9" prot="public" virt="non-virtual"><scope>ShapeConcave</scope><name>GetMesh</name></member>
+      <member refid="de/d0a/classShape_1aecd8bd495d73d62925318fd6cb97c371" prot="public" virt="pure-virtual"><scope>ShapeConcave</scope><name>GetType</name></member>
+      <member refid="de/d0a/classShape_1a88278eb8de82740a5624f8d6f9466a8f" prot="public" virt="non-virtual"><scope>ShapeConcave</scope><name>IsConcave</name></member>
+      <member refid="de/d0a/classShape_1a2b914288d63c06683ce88f35f6dcfd08" prot="public" virt="non-virtual"><scope>ShapeConcave</scope><name>IsConvex</name></member>
+      <member refid="de/d0a/classShape_1a20ff026aba888333e673bc6fda51f661" prot="public" virt="non-virtual"><scope>ShapeConcave</scope><name>IsDeformable</name></member>
+      <member refid="de/d0a/classShape_1a75d7ab1a1411adeb33ddc30bcda580e4" prot="protected" virt="non-virtual"><scope>ShapeConcave</scope><name>m_bvLocalAAB</name></member>
+      <member refid="de/d0a/classShape_1ac4e066c3fc28a8693e18e251bf681607" prot="protected" virt="non-virtual"><scope>ShapeConcave</scope><name>m_pMesh</name></member>
+      <member refid="d5/d20/classShapeConcave_1ac3baa9962dd80301dd58bd6df833bbac" prot="public" virt="pure-virtual"><scope>ShapeConcave</scope><name>QueryNodes</name></member>
+      <member refid="d5/d20/classShapeConcave_1a5b484e519635920b34c34598e9749651" prot="public" virt="pure-virtual"><scope>ShapeConcave</scope><name>QueryTriangles</name></member>
+      <member refid="de/d0a/classShape_1a6e60807bb9ba2b970a0fe337f6b3673c" prot="public" virt="non-virtual"><scope>ShapeConcave</scope><name>Shape</name></member>
+      <member refid="d5/d20/classShapeConcave_1a12328d065d4a1104d1ed5ca49323ef8b" prot="public" virt="non-virtual"><scope>ShapeConcave</scope><name>ShapeConcave</name></member>
+      <member refid="de/d0a/classShape_1ae7755ce81583b9f776b857856f7cc218" prot="public" virt="virtual"><scope>ShapeConcave</scope><name>~Shape</name></member>
+      <member refid="d5/d20/classShapeConcave_1ad5938638619081947edf54caf1c4f8f5" prot="public" virt="virtual"><scope>ShapeConcave</scope><name>~ShapeConcave</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

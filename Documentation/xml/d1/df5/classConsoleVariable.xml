@@ -1,0 +1,281 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d1/df5/classConsoleVariable" kind="class" prot="public">
+    <compoundname>ConsoleVariable</compoundname>
+    <includes refid="da/dbc/ConsoleEnvironment_8h" local="no">ConsoleEnvironment.h</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="d1/df5/classConsoleVariable_1a17bf15ecaac1307857f80cd8a8d0f783" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="d1/df5/classConsoleVariable" kindref="compound">ConsoleVariable</ref></type>
+        <definition>const ConsoleVariable Null</definition>
+        <argsstring></argsstring>
+        <name>Null</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleEnvironment.h" line="92" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleEnvironment.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="d1/df5/classConsoleVariable_1a982aaa9da0fa85256d1013f4c777a669" prot="protected" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref></type>
+        <definition>GChar m_strName[CONSOLEVAR_NAME_LENGTH]</definition>
+        <argsstring>[CONSOLEVAR_NAME_LENGTH]</argsstring>
+        <name>m_strName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleEnvironment.h" line="113" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleEnvironment.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/df5/classConsoleVariable_1acbfe4561663538de35e619c952dfa402" prot="protected" static="no" mutable="no">
+        <type><ref refid="da/dbc/ConsoleEnvironment_8h_1afa47f260100eb5410aae7e7bafc2ae9f" kindref="member">ConsoleVariableType</ref></type>
+        <definition>ConsoleVariableType m_iType</definition>
+        <argsstring></argsstring>
+        <name>m_iType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleEnvironment.h" line="115" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleEnvironment.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/df5/classConsoleVariable_1ab51024589b6ae72858f659d8e981b15b" prot="protected" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> *</type>
+        <definition>Void* m_pValue</definition>
+        <argsstring></argsstring>
+        <name>m_pValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleEnvironment.h" line="116" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleEnvironment.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d1/df5/classConsoleVariable_1a91212ca5d90a23a7d0621aa961b0a451" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ConsoleVariable</definition>
+        <argsstring>(const GChar *strName)</argsstring>
+        <name>ConsoleVariable</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleEnvironment.h" line="94"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/df5/classConsoleVariable_1ad0cb00c5f7effffa60e537e0c56625d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ConsoleVariable</definition>
+        <argsstring>(const GChar *strName, ConsoleVariableType iType, Void *pValue)</argsstring>
+        <name>ConsoleVariable</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strName</declname>
+        </param>
+        <param>
+          <type><ref refid="da/dbc/ConsoleEnvironment_8h_1afa47f260100eb5410aae7e7bafc2ae9f" kindref="member">ConsoleVariableType</ref></type>
+          <declname>iType</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> *</type>
+          <declname>pValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleEnvironment.h" line="95"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/df5/classConsoleVariable_1ac1982440e0dd3a808ef9fe1e704133ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~ConsoleVariable</definition>
+        <argsstring>()</argsstring>
+        <name>~ConsoleVariable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleEnvironment.h" line="96"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/df5/classConsoleVariable_1acb24949ad36a8ed7b0008515d78ac5ae" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+        <definition>const GChar* GetName</definition>
+        <argsstring>() const </argsstring>
+        <name>GetName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleEnvironment.h" line="103"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/df5/classConsoleVariable_1a85dde4b438f1ca9a51aa2a484582a38f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="da/dbc/ConsoleEnvironment_8h_1afa47f260100eb5410aae7e7bafc2ae9f" kindref="member">ConsoleVariableType</ref></type>
+        <definition>ConsoleVariableType GetType</definition>
+        <argsstring>() const </argsstring>
+        <name>GetType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleEnvironment.h" line="106"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/df5/classConsoleVariable_1a12ddd7e951a53b0ceb9fbd3c3068bc10" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> *</type>
+        <definition>Void* GetValue</definition>
+        <argsstring>() const </argsstring>
+        <name>GetValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleEnvironment.h" line="107"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/df5/classConsoleVariable_1a740b5510e334de92d838d1bb36b99461" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Affect</definition>
+        <argsstring>(ConsoleVariableType iType, Void *pValue)</argsstring>
+        <name>Affect</name>
+        <param>
+          <type><ref refid="da/dbc/ConsoleEnvironment_8h_1afa47f260100eb5410aae7e7bafc2ae9f" kindref="member">ConsoleVariableType</ref></type>
+          <declname>iType</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> *</type>
+          <declname>pValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleEnvironment.h" line="109"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/df5/classConsoleVariable_1a9e5a8f9e212127f22c273bd2744f26ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Affect</definition>
+        <argsstring>(ConsoleVariable *pValue)</argsstring>
+        <name>Affect</name>
+        <param>
+          <type><ref refid="d1/df5/classConsoleVariable" kindref="compound">ConsoleVariable</ref> *</type>
+          <declname>pValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleEnvironment.h" line="110"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="d1/df5/classConsoleVariable_1ac58d0b8784bb16ecb32417bf88467759" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+        <definition>static const GChar* GetTypeName</definition>
+        <argsstring>(ConsoleVariableType iTypeValue)</argsstring>
+        <name>GetTypeName</name>
+        <param>
+          <type><ref refid="da/dbc/ConsoleEnvironment_8h_1afa47f260100eb5410aae7e7bafc2ae9f" kindref="member">ConsoleVariableType</ref></type>
+          <declname>iTypeValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleEnvironment.h" line="99"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/df5/classConsoleVariable_1acc0a1a03cffc9402e32c40ffc9442cb8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="da/dbc/ConsoleEnvironment_8h_1afa47f260100eb5410aae7e7bafc2ae9f" kindref="member">ConsoleVariableType</ref></type>
+        <definition>static ConsoleVariableType GetTypeValue</definition>
+        <argsstring>(const GChar *strTypeName)</argsstring>
+        <name>GetTypeValue</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strTypeName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleEnvironment.h" line="100"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1399">
+        <label>ConsoleVariableType</label>
+      </node>
+      <node id="1398">
+        <label>ConsoleVariable</label>
+        <link refid="d1/df5/classConsoleVariable"/>
+        <childnode refid="1399" relation="usage">
+          <edgelabel>m_iType</edgelabel>
+        </childnode>
+        <childnode refid="1400" relation="usage">
+          <edgelabel>m_strName</edgelabel>
+        </childnode>
+        <childnode refid="1398" relation="usage">
+          <edgelabel>Null</edgelabel>
+        </childnode>
+        <childnode refid="1401" relation="usage">
+          <edgelabel>m_pValue</edgelabel>
+        </childnode>
+      </node>
+      <node id="1400">
+        <label>char</label>
+      </node>
+      <node id="1401">
+        <label>Void *</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleEnvironment.h" line="90" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ConsoleEnvironment.h" bodystart="89" bodyend="117"/>
+    <listofallmembers>
+      <member refid="d1/df5/classConsoleVariable_1a740b5510e334de92d838d1bb36b99461" prot="public" virt="non-virtual"><scope>ConsoleVariable</scope><name>Affect</name></member>
+      <member refid="d1/df5/classConsoleVariable_1a9e5a8f9e212127f22c273bd2744f26ff" prot="public" virt="non-virtual"><scope>ConsoleVariable</scope><name>Affect</name></member>
+      <member refid="d1/df5/classConsoleVariable_1a91212ca5d90a23a7d0621aa961b0a451" prot="public" virt="non-virtual"><scope>ConsoleVariable</scope><name>ConsoleVariable</name></member>
+      <member refid="d1/df5/classConsoleVariable_1ad0cb00c5f7effffa60e537e0c56625d8" prot="public" virt="non-virtual"><scope>ConsoleVariable</scope><name>ConsoleVariable</name></member>
+      <member refid="d1/df5/classConsoleVariable_1acb24949ad36a8ed7b0008515d78ac5ae" prot="public" virt="non-virtual"><scope>ConsoleVariable</scope><name>GetName</name></member>
+      <member refid="d1/df5/classConsoleVariable_1a85dde4b438f1ca9a51aa2a484582a38f" prot="public" virt="non-virtual"><scope>ConsoleVariable</scope><name>GetType</name></member>
+      <member refid="d1/df5/classConsoleVariable_1ac58d0b8784bb16ecb32417bf88467759" prot="public" virt="non-virtual"><scope>ConsoleVariable</scope><name>GetTypeName</name></member>
+      <member refid="d1/df5/classConsoleVariable_1acc0a1a03cffc9402e32c40ffc9442cb8" prot="public" virt="non-virtual"><scope>ConsoleVariable</scope><name>GetTypeValue</name></member>
+      <member refid="d1/df5/classConsoleVariable_1a12ddd7e951a53b0ceb9fbd3c3068bc10" prot="public" virt="non-virtual"><scope>ConsoleVariable</scope><name>GetValue</name></member>
+      <member refid="d1/df5/classConsoleVariable_1acbfe4561663538de35e619c952dfa402" prot="protected" virt="non-virtual"><scope>ConsoleVariable</scope><name>m_iType</name></member>
+      <member refid="d1/df5/classConsoleVariable_1ab51024589b6ae72858f659d8e981b15b" prot="protected" virt="non-virtual"><scope>ConsoleVariable</scope><name>m_pValue</name></member>
+      <member refid="d1/df5/classConsoleVariable_1a982aaa9da0fa85256d1013f4c777a669" prot="protected" virt="non-virtual"><scope>ConsoleVariable</scope><name>m_strName</name></member>
+      <member refid="d1/df5/classConsoleVariable_1a17bf15ecaac1307857f80cd8a8d0f783" prot="public" virt="non-virtual"><scope>ConsoleVariable</scope><name>Null</name></member>
+      <member refid="d1/df5/classConsoleVariable_1ac1982440e0dd3a808ef9fe1e704133ea" prot="public" virt="non-virtual"><scope>ConsoleVariable</scope><name>~ConsoleVariable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

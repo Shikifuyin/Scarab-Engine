@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d8/d56/structRDB__StateData" kind="struct" prot="public">
+    <compoundname>RDB_StateData</compoundname>
+    <includes refid="d5/dae/RDBFileStructure_8h" local="no">RDBFileStructure.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d8/d56/structRDB__StateData_1a1f4ffb9263a301a6c87cf34e03d18c5b" prot="public" static="no" mutable="no">
+        <type><ref refid="d8/d40/structRDB__BlockAllocator" kindref="compound">RDB_BlockAllocator</ref></type>
+        <definition>RDB_BlockAllocator dbBlockAllocator</definition>
+        <argsstring></argsstring>
+        <name>dbBlockAllocator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBFileStructure.h" line="260" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBFileStructure.h" bodystart="260" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d56/structRDB__StateData_1a776af5d2e8a8d9a5510ad1f8d32eb4a5" prot="public" static="no" mutable="no">
+        <type><ref refid="d2/d33/structRDB__ChunkAllocator" kindref="compound">RDB_ChunkAllocator</ref></type>
+        <definition>RDB_ChunkAllocator dbChunkAllocator[RDB_CHUNK_COUNT]</definition>
+        <argsstring>[RDB_CHUNK_COUNT]</argsstring>
+        <name>dbChunkAllocator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBFileStructure.h" line="263" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBFileStructure.h" bodystart="263" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d56/structRDB__StateData_1a2c6151dd890b93bbf68052f15899984e" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/df5/structRDB__ChunkPtr" kindref="compound">RDB_ChunkPtr</ref></type>
+        <definition>RDB_ChunkPtr dbChunkTable[RDB_CHUNKTABLE_COUNT]</definition>
+        <argsstring>[RDB_CHUNKTABLE_COUNT]</argsstring>
+        <name>dbChunkTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBFileStructure.h" line="266" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBFileStructure.h" bodystart="266" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d56/structRDB__StateData_1afce801a83ffb4b95a94290faccefc40d" prot="public" static="no" mutable="no">
+        <type><ref refid="d5/dae/RDBFileStructure_8h_1ad3292a503b9997c14123d22beab510f3" kindref="member">RDB_DirectoryID</ref></type>
+        <definition>RDB_DirectoryID dbNextDirectoryID</definition>
+        <argsstring></argsstring>
+        <name>dbNextDirectoryID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBFileStructure.h" line="269" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBFileStructure.h" bodystart="269" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="10226">
+        <label>RDB_BlockAllocator</label>
+        <link refid="d8/d40/structRDB__BlockAllocator"/>
+        <childnode refid="10227" relation="usage">
+          <edgelabel>iTotalBlocks</edgelabel>
+          <edgelabel>iFreeBlocks</edgelabel>
+        </childnode>
+        <childnode refid="10225" relation="usage">
+          <edgelabel>idNextFreeBlock</edgelabel>
+        </childnode>
+      </node>
+      <node id="10228">
+        <label>RDB_ChunkAllocator</label>
+        <link refid="d2/d33/structRDB__ChunkAllocator"/>
+        <childnode refid="10223" relation="usage">
+          <edgelabel>pNextFreeChunk</edgelabel>
+        </childnode>
+        <childnode refid="10227" relation="usage">
+          <edgelabel>iBlockCount</edgelabel>
+          <edgelabel>iFreeChunks</edgelabel>
+          <edgelabel>iTotalChunks</edgelabel>
+        </childnode>
+        <childnode refid="10225" relation="usage">
+          <edgelabel>idFirstBlock</edgelabel>
+          <edgelabel>idLastBlock</edgelabel>
+        </childnode>
+      </node>
+      <node id="10225">
+        <label>unsigned int</label>
+      </node>
+      <node id="10224">
+        <label>RDB_ChunkType</label>
+      </node>
+      <node id="10227">
+        <label>int</label>
+      </node>
+      <node id="10223">
+        <label>RDB_ChunkPtr</label>
+        <link refid="d1/df5/structRDB__ChunkPtr"/>
+        <childnode refid="10224" relation="usage">
+          <edgelabel>iType</edgelabel>
+        </childnode>
+        <childnode refid="10225" relation="usage">
+          <edgelabel>idChunk</edgelabel>
+          <edgelabel>idBlock</edgelabel>
+        </childnode>
+      </node>
+      <node id="10222">
+        <label>RDB_StateData</label>
+        <link refid="d8/d56/structRDB__StateData"/>
+        <childnode refid="10223" relation="usage">
+          <edgelabel>dbChunkTable</edgelabel>
+        </childnode>
+        <childnode refid="10226" relation="usage">
+          <edgelabel>dbBlockAllocator</edgelabel>
+        </childnode>
+        <childnode refid="10225" relation="usage">
+          <edgelabel>dbNextDirectoryID</edgelabel>
+        </childnode>
+        <childnode refid="10228" relation="usage">
+          <edgelabel>dbChunkAllocator</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBFileStructure.h" line="258" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBFileStructure.h" bodystart="257" bodyend="270"/>
+    <listofallmembers>
+      <member refid="d8/d56/structRDB__StateData_1a1f4ffb9263a301a6c87cf34e03d18c5b" prot="public" virt="non-virtual"><scope>RDB_StateData</scope><name>dbBlockAllocator</name></member>
+      <member refid="d8/d56/structRDB__StateData_1a776af5d2e8a8d9a5510ad1f8d32eb4a5" prot="public" virt="non-virtual"><scope>RDB_StateData</scope><name>dbChunkAllocator</name></member>
+      <member refid="d8/d56/structRDB__StateData_1a2c6151dd890b93bbf68052f15899984e" prot="public" virt="non-virtual"><scope>RDB_StateData</scope><name>dbChunkTable</name></member>
+      <member refid="d8/d56/structRDB__StateData_1afce801a83ffb4b95a94290faccefc40d" prot="public" virt="non-virtual"><scope>RDB_StateData</scope><name>dbNextDirectoryID</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

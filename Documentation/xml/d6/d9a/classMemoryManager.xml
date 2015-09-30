@@ -1,0 +1,1523 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d6/d9a/classMemoryManager" kind="class" prot="public">
+    <compoundname>MemoryManager</compoundname>
+    <includes refid="d7/d7b/MemoryManager_8h" local="no">MemoryManager.h</includes>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="d6/d9a/classMemoryManager_1a69c6b713e3da42cbc26a07a2651251a1" prot="private" static="yes" mutable="no">
+        <type><ref refid="d6/d9a/classMemoryManager" kindref="compound">MemoryManager</ref> *</type>
+        <definition>MemoryManager* sm_pInstance</definition>
+        <argsstring></argsstring>
+        <name>sm_pInstance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="180" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d6/d9a/classMemoryManager_1ac083734e653cc8e33d5723655c004cc1" prot="private" static="no" mutable="no">
+        <type><ref refid="d1/d54/classPoolAllocator" kindref="compound">PoolAllocator</ref></type>
+        <definition>PoolAllocator m_StackFactory</definition>
+        <argsstring></argsstring>
+        <name>m_StackFactory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="255" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" bodystart="255" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d9a/classMemoryManager_1a0f2a15357bfb686fedf3e9e22f1b3375" prot="private" static="no" mutable="no">
+        <type><ref refid="d1/d54/classPoolAllocator" kindref="compound">PoolAllocator</ref></type>
+        <definition>PoolAllocator m_PoolFactory</definition>
+        <argsstring></argsstring>
+        <name>m_PoolFactory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="256" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" bodystart="256" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d9a/classMemoryManager_1a2d694b926cc962c45b083efcdab3ab70" prot="private" static="no" mutable="no">
+        <type><ref refid="d1/d54/classPoolAllocator" kindref="compound">PoolAllocator</ref></type>
+        <definition>PoolAllocator m_BreakFactory</definition>
+        <argsstring></argsstring>
+        <name>m_BreakFactory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="257" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" bodystart="257" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d9a/classMemoryManager_1a9c254354509f9a1d5a21316cf3cee0d0" prot="private" static="no" mutable="no">
+        <type><ref refid="d1/d54/classPoolAllocator" kindref="compound">PoolAllocator</ref></type>
+        <definition>PoolAllocator m_HeapFactory</definition>
+        <argsstring></argsstring>
+        <name>m_HeapFactory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="258" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" bodystart="258" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d9a/classMemoryManager_1ac58a09b459f7ccaf64c544564a63d76e" prot="private" static="no" mutable="no">
+        <type><ref refid="de/d50/structMemoryContext" kindref="compound">MemoryContext</ref></type>
+        <definition>MemoryContext m_SharedContext</definition>
+        <argsstring></argsstring>
+        <name>m_SharedContext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="261" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" bodystart="261" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d9a/classMemoryManager_1af4fd0149f10689ff5deb76a4e62d5dbe" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iContextCount</definition>
+        <argsstring></argsstring>
+        <name>m_iContextCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="263" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" bodystart="263" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d9a/classMemoryManager_1af2d1fcc82a384507702c49a8ba751486" prot="private" static="no" mutable="no">
+        <type><ref refid="de/d50/structMemoryContext" kindref="compound">MemoryContext</ref></type>
+        <definition>MemoryContext m_arrContexts[MEMORY_TABLE_SIZE]</definition>
+        <argsstring>[MEMORY_TABLE_SIZE]</argsstring>
+        <name>m_arrContexts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="264" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" bodystart="264" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d9a/classMemoryManager_1a265d0fec8bd4632ecbfa1ce4b4afc234" prot="private" static="no" mutable="no">
+        <type><ref refid="d7/d7b/MemoryManager_8h_1af31b42dd6507009f3d5e5f71b991260b" kindref="member">MemoryContextID</ref></type>
+        <definition>MemoryContextID m_idSelected</definition>
+        <argsstring></argsstring>
+        <name>m_idSelected</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="266" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" bodystart="266" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d9a/classMemoryManager_1ae4f1c3cf2e7be63523126120c9d857fd" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iSwitchingStackTop</definition>
+        <argsstring></argsstring>
+        <name>m_iSwitchingStackTop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="269" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" bodystart="269" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d9a/classMemoryManager_1a4796537a782cbf19b4da212642204c41" prot="private" static="no" mutable="no">
+        <type><ref refid="d4/d7c/structSwitchStackItem" kindref="compound">SwitchStackItem</ref></type>
+        <definition>SwitchStackItem m_arrSwitchingStack[MEMORYSWITCH_MAX]</definition>
+        <argsstring>[MEMORYSWITCH_MAX]</argsstring>
+        <name>m_arrSwitchingStack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="270" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" bodystart="270" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d9a/classMemoryManager_1afa27e1abc110fc21cbd9cb63fbeed093" prot="private" static="no" mutable="no">
+        <type><ref refid="db/dc5/structTraceRecord" kindref="compound">TraceRecord</ref></type>
+        <definition>TraceRecord m_arrTraceRecords[MEMORYTRACE_MAX]</definition>
+        <argsstring>[MEMORYTRACE_MAX]</argsstring>
+        <name>m_arrTraceRecords</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="278" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" bodystart="278" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d9a/classMemoryManager_1aa26a6b53a84d226cc239260311123747" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iTraceCount</definition>
+        <argsstring></argsstring>
+        <name>m_iTraceCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="279" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" bodystart="279" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d9a/classMemoryManager_1ad87a06ab4001eb39f0e5d1312f288dd2" prot="private" static="no" mutable="no">
+        <type><ref refid="d7/d7b/MemoryManager_8h_1a4aab4c54cb3be765402c6b52499f8222" kindref="member">TraceFilter</ref></type>
+        <definition>TraceFilter m_iTraceFilter</definition>
+        <argsstring></argsstring>
+        <name>m_iTraceFilter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="280" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" bodystart="280" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d9a/classMemoryManager_1a70c2666f3782e018e7211cd9788b6505" prot="private" static="no" mutable="no">
+        <type><ref refid="d7/d7b/MemoryManager_8h_1af31b42dd6507009f3d5e5f71b991260b" kindref="member">MemoryContextID</ref></type>
+        <definition>MemoryContextID m_idTraceContext</definition>
+        <argsstring></argsstring>
+        <name>m_idTraceContext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="281" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" bodystart="281" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d9a/classMemoryManager_1ab4362e370edc3f03391e0cecb4461861" prot="private" static="no" mutable="no">
+        <type><ref refid="d7/d7b/MemoryManager_8h_1aec941861fea8dd1ae50294f05724a436" kindref="member">MemoryAllocatorID</ref></type>
+        <definition>MemoryAllocatorID m_idTraceAllocator</definition>
+        <argsstring></argsstring>
+        <name>m_idTraceAllocator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="282" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" bodystart="282" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d9a/classMemoryManager_1a82170f11c790336a5e8e76cea9f74f4e" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool m_bTracing</definition>
+        <argsstring></argsstring>
+        <name>m_bTracing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="283" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" bodystart="283" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1a2ed8631063d066931e92495cbc2187ab" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>static Void Create</definition>
+        <argsstring>()</argsstring>
+        <name>Create</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="171"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1a2eb513c4973295259cfbac797e1a0aaf" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>static Void Destroy</definition>
+        <argsstring>()</argsstring>
+        <name>Destroy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="172"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1a9b89c3958a125811ebf84da0c179f247" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d6/d9a/classMemoryManager" kindref="compound">MemoryManager</ref> &amp;</type>
+        <definition>static MemoryManager&amp; GetInstance</definition>
+        <argsstring>()</argsstring>
+        <name>GetInstance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="173"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1a92add7bd9fe28d7d7d6fdcb6118a0a20" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d6/d9a/classMemoryManager" kindref="compound">MemoryManager</ref> *</type>
+        <definition>static MemoryManager* GetInstancePtr</definition>
+        <argsstring>()</argsstring>
+        <name>GetInstancePtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="174"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1a346e19542a2c0ebd640b8823008b5662" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MemoryManager</definition>
+        <argsstring>()</argsstring>
+        <name>MemoryManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="177"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1aaf027621b84e55b6a9a6d403a9e9c477" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~MemoryManager</definition>
+        <argsstring>()</argsstring>
+        <name>~MemoryManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="178"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1a779de38d1648663b82003159589ff95c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d0/de0/classMemoryAllocator" kindref="compound">MemoryAllocator</ref> *</type>
+        <definition>MemoryAllocator* _GetAllocator</definition>
+        <argsstring>()</argsstring>
+        <name>_GetAllocator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="234"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1ad2838d1164c5fd4cd1be6236c71c6244" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt _HashName</definition>
+        <argsstring>(const GChar *strName, UInt iTableSize) const </argsstring>
+        <name>_HashName</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strName</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iTableSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="237"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1a2b324fa8332bda1a727cc5c2e6027ef4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="de/d50/structMemoryContext" kindref="compound">MemoryContext</ref> *</type>
+        <definition>MemoryContext* _MemoryContext_Get</definition>
+        <argsstring>(MemoryContextID idContext)</argsstring>
+        <name>_MemoryContext_Get</name>
+        <param>
+          <type><ref refid="d7/d7b/MemoryManager_8h_1af31b42dd6507009f3d5e5f71b991260b" kindref="member">MemoryContextID</ref></type>
+          <declname>idContext</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="239"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1af84b6ba72c24ea88ecfe5b4af048c7fe" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d4/df1/structAllocatorData" kindref="compound">AllocatorData</ref> *</type>
+        <definition>AllocatorData* _MemoryAllocator_Get</definition>
+        <argsstring>(MemoryContext *pContext, MemoryAllocatorID idAllocator)</argsstring>
+        <name>_MemoryAllocator_Get</name>
+        <param>
+          <type><ref refid="de/d50/structMemoryContext" kindref="compound">MemoryContext</ref> *</type>
+          <declname>pContext</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d7b/MemoryManager_8h_1aec941861fea8dd1ae50294f05724a436" kindref="member">MemoryAllocatorID</ref></type>
+          <declname>idAllocator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="240"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1a92f08f94eccf4f5518aaecf80fee3313" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d7/d7b/MemoryManager_8h_1af31b42dd6507009f3d5e5f71b991260b" kindref="member">MemoryContextID</ref></type>
+        <definition>MemoryContextID _MemoryContext_Add</definition>
+        <argsstring>(const GChar *strName)</argsstring>
+        <name>_MemoryContext_Add</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="242"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1ace563a350ace63656189d1a648eda43b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d7/d7b/MemoryManager_8h_1aec941861fea8dd1ae50294f05724a436" kindref="member">MemoryAllocatorID</ref></type>
+        <definition>MemoryAllocatorID _MemoryAllocator_Add</definition>
+        <argsstring>(MemoryContext *pContext, const GChar *strName)</argsstring>
+        <name>_MemoryAllocator_Add</name>
+        <param>
+          <type><ref refid="de/d50/structMemoryContext" kindref="compound">MemoryContext</ref> *</type>
+          <declname>pContext</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="243"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1a30e09caf2a3c6f4378c1d2100c033680" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _MemoryContext_Remove</definition>
+        <argsstring>(MemoryContextID idContext)</argsstring>
+        <name>_MemoryContext_Remove</name>
+        <param>
+          <type><ref refid="d7/d7b/MemoryManager_8h_1af31b42dd6507009f3d5e5f71b991260b" kindref="member">MemoryContextID</ref></type>
+          <declname>idContext</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="244"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1a091ec00e013a2ef257197b6d2c152534" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _MemoryAllocator_Remove</definition>
+        <argsstring>(MemoryContext *pContext, MemoryAllocatorID idAllocator)</argsstring>
+        <name>_MemoryAllocator_Remove</name>
+        <param>
+          <type><ref refid="de/d50/structMemoryContext" kindref="compound">MemoryContext</ref> *</type>
+          <declname>pContext</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d7b/MemoryManager_8h_1aec941861fea8dd1ae50294f05724a436" kindref="member">MemoryAllocatorID</ref></type>
+          <declname>idAllocator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="245"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1a631094265a0c1337d8df6fb4951059ad" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _MemoryContext_Initialize</definition>
+        <argsstring>(MemoryContext *pContext, UInt iResidentSize)</argsstring>
+        <name>_MemoryContext_Initialize</name>
+        <param>
+          <type><ref refid="de/d50/structMemoryContext" kindref="compound">MemoryContext</ref> *</type>
+          <declname>pContext</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iResidentSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="247"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1a2bcb4e1b75a6b698c189a25043486d1c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _MemoryContext_Cleanup</definition>
+        <argsstring>(MemoryContext *pContext)</argsstring>
+        <name>_MemoryContext_Cleanup</name>
+        <param>
+          <type><ref refid="de/d50/structMemoryContext" kindref="compound">MemoryContext</ref> *</type>
+          <declname>pContext</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="248"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1a11298e52a4a173f062d7c0c5ec7ddcc9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _MemoryAllocator_Cleanup</definition>
+        <argsstring>(AllocatorData *pAllocatorData)</argsstring>
+        <name>_MemoryAllocator_Cleanup</name>
+        <param>
+          <type><ref refid="d4/df1/structAllocatorData" kindref="compound">AllocatorData</ref> *</type>
+          <declname>pAllocatorData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="249"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1afd0be6e0cb8a83e5152946cb7b2e19bf" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _SwitchingStack_Push</definition>
+        <argsstring>(MemoryContextID idContext, MemoryAllocatorID idAllocator)</argsstring>
+        <name>_SwitchingStack_Push</name>
+        <param>
+          <type><ref refid="d7/d7b/MemoryManager_8h_1af31b42dd6507009f3d5e5f71b991260b" kindref="member">MemoryContextID</ref></type>
+          <declname>idContext</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d7b/MemoryManager_8h_1aec941861fea8dd1ae50294f05724a436" kindref="member">MemoryAllocatorID</ref></type>
+          <declname>idAllocator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="251"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1a50888425fbc026f11b6998021bed6a25" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _SwitchingStack_Pop</definition>
+        <argsstring>(MemoryContextID *outContext, MemoryAllocatorID *outAllocator)</argsstring>
+        <name>_SwitchingStack_Pop</name>
+        <param>
+          <type><ref refid="d7/d7b/MemoryManager_8h_1af31b42dd6507009f3d5e5f71b991260b" kindref="member">MemoryContextID</ref> *</type>
+          <declname>outContext</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d7b/MemoryManager_8h_1aec941861fea8dd1ae50294f05724a436" kindref="member">MemoryAllocatorID</ref> *</type>
+          <declname>outAllocator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="252"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1a44c25ee438f1027d85bc98ba0f6e2a75" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _Tracing_Record</definition>
+        <argsstring>(Bool bIsAlloc, MemoryContextID idContext, MemoryAllocatorID idAllocator, Byte *pAddress, UInt iSize, Bool bIsArray, const GChar *strFileName, UInt iFileLine)</argsstring>
+        <name>_Tracing_Record</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+          <declname>bIsAlloc</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d7b/MemoryManager_8h_1af31b42dd6507009f3d5e5f71b991260b" kindref="member">MemoryContextID</ref></type>
+          <declname>idContext</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d7b/MemoryManager_8h_1aec941861fea8dd1ae50294f05724a436" kindref="member">MemoryAllocatorID</ref></type>
+          <declname>idAllocator</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+          <declname>pAddress</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iSize</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+          <declname>bIsArray</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strFileName</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iFileLine</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="275"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1a644f38369f8fd46300476693a32e6acb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _Tracing_LogAndFlush</definition>
+        <argsstring>()</argsstring>
+        <name>_Tracing_LogAndFlush</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="276"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1ad3f6546e2d9d7bb138f5fb1c42dbc118" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d7/d7b/MemoryManager_8h_1af31b42dd6507009f3d5e5f71b991260b" kindref="member">MemoryContextID</ref></type>
+        <definition>MemoryContextID CreateContext</definition>
+        <argsstring>(const GChar *strName, UInt iResidentSize, Byte **outResidentPointer)</argsstring>
+        <name>CreateContext</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strName</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iResidentSize</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> **</type>
+          <declname>outResidentPointer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="184"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1a2ff6675e5323faad70be3e10fe7bb7a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void DestroyContext</definition>
+        <argsstring>(MemoryContextID idContext)</argsstring>
+        <name>DestroyContext</name>
+        <param>
+          <type><ref refid="d7/d7b/MemoryManager_8h_1af31b42dd6507009f3d5e5f71b991260b" kindref="member">MemoryContextID</ref></type>
+          <declname>idContext</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="185"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1a7f294e315864754733050e5d89015fb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void DestroyContext</definition>
+        <argsstring>(const GChar *strName)</argsstring>
+        <name>DestroyContext</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="186"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1a0c20b002411addcde5b8079a5293d409" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d7/d7b/MemoryManager_8h_1af31b42dd6507009f3d5e5f71b991260b" kindref="member">MemoryContextID</ref></type>
+        <definition>MemoryContextID GetContextID</definition>
+        <argsstring>(const GChar *strName) const </argsstring>
+        <name>GetContextID</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="188"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1a144c885b39996386d387446e9ef24ebe" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+        <definition>const GChar* GetContextName</definition>
+        <argsstring>(MemoryContextID idContext) const </argsstring>
+        <name>GetContextName</name>
+        <param>
+          <type><ref refid="d7/d7b/MemoryManager_8h_1af31b42dd6507009f3d5e5f71b991260b" kindref="member">MemoryContextID</ref></type>
+          <declname>idContext</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="189"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1af0f3182d3d3659ca5e9a7600b7e13a1c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d7/d7b/MemoryManager_8h_1af31b42dd6507009f3d5e5f71b991260b" kindref="member">MemoryContextID</ref></type>
+        <definition>MemoryContextID GetSelectedContextID</definition>
+        <argsstring>() const </argsstring>
+        <name>GetSelectedContextID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="190"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1a7d6be3befd0a811dec57d6cd48327256" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+        <definition>const GChar* GetSelectedContextName</definition>
+        <argsstring>() const </argsstring>
+        <name>GetSelectedContextName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="191"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1aa94a189534660cfaaee98d8bc50260ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d7/d7b/MemoryManager_8h_1aec941861fea8dd1ae50294f05724a436" kindref="member">MemoryAllocatorID</ref></type>
+        <definition>MemoryAllocatorID CreateStack</definition>
+        <argsstring>(const GChar *strName, UInt iStackSize, MemoryContextID idContext=INVALID_OFFSET)</argsstring>
+        <name>CreateStack</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strName</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iStackSize</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d7b/MemoryManager_8h_1af31b42dd6507009f3d5e5f71b991260b" kindref="member">MemoryContextID</ref></type>
+          <declname>idContext</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a56f8e75d6ce827dcee2b97f88852f991" kindref="member">INVALID_OFFSET</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="194"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1a7356052152929b41d811cf3c186998cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d7/d7b/MemoryManager_8h_1aec941861fea8dd1ae50294f05724a436" kindref="member">MemoryAllocatorID</ref></type>
+        <definition>MemoryAllocatorID CreatePool</definition>
+        <argsstring>(const GChar *strName, UInt iChunkSize, UInt iTotalChunks, MemoryContextID idContext=INVALID_OFFSET)</argsstring>
+        <name>CreatePool</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strName</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iChunkSize</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iTotalChunks</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d7b/MemoryManager_8h_1af31b42dd6507009f3d5e5f71b991260b" kindref="member">MemoryContextID</ref></type>
+          <declname>idContext</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a56f8e75d6ce827dcee2b97f88852f991" kindref="member">INVALID_OFFSET</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="195"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1af8d9fbadf52c97d7ecd7f52954262c42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d7/d7b/MemoryManager_8h_1aec941861fea8dd1ae50294f05724a436" kindref="member">MemoryAllocatorID</ref></type>
+        <definition>MemoryAllocatorID CreateBreak</definition>
+        <argsstring>(const GChar *strName, UInt iBlockSize, UInt iRangeSize, MemoryContextID idContext=INVALID_OFFSET)</argsstring>
+        <name>CreateBreak</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strName</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iBlockSize</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iRangeSize</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d7b/MemoryManager_8h_1af31b42dd6507009f3d5e5f71b991260b" kindref="member">MemoryContextID</ref></type>
+          <declname>idContext</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a56f8e75d6ce827dcee2b97f88852f991" kindref="member">INVALID_OFFSET</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="196"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1a5a6346dfe952dde9f102afbfd143ae8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d7/d7b/MemoryManager_8h_1aec941861fea8dd1ae50294f05724a436" kindref="member">MemoryAllocatorID</ref></type>
+        <definition>MemoryAllocatorID CreateHeap</definition>
+        <argsstring>(const GChar *strName, UInt iHeapSize, MemoryContextID idContext=INVALID_OFFSET)</argsstring>
+        <name>CreateHeap</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strName</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iHeapSize</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d7b/MemoryManager_8h_1af31b42dd6507009f3d5e5f71b991260b" kindref="member">MemoryContextID</ref></type>
+          <declname>idContext</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a56f8e75d6ce827dcee2b97f88852f991" kindref="member">INVALID_OFFSET</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="197"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1a5d683f798b790bf80796ddfe3a43f935" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void DestroyAllocator</definition>
+        <argsstring>(MemoryAllocatorID idAllocator, MemoryContextID idContext=INVALID_OFFSET)</argsstring>
+        <name>DestroyAllocator</name>
+        <param>
+          <type><ref refid="d7/d7b/MemoryManager_8h_1aec941861fea8dd1ae50294f05724a436" kindref="member">MemoryAllocatorID</ref></type>
+          <declname>idAllocator</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d7b/MemoryManager_8h_1af31b42dd6507009f3d5e5f71b991260b" kindref="member">MemoryContextID</ref></type>
+          <declname>idContext</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a56f8e75d6ce827dcee2b97f88852f991" kindref="member">INVALID_OFFSET</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="198"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1aae56d9ff1d0e4cd3a9c6eabe9374b847" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void DestroyAllocator</definition>
+        <argsstring>(const GChar *strName, MemoryContextID idContext=INVALID_OFFSET)</argsstring>
+        <name>DestroyAllocator</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strName</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d7b/MemoryManager_8h_1af31b42dd6507009f3d5e5f71b991260b" kindref="member">MemoryContextID</ref></type>
+          <declname>idContext</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a56f8e75d6ce827dcee2b97f88852f991" kindref="member">INVALID_OFFSET</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="199"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1adcf5166972c03bc24029e51ea38612a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d7/d7b/MemoryManager_8h_1aec941861fea8dd1ae50294f05724a436" kindref="member">MemoryAllocatorID</ref></type>
+        <definition>MemoryAllocatorID GetAllocatorID</definition>
+        <argsstring>(const GChar *strName, MemoryContextID idContext=INVALID_OFFSET)</argsstring>
+        <name>GetAllocatorID</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strName</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d7b/MemoryManager_8h_1af31b42dd6507009f3d5e5f71b991260b" kindref="member">MemoryContextID</ref></type>
+          <declname>idContext</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a56f8e75d6ce827dcee2b97f88852f991" kindref="member">INVALID_OFFSET</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="201"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1a3eb4e3b641e5bba473eb6d9dfdb22ca4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+        <definition>const GChar* GetAllocatorName</definition>
+        <argsstring>(MemoryAllocatorID idAllocator, MemoryContextID idContext=INVALID_OFFSET)</argsstring>
+        <name>GetAllocatorName</name>
+        <param>
+          <type><ref refid="d7/d7b/MemoryManager_8h_1aec941861fea8dd1ae50294f05724a436" kindref="member">MemoryAllocatorID</ref></type>
+          <declname>idAllocator</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d7b/MemoryManager_8h_1af31b42dd6507009f3d5e5f71b991260b" kindref="member">MemoryContextID</ref></type>
+          <declname>idContext</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a56f8e75d6ce827dcee2b97f88852f991" kindref="member">INVALID_OFFSET</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="202"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1a15b00d4529f2b4f40e8d6dbc5bab4162" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d7/d7b/MemoryManager_8h_1aec941861fea8dd1ae50294f05724a436" kindref="member">MemoryAllocatorID</ref></type>
+        <definition>MemoryAllocatorID GetSelectedAllocatorID</definition>
+        <argsstring>(MemoryContextID idContext=INVALID_OFFSET)</argsstring>
+        <name>GetSelectedAllocatorID</name>
+        <param>
+          <type><ref refid="d7/d7b/MemoryManager_8h_1af31b42dd6507009f3d5e5f71b991260b" kindref="member">MemoryContextID</ref></type>
+          <declname>idContext</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a56f8e75d6ce827dcee2b97f88852f991" kindref="member">INVALID_OFFSET</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="203"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1ab54bb5c3401fd99400e7af41753abcc5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+        <definition>const GChar* GetSelectedAllocatorName</definition>
+        <argsstring>(MemoryContextID idContext=INVALID_OFFSET)</argsstring>
+        <name>GetSelectedAllocatorName</name>
+        <param>
+          <type><ref refid="d7/d7b/MemoryManager_8h_1af31b42dd6507009f3d5e5f71b991260b" kindref="member">MemoryContextID</ref></type>
+          <declname>idContext</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a56f8e75d6ce827dcee2b97f88852f991" kindref="member">INVALID_OFFSET</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="204"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1add6b740cb7505f78911aaed4743aafb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SelectMemory</definition>
+        <argsstring>(MemoryAllocatorID idAllocator, MemoryContextID idContext=INVALID_OFFSET)</argsstring>
+        <name>SelectMemory</name>
+        <param>
+          <type><ref refid="d7/d7b/MemoryManager_8h_1aec941861fea8dd1ae50294f05724a436" kindref="member">MemoryAllocatorID</ref></type>
+          <declname>idAllocator</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d7b/MemoryManager_8h_1af31b42dd6507009f3d5e5f71b991260b" kindref="member">MemoryContextID</ref></type>
+          <declname>idContext</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a56f8e75d6ce827dcee2b97f88852f991" kindref="member">INVALID_OFFSET</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="207"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1a638c2e57d90c416039092a327ac7b4e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SelectMemory</definition>
+        <argsstring>(const GChar *strAllocatorName, MemoryContextID idContext=INVALID_OFFSET)</argsstring>
+        <name>SelectMemory</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strAllocatorName</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d7b/MemoryManager_8h_1af31b42dd6507009f3d5e5f71b991260b" kindref="member">MemoryContextID</ref></type>
+          <declname>idContext</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a56f8e75d6ce827dcee2b97f88852f991" kindref="member">INVALID_OFFSET</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="208"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1ad39ee21515efdace24e0ca41a05b988b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SelectMemory</definition>
+        <argsstring>(MemoryAllocatorID idAllocator, const GChar *strContextName=NULL)</argsstring>
+        <name>SelectMemory</name>
+        <param>
+          <type><ref refid="d7/d7b/MemoryManager_8h_1aec941861fea8dd1ae50294f05724a436" kindref="member">MemoryAllocatorID</ref></type>
+          <declname>idAllocator</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strContextName</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="209"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1aa03d63aea47912d0b1ab68d72d2cf56f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SelectMemory</definition>
+        <argsstring>(const GChar *strAllocatorName, const GChar *strContextName=NULL)</argsstring>
+        <name>SelectMemory</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strAllocatorName</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strContextName</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="210"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1a49f2840645d06996ada777b276b75b24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void UnSelectMemory</definition>
+        <argsstring>()</argsstring>
+        <name>UnSelectMemory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="211"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1ac39aa550ba753d89ad1275abf241ba12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void LogSelectionState</definition>
+        <argsstring>()</argsstring>
+        <name>LogSelectionState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="213"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1a106e1a8ff7061efdd27f7f3a00e4df73" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void TraceStart</definition>
+        <argsstring>(TraceFilter iFilter, MemoryContextID idContext=INVALID_OFFSET, MemoryAllocatorID idAllocator=INVALID_OFFSET)</argsstring>
+        <name>TraceStart</name>
+        <param>
+          <type><ref refid="d7/d7b/MemoryManager_8h_1a4aab4c54cb3be765402c6b52499f8222" kindref="member">TraceFilter</ref></type>
+          <declname>iFilter</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d7b/MemoryManager_8h_1af31b42dd6507009f3d5e5f71b991260b" kindref="member">MemoryContextID</ref></type>
+          <declname>idContext</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a56f8e75d6ce827dcee2b97f88852f991" kindref="member">INVALID_OFFSET</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="d7/d7b/MemoryManager_8h_1aec941861fea8dd1ae50294f05724a436" kindref="member">MemoryAllocatorID</ref></type>
+          <declname>idAllocator</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a56f8e75d6ce827dcee2b97f88852f991" kindref="member">INVALID_OFFSET</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="217"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1ae03035c781d57ac311eed3f281b0444e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void TraceStop</definition>
+        <argsstring>()</argsstring>
+        <name>TraceStop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="218"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1ad21219e302b8456bed1b58210d2fd537" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt TraceCount</definition>
+        <argsstring>() const </argsstring>
+        <name>TraceCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="219"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1ab9af46a8bdabf46159c784f481c8395c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void TraceReset</definition>
+        <argsstring>()</argsstring>
+        <name>TraceReset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="220"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1a89076d02017a04071480c7996ed98c57" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="db/dc5/structTraceRecord" kindref="compound">TraceRecord</ref> *</type>
+        <definition>const TraceRecord* TracePick</definition>
+        <argsstring>(UInt iIndex) const </argsstring>
+        <name>TracePick</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="221"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1a2ba5d8a05f0433cbb8c66f91cb7c3baf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void GenerateReport</definition>
+        <argsstring>(AllocatorReport *outReport, MemoryAllocatorID idAllocator=INVALID_OFFSET, MemoryContextID idContext=INVALID_OFFSET)</argsstring>
+        <name>GenerateReport</name>
+        <param>
+          <type><ref refid="d9/d02/structAllocatorReport" kindref="compound">AllocatorReport</ref> *</type>
+          <declname>outReport</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d7b/MemoryManager_8h_1aec941861fea8dd1ae50294f05724a436" kindref="member">MemoryAllocatorID</ref></type>
+          <declname>idAllocator</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a56f8e75d6ce827dcee2b97f88852f991" kindref="member">INVALID_OFFSET</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="d7/d7b/MemoryManager_8h_1af31b42dd6507009f3d5e5f71b991260b" kindref="member">MemoryContextID</ref></type>
+          <declname>idContext</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a56f8e75d6ce827dcee2b97f88852f991" kindref="member">INVALID_OFFSET</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="225"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d9a/classMemoryManager_1ac22b8fdc8b220d5fd586c598ee52d7fc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void LogReport</definition>
+        <argsstring>(const AllocatorReport *pReport, MemoryAllocatorID idAllocator=INVALID_OFFSET, MemoryContextID idContext=INVALID_OFFSET)</argsstring>
+        <name>LogReport</name>
+        <param>
+          <type>const <ref refid="d9/d02/structAllocatorReport" kindref="compound">AllocatorReport</ref> *</type>
+          <declname>pReport</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d7b/MemoryManager_8h_1aec941861fea8dd1ae50294f05724a436" kindref="member">MemoryAllocatorID</ref></type>
+          <declname>idAllocator</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a56f8e75d6ce827dcee2b97f88852f991" kindref="member">INVALID_OFFSET</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="d7/d7b/MemoryManager_8h_1af31b42dd6507009f3d5e5f71b991260b" kindref="member">MemoryContextID</ref></type>
+          <declname>idContext</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a56f8e75d6ce827dcee2b97f88852f991" kindref="member">INVALID_OFFSET</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="227"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="d6/d9a/classMemoryManager_1ad3ba672ee0b0e75c743032b8a6759ba4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+        <definition>Byte* _managed_new</definition>
+        <argsstring>(Bool, UInt, const GChar *, UInt)</argsstring>
+        <name>_managed_new</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+          <defname>bIsArray</defname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <defname>iSize</defname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <defname>strFile</defname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <defname>iLine</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="231"/>
+      </memberdef>
+      <memberdef kind="friend" id="d6/d9a/classMemoryManager_1a30795c05e70e9cdbb46155db3602e732" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _managed_delete</definition>
+        <argsstring>(Bool, Byte *, const GChar *, UInt)</argsstring>
+        <name>_managed_delete</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+          <defname>bIsArray</defname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+          <defname>pAllocated</defname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <defname>strFile</defname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <defname>iLine</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="232"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="6163">
+        <label>UInt</label>
+      </node>
+      <node id="6160">
+        <label>unsigned int</label>
+      </node>
+      <node id="6156">
+        <label>unsigned char</label>
+      </node>
+      <node id="6155">
+        <label>int</label>
+      </node>
+      <node id="6158">
+        <label>MemoryContext</label>
+        <link refid="de/d50/structMemoryContext"/>
+        <childnode refid="6159" relation="usage">
+          <edgelabel>arrAllocators</edgelabel>
+        </childnode>
+        <childnode refid="6156" relation="usage">
+          <edgelabel>pResidentMemory</edgelabel>
+        </childnode>
+        <childnode refid="6154" relation="usage">
+          <edgelabel>strName</edgelabel>
+        </childnode>
+        <childnode refid="6155" relation="usage">
+          <edgelabel>iAllocatorCount</edgelabel>
+          <edgelabel>iResidentSize</edgelabel>
+        </childnode>
+        <childnode refid="6160" relation="usage">
+          <edgelabel>idSelected</edgelabel>
+          <edgelabel>idContext</edgelabel>
+        </childnode>
+      </node>
+      <node id="6162">
+        <label>SwitchStackItem</label>
+        <link refid="d4/d7c/structSwitchStackItem"/>
+        <childnode refid="6160" relation="usage">
+          <edgelabel>idContext</edgelabel>
+          <edgelabel>idAlloc</edgelabel>
+        </childnode>
+      </node>
+      <node id="6152">
+        <label>PoolAllocator</label>
+        <link refid="d1/d54/classPoolAllocator"/>
+        <childnode refid="6153" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6156" relation="usage">
+          <edgelabel>m_pBuffer</edgelabel>
+        </childnode>
+        <childnode refid="6155" relation="usage">
+          <edgelabel>m_iNextFree</edgelabel>
+          <edgelabel>m_iChunkCount</edgelabel>
+          <edgelabel>m_iChunkSize</edgelabel>
+          <edgelabel>m_iTotalChunks</edgelabel>
+        </childnode>
+      </node>
+      <node id="6159">
+        <label>AllocatorData</label>
+        <link refid="d4/df1/structAllocatorData"/>
+        <childnode refid="6154" relation="usage">
+          <edgelabel>strName</edgelabel>
+        </childnode>
+        <childnode refid="6160" relation="usage">
+          <edgelabel>idAlloc</edgelabel>
+        </childnode>
+        <childnode refid="6153" relation="usage">
+          <edgelabel>pAllocator</edgelabel>
+        </childnode>
+      </node>
+      <node id="6151">
+        <label>MemoryManager</label>
+        <link refid="d6/d9a/classMemoryManager"/>
+        <childnode refid="6152" relation="usage">
+          <edgelabel>m_PoolFactory</edgelabel>
+          <edgelabel>m_HeapFactory</edgelabel>
+          <edgelabel>m_StackFactory</edgelabel>
+          <edgelabel>m_BreakFactory</edgelabel>
+        </childnode>
+        <childnode refid="6157" relation="usage">
+          <edgelabel>m_iTraceFilter</edgelabel>
+        </childnode>
+        <childnode refid="6151" relation="usage">
+          <edgelabel>sm_pInstance</edgelabel>
+        </childnode>
+        <childnode refid="6155" relation="usage">
+          <edgelabel>m_iSwitchingStackTop</edgelabel>
+          <edgelabel>m_iContextCount</edgelabel>
+          <edgelabel>m_iTraceCount</edgelabel>
+        </childnode>
+        <childnode refid="6158" relation="usage">
+          <edgelabel>m_SharedContext</edgelabel>
+          <edgelabel>m_arrContexts</edgelabel>
+        </childnode>
+        <childnode refid="6161" relation="usage">
+          <edgelabel>m_bTracing</edgelabel>
+        </childnode>
+        <childnode refid="6162" relation="usage">
+          <edgelabel>m_arrSwitchingStack</edgelabel>
+        </childnode>
+        <childnode refid="6163" relation="usage">
+          <edgelabel>m_idTraceAllocator</edgelabel>
+          <edgelabel>m_idSelected</edgelabel>
+          <edgelabel>m_idTraceContext</edgelabel>
+        </childnode>
+        <childnode refid="6164" relation="usage">
+          <edgelabel>m_arrTraceRecords</edgelabel>
+        </childnode>
+      </node>
+      <node id="6153">
+        <label>MemoryAllocator</label>
+        <link refid="d0/de0/classMemoryAllocator"/>
+        <childnode refid="6154" relation="usage">
+          <edgelabel>m_strContextName</edgelabel>
+          <edgelabel>m_strAllocatorName</edgelabel>
+        </childnode>
+        <childnode refid="6155" relation="usage">
+          <edgelabel>m_idAllocator</edgelabel>
+          <edgelabel>m_idContext</edgelabel>
+        </childnode>
+      </node>
+      <node id="6161">
+        <label>bool</label>
+      </node>
+      <node id="6157">
+        <label>TraceFilter</label>
+      </node>
+      <node id="6154">
+        <label>char</label>
+      </node>
+      <node id="6165">
+        <label>AllocatorType</label>
+      </node>
+      <node id="6164">
+        <label>TraceRecord</label>
+        <link refid="db/dc5/structTraceRecord"/>
+        <childnode refid="6156" relation="usage">
+          <edgelabel>pAddress</edgelabel>
+        </childnode>
+        <childnode refid="6154" relation="usage">
+          <edgelabel>strAllocatorName</edgelabel>
+          <edgelabel>strContextName</edgelabel>
+          <edgelabel>strFileName</edgelabel>
+        </childnode>
+        <childnode refid="6165" relation="usage">
+          <edgelabel>iAllocatorType</edgelabel>
+        </childnode>
+        <childnode refid="6155" relation="usage">
+          <edgelabel>iFileLine</edgelabel>
+          <edgelabel>iSize</edgelabel>
+        </childnode>
+        <childnode refid="6161" relation="usage">
+          <edgelabel>bIsArray</edgelabel>
+          <edgelabel>bIsAlloc</edgelabel>
+        </childnode>
+        <childnode refid="6160" relation="usage">
+          <edgelabel>idAllocator</edgelabel>
+          <edgelabel>idContext</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="167" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" bodystart="166" bodyend="284"/>
+    <listofallmembers>
+      <member refid="d6/d9a/classMemoryManager_1a779de38d1648663b82003159589ff95c" prot="private" virt="non-virtual"><scope>MemoryManager</scope><name>_GetAllocator</name></member>
+      <member refid="d6/d9a/classMemoryManager_1ad2838d1164c5fd4cd1be6236c71c6244" prot="private" virt="non-virtual"><scope>MemoryManager</scope><name>_HashName</name></member>
+      <member refid="d6/d9a/classMemoryManager_1a30795c05e70e9cdbb46155db3602e732" prot="private" virt="non-virtual"><scope>MemoryManager</scope><name>_managed_delete</name></member>
+      <member refid="d6/d9a/classMemoryManager_1ad3ba672ee0b0e75c743032b8a6759ba4" prot="private" virt="non-virtual"><scope>MemoryManager</scope><name>_managed_new</name></member>
+      <member refid="d6/d9a/classMemoryManager_1ace563a350ace63656189d1a648eda43b" prot="private" virt="non-virtual"><scope>MemoryManager</scope><name>_MemoryAllocator_Add</name></member>
+      <member refid="d6/d9a/classMemoryManager_1a11298e52a4a173f062d7c0c5ec7ddcc9" prot="private" virt="non-virtual"><scope>MemoryManager</scope><name>_MemoryAllocator_Cleanup</name></member>
+      <member refid="d6/d9a/classMemoryManager_1af84b6ba72c24ea88ecfe5b4af048c7fe" prot="private" virt="non-virtual"><scope>MemoryManager</scope><name>_MemoryAllocator_Get</name></member>
+      <member refid="d6/d9a/classMemoryManager_1a091ec00e013a2ef257197b6d2c152534" prot="private" virt="non-virtual"><scope>MemoryManager</scope><name>_MemoryAllocator_Remove</name></member>
+      <member refid="d6/d9a/classMemoryManager_1a92f08f94eccf4f5518aaecf80fee3313" prot="private" virt="non-virtual"><scope>MemoryManager</scope><name>_MemoryContext_Add</name></member>
+      <member refid="d6/d9a/classMemoryManager_1a2bcb4e1b75a6b698c189a25043486d1c" prot="private" virt="non-virtual"><scope>MemoryManager</scope><name>_MemoryContext_Cleanup</name></member>
+      <member refid="d6/d9a/classMemoryManager_1a2b324fa8332bda1a727cc5c2e6027ef4" prot="private" virt="non-virtual"><scope>MemoryManager</scope><name>_MemoryContext_Get</name></member>
+      <member refid="d6/d9a/classMemoryManager_1a631094265a0c1337d8df6fb4951059ad" prot="private" virt="non-virtual"><scope>MemoryManager</scope><name>_MemoryContext_Initialize</name></member>
+      <member refid="d6/d9a/classMemoryManager_1a30e09caf2a3c6f4378c1d2100c033680" prot="private" virt="non-virtual"><scope>MemoryManager</scope><name>_MemoryContext_Remove</name></member>
+      <member refid="d6/d9a/classMemoryManager_1a50888425fbc026f11b6998021bed6a25" prot="private" virt="non-virtual"><scope>MemoryManager</scope><name>_SwitchingStack_Pop</name></member>
+      <member refid="d6/d9a/classMemoryManager_1afd0be6e0cb8a83e5152946cb7b2e19bf" prot="private" virt="non-virtual"><scope>MemoryManager</scope><name>_SwitchingStack_Push</name></member>
+      <member refid="d6/d9a/classMemoryManager_1a644f38369f8fd46300476693a32e6acb" prot="private" virt="non-virtual"><scope>MemoryManager</scope><name>_Tracing_LogAndFlush</name></member>
+      <member refid="d6/d9a/classMemoryManager_1a44c25ee438f1027d85bc98ba0f6e2a75" prot="private" virt="non-virtual"><scope>MemoryManager</scope><name>_Tracing_Record</name></member>
+      <member refid="d6/d9a/classMemoryManager_1a2ed8631063d066931e92495cbc2187ab" prot="public" virt="non-virtual"><scope>MemoryManager</scope><name>Create</name></member>
+      <member refid="d6/d9a/classMemoryManager_1af8d9fbadf52c97d7ecd7f52954262c42" prot="public" virt="non-virtual"><scope>MemoryManager</scope><name>CreateBreak</name></member>
+      <member refid="d6/d9a/classMemoryManager_1ad3f6546e2d9d7bb138f5fb1c42dbc118" prot="public" virt="non-virtual"><scope>MemoryManager</scope><name>CreateContext</name></member>
+      <member refid="d6/d9a/classMemoryManager_1a5a6346dfe952dde9f102afbfd143ae8c" prot="public" virt="non-virtual"><scope>MemoryManager</scope><name>CreateHeap</name></member>
+      <member refid="d6/d9a/classMemoryManager_1a7356052152929b41d811cf3c186998cb" prot="public" virt="non-virtual"><scope>MemoryManager</scope><name>CreatePool</name></member>
+      <member refid="d6/d9a/classMemoryManager_1aa94a189534660cfaaee98d8bc50260ac" prot="public" virt="non-virtual"><scope>MemoryManager</scope><name>CreateStack</name></member>
+      <member refid="d6/d9a/classMemoryManager_1a2eb513c4973295259cfbac797e1a0aaf" prot="public" virt="non-virtual"><scope>MemoryManager</scope><name>Destroy</name></member>
+      <member refid="d6/d9a/classMemoryManager_1a5d683f798b790bf80796ddfe3a43f935" prot="public" virt="non-virtual"><scope>MemoryManager</scope><name>DestroyAllocator</name></member>
+      <member refid="d6/d9a/classMemoryManager_1aae56d9ff1d0e4cd3a9c6eabe9374b847" prot="public" virt="non-virtual"><scope>MemoryManager</scope><name>DestroyAllocator</name></member>
+      <member refid="d6/d9a/classMemoryManager_1a2ff6675e5323faad70be3e10fe7bb7a4" prot="public" virt="non-virtual"><scope>MemoryManager</scope><name>DestroyContext</name></member>
+      <member refid="d6/d9a/classMemoryManager_1a7f294e315864754733050e5d89015fb4" prot="public" virt="non-virtual"><scope>MemoryManager</scope><name>DestroyContext</name></member>
+      <member refid="d6/d9a/classMemoryManager_1a2ba5d8a05f0433cbb8c66f91cb7c3baf" prot="public" virt="non-virtual"><scope>MemoryManager</scope><name>GenerateReport</name></member>
+      <member refid="d6/d9a/classMemoryManager_1adcf5166972c03bc24029e51ea38612a8" prot="public" virt="non-virtual"><scope>MemoryManager</scope><name>GetAllocatorID</name></member>
+      <member refid="d6/d9a/classMemoryManager_1a3eb4e3b641e5bba473eb6d9dfdb22ca4" prot="public" virt="non-virtual"><scope>MemoryManager</scope><name>GetAllocatorName</name></member>
+      <member refid="d6/d9a/classMemoryManager_1a0c20b002411addcde5b8079a5293d409" prot="public" virt="non-virtual"><scope>MemoryManager</scope><name>GetContextID</name></member>
+      <member refid="d6/d9a/classMemoryManager_1a144c885b39996386d387446e9ef24ebe" prot="public" virt="non-virtual"><scope>MemoryManager</scope><name>GetContextName</name></member>
+      <member refid="d6/d9a/classMemoryManager_1a9b89c3958a125811ebf84da0c179f247" prot="public" virt="non-virtual"><scope>MemoryManager</scope><name>GetInstance</name></member>
+      <member refid="d6/d9a/classMemoryManager_1a92add7bd9fe28d7d7d6fdcb6118a0a20" prot="public" virt="non-virtual"><scope>MemoryManager</scope><name>GetInstancePtr</name></member>
+      <member refid="d6/d9a/classMemoryManager_1a15b00d4529f2b4f40e8d6dbc5bab4162" prot="public" virt="non-virtual"><scope>MemoryManager</scope><name>GetSelectedAllocatorID</name></member>
+      <member refid="d6/d9a/classMemoryManager_1ab54bb5c3401fd99400e7af41753abcc5" prot="public" virt="non-virtual"><scope>MemoryManager</scope><name>GetSelectedAllocatorName</name></member>
+      <member refid="d6/d9a/classMemoryManager_1af0f3182d3d3659ca5e9a7600b7e13a1c" prot="public" virt="non-virtual"><scope>MemoryManager</scope><name>GetSelectedContextID</name></member>
+      <member refid="d6/d9a/classMemoryManager_1a7d6be3befd0a811dec57d6cd48327256" prot="public" virt="non-virtual"><scope>MemoryManager</scope><name>GetSelectedContextName</name></member>
+      <member refid="d6/d9a/classMemoryManager_1ac22b8fdc8b220d5fd586c598ee52d7fc" prot="public" virt="non-virtual"><scope>MemoryManager</scope><name>LogReport</name></member>
+      <member refid="d6/d9a/classMemoryManager_1ac39aa550ba753d89ad1275abf241ba12" prot="public" virt="non-virtual"><scope>MemoryManager</scope><name>LogSelectionState</name></member>
+      <member refid="d6/d9a/classMemoryManager_1af2d1fcc82a384507702c49a8ba751486" prot="private" virt="non-virtual"><scope>MemoryManager</scope><name>m_arrContexts</name></member>
+      <member refid="d6/d9a/classMemoryManager_1a4796537a782cbf19b4da212642204c41" prot="private" virt="non-virtual"><scope>MemoryManager</scope><name>m_arrSwitchingStack</name></member>
+      <member refid="d6/d9a/classMemoryManager_1afa27e1abc110fc21cbd9cb63fbeed093" prot="private" virt="non-virtual"><scope>MemoryManager</scope><name>m_arrTraceRecords</name></member>
+      <member refid="d6/d9a/classMemoryManager_1a2d694b926cc962c45b083efcdab3ab70" prot="private" virt="non-virtual"><scope>MemoryManager</scope><name>m_BreakFactory</name></member>
+      <member refid="d6/d9a/classMemoryManager_1a82170f11c790336a5e8e76cea9f74f4e" prot="private" virt="non-virtual"><scope>MemoryManager</scope><name>m_bTracing</name></member>
+      <member refid="d6/d9a/classMemoryManager_1a9c254354509f9a1d5a21316cf3cee0d0" prot="private" virt="non-virtual"><scope>MemoryManager</scope><name>m_HeapFactory</name></member>
+      <member refid="d6/d9a/classMemoryManager_1af4fd0149f10689ff5deb76a4e62d5dbe" prot="private" virt="non-virtual"><scope>MemoryManager</scope><name>m_iContextCount</name></member>
+      <member refid="d6/d9a/classMemoryManager_1a265d0fec8bd4632ecbfa1ce4b4afc234" prot="private" virt="non-virtual"><scope>MemoryManager</scope><name>m_idSelected</name></member>
+      <member refid="d6/d9a/classMemoryManager_1ab4362e370edc3f03391e0cecb4461861" prot="private" virt="non-virtual"><scope>MemoryManager</scope><name>m_idTraceAllocator</name></member>
+      <member refid="d6/d9a/classMemoryManager_1a70c2666f3782e018e7211cd9788b6505" prot="private" virt="non-virtual"><scope>MemoryManager</scope><name>m_idTraceContext</name></member>
+      <member refid="d6/d9a/classMemoryManager_1ae4f1c3cf2e7be63523126120c9d857fd" prot="private" virt="non-virtual"><scope>MemoryManager</scope><name>m_iSwitchingStackTop</name></member>
+      <member refid="d6/d9a/classMemoryManager_1aa26a6b53a84d226cc239260311123747" prot="private" virt="non-virtual"><scope>MemoryManager</scope><name>m_iTraceCount</name></member>
+      <member refid="d6/d9a/classMemoryManager_1ad87a06ab4001eb39f0e5d1312f288dd2" prot="private" virt="non-virtual"><scope>MemoryManager</scope><name>m_iTraceFilter</name></member>
+      <member refid="d6/d9a/classMemoryManager_1a0f2a15357bfb686fedf3e9e22f1b3375" prot="private" virt="non-virtual"><scope>MemoryManager</scope><name>m_PoolFactory</name></member>
+      <member refid="d6/d9a/classMemoryManager_1ac58a09b459f7ccaf64c544564a63d76e" prot="private" virt="non-virtual"><scope>MemoryManager</scope><name>m_SharedContext</name></member>
+      <member refid="d6/d9a/classMemoryManager_1ac083734e653cc8e33d5723655c004cc1" prot="private" virt="non-virtual"><scope>MemoryManager</scope><name>m_StackFactory</name></member>
+      <member refid="d6/d9a/classMemoryManager_1a346e19542a2c0ebd640b8823008b5662" prot="private" virt="non-virtual"><scope>MemoryManager</scope><name>MemoryManager</name></member>
+      <member refid="d6/d9a/classMemoryManager_1add6b740cb7505f78911aaed4743aafb2" prot="public" virt="non-virtual"><scope>MemoryManager</scope><name>SelectMemory</name></member>
+      <member refid="d6/d9a/classMemoryManager_1a638c2e57d90c416039092a327ac7b4e7" prot="public" virt="non-virtual"><scope>MemoryManager</scope><name>SelectMemory</name></member>
+      <member refid="d6/d9a/classMemoryManager_1ad39ee21515efdace24e0ca41a05b988b" prot="public" virt="non-virtual"><scope>MemoryManager</scope><name>SelectMemory</name></member>
+      <member refid="d6/d9a/classMemoryManager_1aa03d63aea47912d0b1ab68d72d2cf56f" prot="public" virt="non-virtual"><scope>MemoryManager</scope><name>SelectMemory</name></member>
+      <member refid="d6/d9a/classMemoryManager_1a69c6b713e3da42cbc26a07a2651251a1" prot="private" virt="non-virtual"><scope>MemoryManager</scope><name>sm_pInstance</name></member>
+      <member refid="d6/d9a/classMemoryManager_1ad21219e302b8456bed1b58210d2fd537" prot="public" virt="non-virtual"><scope>MemoryManager</scope><name>TraceCount</name></member>
+      <member refid="d6/d9a/classMemoryManager_1a89076d02017a04071480c7996ed98c57" prot="public" virt="non-virtual"><scope>MemoryManager</scope><name>TracePick</name></member>
+      <member refid="d6/d9a/classMemoryManager_1ab9af46a8bdabf46159c784f481c8395c" prot="public" virt="non-virtual"><scope>MemoryManager</scope><name>TraceReset</name></member>
+      <member refid="d6/d9a/classMemoryManager_1a106e1a8ff7061efdd27f7f3a00e4df73" prot="public" virt="non-virtual"><scope>MemoryManager</scope><name>TraceStart</name></member>
+      <member refid="d6/d9a/classMemoryManager_1ae03035c781d57ac311eed3f281b0444e" prot="public" virt="non-virtual"><scope>MemoryManager</scope><name>TraceStop</name></member>
+      <member refid="d6/d9a/classMemoryManager_1a49f2840645d06996ada777b276b75b24" prot="public" virt="non-virtual"><scope>MemoryManager</scope><name>UnSelectMemory</name></member>
+      <member refid="d6/d9a/classMemoryManager_1aaf027621b84e55b6a9a6d403a9e9c477" prot="private" virt="non-virtual"><scope>MemoryManager</scope><name>~MemoryManager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

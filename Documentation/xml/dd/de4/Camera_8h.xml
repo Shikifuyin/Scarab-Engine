@@ -1,0 +1,805 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="dd/de4/Camera_8h" kind="file">
+    <compoundname>Camera.h</compoundname>
+    <includes refid="d1/db6/ErrorManager_8h" local="yes">../../../Lib/Error/ErrorManager.h</includes>
+    <includes refid="d0/df3/Vertex3_8h" local="yes">../../../Lib/Math/Types/Vertex/Vertex3.h</includes>
+    <includes refid="d1/dca/Vertex4_8h" local="yes">../../../Lib/Math/Types/Vertex/Vertex4.h</includes>
+    <includes refid="dd/d8c/Vector3_8h" local="yes">../../../Lib/Math/Types/Vector/Vector3.h</includes>
+    <includes refid="d7/d36/Vector4_8h" local="yes">../../../Lib/Math/Types/Vector/Vector4.h</includes>
+    <includes refid="d6/d64/Matrix4_8h" local="yes">../../../Lib/Math/Types/Matrix/Matrix4.h</includes>
+    <includes refid="d8/d2f/Plane_8h" local="yes">../../../Lib/Math/Geometry/Primitives/3D/Planar/Plane.h</includes>
+    <includes local="yes">Camera.inl</includes>
+    <includedby refid="de/d07/RenderingManager_8h" local="yes">RenderingManager.h</includedby>
+    <includedby refid="dc/d51/ShaderConst_8h" local="yes">ShaderConst.h</includedby>
+    <includedby refid="da/daf/WorldCuller_8h" local="yes">WorldCuller.h</includedby>
+    <includedby refid="d2/d2e/WorldCamera_8h" local="yes">WorldCamera.h</includedby>
+    <includedby refid="df/d7d/WorldDLODNode_8h" local="yes">WorldDLODNode.h</includedby>
+    <incdepgraph>
+      <node id="2958">
+        <label>../Vector/Vector4.h</label>
+        <link refid="d7/d36/Vector4_8h"/>
+        <childnode refid="2949" relation="include">
+        </childnode>
+        <childnode refid="2959" relation="include">
+        </childnode>
+      </node>
+      <node id="2962">
+        <label>Matrix4.inl</label>
+      </node>
+      <node id="2935">
+        <label>SSE.inl</label>
+      </node>
+      <node id="2941">
+        <label>Threading.h</label>
+        <link refid="dd/d0e/Threading_8h"/>
+        <childnode refid="2927" relation="include">
+        </childnode>
+        <childnode refid="2929" relation="include">
+        </childnode>
+        <childnode refid="2942" relation="include">
+        </childnode>
+      </node>
+      <node id="2926">
+        <label>../../ThirdParty/System/System.h</label>
+        <link refid="db/d39/System_8h"/>
+        <childnode refid="2927" relation="include">
+        </childnode>
+        <childnode refid="2929" relation="include">
+        </childnode>
+        <childnode refid="2931" relation="include">
+        </childnode>
+        <childnode refid="2937" relation="include">
+        </childnode>
+        <childnode refid="2939" relation="include">
+        </childnode>
+        <childnode refid="2941" relation="include">
+        </childnode>
+        <childnode refid="2943" relation="include">
+        </childnode>
+        <childnode refid="2945" relation="include">
+        </childnode>
+      </node>
+      <node id="2942">
+        <label>Threading.inl</label>
+      </node>
+      <node id="2965">
+        <label>Camera.inl</label>
+      </node>
+      <node id="2929">
+        <label>Platform.h</label>
+        <link refid="d9/dd0/Platform_8h"/>
+        <childnode refid="2930" relation="include">
+        </childnode>
+      </node>
+      <node id="2957">
+        <label>../../../Lib/Math/Types/Vertex/Vertex4.h</label>
+        <link refid="d1/dca/Vertex4_8h"/>
+        <childnode refid="2958" relation="include">
+        </childnode>
+        <childnode refid="2960" relation="include">
+        </childnode>
+      </node>
+      <node id="2948">
+        <label>../Vector/Vector3.h</label>
+        <link refid="dd/d8c/Vector3_8h"/>
+        <childnode refid="2949" relation="include">
+        </childnode>
+        <childnode refid="2955" relation="include">
+        </childnode>
+      </node>
+      <node id="2933">
+        <label>FPU.inl</label>
+      </node>
+      <node id="2954">
+        <label>MathFunction.inl</label>
+      </node>
+      <node id="2950">
+        <label>../Formats/Scalar.h</label>
+        <link refid="d0/d10/Scalar_8h"/>
+        <childnode refid="2929" relation="include">
+        </childnode>
+        <childnode refid="2951" relation="include">
+        </childnode>
+      </node>
+      <node id="2961">
+        <label>../../../Lib/Math/Types/Matrix/Matrix4.h</label>
+        <link refid="d6/d64/Matrix4_8h"/>
+        <childnode refid="2948" relation="include">
+        </childnode>
+        <childnode refid="2958" relation="include">
+        </childnode>
+        <childnode refid="2947" relation="include">
+        </childnode>
+        <childnode refid="2957" relation="include">
+        </childnode>
+        <childnode refid="2962" relation="include">
+        </childnode>
+      </node>
+      <node id="2963">
+        <label>../../../Lib/Math/Geometry/Primitives/3D/Planar/Plane.h</label>
+        <link refid="d8/d2f/Plane_8h"/>
+        <childnode refid="2948" relation="include">
+        </childnode>
+        <childnode refid="2947" relation="include">
+        </childnode>
+        <childnode refid="2964" relation="include">
+        </childnode>
+      </node>
+      <node id="2940">
+        <label>File.inl</label>
+      </node>
+      <node id="2964">
+        <label>Plane.inl</label>
+      </node>
+      <node id="2931">
+        <label>Hardware/Hardware.h</label>
+        <link refid="da/dec/Hardware_8h"/>
+        <childnode refid="2929" relation="include">
+        </childnode>
+        <childnode refid="2932" relation="include">
+        </childnode>
+        <childnode refid="2934" relation="include">
+        </childnode>
+        <childnode refid="2936" relation="include">
+        </childnode>
+      </node>
+      <node id="2936">
+        <label>Hardware.inl</label>
+      </node>
+      <node id="2959">
+        <label>Vector4.inl</label>
+      </node>
+      <node id="2951">
+        <label>Scalar.inl</label>
+      </node>
+      <node id="2938">
+        <label>String.inl</label>
+      </node>
+      <node id="2955">
+        <label>Vector3.inl</label>
+      </node>
+      <node id="2932">
+        <label>FPU.h</label>
+        <link refid="dd/d2f/FPU_8h"/>
+        <childnode refid="2929" relation="include">
+        </childnode>
+        <childnode refid="2933" relation="include">
+        </childnode>
+      </node>
+      <node id="2937">
+        <label>String.h</label>
+        <link refid="d9/dba/String_8h"/>
+        <childnode refid="2927" relation="include">
+        </childnode>
+        <childnode refid="2929" relation="include">
+        </childnode>
+        <childnode refid="2932" relation="include">
+        </childnode>
+        <childnode refid="2938" relation="include">
+        </childnode>
+      </node>
+      <node id="2930">
+        <label>Platform.inl</label>
+      </node>
+      <node id="2945">
+        <label>System.inl</label>
+      </node>
+      <node id="2943">
+        <label>Networking.h</label>
+        <link refid="df/dfb/Networking_8h"/>
+        <childnode refid="2927" relation="include">
+        </childnode>
+        <childnode refid="2929" relation="include">
+        </childnode>
+        <childnode refid="2944" relation="include">
+        </childnode>
+      </node>
+      <node id="2939">
+        <label>File.h</label>
+        <link refid="d6/db7/File_8h"/>
+        <childnode refid="2927" relation="include">
+        </childnode>
+        <childnode refid="2929" relation="include">
+        </childnode>
+        <childnode refid="2937" relation="include">
+        </childnode>
+        <childnode refid="2940" relation="include">
+        </childnode>
+      </node>
+      <node id="2924">
+        <label>Camera.h</label>
+        <link refid="Camera.h"/>
+        <childnode refid="2925" relation="include">
+        </childnode>
+        <childnode refid="2947" relation="include">
+        </childnode>
+        <childnode refid="2957" relation="include">
+        </childnode>
+        <childnode refid="2948" relation="include">
+        </childnode>
+        <childnode refid="2958" relation="include">
+        </childnode>
+        <childnode refid="2961" relation="include">
+        </childnode>
+        <childnode refid="2963" relation="include">
+        </childnode>
+        <childnode refid="2965" relation="include">
+        </childnode>
+      </node>
+      <node id="2928">
+        <label>ForwardWin32.inl</label>
+      </node>
+      <node id="2934">
+        <label>SSE.h</label>
+        <link refid="d0/d02/SSE_8h"/>
+        <childnode refid="2929" relation="include">
+        </childnode>
+        <childnode refid="2935" relation="include">
+        </childnode>
+      </node>
+      <node id="2944">
+        <label>Networking.inl</label>
+      </node>
+      <node id="2960">
+        <label>Vertex4.inl</label>
+      </node>
+      <node id="2953">
+        <label>Fixed.inl</label>
+      </node>
+      <node id="2949">
+        <label>../../Functions/MathFunction.h</label>
+        <link refid="d1/d98/MathFunction_8h"/>
+        <childnode refid="2932" relation="include">
+        </childnode>
+        <childnode refid="2950" relation="include">
+        </childnode>
+        <childnode refid="2952" relation="include">
+        </childnode>
+        <childnode refid="2954" relation="include">
+        </childnode>
+      </node>
+      <node id="2952">
+        <label>../Formats/Fixed.h</label>
+        <link refid="d4/d76/Fixed_8h"/>
+        <childnode refid="2950" relation="include">
+        </childnode>
+        <childnode refid="2953" relation="include">
+        </childnode>
+      </node>
+      <node id="2946">
+        <label>ErrorManager.inl</label>
+      </node>
+      <node id="2956">
+        <label>Vertex3.inl</label>
+      </node>
+      <node id="2947">
+        <label>../../../Lib/Math/Types/Vertex/Vertex3.h</label>
+        <link refid="d0/df3/Vertex3_8h"/>
+        <childnode refid="2948" relation="include">
+        </childnode>
+        <childnode refid="2956" relation="include">
+        </childnode>
+      </node>
+      <node id="2927">
+        <label>../Forwards/ForwardWin32.h</label>
+        <link refid="d5/dea/ForwardWin32_8h"/>
+        <childnode refid="2928" relation="include">
+        </childnode>
+      </node>
+      <node id="2925">
+        <label>../../../Lib/Error/ErrorManager.h</label>
+        <link refid="d1/db6/ErrorManager_8h"/>
+        <childnode refid="2926" relation="include">
+        </childnode>
+        <childnode refid="2946" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2979">
+        <label>ShaderConst.h</label>
+        <link refid="dc/d51/ShaderConst_8h"/>
+        <childnode refid="2980" relation="include">
+        </childnode>
+        <childnode refid="3009" relation="include">
+        </childnode>
+        <childnode refid="3010" relation="include">
+        </childnode>
+        <childnode refid="3011" relation="include">
+        </childnode>
+        <childnode refid="3012" relation="include">
+        </childnode>
+      </node>
+      <node id="2975">
+        <label>WorldManager.h</label>
+        <link refid="db/d98/WorldManager_8h"/>
+        <childnode refid="2968" relation="include">
+        </childnode>
+      </node>
+      <node id="2998">
+        <label>EffectPlanarReflection.h</label>
+        <link refid="d1/d6b/EffectPlanarReflection_8h"/>
+      </node>
+      <node id="2973">
+        <label>MyDungeon.h</label>
+        <link refid="d0/de7/MyDungeon_8h"/>
+        <childnode refid="2971" relation="include">
+        </childnode>
+      </node>
+      <node id="2999">
+        <label>WorldDLODNode.h</label>
+        <link refid="df/d7d/WorldDLODNode_8h"/>
+      </node>
+      <node id="2995">
+        <label>WorldConvexRoom.h</label>
+        <link refid="d0/d27/WorldConvexRoom_8h"/>
+        <childnode refid="2993" relation="include">
+        </childnode>
+      </node>
+      <node id="2987">
+        <label>WorldLight.h</label>
+        <link refid="d3/d85/WorldLight_8h"/>
+        <childnode refid="2975" relation="include">
+        </childnode>
+        <childnode refid="2988" relation="include">
+        </childnode>
+      </node>
+      <node id="3000">
+        <label>WorldCaster.h</label>
+        <link refid="d9/d6f/WorldCaster_8h"/>
+        <childnode refid="2975" relation="include">
+        </childnode>
+      </node>
+      <node id="2967">
+        <label>RenderingManager.h</label>
+        <link refid="de/d07/RenderingManager_8h"/>
+        <childnode refid="2968" relation="include">
+        </childnode>
+        <childnode refid="2974" relation="include">
+        </childnode>
+        <childnode refid="2975" relation="include">
+        </childnode>
+        <childnode refid="2976" relation="include">
+        </childnode>
+      </node>
+      <node id="2985">
+        <label>EffectColor.h</label>
+        <link refid="db/d7c/EffectColor_8h"/>
+        <childnode refid="2967" relation="include">
+        </childnode>
+      </node>
+      <node id="2971">
+        <label>Main.h</label>
+        <link refid="da/d94/Main_8h"/>
+      </node>
+      <node id="2980">
+        <label>ShaderParameters.h</label>
+        <link refid="d5/d63/ShaderParameters_8h"/>
+        <childnode refid="2967" relation="include">
+        </childnode>
+        <childnode refid="2981" relation="include">
+        </childnode>
+      </node>
+      <node id="2992">
+        <label>WorldPortalCuller.h</label>
+        <link refid="d1/d27/WorldPortalCuller_8h"/>
+        <childnode refid="2993" relation="include">
+        </childnode>
+        <childnode refid="2994" relation="include">
+        </childnode>
+        <childnode refid="2995" relation="include">
+        </childnode>
+      </node>
+      <node id="2978">
+        <label>CommandShowTree.h</label>
+        <link refid="d8/d84/CommandShowTree_8h"/>
+        <childnode refid="2977" relation="include">
+        </childnode>
+      </node>
+      <node id="3006">
+        <label>EffectTexture1D.h</label>
+        <link refid="db/df9/EffectTexture1D_8h"/>
+      </node>
+      <node id="2972">
+        <label>MyLandscape.h</label>
+        <link refid="d7/d2b/MyLandscape_8h"/>
+        <childnode refid="2971" relation="include">
+        </childnode>
+      </node>
+      <node id="2969">
+        <label>ApplicationManager.h</label>
+        <link refid="d2/d9d/ApplicationManager_8h"/>
+        <childnode refid="2970" relation="include">
+        </childnode>
+        <childnode refid="2971" relation="include">
+        </childnode>
+        <childnode refid="2972" relation="include">
+        </childnode>
+        <childnode refid="2973" relation="include">
+        </childnode>
+      </node>
+      <node id="2991">
+        <label>WorldCuller.h</label>
+        <link refid="da/daf/WorldCuller_8h"/>
+        <childnode refid="2992" relation="include">
+        </childnode>
+        <childnode refid="2996" relation="include">
+        </childnode>
+        <childnode refid="2975" relation="include">
+        </childnode>
+        <childnode refid="2999" relation="include">
+        </childnode>
+      </node>
+      <node id="3007">
+        <label>EffectTexture2D.h</label>
+        <link refid="db/d40/EffectTexture2D_8h"/>
+      </node>
+      <node id="3008">
+        <label>EffectTexture3D.h</label>
+        <link refid="d7/d48/EffectTexture3D_8h"/>
+      </node>
+      <node id="2968">
+        <label>WindowApplication.h</label>
+        <link refid="d4/d72/WindowApplication_8h"/>
+        <childnode refid="2969" relation="include">
+        </childnode>
+      </node>
+      <node id="2982">
+        <label>EffectDefault.h</label>
+        <link refid="da/d69/EffectDefault_8h"/>
+        <childnode refid="2967" relation="include">
+        </childnode>
+      </node>
+      <node id="3012">
+        <label>ShaderConstCamera.h</label>
+        <link refid="d2/dc2/ShaderConstCamera_8h"/>
+        <childnode refid="3004" relation="include">
+        </childnode>
+        <childnode refid="3005" relation="include">
+        </childnode>
+      </node>
+      <node id="3004">
+        <label>EffectLightPointGouraud.h</label>
+        <link refid="de/da9/EffectLightPointGouraud_8h"/>
+      </node>
+      <node id="2989">
+        <label>WorldOutdoorRegion.h</label>
+        <link refid="d0/d1d/WorldOutdoorRegion_8h"/>
+        <childnode refid="2990" relation="include">
+        </childnode>
+      </node>
+      <node id="2984">
+        <label>EffectText.h</label>
+        <link refid="d8/d5f/EffectText_8h"/>
+        <childnode refid="2967" relation="include">
+        </childnode>
+      </node>
+      <node id="3013">
+        <label>WorldCamera.h</label>
+        <link refid="d2/d2e/WorldCamera_8h"/>
+        <childnode refid="2975" relation="include">
+        </childnode>
+      </node>
+      <node id="2988">
+        <label>WorldDebugDraw.h</label>
+        <link refid="d1/df3/WorldDebugDraw_8h"/>
+        <childnode refid="2975" relation="include">
+        </childnode>
+      </node>
+      <node id="2990">
+        <label>WorldOutdoorArea.h</label>
+        <link refid="dd/d4f/WorldOutdoorArea_8h"/>
+        <childnode refid="2975" relation="include">
+        </childnode>
+        <childnode refid="2988" relation="include">
+        </childnode>
+      </node>
+      <node id="2970">
+        <label>Entities.h</label>
+        <link refid="d7/d5d/Entities_8h"/>
+        <childnode refid="2971" relation="include">
+        </childnode>
+      </node>
+      <node id="2996">
+        <label>GlobalEffect.h</label>
+        <link refid="d2/d5d/GlobalEffect_8h"/>
+        <childnode refid="2997" relation="include">
+        </childnode>
+        <childnode refid="2998" relation="include">
+        </childnode>
+      </node>
+      <node id="2993">
+        <label>WorldIndoorArea.h</label>
+        <link refid="d2/d61/WorldIndoorArea_8h"/>
+        <childnode refid="2975" relation="include">
+        </childnode>
+        <childnode refid="2988" relation="include">
+        </childnode>
+      </node>
+      <node id="2983">
+        <label>Effect2D.h</label>
+        <link refid="db/d27/Effect2D_8h"/>
+        <childnode refid="2967" relation="include">
+        </childnode>
+      </node>
+      <node id="2997">
+        <label>EffectPlanarShadows.h</label>
+        <link refid="d6/d73/EffectPlanarShadows_8h"/>
+        <childnode refid="2975" relation="include">
+        </childnode>
+      </node>
+      <node id="2974">
+        <label>ModelingManager.h</label>
+        <link refid="dc/ddb/ModelingManager_8h"/>
+        <childnode refid="2968" relation="include">
+        </childnode>
+        <childnode refid="2975" relation="include">
+        </childnode>
+      </node>
+      <node id="3010">
+        <label>ShaderConstMaterial.h</label>
+        <link refid="d3/dea/ShaderConstMaterial_8h"/>
+        <childnode refid="3001" relation="include">
+        </childnode>
+        <childnode refid="3002" relation="include">
+        </childnode>
+        <childnode refid="3003" relation="include">
+        </childnode>
+        <childnode refid="3004" relation="include">
+        </childnode>
+        <childnode refid="3005" relation="include">
+        </childnode>
+      </node>
+      <node id="2977">
+        <label>ConsoleManager.h</label>
+        <link refid="d3/d63/ConsoleManager_8h"/>
+        <childnode refid="2968" relation="include">
+        </childnode>
+      </node>
+      <node id="3011">
+        <label>ShaderConstLight.h</label>
+        <link refid="df/d63/ShaderConstLight_8h"/>
+        <childnode refid="3003" relation="include">
+        </childnode>
+        <childnode refid="3004" relation="include">
+        </childnode>
+        <childnode refid="3005" relation="include">
+        </childnode>
+      </node>
+      <node id="3009">
+        <label>ShaderConstMatrices.h</label>
+        <link refid="d9/d31/ShaderConstMatrices_8h"/>
+        <childnode refid="2982" relation="include">
+        </childnode>
+        <childnode refid="2985" relation="include">
+        </childnode>
+        <childnode refid="3001" relation="include">
+        </childnode>
+        <childnode refid="3002" relation="include">
+        </childnode>
+        <childnode refid="3003" relation="include">
+        </childnode>
+        <childnode refid="3004" relation="include">
+        </childnode>
+        <childnode refid="3005" relation="include">
+        </childnode>
+        <childnode refid="3006" relation="include">
+        </childnode>
+        <childnode refid="3007" relation="include">
+        </childnode>
+        <childnode refid="3008" relation="include">
+        </childnode>
+      </node>
+      <node id="2976">
+        <label>GUIManager.h</label>
+        <link refid="d6/db3/GUIManager_8h"/>
+        <childnode refid="2968" relation="include">
+        </childnode>
+        <childnode refid="2977" relation="include">
+        </childnode>
+        <childnode refid="2978" relation="include">
+        </childnode>
+      </node>
+      <node id="3001">
+        <label>EffectMaterial.h</label>
+        <link refid="d6/d58/EffectMaterial_8h"/>
+        <childnode refid="2997" relation="include">
+        </childnode>
+        <childnode refid="2971" relation="include">
+        </childnode>
+      </node>
+      <node id="2966">
+        <label>Camera.h</label>
+        <link refid="Camera.h"/>
+        <childnode refid="2967" relation="include">
+        </childnode>
+        <childnode refid="2979" relation="include">
+        </childnode>
+        <childnode refid="2991" relation="include">
+        </childnode>
+        <childnode refid="3013" relation="include">
+        </childnode>
+        <childnode refid="2999" relation="include">
+        </childnode>
+      </node>
+      <node id="2994">
+        <label>WorldPortal.h</label>
+        <link refid="df/d65/WorldPortal_8h"/>
+        <childnode refid="2993" relation="include">
+        </childnode>
+        <childnode refid="2995" relation="include">
+        </childnode>
+      </node>
+      <node id="2981">
+        <label>EffectInstance.h</label>
+        <link refid="dc/d13/EffectInstance_8h"/>
+        <childnode refid="2967" relation="include">
+        </childnode>
+        <childnode refid="2982" relation="include">
+        </childnode>
+        <childnode refid="2983" relation="include">
+        </childnode>
+        <childnode refid="2984" relation="include">
+        </childnode>
+        <childnode refid="2985" relation="include">
+        </childnode>
+        <childnode refid="2986" relation="include">
+        </childnode>
+        <childnode refid="2989" relation="include">
+        </childnode>
+        <childnode refid="3001" relation="include">
+        </childnode>
+        <childnode refid="3002" relation="include">
+        </childnode>
+        <childnode refid="3003" relation="include">
+        </childnode>
+        <childnode refid="3004" relation="include">
+        </childnode>
+        <childnode refid="3005" relation="include">
+        </childnode>
+        <childnode refid="3006" relation="include">
+        </childnode>
+        <childnode refid="3007" relation="include">
+        </childnode>
+        <childnode refid="3008" relation="include">
+        </childnode>
+      </node>
+      <node id="3005">
+        <label>EffectLightPointPhong.h</label>
+        <link refid="dc/d62/EffectLightPointPhong_8h"/>
+        <childnode refid="2973" relation="include">
+        </childnode>
+        <childnode refid="2971" relation="include">
+        </childnode>
+      </node>
+      <node id="3003">
+        <label>EffectLightAmbient.h</label>
+        <link refid="da/d0a/EffectLightAmbient_8h"/>
+      </node>
+      <node id="3002">
+        <label>EffectMaterialTexture.h</label>
+        <link refid="d1/d26/EffectMaterialTexture_8h"/>
+      </node>
+      <node id="2986">
+        <label>WorldLeaf.h</label>
+        <link refid="de/d75/WorldLeaf_8h"/>
+        <childnode refid="2975" relation="include">
+        </childnode>
+        <childnode refid="2987" relation="include">
+        </childnode>
+        <childnode refid="2989" relation="include">
+        </childnode>
+        <childnode refid="2991" relation="include">
+        </childnode>
+        <childnode refid="2997" relation="include">
+        </childnode>
+        <childnode refid="3000" relation="include">
+        </childnode>
+        <childnode refid="2988" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d1/df0/classCamera" prot="public">Camera</innerclass>
+    <innerclass refid="d7/def/classProjector" prot="public">Projector</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="dd/de4/Camera_8h_1abfdb9854de7cdbd6b50aaada61986d1c" prot="public" static="no">
+        <name>FrustrumLimit</name>
+        <enumvalue id="dd/de4/Camera_8h_1abfdb9854de7cdbd6b50aaada61986d1ca7b0f1d568d00380c6c5c6f0d77b12270" prot="public">
+          <name>FRUSTRUM_RIGHT</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dd/de4/Camera_8h_1abfdb9854de7cdbd6b50aaada61986d1cad0caafd848d405009017dd50850ee103" prot="public">
+          <name>FRUSTRUM_LEFT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dd/de4/Camera_8h_1abfdb9854de7cdbd6b50aaada61986d1ca89b7b6dcccb31d5dfb617704ab080957" prot="public">
+          <name>FRUSTRUM_BOTTOM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dd/de4/Camera_8h_1abfdb9854de7cdbd6b50aaada61986d1ca18b1fe0b0d0555bb28f4ba55bf58e6e6" prot="public">
+          <name>FRUSTRUM_TOP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dd/de4/Camera_8h_1abfdb9854de7cdbd6b50aaada61986d1ca75fd7a5bc30edc6055a3f48abbbc6827" prot="public">
+          <name>FRUSTRUM_NEAR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dd/de4/Camera_8h_1abfdb9854de7cdbd6b50aaada61986d1ca3776042ba34100fa7bb57639d88df5cc" prot="public">
+          <name>FRUSTRUM_FAR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dd/de4/Camera_8h_1abfdb9854de7cdbd6b50aaada61986d1ca2dcd2b67e79b07e6383fbcb3d414f1fa" prot="public">
+          <name>FRUSTRUM_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Camera.h" line="40" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Camera.h" bodystart="39" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="enum" id="dd/de4/Camera_8h_1ab7b740eebe203f38844ea19e53b09088" prot="public" static="no">
+        <name>ProjectionDepthMapping</name>
+        <enumvalue id="dd/de4/Camera_8h_1ab7b740eebe203f38844ea19e53b09088aeb77636db7c43d8ceb22f1a6ea570999" prot="public">
+          <name>PROJECT_DEPTH_ZERO_ONE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dd/de4/Camera_8h_1ab7b740eebe203f38844ea19e53b09088aa18da7172e0b101d637572409a78fcf4" prot="public">
+          <name>PROJECT_DEPTH_MINUSONE_ONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dd/de4/Camera_8h_1ab7b740eebe203f38844ea19e53b09088ae15be70b04d5d89677cc685efb02c8f7" prot="public">
+          <name>PROJECT_DEPTH_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Camera.h" line="52" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Camera.h" bodystart="51" bodyend="57"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Camera.h"/>
+  </compounddef>
+</doxygen>

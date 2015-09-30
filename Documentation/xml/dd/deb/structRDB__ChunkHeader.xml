@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="dd/deb/structRDB__ChunkHeader" kind="struct" prot="public">
+    <compoundname>RDB_ChunkHeader</compoundname>
+    <includes refid="d5/dae/RDBFileStructure_8h" local="no">RDBFileStructure.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="dd/deb/structRDB__ChunkHeader_1a3d4e94fd05e884e2a1774c39c5f98b2b" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/df5/structRDB__ChunkPtr" kindref="compound">RDB_ChunkPtr</ref></type>
+        <definition>RDB_ChunkPtr pNextChunk</definition>
+        <argsstring></argsstring>
+        <name>pNextChunk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBFileStructure.h" line="163" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBFileStructure.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/deb/structRDB__ChunkHeader_1ae246a3082bcadf3e59a9e7feb12738e5" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/df5/structRDB__ChunkPtr" kindref="compound">RDB_ChunkPtr</ref></type>
+        <definition>RDB_ChunkPtr pPrevChunk</definition>
+        <argsstring></argsstring>
+        <name>pPrevChunk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBFileStructure.h" line="164" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBFileStructure.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="10172">
+        <label>unsigned int</label>
+      </node>
+      <node id="10171">
+        <label>RDB_ChunkType</label>
+      </node>
+      <node id="10169">
+        <label>RDB_ChunkHeader</label>
+        <link refid="dd/deb/structRDB__ChunkHeader"/>
+        <childnode refid="10170" relation="usage">
+          <edgelabel>pPrevChunk</edgelabel>
+          <edgelabel>pNextChunk</edgelabel>
+        </childnode>
+      </node>
+      <node id="10170">
+        <label>RDB_ChunkPtr</label>
+        <link refid="d1/df5/structRDB__ChunkPtr"/>
+        <childnode refid="10171" relation="usage">
+          <edgelabel>iType</edgelabel>
+        </childnode>
+        <childnode refid="10172" relation="usage">
+          <edgelabel>idChunk</edgelabel>
+          <edgelabel>idBlock</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBFileStructure.h" line="162" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBFileStructure.h" bodystart="161" bodyend="165"/>
+    <listofallmembers>
+      <member refid="dd/deb/structRDB__ChunkHeader_1a3d4e94fd05e884e2a1774c39c5f98b2b" prot="public" virt="non-virtual"><scope>RDB_ChunkHeader</scope><name>pNextChunk</name></member>
+      <member refid="dd/deb/structRDB__ChunkHeader_1ae246a3082bcadf3e59a9e7feb12738e5" prot="public" virt="non-virtual"><scope>RDB_ChunkHeader</scope><name>pPrevChunk</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

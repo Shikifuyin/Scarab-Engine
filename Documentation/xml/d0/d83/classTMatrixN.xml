@@ -1,0 +1,1241 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d0/d83/classTMatrixN" kind="class" prot="public">
+    <compoundname>TMatrixN</compoundname>
+    <includes refid="d0/dde/MatrixN_8h" local="no">MatrixN.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>Real</declname>
+        <defname>Real</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="d0/d83/classTMatrixN_1a861ab6a3627bfe53ae2453e2a5e1fca8" prot="private" static="yes" mutable="no">
+        <type>const Real</type>
+        <definition>const Real ZERO</definition>
+        <argsstring></argsstring>
+        <name>ZERO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="139" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d83/classTMatrixN_1acac09fd02521e2a1297f6dde618fb5ca" prot="private" static="yes" mutable="no">
+        <type>const Real</type>
+        <definition>const Real ONE</definition>
+        <argsstring></argsstring>
+        <name>ONE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="140" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d0/d83/classTMatrixN_1a0db9b4231914955b609a4095d0a2e8b8" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iRows</definition>
+        <argsstring></argsstring>
+        <name>m_iRows</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="142" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d83/classTMatrixN_1ab9b804dc6fc279965f1ecbb4fcfcd59a" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iColumns</definition>
+        <argsstring></argsstring>
+        <name>m_iColumns</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="142" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d83/classTMatrixN_1a33a55c582674ff392fce44bc9bb82ddf" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iSize</definition>
+        <argsstring></argsstring>
+        <name>m_iSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="142" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d83/classTMatrixN_1a91703117d1a27fe936d3ed3102b3bb9e" prot="private" static="no" mutable="no">
+        <type>Real *</type>
+        <definition>Real* m_arrMatrix</definition>
+        <argsstring></argsstring>
+        <name>m_arrMatrix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="143" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d83/classTMatrixN_1a62c562246346d3b4a316679524265c23" prot="private" static="no" mutable="no">
+        <type>Real **</type>
+        <definition>Real** m_arrRows</definition>
+        <argsstring></argsstring>
+        <name>m_arrRows</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="144" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1a60561fbf17616d19de20a39aa1d0f453" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TMatrixN</definition>
+        <argsstring>()</argsstring>
+        <name>TMatrixN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="41"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1ac9791b33da19b3e3d37ccc29bf9e921a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TMatrixN</definition>
+        <argsstring>(UInt iRows, UInt iColumns)</argsstring>
+        <name>TMatrixN</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iRows</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iColumns</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="42"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1ad8f5227cc565265feaa886f7f5e336ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TMatrixN</definition>
+        <argsstring>(UInt iRows, UInt iColumns, const Real *arrMat, Bool bRows=true)</argsstring>
+        <name>TMatrixN</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iRows</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iColumns</declname>
+        </param>
+        <param>
+          <type>const Real *</type>
+          <declname>arrMat</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+          <declname>bRows</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1a08f175a5505a10b9ed657defeb050e4b" kindref="member">true</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="43"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1a8305e33254dfbc623781f0d16a5efd5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TMatrixN</definition>
+        <argsstring>(UInt iRows, UInt iColumns, const Real **arrMat, Bool bRows=true)</argsstring>
+        <name>TMatrixN</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iRows</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iColumns</declname>
+        </param>
+        <param>
+          <type>const Real **</type>
+          <declname>arrMat</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+          <declname>bRows</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1a08f175a5505a10b9ed657defeb050e4b" kindref="member">true</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="44"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1abcbd6180994927f808e22638649635ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TMatrixN</definition>
+        <argsstring>(UInt iRows, UInt iColumns, const TVectorN&lt; Real &gt; *arrMat, Bool bRows=true)</argsstring>
+        <name>TMatrixN</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iRows</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iColumns</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d4/d23/classTVectorN" kindref="compound">TVectorN</ref>&lt; Real &gt; *</type>
+          <declname>arrMat</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+          <declname>bRows</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1a08f175a5505a10b9ed657defeb050e4b" kindref="member">true</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="45"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1aa5bd6691fb8ec05168e5634d9c9777f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TMatrixN</definition>
+        <argsstring>(const TMatrixN&lt; Real &gt; &amp;rhs)</argsstring>
+        <name>TMatrixN</name>
+        <param>
+          <type>const <ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="46"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1abedd9fffcb7ccd4cdbbf532c7dc008e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~TMatrixN</definition>
+        <argsstring>()</argsstring>
+        <name>~TMatrixN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1afb20bf872d1b69557c67bf0ff868ee03" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetSize</definition>
+        <argsstring>(UInt iRows, UInt iColumns)</argsstring>
+        <name>SetSize</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iRows</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iColumns</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="50"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1adececbc98d793a45c7f2649e56e4de85" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt; &amp;</type>
+        <definition>TMatrixN&lt;Real&gt;&amp; operator=</definition>
+        <argsstring>(const TMatrixN&lt; Real &gt; &amp;rhs)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="53"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1a37afb44a75d1a61dbf1995e68a15b700" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>operator Real *</definition>
+        <argsstring>() const </argsstring>
+        <name>operator Real *</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="56"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1aa18f12f9d731665bf1761defd963e092" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>operator const Real *</definition>
+        <argsstring>() const </argsstring>
+        <name>operator const Real *</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="57"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1a16bc1150043ddf0eb1bb26e07d01b97c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real &amp;</type>
+        <definition>Real&amp; operator[]</definition>
+        <argsstring>(Int i)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref></type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="61"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1a16c3e65e5c3cb2c7d3ad611186ab3277" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real operator[]</definition>
+        <argsstring>(Int i) const </argsstring>
+        <name>operator[]</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref></type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="62"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1a16a53ede5f306a403ea8ee9367277c2c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real &amp;</type>
+        <definition>Real&amp; operator[]</definition>
+        <argsstring>(UInt i)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="63"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1a4c9eae2fc3af1319229e8177a190025b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real operator[]</definition>
+        <argsstring>(UInt i) const </argsstring>
+        <name>operator[]</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="64"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1ad97652961894e1bb3e6ba0cde310306b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real &amp;</type>
+        <definition>Real&amp; operator()</definition>
+        <argsstring>(Int iRow, Int iColumn)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref></type>
+          <declname>iRow</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref></type>
+          <declname>iColumn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="66"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1a895f4a88362f4a660976b828d5538b76" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real operator()</definition>
+        <argsstring>(Int iRow, Int iColumn) const </argsstring>
+        <name>operator()</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref></type>
+          <declname>iRow</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref></type>
+          <declname>iColumn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="67"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1aa40c5052876a5345ac6afc0adb5befcc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real &amp;</type>
+        <definition>Real&amp; operator()</definition>
+        <argsstring>(UInt iRow, UInt iColumn)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iRow</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iColumn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="68"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1a51323249926ad3f29868011d70320103" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real operator()</definition>
+        <argsstring>(UInt iRow, UInt iColumn) const </argsstring>
+        <name>operator()</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iRow</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iColumn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="69"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1a4d555e3b37409362019a0e7a3a166c1b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt;</type>
+        <definition>TMatrixN&lt;Real&gt; operator+</definition>
+        <argsstring>() const </argsstring>
+        <name>operator+</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="72"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1a63a440e88cd255c8915cfd5a541d55fe" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt;</type>
+        <definition>TMatrixN&lt;Real&gt; operator-</definition>
+        <argsstring>() const </argsstring>
+        <name>operator-</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="73"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1ae08fd305c4bec14ac5751a8c44c6384c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool operator==</definition>
+        <argsstring>(const TMatrixN&lt; Real &gt; &amp;rhs) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="76"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1a2e4d9b8f3e022f48808958dbd6a8afb5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool operator!=</definition>
+        <argsstring>(const TMatrixN&lt; Real &gt; &amp;rhs) const </argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="77"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1a31c32488377470c998348a3a5374f83c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt;</type>
+        <definition>TMatrixN&lt;Real&gt; operator*</definition>
+        <argsstring>(Real rhs) const </argsstring>
+        <name>operator*</name>
+        <param>
+          <type>Real</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="80"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1afd30c4cf37088b97ea876754d872b82f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt;</type>
+        <definition>TMatrixN&lt;Real&gt; operator/</definition>
+        <argsstring>(Real rhs) const </argsstring>
+        <name>operator/</name>
+        <param>
+          <type>Real</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="81"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1a1d35c7a2f81880d5ced1bccc0aff1e70" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt; &amp;</type>
+        <definition>TMatrixN&lt;Real&gt;&amp; operator*=</definition>
+        <argsstring>(Real rhs)</argsstring>
+        <name>operator*=</name>
+        <param>
+          <type>Real</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="83"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1aa9fd77393af40c59cadab0811b99221b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt; &amp;</type>
+        <definition>TMatrixN&lt;Real&gt;&amp; operator/=</definition>
+        <argsstring>(Real rhs)</argsstring>
+        <name>operator/=</name>
+        <param>
+          <type>Real</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="84"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1accea6e121854b50753b20ae876b040d1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d4/d23/classTVectorN" kindref="compound">TVectorN</ref>&lt; Real &gt;</type>
+        <definition>TVectorN&lt;Real&gt; operator*</definition>
+        <argsstring>(const TVectorN&lt; Real &gt; &amp;rhs) const </argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="d4/d23/classTVectorN" kindref="compound">TVectorN</ref>&lt; Real &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="87"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1a703ff2c3a73dc6c0fdee4885b00d88e3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt;</type>
+        <definition>TMatrixN&lt;Real&gt; operator+</definition>
+        <argsstring>(const TMatrixN&lt; Real &gt; &amp;rhs) const </argsstring>
+        <name>operator+</name>
+        <param>
+          <type>const <ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="90"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1a0bff8c4b15c1ef820be1af0c48354884" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt;</type>
+        <definition>TMatrixN&lt;Real&gt; operator-</definition>
+        <argsstring>(const TMatrixN&lt; Real &gt; &amp;rhs) const </argsstring>
+        <name>operator-</name>
+        <param>
+          <type>const <ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="91"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1a7ecb9e787287bc1b7eeb47db2c89c665" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt;</type>
+        <definition>TMatrixN&lt;Real&gt; operator*</definition>
+        <argsstring>(const TMatrixN&lt; Real &gt; &amp;rhs) const </argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="92"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1ac61da698bc411291bbfd8e3400e77c3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt; &amp;</type>
+        <definition>TMatrixN&lt;Real&gt;&amp; operator+=</definition>
+        <argsstring>(const TMatrixN&lt; Real &gt; &amp;rhs)</argsstring>
+        <name>operator+=</name>
+        <param>
+          <type>const <ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="94"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1a03a779ebbda0da345c2bd2b26c373d74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt; &amp;</type>
+        <definition>TMatrixN&lt;Real&gt;&amp; operator-=</definition>
+        <argsstring>(const TMatrixN&lt; Real &gt; &amp;rhs)</argsstring>
+        <name>operator-=</name>
+        <param>
+          <type>const <ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="95"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1a131112cc43875133a7f6ec459a552810" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetRowCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetRowCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="98"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1a3b2a27b4e8b02a4602eb1de425820b3c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetColumnCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetColumnCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="99"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1aa3e352f02a9e19866aa0bd0a51a24b80" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetSize</definition>
+        <argsstring>() const </argsstring>
+        <name>GetSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="100"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1a1a36d736662ffc5b95e556715a2c7857" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void GetRow</definition>
+        <argsstring>(TVectorN&lt; Real &gt; &amp;outRow, UInt iRow) const </argsstring>
+        <name>GetRow</name>
+        <param>
+          <type><ref refid="d4/d23/classTVectorN" kindref="compound">TVectorN</ref>&lt; Real &gt; &amp;</type>
+          <declname>outRow</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iRow</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="102"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1a00c31af7065a1a5544c94670520e6ca7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetRow</definition>
+        <argsstring>(UInt iRow, const Real *vRow)</argsstring>
+        <name>SetRow</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iRow</declname>
+        </param>
+        <param>
+          <type>const Real *</type>
+          <declname>vRow</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="103"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1a3d9c246355cbbfbae59ec15a7f4101ba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetRow</definition>
+        <argsstring>(UInt iRow, const TVectorN&lt; Real &gt; &amp;vRow)</argsstring>
+        <name>SetRow</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iRow</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d4/d23/classTVectorN" kindref="compound">TVectorN</ref>&lt; Real &gt; &amp;</type>
+          <declname>vRow</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="104"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1a594953a7e99f9c2503f5a22bb8eacd86" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void GetColumn</definition>
+        <argsstring>(TVectorN&lt; Real &gt; &amp;outColumn, UInt iColumn) const </argsstring>
+        <name>GetColumn</name>
+        <param>
+          <type><ref refid="d4/d23/classTVectorN" kindref="compound">TVectorN</ref>&lt; Real &gt; &amp;</type>
+          <declname>outColumn</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iColumn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="106"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1a59072cc401ea7f95d75f08560cd48d46" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetColumn</definition>
+        <argsstring>(UInt iColumn, const Real *vCol)</argsstring>
+        <name>SetColumn</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iColumn</declname>
+        </param>
+        <param>
+          <type>const Real *</type>
+          <declname>vCol</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="107"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1a6d5e9430a0b144d2d56a8eab545bdf39" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetColumn</definition>
+        <argsstring>(UInt iColumn, const TVectorN&lt; Real &gt; &amp;vCol)</argsstring>
+        <name>SetColumn</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iColumn</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d4/d23/classTVectorN" kindref="compound">TVectorN</ref>&lt; Real &gt; &amp;</type>
+          <declname>vCol</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="108"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1a9e0c45a11667396872f42fc55f7c4bea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SwapRows</definition>
+        <argsstring>(UInt iRow0, UInt iRow1)</argsstring>
+        <name>SwapRows</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iRow0</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iRow1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="110"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1a5ddff1963d0594e9e73280610470b467" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void MakeNull</definition>
+        <argsstring>()</argsstring>
+        <name>MakeNull</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="113"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1a1a2be532f2f092c6acf89a35d273201d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void MakeIdentity</definition>
+        <argsstring>()</argsstring>
+        <name>MakeIdentity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="114"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1ac21f1279a951930326754a1f03521209" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void MakeMatrix</definition>
+        <argsstring>(const Real *arrMat, Bool bRows=true)</argsstring>
+        <name>MakeMatrix</name>
+        <param>
+          <type>const Real *</type>
+          <declname>arrMat</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+          <declname>bRows</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1a08f175a5505a10b9ed657defeb050e4b" kindref="member">true</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="115"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1aabc7cf7a89424f5800a8510d2e35301a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void MakeMatrix</definition>
+        <argsstring>(const Real **arrMat, Bool bRows=true)</argsstring>
+        <name>MakeMatrix</name>
+        <param>
+          <type>const Real **</type>
+          <declname>arrMat</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+          <declname>bRows</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1a08f175a5505a10b9ed657defeb050e4b" kindref="member">true</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="116"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1aafa428cbc3c8bb7dfecc75cc173da256" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void MakeMatrix</definition>
+        <argsstring>(const TVectorN&lt; Real &gt; *arrMat, Bool bRows=true)</argsstring>
+        <name>MakeMatrix</name>
+        <param>
+          <type>const <ref refid="d4/d23/classTVectorN" kindref="compound">TVectorN</ref>&lt; Real &gt; *</type>
+          <declname>arrMat</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+          <declname>bRows</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1a08f175a5505a10b9ed657defeb050e4b" kindref="member">true</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="117"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1a099c0c5de566fcdfad578cb5e6fd7d23" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Transpose</definition>
+        <argsstring>(TMatrixN&lt; Real &gt; &amp;outTransposedMatrix) const </argsstring>
+        <name>Transpose</name>
+        <param>
+          <type><ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt; &amp;</type>
+          <declname>outTransposedMatrix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="120"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1a31f4f40213c28571d6dd8e22628f444e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool Invert</definition>
+        <argsstring>(TMatrixN&lt; Real &gt; &amp;outInvMatrix, Real fZeroTolerance=(Real) SCALAR_ERROR) const </argsstring>
+        <name>Invert</name>
+        <param>
+          <type><ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt; &amp;</type>
+          <declname>outInvMatrix</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fZeroTolerance</declname>
+          <defval>(Real) <ref refid="d0/d10/Scalar_8h_1ab84e60710e7c3a93246b807ac524d38b" kindref="member">SCALAR_ERROR</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="126"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1af03493b1fc9c047cf196a4b6f51d69c2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real QuadraticForm</definition>
+        <argsstring>(const TVectorN&lt; Real &gt; &amp;v0, const TVectorN&lt; Real &gt; &amp;v1) const </argsstring>
+        <name>QuadraticForm</name>
+        <param>
+          <type>const <ref refid="d4/d23/classTVectorN" kindref="compound">TVectorN</ref>&lt; Real &gt; &amp;</type>
+          <declname>v0</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d4/d23/classTVectorN" kindref="compound">TVectorN</ref>&lt; Real &gt; &amp;</type>
+          <declname>v1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="128"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1a2e2c4f53dedd25c094040491522836db" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _AllocateMatrix</definition>
+        <argsstring>(UInt iRows, UInt iColumns)</argsstring>
+        <name>_AllocateMatrix</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iRows</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iColumns</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="132"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1a4c7f85772caa863245add10e275dcbc8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _DestroyMatrix</definition>
+        <argsstring>()</argsstring>
+        <name>_DestroyMatrix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="133"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1a9af5c33a7dea70b39e19b9c3d6a4ccec" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _SetMatrix</definition>
+        <argsstring>(const Real *arrMat, Bool bRows)</argsstring>
+        <name>_SetMatrix</name>
+        <param>
+          <type>const Real *</type>
+          <declname>arrMat</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+          <declname>bRows</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="135"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1a0e12a09dc3b58cdc4e6d60c858d74aed" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _SetMatrix</definition>
+        <argsstring>(const Real **arrMat, Bool bRows)</argsstring>
+        <name>_SetMatrix</name>
+        <param>
+          <type>const Real **</type>
+          <declname>arrMat</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+          <declname>bRows</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="136"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d83/classTMatrixN_1add612020558e7c64eab3a2e235aed550" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _SetMatrix</definition>
+        <argsstring>(const TVectorN&lt; Real &gt; *arrMat, Bool bRows)</argsstring>
+        <name>_SetMatrix</name>
+        <param>
+          <type>const <ref refid="d4/d23/classTVectorN" kindref="compound">TVectorN</ref>&lt; Real &gt; *</type>
+          <declname>arrMat</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+          <declname>bRows</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="137"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="12714">
+        <label>Real</label>
+      </node>
+      <node id="12713">
+        <label>int</label>
+      </node>
+      <node id="12712">
+        <label>TMatrixN&lt; Real &gt;</label>
+        <link refid="d0/d83/classTMatrixN"/>
+        <childnode refid="12713" relation="usage">
+          <edgelabel>m_iSize</edgelabel>
+          <edgelabel>m_iColumns</edgelabel>
+          <edgelabel>m_iRows</edgelabel>
+        </childnode>
+        <childnode refid="12714" relation="usage">
+          <edgelabel>m_arrMatrix</edgelabel>
+          <edgelabel>ONE</edgelabel>
+          <edgelabel>m_arrRows</edgelabel>
+          <edgelabel>ZERO</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" line="38" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/MatrixN.h" bodystart="37" bodyend="145"/>
+    <listofallmembers>
+      <member refid="d0/d83/classTMatrixN_1a2e2c4f53dedd25c094040491522836db" prot="private" virt="non-virtual"><scope>TMatrixN</scope><name>_AllocateMatrix</name></member>
+      <member refid="d0/d83/classTMatrixN_1a4c7f85772caa863245add10e275dcbc8" prot="private" virt="non-virtual"><scope>TMatrixN</scope><name>_DestroyMatrix</name></member>
+      <member refid="d0/d83/classTMatrixN_1a9af5c33a7dea70b39e19b9c3d6a4ccec" prot="private" virt="non-virtual"><scope>TMatrixN</scope><name>_SetMatrix</name></member>
+      <member refid="d0/d83/classTMatrixN_1a0e12a09dc3b58cdc4e6d60c858d74aed" prot="private" virt="non-virtual"><scope>TMatrixN</scope><name>_SetMatrix</name></member>
+      <member refid="d0/d83/classTMatrixN_1add612020558e7c64eab3a2e235aed550" prot="private" virt="non-virtual"><scope>TMatrixN</scope><name>_SetMatrix</name></member>
+      <member refid="d0/d83/classTMatrixN_1a594953a7e99f9c2503f5a22bb8eacd86" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>GetColumn</name></member>
+      <member refid="d0/d83/classTMatrixN_1a3b2a27b4e8b02a4602eb1de425820b3c" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>GetColumnCount</name></member>
+      <member refid="d0/d83/classTMatrixN_1a1a36d736662ffc5b95e556715a2c7857" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>GetRow</name></member>
+      <member refid="d0/d83/classTMatrixN_1a131112cc43875133a7f6ec459a552810" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>GetRowCount</name></member>
+      <member refid="d0/d83/classTMatrixN_1aa3e352f02a9e19866aa0bd0a51a24b80" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>GetSize</name></member>
+      <member refid="d0/d83/classTMatrixN_1a31f4f40213c28571d6dd8e22628f444e" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>Invert</name></member>
+      <member refid="d0/d83/classTMatrixN_1a91703117d1a27fe936d3ed3102b3bb9e" prot="private" virt="non-virtual"><scope>TMatrixN</scope><name>m_arrMatrix</name></member>
+      <member refid="d0/d83/classTMatrixN_1a62c562246346d3b4a316679524265c23" prot="private" virt="non-virtual"><scope>TMatrixN</scope><name>m_arrRows</name></member>
+      <member refid="d0/d83/classTMatrixN_1ab9b804dc6fc279965f1ecbb4fcfcd59a" prot="private" virt="non-virtual"><scope>TMatrixN</scope><name>m_iColumns</name></member>
+      <member refid="d0/d83/classTMatrixN_1a0db9b4231914955b609a4095d0a2e8b8" prot="private" virt="non-virtual"><scope>TMatrixN</scope><name>m_iRows</name></member>
+      <member refid="d0/d83/classTMatrixN_1a33a55c582674ff392fce44bc9bb82ddf" prot="private" virt="non-virtual"><scope>TMatrixN</scope><name>m_iSize</name></member>
+      <member refid="d0/d83/classTMatrixN_1a1a2be532f2f092c6acf89a35d273201d" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>MakeIdentity</name></member>
+      <member refid="d0/d83/classTMatrixN_1ac21f1279a951930326754a1f03521209" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>MakeMatrix</name></member>
+      <member refid="d0/d83/classTMatrixN_1aabc7cf7a89424f5800a8510d2e35301a" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>MakeMatrix</name></member>
+      <member refid="d0/d83/classTMatrixN_1aafa428cbc3c8bb7dfecc75cc173da256" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>MakeMatrix</name></member>
+      <member refid="d0/d83/classTMatrixN_1a5ddff1963d0594e9e73280610470b467" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>MakeNull</name></member>
+      <member refid="d0/d83/classTMatrixN_1acac09fd02521e2a1297f6dde618fb5ca" prot="private" virt="non-virtual"><scope>TMatrixN</scope><name>ONE</name></member>
+      <member refid="d0/d83/classTMatrixN_1aa18f12f9d731665bf1761defd963e092" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>operator const Real *</name></member>
+      <member refid="d0/d83/classTMatrixN_1a37afb44a75d1a61dbf1995e68a15b700" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>operator Real *</name></member>
+      <member refid="d0/d83/classTMatrixN_1a2e4d9b8f3e022f48808958dbd6a8afb5" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>operator!=</name></member>
+      <member refid="d0/d83/classTMatrixN_1ad97652961894e1bb3e6ba0cde310306b" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>operator()</name></member>
+      <member refid="d0/d83/classTMatrixN_1a895f4a88362f4a660976b828d5538b76" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>operator()</name></member>
+      <member refid="d0/d83/classTMatrixN_1aa40c5052876a5345ac6afc0adb5befcc" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>operator()</name></member>
+      <member refid="d0/d83/classTMatrixN_1a51323249926ad3f29868011d70320103" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>operator()</name></member>
+      <member refid="d0/d83/classTMatrixN_1a31c32488377470c998348a3a5374f83c" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>operator*</name></member>
+      <member refid="d0/d83/classTMatrixN_1accea6e121854b50753b20ae876b040d1" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>operator*</name></member>
+      <member refid="d0/d83/classTMatrixN_1a7ecb9e787287bc1b7eeb47db2c89c665" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>operator*</name></member>
+      <member refid="d0/d83/classTMatrixN_1a1d35c7a2f81880d5ced1bccc0aff1e70" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>operator*=</name></member>
+      <member refid="d0/d83/classTMatrixN_1a4d555e3b37409362019a0e7a3a166c1b" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>operator+</name></member>
+      <member refid="d0/d83/classTMatrixN_1a703ff2c3a73dc6c0fdee4885b00d88e3" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>operator+</name></member>
+      <member refid="d0/d83/classTMatrixN_1ac61da698bc411291bbfd8e3400e77c3b" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>operator+=</name></member>
+      <member refid="d0/d83/classTMatrixN_1a63a440e88cd255c8915cfd5a541d55fe" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>operator-</name></member>
+      <member refid="d0/d83/classTMatrixN_1a0bff8c4b15c1ef820be1af0c48354884" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>operator-</name></member>
+      <member refid="d0/d83/classTMatrixN_1a03a779ebbda0da345c2bd2b26c373d74" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>operator-=</name></member>
+      <member refid="d0/d83/classTMatrixN_1afd30c4cf37088b97ea876754d872b82f" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>operator/</name></member>
+      <member refid="d0/d83/classTMatrixN_1aa9fd77393af40c59cadab0811b99221b" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>operator/=</name></member>
+      <member refid="d0/d83/classTMatrixN_1adececbc98d793a45c7f2649e56e4de85" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>operator=</name></member>
+      <member refid="d0/d83/classTMatrixN_1ae08fd305c4bec14ac5751a8c44c6384c" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>operator==</name></member>
+      <member refid="d0/d83/classTMatrixN_1a16bc1150043ddf0eb1bb26e07d01b97c" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>operator[]</name></member>
+      <member refid="d0/d83/classTMatrixN_1a16c3e65e5c3cb2c7d3ad611186ab3277" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>operator[]</name></member>
+      <member refid="d0/d83/classTMatrixN_1a16a53ede5f306a403ea8ee9367277c2c" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>operator[]</name></member>
+      <member refid="d0/d83/classTMatrixN_1a4c9eae2fc3af1319229e8177a190025b" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>operator[]</name></member>
+      <member refid="d0/d83/classTMatrixN_1af03493b1fc9c047cf196a4b6f51d69c2" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>QuadraticForm</name></member>
+      <member refid="d0/d83/classTMatrixN_1a59072cc401ea7f95d75f08560cd48d46" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>SetColumn</name></member>
+      <member refid="d0/d83/classTMatrixN_1a6d5e9430a0b144d2d56a8eab545bdf39" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>SetColumn</name></member>
+      <member refid="d0/d83/classTMatrixN_1a00c31af7065a1a5544c94670520e6ca7" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>SetRow</name></member>
+      <member refid="d0/d83/classTMatrixN_1a3d9c246355cbbfbae59ec15a7f4101ba" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>SetRow</name></member>
+      <member refid="d0/d83/classTMatrixN_1afb20bf872d1b69557c67bf0ff868ee03" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>SetSize</name></member>
+      <member refid="d0/d83/classTMatrixN_1a9e0c45a11667396872f42fc55f7c4bea" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>SwapRows</name></member>
+      <member refid="d0/d83/classTMatrixN_1a60561fbf17616d19de20a39aa1d0f453" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>TMatrixN</name></member>
+      <member refid="d0/d83/classTMatrixN_1ac9791b33da19b3e3d37ccc29bf9e921a" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>TMatrixN</name></member>
+      <member refid="d0/d83/classTMatrixN_1ad8f5227cc565265feaa886f7f5e336ab" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>TMatrixN</name></member>
+      <member refid="d0/d83/classTMatrixN_1a8305e33254dfbc623781f0d16a5efd5b" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>TMatrixN</name></member>
+      <member refid="d0/d83/classTMatrixN_1abcbd6180994927f808e22638649635ff" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>TMatrixN</name></member>
+      <member refid="d0/d83/classTMatrixN_1aa5bd6691fb8ec05168e5634d9c9777f6" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>TMatrixN</name></member>
+      <member refid="d0/d83/classTMatrixN_1a099c0c5de566fcdfad578cb5e6fd7d23" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>Transpose</name></member>
+      <member refid="d0/d83/classTMatrixN_1a861ab6a3627bfe53ae2453e2a5e1fca8" prot="private" virt="non-virtual"><scope>TMatrixN</scope><name>ZERO</name></member>
+      <member refid="d0/d83/classTMatrixN_1abedd9fffcb7ccd4cdbbf532c7dc008e6" prot="public" virt="non-virtual"><scope>TMatrixN</scope><name>~TMatrixN</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

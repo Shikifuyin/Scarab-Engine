@@ -1,0 +1,870 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d8/da7/classRational" kind="class" prot="public">
+    <compoundname>Rational</compoundname>
+    <includes refid="d6/dac/Integer_8h" local="no">Integer.h</includes>
+    <templateparamlist>
+      <param>
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <declname>INT_BYTES</declname>
+        <defname>INT_BYTES</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d8/da7/classRational_1afb00290cd2cdb8eeef587264956a0810" prot="private" static="no" mutable="no">
+        <type><ref refid="d1/d84/classInteger" kindref="compound">Integer</ref>&lt; INT_BYTES &gt;</type>
+        <definition>Integer&lt;INT_BYTES&gt; m_iNumerator</definition>
+        <argsstring></argsstring>
+        <name>m_iNumerator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="116" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/da7/classRational_1a360deb531ff641cfa2f5fdaeeb0db665" prot="private" static="no" mutable="no">
+        <type><ref refid="d1/d84/classInteger" kindref="compound">Integer</ref>&lt; INT_BYTES &gt;</type>
+        <definition>Integer&lt;INT_BYTES&gt; m_iDenominator</definition>
+        <argsstring></argsstring>
+        <name>m_iDenominator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="117" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d8/da7/classRational_1ae0a33e796fe904111569461516de04e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rational</definition>
+        <argsstring>()</argsstring>
+        <name>Rational</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="39"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1ac780f642c56373aea83775731fac9ca1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rational</definition>
+        <argsstring>(const Rational &amp;rhs)</argsstring>
+        <name>Rational</name>
+        <param>
+          <type>const <ref refid="d8/da7/classRational" kindref="compound">Rational</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="40"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1a9577ca7254d386a98ad343391619bc89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rational</definition>
+        <argsstring>(const Integer&lt; INT_BYTES &gt; &amp;intNumerator)</argsstring>
+        <name>Rational</name>
+        <param>
+          <type>const <ref refid="d1/d84/classInteger" kindref="compound">Integer</ref>&lt; INT_BYTES &gt; &amp;</type>
+          <declname>intNumerator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="41"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1af19d2a97daf4768474bc9ecd59c0aa0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rational</definition>
+        <argsstring>(const Integer&lt; INT_BYTES &gt; &amp;intNumerator, const Integer&lt; INT_BYTES &gt; &amp;intDenominator)</argsstring>
+        <name>Rational</name>
+        <param>
+          <type>const <ref refid="d1/d84/classInteger" kindref="compound">Integer</ref>&lt; INT_BYTES &gt; &amp;</type>
+          <declname>intNumerator</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d1/d84/classInteger" kindref="compound">Integer</ref>&lt; INT_BYTES &gt; &amp;</type>
+          <declname>intDenominator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="42"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1a099739b04e157b6c080b66044d5b5156" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rational</definition>
+        <argsstring>(Float fValue)</argsstring>
+        <name>Rational</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref></type>
+          <declname>fValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="43"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1a16c41eaf332859c9f15f0d527dec7a43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rational</definition>
+        <argsstring>(Double fValue)</argsstring>
+        <name>Rational</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a1f2c5f02159fb28428e23074cc04166d" kindref="member">Double</ref></type>
+          <declname>fValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="44"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1a4904a53cad722c76c7b389531e1ce77a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~Rational</definition>
+        <argsstring>()</argsstring>
+        <name>~Rational</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="45"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1ae3eeb6c5e1ad5c7fe4d48ad3f5a0a01a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>operator Float</definition>
+        <argsstring>() const </argsstring>
+        <name>operator Float</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="48"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1a92cd7f3e49c2687c4608570d236e0ec9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>operator Double</definition>
+        <argsstring>() const </argsstring>
+        <name>operator Double</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="49"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1a41cf985d48301efd3207921cc84c7cd8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d8/da7/classRational" kindref="compound">Rational</ref>&lt; INT_BYTES &gt; &amp;</type>
+        <definition>Rational&lt;INT_BYTES&gt;&amp; operator=</definition>
+        <argsstring>(const Rational&lt; INT_BYTES &gt; &amp;rhs)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="d8/da7/classRational" kindref="compound">Rational</ref>&lt; INT_BYTES &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="52"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1a7ca6390beeca464f2682367b02d0f877" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d8/da7/classRational" kindref="compound">Rational</ref>&lt; INT_BYTES &gt; &amp;</type>
+        <definition>Rational&lt;INT_BYTES&gt;&amp; operator=</definition>
+        <argsstring>(const Integer&lt; INT_BYTES &gt; &amp;rhs)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="d1/d84/classInteger" kindref="compound">Integer</ref>&lt; INT_BYTES &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="53"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1adc67e7ab02a7472f22cbf06d29562313" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d8/da7/classRational" kindref="compound">Rational</ref>&lt; INT_BYTES &gt;</type>
+        <definition>Rational&lt;INT_BYTES&gt; operator+</definition>
+        <argsstring>() const </argsstring>
+        <name>operator+</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="56"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1a867663ea31b8efb992f960ca79252adc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d8/da7/classRational" kindref="compound">Rational</ref>&lt; INT_BYTES &gt;</type>
+        <definition>Rational&lt;INT_BYTES&gt; operator-</definition>
+        <argsstring>() const </argsstring>
+        <name>operator-</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="57"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1a471aa172521f34bc3d9b9d1d19c48343" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d8/da7/classRational" kindref="compound">Rational</ref>&lt; INT_BYTES &gt;</type>
+        <definition>Rational&lt;INT_BYTES&gt; operator+</definition>
+        <argsstring>(const Rational&lt; INT_BYTES &gt; &amp;rhs) const </argsstring>
+        <name>operator+</name>
+        <param>
+          <type>const <ref refid="d8/da7/classRational" kindref="compound">Rational</ref>&lt; INT_BYTES &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="60"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1a9b68ce95e3072b1d719fe0ee4c88447d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d8/da7/classRational" kindref="compound">Rational</ref>&lt; INT_BYTES &gt;</type>
+        <definition>Rational&lt;INT_BYTES&gt; operator+</definition>
+        <argsstring>(const Integer&lt; INT_BYTES &gt; &amp;rhs) const </argsstring>
+        <name>operator+</name>
+        <param>
+          <type>const <ref refid="d1/d84/classInteger" kindref="compound">Integer</ref>&lt; INT_BYTES &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="61"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1a09a04e8f21432a17a88198743053d468" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d8/da7/classRational" kindref="compound">Rational</ref>&lt; INT_BYTES &gt;</type>
+        <definition>Rational&lt;INT_BYTES&gt; operator-</definition>
+        <argsstring>(const Rational&lt; INT_BYTES &gt; &amp;rhs) const </argsstring>
+        <name>operator-</name>
+        <param>
+          <type>const <ref refid="d8/da7/classRational" kindref="compound">Rational</ref>&lt; INT_BYTES &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="63"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1a967c4fa6b72099f91d62b3c8e468487f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d8/da7/classRational" kindref="compound">Rational</ref>&lt; INT_BYTES &gt;</type>
+        <definition>Rational&lt;INT_BYTES&gt; operator-</definition>
+        <argsstring>(const Integer&lt; INT_BYTES &gt; &amp;rhs) const </argsstring>
+        <name>operator-</name>
+        <param>
+          <type>const <ref refid="d1/d84/classInteger" kindref="compound">Integer</ref>&lt; INT_BYTES &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="64"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1af30e1d197e0b2566a9075116a8c4a6be" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d8/da7/classRational" kindref="compound">Rational</ref>&lt; INT_BYTES &gt;</type>
+        <definition>Rational&lt;INT_BYTES&gt; operator*</definition>
+        <argsstring>(const Rational&lt; INT_BYTES &gt; &amp;rhs) const </argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="d8/da7/classRational" kindref="compound">Rational</ref>&lt; INT_BYTES &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="66"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1a09de5536cd7979e50ae77459f24cf961" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d8/da7/classRational" kindref="compound">Rational</ref>&lt; INT_BYTES &gt;</type>
+        <definition>Rational&lt;INT_BYTES&gt; operator*</definition>
+        <argsstring>(const Integer&lt; INT_BYTES &gt; &amp;rhs) const </argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="d1/d84/classInteger" kindref="compound">Integer</ref>&lt; INT_BYTES &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="67"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1a1f6491da0e3100421b9475fa38288799" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d8/da7/classRational" kindref="compound">Rational</ref>&lt; INT_BYTES &gt;</type>
+        <definition>Rational&lt;INT_BYTES&gt; operator/</definition>
+        <argsstring>(const Rational&lt; INT_BYTES &gt; &amp;rhs) const </argsstring>
+        <name>operator/</name>
+        <param>
+          <type>const <ref refid="d8/da7/classRational" kindref="compound">Rational</ref>&lt; INT_BYTES &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="69"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1a3fe15815286b6b6a211c649c018f018c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d8/da7/classRational" kindref="compound">Rational</ref>&lt; INT_BYTES &gt;</type>
+        <definition>Rational&lt;INT_BYTES&gt; operator/</definition>
+        <argsstring>(const Integer&lt; INT_BYTES &gt; &amp;rhs) const </argsstring>
+        <name>operator/</name>
+        <param>
+          <type>const <ref refid="d1/d84/classInteger" kindref="compound">Integer</ref>&lt; INT_BYTES &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="70"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1ae4cca4b8ef3e1f2b6b6c12e6e30502b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d8/da7/classRational" kindref="compound">Rational</ref>&lt; INT_BYTES &gt; &amp;</type>
+        <definition>Rational&lt;INT_BYTES&gt;&amp; operator+=</definition>
+        <argsstring>(const Rational&lt; INT_BYTES &gt; &amp;rhs)</argsstring>
+        <name>operator+=</name>
+        <param>
+          <type>const <ref refid="d8/da7/classRational" kindref="compound">Rational</ref>&lt; INT_BYTES &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="73"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1abaab1f7cab91020e5ca1c0bd1e2e73fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d8/da7/classRational" kindref="compound">Rational</ref>&lt; INT_BYTES &gt; &amp;</type>
+        <definition>Rational&lt;INT_BYTES&gt;&amp; operator+=</definition>
+        <argsstring>(const Integer&lt; INT_BYTES &gt; &amp;rhs)</argsstring>
+        <name>operator+=</name>
+        <param>
+          <type>const <ref refid="d1/d84/classInteger" kindref="compound">Integer</ref>&lt; INT_BYTES &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="74"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1a6ff99753ccc7f78fc1b898abd0407f09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d8/da7/classRational" kindref="compound">Rational</ref>&lt; INT_BYTES &gt; &amp;</type>
+        <definition>Rational&lt;INT_BYTES&gt;&amp; operator-=</definition>
+        <argsstring>(const Rational&lt; INT_BYTES &gt; &amp;rhs)</argsstring>
+        <name>operator-=</name>
+        <param>
+          <type>const <ref refid="d8/da7/classRational" kindref="compound">Rational</ref>&lt; INT_BYTES &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="76"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1ade6a16c583247607a5441278dd6b1584" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d8/da7/classRational" kindref="compound">Rational</ref>&lt; INT_BYTES &gt; &amp;</type>
+        <definition>Rational&lt;INT_BYTES&gt;&amp; operator-=</definition>
+        <argsstring>(const Integer&lt; INT_BYTES &gt; &amp;rhs)</argsstring>
+        <name>operator-=</name>
+        <param>
+          <type>const <ref refid="d1/d84/classInteger" kindref="compound">Integer</ref>&lt; INT_BYTES &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="77"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1a571af4e512e3d1c396ff9ce01fc40c9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d8/da7/classRational" kindref="compound">Rational</ref>&lt; INT_BYTES &gt; &amp;</type>
+        <definition>Rational&lt;INT_BYTES&gt;&amp; operator*=</definition>
+        <argsstring>(const Rational&lt; INT_BYTES &gt; &amp;rhs)</argsstring>
+        <name>operator*=</name>
+        <param>
+          <type>const <ref refid="d8/da7/classRational" kindref="compound">Rational</ref>&lt; INT_BYTES &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="79"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1a2be832cb6a8f2c8b1fca93196508656f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d8/da7/classRational" kindref="compound">Rational</ref>&lt; INT_BYTES &gt; &amp;</type>
+        <definition>Rational&lt;INT_BYTES&gt;&amp; operator*=</definition>
+        <argsstring>(const Integer&lt; INT_BYTES &gt; &amp;rhs)</argsstring>
+        <name>operator*=</name>
+        <param>
+          <type>const <ref refid="d1/d84/classInteger" kindref="compound">Integer</ref>&lt; INT_BYTES &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="80"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1ae29b6bd3c9198774ee67ba7ff6f47946" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d8/da7/classRational" kindref="compound">Rational</ref>&lt; INT_BYTES &gt; &amp;</type>
+        <definition>Rational&lt;INT_BYTES&gt;&amp; operator/=</definition>
+        <argsstring>(const Rational&lt; INT_BYTES &gt; &amp;rhs)</argsstring>
+        <name>operator/=</name>
+        <param>
+          <type>const <ref refid="d8/da7/classRational" kindref="compound">Rational</ref>&lt; INT_BYTES &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="82"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1ab418c85ed7e4d65b4ff495f2d671cd66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d8/da7/classRational" kindref="compound">Rational</ref>&lt; INT_BYTES &gt; &amp;</type>
+        <definition>Rational&lt;INT_BYTES&gt;&amp; operator/=</definition>
+        <argsstring>(const Integer&lt; INT_BYTES &gt; &amp;rhs)</argsstring>
+        <name>operator/=</name>
+        <param>
+          <type>const <ref refid="d1/d84/classInteger" kindref="compound">Integer</ref>&lt; INT_BYTES &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="83"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1a0dc706688352038ff661bca744310bcd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool operator==</definition>
+        <argsstring>(const Rational&lt; INT_BYTES &gt; &amp;rhs) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="d8/da7/classRational" kindref="compound">Rational</ref>&lt; INT_BYTES &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="86"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1aebf26338b42add1f0a9cc06d42dcae33" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool operator==</definition>
+        <argsstring>(const Integer&lt; INT_BYTES &gt; &amp;rhs) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="d1/d84/classInteger" kindref="compound">Integer</ref>&lt; INT_BYTES &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="87"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1a0e9707653c936a4b4eb7e45718d6367e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool operator!=</definition>
+        <argsstring>(const Rational&lt; INT_BYTES &gt; &amp;rhs) const </argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="d8/da7/classRational" kindref="compound">Rational</ref>&lt; INT_BYTES &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="89"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1ada22e658f6c1844ff3eeab786d24226f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool operator!=</definition>
+        <argsstring>(const Integer&lt; INT_BYTES &gt; &amp;rhs) const </argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="d1/d84/classInteger" kindref="compound">Integer</ref>&lt; INT_BYTES &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="90"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1a965c6eaef652d30b981b0fcf5b3bc71c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool operator&lt;=</definition>
+        <argsstring>(const Rational&lt; INT_BYTES &gt; &amp;rhs) const </argsstring>
+        <name>operator&lt;=</name>
+        <param>
+          <type>const <ref refid="d8/da7/classRational" kindref="compound">Rational</ref>&lt; INT_BYTES &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="92"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1abe76a84ecf4ff87e5ee52e69818ba1d9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool operator&lt;=</definition>
+        <argsstring>(const Integer&lt; INT_BYTES &gt; &amp;rhs) const </argsstring>
+        <name>operator&lt;=</name>
+        <param>
+          <type>const <ref refid="d1/d84/classInteger" kindref="compound">Integer</ref>&lt; INT_BYTES &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="93"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1a6fca18f2b0b9dd9f4c45e83f9105f031" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool operator&gt;=</definition>
+        <argsstring>(const Rational&lt; INT_BYTES &gt; &amp;rhs) const </argsstring>
+        <name>operator&gt;=</name>
+        <param>
+          <type>const <ref refid="d8/da7/classRational" kindref="compound">Rational</ref>&lt; INT_BYTES &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="95"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1a170600f34feb88b4a362ce1e98f045ff" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool operator&gt;=</definition>
+        <argsstring>(const Integer&lt; INT_BYTES &gt; &amp;rhs) const </argsstring>
+        <name>operator&gt;=</name>
+        <param>
+          <type>const <ref refid="d1/d84/classInteger" kindref="compound">Integer</ref>&lt; INT_BYTES &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="96"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1a82125ba621a7a9342b43c2cbdf15a2ae" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool operator&lt;</definition>
+        <argsstring>(const Rational&lt; INT_BYTES &gt; &amp;rhs) const </argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type>const <ref refid="d8/da7/classRational" kindref="compound">Rational</ref>&lt; INT_BYTES &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="98"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1a30be7edc807aa079136f77b1e1b263c5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool operator&lt;</definition>
+        <argsstring>(const Integer&lt; INT_BYTES &gt; &amp;rhs) const </argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type>const <ref refid="d1/d84/classInteger" kindref="compound">Integer</ref>&lt; INT_BYTES &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="99"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1aed88ad2117a6cbe3a01ff4d80587465a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool operator&gt;</definition>
+        <argsstring>(const Rational&lt; INT_BYTES &gt; &amp;rhs) const </argsstring>
+        <name>operator&gt;</name>
+        <param>
+          <type>const <ref refid="d8/da7/classRational" kindref="compound">Rational</ref>&lt; INT_BYTES &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="101"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1a927c1fd0ee0ebda528c0bf17937c1e5f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool operator&gt;</definition>
+        <argsstring>(const Integer&lt; INT_BYTES &gt; &amp;rhs) const </argsstring>
+        <name>operator&gt;</name>
+        <param>
+          <type>const <ref refid="d1/d84/classInteger" kindref="compound">Integer</ref>&lt; INT_BYTES &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="102"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1a6ce19f749ebb102c3d69f3ddd8cbc0e3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d1/d84/classInteger" kindref="compound">Integer</ref>&lt; INT_BYTES &gt; &amp;</type>
+        <definition>Integer&lt;INT_BYTES&gt;&amp; Numerator</definition>
+        <argsstring>()</argsstring>
+        <name>Numerator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="105"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1a360f82a0736ac2bead3017b237d7483d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d1/d84/classInteger" kindref="compound">Integer</ref>&lt; INT_BYTES &gt; &amp;</type>
+        <definition>Integer&lt;INT_BYTES&gt;&amp; Denominator</definition>
+        <argsstring>()</argsstring>
+        <name>Denominator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="106"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1adcdf73c53cf5843e1ca12e5505220324" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d1/d84/classInteger" kindref="compound">Integer</ref>&lt; INT_BYTES &gt; &amp;</type>
+        <definition>const Integer&lt;INT_BYTES&gt;&amp; Numerator</definition>
+        <argsstring>() const </argsstring>
+        <name>Numerator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="107"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1acdcbead6aac1c4cfc2dd07690498df70" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d1/d84/classInteger" kindref="compound">Integer</ref>&lt; INT_BYTES &gt; &amp;</type>
+        <definition>const Integer&lt;INT_BYTES&gt;&amp; Denominator</definition>
+        <argsstring>() const </argsstring>
+        <name>Denominator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="108"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da7/classRational_1a79ac9895ae6e31f5dd8eb1cb5b71b9a1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d8/da7/classRational" kindref="compound">Rational</ref>&lt; INT_BYTES &gt;</type>
+        <definition>Rational&lt;INT_BYTES&gt; Abs</definition>
+        <argsstring>() const </argsstring>
+        <name>Abs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="111"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d8/da7/classRational_1ab8f2b097ad506e9ffe00cf279b54b3a3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _FractionReduction</definition>
+        <argsstring>()</argsstring>
+        <name>_FractionReduction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Rational.h" line="114"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="10076">
+        <label>Rational&lt; INT_BYTES &gt;</label>
+        <link refid="d8/da7/classRational"/>
+        <childnode refid="10077" relation="usage">
+          <edgelabel>m_iNumerator</edgelabel>
+          <edgelabel>m_iDenominator</edgelabel>
+        </childnode>
+      </node>
+      <node id="10077">
+        <label>Integer&lt; INT_BYTES &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Integer.h" line="35" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Formats/Integer.h" bodystart="35" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="d8/da7/classRational_1ab8f2b097ad506e9ffe00cf279b54b3a3" prot="private" virt="non-virtual"><scope>Rational</scope><name>_FractionReduction</name></member>
+      <member refid="d8/da7/classRational_1a79ac9895ae6e31f5dd8eb1cb5b71b9a1" prot="public" virt="non-virtual"><scope>Rational</scope><name>Abs</name></member>
+      <member refid="d8/da7/classRational_1a360f82a0736ac2bead3017b237d7483d" prot="public" virt="non-virtual"><scope>Rational</scope><name>Denominator</name></member>
+      <member refid="d8/da7/classRational_1acdcbead6aac1c4cfc2dd07690498df70" prot="public" virt="non-virtual"><scope>Rational</scope><name>Denominator</name></member>
+      <member refid="d8/da7/classRational_1a360deb531ff641cfa2f5fdaeeb0db665" prot="private" virt="non-virtual"><scope>Rational</scope><name>m_iDenominator</name></member>
+      <member refid="d8/da7/classRational_1afb00290cd2cdb8eeef587264956a0810" prot="private" virt="non-virtual"><scope>Rational</scope><name>m_iNumerator</name></member>
+      <member refid="d8/da7/classRational_1a6ce19f749ebb102c3d69f3ddd8cbc0e3" prot="public" virt="non-virtual"><scope>Rational</scope><name>Numerator</name></member>
+      <member refid="d8/da7/classRational_1adcdf73c53cf5843e1ca12e5505220324" prot="public" virt="non-virtual"><scope>Rational</scope><name>Numerator</name></member>
+      <member refid="d8/da7/classRational_1a92cd7f3e49c2687c4608570d236e0ec9" prot="public" virt="non-virtual"><scope>Rational</scope><name>operator Double</name></member>
+      <member refid="d8/da7/classRational_1ae3eeb6c5e1ad5c7fe4d48ad3f5a0a01a" prot="public" virt="non-virtual"><scope>Rational</scope><name>operator Float</name></member>
+      <member refid="d8/da7/classRational_1a0e9707653c936a4b4eb7e45718d6367e" prot="public" virt="non-virtual"><scope>Rational</scope><name>operator!=</name></member>
+      <member refid="d8/da7/classRational_1ada22e658f6c1844ff3eeab786d24226f" prot="public" virt="non-virtual"><scope>Rational</scope><name>operator!=</name></member>
+      <member refid="d8/da7/classRational_1af30e1d197e0b2566a9075116a8c4a6be" prot="public" virt="non-virtual"><scope>Rational</scope><name>operator*</name></member>
+      <member refid="d8/da7/classRational_1a09de5536cd7979e50ae77459f24cf961" prot="public" virt="non-virtual"><scope>Rational</scope><name>operator*</name></member>
+      <member refid="d8/da7/classRational_1a571af4e512e3d1c396ff9ce01fc40c9a" prot="public" virt="non-virtual"><scope>Rational</scope><name>operator*=</name></member>
+      <member refid="d8/da7/classRational_1a2be832cb6a8f2c8b1fca93196508656f" prot="public" virt="non-virtual"><scope>Rational</scope><name>operator*=</name></member>
+      <member refid="d8/da7/classRational_1adc67e7ab02a7472f22cbf06d29562313" prot="public" virt="non-virtual"><scope>Rational</scope><name>operator+</name></member>
+      <member refid="d8/da7/classRational_1a471aa172521f34bc3d9b9d1d19c48343" prot="public" virt="non-virtual"><scope>Rational</scope><name>operator+</name></member>
+      <member refid="d8/da7/classRational_1a9b68ce95e3072b1d719fe0ee4c88447d" prot="public" virt="non-virtual"><scope>Rational</scope><name>operator+</name></member>
+      <member refid="d8/da7/classRational_1ae4cca4b8ef3e1f2b6b6c12e6e30502b8" prot="public" virt="non-virtual"><scope>Rational</scope><name>operator+=</name></member>
+      <member refid="d8/da7/classRational_1abaab1f7cab91020e5ca1c0bd1e2e73fd" prot="public" virt="non-virtual"><scope>Rational</scope><name>operator+=</name></member>
+      <member refid="d8/da7/classRational_1a867663ea31b8efb992f960ca79252adc" prot="public" virt="non-virtual"><scope>Rational</scope><name>operator-</name></member>
+      <member refid="d8/da7/classRational_1a09a04e8f21432a17a88198743053d468" prot="public" virt="non-virtual"><scope>Rational</scope><name>operator-</name></member>
+      <member refid="d8/da7/classRational_1a967c4fa6b72099f91d62b3c8e468487f" prot="public" virt="non-virtual"><scope>Rational</scope><name>operator-</name></member>
+      <member refid="d8/da7/classRational_1a6ff99753ccc7f78fc1b898abd0407f09" prot="public" virt="non-virtual"><scope>Rational</scope><name>operator-=</name></member>
+      <member refid="d8/da7/classRational_1ade6a16c583247607a5441278dd6b1584" prot="public" virt="non-virtual"><scope>Rational</scope><name>operator-=</name></member>
+      <member refid="d8/da7/classRational_1a1f6491da0e3100421b9475fa38288799" prot="public" virt="non-virtual"><scope>Rational</scope><name>operator/</name></member>
+      <member refid="d8/da7/classRational_1a3fe15815286b6b6a211c649c018f018c" prot="public" virt="non-virtual"><scope>Rational</scope><name>operator/</name></member>
+      <member refid="d8/da7/classRational_1ae29b6bd3c9198774ee67ba7ff6f47946" prot="public" virt="non-virtual"><scope>Rational</scope><name>operator/=</name></member>
+      <member refid="d8/da7/classRational_1ab418c85ed7e4d65b4ff495f2d671cd66" prot="public" virt="non-virtual"><scope>Rational</scope><name>operator/=</name></member>
+      <member refid="d8/da7/classRational_1a82125ba621a7a9342b43c2cbdf15a2ae" prot="public" virt="non-virtual"><scope>Rational</scope><name>operator&lt;</name></member>
+      <member refid="d8/da7/classRational_1a30be7edc807aa079136f77b1e1b263c5" prot="public" virt="non-virtual"><scope>Rational</scope><name>operator&lt;</name></member>
+      <member refid="d8/da7/classRational_1a965c6eaef652d30b981b0fcf5b3bc71c" prot="public" virt="non-virtual"><scope>Rational</scope><name>operator&lt;=</name></member>
+      <member refid="d8/da7/classRational_1abe76a84ecf4ff87e5ee52e69818ba1d9" prot="public" virt="non-virtual"><scope>Rational</scope><name>operator&lt;=</name></member>
+      <member refid="d8/da7/classRational_1a41cf985d48301efd3207921cc84c7cd8" prot="public" virt="non-virtual"><scope>Rational</scope><name>operator=</name></member>
+      <member refid="d8/da7/classRational_1a7ca6390beeca464f2682367b02d0f877" prot="public" virt="non-virtual"><scope>Rational</scope><name>operator=</name></member>
+      <member refid="d8/da7/classRational_1a0dc706688352038ff661bca744310bcd" prot="public" virt="non-virtual"><scope>Rational</scope><name>operator==</name></member>
+      <member refid="d8/da7/classRational_1aebf26338b42add1f0a9cc06d42dcae33" prot="public" virt="non-virtual"><scope>Rational</scope><name>operator==</name></member>
+      <member refid="d8/da7/classRational_1aed88ad2117a6cbe3a01ff4d80587465a" prot="public" virt="non-virtual"><scope>Rational</scope><name>operator&gt;</name></member>
+      <member refid="d8/da7/classRational_1a927c1fd0ee0ebda528c0bf17937c1e5f" prot="public" virt="non-virtual"><scope>Rational</scope><name>operator&gt;</name></member>
+      <member refid="d8/da7/classRational_1a6fca18f2b0b9dd9f4c45e83f9105f031" prot="public" virt="non-virtual"><scope>Rational</scope><name>operator&gt;=</name></member>
+      <member refid="d8/da7/classRational_1a170600f34feb88b4a362ce1e98f045ff" prot="public" virt="non-virtual"><scope>Rational</scope><name>operator&gt;=</name></member>
+      <member refid="d8/da7/classRational_1ae0a33e796fe904111569461516de04e9" prot="public" virt="non-virtual"><scope>Rational</scope><name>Rational</name></member>
+      <member refid="d8/da7/classRational_1ac780f642c56373aea83775731fac9ca1" prot="public" virt="non-virtual"><scope>Rational</scope><name>Rational</name></member>
+      <member refid="d8/da7/classRational_1a9577ca7254d386a98ad343391619bc89" prot="public" virt="non-virtual"><scope>Rational</scope><name>Rational</name></member>
+      <member refid="d8/da7/classRational_1af19d2a97daf4768474bc9ecd59c0aa0c" prot="public" virt="non-virtual"><scope>Rational</scope><name>Rational</name></member>
+      <member refid="d8/da7/classRational_1a099739b04e157b6c080b66044d5b5156" prot="public" virt="non-virtual"><scope>Rational</scope><name>Rational</name></member>
+      <member refid="d8/da7/classRational_1a16c41eaf332859c9f15f0d527dec7a43" prot="public" virt="non-virtual"><scope>Rational</scope><name>Rational</name></member>
+      <member refid="d8/da7/classRational_1a4904a53cad722c76c7b389531e1ce77a" prot="public" virt="non-virtual"><scope>Rational</scope><name>~Rational</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

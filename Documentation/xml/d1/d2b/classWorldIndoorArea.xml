@@ -1,0 +1,1461 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d1/d2b/classWorldIndoorArea" kind="class" prot="public">
+    <compoundname>WorldIndoorArea</compoundname>
+    <basecompoundref refid="d4/d18/classWorldBSPNode" prot="public" virt="non-virtual">WorldBSPNode</basecompoundref>
+    <derivedcompoundref refid="d1/de4/classMyDungeon" prot="public" virt="non-virtual">MyDungeon</derivedcompoundref>
+    <includes refid="d2/d61/WorldIndoorArea_8h" local="no">WorldIndoorArea.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d1/d2b/classWorldIndoorArea_1a06e9ae13475fd5b9af88abd036b52c30" prot="private" static="no" mutable="no">
+        <type><ref refid="d4/d68/classWorldPortalCuller" kindref="compound">WorldPortalCuller</ref></type>
+        <definition>WorldPortalCuller m_PortalCuller</definition>
+        <argsstring></argsstring>
+        <name>m_PortalCuller</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/Indoor/WorldIndoorArea.h" line="61" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/Indoor/WorldIndoorArea.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d1/d2b/classWorldIndoorArea_1a10841360256081c7fe33384be6e4cf74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>WorldIndoorArea</definition>
+        <argsstring>(const GChar *strName=NULL)</argsstring>
+        <name>WorldIndoorArea</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strName</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/Indoor/WorldIndoorArea.h" line="43"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d2b/classWorldIndoorArea_1a9bab7b4badf46cd8d2ca429c05da444d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~WorldIndoorArea</definition>
+        <argsstring>()</argsstring>
+        <name>~WorldIndoorArea</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/Indoor/WorldIndoorArea.h" line="44"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d2b/classWorldIndoorArea_1a8f7b7d13e159dfc832d9fbaba2db90b7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="d6/d3d/WorldBaseNode_8h_1a6e6277cebe8ff57d01327774302dbf13" kindref="member">WorldNodeType</ref></type>
+        <definition>virtual WorldNodeType GetType</definition>
+        <argsstring>() const </argsstring>
+        <name>GetType</name>
+        <reimplements refid="d4/d18/classWorldBSPNode_1a8f7b7d13e159dfc832d9fbaba2db90b7">GetType</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/Indoor/WorldIndoorArea.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d2b/classWorldIndoorArea_1abb8b095f349b5ab9b50da607f3aab3da" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="de/d40/classWorldBaseNode" kindref="compound">WorldBaseNode</ref> *</type>
+        <definition>WorldBaseNode* GetOutsideNode</definition>
+        <argsstring>() const </argsstring>
+        <name>GetOutsideNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/Indoor/WorldIndoorArea.h" line="50"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d2b/classWorldIndoorArea_1a512da4287424c24940b3f9a88f4cb3fe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="de/d40/classWorldBaseNode" kindref="compound">WorldBaseNode</ref> *</type>
+        <definition>WorldBaseNode* SetOutsideNode</definition>
+        <argsstring>(WorldBaseNode *pOutside)</argsstring>
+        <name>SetOutsideNode</name>
+        <param>
+          <type><ref refid="de/d40/classWorldBaseNode" kindref="compound">WorldBaseNode</ref> *</type>
+          <declname>pOutside</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/Indoor/WorldIndoorArea.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d2b/classWorldIndoorArea_1a52da5ca6d26eb22285f923d3514da41c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="db/d86/classWorldConvexRoom" kindref="compound">WorldConvexRoom</ref> *</type>
+        <definition>WorldConvexRoom* GetContainingRoom</definition>
+        <argsstring>(const Vertex3 &amp;vPoint) const </argsstring>
+        <name>GetContainingRoom</name>
+        <param>
+          <type>const <ref refid="d0/df3/Vertex3_8h_1a77dfdbfba4bf6ee1a522233ccef29ff5" kindref="member">Vertex3</ref> &amp;</type>
+          <declname>vPoint</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/Indoor/WorldIndoorArea.h" line="54"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="d1/d2b/classWorldIndoorArea_1a6270828136c1e97ca6a95d900930c0f8" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void _OnVisibleGroup</definition>
+        <argsstring>(WorldCuller &amp;wCuller, Bool bNoCull)</argsstring>
+        <name>_OnVisibleGroup</name>
+        <reimplements refid="d4/d18/classWorldBSPNode_1a6270828136c1e97ca6a95d900930c0f8">_OnVisibleGroup</reimplements>
+        <param>
+          <type><ref refid="db/d43/classWorldCuller" kindref="compound">WorldCuller</ref> &amp;</type>
+          <declname>wCuller</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+          <declname>bNoCull</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/Indoor/WorldIndoorArea.h" line="58"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="14212">
+        <label>WorldNode</label>
+        <link refid="d5/d11/classWorldNode"/>
+        <childnode refid="14213" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14210">
+        <label>WorldIndoorArea</label>
+        <link refid="d1/d2b/classWorldIndoorArea"/>
+        <childnode refid="14211" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14214">
+        <label>MyDungeon</label>
+        <link refid="d1/de4/classMyDungeon"/>
+        <childnode refid="14210" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14213">
+        <label>WorldBaseNode</label>
+        <link refid="de/d40/classWorldBaseNode"/>
+      </node>
+      <node id="14211">
+        <label>WorldBSPNode</label>
+        <link refid="d4/d18/classWorldBSPNode"/>
+        <childnode refid="14212" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="14293">
+        <label>static VertexShaderProfile</label>
+      </node>
+      <node id="14228">
+        <label>WorldCulling</label>
+      </node>
+      <node id="14309">
+        <label>CullingTest</label>
+      </node>
+      <node id="14282">
+        <label>VertexShaderProgram</label>
+        <link refid="dc/dfc/classVertexShaderProgram"/>
+        <childnode refid="14283" relation="public-inheritance">
+        </childnode>
+        <childnode refid="14293" relation="usage">
+          <edgelabel>sm_iVSProfile</edgelabel>
+        </childnode>
+      </node>
+      <node id="14320">
+        <label>ProjectionDepthMapping</label>
+      </node>
+      <node id="14239">
+        <label>T</label>
+      </node>
+      <node id="14238">
+        <label>RBTreeColor</label>
+      </node>
+      <node id="14236">
+        <label>RedBlackNode&lt; T &gt;</label>
+        <link refid="da/d9d/structRedBlackNode"/>
+        <childnode refid="14237" relation="usage">
+          <edgelabel>pPrev</edgelabel>
+          <edgelabel>pNext</edgelabel>
+          <edgelabel>pParent</edgelabel>
+          <edgelabel>pChild</edgelabel>
+        </childnode>
+        <childnode refid="14238" relation="usage">
+          <edgelabel>iColor</edgelabel>
+        </childnode>
+        <childnode refid="14239" relation="usage">
+          <edgelabel>Item</edgelabel>
+        </childnode>
+      </node>
+      <node id="14235">
+        <label>RedBlackTree&lt; TreeMapNode &gt;</label>
+        <link refid="d9/d5d/classRedBlackTree"/>
+        <childnode refid="14234" relation="public-inheritance">
+        </childnode>
+        <childnode refid="14236" relation="usage">
+          <edgelabel>m_pEnd</edgelabel>
+          <edgelabel>m_pHead</edgelabel>
+          <edgelabel>m_pRoot</edgelabel>
+          <edgelabel>sm_SentinelNode</edgelabel>
+          <edgelabel>RBTREE_LEAF</edgelabel>
+        </childnode>
+        <childnode refid="14227" relation="usage">
+          <edgelabel>m_iNodeCount</edgelabel>
+        </childnode>
+        <childnode refid="14240" relation="usage">
+          <edgelabel>m_pfCompare</edgelabel>
+        </childnode>
+        <childnode refid="14242" relation="usage">
+          <edgelabel>m_pUserData</edgelabel>
+        </childnode>
+      </node>
+      <node id="14296">
+        <label>DepthState</label>
+        <link refid="df/df8/classDepthState"/>
+        <childnode refid="14225" relation="usage">
+          <edgelabel>DepthEnabled</edgelabel>
+          <edgelabel>DepthWritable</edgelabel>
+        </childnode>
+        <childnode refid="14297" relation="usage">
+          <edgelabel>sm_arrDepthTestNames</edgelabel>
+        </childnode>
+        <childnode refid="14298" relation="usage">
+          <edgelabel>DepthTest</edgelabel>
+        </childnode>
+      </node>
+      <node id="14257">
+        <label>IslandEdgeID</label>
+        <link refid="dd/d41/classIslandEdgeID"/>
+        <childnode refid="14252" relation="usage">
+          <edgelabel>pNodeA</edgelabel>
+          <edgelabel>pNodeB</edgelabel>
+        </childnode>
+      </node>
+      <node id="14267">
+        <label>Mesh</label>
+        <link refid="d9/d5e/classMesh"/>
+        <childnode refid="14268" relation="usage">
+          <edgelabel>m_pVF</edgelabel>
+        </childnode>
+        <childnode refid="14243" relation="usage">
+          <edgelabel>m_iIndexOffset</edgelabel>
+          <edgelabel>m_iVertexOffset</edgelabel>
+        </childnode>
+        <childnode refid="14225" relation="usage">
+          <edgelabel>m_bDynamicUpdate</edgelabel>
+        </childnode>
+        <childnode refid="14272" relation="usage">
+          <edgelabel>m_pIB</edgelabel>
+        </childnode>
+        <childnode refid="14274" relation="usage">
+          <edgelabel>m_pVB</edgelabel>
+        </childnode>
+      </node>
+      <node id="14260">
+        <label>JacobianConstraint</label>
+        <link refid="d2/d61/classJacobianConstraint"/>
+        <childnode refid="14221" relation="usage">
+          <edgelabel>vJAngularA</edgelabel>
+          <edgelabel>vJLinearAxis</edgelabel>
+          <edgelabel>vJAngularB</edgelabel>
+          <edgelabel>vInvIBxJtAngB</edgelabel>
+          <edgelabel>vInvIAxJtAngA</edgelabel>
+        </childnode>
+        <childnode refid="14231" relation="usage">
+          <edgelabel>fInvDiagJWJtAB</edgelabel>
+        </childnode>
+      </node>
+      <node id="14300">
+        <label>StencilState</label>
+        <link refid="d3/dc0/classStencilState"/>
+        <childnode refid="14224" relation="usage">
+          <edgelabel>sm_arrStencilOpNames</edgelabel>
+          <edgelabel>sm_arrStencilTestNames</edgelabel>
+        </childnode>
+        <childnode refid="14301" relation="usage">
+          <edgelabel>StencilTest</edgelabel>
+        </childnode>
+        <childnode refid="14225" relation="usage">
+          <edgelabel>StencilEnabled</edgelabel>
+        </childnode>
+        <childnode refid="14226" relation="usage">
+          <edgelabel>Reference</edgelabel>
+          <edgelabel>WriteMask</edgelabel>
+          <edgelabel>Mask</edgelabel>
+        </childnode>
+        <childnode refid="14302" relation="usage">
+          <edgelabel>OnDepthSuccess</edgelabel>
+          <edgelabel>OnDepthFail</edgelabel>
+          <edgelabel>OnStencilFail</edgelabel>
+        </childnode>
+      </node>
+      <node id="14277">
+        <label>static const Scalar</label>
+      </node>
+      <node id="14305">
+        <label>BlendingTestMode</label>
+      </node>
+      <node id="14275">
+        <label>VertexBufferUsage</label>
+      </node>
+      <node id="14251">
+        <label>BodyNode</label>
+        <link refid="de/df0/classBodyNode"/>
+        <childnode refid="14252" relation="public-inheritance">
+        </childnode>
+        <childnode refid="14221" relation="usage">
+          <edgelabel>m_vTorqueBuffer</edgelabel>
+          <edgelabel>m_vLinearCorrectionBuffer</edgelabel>
+          <edgelabel>m_vForceBuffer</edgelabel>
+          <edgelabel>m_vAngularCorrectionBuffer</edgelabel>
+          <edgelabel>m_vLinearImpulseBuffer</edgelabel>
+          <edgelabel>m_vAngularSpeed</edgelabel>
+          <edgelabel>m_vLinearSpeed</edgelabel>
+          <edgelabel>m_vAngularImpulseBuffer</edgelabel>
+        </childnode>
+        <childnode refid="14232" relation="usage">
+          <edgelabel>m_matInvInertiaTensor</edgelabel>
+          <edgelabel>m_matInertiaTensor</edgelabel>
+          <edgelabel>sm_matInfinity</edgelabel>
+        </childnode>
+        <childnode refid="14231" relation="usage">
+          <edgelabel>m_fDensity</edgelabel>
+          <edgelabel>m_fMass</edgelabel>
+          <edgelabel>m_fAngularDamping</edgelabel>
+          <edgelabel>m_fRestitution</edgelabel>
+          <edgelabel>m_fFriction</edgelabel>
+          <edgelabel>m_fInvMass</edgelabel>
+          <edgelabel>m_fLinearDamping</edgelabel>
+        </childnode>
+        <childnode refid="14276" relation="usage">
+          <edgelabel>m_qOrientation</edgelabel>
+        </childnode>
+        <childnode refid="14243" relation="usage">
+          <edgelabel>m_iSleepTime</edgelabel>
+        </childnode>
+        <childnode refid="14278" relation="usage">
+          <edgelabel>m_iCollisionMask</edgelabel>
+          <edgelabel>m_iCollisionGroup</edgelabel>
+        </childnode>
+        <childnode refid="14225" relation="usage">
+          <edgelabel>m_bSensor</edgelabel>
+          <edgelabel>m_bSleeping</edgelabel>
+          <edgelabel>m_bStatic</edgelabel>
+        </childnode>
+        <childnode refid="14229" relation="usage">
+          <edgelabel>m_vTransform</edgelabel>
+        </childnode>
+        <childnode refid="14223" relation="usage">
+          <edgelabel>m_vCenterOfMass</edgelabel>
+          <edgelabel>m_vPosition</edgelabel>
+        </childnode>
+        <childnode refid="14266" relation="usage">
+          <edgelabel>m_pLocalShape</edgelabel>
+        </childnode>
+        <childnode refid="14265" relation="usage">
+          <edgelabel>m_pWorldShape</edgelabel>
+        </childnode>
+      </node>
+      <node id="14217">
+        <label>WorldNode</label>
+        <link refid="d5/d11/classWorldNode"/>
+        <childnode refid="14218" relation="public-inheritance">
+        </childnode>
+        <childnode refid="14233" relation="usage">
+          <edgelabel>m_mapChildren</edgelabel>
+        </childnode>
+        <childnode refid="14244" relation="usage">
+          <edgelabel>m_itEnumerate</edgelabel>
+        </childnode>
+      </node>
+      <node id="14307">
+        <label>ClippingState</label>
+        <link refid="d1/de0/classClippingState"/>
+        <childnode refid="14225" relation="usage">
+          <edgelabel>ClipFrustrumReject</edgelabel>
+          <edgelabel>ClipRaster</edgelabel>
+          <edgelabel>ClipFrustrum</edgelabel>
+          <edgelabel>ClipCubeSpace</edgelabel>
+        </childnode>
+      </node>
+      <node id="14319">
+        <label>Camera</label>
+        <link refid="d1/df0/classCamera"/>
+        <childnode refid="14221" relation="usage">
+          <edgelabel>m_vSide</edgelabel>
+          <edgelabel>m_vUp</edgelabel>
+          <edgelabel>m_vView</edgelabel>
+        </childnode>
+        <childnode refid="14230" relation="usage">
+          <edgelabel>m_matView</edgelabel>
+          <edgelabel>m_matPostProjection</edgelabel>
+          <edgelabel>m_matCamera</edgelabel>
+          <edgelabel>m_matProjection</edgelabel>
+          <edgelabel>m_matInvView</edgelabel>
+          <edgelabel>m_matPreView</edgelabel>
+          <edgelabel>m_matBillboard</edgelabel>
+        </childnode>
+        <childnode refid="14231" relation="usage">
+          <edgelabel>m_fFrustrum</edgelabel>
+        </childnode>
+        <childnode refid="14225" relation="usage">
+          <edgelabel>m_bHasPostProjection</edgelabel>
+          <edgelabel>m_bPerspective</edgelabel>
+          <edgelabel>m_bHasPreView</edgelabel>
+        </childnode>
+        <childnode refid="14223" relation="usage">
+          <edgelabel>m_vEye</edgelabel>
+        </childnode>
+        <childnode refid="14320" relation="usage">
+          <edgelabel>m_iDepthMapping</edgelabel>
+        </childnode>
+        <childnode refid="14321" relation="usage">
+          <edgelabel>sm_iDefaultDepthMapping</edgelabel>
+        </childnode>
+      </node>
+      <node id="14249">
+        <label>Array&lt; WorldLeaf * &gt;</label>
+        <link refid="d0/d26/classArray"/>
+        <childnode refid="14234" relation="public-inheritance">
+        </childnode>
+        <childnode refid="14250" relation="usage">
+          <edgelabel>m_arrBuffer</edgelabel>
+        </childnode>
+        <childnode refid="14243" relation="usage">
+          <edgelabel>m_iShrinkFactor</edgelabel>
+          <edgelabel>m_iNextFree</edgelabel>
+          <edgelabel>m_iBufferSize</edgelabel>
+          <edgelabel>m_iPageSize</edgelabel>
+        </childnode>
+      </node>
+      <node id="14232">
+        <label>TMatrix3&lt; Scalar &gt;</label>
+        <link refid="d7/dee/classTMatrix3"/>
+        <childnode refid="14232" relation="usage">
+          <edgelabel>Identity</edgelabel>
+          <edgelabel>Null</edgelabel>
+        </childnode>
+        <childnode refid="14231" relation="usage">
+          <edgelabel>ONE</edgelabel>
+          <edgelabel>m20</edgelabel>
+          <edgelabel>m21</edgelabel>
+          <edgelabel>m10</edgelabel>
+          <edgelabel>m22</edgelabel>
+          <edgelabel>m11</edgelabel>
+          <edgelabel>m00</edgelabel>
+          <edgelabel>TWO</edgelabel>
+          <edgelabel>m12</edgelabel>
+          <edgelabel>m01</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="14292">
+        <label>ShaderProgramConstant</label>
+        <link refid="d2/d9e/structShaderProgramConstant"/>
+        <childnode refid="14224" relation="usage">
+          <edgelabel>strName</edgelabel>
+        </childnode>
+        <childnode refid="14243" relation="usage">
+          <edgelabel>iRegisterCount</edgelabel>
+          <edgelabel>iBaseRegister</edgelabel>
+        </childnode>
+      </node>
+      <node id="14294">
+        <label>PixelShaderProgram</label>
+        <link refid="d1/dc0/classPixelShaderProgram"/>
+        <childnode refid="14283" relation="public-inheritance">
+        </childnode>
+        <childnode refid="14295" relation="usage">
+          <edgelabel>sm_iPSProfile</edgelabel>
+        </childnode>
+      </node>
+      <node id="14299">
+        <label>PolygonState</label>
+        <link refid="d5/de7/classPolygonState"/>
+        <childnode refid="14231" relation="usage">
+          <edgelabel>DepthBias</edgelabel>
+          <edgelabel>SlopeScale</edgelabel>
+        </childnode>
+        <childnode refid="14225" relation="usage">
+          <edgelabel>OffsetPoints</edgelabel>
+          <edgelabel>OffsetLines</edgelabel>
+          <edgelabel>WireframeEnabled</edgelabel>
+          <edgelabel>OffsetFills</edgelabel>
+        </childnode>
+      </node>
+      <node id="14315">
+        <label>static Bool</label>
+      </node>
+      <node id="14301">
+        <label>StencilTestMode</label>
+      </node>
+      <node id="14231">
+        <label>float</label>
+      </node>
+      <node id="14246">
+        <label>WorldPortalCuller</label>
+        <link refid="d4/d68/classWorldPortalCuller"/>
+        <childnode refid="14247" relation="public-inheritance">
+        </childnode>
+        <childnode refid="14322" relation="usage">
+          <edgelabel>m_mapUniqueLeaves</edgelabel>
+        </childnode>
+        <childnode refid="14244" relation="usage">
+          <edgelabel>m_itEnumerate</edgelabel>
+        </childnode>
+        <childnode refid="14243" relation="usage">
+          <edgelabel>m_iCount</edgelabel>
+        </childnode>
+      </node>
+      <node id="14245">
+        <label>TPlane&lt; Scalar &gt;</label>
+        <link refid="d1/d37/classTPlane"/>
+        <childnode refid="14221" relation="usage">
+          <edgelabel>Normal</edgelabel>
+        </childnode>
+        <childnode refid="14231" relation="usage">
+          <edgelabel>Constant</edgelabel>
+        </childnode>
+        <childnode refid="14223" relation="usage">
+          <edgelabel>Position</edgelabel>
+        </childnode>
+      </node>
+      <node id="14278">
+        <label>UInt64</label>
+      </node>
+      <node id="14230">
+        <label>TMatrix4&lt; Scalar &gt;</label>
+        <link refid="d5/d09/classTMatrix4"/>
+        <childnode refid="14230" relation="usage">
+          <edgelabel>Identity</edgelabel>
+          <edgelabel>Null</edgelabel>
+        </childnode>
+        <childnode refid="14231" relation="usage">
+          <edgelabel>ONE</edgelabel>
+          <edgelabel>m30</edgelabel>
+          <edgelabel>m31</edgelabel>
+          <edgelabel>m20</edgelabel>
+          <edgelabel>m32</edgelabel>
+          <edgelabel>m21</edgelabel>
+          <edgelabel>m10</edgelabel>
+          <edgelabel>m33</edgelabel>
+          <edgelabel>m22</edgelabel>
+          <edgelabel>m11</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="14268">
+        <label>VertexFormat</label>
+        <link refid="da/dc2/classVertexFormat"/>
+        <childnode refid="14269" relation="usage">
+          <edgelabel>m_arrFields</edgelabel>
+        </childnode>
+        <childnode refid="14243" relation="usage">
+          <edgelabel>m_iSize</edgelabel>
+          <edgelabel>m_iFieldCount</edgelabel>
+          <edgelabel>m_arrUsageLUT</edgelabel>
+        </childnode>
+        <childnode refid="14225" relation="usage">
+          <edgelabel>m_bFinalized</edgelabel>
+        </childnode>
+        <childnode refid="14227" relation="usage">
+          <edgelabel>sm_arrComponentCount</edgelabel>
+          <edgelabel>sm_arrTypeSize</edgelabel>
+          <edgelabel>sm_arrComponentSize</edgelabel>
+        </childnode>
+      </node>
+      <node id="14310">
+        <label>CullingConvention</label>
+      </node>
+      <node id="14321">
+        <label>static ProjectionDepthMapping</label>
+      </node>
+      <node id="14276">
+        <label>TQuaternion&lt; Scalar &gt;</label>
+        <link refid="d5/dad/classTQuaternion"/>
+        <childnode refid="14276" relation="usage">
+          <edgelabel>Identity</edgelabel>
+          <edgelabel>Null</edgelabel>
+        </childnode>
+        <childnode refid="14277" relation="usage">
+          <edgelabel>ONE</edgelabel>
+          <edgelabel>TWO</edgelabel>
+          <edgelabel>ZERO</edgelabel>
+        </childnode>
+        <childnode refid="14222" relation="usage">
+          <edgelabel>W</edgelabel>
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+          <edgelabel>Z</edgelabel>
+        </childnode>
+      </node>
+      <node id="14215">
+        <label>WorldIndoorArea</label>
+        <link refid="d1/d2b/classWorldIndoorArea"/>
+        <childnode refid="14216" relation="public-inheritance">
+        </childnode>
+        <childnode refid="14246" relation="usage">
+          <edgelabel>m_PortalCuller</edgelabel>
+        </childnode>
+      </node>
+      <node id="14269">
+        <label>VFField</label>
+        <link refid="de/d92/structVFField"/>
+        <childnode refid="14270" relation="usage">
+          <edgelabel>iUsage</edgelabel>
+        </childnode>
+        <childnode refid="14243" relation="usage">
+          <edgelabel>iSize</edgelabel>
+          <edgelabel>iUsageIndex</edgelabel>
+          <edgelabel>iOffset</edgelabel>
+        </childnode>
+        <childnode refid="14271" relation="usage">
+          <edgelabel>iType</edgelabel>
+        </childnode>
+      </node>
+      <node id="14226">
+        <label>ULong</label>
+      </node>
+      <node id="14233">
+        <label>TreeMap&lt; const GChar *, WorldBaseNode * &gt;</label>
+        <link refid="d0/da4/classTreeMap"/>
+        <childnode refid="14234" relation="public-inheritance">
+        </childnode>
+        <childnode refid="14235" relation="usage">
+          <edgelabel>m_rbTreeMap</edgelabel>
+        </childnode>
+        <childnode refid="14243" relation="usage">
+          <edgelabel>m_pfCompare</edgelabel>
+        </childnode>
+        <childnode refid="14242" relation="usage">
+          <edgelabel>m_pUserData</edgelabel>
+        </childnode>
+      </node>
+      <node id="14286">
+        <label>ShaderVarType</label>
+      </node>
+      <node id="14227">
+        <label>unsigned int</label>
+      </node>
+      <node id="14254">
+        <label>unsigned char</label>
+      </node>
+      <node id="14304">
+        <label>BlendingSrcMode</label>
+      </node>
+      <node id="14279">
+        <label>EffectInstance</label>
+        <link refid="da/d3f/classEffectInstance"/>
+        <childnode refid="14280" relation="usage">
+          <edgelabel>m_pTechnique</edgelabel>
+        </childnode>
+        <childnode refid="14243" relation="usage">
+          <edgelabel>m_iPassCount</edgelabel>
+          <edgelabel>m_iTechniqueIndex</edgelabel>
+        </childnode>
+        <childnode refid="14311" relation="usage">
+          <edgelabel>m_arrVertexParameters</edgelabel>
+          <edgelabel>m_arrPixelParameters</edgelabel>
+        </childnode>
+        <childnode refid="14318" relation="usage">
+          <edgelabel>m_pEffect</edgelabel>
+        </childnode>
+      </node>
+      <node id="14237">
+        <label>struct _red_black_node *</label>
+      </node>
+      <node id="14265">
+        <label>TransformedShape</label>
+        <link refid="d2/d1b/classTransformedShape"/>
+        <childnode refid="14219" relation="usage">
+          <edgelabel>m_bvWorldAAB</edgelabel>
+        </childnode>
+        <childnode refid="14229" relation="usage">
+          <edgelabel>m_vTransform</edgelabel>
+        </childnode>
+        <childnode refid="14266" relation="usage">
+          <edgelabel>m_pShape</edgelabel>
+        </childnode>
+      </node>
+      <node id="14288">
+        <label>ShaderProgramSampler</label>
+        <link refid="d5/d69/structShaderProgramSampler"/>
+        <childnode refid="14289" relation="usage">
+          <edgelabel>iType</edgelabel>
+        </childnode>
+        <childnode refid="14290" relation="usage">
+          <edgelabel>iWrapMode</edgelabel>
+        </childnode>
+        <childnode refid="14231" relation="usage">
+          <edgelabel>fLODBias</edgelabel>
+          <edgelabel>fAnisotropy</edgelabel>
+        </childnode>
+        <childnode refid="14224" relation="usage">
+          <edgelabel>strName</edgelabel>
+        </childnode>
+        <childnode refid="14291" relation="usage">
+          <edgelabel>iFilter</edgelabel>
+        </childnode>
+        <childnode refid="14243" relation="usage">
+          <edgelabel>iTextureUnit</edgelabel>
+        </childnode>
+        <childnode refid="14226" relation="usage">
+          <edgelabel>dwBorderColor</edgelabel>
+        </childnode>
+      </node>
+      <node id="14243">
+        <label>int</label>
+      </node>
+      <node id="14219">
+        <label>TBVAABox&lt; Scalar &gt;</label>
+        <link refid="d9/d90/classTBVAABox"/>
+        <childnode refid="14220" relation="public-inheritance">
+        </childnode>
+        <childnode refid="14221" relation="usage">
+          <edgelabel>m_vExtents</edgelabel>
+        </childnode>
+        <childnode refid="14223" relation="usage">
+          <edgelabel>m_vCenter</edgelabel>
+        </childnode>
+      </node>
+      <node id="14263">
+        <label>ContactManifold</label>
+        <link refid="d2/d6f/classContactManifold"/>
+      </node>
+      <node id="14289">
+        <label>ShaderSamplingType</label>
+      </node>
+      <node id="14222">
+        <label>Scalar</label>
+      </node>
+      <node id="14285">
+        <label>ShaderVarSemantic</label>
+      </node>
+      <node id="14255">
+        <label>JointEdge</label>
+        <link refid="df/d01/classJointEdge"/>
+        <childnode refid="14256" relation="public-inheritance">
+        </childnode>
+        <childnode refid="14258" relation="usage">
+          <edgelabel>m_pConstraint</edgelabel>
+        </childnode>
+      </node>
+      <node id="14218">
+        <label>WorldBaseNode</label>
+        <link refid="de/d40/classWorldBaseNode"/>
+        <childnode refid="14219" relation="usage">
+          <edgelabel>WorldBV</edgelabel>
+        </childnode>
+        <childnode refid="14224" relation="usage">
+          <edgelabel>m_strName</edgelabel>
+        </childnode>
+        <childnode refid="14225" relation="usage">
+          <edgelabel>UpdateWorldTransform</edgelabel>
+          <edgelabel>UpdateWorldBV</edgelabel>
+        </childnode>
+        <childnode refid="14226" relation="usage">
+          <edgelabel>m_dwDebugFlags</edgelabel>
+        </childnode>
+        <childnode refid="14227" relation="usage">
+          <edgelabel>sm_iNoNameCount</edgelabel>
+        </childnode>
+        <childnode refid="14228" relation="usage">
+          <edgelabel>CullMode</edgelabel>
+        </childnode>
+        <childnode refid="14218" relation="usage">
+          <edgelabel>m_pParent</edgelabel>
+        </childnode>
+        <childnode refid="14229" relation="usage">
+          <edgelabel>WorldTransform</edgelabel>
+        </childnode>
+      </node>
+      <node id="14313">
+        <label>Texture</label>
+        <link refid="d6/d97/classTexture"/>
+        <childnode refid="14314" relation="public-inheritance">
+        </childnode>
+        <childnode refid="14315" relation="usage">
+          <edgelabel>sm_arrMipMapable</edgelabel>
+          <edgelabel>sm_arrCompressed</edgelabel>
+        </childnode>
+        <childnode refid="14254" relation="usage">
+          <edgelabel>m_pData</edgelabel>
+        </childnode>
+        <childnode refid="14316" relation="usage">
+          <edgelabel>m_iFormat</edgelabel>
+        </childnode>
+        <childnode refid="14317" relation="usage">
+          <edgelabel>m_iUsage</edgelabel>
+        </childnode>
+        <childnode refid="14243" relation="usage">
+          <edgelabel>m_arrLevelOffsets</edgelabel>
+          <edgelabel>m_arrLevelBytes</edgelabel>
+          <edgelabel>m_arrLevelBounds</edgelabel>
+          <edgelabel>m_iMipMapLevels</edgelabel>
+          <edgelabel>m_iTotalBytes</edgelabel>
+        </childnode>
+        <childnode refid="14227" relation="usage">
+          <edgelabel>sm_arrDimensions</edgelabel>
+          <edgelabel>sm_arrPixelBytes</edgelabel>
+        </childnode>
+        <childnode refid="14242" relation="usage">
+          <edgelabel>m_arrUserFields</edgelabel>
+        </childnode>
+      </node>
+      <node id="14308">
+        <label>CullingState</label>
+        <link refid="d6/d50/classCullingState"/>
+        <childnode refid="14224" relation="usage">
+          <edgelabel>sm_arrCullTestNames</edgelabel>
+          <edgelabel>sm_arrCullConvNames</edgelabel>
+        </childnode>
+        <childnode refid="14309" relation="usage">
+          <edgelabel>CullTest</edgelabel>
+        </childnode>
+        <childnode refid="14225" relation="usage">
+          <edgelabel>CullEnabled</edgelabel>
+        </childnode>
+        <childnode refid="14310" relation="usage">
+          <edgelabel>CullConv</edgelabel>
+        </childnode>
+      </node>
+      <node id="14271">
+        <label>VFFieldType</label>
+      </node>
+      <node id="14261">
+        <label>RigidBody</label>
+        <link refid="d6/d88/classRigidBody"/>
+        <childnode refid="14251" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14311">
+        <label>ShaderParameters</label>
+        <link refid="d1/d32/classShaderParameters"/>
+        <childnode refid="14283" relation="usage">
+          <edgelabel>m_pProgram</edgelabel>
+        </childnode>
+        <childnode refid="14312" relation="usage">
+          <edgelabel>m_arrConstants</edgelabel>
+        </childnode>
+        <childnode refid="14313" relation="usage">
+          <edgelabel>m_arrTextures</edgelabel>
+        </childnode>
+        <childnode refid="14243" relation="usage">
+          <edgelabel>m_iTextureCount</edgelabel>
+          <edgelabel>m_iConstantCount</edgelabel>
+        </childnode>
+      </node>
+      <node id="14273">
+        <label>IndexBufferUsage</label>
+      </node>
+      <node id="14229">
+        <label>TTransform3&lt; Scalar &gt;</label>
+        <link refid="d0/d75/classTTransform3"/>
+        <childnode refid="14221" relation="usage">
+          <edgelabel>m_vScale</edgelabel>
+          <edgelabel>m_vInvScale</edgelabel>
+          <edgelabel>m_vInvTranslate</edgelabel>
+          <edgelabel>m_vTranslate</edgelabel>
+        </childnode>
+        <childnode refid="14230" relation="usage">
+          <edgelabel>m_matHMatrix</edgelabel>
+        </childnode>
+        <childnode refid="14232" relation="usage">
+          <edgelabel>m_matInvTransform</edgelabel>
+          <edgelabel>m_matTransform</edgelabel>
+        </childnode>
+        <childnode refid="14225" relation="usage">
+          <edgelabel>m_bIsUniformScale</edgelabel>
+          <edgelabel>m_bIsIdentity</edgelabel>
+          <edgelabel>m_bUpdateInverse</edgelabel>
+          <edgelabel>m_bIsRotScale</edgelabel>
+        </childnode>
+        <childnode refid="14229" relation="usage">
+          <edgelabel>Identity</edgelabel>
+        </childnode>
+      </node>
+      <node id="14221">
+        <label>TVector3&lt; Scalar &gt;</label>
+        <link refid="de/d40/classTVector3"/>
+        <childnode refid="14221" relation="usage">
+          <edgelabel>Null</edgelabel>
+          <edgelabel>eI</edgelabel>
+          <edgelabel>eJ</edgelabel>
+          <edgelabel>eK</edgelabel>
+        </childnode>
+        <childnode refid="14222" relation="usage">
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+          <edgelabel>Z</edgelabel>
+        </childnode>
+      </node>
+      <node id="14253">
+        <label>Island</label>
+        <link refid="d0/dd6/classIsland"/>
+        <childnode refid="14253" relation="usage">
+          <edgelabel>m_pNextInWorld</edgelabel>
+          <edgelabel>m_pPrevInWorld</edgelabel>
+        </childnode>
+        <childnode refid="14254" relation="usage">
+          <edgelabel>m_iColor</edgelabel>
+        </childnode>
+        <childnode refid="14251" relation="usage">
+          <edgelabel>m_pListBodies</edgelabel>
+        </childnode>
+        <childnode refid="14243" relation="usage">
+          <edgelabel>m_iContactCount</edgelabel>
+          <edgelabel>m_iJointCount</edgelabel>
+          <edgelabel>m_iBodyCount</edgelabel>
+          <edgelabel>m_iStackLayerCount</edgelabel>
+        </childnode>
+        <childnode refid="14255" relation="usage">
+          <edgelabel>m_pListJoints</edgelabel>
+        </childnode>
+        <childnode refid="14262" relation="usage">
+          <edgelabel>m_pListContacts</edgelabel>
+        </childnode>
+      </node>
+      <node id="14287">
+        <label>ShaderProgramOutputVar</label>
+        <link refid="df/df0/structShaderProgramOutputVar"/>
+        <childnode refid="14224" relation="usage">
+          <edgelabel>strName</edgelabel>
+        </childnode>
+        <childnode refid="14285" relation="usage">
+          <edgelabel>iSemantic</edgelabel>
+        </childnode>
+        <childnode refid="14286" relation="usage">
+          <edgelabel>iType</edgelabel>
+        </childnode>
+      </node>
+      <node id="14223">
+        <label>TVertex3&lt; Scalar &gt;</label>
+        <link refid="dc/d75/classTVertex3"/>
+        <childnode refid="14222" relation="usage">
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+          <edgelabel>Z</edgelabel>
+        </childnode>
+        <childnode refid="14223" relation="usage">
+          <edgelabel>Null</edgelabel>
+        </childnode>
+      </node>
+      <node id="14244">
+        <label>Iterator</label>
+      </node>
+      <node id="14316">
+        <label>TextureFormat</label>
+      </node>
+      <node id="14266">
+        <label>Shape</label>
+        <link refid="de/d0a/classShape"/>
+        <childnode refid="14219" relation="usage">
+          <edgelabel>m_bvLocalAAB</edgelabel>
+        </childnode>
+        <childnode refid="14267" relation="usage">
+          <edgelabel>m_pMesh</edgelabel>
+        </childnode>
+      </node>
+      <node id="14303">
+        <label>BlendingState</label>
+        <link refid="de/d89/classBlendingState"/>
+        <childnode refid="14304" relation="usage">
+          <edgelabel>BlendSrc</edgelabel>
+        </childnode>
+        <childnode refid="14305" relation="usage">
+          <edgelabel>BlendTest</edgelabel>
+        </childnode>
+        <childnode refid="14224" relation="usage">
+          <edgelabel>sm_arrBlendSrcNames</edgelabel>
+          <edgelabel>sm_arrBlendTestNames</edgelabel>
+          <edgelabel>sm_arrBlendDstNames</edgelabel>
+        </childnode>
+        <childnode refid="14306" relation="usage">
+          <edgelabel>BlendDst</edgelabel>
+        </childnode>
+        <childnode refid="14225" relation="usage">
+          <edgelabel>BlendEnabled</edgelabel>
+          <edgelabel>BlendTestEnabled</edgelabel>
+        </childnode>
+        <childnode refid="14226" relation="usage">
+          <edgelabel>ConstantColor</edgelabel>
+          <edgelabel>Reference</edgelabel>
+        </childnode>
+      </node>
+      <node id="14240">
+        <label>TreeMapNode&lt; Key, T &gt;</label>
+        <link refid="db/dd2/structTreeMapNode"/>
+        <childnode refid="14241" relation="usage">
+          <edgelabel>nodeKey</edgelabel>
+        </childnode>
+        <childnode refid="14239" relation="usage">
+          <edgelabel>nodeItem</edgelabel>
+        </childnode>
+      </node>
+      <node id="14312">
+        <label>ShaderConst</label>
+        <link refid="de/d52/classShaderConst"/>
+        <childnode refid="14231" relation="usage">
+          <edgelabel>m_arrRegisters</edgelabel>
+        </childnode>
+        <childnode refid="14243" relation="usage">
+          <edgelabel>m_iSize</edgelabel>
+          <edgelabel>m_iRegisterCount</edgelabel>
+        </childnode>
+        <childnode refid="14225" relation="usage">
+          <edgelabel>m_bAllowUpdate</edgelabel>
+        </childnode>
+      </node>
+      <node id="14298">
+        <label>DepthTestMode</label>
+      </node>
+      <node id="14248">
+        <label>VisibleGroup</label>
+        <link refid="dc/dac/classVisibleGroup"/>
+        <childnode refid="14249" relation="usage">
+          <edgelabel>m_arrLeaves</edgelabel>
+        </childnode>
+      </node>
+      <node id="14291">
+        <label>ShaderSamplingFilter</label>
+      </node>
+      <node id="14262">
+        <label>ContactEdge</label>
+        <link refid="dc/d79/classContactEdge"/>
+        <childnode refid="14256" relation="public-inheritance">
+        </childnode>
+        <childnode refid="14263" relation="usage">
+          <edgelabel>m_pContactManifold</edgelabel>
+        </childnode>
+        <childnode refid="14264" relation="usage">
+          <edgelabel>m_pNarrowPhase</edgelabel>
+        </childnode>
+      </node>
+      <node id="14280">
+        <label>EffectTechnique</label>
+        <link refid="db/df6/classEffectTechnique"/>
+        <childnode refid="14281" relation="usage">
+          <edgelabel>m_arrPasses</edgelabel>
+        </childnode>
+        <childnode refid="14243" relation="usage">
+          <edgelabel>m_iPassCount</edgelabel>
+        </childnode>
+      </node>
+      <node id="14270">
+        <label>VFFieldUsage</label>
+      </node>
+      <node id="14256">
+        <label>IslandEdge</label>
+        <link refid="da/d63/classIslandEdge"/>
+        <childnode refid="14257" relation="usage">
+          <edgelabel>m_idEdge</edgelabel>
+        </childnode>
+        <childnode refid="14253" relation="usage">
+          <edgelabel>m_pIsland</edgelabel>
+        </childnode>
+        <childnode refid="14254" relation="usage">
+          <edgelabel>m_iColor</edgelabel>
+        </childnode>
+        <childnode refid="14252" relation="usage">
+          <edgelabel>m_pNodeA</edgelabel>
+          <edgelabel>m_pNodeB</edgelabel>
+        </childnode>
+        <childnode refid="14243" relation="usage">
+          <edgelabel>m_iStackLayer</edgelabel>
+        </childnode>
+        <childnode refid="14256" relation="usage">
+          <edgelabel>m_pNextInWorld</edgelabel>
+          <edgelabel>m_pNextInIsland</edgelabel>
+          <edgelabel>m_pPrevInNodeA</edgelabel>
+          <edgelabel>m_pNextInNodeA</edgelabel>
+          <edgelabel>m_pPrevInNodeB</edgelabel>
+          <edgelabel>m_pNextInNodeB</edgelabel>
+          <edgelabel>m_pPrevInWorld</edgelabel>
+          <edgelabel>m_pPrevInIsland</edgelabel>
+        </childnode>
+      </node>
+      <node id="14274">
+        <label>VertexBuffer</label>
+        <link refid="d7/d72/classVertexBuffer"/>
+        <childnode refid="14254" relation="usage">
+          <edgelabel>m_arrVertices</edgelabel>
+        </childnode>
+        <childnode refid="14243" relation="usage">
+          <edgelabel>m_iSize</edgelabel>
+          <edgelabel>m_iVertexCount</edgelabel>
+          <edgelabel>m_iVertexSize</edgelabel>
+        </childnode>
+        <childnode refid="14275" relation="usage">
+          <edgelabel>m_iUsage</edgelabel>
+        </childnode>
+      </node>
+      <node id="14281">
+        <label>EffectPass</label>
+        <link refid="dc/dfd/classEffectPass"/>
+        <childnode refid="14282" relation="usage">
+          <edgelabel>m_pVSProgram</edgelabel>
+        </childnode>
+        <childnode refid="14294" relation="usage">
+          <edgelabel>m_pPSProgram</edgelabel>
+        </childnode>
+        <childnode refid="14296" relation="usage">
+          <edgelabel>m_pDepthState</edgelabel>
+        </childnode>
+        <childnode refid="14299" relation="usage">
+          <edgelabel>m_pPolygonState</edgelabel>
+        </childnode>
+        <childnode refid="14300" relation="usage">
+          <edgelabel>m_pStencilState</edgelabel>
+        </childnode>
+        <childnode refid="14303" relation="usage">
+          <edgelabel>m_pBlendingState</edgelabel>
+        </childnode>
+        <childnode refid="14307" relation="usage">
+          <edgelabel>m_pClippingState</edgelabel>
+        </childnode>
+        <childnode refid="14308" relation="usage">
+          <edgelabel>m_pCullingState</edgelabel>
+        </childnode>
+      </node>
+      <node id="14241">
+        <label>Key</label>
+      </node>
+      <node id="14295">
+        <label>static PixelShaderProfile</label>
+      </node>
+      <node id="14283">
+        <label>ShaderProgram</label>
+        <link refid="d0/d2d/classShaderProgram"/>
+        <childnode refid="14284" relation="usage">
+          <edgelabel>m_arrInputs</edgelabel>
+        </childnode>
+        <childnode refid="14224" relation="usage">
+          <edgelabel>m_arrProgramTexts</edgelabel>
+          <edgelabel>m_strProgramName</edgelabel>
+        </childnode>
+        <childnode refid="14287" relation="usage">
+          <edgelabel>m_arrOutputs</edgelabel>
+        </childnode>
+        <childnode refid="14243" relation="usage">
+          <edgelabel>m_iSamplerCount</edgelabel>
+          <edgelabel>m_iInputCount</edgelabel>
+          <edgelabel>m_iOutputCount</edgelabel>
+          <edgelabel>m_iConstantCount</edgelabel>
+        </childnode>
+        <childnode refid="14288" relation="usage">
+          <edgelabel>m_arrSamplers</edgelabel>
+        </childnode>
+        <childnode refid="14292" relation="usage">
+          <edgelabel>m_arrConstants</edgelabel>
+        </childnode>
+      </node>
+      <node id="14314">
+        <label>Resource</label>
+        <link refid="da/dcd/classResource"/>
+      </node>
+      <node id="14317">
+        <label>TextureUsage</label>
+      </node>
+      <node id="14318">
+        <label>Effect</label>
+        <link refid="d3/df0/classEffect"/>
+        <childnode refid="14280" relation="usage">
+          <edgelabel>m_arrTechniques</edgelabel>
+        </childnode>
+        <childnode refid="14243" relation="usage">
+          <edgelabel>m_iTechniqueCount</edgelabel>
+        </childnode>
+      </node>
+      <node id="14250">
+        <label>WorldLeaf</label>
+        <link refid="dc/d09/classWorldLeaf"/>
+        <childnode refid="14218" relation="public-inheritance">
+        </childnode>
+        <childnode refid="14219" relation="usage">
+          <edgelabel>ModelBV</edgelabel>
+        </childnode>
+        <childnode refid="14251" relation="usage">
+          <edgelabel>m_pBody</edgelabel>
+        </childnode>
+        <childnode refid="14279" relation="usage">
+          <edgelabel>m_pEffectInstance</edgelabel>
+        </childnode>
+        <childnode refid="14225" relation="usage">
+          <edgelabel>CastShadows</edgelabel>
+        </childnode>
+        <childnode refid="14267" relation="usage">
+          <edgelabel>m_pMesh</edgelabel>
+        </childnode>
+      </node>
+      <node id="14322">
+        <label>TreeMap&lt; WorldLeaf *, UInt &gt;</label>
+        <link refid="d0/da4/classTreeMap"/>
+        <childnode refid="14234" relation="public-inheritance">
+        </childnode>
+        <childnode refid="14235" relation="usage">
+          <edgelabel>m_rbTreeMap</edgelabel>
+        </childnode>
+        <childnode refid="14243" relation="usage">
+          <edgelabel>m_pfCompare</edgelabel>
+        </childnode>
+        <childnode refid="14242" relation="usage">
+          <edgelabel>m_pUserData</edgelabel>
+        </childnode>
+      </node>
+      <node id="14225">
+        <label>bool</label>
+      </node>
+      <node id="14258">
+        <label>Constraint</label>
+        <link refid="d8/dcd/classConstraint"/>
+        <childnode refid="14259" relation="usage">
+          <edgelabel>m_arrRows</edgelabel>
+        </childnode>
+        <childnode refid="14243" relation="usage">
+          <edgelabel>m_iRowCount</edgelabel>
+        </childnode>
+        <childnode refid="14261" relation="usage">
+          <edgelabel>m_pRigidBodyA</edgelabel>
+          <edgelabel>m_pRigidBodyB</edgelabel>
+        </childnode>
+      </node>
+      <node id="14220">
+        <label>TBoundingVolume&lt; Scalar &gt;</label>
+        <link refid="d6/d19/classTBoundingVolume"/>
+      </node>
+      <node id="14247">
+        <label>WorldCuller</label>
+        <link refid="db/d43/classWorldCuller"/>
+        <childnode refid="14248" relation="usage">
+          <edgelabel>m_curVisibleGroup</edgelabel>
+        </childnode>
+        <childnode refid="14231" relation="usage">
+          <edgelabel>m_arrFrustrumState</edgelabel>
+        </childnode>
+        <childnode refid="14319" relation="usage">
+          <edgelabel>m_pCamera</edgelabel>
+        </childnode>
+        <childnode refid="14243" relation="usage">
+          <edgelabel>m_iUserPlaneCount</edgelabel>
+        </childnode>
+        <childnode refid="14245" relation="usage">
+          <edgelabel>m_arrUserPlanes</edgelabel>
+          <edgelabel>m_arrFrustrumPlanes</edgelabel>
+        </childnode>
+        <childnode refid="14226" relation="usage">
+          <edgelabel>m_dwPlaneState</edgelabel>
+        </childnode>
+        <childnode refid="14223" relation="usage">
+          <edgelabel>m_arrFrustrumVertices</edgelabel>
+        </childnode>
+      </node>
+      <node id="14224">
+        <label>char</label>
+      </node>
+      <node id="14284">
+        <label>ShaderProgramInputVar</label>
+        <link refid="d9/dbd/structShaderProgramInputVar"/>
+        <childnode refid="14224" relation="usage">
+          <edgelabel>strName</edgelabel>
+        </childnode>
+        <childnode refid="14285" relation="usage">
+          <edgelabel>iSemantic</edgelabel>
+        </childnode>
+        <childnode refid="14286" relation="usage">
+          <edgelabel>iType</edgelabel>
+        </childnode>
+      </node>
+      <node id="14264">
+        <label>NarrowPhase</label>
+        <link refid="dd/d93/classNarrowPhase"/>
+        <childnode refid="14231" relation="usage">
+          <edgelabel>ZeroTolerance</edgelabel>
+        </childnode>
+        <childnode refid="14263" relation="usage">
+          <edgelabel>m_pCollisionManifold</edgelabel>
+        </childnode>
+        <childnode refid="14265" relation="usage">
+          <edgelabel>m_pShapeA</edgelabel>
+          <edgelabel>m_pShapeB</edgelabel>
+        </childnode>
+      </node>
+      <node id="14302">
+        <label>StencilOperation</label>
+      </node>
+      <node id="14242">
+        <label>Void *</label>
+      </node>
+      <node id="14272">
+        <label>IndexBuffer</label>
+        <link refid="dd/df7/classIndexBuffer"/>
+        <childnode refid="14254" relation="usage">
+          <edgelabel>m_arrIndices</edgelabel>
+        </childnode>
+        <childnode refid="14243" relation="usage">
+          <edgelabel>m_iIndexSize</edgelabel>
+          <edgelabel>m_iSize</edgelabel>
+          <edgelabel>m_iIndexCount</edgelabel>
+        </childnode>
+        <childnode refid="14273" relation="usage">
+          <edgelabel>m_iUsage</edgelabel>
+        </childnode>
+      </node>
+      <node id="14259">
+        <label>ConstraintRow</label>
+        <link refid="dd/d74/structConstraintRow"/>
+        <childnode refid="14260" relation="usage">
+          <edgelabel>constrJacobian</edgelabel>
+        </childnode>
+        <childnode refid="14231" relation="usage">
+          <edgelabel>fUpperLimit</edgelabel>
+          <edgelabel>fLowerLimit</edgelabel>
+          <edgelabel>fError</edgelabel>
+          <edgelabel>fCFM</edgelabel>
+          <edgelabel>fImpulse</edgelabel>
+        </childnode>
+      </node>
+      <node id="14297">
+        <label>static const GChar *</label>
+      </node>
+      <node id="14216">
+        <label>WorldBSPNode</label>
+        <link refid="d4/d18/classWorldBSPNode"/>
+        <childnode refid="14217" relation="public-inheritance">
+        </childnode>
+        <childnode refid="14245" relation="usage">
+          <edgelabel>WorldPlane</edgelabel>
+        </childnode>
+        <childnode refid="14218" relation="usage">
+          <edgelabel>m_pNegative</edgelabel>
+          <edgelabel>m_pCoplanar</edgelabel>
+          <edgelabel>m_pPositive</edgelabel>
+        </childnode>
+      </node>
+      <node id="14306">
+        <label>BlendingDstMode</label>
+      </node>
+      <node id="14234">
+        <label>Datastruct</label>
+        <link refid="dc/d51/classDatastruct"/>
+        <childnode refid="14224" relation="usage">
+          <edgelabel>m_strAllocatorName</edgelabel>
+        </childnode>
+        <childnode refid="14227" relation="usage">
+          <edgelabel>m_idMemoryContext</edgelabel>
+        </childnode>
+      </node>
+      <node id="14252">
+        <label>IslandNode</label>
+        <link refid="d4/d8c/classIslandNode"/>
+        <childnode refid="14253" relation="usage">
+          <edgelabel>m_pIsland</edgelabel>
+        </childnode>
+        <childnode refid="14252" relation="usage">
+          <edgelabel>m_pNextInWorld</edgelabel>
+          <edgelabel>m_pNextInIsland</edgelabel>
+          <edgelabel>m_pPrevInWorld</edgelabel>
+          <edgelabel>m_pPrevInIsland</edgelabel>
+        </childnode>
+        <childnode refid="14243" relation="usage">
+          <edgelabel>m_iContactCount</edgelabel>
+          <edgelabel>m_iJointCount</edgelabel>
+          <edgelabel>m_iStackLayer</edgelabel>
+          <edgelabel>m_iIslandRefCount</edgelabel>
+        </childnode>
+        <childnode refid="14225" relation="usage">
+          <edgelabel>m_bFixed</edgelabel>
+        </childnode>
+        <childnode refid="14255" relation="usage">
+          <edgelabel>m_pListJoints</edgelabel>
+        </childnode>
+        <childnode refid="14262" relation="usage">
+          <edgelabel>m_pListContacts</edgelabel>
+        </childnode>
+      </node>
+      <node id="14290">
+        <label>ShaderSamplingWrapMode</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/Indoor/WorldIndoorArea.h" line="41" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/Indoor/WorldIndoorArea.h" bodystart="40" bodyend="62"/>
+    <listofallmembers>
+      <member refid="d1/d2b/classWorldIndoorArea_1a6270828136c1e97ca6a95d900930c0f8" prot="protected" virt="virtual"><scope>WorldIndoorArea</scope><name>_OnVisibleGroup</name></member>
+      <member refid="de/d40/classWorldBaseNode_1a73b811fbdcb8d71730b29822a7fabd21" prot="protected" virt="non-virtual"><scope>WorldIndoorArea</scope><name>_QueryVisibleGroup</name></member>
+      <member refid="d5/d11/classWorldNode_1aeb647132fe94ad3843d4d9351a68279c" prot="protected" virt="virtual"><scope>WorldIndoorArea</scope><name>_UpdateWorldBV</name></member>
+      <member refid="d5/d11/classWorldNode_1a521e32108967f9457587b337df6616f8" prot="protected" virt="virtual"><scope>WorldIndoorArea</scope><name>_UpdateWorldTransform</name></member>
+      <member refid="d5/d11/classWorldNode_1aa52191c7fd51a97251f5695c501b87be" prot="public" virt="non-virtual"><scope>WorldIndoorArea</scope><name>AddChild</name></member>
+      <member refid="de/d40/classWorldBaseNode_1ac2da504152770a52758e85ffd52d3c28" prot="public" virt="non-virtual"><scope>WorldIndoorArea</scope><name>CullMode</name></member>
+      <member refid="d5/d11/classWorldNode_1a0d04e96dad8301c4b1168ea62404cadc" prot="public" virt="non-virtual"><scope>WorldIndoorArea</scope><name>EnumChildren</name></member>
+      <member refid="d5/d11/classWorldNode_1a0bf5a59513ac9e65b2df233c113f8c30" prot="public" virt="non-virtual"><scope>WorldIndoorArea</scope><name>EnumNextChild</name></member>
+      <member refid="d5/d11/classWorldNode_1a759322982366517ddfe4f162f6851c26" prot="public" virt="non-virtual"><scope>WorldIndoorArea</scope><name>GetChild</name></member>
+      <member refid="d5/d11/classWorldNode_1ab6b5557368bb70a6a76b14f377d74923" prot="public" virt="non-virtual"><scope>WorldIndoorArea</scope><name>GetChildCount</name></member>
+      <member refid="d4/d18/classWorldBSPNode_1a2448d911a6bc93739e027bb5dbfc9c83" prot="public" virt="non-virtual"><scope>WorldIndoorArea</scope><name>GetContainingNode</name></member>
+      <member refid="d1/d2b/classWorldIndoorArea_1a52da5ca6d26eb22285f923d3514da41c" prot="public" virt="non-virtual"><scope>WorldIndoorArea</scope><name>GetContainingRoom</name></member>
+      <member refid="d4/d18/classWorldBSPNode_1ab8349e30ef96f415286fd37822456334" prot="public" virt="non-virtual"><scope>WorldIndoorArea</scope><name>GetCoplanarChild</name></member>
+      <member refid="de/d40/classWorldBaseNode_1a8db69c2fadca821716052090e2adfe7b" prot="public" virt="non-virtual"><scope>WorldIndoorArea</scope><name>GetDebugFlags</name></member>
+      <member refid="de/d40/classWorldBaseNode_1acb24949ad36a8ed7b0008515d78ac5ae" prot="public" virt="non-virtual"><scope>WorldIndoorArea</scope><name>GetName</name></member>
+      <member refid="d4/d18/classWorldBSPNode_1aeaa6a3bcf8ff8180dc700c7ff222aef7" prot="public" virt="non-virtual"><scope>WorldIndoorArea</scope><name>GetNegativeChild</name></member>
+      <member refid="d1/d2b/classWorldIndoorArea_1abb8b095f349b5ab9b50da607f3aab3da" prot="public" virt="non-virtual"><scope>WorldIndoorArea</scope><name>GetOutsideNode</name></member>
+      <member refid="de/d40/classWorldBaseNode_1afbe429daa4f432beea27ff544193c80b" prot="public" virt="non-virtual"><scope>WorldIndoorArea</scope><name>GetParent</name></member>
+      <member refid="d4/d18/classWorldBSPNode_1ad953a1cf817468bc423b8b5049b0b630" prot="public" virt="non-virtual"><scope>WorldIndoorArea</scope><name>GetPositiveChild</name></member>
+      <member refid="d1/d2b/classWorldIndoorArea_1a8f7b7d13e159dfc832d9fbaba2db90b7" prot="public" virt="virtual"><scope>WorldIndoorArea</scope><name>GetType</name></member>
+      <member refid="d5/d11/classWorldNode_1a0a353d7e0cb82ca24200846a623136a8" prot="public" virt="non-virtual"><scope>WorldIndoorArea</scope><name>HasChild</name></member>
+      <member refid="d4/d18/classWorldBSPNode_1a0a3020a3396e285223786d9766f48816" prot="public" virt="non-virtual"><scope>WorldIndoorArea</scope><name>HasCoplanarChild</name></member>
+      <member refid="d4/d18/classWorldBSPNode_1a79a88f43f2ad8f0109d8c7bcd3139f1a" prot="public" virt="non-virtual"><scope>WorldIndoorArea</scope><name>HasNegativeChild</name></member>
+      <member refid="d4/d18/classWorldBSPNode_1a4040b33d05e1fcff07c9a65794bc3fd6" prot="public" virt="non-virtual"><scope>WorldIndoorArea</scope><name>HasPositiveChild</name></member>
+      <member refid="de/d40/classWorldBaseNode_1acd551a6aca3b3743b3f0031ab33d7c38" prot="public" virt="non-virtual"><scope>WorldIndoorArea</scope><name>IsLeaf</name></member>
+      <member refid="de/d40/classWorldBaseNode_1a9497472535cc78941df825084781b23e" prot="public" virt="non-virtual"><scope>WorldIndoorArea</scope><name>IsNode</name></member>
+      <member refid="d1/d2b/classWorldIndoorArea_1a06e9ae13475fd5b9af88abd036b52c30" prot="private" virt="non-virtual"><scope>WorldIndoorArea</scope><name>m_PortalCuller</name></member>
+      <member refid="de/d40/classWorldBaseNode_1a11934f240407a72eda2c48325a9fc50f" prot="protected" virt="non-virtual"><scope>WorldIndoorArea</scope><name>m_pParent</name></member>
+      <member refid="d5/d11/classWorldNode_1af3a788a877259d4463ac9f8db2cbbe73" prot="public" virt="non-virtual"><scope>WorldIndoorArea</scope><name>RemoveAllChildren</name></member>
+      <member refid="d5/d11/classWorldNode_1ace2671efdd9ae08c6f5992078533607f" prot="public" virt="non-virtual"><scope>WorldIndoorArea</scope><name>RemoveChild</name></member>
+      <member refid="d4/d18/classWorldBSPNode_1ac971c406f10669fad73be097f9e3861e" prot="public" virt="non-virtual"><scope>WorldIndoorArea</scope><name>SetCoplanarChild</name></member>
+      <member refid="de/d40/classWorldBaseNode_1ae9db4009e11bb8f9aded69be4a2b3352" prot="public" virt="non-virtual"><scope>WorldIndoorArea</scope><name>SetDebugFlags</name></member>
+      <member refid="d4/d18/classWorldBSPNode_1a2e19a2baab5f31b1ce5dd67265986067" prot="public" virt="non-virtual"><scope>WorldIndoorArea</scope><name>SetNegativeChild</name></member>
+      <member refid="d1/d2b/classWorldIndoorArea_1a512da4287424c24940b3f9a88f4cb3fe" prot="public" virt="non-virtual"><scope>WorldIndoorArea</scope><name>SetOutsideNode</name></member>
+      <member refid="d4/d18/classWorldBSPNode_1af92dc4c16ed5cf6848de3ace3aaa78e2" prot="public" virt="non-virtual"><scope>WorldIndoorArea</scope><name>SetPositiveChild</name></member>
+      <member refid="de/d40/classWorldBaseNode_1a799dad89a91bb18111e77c1a65e650a3" prot="public" virt="non-virtual"><scope>WorldIndoorArea</scope><name>Update</name></member>
+      <member refid="de/d40/classWorldBaseNode_1ac9aaf65c7e38c8051a15c6b2f51ab8eb" prot="public" virt="non-virtual"><scope>WorldIndoorArea</scope><name>UpdateWorldBV</name></member>
+      <member refid="de/d40/classWorldBaseNode_1acd4c2683cf53d391727750a9adf149ed" prot="public" virt="non-virtual"><scope>WorldIndoorArea</scope><name>UpdateWorldTransform</name></member>
+      <member refid="de/d40/classWorldBaseNode_1ab1e3e2cd3df18d07511c206ad6f04116" prot="public" virt="non-virtual"><scope>WorldIndoorArea</scope><name>WorldBaseNode</name></member>
+      <member refid="d4/d18/classWorldBSPNode_1aeb8fc3f0942bf84256af2fbf5ba35fc7" prot="public" virt="non-virtual"><scope>WorldIndoorArea</scope><name>WorldBSPNode</name></member>
+      <member refid="de/d40/classWorldBaseNode_1ae933926ab6fe7298bb2779d061fdb70c" prot="public" virt="non-virtual"><scope>WorldIndoorArea</scope><name>WorldBV</name></member>
+      <member refid="d1/d2b/classWorldIndoorArea_1a10841360256081c7fe33384be6e4cf74" prot="public" virt="non-virtual"><scope>WorldIndoorArea</scope><name>WorldIndoorArea</name></member>
+      <member refid="d5/d11/classWorldNode_1af4adf665b01de872cce6b91b071ad48c" prot="public" virt="non-virtual"><scope>WorldIndoorArea</scope><name>WorldNode</name></member>
+      <member refid="d4/d18/classWorldBSPNode_1ad550fb67a212f3d6a664071eedb0773d" prot="public" virt="non-virtual"><scope>WorldIndoorArea</scope><name>WorldPlane</name></member>
+      <member refid="de/d40/classWorldBaseNode_1ac1a0c98e155f5cda06389567cd84e948" prot="public" virt="non-virtual"><scope>WorldIndoorArea</scope><name>WorldTransform</name></member>
+      <member refid="de/d40/classWorldBaseNode_1a45ed1d3d0c7837cb40f80070f57d41af" prot="public" virt="virtual"><scope>WorldIndoorArea</scope><name>~WorldBaseNode</name></member>
+      <member refid="d4/d18/classWorldBSPNode_1a2cb8a86893d4276fdfd1d93d2ee0e807" prot="public" virt="virtual"><scope>WorldIndoorArea</scope><name>~WorldBSPNode</name></member>
+      <member refid="d1/d2b/classWorldIndoorArea_1a9bab7b4badf46cd8d2ca429c05da444d" prot="public" virt="virtual"><scope>WorldIndoorArea</scope><name>~WorldIndoorArea</name></member>
+      <member refid="d5/d11/classWorldNode_1a7bbbec5b61fc9d8f34e3811ff6c5fcaa" prot="public" virt="virtual"><scope>WorldIndoorArea</scope><name>~WorldNode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

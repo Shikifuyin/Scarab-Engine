@@ -1,0 +1,368 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d6/db4/classMultiPlaneManifold" kind="class" prot="public">
+    <compoundname>MultiPlaneManifold</compoundname>
+    <basecompoundref refid="d2/d6f/classContactManifold" prot="public" virt="non-virtual">ContactManifold</basecompoundref>
+    <includes refid="d1/d5f/ContactManifold_8h" local="no">ContactManifold.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d6/db4/classMultiPlaneManifold_1a6bb04674472f8110fab7b8f8a7f1eee7" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iPlaneCount</definition>
+        <argsstring></argsstring>
+        <name>m_iPlaneCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/ContactManifold.h" line="172" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/ContactManifold.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/db4/classMultiPlaneManifold_1acd52831a59470fa2a2b6498d98512ed7" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iContactPointCount</definition>
+        <argsstring></argsstring>
+        <name>m_iContactPointCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/ContactManifold.h" line="173" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/ContactManifold.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/db4/classMultiPlaneManifold_1aba23b7cc6c3c68bfa92784ec067f3c41" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a557c9c5ae94abf5436f9c39c049c8f72" kindref="member">QWord</ref></type>
+        <definition>QWord m_arrPlaneIDs[CONTACT_MANIFOLD_MAX_PLANES]</definition>
+        <argsstring>[CONTACT_MANIFOLD_MAX_PLANES]</argsstring>
+        <name>m_arrPlaneIDs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/ContactManifold.h" line="175" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/ContactManifold.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/db4/classMultiPlaneManifold_1a9dafad82f136de0dee2b635eab10e83a" prot="private" static="no" mutable="no">
+        <type><ref refid="d0/d4d/classSinglePlaneManifold" kindref="compound">SinglePlaneManifold</ref></type>
+        <definition>SinglePlaneManifold m_arrPlanes[CONTACT_MANIFOLD_MAX_PLANES]</definition>
+        <argsstring>[CONTACT_MANIFOLD_MAX_PLANES]</argsstring>
+        <name>m_arrPlanes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/ContactManifold.h" line="176" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/ContactManifold.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d6/db4/classMultiPlaneManifold_1a5efbe6e3abce5d9237302a8837ad1e57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MultiPlaneManifold</definition>
+        <argsstring>()</argsstring>
+        <name>MultiPlaneManifold</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/ContactManifold.h" line="151"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/db4/classMultiPlaneManifold_1a68c3b71ab1a5cdf7a9f70440427e0503" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~MultiPlaneManifold</definition>
+        <argsstring>()</argsstring>
+        <name>~MultiPlaneManifold</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/ContactManifold.h" line="152"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/db4/classMultiPlaneManifold_1a86b28e70269846dd6396ff8691e49913" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>virtual Bool IsEmpty</definition>
+        <argsstring>() const </argsstring>
+        <name>IsEmpty</name>
+        <reimplements refid="d2/d6f/classContactManifold_1a46c4d3e8b154bfd9d9573980ca7cc814">IsEmpty</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/ContactManifold.h" line="155"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/db4/classMultiPlaneManifold_1a64350b7edaee2e931670d7dbd5f319fe" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>virtual UInt GetContactPointCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetContactPointCount</name>
+        <reimplements refid="d2/d6f/classContactManifold_1af86630d5c0834bf87557d18e018796a4">GetContactPointCount</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/ContactManifold.h" line="157"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/db4/classMultiPlaneManifold_1ac0e2ee6abdbc6e383e140a69219576d0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>const <ref refid="d6/d24/classContactPoint" kindref="compound">ContactPoint</ref> *</type>
+        <definition>virtual const ContactPoint* GetContactPoint</definition>
+        <argsstring>(UInt iIndex) const </argsstring>
+        <name>GetContactPoint</name>
+        <reimplements refid="d2/d6f/classContactManifold_1abadd4983ded9f5a5d5f6b8a7bc9c71f7">GetContactPoint</reimplements>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/ContactManifold.h" line="159"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/db4/classMultiPlaneManifold_1ab98f162a1c7d968fbc56f7ef6bd57ec4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="d6/d24/classContactPoint" kindref="compound">ContactPoint</ref> *</type>
+        <definition>virtual ContactPoint* GetContactPoint</definition>
+        <argsstring>(UInt iIndex)</argsstring>
+        <name>GetContactPoint</name>
+        <reimplements refid="d2/d6f/classContactManifold_1a45a12958d655fd50b0149bac0d707e89">GetContactPoint</reimplements>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/ContactManifold.h" line="160"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/db4/classMultiPlaneManifold_1a8f9e7f4f72bc178d232ef2cf770de694" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void AddPoint</definition>
+        <argsstring>(const ContactPointID &amp;idCPID, const Vertex3 &amp;vWorldPointA, const Vertex3 &amp;vWorldPointB, const Vector3 &amp;vWorldNormal, Scalar fDistance)</argsstring>
+        <name>AddPoint</name>
+        <param>
+          <type>const <ref refid="dc/d77/classContactPointID" kindref="compound">ContactPointID</ref> &amp;</type>
+          <declname>idCPID</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d0/df3/Vertex3_8h_1a77dfdbfba4bf6ee1a522233ccef29ff5" kindref="member">Vertex3</ref> &amp;</type>
+          <declname>vWorldPointA</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d0/df3/Vertex3_8h_1a77dfdbfba4bf6ee1a522233ccef29ff5" kindref="member">Vertex3</ref> &amp;</type>
+          <declname>vWorldPointB</declname>
+        </param>
+        <param>
+          <type>const <ref refid="dd/d8c/Vector3_8h_1ae41a346113f53aca343378c1c0ff4137" kindref="member">Vector3</ref> &amp;</type>
+          <declname>vWorldNormal</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/d10/Scalar_8h_1abee0aca51a3a3e16c628155aa4ac6f12" kindref="member">Scalar</ref></type>
+          <declname>fDistance</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/ContactManifold.h" line="164"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/db4/classMultiPlaneManifold_1aa31f188be923c718868036f9486390ea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void Clear</definition>
+        <argsstring>()</argsstring>
+        <name>Clear</name>
+        <reimplements refid="d2/d6f/classContactManifold_1a12a20256ada86a94610094792cbc6e2b">Clear</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/ContactManifold.h" line="165"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/db4/classMultiPlaneManifold_1aa811bbbcf8239acaff526ae43b21d07f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void UpdateAfterCollision</definition>
+        <argsstring>(const ContactManifold *pBaseCollisionManifold)</argsstring>
+        <name>UpdateAfterCollision</name>
+        <reimplements refid="d2/d6f/classContactManifold_1a2f69da8b4f1894a9acb556de91f13704">UpdateAfterCollision</reimplements>
+        <param>
+          <type>const <ref refid="d2/d6f/classContactManifold" kindref="compound">ContactManifold</ref> *</type>
+          <declname>pBaseCollisionManifold</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/ContactManifold.h" line="168"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="7912">
+        <label>MultiPlaneManifold</label>
+        <link refid="d6/db4/classMultiPlaneManifold"/>
+        <childnode refid="7913" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7913">
+        <label>ContactManifold</label>
+        <link refid="d2/d6f/classContactManifold"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7914">
+        <label>MultiPlaneManifold</label>
+        <link refid="d6/db4/classMultiPlaneManifold"/>
+        <childnode refid="7915" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7916" relation="usage">
+          <edgelabel>m_arrPlanes</edgelabel>
+        </childnode>
+        <childnode refid="7925" relation="usage">
+          <edgelabel>m_arrPlaneIDs</edgelabel>
+        </childnode>
+        <childnode refid="7926" relation="usage">
+          <edgelabel>m_iContactPointCount</edgelabel>
+          <edgelabel>m_iPlaneCount</edgelabel>
+        </childnode>
+      </node>
+      <node id="7917">
+        <label>ContactPoint</label>
+        <link refid="d6/d24/classContactPoint"/>
+        <childnode refid="7918" relation="usage">
+          <edgelabel>vWorldNormal</edgelabel>
+        </childnode>
+        <childnode refid="7920" relation="usage">
+          <edgelabel>idCPID</edgelabel>
+        </childnode>
+        <childnode refid="7922" relation="usage">
+          <edgelabel>fFrictionImpulse0</edgelabel>
+          <edgelabel>fNormalImpulse</edgelabel>
+          <edgelabel>fFrictionImpulse1</edgelabel>
+          <edgelabel>fDistance</edgelabel>
+        </childnode>
+        <childnode refid="7923" relation="usage">
+          <edgelabel>iLifeTime</edgelabel>
+        </childnode>
+        <childnode refid="7924" relation="usage">
+          <edgelabel>vWorldPointA</edgelabel>
+          <edgelabel>vWorldPointB</edgelabel>
+        </childnode>
+      </node>
+      <node id="7920">
+        <label>ContactPointID</label>
+        <link refid="dc/d77/classContactPointID"/>
+        <childnode refid="7920" relation="usage">
+          <edgelabel>CPID_NULL</edgelabel>
+        </childnode>
+        <childnode refid="7921" relation="usage">
+          <edgelabel>dwSpecifierA</edgelabel>
+          <edgelabel>dwSpecifierB</edgelabel>
+          <edgelabel>dwFeatureA</edgelabel>
+          <edgelabel>dwFeatureB</edgelabel>
+        </childnode>
+      </node>
+      <node id="7916">
+        <label>SinglePlaneManifold</label>
+        <link refid="d0/d4d/classSinglePlaneManifold"/>
+        <childnode refid="7915" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7917" relation="usage">
+          <edgelabel>m_arrContactPoints</edgelabel>
+        </childnode>
+        <childnode refid="7923" relation="usage">
+          <edgelabel>m_iContactPointCount</edgelabel>
+        </childnode>
+      </node>
+      <node id="7922">
+        <label>float</label>
+      </node>
+      <node id="7925">
+        <label>UInt64</label>
+      </node>
+      <node id="7921">
+        <label>ULong</label>
+      </node>
+      <node id="7926">
+        <label>unsigned int</label>
+      </node>
+      <node id="7923">
+        <label>int</label>
+      </node>
+      <node id="7915">
+        <label>ContactManifold</label>
+        <link refid="d2/d6f/classContactManifold"/>
+      </node>
+      <node id="7919">
+        <label>Scalar</label>
+      </node>
+      <node id="7918">
+        <label>TVector3&lt; Scalar &gt;</label>
+        <link refid="de/d40/classTVector3"/>
+        <childnode refid="7918" relation="usage">
+          <edgelabel>Null</edgelabel>
+          <edgelabel>eI</edgelabel>
+          <edgelabel>eJ</edgelabel>
+          <edgelabel>eK</edgelabel>
+        </childnode>
+        <childnode refid="7919" relation="usage">
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+          <edgelabel>Z</edgelabel>
+        </childnode>
+      </node>
+      <node id="7924">
+        <label>TVertex3&lt; Scalar &gt;</label>
+        <link refid="dc/d75/classTVertex3"/>
+        <childnode refid="7919" relation="usage">
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+          <edgelabel>Z</edgelabel>
+        </childnode>
+        <childnode refid="7924" relation="usage">
+          <edgelabel>Null</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/ContactManifold.h" line="149" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/ContactManifold.h" bodystart="148" bodyend="177"/>
+    <listofallmembers>
+      <member refid="d6/db4/classMultiPlaneManifold_1a8f9e7f4f72bc178d232ef2cf770de694" prot="public" virt="non-virtual"><scope>MultiPlaneManifold</scope><name>AddPoint</name></member>
+      <member refid="d6/db4/classMultiPlaneManifold_1aa31f188be923c718868036f9486390ea" prot="public" virt="virtual"><scope>MultiPlaneManifold</scope><name>Clear</name></member>
+      <member refid="d2/d6f/classContactManifold_1a4d69819e4ac894bb9cdc3cff8e11306b" prot="public" virt="non-virtual"><scope>MultiPlaneManifold</scope><name>ContactManifold</name></member>
+      <member refid="d6/db4/classMultiPlaneManifold_1ac0e2ee6abdbc6e383e140a69219576d0" prot="public" virt="virtual"><scope>MultiPlaneManifold</scope><name>GetContactPoint</name></member>
+      <member refid="d6/db4/classMultiPlaneManifold_1ab98f162a1c7d968fbc56f7ef6bd57ec4" prot="public" virt="virtual"><scope>MultiPlaneManifold</scope><name>GetContactPoint</name></member>
+      <member refid="d6/db4/classMultiPlaneManifold_1a64350b7edaee2e931670d7dbd5f319fe" prot="public" virt="virtual"><scope>MultiPlaneManifold</scope><name>GetContactPointCount</name></member>
+      <member refid="d6/db4/classMultiPlaneManifold_1a86b28e70269846dd6396ff8691e49913" prot="public" virt="virtual"><scope>MultiPlaneManifold</scope><name>IsEmpty</name></member>
+      <member refid="d6/db4/classMultiPlaneManifold_1aba23b7cc6c3c68bfa92784ec067f3c41" prot="private" virt="non-virtual"><scope>MultiPlaneManifold</scope><name>m_arrPlaneIDs</name></member>
+      <member refid="d6/db4/classMultiPlaneManifold_1a9dafad82f136de0dee2b635eab10e83a" prot="private" virt="non-virtual"><scope>MultiPlaneManifold</scope><name>m_arrPlanes</name></member>
+      <member refid="d6/db4/classMultiPlaneManifold_1acd52831a59470fa2a2b6498d98512ed7" prot="private" virt="non-virtual"><scope>MultiPlaneManifold</scope><name>m_iContactPointCount</name></member>
+      <member refid="d6/db4/classMultiPlaneManifold_1a6bb04674472f8110fab7b8f8a7f1eee7" prot="private" virt="non-virtual"><scope>MultiPlaneManifold</scope><name>m_iPlaneCount</name></member>
+      <member refid="d6/db4/classMultiPlaneManifold_1a5efbe6e3abce5d9237302a8837ad1e57" prot="public" virt="non-virtual"><scope>MultiPlaneManifold</scope><name>MultiPlaneManifold</name></member>
+      <member refid="d6/db4/classMultiPlaneManifold_1aa811bbbcf8239acaff526ae43b21d07f" prot="public" virt="virtual"><scope>MultiPlaneManifold</scope><name>UpdateAfterCollision</name></member>
+      <member refid="d2/d6f/classContactManifold_1a5f5127caa5eaa67e12eb6230b1570ca8" prot="public" virt="virtual"><scope>MultiPlaneManifold</scope><name>~ContactManifold</name></member>
+      <member refid="d6/db4/classMultiPlaneManifold_1a68c3b71ab1a5cdf7a9f70440427e0503" prot="public" virt="virtual"><scope>MultiPlaneManifold</scope><name>~MultiPlaneManifold</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

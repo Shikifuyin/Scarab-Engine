@@ -1,0 +1,430 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="db/d20/classTGaussTree" kind="class" prot="public">
+    <compoundname>TGaussTree</compoundname>
+    <basecompoundref refid="dc/d51/classDatastruct" prot="public" virt="non-virtual">Datastruct</basecompoundref>
+    <includes refid="dd/d54/GaussTree_8h" local="no">GaussTree.h</includes>
+    <innerclass refid="d8/d5d/classTGaussTree_1_1HQuery" prot="public">TGaussTree::HQuery</innerclass>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>Real</declname>
+        <defname>Real</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="db/d20/classTGaussTree_1a5dd4070973286b864dfe40425bf89702" prot="private" static="no" mutable="no">
+        <type><ref refid="df/d6c/structSphericalArc" kindref="compound">SphericalArc</ref> *</type>
+        <definition>SphericalArc* m_arrNodes</definition>
+        <argsstring></argsstring>
+        <name>m_arrNodes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/GaussTree.h" line="93" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/GaussTree.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d20/classTGaussTree_1a23a17f6bf3b4f3c796e3ca5429557a43" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iNodeCount</definition>
+        <argsstring></argsstring>
+        <name>m_iNodeCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/GaussTree.h" line="94" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/GaussTree.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="db/d20/classTGaussTree_1a05a934af32ebc0426692b5fcb80052d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TGaussTree</definition>
+        <argsstring>()</argsstring>
+        <name>TGaussTree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/GaussTree.h" line="52"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d20/classTGaussTree_1a1bf0f92ce24af8a4148e4a220a91cee2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~TGaussTree</definition>
+        <argsstring>()</argsstring>
+        <name>~TGaussTree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/GaussTree.h" line="53"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d20/classTGaussTree_1aab77352722e193be864ad3e317f0a967" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void Create</definition>
+        <argsstring>()</argsstring>
+        <name>Create</name>
+        <reimplements refid="dc/d51/classDatastruct_1a0609a196f6f3d0c6b77f63eb850c0ac7">Create</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/GaussTree.h" line="56"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d20/classTGaussTree_1a04b98e1741147ccd8731588392091ac0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void Destroy</definition>
+        <argsstring>()</argsstring>
+        <name>Destroy</name>
+        <reimplements refid="dc/d51/classDatastruct_1a5f87413a244467d525a1e593ff2c1c27">Destroy</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/GaussTree.h" line="57"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d20/classTGaussTree_1abe6db4496cfdd90f917f4ca76d4bdcb1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>virtual UInt MemorySize</definition>
+        <argsstring>() const </argsstring>
+        <name>MemorySize</name>
+        <reimplements refid="dc/d51/classDatastruct_1a9797d1e194be5ac1f59da06f4017ab52">MemorySize</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/GaussTree.h" line="59"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d20/classTGaussTree_1a0956cac53fbbd2baead454e29106a8cd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>virtual UInt Count</definition>
+        <argsstring>() const </argsstring>
+        <name>Count</name>
+        <reimplements refid="dc/d51/classDatastruct_1a64d0429c6ea513aff9aed72a84ac5e07">Count</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/GaussTree.h" line="60"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d20/classTGaussTree_1aa31f188be923c718868036f9486390ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void Clear</definition>
+        <argsstring>()</argsstring>
+        <name>Clear</name>
+        <reimplements refid="dc/d51/classDatastruct_1a12a20256ada86a94610094792cbc6e2b">Clear</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/GaussTree.h" line="62"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d20/classTGaussTree_1a41fad56008bbe2ca0a3ca13c617ddf09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Build</definition>
+        <argsstring>(const MeshVoronoiGraph *pGraph)</argsstring>
+        <name>Build</name>
+        <param>
+          <type>const <ref refid="d0/dd3/MeshVoronoiGraph_8h_1ab1451860b5fe01f0ad829a37867cdf51" kindref="member">MeshVoronoiGraph</ref> *</type>
+          <declname>pGraph</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/GaussTree.h" line="65"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d20/classTGaussTree_1ac43c8f3a64d971c4286911d22ff12d39" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void ExtremalQuery</definition>
+        <argsstring>(const TVector3&lt; Real &gt; &amp;vDirection, HQuery *pQuery) const </argsstring>
+        <name>ExtremalQuery</name>
+        <param>
+          <type>const <ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt; &amp;</type>
+          <declname>vDirection</declname>
+        </param>
+        <param>
+          <type><ref refid="d8/d5d/classTGaussTree_1_1HQuery" kindref="compound">HQuery</ref> *</type>
+          <declname>pQuery</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/GaussTree.h" line="68"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="db/d20/classTGaussTree_1ac840923827ebac43831b8a3a371d1471" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref></type>
+        <definition>static Int _Compare_Arcs</definition>
+        <argsstring>(const SphericalArc &amp;rLeft, const SphericalArc &amp;rRight, Void *pUserData)</argsstring>
+        <name>_Compare_Arcs</name>
+        <param>
+          <type>const <ref refid="df/d6c/structSphericalArc" kindref="compound">SphericalArc</ref> &amp;</type>
+          <declname>rLeft</declname>
+        </param>
+        <param>
+          <type>const <ref refid="df/d6c/structSphericalArc" kindref="compound">SphericalArc</ref> &amp;</type>
+          <declname>rRight</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> *</type>
+          <declname>pUserData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/GaussTree.h" line="83"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d20/classTGaussTree_1a9f743f58d1e39febb1590c7aa51c3785" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>static Void _Build_SphericalArcs</definition>
+        <argsstring>(RedBlackTree&lt; SphericalArc &gt; &amp;sortedArcs, const MeshVoronoiGraph *pGraph)</argsstring>
+        <name>_Build_SphericalArcs</name>
+        <param>
+          <type><ref refid="d9/d5d/classRedBlackTree" kindref="compound">RedBlackTree</ref>&lt; <ref refid="df/d6c/structSphericalArc" kindref="compound">SphericalArc</ref> &gt; &amp;</type>
+          <declname>sortedArcs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d0/dd3/MeshVoronoiGraph_8h_1ab1451860b5fe01f0ad829a37867cdf51" kindref="member">MeshVoronoiGraph</ref> *</type>
+          <declname>pGraph</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/GaussTree.h" line="85"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d20/classTGaussTree_1aaa4fc2b7f34abb9424f60fcc12a7e062" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>static Void _Build_SphericalBisectors</definition>
+        <argsstring>(RedBlackTree&lt; SphericalArc &gt; &amp;sortedArcs, const MeshVoronoiGraph *pGraph)</argsstring>
+        <name>_Build_SphericalBisectors</name>
+        <param>
+          <type><ref refid="d9/d5d/classRedBlackTree" kindref="compound">RedBlackTree</ref>&lt; <ref refid="df/d6c/structSphericalArc" kindref="compound">SphericalArc</ref> &gt; &amp;</type>
+          <declname>sortedArcs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d0/dd3/MeshVoronoiGraph_8h_1ab1451860b5fe01f0ad829a37867cdf51" kindref="member">MeshVoronoiGraph</ref> *</type>
+          <declname>pGraph</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/GaussTree.h" line="86"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="db/d20/classTGaussTree_1ad53e830517ba5ce7e692ab934e114889" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _rec_Build_Insert</definition>
+        <argsstring>(UInt iNode, Array&lt; SphericalArc &gt; &amp;arrNodes, const SphericalArc &amp;rArc)</argsstring>
+        <name>_rec_Build_Insert</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iNode</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/d26/classArray" kindref="compound">Array</ref>&lt; <ref refid="df/d6c/structSphericalArc" kindref="compound">SphericalArc</ref> &gt; &amp;</type>
+          <declname>arrNodes</declname>
+        </param>
+        <param>
+          <type>const <ref refid="df/d6c/structSphericalArc" kindref="compound">SphericalArc</ref> &amp;</type>
+          <declname>rArc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/GaussTree.h" line="88"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d20/classTGaussTree_1aa5d238159eb3aa166ea0becc84725f53" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _rec_Query</definition>
+        <argsstring>(UInt iNode, const TVector3&lt; Real &gt; &amp;vDirection, HQuery *pQuery) const </argsstring>
+        <name>_rec_Query</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iNode</declname>
+        </param>
+        <param>
+          <type>const <ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt; &amp;</type>
+          <declname>vDirection</declname>
+        </param>
+        <param>
+          <type><ref refid="d8/d5d/classTGaussTree_1_1HQuery" kindref="compound">HQuery</ref> *</type>
+          <declname>pQuery</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/GaussTree.h" line="90"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="12513">
+        <label>TGaussTree&lt; Real &gt;</label>
+        <link refid="db/d20/classTGaussTree"/>
+        <childnode refid="12514" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12514">
+        <label>Datastruct</label>
+        <link refid="dc/d51/classDatastruct"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="12522">
+        <label>MeshFeature</label>
+        <link refid="dc/dcb/classMeshFeature"/>
+      </node>
+      <node id="12525">
+        <label>MeshFeatureKey</label>
+        <link refid="dc/d22/classMeshFeatureKey"/>
+      </node>
+      <node id="12515">
+        <label>TGaussTree&lt; Real &gt;</label>
+        <link refid="db/d20/classTGaussTree"/>
+        <childnode refid="12516" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12519" relation="usage">
+          <edgelabel>m_arrNodes</edgelabel>
+        </childnode>
+        <childnode refid="12526" relation="usage">
+          <edgelabel>m_iNodeCount</edgelabel>
+        </childnode>
+      </node>
+      <node id="12524">
+        <label>MeshVertexKey</label>
+        <link refid="d2/d6b/classMeshVertexKey"/>
+        <childnode refid="12525" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12524" relation="usage">
+          <edgelabel>Null</edgelabel>
+        </childnode>
+        <childnode refid="12526" relation="usage">
+          <edgelabel>V</edgelabel>
+        </childnode>
+      </node>
+      <node id="12518">
+        <label>unsigned int</label>
+      </node>
+      <node id="12526">
+        <label>int</label>
+      </node>
+      <node id="12520">
+        <label>TVector3&lt; Real &gt;</label>
+      </node>
+      <node id="12519">
+        <label>SphericalArc&lt; Real &gt;</label>
+        <link refid="df/d6c/structSphericalArc"/>
+        <childnode refid="12520" relation="usage">
+          <edgelabel>vNormal</edgelabel>
+        </childnode>
+        <childnode refid="12521" relation="usage">
+          <edgelabel>pFacet</edgelabel>
+        </childnode>
+        <childnode refid="12523" relation="usage">
+          <edgelabel>pVertex</edgelabel>
+        </childnode>
+        <childnode refid="12526" relation="usage">
+          <edgelabel>iChild</edgelabel>
+          <edgelabel>iPathLength</edgelabel>
+        </childnode>
+      </node>
+      <node id="12523">
+        <label>MeshVertex</label>
+        <link refid="d6/d37/classMeshVertex"/>
+        <childnode refid="12522" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12524" relation="usage">
+          <edgelabel>Key</edgelabel>
+        </childnode>
+      </node>
+      <node id="12521">
+        <label>MeshFacet</label>
+        <link refid="d5/da2/classMeshFacet"/>
+        <childnode refid="12522" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12517">
+        <label>char</label>
+      </node>
+      <node id="12516">
+        <label>Datastruct</label>
+        <link refid="dc/d51/classDatastruct"/>
+        <childnode refid="12517" relation="usage">
+          <edgelabel>m_strAllocatorName</edgelabel>
+        </childnode>
+        <childnode refid="12518" relation="usage">
+          <edgelabel>m_idMemoryContext</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/GaussTree.h" line="42" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/GaussTree.h" bodystart="41" bodyend="95"/>
+    <listofallmembers>
+      <member refid="db/d20/classTGaussTree_1a9f743f58d1e39febb1590c7aa51c3785" prot="private" virt="non-virtual"><scope>TGaussTree</scope><name>_Build_SphericalArcs</name></member>
+      <member refid="db/d20/classTGaussTree_1aaa4fc2b7f34abb9424f60fcc12a7e062" prot="private" virt="non-virtual"><scope>TGaussTree</scope><name>_Build_SphericalBisectors</name></member>
+      <member refid="db/d20/classTGaussTree_1ac840923827ebac43831b8a3a371d1471" prot="private" virt="non-virtual"><scope>TGaussTree</scope><name>_Compare_Arcs</name></member>
+      <member refid="db/d20/classTGaussTree_1ad53e830517ba5ce7e692ab934e114889" prot="private" virt="non-virtual"><scope>TGaussTree</scope><name>_rec_Build_Insert</name></member>
+      <member refid="db/d20/classTGaussTree_1aa5d238159eb3aa166ea0becc84725f53" prot="private" virt="non-virtual"><scope>TGaussTree</scope><name>_rec_Query</name></member>
+      <member refid="dc/d51/classDatastruct_1a4208dfdad6dc1178ee1f80481598500c" prot="protected" virt="non-virtual"><scope>TGaussTree</scope><name>_SelectMemory</name></member>
+      <member refid="dc/d51/classDatastruct_1ae0aad9bef0dc76ed43f8c4fc59a10d78" prot="protected" virt="non-virtual"><scope>TGaussTree</scope><name>_UnSelectMemory</name></member>
+      <member refid="db/d20/classTGaussTree_1a41fad56008bbe2ca0a3ca13c617ddf09" prot="public" virt="non-virtual"><scope>TGaussTree</scope><name>Build</name></member>
+      <member refid="db/d20/classTGaussTree_1aa31f188be923c718868036f9486390ea" prot="public" virt="virtual"><scope>TGaussTree</scope><name>Clear</name></member>
+      <member refid="db/d20/classTGaussTree_1a0956cac53fbbd2baead454e29106a8cd" prot="public" virt="virtual"><scope>TGaussTree</scope><name>Count</name></member>
+      <member refid="db/d20/classTGaussTree_1aab77352722e193be864ad3e317f0a967" prot="public" virt="virtual"><scope>TGaussTree</scope><name>Create</name></member>
+      <member refid="dc/d51/classDatastruct_1aebb55795e668a005cf660ce216962a2f" prot="public" virt="non-virtual"><scope>TGaussTree</scope><name>Datastruct</name></member>
+      <member refid="db/d20/classTGaussTree_1a04b98e1741147ccd8731588392091ac0" prot="public" virt="virtual"><scope>TGaussTree</scope><name>Destroy</name></member>
+      <member refid="db/d20/classTGaussTree_1ac43c8f3a64d971c4286911d22ff12d39" prot="public" virt="non-virtual"><scope>TGaussTree</scope><name>ExtremalQuery</name></member>
+      <member refid="dc/d51/classDatastruct_1a4e2abc9751fdc8571b9d9a1d02639ebe" prot="public" virt="non-virtual"><scope>TGaussTree</scope><name>IsEmpty</name></member>
+      <member refid="db/d20/classTGaussTree_1a5dd4070973286b864dfe40425bf89702" prot="private" virt="non-virtual"><scope>TGaussTree</scope><name>m_arrNodes</name></member>
+      <member refid="db/d20/classTGaussTree_1a23a17f6bf3b4f3c796e3ca5429557a43" prot="private" virt="non-virtual"><scope>TGaussTree</scope><name>m_iNodeCount</name></member>
+      <member refid="db/d20/classTGaussTree_1abe6db4496cfdd90f917f4ca76d4bdcb1" prot="public" virt="virtual"><scope>TGaussTree</scope><name>MemorySize</name></member>
+      <member refid="db/d20/classTGaussTree_1a05a934af32ebc0426692b5fcb80052d1" prot="public" virt="non-virtual"><scope>TGaussTree</scope><name>TGaussTree</name></member>
+      <member refid="dc/d51/classDatastruct_1a605325d1c1fc3f3c761365595701f9c4" prot="public" virt="virtual"><scope>TGaussTree</scope><name>UseMemoryContext</name></member>
+      <member refid="dc/d51/classDatastruct_1a59e1e9769598d5606e0a335692f89c15" prot="public" virt="virtual"><scope>TGaussTree</scope><name>~Datastruct</name></member>
+      <member refid="db/d20/classTGaussTree_1a1bf0f92ce24af8a4148e4a220a91cee2" prot="public" virt="virtual"><scope>TGaussTree</scope><name>~TGaussTree</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

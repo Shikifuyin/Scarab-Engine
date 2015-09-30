@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d6/d56/structRDB__BTreeRemoveParameters" kind="struct" prot="public">
+    <compoundname>RDB_BTreeRemoveParameters</compoundname>
+    <includes refid="d3/dd8/RDBTreeOperator_8h" local="no">RDBTreeOperator.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d6/d56/structRDB__BTreeRemoveParameters_1a71937ee6c4879cbb9c5b80fb160f9468" prot="public" static="no" mutable="no">
+        <type><ref refid="d7/d54/structRDB__Chunk__BTreeNode" kindref="compound">RDB_Chunk_BTreeNode</ref> *</type>
+        <definition>RDB_Chunk_BTreeNode* pParent</definition>
+        <argsstring></argsstring>
+        <name>pParent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBTreeOperator.h" line="45" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBTreeOperator.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d56/structRDB__BTreeRemoveParameters_1a599f84c672f5c3610c8717636a184b54" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt iParentIndex</definition>
+        <argsstring></argsstring>
+        <name>iParentIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBTreeOperator.h" line="46" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBTreeOperator.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d56/structRDB__BTreeRemoveParameters_1a442ed35874e17ac2c211caf34c7db120" prot="public" static="no" mutable="no">
+        <type><ref refid="d2/d2a/structRDB__BTreeKeyData" kindref="compound">RDB_BTreeKeyData</ref> *</type>
+        <definition>RDB_BTreeKeyData* pLeafHeadKey</definition>
+        <argsstring></argsstring>
+        <name>pLeafHeadKey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBTreeOperator.h" line="48" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBTreeOperator.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d56/structRDB__BTreeRemoveParameters_1a6e5da3ffea27ba532e2c765be8056a30" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt iRemoveIndex</definition>
+        <argsstring></argsstring>
+        <name>iRemoveIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBTreeOperator.h" line="50" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBTreeOperator.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d56/structRDB__BTreeRemoveParameters_1af1491032e3366b3b67c44ecdbec237dd" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/df5/structRDB__ChunkPtr" kindref="compound">RDB_ChunkPtr</ref></type>
+        <definition>RDB_ChunkPtr pStorage</definition>
+        <argsstring></argsstring>
+        <name>pStorage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBTreeOperator.h" line="51" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBTreeOperator.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="10120">
+        <label>RDB_BTreeRemoveParameters</label>
+        <link refid="d6/d56/structRDB__BTreeRemoveParameters"/>
+        <childnode refid="10121" relation="usage">
+          <edgelabel>pParent</edgelabel>
+        </childnode>
+        <childnode refid="10123" relation="usage">
+          <edgelabel>pStorage</edgelabel>
+        </childnode>
+        <childnode refid="10128" relation="usage">
+          <edgelabel>iParentIndex</edgelabel>
+          <edgelabel>iRemoveIndex</edgelabel>
+        </childnode>
+        <childnode refid="10126" relation="usage">
+          <edgelabel>pLeafHeadKey</edgelabel>
+        </childnode>
+      </node>
+      <node id="10125">
+        <label>unsigned int</label>
+      </node>
+      <node id="10124">
+        <label>RDB_ChunkType</label>
+      </node>
+      <node id="10128">
+        <label>int</label>
+      </node>
+      <node id="10126">
+        <label>RDB_BTreeKeyData</label>
+        <link refid="d2/d2a/structRDB__BTreeKeyData"/>
+        <childnode refid="10127" relation="usage">
+          <edgelabel>strName</edgelabel>
+        </childnode>
+        <childnode refid="10125" relation="usage">
+          <edgelabel>idParent</edgelabel>
+        </childnode>
+      </node>
+      <node id="10123">
+        <label>RDB_ChunkPtr</label>
+        <link refid="d1/df5/structRDB__ChunkPtr"/>
+        <childnode refid="10124" relation="usage">
+          <edgelabel>iType</edgelabel>
+        </childnode>
+        <childnode refid="10125" relation="usage">
+          <edgelabel>idChunk</edgelabel>
+          <edgelabel>idBlock</edgelabel>
+        </childnode>
+      </node>
+      <node id="10122">
+        <label>RDB_BTreeKey</label>
+        <link refid="d9/d05/structRDB__BTreeKey"/>
+        <childnode refid="10123" relation="usage">
+          <edgelabel>pLeftChild</edgelabel>
+        </childnode>
+        <childnode refid="10126" relation="usage">
+          <edgelabel>keyData</edgelabel>
+        </childnode>
+      </node>
+      <node id="10127">
+        <label>char</label>
+      </node>
+      <node id="10121">
+        <label>RDB_Chunk_BTreeNode</label>
+        <link refid="d7/d54/structRDB__Chunk__BTreeNode"/>
+        <childnode refid="10122" relation="usage">
+          <edgelabel>arrKeys</edgelabel>
+        </childnode>
+        <childnode refid="10123" relation="usage">
+          <edgelabel>pRightChild</edgelabel>
+        </childnode>
+        <childnode refid="10128" relation="usage">
+          <edgelabel>iKeyCount</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBTreeOperator.h" line="44" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/Database/RDBTreeOperator.h" bodystart="43" bodyend="52"/>
+    <listofallmembers>
+      <member refid="d6/d56/structRDB__BTreeRemoveParameters_1a599f84c672f5c3610c8717636a184b54" prot="public" virt="non-virtual"><scope>RDB_BTreeRemoveParameters</scope><name>iParentIndex</name></member>
+      <member refid="d6/d56/structRDB__BTreeRemoveParameters_1a6e5da3ffea27ba532e2c765be8056a30" prot="public" virt="non-virtual"><scope>RDB_BTreeRemoveParameters</scope><name>iRemoveIndex</name></member>
+      <member refid="d6/d56/structRDB__BTreeRemoveParameters_1a442ed35874e17ac2c211caf34c7db120" prot="public" virt="non-virtual"><scope>RDB_BTreeRemoveParameters</scope><name>pLeafHeadKey</name></member>
+      <member refid="d6/d56/structRDB__BTreeRemoveParameters_1a71937ee6c4879cbb9c5b80fb160f9468" prot="public" virt="non-virtual"><scope>RDB_BTreeRemoveParameters</scope><name>pParent</name></member>
+      <member refid="d6/d56/structRDB__BTreeRemoveParameters_1af1491032e3366b3b67c44ecdbec237dd" prot="public" virt="non-virtual"><scope>RDB_BTreeRemoveParameters</scope><name>pStorage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

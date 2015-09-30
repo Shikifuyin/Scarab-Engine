@@ -1,0 +1,330 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d5/db8/classTIntersector3" kind="class" prot="public">
+    <compoundname>TIntersector3</compoundname>
+    <derivedcompoundref refid="d3/d42/classTIntersectPlaneLine3" prot="public" virt="non-virtual">TIntersectPlaneLine3&lt; Real &gt;</derivedcompoundref>
+    <derivedcompoundref refid="d2/dca/classTIntersectPlaneRay3" prot="public" virt="non-virtual">TIntersectPlaneRay3&lt; Real &gt;</derivedcompoundref>
+    <derivedcompoundref refid="d1/d7a/classTIntersectPlaneSegment3" prot="public" virt="non-virtual">TIntersectPlaneSegment3&lt; Real &gt;</derivedcompoundref>
+    <derivedcompoundref refid="d9/daa/classTIntersectSegment3" prot="public" virt="non-virtual">TIntersectSegment3&lt; Real &gt;</derivedcompoundref>
+    <derivedcompoundref refid="da/d98/classTIntersectTriangle3Line3" prot="public" virt="non-virtual">TIntersectTriangle3Line3&lt; Real &gt;</derivedcompoundref>
+    <derivedcompoundref refid="d1/d70/classTIntersectTriangle3Ray3" prot="public" virt="non-virtual">TIntersectTriangle3Ray3&lt; Real &gt;</derivedcompoundref>
+    <derivedcompoundref refid="d8/d3e/classTIntersectTriangle3Segment3" prot="public" virt="non-virtual">TIntersectTriangle3Segment3&lt; Real &gt;</derivedcompoundref>
+    <includes refid="d8/db8/Intersector3_8h" local="no">Intersector3.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename Real</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d5/db8/classTIntersector3_1a15588eea940c254c383433246cc901ac" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real ZeroTolerance</definition>
+        <argsstring></argsstring>
+        <name>ZeroTolerance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector3.h" line="63" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector3.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="d5/db8/classTIntersector3_1abca3ba9f3165391541955e3b8dfd3e6e" prot="protected" static="no" mutable="no">
+        <type><ref refid="d8/db8/Intersector3_8h_1a38a67d6eff469c66c83db3472f9c8a35" kindref="member">Intersect3Type</ref></type>
+        <definition>Intersect3Type m_iType</definition>
+        <argsstring></argsstring>
+        <name>m_iType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector3.h" line="80" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector3.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d5/db8/classTIntersector3_1a9fa46ba3dd820d7a4ac15fbf54d1757a" prot="protected" static="no" mutable="no">
+        <type><ref refid="d8/db8/Intersector3_8h_1a31d9e12e1814029b65033cc899086a5b" kindref="member">Intersect3Specifier</ref></type>
+        <definition>Intersect3Specifier m_iSpecifier</definition>
+        <argsstring></argsstring>
+        <name>m_iSpecifier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector3.h" line="81" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector3.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d5/db8/classTIntersector3_1a4c9926bbe09f0858a229b8d905807057" prot="protected" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real m_fTimeOfImpact</definition>
+        <argsstring></argsstring>
+        <name>m_fTimeOfImpact</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector3.h" line="83" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector3.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d5/db8/classTIntersector3_1ae91da4f8b57cb81f7775e796c3014c57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TIntersector3</definition>
+        <argsstring>(Real fZeroTolerance=(Real) SCALAR_ERROR)</argsstring>
+        <name>TIntersector3</name>
+        <param>
+          <type>Real</type>
+          <declname>fZeroTolerance</declname>
+          <defval>(Real) <ref refid="d0/d10/Scalar_8h_1ab84e60710e7c3a93246b807ac524d38b" kindref="member">SCALAR_ERROR</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector3.h" line="59"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/db8/classTIntersector3_1a5b3f9ace5fdf102ee61b63f14a591d52" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~TIntersector3</definition>
+        <argsstring>()</argsstring>
+        <name>~TIntersector3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector3.h" line="60"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/db8/classTIntersector3_1adc50299364c1937455985bb609d739f2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d8/db8/Intersector3_8h_1a38a67d6eff469c66c83db3472f9c8a35" kindref="member">Intersect3Type</ref></type>
+        <definition>Intersect3Type GetType</definition>
+        <argsstring>() const </argsstring>
+        <name>GetType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector3.h" line="66"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/db8/classTIntersector3_1ad700a33a5b280fbaee2a8190d2a492d8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d8/db8/Intersector3_8h_1a31d9e12e1814029b65033cc899086a5b" kindref="member">Intersect3Specifier</ref></type>
+        <definition>Intersect3Specifier GetSpecifier</definition>
+        <argsstring>() const </argsstring>
+        <name>GetSpecifier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector3.h" line="67"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/db8/classTIntersector3_1ada6ac1678528b2efa300f9438e6f4942" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real GetTOI</definition>
+        <argsstring>() const </argsstring>
+        <name>GetTOI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector3.h" line="69"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/db8/classTIntersector3_1abf3eed2278c2ea5a572fe5748dada259" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>virtual Bool Test</definition>
+        <argsstring>()</argsstring>
+        <name>Test</name>
+        <reimplementedby refid="d2/dca/classTIntersectPlaneRay3_1abf3eed2278c2ea5a572fe5748dada259">Test</reimplementedby>
+        <reimplementedby refid="d3/d42/classTIntersectPlaneLine3_1abf3eed2278c2ea5a572fe5748dada259">Test</reimplementedby>
+        <reimplementedby refid="d1/d70/classTIntersectTriangle3Ray3_1abf3eed2278c2ea5a572fe5748dada259">Test</reimplementedby>
+        <reimplementedby refid="da/d98/classTIntersectTriangle3Line3_1abf3eed2278c2ea5a572fe5748dada259">Test</reimplementedby>
+        <reimplementedby refid="d1/d7a/classTIntersectPlaneSegment3_1abf3eed2278c2ea5a572fe5748dada259">Test</reimplementedby>
+        <reimplementedby refid="d8/d3e/classTIntersectTriangle3Segment3_1abf3eed2278c2ea5a572fe5748dada259">Test</reimplementedby>
+        <reimplementedby refid="d9/daa/classTIntersectSegment3_1abf3eed2278c2ea5a572fe5748dada259">Test</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector3.h" line="72"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/db8/classTIntersector3_1ae604ec85d571ae158f993a0bafebd03f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>virtual Bool Compute</definition>
+        <argsstring>()</argsstring>
+        <name>Compute</name>
+        <reimplementedby refid="d2/dca/classTIntersectPlaneRay3_1ae604ec85d571ae158f993a0bafebd03f">Compute</reimplementedby>
+        <reimplementedby refid="d3/d42/classTIntersectPlaneLine3_1ae604ec85d571ae158f993a0bafebd03f">Compute</reimplementedby>
+        <reimplementedby refid="d1/d70/classTIntersectTriangle3Ray3_1ae604ec85d571ae158f993a0bafebd03f">Compute</reimplementedby>
+        <reimplementedby refid="da/d98/classTIntersectTriangle3Line3_1ae604ec85d571ae158f993a0bafebd03f">Compute</reimplementedby>
+        <reimplementedby refid="d1/d7a/classTIntersectPlaneSegment3_1ae604ec85d571ae158f993a0bafebd03f">Compute</reimplementedby>
+        <reimplementedby refid="d8/d3e/classTIntersectTriangle3Segment3_1ae604ec85d571ae158f993a0bafebd03f">Compute</reimplementedby>
+        <reimplementedby refid="d9/daa/classTIntersectSegment3_1ae604ec85d571ae158f993a0bafebd03f">Compute</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector3.h" line="73"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/db8/classTIntersector3_1abf811de257aee5d5bb2197c3be82da13" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>virtual Bool Test</definition>
+        <argsstring>(const TVector3&lt; Real &gt; &amp;vSpeedA, const TVector3&lt; Real &gt; &amp;vSpeedB, Real fMaxTime)</argsstring>
+        <name>Test</name>
+        <param>
+          <type>const <ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt; &amp;</type>
+          <declname>vSpeedA</declname>
+        </param>
+        <param>
+          <type>const <ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt; &amp;</type>
+          <declname>vSpeedB</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fMaxTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector3.h" line="76"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/db8/classTIntersector3_1ae0fb79da059358eefa89f223ad6b4d16" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>virtual Bool Compute</definition>
+        <argsstring>(const TVector3&lt; Real &gt; &amp;vSpeedA, const TVector3&lt; Real &gt; &amp;vSpeedB, Real fMaxTime)</argsstring>
+        <name>Compute</name>
+        <param>
+          <type>const <ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt; &amp;</type>
+          <declname>vSpeedA</declname>
+        </param>
+        <param>
+          <type>const <ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt; &amp;</type>
+          <declname>vSpeedB</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fMaxTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector3.h" line="77"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="12585">
+        <label>TIntersectPlaneSegment3&lt; Real &gt;</label>
+        <link refid="d1/d7a/classTIntersectPlaneSegment3"/>
+        <childnode refid="12582" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12588">
+        <label>TIntersectTriangle3Ray3&lt; Real &gt;</label>
+        <link refid="d1/d70/classTIntersectTriangle3Ray3"/>
+        <childnode refid="12582" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12587">
+        <label>TIntersectTriangle3Line3&lt; Real &gt;</label>
+        <link refid="da/d98/classTIntersectTriangle3Line3"/>
+        <childnode refid="12582" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12583">
+        <label>TIntersectPlaneLine3&lt; Real &gt;</label>
+        <link refid="d3/d42/classTIntersectPlaneLine3"/>
+        <childnode refid="12582" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12582">
+        <label>TIntersector3&lt; Real &gt;</label>
+        <link refid="d5/db8/classTIntersector3"/>
+      </node>
+      <node id="12584">
+        <label>TIntersectPlaneRay3&lt; Real &gt;</label>
+        <link refid="d2/dca/classTIntersectPlaneRay3"/>
+        <childnode refid="12582" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12589">
+        <label>TIntersectTriangle3Segment3&lt; Real &gt;</label>
+        <link refid="d8/d3e/classTIntersectTriangle3Segment3"/>
+        <childnode refid="12582" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12586">
+        <label>TIntersectSegment3&lt; Real &gt;</label>
+        <link refid="d9/daa/classTIntersectSegment3"/>
+        <childnode refid="12582" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="12593">
+        <label>Real</label>
+      </node>
+      <node id="12590">
+        <label>TIntersector3&lt; Real &gt;</label>
+        <link refid="d5/db8/classTIntersector3"/>
+        <childnode refid="12591" relation="usage">
+          <edgelabel>m_iType</edgelabel>
+        </childnode>
+        <childnode refid="12592" relation="usage">
+          <edgelabel>m_iSpecifier</edgelabel>
+        </childnode>
+        <childnode refid="12593" relation="usage">
+          <edgelabel>m_fTimeOfImpact</edgelabel>
+          <edgelabel>ZeroTolerance</edgelabel>
+        </childnode>
+      </node>
+      <node id="12591">
+        <label>Intersect3Type</label>
+      </node>
+      <node id="12592">
+        <label>DWord</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector3.h" line="57" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector3.h" bodystart="56" bodyend="84"/>
+    <listofallmembers>
+      <member refid="d5/db8/classTIntersector3_1ae604ec85d571ae158f993a0bafebd03f" prot="public" virt="virtual"><scope>TIntersector3</scope><name>Compute</name></member>
+      <member refid="d5/db8/classTIntersector3_1ae0fb79da059358eefa89f223ad6b4d16" prot="public" virt="virtual"><scope>TIntersector3</scope><name>Compute</name></member>
+      <member refid="d5/db8/classTIntersector3_1ad700a33a5b280fbaee2a8190d2a492d8" prot="public" virt="non-virtual"><scope>TIntersector3</scope><name>GetSpecifier</name></member>
+      <member refid="d5/db8/classTIntersector3_1ada6ac1678528b2efa300f9438e6f4942" prot="public" virt="non-virtual"><scope>TIntersector3</scope><name>GetTOI</name></member>
+      <member refid="d5/db8/classTIntersector3_1adc50299364c1937455985bb609d739f2" prot="public" virt="non-virtual"><scope>TIntersector3</scope><name>GetType</name></member>
+      <member refid="d5/db8/classTIntersector3_1a4c9926bbe09f0858a229b8d905807057" prot="protected" virt="non-virtual"><scope>TIntersector3</scope><name>m_fTimeOfImpact</name></member>
+      <member refid="d5/db8/classTIntersector3_1a9fa46ba3dd820d7a4ac15fbf54d1757a" prot="protected" virt="non-virtual"><scope>TIntersector3</scope><name>m_iSpecifier</name></member>
+      <member refid="d5/db8/classTIntersector3_1abca3ba9f3165391541955e3b8dfd3e6e" prot="protected" virt="non-virtual"><scope>TIntersector3</scope><name>m_iType</name></member>
+      <member refid="d5/db8/classTIntersector3_1abf3eed2278c2ea5a572fe5748dada259" prot="public" virt="virtual"><scope>TIntersector3</scope><name>Test</name></member>
+      <member refid="d5/db8/classTIntersector3_1abf811de257aee5d5bb2197c3be82da13" prot="public" virt="virtual"><scope>TIntersector3</scope><name>Test</name></member>
+      <member refid="d5/db8/classTIntersector3_1ae91da4f8b57cb81f7775e796c3014c57" prot="public" virt="non-virtual"><scope>TIntersector3</scope><name>TIntersector3</name></member>
+      <member refid="d5/db8/classTIntersector3_1a15588eea940c254c383433246cc901ac" prot="public" virt="non-virtual"><scope>TIntersector3</scope><name>ZeroTolerance</name></member>
+      <member refid="d5/db8/classTIntersector3_1a5b3f9ace5fdf102ee61b63f14a591d52" prot="public" virt="virtual"><scope>TIntersector3</scope><name>~TIntersector3</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

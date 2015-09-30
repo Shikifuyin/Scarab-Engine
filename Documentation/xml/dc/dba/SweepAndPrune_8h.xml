@@ -1,0 +1,710 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="dc/dba/SweepAndPrune_8h" kind="file">
+    <compoundname>SweepAndPrune.h</compoundname>
+    <includes refid="df/dd0/Array_8h" local="yes">../../../../../Lib/Datastruct/Array/Array.h</includes>
+    <includes refid="da/d29/TreeMap_8h" local="yes">../../../../../Lib/Datastruct/Table/TreeMap.h</includes>
+    <includes refid="da/d8f/BroadPhase_8h" local="yes">../BroadPhase.h</includes>
+    <includes local="yes">SweepAndPrune.inl</includes>
+    <includedby refid="d2/d6b/PhysicsManager_8h" local="yes">PhysicsManager.h</includedby>
+    <incdepgraph>
+      <node id="39864">
+        <label>../Vector/Vector4.h</label>
+        <link refid="d7/d36/Vector4_8h"/>
+        <childnode refid="39812" relation="include">
+        </childnode>
+        <childnode refid="39865" relation="include">
+        </childnode>
+      </node>
+      <node id="39868">
+        <label>Matrix4.inl</label>
+      </node>
+      <node id="39847">
+        <label>RedBlackTree.inl</label>
+      </node>
+      <node id="39822">
+        <label>SSE.inl</label>
+      </node>
+      <node id="39826">
+        <label>Threading.h</label>
+        <link refid="dd/d0e/Threading_8h"/>
+        <childnode refid="39804" relation="include">
+        </childnode>
+        <childnode refid="39806" relation="include">
+        </childnode>
+        <childnode refid="39827" relation="include">
+        </childnode>
+      </node>
+      <node id="39874">
+        <label>BoundingVolume.inl</label>
+      </node>
+      <node id="39880">
+        <label>IslandNode.inl</label>
+      </node>
+      <node id="39838">
+        <label>Allocators/BreakAllocator.h</label>
+        <link refid="d4/dac/BreakAllocator_8h"/>
+        <childnode refid="39833" relation="include">
+        </childnode>
+        <childnode refid="39839" relation="include">
+        </childnode>
+      </node>
+      <node id="39801">
+        <label>../Memory/MemoryManager.h</label>
+        <link refid="d7/d7b/MemoryManager_8h"/>
+        <childnode refid="39802" relation="include">
+        </childnode>
+        <childnode refid="39812" relation="include">
+        </childnode>
+        <childnode refid="39818" relation="include">
+        </childnode>
+        <childnode refid="39832" relation="include">
+        </childnode>
+        <childnode refid="39836" relation="include">
+        </childnode>
+        <childnode refid="39838" relation="include">
+        </childnode>
+        <childnode refid="39840" relation="include">
+        </childnode>
+        <childnode refid="39842" relation="include">
+        </childnode>
+      </node>
+      <node id="39870">
+        <label>../../Primitives/3D/Linear/Line3.h</label>
+        <link refid="db/d9b/Line3_8h"/>
+        <childnode refid="39818" relation="include">
+        </childnode>
+        <childnode refid="39856" relation="include">
+        </childnode>
+        <childnode refid="39860" relation="include">
+        </childnode>
+        <childnode refid="39871" relation="include">
+        </childnode>
+      </node>
+      <node id="39819">
+        <label>../../ThirdParty/System/System.h</label>
+        <link refid="db/d39/System_8h"/>
+        <childnode refid="39804" relation="include">
+        </childnode>
+        <childnode refid="39806" relation="include">
+        </childnode>
+        <childnode refid="39820" relation="include">
+        </childnode>
+        <childnode refid="39803" relation="include">
+        </childnode>
+        <childnode refid="39824" relation="include">
+        </childnode>
+        <childnode refid="39826" relation="include">
+        </childnode>
+        <childnode refid="39828" relation="include">
+        </childnode>
+        <childnode refid="39830" relation="include">
+        </childnode>
+      </node>
+      <node id="39882">
+        <label>PairListener.inl</label>
+      </node>
+      <node id="39827">
+        <label>Threading.inl</label>
+      </node>
+      <node id="39839">
+        <label>BreakAllocator.inl</label>
+      </node>
+      <node id="39885">
+        <label>SweepAndPrune.inl</label>
+      </node>
+      <node id="39800">
+        <label>../Datastruct.h</label>
+        <link refid="d5/db1/Datastruct_8h"/>
+        <childnode refid="39801" relation="include">
+        </childnode>
+        <childnode refid="39843" relation="include">
+        </childnode>
+      </node>
+      <node id="39843">
+        <label>Datastruct.inl</label>
+      </node>
+      <node id="39846">
+        <label>../Tree/RedBlackTree.h</label>
+        <link refid="d6/dff/RedBlackTree_8h"/>
+        <childnode refid="39800" relation="include">
+        </childnode>
+        <childnode refid="39847" relation="include">
+        </childnode>
+      </node>
+      <node id="39871">
+        <label>Line3.inl</label>
+      </node>
+      <node id="39806">
+        <label>Platform.h</label>
+        <link refid="d9/dd0/Platform_8h"/>
+        <childnode refid="39807" relation="include">
+        </childnode>
+      </node>
+      <node id="39866">
+        <label>../Vertex/Vertex4.h</label>
+        <link refid="d1/dca/Vertex4_8h"/>
+        <childnode refid="39864" relation="include">
+        </childnode>
+        <childnode refid="39867" relation="include">
+        </childnode>
+      </node>
+      <node id="39849">
+        <label>../BroadPhase.h</label>
+        <link refid="da/d8f/BroadPhase_8h"/>
+        <childnode refid="39850" relation="include">
+        </childnode>
+        <childnode refid="39876" relation="include">
+        </childnode>
+        <childnode refid="39884" relation="include">
+        </childnode>
+      </node>
+      <node id="39836">
+        <label>Allocators/PoolAllocator.h</label>
+        <link refid="d3/d03/PoolAllocator_8h"/>
+        <childnode refid="39833" relation="include">
+        </childnode>
+        <childnode refid="39837" relation="include">
+        </childnode>
+      </node>
+      <node id="39878">
+        <label>IslandEdge.h</label>
+        <link refid="df/dbc/IslandEdge_8h"/>
+        <childnode refid="39818" relation="include">
+        </childnode>
+        <childnode refid="39879" relation="include">
+        </childnode>
+      </node>
+      <node id="39856">
+        <label>../Vector/Vector3.h</label>
+        <link refid="dd/d8c/Vector3_8h"/>
+        <childnode refid="39812" relation="include">
+        </childnode>
+        <childnode refid="39857" relation="include">
+        </childnode>
+      </node>
+      <node id="39809">
+        <label>FPU.inl</label>
+      </node>
+      <node id="39811">
+        <label>Hashing.inl</label>
+      </node>
+      <node id="39817">
+        <label>MathFunction.inl</label>
+      </node>
+      <node id="39881">
+        <label>PairListener.h</label>
+        <link refid="d7/dff/PairListener_8h"/>
+        <childnode refid="39877" relation="include">
+        </childnode>
+        <childnode refid="39882" relation="include">
+        </childnode>
+      </node>
+      <node id="39848">
+        <label>TreeMap.inl</label>
+      </node>
+      <node id="39813">
+        <label>../Formats/Scalar.h</label>
+        <link refid="d0/d10/Scalar_8h"/>
+        <childnode refid="39806" relation="include">
+        </childnode>
+        <childnode refid="39814" relation="include">
+        </childnode>
+      </node>
+      <node id="39834">
+        <label>MemoryAllocator.inl</label>
+      </node>
+      <node id="39877">
+        <label>../../IslandSolver/IslandNode.h</label>
+        <link refid="d7/dcb/IslandNode_8h"/>
+        <childnode refid="39878" relation="include">
+        </childnode>
+        <childnode refid="39880" relation="include">
+        </childnode>
+      </node>
+      <node id="39802">
+        <label>../Math/Hash/Hashing.h</label>
+        <link refid="d0/d4e/Hashing_8h"/>
+        <childnode refid="39803" relation="include">
+        </childnode>
+        <childnode refid="39811" relation="include">
+        </childnode>
+      </node>
+      <node id="39833">
+        <label>MemoryAllocator.h</label>
+        <link refid="d2/d75/MemoryAllocator_8h"/>
+        <childnode refid="39818" relation="include">
+        </childnode>
+        <childnode refid="39834" relation="include">
+        </childnode>
+      </node>
+      <node id="39863">
+        <label>../Matrix/Matrix4.h</label>
+        <link refid="d6/d64/Matrix4_8h"/>
+        <childnode refid="39856" relation="include">
+        </childnode>
+        <childnode refid="39864" relation="include">
+        </childnode>
+        <childnode refid="39860" relation="include">
+        </childnode>
+        <childnode refid="39866" relation="include">
+        </childnode>
+        <childnode refid="39868" relation="include">
+        </childnode>
+      </node>
+      <node id="39876">
+        <label>PairManager.h</label>
+        <link refid="d3/d3a/PairManager_8h"/>
+        <childnode refid="39799" relation="include">
+        </childnode>
+        <childnode refid="39846" relation="include">
+        </childnode>
+        <childnode refid="39877" relation="include">
+        </childnode>
+        <childnode refid="39881" relation="include">
+        </childnode>
+        <childnode refid="39883" relation="include">
+        </childnode>
+      </node>
+      <node id="39872">
+        <label>../../Primitives/3D/Planar/Plane.h</label>
+        <link refid="d8/d2f/Plane_8h"/>
+        <childnode refid="39856" relation="include">
+        </childnode>
+        <childnode refid="39860" relation="include">
+        </childnode>
+        <childnode refid="39873" relation="include">
+        </childnode>
+      </node>
+      <node id="39825">
+        <label>File.inl</label>
+      </node>
+      <node id="39873">
+        <label>Plane.inl</label>
+      </node>
+      <node id="39820">
+        <label>Hardware/Hardware.h</label>
+        <link refid="da/dec/Hardware_8h"/>
+        <childnode refid="39806" relation="include">
+        </childnode>
+        <childnode refid="39808" relation="include">
+        </childnode>
+        <childnode refid="39821" relation="include">
+        </childnode>
+        <childnode refid="39823" relation="include">
+        </childnode>
+      </node>
+      <node id="39832">
+        <label>Allocators/StackAllocator.h</label>
+        <link refid="db/d84/StackAllocator_8h"/>
+        <childnode refid="39833" relation="include">
+        </childnode>
+        <childnode refid="39835" relation="include">
+        </childnode>
+      </node>
+      <node id="39823">
+        <label>Hardware.inl</label>
+      </node>
+      <node id="39875">
+        <label>BVAABox.inl</label>
+      </node>
+      <node id="39854">
+        <label>../Vector/Vector2.h</label>
+        <link refid="d0/df7/Vector2_8h"/>
+        <childnode refid="39812" relation="include">
+        </childnode>
+        <childnode refid="39855" relation="include">
+        </childnode>
+      </node>
+      <node id="39865">
+        <label>Vector4.inl</label>
+      </node>
+      <node id="39837">
+        <label>PoolAllocator.inl</label>
+      </node>
+      <node id="39814">
+        <label>Scalar.inl</label>
+      </node>
+      <node id="39852">
+        <label>../../../Types/Transform/Transform3.h</label>
+        <link refid="d2/d67/Transform3_8h"/>
+        <childnode refid="39818" relation="include">
+        </childnode>
+        <childnode refid="39853" relation="include">
+        </childnode>
+        <childnode refid="39863" relation="include">
+        </childnode>
+        <childnode refid="39869" relation="include">
+        </childnode>
+      </node>
+      <node id="39879">
+        <label>IslandEdge.inl</label>
+      </node>
+      <node id="39884">
+        <label>BroadPhase.inl</label>
+      </node>
+      <node id="39810">
+        <label>String.inl</label>
+      </node>
+      <node id="39857">
+        <label>Vector3.inl</label>
+      </node>
+      <node id="39883">
+        <label>PairManager.inl</label>
+      </node>
+      <node id="39799">
+        <label>../../../../../Lib/Datastruct/Array/Array.h</label>
+        <link refid="df/dd0/Array_8h"/>
+        <childnode refid="39800" relation="include">
+        </childnode>
+        <childnode refid="39844" relation="include">
+        </childnode>
+      </node>
+      <node id="39855">
+        <label>Vector2.inl</label>
+      </node>
+      <node id="39808">
+        <label>Hardware/FPU.h</label>
+        <link refid="dd/d2f/FPU_8h"/>
+        <childnode refid="39806" relation="include">
+        </childnode>
+        <childnode refid="39809" relation="include">
+        </childnode>
+      </node>
+      <node id="39858">
+        <label>../Vertex/Vertex2.h</label>
+        <link refid="dc/d05/Vertex2_8h"/>
+        <childnode refid="39854" relation="include">
+        </childnode>
+        <childnode refid="39859" relation="include">
+        </childnode>
+      </node>
+      <node id="39850">
+        <label>../../../../Lib/Math/Geometry/BoundingShapes/3D/BVAABox.h</label>
+        <link refid="dc/d7d/BVAABox_8h"/>
+        <childnode refid="39851" relation="include">
+        </childnode>
+        <childnode refid="39875" relation="include">
+        </childnode>
+      </node>
+      <node id="39853">
+        <label>../Matrix/Matrix3.h</label>
+        <link refid="d1/d41/Matrix3_8h"/>
+        <childnode refid="39854" relation="include">
+        </childnode>
+        <childnode refid="39856" relation="include">
+        </childnode>
+        <childnode refid="39858" relation="include">
+        </childnode>
+        <childnode refid="39860" relation="include">
+        </childnode>
+        <childnode refid="39862" relation="include">
+        </childnode>
+      </node>
+      <node id="39840">
+        <label>Allocators/HeapAllocator.h</label>
+        <link refid="d3/d89/HeapAllocator_8h"/>
+        <childnode refid="39833" relation="include">
+        </childnode>
+        <childnode refid="39841" relation="include">
+        </childnode>
+      </node>
+      <node id="39803">
+        <label>../../../ThirdParty/System/String.h</label>
+        <link refid="d9/dba/String_8h"/>
+        <childnode refid="39804" relation="include">
+        </childnode>
+        <childnode refid="39806" relation="include">
+        </childnode>
+        <childnode refid="39808" relation="include">
+        </childnode>
+        <childnode refid="39810" relation="include">
+        </childnode>
+      </node>
+      <node id="39869">
+        <label>Transform3.inl</label>
+      </node>
+      <node id="39807">
+        <label>Platform.inl</label>
+      </node>
+      <node id="39842">
+        <label>MemoryManager.inl</label>
+      </node>
+      <node id="39830">
+        <label>System.inl</label>
+      </node>
+      <node id="39828">
+        <label>Networking.h</label>
+        <link refid="df/dfb/Networking_8h"/>
+        <childnode refid="39804" relation="include">
+        </childnode>
+        <childnode refid="39806" relation="include">
+        </childnode>
+        <childnode refid="39829" relation="include">
+        </childnode>
+      </node>
+      <node id="39851">
+        <label>BoundingVolume.h</label>
+        <link refid="dd/d3b/BoundingVolume_8h"/>
+        <childnode refid="39852" relation="include">
+        </childnode>
+        <childnode refid="39870" relation="include">
+        </childnode>
+        <childnode refid="39872" relation="include">
+        </childnode>
+        <childnode refid="39874" relation="include">
+        </childnode>
+      </node>
+      <node id="39824">
+        <label>File.h</label>
+        <link refid="d6/db7/File_8h"/>
+        <childnode refid="39804" relation="include">
+        </childnode>
+        <childnode refid="39806" relation="include">
+        </childnode>
+        <childnode refid="39803" relation="include">
+        </childnode>
+        <childnode refid="39825" relation="include">
+        </childnode>
+      </node>
+      <node id="39835">
+        <label>StackAllocator.inl</label>
+      </node>
+      <node id="39805">
+        <label>ForwardWin32.inl</label>
+      </node>
+      <node id="39821">
+        <label>SSE.h</label>
+        <link refid="d0/d02/SSE_8h"/>
+        <childnode refid="39806" relation="include">
+        </childnode>
+        <childnode refid="39822" relation="include">
+        </childnode>
+      </node>
+      <node id="39845">
+        <label>../../../../../Lib/Datastruct/Table/TreeMap.h</label>
+        <link refid="da/d29/TreeMap_8h"/>
+        <childnode refid="39846" relation="include">
+        </childnode>
+        <childnode refid="39848" relation="include">
+        </childnode>
+      </node>
+      <node id="39829">
+        <label>Networking.inl</label>
+      </node>
+      <node id="39867">
+        <label>Vertex4.inl</label>
+      </node>
+      <node id="39816">
+        <label>Fixed.inl</label>
+      </node>
+      <node id="39812">
+        <label>../Math/Functions/MathFunction.h</label>
+        <link refid="d1/d98/MathFunction_8h"/>
+        <childnode refid="39808" relation="include">
+        </childnode>
+        <childnode refid="39813" relation="include">
+        </childnode>
+        <childnode refid="39815" relation="include">
+        </childnode>
+        <childnode refid="39817" relation="include">
+        </childnode>
+      </node>
+      <node id="39815">
+        <label>../Formats/Fixed.h</label>
+        <link refid="d4/d76/Fixed_8h"/>
+        <childnode refid="39813" relation="include">
+        </childnode>
+        <childnode refid="39816" relation="include">
+        </childnode>
+      </node>
+      <node id="39831">
+        <label>ErrorManager.inl</label>
+      </node>
+      <node id="39798">
+        <label>SweepAndPrune.h</label>
+        <link refid="SweepAndPrune.h"/>
+        <childnode refid="39799" relation="include">
+        </childnode>
+        <childnode refid="39845" relation="include">
+        </childnode>
+        <childnode refid="39849" relation="include">
+        </childnode>
+        <childnode refid="39885" relation="include">
+        </childnode>
+      </node>
+      <node id="39861">
+        <label>Vertex3.inl</label>
+      </node>
+      <node id="39860">
+        <label>../Vertex/Vertex3.h</label>
+        <link refid="d0/df3/Vertex3_8h"/>
+        <childnode refid="39856" relation="include">
+        </childnode>
+        <childnode refid="39861" relation="include">
+        </childnode>
+      </node>
+      <node id="39841">
+        <label>HeapAllocator.inl</label>
+      </node>
+      <node id="39862">
+        <label>Matrix3.inl</label>
+      </node>
+      <node id="39804">
+        <label>../Forwards/ForwardWin32.h</label>
+        <link refid="d5/dea/ForwardWin32_8h"/>
+        <childnode refid="39805" relation="include">
+        </childnode>
+      </node>
+      <node id="39859">
+        <label>Vertex2.inl</label>
+      </node>
+      <node id="39818">
+        <label>../Error/ErrorManager.h</label>
+        <link refid="d1/db6/ErrorManager_8h"/>
+        <childnode refid="39819" relation="include">
+        </childnode>
+        <childnode refid="39831" relation="include">
+        </childnode>
+      </node>
+      <node id="39844">
+        <label>Array.inl</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="39894">
+        <label>WorldManager.h</label>
+        <link refid="db/d98/WorldManager_8h"/>
+        <childnode refid="39888" relation="include">
+        </childnode>
+      </node>
+      <node id="39893">
+        <label>MyDungeon.h</label>
+        <link refid="d0/de7/MyDungeon_8h"/>
+        <childnode refid="39891" relation="include">
+        </childnode>
+      </node>
+      <node id="39887">
+        <label>PhysicsManager.h</label>
+        <link refid="d2/d6b/PhysicsManager_8h"/>
+        <childnode refid="39888" relation="include">
+        </childnode>
+        <childnode refid="39894" relation="include">
+        </childnode>
+      </node>
+      <node id="39891">
+        <label>Main.h</label>
+        <link refid="da/d94/Main_8h"/>
+      </node>
+      <node id="39892">
+        <label>MyLandscape.h</label>
+        <link refid="d7/d2b/MyLandscape_8h"/>
+        <childnode refid="39891" relation="include">
+        </childnode>
+      </node>
+      <node id="39889">
+        <label>ApplicationManager.h</label>
+        <link refid="d2/d9d/ApplicationManager_8h"/>
+        <childnode refid="39890" relation="include">
+        </childnode>
+        <childnode refid="39891" relation="include">
+        </childnode>
+        <childnode refid="39892" relation="include">
+        </childnode>
+        <childnode refid="39893" relation="include">
+        </childnode>
+      </node>
+      <node id="39888">
+        <label>WindowApplication.h</label>
+        <link refid="d4/d72/WindowApplication_8h"/>
+        <childnode refid="39889" relation="include">
+        </childnode>
+      </node>
+      <node id="39890">
+        <label>Entities.h</label>
+        <link refid="d7/d5d/Entities_8h"/>
+        <childnode refid="39891" relation="include">
+        </childnode>
+      </node>
+      <node id="39886">
+        <label>SweepAndPrune.h</label>
+        <link refid="SweepAndPrune.h"/>
+        <childnode refid="39887" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d0/dd1/structSAPProxy" prot="public">SAPProxy</innerclass>
+    <innerclass refid="d2/d1f/structSAPBound" prot="public">SAPBound</innerclass>
+    <innerclass refid="d9/d3a/structSAPBoundValues" prot="public">SAPBoundValues</innerclass>
+    <innerclass refid="d3/de1/structSAPInterval" prot="public">SAPInterval</innerclass>
+    <innerclass refid="d6/d34/classSweepAndPrune" prot="public">SweepAndPrune</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="dc/dba/SweepAndPrune_8h_1affb594ed20cb1370d29434bdbd48d972" prot="public" static="no">
+        <name>SAP_DIMENSION</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/BroadPhase/SAP/SweepAndPrune.h" line="36" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/BroadPhase/SAP/SweepAndPrune.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dc/dba/SweepAndPrune_8h_1a6898edb388c271885f0f04fcfb51798f" prot="public" static="no">
+        <name>SAP_INTERVAL_SIZE</name>
+        <initializer>32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/BroadPhase/SAP/SweepAndPrune.h" line="37" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/BroadPhase/SAP/SweepAndPrune.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dc/dba/SweepAndPrune_8h_1ae439b9c261bc670890a87a98bd2868a9" prot="public" static="no">
+        <name>SAPPROXY_INVALID_ID</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/BroadPhase/SAP/SweepAndPrune.h" line="41" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/BroadPhase/SAP/SweepAndPrune.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="dc/dba/SweepAndPrune_8h_1af80c99defba23011cd0891bf6ac4cb40" prot="public" static="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>typedef DWord SAPProxyID</definition>
+        <argsstring></argsstring>
+        <name>SAPProxyID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/BroadPhase/SAP/SweepAndPrune.h" line="40" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/BroadPhase/SAP/SweepAndPrune.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="dc/dba/SweepAndPrune_8h_1a53163709386341718874f2d39a22ebf9" prot="public" static="no">
+        <type><ref refid="d9/d5d/classRedBlackTree" kindref="compound">RedBlackTree</ref>&lt; <ref refid="dc/dba/SweepAndPrune_8h_1af80c99defba23011cd0891bf6ac4cb40" kindref="member">SAPProxyID</ref> &gt;</type>
+        <definition>typedef RedBlackTree&lt;SAPProxyID&gt; CheckProxySet</definition>
+        <argsstring></argsstring>
+        <name>CheckProxySet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/BroadPhase/SAP/SweepAndPrune.h" line="81" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/BroadPhase/SAP/SweepAndPrune.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/BroadPhase/SAP/SweepAndPrune.h"/>
+  </compounddef>
+</doxygen>

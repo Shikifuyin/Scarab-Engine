@@ -1,0 +1,996 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="df/d10/InputManager_8h" kind="file">
+    <compoundname>InputManager.h</compoundname>
+    <includes refid="d1/da0/Manager_8h" local="yes">../../Lib/Object/Patterns/Manager.h</includes>
+    <includes refid="da/d29/TreeMap_8h" local="yes">../../Lib/Datastruct/Table/TreeMap.h</includes>
+    <includes local="yes">InputManager.inl</includes>
+    <includedby refid="d4/d72/WindowApplication_8h" local="yes">WindowApplication.h</includedby>
+    <includedby refid="d6/db3/GUIManager_8h" local="yes">GUIManager.h</includedby>
+    <incdepgraph>
+      <node id="18166">
+        <label>RedBlackTree.inl</label>
+      </node>
+      <node id="18140">
+        <label>SSE.inl</label>
+      </node>
+      <node id="18144">
+        <label>Threading.h</label>
+        <link refid="dd/d0e/Threading_8h"/>
+        <childnode refid="18122" relation="include">
+        </childnode>
+        <childnode refid="18124" relation="include">
+        </childnode>
+        <childnode refid="18145" relation="include">
+        </childnode>
+      </node>
+      <node id="18118">
+        <label>../../Lib/Object/Patterns/Manager.h</label>
+        <link refid="d1/da0/Manager_8h"/>
+        <childnode refid="18119" relation="include">
+        </childnode>
+        <childnode refid="18161" relation="include">
+        </childnode>
+      </node>
+      <node id="18156">
+        <label>Allocators/BreakAllocator.h</label>
+        <link refid="d4/dac/BreakAllocator_8h"/>
+        <childnode refid="18151" relation="include">
+        </childnode>
+        <childnode refid="18157" relation="include">
+        </childnode>
+      </node>
+      <node id="18119">
+        <label>../../Memory/MemoryManager.h</label>
+        <link refid="d7/d7b/MemoryManager_8h"/>
+        <childnode refid="18120" relation="include">
+        </childnode>
+        <childnode refid="18130" relation="include">
+        </childnode>
+        <childnode refid="18136" relation="include">
+        </childnode>
+        <childnode refid="18150" relation="include">
+        </childnode>
+        <childnode refid="18154" relation="include">
+        </childnode>
+        <childnode refid="18156" relation="include">
+        </childnode>
+        <childnode refid="18158" relation="include">
+        </childnode>
+        <childnode refid="18160" relation="include">
+        </childnode>
+      </node>
+      <node id="18137">
+        <label>../../ThirdParty/System/System.h</label>
+        <link refid="db/d39/System_8h"/>
+        <childnode refid="18122" relation="include">
+        </childnode>
+        <childnode refid="18124" relation="include">
+        </childnode>
+        <childnode refid="18138" relation="include">
+        </childnode>
+        <childnode refid="18121" relation="include">
+        </childnode>
+        <childnode refid="18142" relation="include">
+        </childnode>
+        <childnode refid="18144" relation="include">
+        </childnode>
+        <childnode refid="18146" relation="include">
+        </childnode>
+        <childnode refid="18148" relation="include">
+        </childnode>
+      </node>
+      <node id="18145">
+        <label>Threading.inl</label>
+      </node>
+      <node id="18168">
+        <label>InputManager.inl</label>
+      </node>
+      <node id="18157">
+        <label>BreakAllocator.inl</label>
+      </node>
+      <node id="18164">
+        <label>../Datastruct.h</label>
+        <link refid="d5/db1/Datastruct_8h"/>
+        <childnode refid="18119" relation="include">
+        </childnode>
+        <childnode refid="18165" relation="include">
+        </childnode>
+      </node>
+      <node id="18165">
+        <label>Datastruct.inl</label>
+      </node>
+      <node id="18163">
+        <label>../Tree/RedBlackTree.h</label>
+        <link refid="d6/dff/RedBlackTree_8h"/>
+        <childnode refid="18164" relation="include">
+        </childnode>
+        <childnode refid="18166" relation="include">
+        </childnode>
+      </node>
+      <node id="18124">
+        <label>Platform.h</label>
+        <link refid="d9/dd0/Platform_8h"/>
+        <childnode refid="18125" relation="include">
+        </childnode>
+      </node>
+      <node id="18154">
+        <label>Allocators/PoolAllocator.h</label>
+        <link refid="d3/d03/PoolAllocator_8h"/>
+        <childnode refid="18151" relation="include">
+        </childnode>
+        <childnode refid="18155" relation="include">
+        </childnode>
+      </node>
+      <node id="18127">
+        <label>FPU.inl</label>
+      </node>
+      <node id="18129">
+        <label>Hashing.inl</label>
+      </node>
+      <node id="18135">
+        <label>MathFunction.inl</label>
+      </node>
+      <node id="18167">
+        <label>TreeMap.inl</label>
+      </node>
+      <node id="18131">
+        <label>../Formats/Scalar.h</label>
+        <link refid="d0/d10/Scalar_8h"/>
+        <childnode refid="18124" relation="include">
+        </childnode>
+        <childnode refid="18132" relation="include">
+        </childnode>
+      </node>
+      <node id="18152">
+        <label>MemoryAllocator.inl</label>
+      </node>
+      <node id="18120">
+        <label>../Math/Hash/Hashing.h</label>
+        <link refid="d0/d4e/Hashing_8h"/>
+        <childnode refid="18121" relation="include">
+        </childnode>
+        <childnode refid="18129" relation="include">
+        </childnode>
+      </node>
+      <node id="18151">
+        <label>MemoryAllocator.h</label>
+        <link refid="d2/d75/MemoryAllocator_8h"/>
+        <childnode refid="18136" relation="include">
+        </childnode>
+        <childnode refid="18152" relation="include">
+        </childnode>
+      </node>
+      <node id="18117">
+        <label>InputManager.h</label>
+        <link refid="InputManager.h"/>
+        <childnode refid="18118" relation="include">
+        </childnode>
+        <childnode refid="18162" relation="include">
+        </childnode>
+        <childnode refid="18168" relation="include">
+        </childnode>
+      </node>
+      <node id="18143">
+        <label>File.inl</label>
+      </node>
+      <node id="18138">
+        <label>Hardware/Hardware.h</label>
+        <link refid="da/dec/Hardware_8h"/>
+        <childnode refid="18124" relation="include">
+        </childnode>
+        <childnode refid="18126" relation="include">
+        </childnode>
+        <childnode refid="18139" relation="include">
+        </childnode>
+        <childnode refid="18141" relation="include">
+        </childnode>
+      </node>
+      <node id="18150">
+        <label>Allocators/StackAllocator.h</label>
+        <link refid="db/d84/StackAllocator_8h"/>
+        <childnode refid="18151" relation="include">
+        </childnode>
+        <childnode refid="18153" relation="include">
+        </childnode>
+      </node>
+      <node id="18141">
+        <label>Hardware.inl</label>
+      </node>
+      <node id="18155">
+        <label>PoolAllocator.inl</label>
+      </node>
+      <node id="18132">
+        <label>Scalar.inl</label>
+      </node>
+      <node id="18128">
+        <label>String.inl</label>
+      </node>
+      <node id="18126">
+        <label>Hardware/FPU.h</label>
+        <link refid="dd/d2f/FPU_8h"/>
+        <childnode refid="18124" relation="include">
+        </childnode>
+        <childnode refid="18127" relation="include">
+        </childnode>
+      </node>
+      <node id="18158">
+        <label>Allocators/HeapAllocator.h</label>
+        <link refid="d3/d89/HeapAllocator_8h"/>
+        <childnode refid="18151" relation="include">
+        </childnode>
+        <childnode refid="18159" relation="include">
+        </childnode>
+      </node>
+      <node id="18121">
+        <label>../../../ThirdParty/System/String.h</label>
+        <link refid="d9/dba/String_8h"/>
+        <childnode refid="18122" relation="include">
+        </childnode>
+        <childnode refid="18124" relation="include">
+        </childnode>
+        <childnode refid="18126" relation="include">
+        </childnode>
+        <childnode refid="18128" relation="include">
+        </childnode>
+      </node>
+      <node id="18125">
+        <label>Platform.inl</label>
+      </node>
+      <node id="18160">
+        <label>MemoryManager.inl</label>
+      </node>
+      <node id="18148">
+        <label>System.inl</label>
+      </node>
+      <node id="18146">
+        <label>Networking.h</label>
+        <link refid="df/dfb/Networking_8h"/>
+        <childnode refid="18122" relation="include">
+        </childnode>
+        <childnode refid="18124" relation="include">
+        </childnode>
+        <childnode refid="18147" relation="include">
+        </childnode>
+      </node>
+      <node id="18142">
+        <label>File.h</label>
+        <link refid="d6/db7/File_8h"/>
+        <childnode refid="18122" relation="include">
+        </childnode>
+        <childnode refid="18124" relation="include">
+        </childnode>
+        <childnode refid="18121" relation="include">
+        </childnode>
+        <childnode refid="18143" relation="include">
+        </childnode>
+      </node>
+      <node id="18161">
+        <label>Manager.inl</label>
+      </node>
+      <node id="18153">
+        <label>StackAllocator.inl</label>
+      </node>
+      <node id="18123">
+        <label>ForwardWin32.inl</label>
+      </node>
+      <node id="18139">
+        <label>SSE.h</label>
+        <link refid="d0/d02/SSE_8h"/>
+        <childnode refid="18124" relation="include">
+        </childnode>
+        <childnode refid="18140" relation="include">
+        </childnode>
+      </node>
+      <node id="18162">
+        <label>../../Lib/Datastruct/Table/TreeMap.h</label>
+        <link refid="da/d29/TreeMap_8h"/>
+        <childnode refid="18163" relation="include">
+        </childnode>
+        <childnode refid="18167" relation="include">
+        </childnode>
+      </node>
+      <node id="18147">
+        <label>Networking.inl</label>
+      </node>
+      <node id="18134">
+        <label>Fixed.inl</label>
+      </node>
+      <node id="18130">
+        <label>../Math/Functions/MathFunction.h</label>
+        <link refid="d1/d98/MathFunction_8h"/>
+        <childnode refid="18126" relation="include">
+        </childnode>
+        <childnode refid="18131" relation="include">
+        </childnode>
+        <childnode refid="18133" relation="include">
+        </childnode>
+        <childnode refid="18135" relation="include">
+        </childnode>
+      </node>
+      <node id="18133">
+        <label>../Formats/Fixed.h</label>
+        <link refid="d4/d76/Fixed_8h"/>
+        <childnode refid="18131" relation="include">
+        </childnode>
+        <childnode refid="18134" relation="include">
+        </childnode>
+      </node>
+      <node id="18149">
+        <label>ErrorManager.inl</label>
+      </node>
+      <node id="18159">
+        <label>HeapAllocator.inl</label>
+      </node>
+      <node id="18122">
+        <label>../Forwards/ForwardWin32.h</label>
+        <link refid="d5/dea/ForwardWin32_8h"/>
+        <childnode refid="18123" relation="include">
+        </childnode>
+      </node>
+      <node id="18136">
+        <label>../Error/ErrorManager.h</label>
+        <link refid="d1/db6/ErrorManager_8h"/>
+        <childnode refid="18137" relation="include">
+        </childnode>
+        <childnode refid="18149" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="18175">
+        <label>MyDungeon.h</label>
+        <link refid="d0/de7/MyDungeon_8h"/>
+        <childnode refid="18173" relation="include">
+        </childnode>
+      </node>
+      <node id="18173">
+        <label>Main.h</label>
+        <link refid="da/d94/Main_8h"/>
+      </node>
+      <node id="18178">
+        <label>CommandShowTree.h</label>
+        <link refid="d8/d84/CommandShowTree_8h"/>
+        <childnode refid="18177" relation="include">
+        </childnode>
+      </node>
+      <node id="18174">
+        <label>MyLandscape.h</label>
+        <link refid="d7/d2b/MyLandscape_8h"/>
+        <childnode refid="18173" relation="include">
+        </childnode>
+      </node>
+      <node id="18171">
+        <label>ApplicationManager.h</label>
+        <link refid="d2/d9d/ApplicationManager_8h"/>
+        <childnode refid="18172" relation="include">
+        </childnode>
+        <childnode refid="18173" relation="include">
+        </childnode>
+        <childnode refid="18174" relation="include">
+        </childnode>
+        <childnode refid="18175" relation="include">
+        </childnode>
+      </node>
+      <node id="18169">
+        <label>InputManager.h</label>
+        <link refid="InputManager.h"/>
+        <childnode refid="18170" relation="include">
+        </childnode>
+        <childnode refid="18176" relation="include">
+        </childnode>
+      </node>
+      <node id="18170">
+        <label>WindowApplication.h</label>
+        <link refid="d4/d72/WindowApplication_8h"/>
+        <childnode refid="18171" relation="include">
+        </childnode>
+      </node>
+      <node id="18172">
+        <label>Entities.h</label>
+        <link refid="d7/d5d/Entities_8h"/>
+        <childnode refid="18173" relation="include">
+        </childnode>
+      </node>
+      <node id="18177">
+        <label>ConsoleManager.h</label>
+        <link refid="d3/d63/ConsoleManager_8h"/>
+        <childnode refid="18170" relation="include">
+        </childnode>
+      </node>
+      <node id="18176">
+        <label>GUIManager.h</label>
+        <link refid="d6/db3/GUIManager_8h"/>
+        <childnode refid="18170" relation="include">
+        </childnode>
+        <childnode refid="18177" relation="include">
+        </childnode>
+        <childnode refid="18178" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="de/d2a/structKeyboardState" prot="public">KeyboardState</innerclass>
+    <innerclass refid="d8/da5/structMouseState" prot="public">MouseState</innerclass>
+    <innerclass refid="d9/d37/structActionComboKey" prot="public">ActionComboKey</innerclass>
+    <innerclass refid="d5/d39/classInputManager" prot="public">InputManager</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="df/d10/InputManager_8h_1a79f130403c455c2550679daa3493983e" prot="public" static="no">
+        <name>InputFn</name>
+        <initializer><ref refid="dd/dcd/classManager_1a7fa7098f43df61eb754bbf4c91938d74" kindref="member">InputManager::GetInstancePtr</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Input/InputManager.h" line="33" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Input/InputManager.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d10/InputManager_8h_1a37057d060d5d3d784f76bed650e6956c" prot="public" static="no">
+        <name>KEYBOARD_KEYS</name>
+        <initializer>256</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Input/InputManager.h" line="36" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Input/InputManager.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d10/InputManager_8h_1a0a2fb0c712759bb35fd0980c2a4d7c66" prot="public" static="no">
+        <name>MOUSE_BUTTONS</name>
+        <initializer>32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Input/InputManager.h" line="37" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Input/InputManager.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d10/InputManager_8h_1ac027d7821b90df2492b770f3f79a604e" prot="public" static="no">
+        <name>INPUT_MAX_MAPS</name>
+        <initializer>32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Input/InputManager.h" line="126" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Input/InputManager.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d10/InputManager_8h_1a2e2f97e4f298edc7c21e2af56ec19135" prot="public" static="no">
+        <name>ACTIONFLAG_NONE</name>
+        <initializer>0x00000000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Input/InputManager.h" line="129" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Input/InputManager.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d10/InputManager_8h_1abafd16b7bedb739b1ab6980b49612c4c" prot="public" static="no">
+        <name>ACTIONFLAG_MOD_SHIFT</name>
+        <initializer>0x00000001</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Input/InputManager.h" line="130" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Input/InputManager.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d10/InputManager_8h_1aaee404eecb0fe94c630501e53a6ffc13" prot="public" static="no">
+        <name>ACTIONFLAG_MOD_CTRL</name>
+        <initializer>0x00000002</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Input/InputManager.h" line="131" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Input/InputManager.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d10/InputManager_8h_1a86654988d9808494666c5d5fdea50bbe" prot="public" static="no">
+        <name>ACTIONFLAG_MOD_ALT</name>
+        <initializer>0x00000004</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Input/InputManager.h" line="132" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Input/InputManager.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d10/InputManager_8h_1ab449b866b90e3a998a28ef02c5ded7bb" prot="public" static="no">
+        <name>ACTIONFLAG_MOUSE_DBLCLICK</name>
+        <initializer>0x00000008</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Input/InputManager.h" line="133" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Input/InputManager.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d10/InputManager_8h_1a34a3b660c7ba0f79a92d7af59a173633" prot="public" static="no">
+        <name>ACTIONFLAG_MOUSE_DELTAX</name>
+        <initializer>0x00000010</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Input/InputManager.h" line="134" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Input/InputManager.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d10/InputManager_8h_1a77dbceb76fae8d92ce31e60a1d6d7b8f" prot="public" static="no">
+        <name>ACTIONFLAG_MOUSE_DELTAY</name>
+        <initializer>0x00000020</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Input/InputManager.h" line="135" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Input/InputManager.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d10/InputManager_8h_1aae848c8070369e197568423cdabb2e9d" prot="public" static="no">
+        <name>ACTIONFLAG_MOUSE_WHEEL</name>
+        <initializer>0x00000040</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Input/InputManager.h" line="136" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Input/InputManager.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="df/d10/InputManager_8h_1a65afc57ec37493fc7409f26a189ab104" prot="public" static="no">
+        <name>KeyboardEventType</name>
+        <enumvalue id="df/d10/InputManager_8h_1a65afc57ec37493fc7409f26a189ab104af3fc22d8f13b917c166684deaafecdd1" prot="public">
+          <name>KEYBOARD_PRESS</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a65afc57ec37493fc7409f26a189ab104ac124013e27b325be6ffd4ba8e2f4a549" prot="public">
+          <name>KEYBOARD_RELEASE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Input/InputManager.h" line="40" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Input/InputManager.h" bodystart="39" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="enum" id="df/d10/InputManager_8h_1a262cb54ad20544f03867d1962cdf9ec9" prot="public" static="no">
+        <name>MouseEventType</name>
+        <enumvalue id="df/d10/InputManager_8h_1a262cb54ad20544f03867d1962cdf9ec9a8f355315a7acc507e30936ee8b79b4d4" prot="public">
+          <name>MOUSE_PRESS</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a262cb54ad20544f03867d1962cdf9ec9a1ea3ee68b7f33825ca85ab7b59a02237" prot="public">
+          <name>MOUSE_RELEASE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a262cb54ad20544f03867d1962cdf9ec9ad47422e73c10cfbbd35f917c6ec0b408" prot="public">
+          <name>MOUSE_DBLCLK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a262cb54ad20544f03867d1962cdf9ec9a7513d383f97428a41f8b44594874d469" prot="public">
+          <name>MOUSE_MOVE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a262cb54ad20544f03867d1962cdf9ec9a477b36ffc584a4458ea59eb24c7ea4cb" prot="public">
+          <name>MOUSE_WHEEL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Input/InputManager.h" line="52" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Input/InputManager.h" bodystart="51" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="enum" id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498" prot="public" static="no">
+        <name>Action</name>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498abb516226f3df30c332c998da773f56db" prot="public">
+          <name>ACTION_NONE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498af7497532bfc08c1e18d6db84d402991d" prot="public">
+          <name>ACTION_CONSOLE_INVOKE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498a0948fc0ba89876ed08dfca8fe6381166" prot="public">
+          <name>ACTION_CONTROL_EXIT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498a4f70de5cdb1d76b9ac8168ae715a9483" prot="public">
+          <name>ACTION_CONTROL_3D_WIREFRAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498a35f34741a19d72a82b1086cbd9a2ce53" prot="public">
+          <name>ACTION_CONTROL_ANIM_PAUSE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498a4c061347d2db3d009d35eb9f1646fc2d" prot="public">
+          <name>ACTION_CONTROL_ANIM_STEP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498a62763d5331c1257c4fa59150e733edd3" prot="public">
+          <name>ACTION_MOVE_WALK_FORWARD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498ae76cdc50e89bacf6de24f44d82bcc700" prot="public">
+          <name>ACTION_MOVE_WALK_BACKWARD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498a85a03a4a80ede5f9473a24e08a50d9f7" prot="public">
+          <name>ACTION_MOVE_WALK_LEFT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498a8de80ad0192aab579dbcdde62f1678ed" prot="public">
+          <name>ACTION_MOVE_WALK_RIGHT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498a2d24d0a13d8e6801258b58d1124abb9a" prot="public">
+          <name>ACTION_MOVE_WALK_UP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498a8db958fd4bfb4f872eae60bcf4da1c4b" prot="public">
+          <name>ACTION_MOVE_WALK_DOWN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498ac10751eb333285a09d6efcc28de6b74d" prot="public">
+          <name>ACTION_MOVE_RUN_FORWARD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498a9182ec7226db92a8742997f7d3968ac3" prot="public">
+          <name>ACTION_MOVE_RUN_BACKWARD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498a99ef49caff780ef400bd65da2d089668" prot="public">
+          <name>ACTION_MOVE_RUN_LEFT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498aa1aebee8b5a13d05db9110fc2aa486d3" prot="public">
+          <name>ACTION_MOVE_RUN_RIGHT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498ac85e93afe4a9f9a0631551ca2bec2394" prot="public">
+          <name>ACTION_MOVE_RUN_UP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498a1dd670e41a96d7a626c16a4ccbecc933" prot="public">
+          <name>ACTION_MOVE_RUN_DOWN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498a9c79ea761a79b71dc270d10b0c560397" prot="public">
+          <name>ACTION_CAMERA_LOOK_LEFT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498a252b26ecf2509dec71be8f9109042536" prot="public">
+          <name>ACTION_CAMERA_LOOK_RIGHT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498a3328c25494c82f0e6819b85154cdf4b1" prot="public">
+          <name>ACTION_CAMERA_LOOK_UP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498ac1a9a73e9fdf66ba8894074e61d87147" prot="public">
+          <name>ACTION_CAMERA_LOOK_DOWN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498a8ca85d5dbe55c75292be8f1cb0a95a5e" prot="public">
+          <name>ACTION_CAMERA_ROLL_LEFT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498a05b658c285d48d5c59b134a4f5332efa" prot="public">
+          <name>ACTION_CAMERA_ROLL_RIGHT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498a634eac1d18278d366b3a14f6d6bba7e1" prot="public">
+          <name>ACTION_CAMERA_ZOOM_OUT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498ad0bac253ad187229e91c0b8fbbf96afe" prot="public">
+          <name>ACTION_CAMERA_ZOOM_IN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498ae7847fb5120356bb83d1108d6884d48e" prot="public">
+          <name>ACTION_CUSTOM_A0</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498aa8b305c10bd809a8a5cc52941f9a7fa7" prot="public">
+          <name>ACTION_CUSTOM_A1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498a1b99a63cda326f84705b16ec383d4d38" prot="public">
+          <name>ACTION_CUSTOM_A2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498a39d279785465148e16522684132ab28c" prot="public">
+          <name>ACTION_CUSTOM_A3</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498abd61e73703d755003fae12d622a40cc3" prot="public">
+          <name>ACTION_CUSTOM_A4</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498aa57218d77d08a46b686f90739ea84771" prot="public">
+          <name>ACTION_CUSTOM_A5</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498a802789589544dca61d175d9a6513fb28" prot="public">
+          <name>ACTION_CUSTOM_A6</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498ad7a6c2d6d96905fd6b46ea7aed8ce62f" prot="public">
+          <name>ACTION_CUSTOM_A7</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498a6bae3b3734e8ec783764d47e49a28cb2" prot="public">
+          <name>ACTION_CUSTOM_B0</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498aa94c6183b4dfd32c616d653ec386a073" prot="public">
+          <name>ACTION_CUSTOM_B1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498a46c294c9d729cb8ddef07ff3e5292bc0" prot="public">
+          <name>ACTION_CUSTOM_B2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498a872ddc04f5a0b23365d2f5bdea90a64d" prot="public">
+          <name>ACTION_CUSTOM_B3</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498aa7da805e1ab047b38b713700f7eb4066" prot="public">
+          <name>ACTION_CUSTOM_B4</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498a0dea774b0368461be4182a980aa81b80" prot="public">
+          <name>ACTION_CUSTOM_B5</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498a7ec2dd5b48993e7a2c441ae0bdd67de5" prot="public">
+          <name>ACTION_CUSTOM_B6</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498a5ef6498d9d8aaaaadb3d9eb607d0001c" prot="public">
+          <name>ACTION_CUSTOM_B7</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498abb8998bd21077e8a8e1afd1c8eab5d0d" prot="public">
+          <name>ACTION_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Input/InputManager.h" line="69" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Input/InputManager.h" bodystart="68" bodyend="124"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="df/d10/InputManager_8h_1a8a271139eb3d4fe770299b6e4e6b77ff" prot="public" static="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>typedef UInt ActionFlag</definition>
+        <argsstring></argsstring>
+        <name>ActionFlag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Input/InputManager.h" line="128" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Input/InputManager.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="df/d10/InputManager_8h_1afe8f575afdaf6d84b3d7cffecc2b6939" prot="public" static="no">
+        <type><ref refid="d0/da4/classTreeMap" kindref="compound">TreeMap</ref>&lt; <ref refid="d9/d37/structActionComboKey" kindref="compound">ActionComboKey</ref>, <ref refid="df/d10/InputManager_8h_1a8bb1ef53467e4f61410d12822d922498" kindref="member">Action</ref> &gt;</type>
+        <definition>typedef TreeMap&lt;ActionComboKey,Action&gt; ActionMap</definition>
+        <argsstring></argsstring>
+        <name>ActionMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Input/InputManager.h" line="148" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Input/InputManager.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="df/d10/InputManager_8h_1a2485eb1c0758415bd1f33de69e84104b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref></type>
+        <definition>Int _ActionMap_Compare</definition>
+        <argsstring>(const ActionComboKey &amp;rLeft, const ActionComboKey &amp;rRight, Void *pUserData)</argsstring>
+        <name>_ActionMap_Compare</name>
+        <param>
+          <type>const <ref refid="d9/d37/structActionComboKey" kindref="compound">ActionComboKey</ref> &amp;</type>
+          <declname>rLeft</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/d37/structActionComboKey" kindref="compound">ActionComboKey</ref> &amp;</type>
+          <declname>rRight</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> *</type>
+          <declname>pUserData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Input/InputManager.h" line="149"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Input/InputManager.h"/>
+  </compounddef>
+</doxygen>

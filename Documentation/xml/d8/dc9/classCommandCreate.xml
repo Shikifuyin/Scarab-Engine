@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d8/dc9/classCommandCreate" kind="class" prot="public">
+    <compoundname>CommandCreate</compoundname>
+    <basecompoundref refid="db/df6/classConsoleCommand" prot="public" virt="non-virtual">ConsoleCommand</basecompoundref>
+    <includes refid="d4/d98/CommandCreate_8h" local="no">CommandCreate.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d8/dc9/classCommandCreate_1ac24dd96e8edd00cb96ac6eac12d7aa52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CommandCreate</definition>
+        <argsstring>()</argsstring>
+        <name>CommandCreate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ResourceCommands/CommandCreate.h" line="39"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/dc9/classCommandCreate_1acc38a1abbbbea92147dd988114edf2bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~CommandCreate</definition>
+        <argsstring>()</argsstring>
+        <name>~CommandCreate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ResourceCommands/CommandCreate.h" line="40"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/dc9/classCommandCreate_1a70a01461d668333f5a2ce24fb3cc599f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+        <definition>virtual GChar* GetHelp</definition>
+        <argsstring>(GChar *strOutput) const </argsstring>
+        <name>GetHelp</name>
+        <reimplements refid="db/df6/classConsoleCommand_1a7bd3a014193d71d86b1bcc6a3e0b511a">GetHelp</reimplements>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strOutput</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ResourceCommands/CommandCreate.h" line="43"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/dc9/classCommandCreate_1aac4135d5bc3b3346609251da382f0013" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>virtual Bool Execute</definition>
+        <argsstring>(GChar *strOutput, const GChar *strArgList)</argsstring>
+        <name>Execute</name>
+        <reimplements refid="db/df6/classConsoleCommand_1ad2a0dd51f3b3c1ea232be6b9f8b6af65">Execute</reimplements>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strOutput</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strArgList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ResourceCommands/CommandCreate.h" line="46"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="779">
+        <label>ConsoleCommand</label>
+        <link refid="db/df6/classConsoleCommand"/>
+      </node>
+      <node id="778">
+        <label>CommandCreate</label>
+        <link refid="d8/dc9/classCommandCreate"/>
+        <childnode refid="779" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="783">
+        <label>ConsoleCommandCategory</label>
+      </node>
+      <node id="786">
+        <label>ConsoleCommandArgument</label>
+        <link refid="d2/d07/structConsoleCommandArgument"/>
+        <childnode refid="787" relation="usage">
+          <edgelabel>iFlags</edgelabel>
+          <edgelabel>iTypes</edgelabel>
+        </childnode>
+      </node>
+      <node id="785">
+        <label>int</label>
+      </node>
+      <node id="781">
+        <label>ConsoleCommand</label>
+        <link refid="db/df6/classConsoleCommand"/>
+        <childnode refid="782" relation="usage">
+          <edgelabel>m_iLevel</edgelabel>
+        </childnode>
+        <childnode refid="783" relation="usage">
+          <edgelabel>m_iCategory</edgelabel>
+        </childnode>
+        <childnode refid="784" relation="usage">
+          <edgelabel>m_strName</edgelabel>
+        </childnode>
+        <childnode refid="785" relation="usage">
+          <edgelabel>m_iArgCount</edgelabel>
+          <edgelabel>m_iMinArgCount</edgelabel>
+          <edgelabel>m_iMaxArgCount</edgelabel>
+        </childnode>
+        <childnode refid="786" relation="usage">
+          <edgelabel>m_arrArguments</edgelabel>
+        </childnode>
+      </node>
+      <node id="782">
+        <label>ConsoleCommandLevel</label>
+      </node>
+      <node id="780">
+        <label>CommandCreate</label>
+        <link refid="d8/dc9/classCommandCreate"/>
+        <childnode refid="781" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="784">
+        <label>char</label>
+      </node>
+      <node id="787">
+        <label>DWord</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ResourceCommands/CommandCreate.h" line="37" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Console/ResourceCommands/CommandCreate.h" bodystart="36" bodyend="47"/>
+    <listofallmembers>
+      <member refid="db/df6/classConsoleCommand_1a24c61fde2f52c572e469c2ef514ccb5f" prot="protected" virt="non-virtual"><scope>CommandCreate</scope><name>_ExtractArgument_Integer</name></member>
+      <member refid="db/df6/classConsoleCommand_1a6b46cbb9a64d79add0bc31f1dda51881" prot="protected" virt="non-virtual"><scope>CommandCreate</scope><name>_ExtractArgument_Scalar</name></member>
+      <member refid="db/df6/classConsoleCommand_1a937b07e2ef6e3ce69305febc59adf760" prot="protected" virt="non-virtual"><scope>CommandCreate</scope><name>_ExtractArgument_String</name></member>
+      <member refid="d8/dc9/classCommandCreate_1ac24dd96e8edd00cb96ac6eac12d7aa52" prot="public" virt="non-virtual"><scope>CommandCreate</scope><name>CommandCreate</name></member>
+      <member refid="db/df6/classConsoleCommand_1a000bdbf6d31ea59c2898529dac1494f1" prot="public" virt="non-virtual"><scope>CommandCreate</scope><name>ConsoleCommand</name></member>
+      <member refid="d8/dc9/classCommandCreate_1aac4135d5bc3b3346609251da382f0013" prot="public" virt="virtual"><scope>CommandCreate</scope><name>Execute</name></member>
+      <member refid="db/df6/classConsoleCommand_1a561e0bece6d10937d4c58c3789112d44" prot="public" virt="non-virtual"><scope>CommandCreate</scope><name>GetArgCount</name></member>
+      <member refid="db/df6/classConsoleCommand_1ae46b3fb187aa3bb91399f7f41504e1f8" prot="public" virt="non-virtual"><scope>CommandCreate</scope><name>GetArgument</name></member>
+      <member refid="db/df6/classConsoleCommand_1a623be41c2fcfc6a38d113262330a6e71" prot="public" virt="non-virtual"><scope>CommandCreate</scope><name>GetCategory</name></member>
+      <member refid="db/df6/classConsoleCommand_1a3d08be7e7df02beca5af262e7f1c7d5f" prot="public" virt="non-virtual"><scope>CommandCreate</scope><name>GetCategoryName</name></member>
+      <member refid="d8/dc9/classCommandCreate_1a70a01461d668333f5a2ce24fb3cc599f" prot="public" virt="virtual"><scope>CommandCreate</scope><name>GetHelp</name></member>
+      <member refid="db/df6/classConsoleCommand_1a4a0162f62040bf882bf887e436223871" prot="public" virt="non-virtual"><scope>CommandCreate</scope><name>GetLevel</name></member>
+      <member refid="db/df6/classConsoleCommand_1a5acd4bc064872ca9ac0c6608dcc0cb8a" prot="public" virt="non-virtual"><scope>CommandCreate</scope><name>GetMaxArgCount</name></member>
+      <member refid="db/df6/classConsoleCommand_1a343564a77b7f98b3092139fe9593ebe7" prot="public" virt="non-virtual"><scope>CommandCreate</scope><name>GetMinArgCount</name></member>
+      <member refid="db/df6/classConsoleCommand_1acb24949ad36a8ed7b0008515d78ac5ae" prot="public" virt="non-virtual"><scope>CommandCreate</scope><name>GetName</name></member>
+      <member refid="db/df6/classConsoleCommand_1a53845b6f96a25a18ab7a7390eb062a3d" prot="protected" virt="non-virtual"><scope>CommandCreate</scope><name>m_arrArguments</name></member>
+      <member refid="db/df6/classConsoleCommand_1a23c14fe4fa6c977c1257c4d3427e2fa8" prot="protected" virt="non-virtual"><scope>CommandCreate</scope><name>m_iArgCount</name></member>
+      <member refid="db/df6/classConsoleCommand_1a5f133291f75af93dc5add5e2345b7533" prot="protected" virt="non-virtual"><scope>CommandCreate</scope><name>m_iCategory</name></member>
+      <member refid="db/df6/classConsoleCommand_1a4af2d339ac47a30dd97ce6e24a6ea795" prot="protected" virt="non-virtual"><scope>CommandCreate</scope><name>m_iLevel</name></member>
+      <member refid="db/df6/classConsoleCommand_1aad82409777a150e87f0cff3af9ea149e" prot="protected" virt="non-virtual"><scope>CommandCreate</scope><name>m_iMaxArgCount</name></member>
+      <member refid="db/df6/classConsoleCommand_1abc06e53e33b0ccb308ded0b66ec66685" prot="protected" virt="non-virtual"><scope>CommandCreate</scope><name>m_iMinArgCount</name></member>
+      <member refid="db/df6/classConsoleCommand_1ad9500d41c5a87e55e8758318eadcf3a9" prot="protected" virt="non-virtual"><scope>CommandCreate</scope><name>m_strName</name></member>
+      <member refid="db/df6/classConsoleCommand_1a501241c112e354bd490f4838c93f54bd" prot="public" virt="non-virtual"><scope>CommandCreate</scope><name>ParseCategory</name></member>
+      <member refid="d8/dc9/classCommandCreate_1acc38a1abbbbea92147dd988114edf2bf" prot="public" virt="virtual"><scope>CommandCreate</scope><name>~CommandCreate</name></member>
+      <member refid="db/df6/classConsoleCommand_1a8a2bfccde61cfcea4aa65bd365c0fb96" prot="public" virt="virtual"><scope>CommandCreate</scope><name>~ConsoleCommand</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

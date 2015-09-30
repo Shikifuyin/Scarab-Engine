@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="da/dff/classInitCleanup" kind="class" prot="public">
+    <compoundname>InitCleanup</compoundname>
+    <includes refid="d5/d87/InitCleanup_8h" local="no">InitCleanup.h</includes>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="da/dff/classInitCleanup_1ac53005970ed071816692e8279433990b" prot="private" static="yes" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt sm_InitializerCount</definition>
+        <argsstring></argsstring>
+        <name>sm_InitializerCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Tools/InitCleanup.h" line="85" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Tools/InitCleanup.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/dff/classInitCleanup_1a694020287bdcdceb68a383c0500865a6" prot="private" static="yes" mutable="no">
+        <type><ref refid="d5/d87/InitCleanup_8h_1a89f099d77bc336dee562f604bbdce8dc" kindref="member">Initializer</ref></type>
+        <definition>Initializer sm_arrInitializers[INITCLEANUP_MAX_CALLBACKS]</definition>
+        <argsstring>[INITCLEANUP_MAX_CALLBACKS]</argsstring>
+        <name>sm_arrInitializers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Tools/InitCleanup.h" line="86" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Tools/InitCleanup.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/dff/classInitCleanup_1a389bfa53f9afba0714a114003046d285" prot="private" static="yes" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt sm_CleanerCount</definition>
+        <argsstring></argsstring>
+        <name>sm_CleanerCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Tools/InitCleanup.h" line="88" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Tools/InitCleanup.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/dff/classInitCleanup_1a6697543658bbb66fe7bf3a4c3da3f037" prot="private" static="yes" mutable="no">
+        <type><ref refid="d5/d87/InitCleanup_8h_1af9fe8bb71f44aaced1fa5202599f7bb0" kindref="member">Cleaner</ref></type>
+        <definition>Cleaner sm_arrCleaners[INITCLEANUP_MAX_CALLBACKS]</definition>
+        <argsstring>[INITCLEANUP_MAX_CALLBACKS]</argsstring>
+        <name>sm_arrCleaners</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Tools/InitCleanup.h" line="89" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Tools/InitCleanup.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="da/dff/classInitCleanup_1a3fe08508451a9a39bbd0fa9b3a6ad215" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>static Void AddInitializer</definition>
+        <argsstring>(Initializer pfCallback)</argsstring>
+        <name>AddInitializer</name>
+        <param>
+          <type><ref refid="d5/d87/InitCleanup_8h_1a89f099d77bc336dee562f604bbdce8dc" kindref="member">Initializer</ref></type>
+          <declname>pfCallback</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Tools/InitCleanup.h" line="75"/>
+      </memberdef>
+      <memberdef kind="function" id="da/dff/classInitCleanup_1aefdfddf02dd9c555ce8c6952f1a4209d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>static Void AddCleaner</definition>
+        <argsstring>(Cleaner pfCallback)</argsstring>
+        <name>AddCleaner</name>
+        <param>
+          <type><ref refid="d5/d87/InitCleanup_8h_1af9fe8bb71f44aaced1fa5202599f7bb0" kindref="member">Cleaner</ref></type>
+          <declname>pfCallback</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Tools/InitCleanup.h" line="76"/>
+      </memberdef>
+      <memberdef kind="function" id="da/dff/classInitCleanup_1a0dbbbf75be777d6817c1d4a562abb5c2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>static Void Initialize</definition>
+        <argsstring>()</argsstring>
+        <name>Initialize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Tools/InitCleanup.h" line="78"/>
+      </memberdef>
+      <memberdef kind="function" id="da/dff/classInitCleanup_1a45622522b4c4cd4883c8068742820a7f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>static Void Cleanup</definition>
+        <argsstring>()</argsstring>
+        <name>Cleanup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Tools/InitCleanup.h" line="79"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="da/dff/classInitCleanup_1a9fe704dc3f13a927ca40c0769a09b4ee" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>InitCleanup</definition>
+        <argsstring>()</argsstring>
+        <name>InitCleanup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Tools/InitCleanup.h" line="82"/>
+      </memberdef>
+      <memberdef kind="function" id="da/dff/classInitCleanup_1a9b1673c0559a5cd593547e182ddd55c9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~InitCleanup</definition>
+        <argsstring>()</argsstring>
+        <name>~InitCleanup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Tools/InitCleanup.h" line="83"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="5076">
+        <label>InitCleanup</label>
+        <link refid="da/dff/classInitCleanup"/>
+        <childnode refid="5077" relation="usage">
+          <edgelabel>sm_arrCleaners</edgelabel>
+        </childnode>
+        <childnode refid="5078" relation="usage">
+          <edgelabel>sm_InitializerCount</edgelabel>
+          <edgelabel>sm_CleanerCount</edgelabel>
+        </childnode>
+        <childnode refid="5079" relation="usage">
+          <edgelabel>sm_arrInitializers</edgelabel>
+        </childnode>
+      </node>
+      <node id="5078">
+        <label>unsigned int</label>
+      </node>
+      <node id="5077">
+        <label>static Cleaner</label>
+      </node>
+      <node id="5079">
+        <label>static Initializer</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Tools/InitCleanup.h" line="73" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Tools/InitCleanup.h" bodystart="72" bodyend="90"/>
+    <listofallmembers>
+      <member refid="da/dff/classInitCleanup_1aefdfddf02dd9c555ce8c6952f1a4209d" prot="public" virt="non-virtual"><scope>InitCleanup</scope><name>AddCleaner</name></member>
+      <member refid="da/dff/classInitCleanup_1a3fe08508451a9a39bbd0fa9b3a6ad215" prot="public" virt="non-virtual"><scope>InitCleanup</scope><name>AddInitializer</name></member>
+      <member refid="da/dff/classInitCleanup_1a45622522b4c4cd4883c8068742820a7f" prot="public" virt="non-virtual"><scope>InitCleanup</scope><name>Cleanup</name></member>
+      <member refid="da/dff/classInitCleanup_1a9fe704dc3f13a927ca40c0769a09b4ee" prot="private" virt="non-virtual"><scope>InitCleanup</scope><name>InitCleanup</name></member>
+      <member refid="da/dff/classInitCleanup_1a0dbbbf75be777d6817c1d4a562abb5c2" prot="public" virt="non-virtual"><scope>InitCleanup</scope><name>Initialize</name></member>
+      <member refid="da/dff/classInitCleanup_1a6697543658bbb66fe7bf3a4c3da3f037" prot="private" virt="non-virtual"><scope>InitCleanup</scope><name>sm_arrCleaners</name></member>
+      <member refid="da/dff/classInitCleanup_1a694020287bdcdceb68a383c0500865a6" prot="private" virt="non-virtual"><scope>InitCleanup</scope><name>sm_arrInitializers</name></member>
+      <member refid="da/dff/classInitCleanup_1a389bfa53f9afba0714a114003046d285" prot="private" virt="non-virtual"><scope>InitCleanup</scope><name>sm_CleanerCount</name></member>
+      <member refid="da/dff/classInitCleanup_1ac53005970ed071816692e8279433990b" prot="private" virt="non-virtual"><scope>InitCleanup</scope><name>sm_InitializerCount</name></member>
+      <member refid="da/dff/classInitCleanup_1a9b1673c0559a5cd593547e182ddd55c9" prot="private" virt="non-virtual"><scope>InitCleanup</scope><name>~InitCleanup</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

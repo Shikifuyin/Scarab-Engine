@@ -1,0 +1,1364 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d5/dad/classTQuaternion" kind="class" prot="public">
+    <compoundname>TQuaternion</compoundname>
+    <includes refid="d1/d4a/Quaternion_8h" local="no">Quaternion.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>Real</declname>
+        <defname>Real</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="d5/dad/classTQuaternion_1afa151b22495885abe46f637a587ecd79" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt;</type>
+        <definition>const TQuaternion&lt;Real&gt; Null</definition>
+        <argsstring></argsstring>
+        <name>Null</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="45" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d5/dad/classTQuaternion_1ab31240234bbb48f226c763673b35654c" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt;</type>
+        <definition>const TQuaternion&lt;Real&gt; Identity</definition>
+        <argsstring></argsstring>
+        <name>Identity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="46" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d5/dad/classTQuaternion_1a4e57c550565be37cb1f606f7948b0b99" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real X</definition>
+        <argsstring></argsstring>
+        <name>X</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="141" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d5/dad/classTQuaternion_1ab43bec7f0bd85ceb4d594f7407f9220e" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real Y</definition>
+        <argsstring></argsstring>
+        <name>Y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="141" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d5/dad/classTQuaternion_1accd64a5804802765d382b535d9f74737" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real Z</definition>
+        <argsstring></argsstring>
+        <name>Z</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="141" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d5/dad/classTQuaternion_1a1f97e09f1794ff31940d74cd2bcf0ec0" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real W</definition>
+        <argsstring></argsstring>
+        <name>W</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="141" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="d5/dad/classTQuaternion_1a861ab6a3627bfe53ae2453e2a5e1fca8" prot="private" static="yes" mutable="no">
+        <type>const Real</type>
+        <definition>const Real ZERO</definition>
+        <argsstring></argsstring>
+        <name>ZERO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="150" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d5/dad/classTQuaternion_1acac09fd02521e2a1297f6dde618fb5ca" prot="private" static="yes" mutable="no">
+        <type>const Real</type>
+        <definition>const Real ONE</definition>
+        <argsstring></argsstring>
+        <name>ONE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="151" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d5/dad/classTQuaternion_1aa2f4f55be7ca7ebf9a4cdd3f2c84cc36" prot="private" static="yes" mutable="no">
+        <type>const Real</type>
+        <definition>const Real TWO</definition>
+        <argsstring></argsstring>
+        <name>TWO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="152" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1afdf3b91ae2dbfd4f1d4077df6fbd1a12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TQuaternion</definition>
+        <argsstring>()</argsstring>
+        <name>TQuaternion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="49"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a0401d62657a0e4c2053eccb782ceb0f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TQuaternion</definition>
+        <argsstring>(Real x, Real y, Real z, Real w)</argsstring>
+        <name>TQuaternion</name>
+        <param>
+          <type>Real</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>w</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="50"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a1ffd45e0c6b3ae9af58005762f91d2a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TQuaternion</definition>
+        <argsstring>(const Real vArr[4])</argsstring>
+        <name>TQuaternion</name>
+        <param>
+          <type>const Real</type>
+          <declname>vArr</declname>
+          <array>[4]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1af00fa1c078a4c272de802c527d4da7b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TQuaternion</definition>
+        <argsstring>(const TVector4&lt; Real &gt; &amp;vQuaternion)</argsstring>
+        <name>TQuaternion</name>
+        <param>
+          <type>const <ref refid="d6/d56/classTVector4" kindref="compound">TVector4</ref>&lt; Real &gt; &amp;</type>
+          <declname>vQuaternion</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="52"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1abc35ed6f125c274c2be0fc031e61e782" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TQuaternion</definition>
+        <argsstring>(const TQuaternion&lt; Real &gt; &amp;rhs)</argsstring>
+        <name>TQuaternion</name>
+        <param>
+          <type>const <ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="53"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1abb9e5f8bf2827b2f7d2cd28fadc7458a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TQuaternion</definition>
+        <argsstring>(const TVector3&lt; Real &gt; &amp;vAxis, Real fAngle)</argsstring>
+        <name>TQuaternion</name>
+        <param>
+          <type>const <ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt; &amp;</type>
+          <declname>vAxis</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fAngle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="54"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a5a29e3be527d6d6da72237ccda797942" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TQuaternion</definition>
+        <argsstring>(const TMatrix3&lt; Real &gt; &amp;matRotation)</argsstring>
+        <name>TQuaternion</name>
+        <param>
+          <type>const <ref refid="d7/dee/classTMatrix3" kindref="compound">TMatrix3</ref>&lt; Real &gt; &amp;</type>
+          <declname>matRotation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="55"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a06ef317ff2ad502bc96eadb8947421e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~TQuaternion</definition>
+        <argsstring>()</argsstring>
+        <name>~TQuaternion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="56"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1ade2e4cb06eb3ee17e5397b844897ad43" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+        <definition>TQuaternion&lt;Real&gt;&amp; operator=</definition>
+        <argsstring>(const TQuaternion&lt; Real &gt; &amp;rhs)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="59"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a37afb44a75d1a61dbf1995e68a15b700" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>operator Real *</definition>
+        <argsstring>() const </argsstring>
+        <name>operator Real *</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="62"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1aa18f12f9d731665bf1761defd963e092" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>operator const Real *</definition>
+        <argsstring>() const </argsstring>
+        <name>operator const Real *</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="63"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a16bc1150043ddf0eb1bb26e07d01b97c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real &amp;</type>
+        <definition>Real&amp; operator[]</definition>
+        <argsstring>(Int i)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref></type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="66"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a16c3e65e5c3cb2c7d3ad611186ab3277" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real operator[]</definition>
+        <argsstring>(Int i) const </argsstring>
+        <name>operator[]</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref></type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="67"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a16a53ede5f306a403ea8ee9367277c2c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real &amp;</type>
+        <definition>Real&amp; operator[]</definition>
+        <argsstring>(UInt i)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="68"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a4c9eae2fc3af1319229e8177a190025b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real operator[]</definition>
+        <argsstring>(UInt i) const </argsstring>
+        <name>operator[]</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="69"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1ad864cb68a401b6589a9aa6fcb8daa4e7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt;</type>
+        <definition>TQuaternion&lt;Real&gt; operator+</definition>
+        <argsstring>() const </argsstring>
+        <name>operator+</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="72"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a35a10f7aefc12044222af28c764c4426" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt;</type>
+        <definition>TQuaternion&lt;Real&gt; operator-</definition>
+        <argsstring>() const </argsstring>
+        <name>operator-</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="73"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a6f36b3c327d29d027befc4e0563d42a6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt;</type>
+        <definition>TQuaternion&lt;Real&gt; operator~</definition>
+        <argsstring>() const </argsstring>
+        <name>operator~</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="74"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a09327c8941a05c4ca737770346bf20e3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool operator==</definition>
+        <argsstring>(const TQuaternion&lt; Real &gt; &amp;rhs) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="77"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1ad9aa419fc2474c225193b2dd698a71f5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool operator!=</definition>
+        <argsstring>(const TQuaternion&lt; Real &gt; &amp;rhs) const </argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="78"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1ace8f8f45bb939248d4dea9a27c0b64c5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt;</type>
+        <definition>TQuaternion&lt;Real&gt; operator*</definition>
+        <argsstring>(Real rhs) const </argsstring>
+        <name>operator*</name>
+        <param>
+          <type>Real</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="81"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a99470aa6131a0e908db6752f421f12c8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt;</type>
+        <definition>TQuaternion&lt;Real&gt; operator/</definition>
+        <argsstring>(Real rhs) const </argsstring>
+        <name>operator/</name>
+        <param>
+          <type>Real</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="82"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1ab156feed27dbb54bc727ecbe6f3a215d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+        <definition>TQuaternion&lt;Real&gt;&amp; operator*=</definition>
+        <argsstring>(Real rhs)</argsstring>
+        <name>operator*=</name>
+        <param>
+          <type>Real</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="84"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a3ab16d851c25f7a6d691e201fcb2e1c7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+        <definition>TQuaternion&lt;Real&gt;&amp; operator/=</definition>
+        <argsstring>(Real rhs)</argsstring>
+        <name>operator/=</name>
+        <param>
+          <type>Real</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="85"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a784e3d0a94a0300d44c4e770dfbf6cf5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt;</type>
+        <definition>TVector3&lt;Real&gt; operator*</definition>
+        <argsstring>(const TVector3&lt; Real &gt; &amp;rhs) const </argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="88"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a6e2a54af7732736707d15c7652e0fc39" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d6/d56/classTVector4" kindref="compound">TVector4</ref>&lt; Real &gt;</type>
+        <definition>TVector4&lt;Real&gt; operator*</definition>
+        <argsstring>(const TVector4&lt; Real &gt; &amp;rhs) const </argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="d6/d56/classTVector4" kindref="compound">TVector4</ref>&lt; Real &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="89"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a7007af0b900e07024ad4bb3c833e8bcc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt;</type>
+        <definition>TQuaternion&lt;Real&gt; operator+</definition>
+        <argsstring>(const TQuaternion&lt; Real &gt; &amp;rhs) const </argsstring>
+        <name>operator+</name>
+        <param>
+          <type>const <ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="92"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a87fd484d749cf9190f3c36818283a982" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt;</type>
+        <definition>TQuaternion&lt;Real&gt; operator-</definition>
+        <argsstring>(const TQuaternion&lt; Real &gt; &amp;rhs) const </argsstring>
+        <name>operator-</name>
+        <param>
+          <type>const <ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="93"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a3a39e1089f3b2b7914dd775cb3360ebe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt;</type>
+        <definition>TQuaternion&lt;Real&gt; operator*</definition>
+        <argsstring>(const TQuaternion&lt; Real &gt; &amp;rhs) const </argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="94"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a5ee770a7fc6c0dbb178a4002f99b5295" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+        <definition>TQuaternion&lt;Real&gt;&amp; operator+=</definition>
+        <argsstring>(const TQuaternion&lt; Real &gt; &amp;rhs)</argsstring>
+        <name>operator+=</name>
+        <param>
+          <type>const <ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="96"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1ae221428ee596a6822665af21bc906e65" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+        <definition>TQuaternion&lt;Real&gt;&amp; operator-=</definition>
+        <argsstring>(const TQuaternion&lt; Real &gt; &amp;rhs)</argsstring>
+        <name>operator-=</name>
+        <param>
+          <type>const <ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="97"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a36da75788b71a108e915b21324692806" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+        <definition>TQuaternion&lt;Real&gt;&amp; operator*=</definition>
+        <argsstring>(const TQuaternion&lt; Real &gt; &amp;rhs)</argsstring>
+        <name>operator*=</name>
+        <param>
+          <type>const <ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="98"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a7a0f9d2da0acf5519d224d709791e876" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void GetAxisAngle</definition>
+        <argsstring>(TVector3&lt; Real &gt; &amp;outAxis, Real &amp;outAngle) const </argsstring>
+        <name>GetAxisAngle</name>
+        <param>
+          <type><ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt; &amp;</type>
+          <declname>outAxis</declname>
+        </param>
+        <param>
+          <type>Real &amp;</type>
+          <declname>outAngle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="101"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1adbd0c858f46d5312eaf7933ef25eb35a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void GetMatrix</definition>
+        <argsstring>(TMatrix3&lt; Real &gt; &amp;outRotation) const </argsstring>
+        <name>GetMatrix</name>
+        <param>
+          <type><ref refid="d7/dee/classTMatrix3" kindref="compound">TMatrix3</ref>&lt; Real &gt; &amp;</type>
+          <declname>outRotation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="102"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a52bea171a6630716a6a7149cbedd58e5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real NormSqr</definition>
+        <argsstring>() const </argsstring>
+        <name>NormSqr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="105"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1af6f59888808c1af2f8f35cd9a5b82f94" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real Norm</definition>
+        <argsstring>() const </argsstring>
+        <name>Norm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="106"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a21d05ce2ed928f64402f36ce13caeda4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real InvNormSqr</definition>
+        <argsstring>() const </argsstring>
+        <name>InvNormSqr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="107"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a073fb231858b0794f1e69d50650c4522" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real InvNorm</definition>
+        <argsstring>() const </argsstring>
+        <name>InvNorm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="108"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1aa609389d475aebecda40bf8b20245ce1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real Normalize</definition>
+        <argsstring>()</argsstring>
+        <name>Normalize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="109"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a96fcceeb910f3ec9a5c4290f62ec4d89" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real Dot</definition>
+        <argsstring>(const TQuaternion&lt; Real &gt; &amp;rhs) const </argsstring>
+        <name>Dot</name>
+        <param>
+          <type>const <ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="111"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a8c4e34d91b3ffbf068180a5dd591b5e0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Invert</definition>
+        <argsstring>(TQuaternion&lt; Real &gt; &amp;qOut) const </argsstring>
+        <name>Invert</name>
+        <param>
+          <type><ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>qOut</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="113"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a295dc9ebb232972e8fc6b5cbebd5d60a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void InvertN</definition>
+        <argsstring>(TQuaternion&lt; Real &gt; &amp;qOut) const </argsstring>
+        <name>InvertN</name>
+        <param>
+          <type><ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>qOut</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="114"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1adc180a80a042cd3158274893304a0d4a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Exp</definition>
+        <argsstring>(TQuaternion&lt; Real &gt; &amp;qOut) const </argsstring>
+        <name>Exp</name>
+        <param>
+          <type><ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>qOut</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="116"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a4b066e3f658b10cd571c4b7e8da69d46" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Ln</definition>
+        <argsstring>(TQuaternion&lt; Real &gt; &amp;qOut) const </argsstring>
+        <name>Ln</name>
+        <param>
+          <type><ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>qOut</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="117"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a52915a8f584121ab13b737a61ccb581a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void MakeRotate</definition>
+        <argsstring>(Real fYaw, Real fPitch, Real fRoll, EulerAngles eulerAnglesOrder)</argsstring>
+        <name>MakeRotate</name>
+        <param>
+          <type>Real</type>
+          <declname>fYaw</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fPitch</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fRoll</declname>
+        </param>
+        <param>
+          <type><ref refid="dc/d1a/Matrix2_8h_1ad8640b7ae1228956729500803a03d20b" kindref="member">EulerAngles</ref></type>
+          <declname>eulerAnglesOrder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="120"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a589414875faa877900044e211f382ef9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void MakeRotate</definition>
+        <argsstring>(const TVector3&lt; Real &gt; &amp;vV1, const TVector3&lt; Real &gt; &amp;vV2)</argsstring>
+        <name>MakeRotate</name>
+        <param>
+          <type>const <ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt; &amp;</type>
+          <declname>vV1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt; &amp;</type>
+          <declname>vV2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="125"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a6e8c799f89ad268b29b7c14b6adba3e8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SplitTwistSwing</definition>
+        <argsstring>(const TVector3&lt; Real &gt; &amp;vV1, TQuaternion&lt; Real &gt; &amp;outTwist, TQuaternion&lt; Real &gt; &amp;outSwing)</argsstring>
+        <name>SplitTwistSwing</name>
+        <param>
+          <type>const <ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt; &amp;</type>
+          <declname>vV1</declname>
+        </param>
+        <param>
+          <type><ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>outTwist</declname>
+        </param>
+        <param>
+          <type><ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>outSwing</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="130"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a5dc706e3caa0750be6701af496f4cf8b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SplitSwingTwist</definition>
+        <argsstring>(const TVector3&lt; Real &gt; &amp;vV1, TQuaternion&lt; Real &gt; &amp;outSwing, TQuaternion&lt; Real &gt; &amp;outTwist)</argsstring>
+        <name>SplitSwingTwist</name>
+        <param>
+          <type>const <ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt; &amp;</type>
+          <declname>vV1</declname>
+        </param>
+        <param>
+          <type><ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>outSwing</declname>
+        </param>
+        <param>
+          <type><ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>outTwist</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="131"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a569cc81a88762016975a8a9e9b851ca1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SLerp</definition>
+        <argsstring>(const TQuaternion&lt; Real &gt; &amp;qSource, const TQuaternion&lt; Real &gt; &amp;qTarget, Real fT)</argsstring>
+        <name>SLerp</name>
+        <param>
+          <type>const <ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>qSource</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>qTarget</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fT</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="134"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a9dbb333de8e190fd70b11f68194de1dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SLerpSpins</definition>
+        <argsstring>(const TQuaternion&lt; Real &gt; &amp;qSource, const TQuaternion&lt; Real &gt; &amp;qTarget, Real fT, Int iSpins)</argsstring>
+        <name>SLerpSpins</name>
+        <param>
+          <type>const <ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>qSource</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>qTarget</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fT</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref></type>
+          <declname>iSpins</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="135"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a4e095abe7891c0401796ba90e022d557" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SQuad</definition>
+        <argsstring>(const TQuaternion&lt; Real &gt; &amp;qQ0, const TQuaternion&lt; Real &gt; &amp;qA0, const TQuaternion&lt; Real &gt; &amp;qA1, const TQuaternion&lt; Real &gt; &amp;qQ1, Real fT) const </argsstring>
+        <name>SQuad</name>
+        <param>
+          <type>const <ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>qQ0</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>qA0</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>qA1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>qQ1</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fT</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="137"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1ad732f878c2769572bee7f4fc3eed3c8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SQuadIntermediate</definition>
+        <argsstring>(const TQuaternion&lt; Real &gt; &amp;qQ0, const TQuaternion&lt; Real &gt; &amp;qQ1, const TQuaternion&lt; Real &gt; &amp;qQ2)</argsstring>
+        <name>SQuadIntermediate</name>
+        <param>
+          <type>const <ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>qQ0</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>qQ1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; Real &gt; &amp;</type>
+          <declname>qQ2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="138"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a156b5f16387e4965e21562028cbf7b5a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type><ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; <ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref> &gt;</type>
+        <definition>TQuaternion&lt; Float &gt; operator*</definition>
+        <argsstring>(const TQuaternion&lt; Float &gt; &amp;rhs) const</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; <ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref> &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="162"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a30ab02b188ef2ecfc76c562a0ec14e75" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type><ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; <ref refid="d9/dd0/Platform_8h_1a1f2c5f02159fb28428e23074cc04166d" kindref="member">Double</ref> &gt;</type>
+        <definition>TQuaternion&lt; Double &gt; operator*</definition>
+        <argsstring>(const TQuaternion&lt; Double &gt; &amp;rhs) const</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; <ref refid="d9/dd0/Platform_8h_1a1f2c5f02159fb28428e23074cc04166d" kindref="member">Double</ref> &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="164"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1ada181f503d1e88a01b9f1b996a42b9a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type><ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; <ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref> &gt; &amp;</type>
+        <definition>TQuaternion&lt; Float &gt; &amp; operator*=</definition>
+        <argsstring>(const TQuaternion&lt; Float &gt; &amp;rhs)</argsstring>
+        <name>operator*=</name>
+        <param>
+          <type>const <ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; <ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref> &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="167"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a6d5ed2d574e0bab7f1a66dd5c899f67c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type><ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; <ref refid="d9/dd0/Platform_8h_1a1f2c5f02159fb28428e23074cc04166d" kindref="member">Double</ref> &gt; &amp;</type>
+        <definition>TQuaternion&lt; Double &gt; &amp; operator*=</definition>
+        <argsstring>(const TQuaternion&lt; Double &gt; &amp;rhs)</argsstring>
+        <name>operator*=</name>
+        <param>
+          <type>const <ref refid="d5/dad/classTQuaternion" kindref="compound">TQuaternion</ref>&lt; <ref refid="d9/dd0/Platform_8h_1a1f2c5f02159fb28428e23074cc04166d" kindref="member">Double</ref> &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="169"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a9106432ad1793264acff7936ccc9795a" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _Quaternion_To_AxisAngle</definition>
+        <argsstring>(TVector3&lt; Real &gt; &amp;outAxis, Real &amp;outAngle) const </argsstring>
+        <name>_Quaternion_To_AxisAngle</name>
+        <param>
+          <type><ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt; &amp;</type>
+          <declname>outAxis</declname>
+        </param>
+        <param>
+          <type>Real &amp;</type>
+          <declname>outAngle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="145"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a73780d47f51673c3420798de7b696b56" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _Quaternion_To_Matrix</definition>
+        <argsstring>(TMatrix3&lt; Real &gt; &amp;outRot) const </argsstring>
+        <name>_Quaternion_To_Matrix</name>
+        <param>
+          <type><ref refid="d7/dee/classTMatrix3" kindref="compound">TMatrix3</ref>&lt; Real &gt; &amp;</type>
+          <declname>outRot</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="146"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a18ab41fd1c59839eb45b69eded278c94" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _AxisAngle_To_Quaternion</definition>
+        <argsstring>(const TVector3&lt; Real &gt; &amp;vAxis, Real fAngle)</argsstring>
+        <name>_AxisAngle_To_Quaternion</name>
+        <param>
+          <type>const <ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt; &amp;</type>
+          <declname>vAxis</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fAngle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="147"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1aa6e0f1fb3a5ea777ab0b36c9714c519a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _Matrix_To_Quaternion</definition>
+        <argsstring>(const TMatrix3&lt; Real &gt; &amp;matRot)</argsstring>
+        <name>_Matrix_To_Quaternion</name>
+        <param>
+          <type>const <ref refid="d7/dee/classTMatrix3" kindref="compound">TMatrix3</ref>&lt; Real &gt; &amp;</type>
+          <declname>matRot</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="148"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a0bb3aa4041f062562ac89322dafe9209" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _Quaternion_To_Matrix</definition>
+        <argsstring>(TMatrix3&lt; Float &gt; &amp;outRot) const</argsstring>
+        <name>_Quaternion_To_Matrix</name>
+        <param>
+          <type><ref refid="d7/dee/classTMatrix3" kindref="compound">TMatrix3</ref>&lt; <ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref> &gt; &amp;</type>
+          <declname>outRot</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="172"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dad/classTQuaternion_1a354392823e36127ca5d30e8a92c87d46" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _Quaternion_To_Matrix</definition>
+        <argsstring>(TMatrix3&lt; Double &gt; &amp;outRot) const</argsstring>
+        <name>_Quaternion_To_Matrix</name>
+        <param>
+          <type><ref refid="d7/dee/classTMatrix3" kindref="compound">TMatrix3</ref>&lt; <ref refid="d9/dd0/Platform_8h_1a1f2c5f02159fb28428e23074cc04166d" kindref="member">Double</ref> &gt; &amp;</type>
+          <declname>outRot</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="174"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="12919">
+        <label>TQuaternion&lt; Real &gt;</label>
+        <link refid="d5/dad/classTQuaternion"/>
+        <childnode refid="12919" relation="usage">
+          <edgelabel>Identity</edgelabel>
+          <edgelabel>Null</edgelabel>
+        </childnode>
+        <childnode refid="12920" relation="usage">
+          <edgelabel>ONE</edgelabel>
+          <edgelabel>W</edgelabel>
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+          <edgelabel>Z</edgelabel>
+          <edgelabel>TWO</edgelabel>
+          <edgelabel>ZERO</edgelabel>
+        </childnode>
+      </node>
+      <node id="12920">
+        <label>Real</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" line="42" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Quaternion/Quaternion.h" bodystart="41" bodyend="153"/>
+    <listofallmembers>
+      <member refid="d5/dad/classTQuaternion_1a18ab41fd1c59839eb45b69eded278c94" prot="private" virt="non-virtual"><scope>TQuaternion</scope><name>_AxisAngle_To_Quaternion</name></member>
+      <member refid="d5/dad/classTQuaternion_1aa6e0f1fb3a5ea777ab0b36c9714c519a" prot="private" virt="non-virtual"><scope>TQuaternion</scope><name>_Matrix_To_Quaternion</name></member>
+      <member refid="d5/dad/classTQuaternion_1a9106432ad1793264acff7936ccc9795a" prot="private" virt="non-virtual"><scope>TQuaternion</scope><name>_Quaternion_To_AxisAngle</name></member>
+      <member refid="d5/dad/classTQuaternion_1a73780d47f51673c3420798de7b696b56" prot="private" virt="non-virtual"><scope>TQuaternion</scope><name>_Quaternion_To_Matrix</name></member>
+      <member refid="d5/dad/classTQuaternion_1a0bb3aa4041f062562ac89322dafe9209" prot="private" virt="non-virtual"><scope>TQuaternion</scope><name>_Quaternion_To_Matrix</name></member>
+      <member refid="d5/dad/classTQuaternion_1a354392823e36127ca5d30e8a92c87d46" prot="private" virt="non-virtual"><scope>TQuaternion</scope><name>_Quaternion_To_Matrix</name></member>
+      <member refid="d5/dad/classTQuaternion_1a96fcceeb910f3ec9a5c4290f62ec4d89" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>Dot</name></member>
+      <member refid="d5/dad/classTQuaternion_1adc180a80a042cd3158274893304a0d4a" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>Exp</name></member>
+      <member refid="d5/dad/classTQuaternion_1a7a0f9d2da0acf5519d224d709791e876" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>GetAxisAngle</name></member>
+      <member refid="d5/dad/classTQuaternion_1adbd0c858f46d5312eaf7933ef25eb35a" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>GetMatrix</name></member>
+      <member refid="d5/dad/classTQuaternion_1ab31240234bbb48f226c763673b35654c" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>Identity</name></member>
+      <member refid="d5/dad/classTQuaternion_1a8c4e34d91b3ffbf068180a5dd591b5e0" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>Invert</name></member>
+      <member refid="d5/dad/classTQuaternion_1a295dc9ebb232972e8fc6b5cbebd5d60a" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>InvertN</name></member>
+      <member refid="d5/dad/classTQuaternion_1a073fb231858b0794f1e69d50650c4522" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>InvNorm</name></member>
+      <member refid="d5/dad/classTQuaternion_1a21d05ce2ed928f64402f36ce13caeda4" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>InvNormSqr</name></member>
+      <member refid="d5/dad/classTQuaternion_1a4b066e3f658b10cd571c4b7e8da69d46" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>Ln</name></member>
+      <member refid="d5/dad/classTQuaternion_1a52915a8f584121ab13b737a61ccb581a" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>MakeRotate</name></member>
+      <member refid="d5/dad/classTQuaternion_1a589414875faa877900044e211f382ef9" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>MakeRotate</name></member>
+      <member refid="d5/dad/classTQuaternion_1af6f59888808c1af2f8f35cd9a5b82f94" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>Norm</name></member>
+      <member refid="d5/dad/classTQuaternion_1aa609389d475aebecda40bf8b20245ce1" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>Normalize</name></member>
+      <member refid="d5/dad/classTQuaternion_1a52bea171a6630716a6a7149cbedd58e5" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>NormSqr</name></member>
+      <member refid="d5/dad/classTQuaternion_1afa151b22495885abe46f637a587ecd79" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>Null</name></member>
+      <member refid="d5/dad/classTQuaternion_1acac09fd02521e2a1297f6dde618fb5ca" prot="private" virt="non-virtual"><scope>TQuaternion</scope><name>ONE</name></member>
+      <member refid="d5/dad/classTQuaternion_1aa18f12f9d731665bf1761defd963e092" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>operator const Real *</name></member>
+      <member refid="d5/dad/classTQuaternion_1a37afb44a75d1a61dbf1995e68a15b700" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>operator Real *</name></member>
+      <member refid="d5/dad/classTQuaternion_1ad9aa419fc2474c225193b2dd698a71f5" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>operator!=</name></member>
+      <member refid="d5/dad/classTQuaternion_1ace8f8f45bb939248d4dea9a27c0b64c5" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>operator*</name></member>
+      <member refid="d5/dad/classTQuaternion_1a784e3d0a94a0300d44c4e770dfbf6cf5" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>operator*</name></member>
+      <member refid="d5/dad/classTQuaternion_1a6e2a54af7732736707d15c7652e0fc39" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>operator*</name></member>
+      <member refid="d5/dad/classTQuaternion_1a3a39e1089f3b2b7914dd775cb3360ebe" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>operator*</name></member>
+      <member refid="d5/dad/classTQuaternion_1a156b5f16387e4965e21562028cbf7b5a" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>operator*</name></member>
+      <member refid="d5/dad/classTQuaternion_1a30ab02b188ef2ecfc76c562a0ec14e75" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>operator*</name></member>
+      <member refid="d5/dad/classTQuaternion_1ab156feed27dbb54bc727ecbe6f3a215d" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>operator*=</name></member>
+      <member refid="d5/dad/classTQuaternion_1a36da75788b71a108e915b21324692806" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>operator*=</name></member>
+      <member refid="d5/dad/classTQuaternion_1ada181f503d1e88a01b9f1b996a42b9a0" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>operator*=</name></member>
+      <member refid="d5/dad/classTQuaternion_1a6d5ed2d574e0bab7f1a66dd5c899f67c" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>operator*=</name></member>
+      <member refid="d5/dad/classTQuaternion_1ad864cb68a401b6589a9aa6fcb8daa4e7" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>operator+</name></member>
+      <member refid="d5/dad/classTQuaternion_1a7007af0b900e07024ad4bb3c833e8bcc" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>operator+</name></member>
+      <member refid="d5/dad/classTQuaternion_1a5ee770a7fc6c0dbb178a4002f99b5295" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>operator+=</name></member>
+      <member refid="d5/dad/classTQuaternion_1a35a10f7aefc12044222af28c764c4426" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>operator-</name></member>
+      <member refid="d5/dad/classTQuaternion_1a87fd484d749cf9190f3c36818283a982" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>operator-</name></member>
+      <member refid="d5/dad/classTQuaternion_1ae221428ee596a6822665af21bc906e65" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>operator-=</name></member>
+      <member refid="d5/dad/classTQuaternion_1a99470aa6131a0e908db6752f421f12c8" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>operator/</name></member>
+      <member refid="d5/dad/classTQuaternion_1a3ab16d851c25f7a6d691e201fcb2e1c7" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>operator/=</name></member>
+      <member refid="d5/dad/classTQuaternion_1ade2e4cb06eb3ee17e5397b844897ad43" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>operator=</name></member>
+      <member refid="d5/dad/classTQuaternion_1a09327c8941a05c4ca737770346bf20e3" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>operator==</name></member>
+      <member refid="d5/dad/classTQuaternion_1a16bc1150043ddf0eb1bb26e07d01b97c" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>operator[]</name></member>
+      <member refid="d5/dad/classTQuaternion_1a16c3e65e5c3cb2c7d3ad611186ab3277" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>operator[]</name></member>
+      <member refid="d5/dad/classTQuaternion_1a16a53ede5f306a403ea8ee9367277c2c" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>operator[]</name></member>
+      <member refid="d5/dad/classTQuaternion_1a4c9eae2fc3af1319229e8177a190025b" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>operator[]</name></member>
+      <member refid="d5/dad/classTQuaternion_1a6f36b3c327d29d027befc4e0563d42a6" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>operator~</name></member>
+      <member refid="d5/dad/classTQuaternion_1a569cc81a88762016975a8a9e9b851ca1" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>SLerp</name></member>
+      <member refid="d5/dad/classTQuaternion_1a9dbb333de8e190fd70b11f68194de1dd" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>SLerpSpins</name></member>
+      <member refid="d5/dad/classTQuaternion_1a5dc706e3caa0750be6701af496f4cf8b" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>SplitSwingTwist</name></member>
+      <member refid="d5/dad/classTQuaternion_1a6e8c799f89ad268b29b7c14b6adba3e8" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>SplitTwistSwing</name></member>
+      <member refid="d5/dad/classTQuaternion_1a4e095abe7891c0401796ba90e022d557" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>SQuad</name></member>
+      <member refid="d5/dad/classTQuaternion_1ad732f878c2769572bee7f4fc3eed3c8c" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>SQuadIntermediate</name></member>
+      <member refid="d5/dad/classTQuaternion_1afdf3b91ae2dbfd4f1d4077df6fbd1a12" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>TQuaternion</name></member>
+      <member refid="d5/dad/classTQuaternion_1a0401d62657a0e4c2053eccb782ceb0f9" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>TQuaternion</name></member>
+      <member refid="d5/dad/classTQuaternion_1a1ffd45e0c6b3ae9af58005762f91d2a2" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>TQuaternion</name></member>
+      <member refid="d5/dad/classTQuaternion_1af00fa1c078a4c272de802c527d4da7b4" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>TQuaternion</name></member>
+      <member refid="d5/dad/classTQuaternion_1abc35ed6f125c274c2be0fc031e61e782" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>TQuaternion</name></member>
+      <member refid="d5/dad/classTQuaternion_1abb9e5f8bf2827b2f7d2cd28fadc7458a" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>TQuaternion</name></member>
+      <member refid="d5/dad/classTQuaternion_1a5a29e3be527d6d6da72237ccda797942" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>TQuaternion</name></member>
+      <member refid="d5/dad/classTQuaternion_1aa2f4f55be7ca7ebf9a4cdd3f2c84cc36" prot="private" virt="non-virtual"><scope>TQuaternion</scope><name>TWO</name></member>
+      <member refid="d5/dad/classTQuaternion_1a1f97e09f1794ff31940d74cd2bcf0ec0" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>W</name></member>
+      <member refid="d5/dad/classTQuaternion_1a4e57c550565be37cb1f606f7948b0b99" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>X</name></member>
+      <member refid="d5/dad/classTQuaternion_1ab43bec7f0bd85ceb4d594f7407f9220e" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>Y</name></member>
+      <member refid="d5/dad/classTQuaternion_1accd64a5804802765d382b535d9f74737" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>Z</name></member>
+      <member refid="d5/dad/classTQuaternion_1a861ab6a3627bfe53ae2453e2a5e1fca8" prot="private" virt="non-virtual"><scope>TQuaternion</scope><name>ZERO</name></member>
+      <member refid="d5/dad/classTQuaternion_1a06ef317ff2ad502bc96eadb8947421e1" prot="public" virt="non-virtual"><scope>TQuaternion</scope><name>~TQuaternion</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

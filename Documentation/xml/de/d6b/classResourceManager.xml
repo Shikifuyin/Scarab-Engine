@@ -1,0 +1,442 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="de/d6b/classResourceManager" kind="class" prot="public">
+    <compoundname>ResourceManager</compoundname>
+    <basecompoundref refid="dd/dcd/classManager" prot="public" virt="non-virtual">Manager&lt; ResourceManager &gt;</basecompoundref>
+    <includes refid="de/d51/ResourceManager_8h" local="no">ResourceManager.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="de/d6b/classResourceManager_1a8fa7648c55dc63f7b6315fa92c4d59b6" prot="private" static="no">
+        <type><ref refid="d0/da4/classTreeMap" kindref="compound">TreeMap</ref>&lt; const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *, <ref refid="d5/d53/classResourceDB" kindref="compound">ResourceDB</ref> * &gt;</type>
+        <definition>typedef TreeMap&lt;const GChar *, ResourceDB *&gt; ResourceDBMap</definition>
+        <argsstring></argsstring>
+        <name>ResourceDBMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h" line="87" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="de/d6b/classResourceManager_1ac806bf86dd233d74e6ab9777e1e9f044" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class Manager&lt; ResourceManager &gt;</definition>
+        <argsstring></argsstring>
+        <name>Manager&lt; ResourceManager &gt;</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h" line="67" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="de/d6b/classResourceManager_1ad1fb53875b4df9a995d94beaf8fffb49" prot="private" static="no" mutable="no">
+        <type><ref refid="de/d6b/classResourceManager_1a8fa7648c55dc63f7b6315fa92c4d59b6" kindref="member">ResourceDBMap</ref></type>
+        <definition>ResourceDBMap m_mapResourceDBs</definition>
+        <argsstring></argsstring>
+        <name>m_mapResourceDBs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h" line="91" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d6b/classResourceManager_1a0557d8669d826a6c5bcc06996c3cc496" prot="private" static="no" mutable="yes">
+        <type>ResourceDBMap::Iterator</type>
+        <definition>ResourceDBMap::Iterator m_itEnumerate</definition>
+        <argsstring></argsstring>
+        <name>m_itEnumerate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h" line="92" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="de/d6b/classResourceManager_1acee3da7170c69179f2b8f3b32ae08fd4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+        <definition>static const GChar* GetName</definition>
+        <argsstring>()</argsstring>
+        <name>GetName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h" line="63"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d6b/classResourceManager_1ad5d9b6a3aaa7c8854fd95d2f113109c5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+        <definition>static const GChar* GetMemoryBudget</definition>
+        <argsstring>()</argsstring>
+        <name>GetMemoryBudget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h" line="64"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="de/d6b/classResourceManager_1a6a2f2dfe18eed126c72be99972c02236" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ResourceManager</definition>
+        <argsstring>()</argsstring>
+        <name>ResourceManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h" line="68"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d6b/classResourceManager_1af4728fc4f4c5fbd3ff32470d6636aaf9" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~ResourceManager</definition>
+        <argsstring>()</argsstring>
+        <name>~ResourceManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h" line="69"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="de/d6b/classResourceManager_1a419b2f33f002bf7cf38404f39b682364" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Initialize</definition>
+        <argsstring>()</argsstring>
+        <name>Initialize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h" line="72"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d6b/classResourceManager_1a9034990ea6331d36c0f19a4e8af78366" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Cleanup</definition>
+        <argsstring>()</argsstring>
+        <name>Cleanup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h" line="73"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d6b/classResourceManager_1af3c2a56ce1648dd65068015d6ab57f62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d5/d53/classResourceDB" kindref="compound">ResourceDB</ref> *</type>
+        <definition>ResourceDB* CreateRDB</definition>
+        <argsstring>(const GChar *strName)</argsstring>
+        <name>CreateRDB</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h" line="76"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d6b/classResourceManager_1acb480bbab478b784ed0a4734886dda0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d5/d53/classResourceDB" kindref="compound">ResourceDB</ref> *</type>
+        <definition>ResourceDB* OpenRDB</definition>
+        <argsstring>(const GChar *strName)</argsstring>
+        <name>OpenRDB</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h" line="77"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d6b/classResourceManager_1a2a2a78e44b7d2e6a6dd413542abb7a0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void CloseRDB</definition>
+        <argsstring>(const GChar *strName)</argsstring>
+        <name>CloseRDB</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h" line="78"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d6b/classResourceManager_1a0102ff5ef3ab5ce3a878fb421e5551e7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d5/d53/classResourceDB" kindref="compound">ResourceDB</ref> *</type>
+        <definition>ResourceDB* GetRDB</definition>
+        <argsstring>(const GChar *strName) const </argsstring>
+        <name>GetRDB</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h" line="80"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d6b/classResourceManager_1a5133da1f4bbe4030d8611c789ed08902" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void EnumRDBs</definition>
+        <argsstring>() const </argsstring>
+        <name>EnumRDBs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h" line="82"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d6b/classResourceManager_1acda81704ad58ce492eba929f60da5e40" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d5/d53/classResourceDB" kindref="compound">ResourceDB</ref> *</type>
+        <definition>ResourceDB* EnumNextRDB</definition>
+        <argsstring>() const </argsstring>
+        <name>EnumNextRDB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h" line="83"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="de/d6b/classResourceManager_1a3f056df0f00461556ddff94648a46825" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref></type>
+        <definition>static Int _Name_Comparator</definition>
+        <argsstring>(const GChar *const &amp;rLeft, const GChar *const &amp;rRight, Void *pUserData)</argsstring>
+        <name>_Name_Comparator</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *const &amp;</type>
+          <declname>rLeft</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *const &amp;</type>
+          <declname>rRight</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> *</type>
+          <declname>pUserData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h" line="88"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="10548">
+        <label>Manager&lt; ResourceManager &gt;</label>
+        <link refid="dd/dcd/classManager"/>
+      </node>
+      <node id="10547">
+        <label>ResourceManager</label>
+        <link refid="de/d6b/classResourceManager"/>
+        <childnode refid="10548" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="10559">
+        <label>T</label>
+      </node>
+      <node id="10558">
+        <label>RBTreeColor</label>
+      </node>
+      <node id="10556">
+        <label>RedBlackNode&lt; T &gt;</label>
+        <link refid="da/d9d/structRedBlackNode"/>
+        <childnode refid="10557" relation="usage">
+          <edgelabel>pPrev</edgelabel>
+          <edgelabel>pNext</edgelabel>
+          <edgelabel>pParent</edgelabel>
+          <edgelabel>pChild</edgelabel>
+        </childnode>
+        <childnode refid="10558" relation="usage">
+          <edgelabel>iColor</edgelabel>
+        </childnode>
+        <childnode refid="10559" relation="usage">
+          <edgelabel>Item</edgelabel>
+        </childnode>
+      </node>
+      <node id="10555">
+        <label>RedBlackTree&lt; TreeMapNode &gt;</label>
+        <link refid="d9/d5d/classRedBlackTree"/>
+        <childnode refid="10553" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10556" relation="usage">
+          <edgelabel>m_pEnd</edgelabel>
+          <edgelabel>m_pHead</edgelabel>
+          <edgelabel>m_pRoot</edgelabel>
+          <edgelabel>sm_SentinelNode</edgelabel>
+          <edgelabel>RBTREE_LEAF</edgelabel>
+        </childnode>
+        <childnode refid="10551" relation="usage">
+          <edgelabel>m_iNodeCount</edgelabel>
+        </childnode>
+        <childnode refid="10560" relation="usage">
+          <edgelabel>m_pfCompare</edgelabel>
+        </childnode>
+        <childnode refid="10562" relation="usage">
+          <edgelabel>m_pUserData</edgelabel>
+        </childnode>
+      </node>
+      <node id="10551">
+        <label>unsigned int</label>
+      </node>
+      <node id="10557">
+        <label>struct _red_black_node *</label>
+      </node>
+      <node id="10563">
+        <label>int</label>
+      </node>
+      <node id="10550">
+        <label>Manager&lt; ResourceManager &gt;</label>
+        <link refid="dd/dcd/classManager"/>
+        <childnode refid="10549" relation="usage">
+          <edgelabel>sm_pInstance</edgelabel>
+        </childnode>
+        <childnode refid="10551" relation="usage">
+          <edgelabel>m_arrAllocators</edgelabel>
+          <edgelabel>sm_idMemoryContext</edgelabel>
+          <edgelabel>m_iAllocatorCount</edgelabel>
+        </childnode>
+      </node>
+      <node id="10564">
+        <label>Iterator</label>
+      </node>
+      <node id="10560">
+        <label>TreeMapNode&lt; Key, T &gt;</label>
+        <link refid="db/dd2/structTreeMapNode"/>
+        <childnode refid="10561" relation="usage">
+          <edgelabel>nodeKey</edgelabel>
+        </childnode>
+        <childnode refid="10559" relation="usage">
+          <edgelabel>nodeItem</edgelabel>
+        </childnode>
+      </node>
+      <node id="10552">
+        <label>TreeMap&lt; const GChar *, ResourceDB * &gt;</label>
+        <link refid="d0/da4/classTreeMap"/>
+        <childnode refid="10553" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10555" relation="usage">
+          <edgelabel>m_rbTreeMap</edgelabel>
+        </childnode>
+        <childnode refid="10563" relation="usage">
+          <edgelabel>m_pfCompare</edgelabel>
+        </childnode>
+        <childnode refid="10562" relation="usage">
+          <edgelabel>m_pUserData</edgelabel>
+        </childnode>
+      </node>
+      <node id="10561">
+        <label>Key</label>
+      </node>
+      <node id="10554">
+        <label>char</label>
+      </node>
+      <node id="10562">
+        <label>Void *</label>
+      </node>
+      <node id="10549">
+        <label>ResourceManager</label>
+        <link refid="de/d6b/classResourceManager"/>
+        <childnode refid="10550" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10552" relation="usage">
+          <edgelabel>m_mapResourceDBs</edgelabel>
+        </childnode>
+        <childnode refid="10564" relation="usage">
+          <edgelabel>m_itEnumerate</edgelabel>
+        </childnode>
+      </node>
+      <node id="10553">
+        <label>Datastruct</label>
+        <link refid="dc/d51/classDatastruct"/>
+        <childnode refid="10554" relation="usage">
+          <edgelabel>m_strAllocatorName</edgelabel>
+        </childnode>
+        <childnode refid="10551" relation="usage">
+          <edgelabel>m_idMemoryContext</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h" line="61" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h" bodystart="60" bodyend="93"/>
+    <listofallmembers>
+      <member refid="de/d6b/classResourceManager_1a3f056df0f00461556ddff94648a46825" prot="private" virt="non-virtual"><scope>ResourceManager</scope><name>_Name_Comparator</name></member>
+      <member refid="de/d6b/classResourceManager_1a9034990ea6331d36c0f19a4e8af78366" prot="public" virt="non-virtual"><scope>ResourceManager</scope><name>Cleanup</name></member>
+      <member refid="de/d6b/classResourceManager_1a2a2a78e44b7d2e6a6dd413542abb7a0a" prot="public" virt="non-virtual"><scope>ResourceManager</scope><name>CloseRDB</name></member>
+      <member refid="dd/dcd/classManager_1a2ed8631063d066931e92495cbc2187ab" prot="public" virt="non-virtual"><scope>ResourceManager</scope><name>Create</name></member>
+      <member refid="de/d6b/classResourceManager_1af3c2a56ce1648dd65068015d6ab57f62" prot="public" virt="non-virtual"><scope>ResourceManager</scope><name>CreateRDB</name></member>
+      <member refid="dd/dcd/classManager_1a2eb513c4973295259cfbac797e1a0aaf" prot="public" virt="non-virtual"><scope>ResourceManager</scope><name>Destroy</name></member>
+      <member refid="de/d6b/classResourceManager_1acda81704ad58ce492eba929f60da5e40" prot="public" virt="non-virtual"><scope>ResourceManager</scope><name>EnumNextRDB</name></member>
+      <member refid="de/d6b/classResourceManager_1a5133da1f4bbe4030d8611c789ed08902" prot="public" virt="non-virtual"><scope>ResourceManager</scope><name>EnumRDBs</name></member>
+      <member refid="dd/dcd/classManager_1a0866aab4257483326c469dcef942f0e1" prot="public" virt="non-virtual"><scope>ResourceManager</scope><name>GetInstance</name></member>
+      <member refid="dd/dcd/classManager_1a7fa7098f43df61eb754bbf4c91938d74" prot="public" virt="non-virtual"><scope>ResourceManager</scope><name>GetInstancePtr</name></member>
+      <member refid="de/d6b/classResourceManager_1ad5d9b6a3aaa7c8854fd95d2f113109c5" prot="public" virt="non-virtual"><scope>ResourceManager</scope><name>GetMemoryBudget</name></member>
+      <member refid="dd/dcd/classManager_1ab84032e21b26e35b61e49be16d029022" prot="public" virt="non-virtual"><scope>ResourceManager</scope><name>GetMemoryContext</name></member>
+      <member refid="de/d6b/classResourceManager_1acee3da7170c69179f2b8f3b32ae08fd4" prot="public" virt="non-virtual"><scope>ResourceManager</scope><name>GetName</name></member>
+      <member refid="de/d6b/classResourceManager_1a0102ff5ef3ab5ce3a878fb421e5551e7" prot="public" virt="non-virtual"><scope>ResourceManager</scope><name>GetRDB</name></member>
+      <member refid="de/d6b/classResourceManager_1a419b2f33f002bf7cf38404f39b682364" prot="public" virt="non-virtual"><scope>ResourceManager</scope><name>Initialize</name></member>
+      <member refid="de/d6b/classResourceManager_1a0557d8669d826a6c5bcc06996c3cc496" prot="private" virt="non-virtual"><scope>ResourceManager</scope><name>m_itEnumerate</name></member>
+      <member refid="de/d6b/classResourceManager_1ad1fb53875b4df9a995d94beaf8fffb49" prot="private" virt="non-virtual"><scope>ResourceManager</scope><name>m_mapResourceDBs</name></member>
+      <member refid="dd/dcd/classManager_1a8fae1352a98517c1ecb0a6e7396e3f06" prot="protected" virt="non-virtual"><scope>ResourceManager</scope><name>Manager</name></member>
+      <member refid="de/d6b/classResourceManager_1ac806bf86dd233d74e6ab9777e1e9f044" prot="protected" virt="non-virtual"><scope>ResourceManager</scope><name>Manager&lt; ResourceManager &gt;</name></member>
+      <member refid="de/d6b/classResourceManager_1acb480bbab478b784ed0a4734886dda0d" prot="public" virt="non-virtual"><scope>ResourceManager</scope><name>OpenRDB</name></member>
+      <member refid="de/d6b/classResourceManager_1a8fa7648c55dc63f7b6315fa92c4d59b6" prot="private" virt="non-virtual"><scope>ResourceManager</scope><name>ResourceDBMap</name></member>
+      <member refid="de/d6b/classResourceManager_1a6a2f2dfe18eed126c72be99972c02236" prot="protected" virt="non-virtual"><scope>ResourceManager</scope><name>ResourceManager</name></member>
+      <member refid="dd/dcd/classManager_1ad899b83bbcb86bdbf12fff4a8c78bb55" prot="public" virt="non-virtual"><scope>ResourceManager</scope><name>SelectMemory</name></member>
+      <member refid="dd/dcd/classManager_1a6cd6602ec8b7f9839b959e63fb60e874" prot="public" virt="non-virtual"><scope>ResourceManager</scope><name>UnSelectMemory</name></member>
+      <member refid="dd/dcd/classManager_1a2d267823748603d5577dc7809c0a2056" prot="protected" virt="virtual"><scope>ResourceManager</scope><name>~Manager</name></member>
+      <member refid="de/d6b/classResourceManager_1af4728fc4f4c5fbd3ff32470d6636aaf9" prot="protected" virt="virtual"><scope>ResourceManager</scope><name>~ResourceManager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

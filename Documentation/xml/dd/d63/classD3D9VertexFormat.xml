@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="dd/d63/classD3D9VertexFormat" kind="class" prot="public">
+    <compoundname>D3D9VertexFormat</compoundname>
+    <includes refid="da/dbe/D3D9VertexFormat_8h" local="no">D3D9VertexFormat.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="dd/d63/classD3D9VertexFormat_1acabaf79a9ad92f9273eb4254dc19872f" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iFieldCount</definition>
+        <argsstring></argsstring>
+        <name>m_iFieldCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Resources/D3D9VertexFormat.h" line="50" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Resources/D3D9VertexFormat.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d63/classD3D9VertexFormat_1aac284491a2129cb094fb0fe82fda8f02" prot="private" static="no" mutable="no">
+        <type><ref refid="dd/d9a/structD3DVERTEXELEMENT9" kindref="compound">D3DVERTEXELEMENT9</ref></type>
+        <definition>D3DVERTEXELEMENT9 m_arrAttributes[VF_MAX_FIELDS+1]</definition>
+        <argsstring>[VF_MAX_FIELDS+1]</argsstring>
+        <name>m_arrAttributes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Resources/D3D9VertexFormat.h" line="51" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Resources/D3D9VertexFormat.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d63/classD3D9VertexFormat_1a49e2a9cf959db1bd686e632a0cd9ee4d" prot="private" static="no" mutable="no">
+        <type>IDirect3DVertexDeclaration9 *</type>
+        <definition>IDirect3DVertexDeclaration9* m_pDeclaration</definition>
+        <argsstring></argsstring>
+        <name>m_pDeclaration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Resources/D3D9VertexFormat.h" line="53" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Resources/D3D9VertexFormat.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="dd/d63/classD3D9VertexFormat_1ad738ffe38ec89943de84949435ab9ec8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>D3D9VertexFormat</definition>
+        <argsstring>()</argsstring>
+        <name>D3D9VertexFormat</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Resources/D3D9VertexFormat.h" line="40"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d63/classD3D9VertexFormat_1aebf904c6d2b00815c966f19ea7cf5d52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~D3D9VertexFormat</definition>
+        <argsstring>()</argsstring>
+        <name>~D3D9VertexFormat</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Resources/D3D9VertexFormat.h" line="41"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d63/classD3D9VertexFormat_1aa84a28af2220eb8eda81969d3fb0c9a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void PushField</definition>
+        <argsstring>(UInt iOffset, VFFieldType iType, VFFieldUsage iUsage, UInt iUsageIndex)</argsstring>
+        <name>PushField</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iOffset</declname>
+        </param>
+        <param>
+          <type><ref refid="da/df2/VertexFormat_8h_1ad3b258c60b1f8222314d89a372584099" kindref="member">VFFieldType</ref></type>
+          <declname>iType</declname>
+        </param>
+        <param>
+          <type><ref refid="da/df2/VertexFormat_8h_1a2e9f2262b2631d3a84cb5808c9cff564" kindref="member">VFFieldUsage</ref></type>
+          <declname>iUsage</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iUsageIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Resources/D3D9VertexFormat.h" line="43"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d63/classD3D9VertexFormat_1a5c71761fdcdfa42aa79c28e03babc501" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Finalize</definition>
+        <argsstring>(Direct3D9Renderer *pRenderer)</argsstring>
+        <name>Finalize</name>
+        <param>
+          <type><ref refid="dc/db7/classDirect3D9Renderer" kindref="compound">Direct3D9Renderer</ref> *</type>
+          <declname>pRenderer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Resources/D3D9VertexFormat.h" line="44"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d63/classD3D9VertexFormat_1a6e11a76992e8eb6d21299a543153931f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Enable</definition>
+        <argsstring>(Direct3D9Renderer *pRenderer)</argsstring>
+        <name>Enable</name>
+        <param>
+          <type><ref refid="dc/db7/classDirect3D9Renderer" kindref="compound">Direct3D9Renderer</ref> *</type>
+          <declname>pRenderer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Resources/D3D9VertexFormat.h" line="46"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d63/classD3D9VertexFormat_1a28828a1608899701b94e3d46c6259879" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Disable</definition>
+        <argsstring>(Direct3D9Renderer *pRenderer)</argsstring>
+        <name>Disable</name>
+        <param>
+          <type><ref refid="dc/db7/classDirect3D9Renderer" kindref="compound">Direct3D9Renderer</ref> *</type>
+          <declname>pRenderer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Resources/D3D9VertexFormat.h" line="47"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1977">
+        <label>unsigned short</label>
+      </node>
+      <node id="1979">
+        <label>IDirect3DVertexDeclaration9 *</label>
+      </node>
+      <node id="1978">
+        <label>int</label>
+      </node>
+      <node id="1974">
+        <label>D3D9VertexFormat</label>
+        <link refid="dd/d63/classD3D9VertexFormat"/>
+        <childnode refid="1975" relation="usage">
+          <edgelabel>m_arrAttributes</edgelabel>
+        </childnode>
+        <childnode refid="1978" relation="usage">
+          <edgelabel>m_iFieldCount</edgelabel>
+        </childnode>
+        <childnode refid="1979" relation="usage">
+          <edgelabel>m_pDeclaration</edgelabel>
+        </childnode>
+      </node>
+      <node id="1975">
+        <label>LPD3DVERTEXELEMENT9</label>
+        <link refid="dd/d9a/structD3DVERTEXELEMENT9"/>
+        <childnode refid="1976" relation="usage">
+          <edgelabel>Method</edgelabel>
+          <edgelabel>UsageIndex</edgelabel>
+          <edgelabel>Type</edgelabel>
+          <edgelabel>Usage</edgelabel>
+        </childnode>
+        <childnode refid="1977" relation="usage">
+          <edgelabel>Offset</edgelabel>
+          <edgelabel>Stream</edgelabel>
+        </childnode>
+      </node>
+      <node id="1976">
+        <label>char</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Resources/D3D9VertexFormat.h" line="38" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Resources/D3D9VertexFormat.h" bodystart="37" bodyend="54"/>
+    <listofallmembers>
+      <member refid="dd/d63/classD3D9VertexFormat_1ad738ffe38ec89943de84949435ab9ec8" prot="public" virt="non-virtual"><scope>D3D9VertexFormat</scope><name>D3D9VertexFormat</name></member>
+      <member refid="dd/d63/classD3D9VertexFormat_1a28828a1608899701b94e3d46c6259879" prot="public" virt="non-virtual"><scope>D3D9VertexFormat</scope><name>Disable</name></member>
+      <member refid="dd/d63/classD3D9VertexFormat_1a6e11a76992e8eb6d21299a543153931f" prot="public" virt="non-virtual"><scope>D3D9VertexFormat</scope><name>Enable</name></member>
+      <member refid="dd/d63/classD3D9VertexFormat_1a5c71761fdcdfa42aa79c28e03babc501" prot="public" virt="non-virtual"><scope>D3D9VertexFormat</scope><name>Finalize</name></member>
+      <member refid="dd/d63/classD3D9VertexFormat_1aac284491a2129cb094fb0fe82fda8f02" prot="private" virt="non-virtual"><scope>D3D9VertexFormat</scope><name>m_arrAttributes</name></member>
+      <member refid="dd/d63/classD3D9VertexFormat_1acabaf79a9ad92f9273eb4254dc19872f" prot="private" virt="non-virtual"><scope>D3D9VertexFormat</scope><name>m_iFieldCount</name></member>
+      <member refid="dd/d63/classD3D9VertexFormat_1a49e2a9cf959db1bd686e632a0cd9ee4d" prot="private" virt="non-virtual"><scope>D3D9VertexFormat</scope><name>m_pDeclaration</name></member>
+      <member refid="dd/d63/classD3D9VertexFormat_1aa84a28af2220eb8eda81969d3fb0c9a3" prot="public" virt="non-virtual"><scope>D3D9VertexFormat</scope><name>PushField</name></member>
+      <member refid="dd/d63/classD3D9VertexFormat_1aebf904c6d2b00815c966f19ea7cf5d52" prot="public" virt="non-virtual"><scope>D3D9VertexFormat</scope><name>~D3D9VertexFormat</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

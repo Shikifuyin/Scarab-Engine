@@ -1,0 +1,301 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="dc/dcf/classTextureBMP" kind="class" prot="public">
+    <compoundname>TextureBMP</compoundname>
+    <basecompoundref refid="db/ddb/classTextureFile" prot="public" virt="non-virtual">TextureFile</basecompoundref>
+    <includes refid="d6/d80/TextureBMP_8h" local="no">TextureBMP.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="dc/dcf/classTextureBMP_1a09aff2a9e8b665bb0a8c0e9aefbd095d" prot="private" static="no" mutable="yes">
+        <type><ref refid="d0/d30/struct__BMP__FileHeader" kindref="compound">_BMP_FileHeader</ref></type>
+        <definition>_BMP_FileHeader m_bmpFileHeader</definition>
+        <argsstring></argsstring>
+        <name>m_bmpFileHeader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/FileFormats/Textures/TextureBMP.h" line="96" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/FileFormats/Textures/TextureBMP.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/dcf/classTextureBMP_1a67b4a74242dc845b0f5696f525dffda6" prot="private" static="no" mutable="yes">
+        <type><ref refid="dc/d2b/struct__BMP__InfoHeader" kindref="compound">_BMP_InfoHeader</ref></type>
+        <definition>_BMP_InfoHeader m_bmpInfoHeader</definition>
+        <argsstring></argsstring>
+        <name>m_bmpInfoHeader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/FileFormats/Textures/TextureBMP.h" line="97" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/FileFormats/Textures/TextureBMP.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="dc/dcf/classTextureBMP_1a5d1f53a742136bc87db1ec3df17de8ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TextureBMP</definition>
+        <argsstring>()</argsstring>
+        <name>TextureBMP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/FileFormats/Textures/TextureBMP.h" line="84"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/dcf/classTextureBMP_1a7995dc1d19e91d6629d14dcc5e48e3c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~TextureBMP</definition>
+        <argsstring>()</argsstring>
+        <name>~TextureBMP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/FileFormats/Textures/TextureBMP.h" line="85"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/dcf/classTextureBMP_1a4709ad3160bd9f9df43843aea53f4d1c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="db/dd1/TextureFile_8h_1a5ff33da36826500617c4b8ef32c958a2" kindref="member">TextureFileType</ref></type>
+        <definition>virtual TextureFileType GetType</definition>
+        <argsstring>() const </argsstring>
+        <name>GetType</name>
+        <reimplements refid="db/ddb/classTextureFile_1a3568a424725554d4eb58155a6dd1e73f">GetType</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/FileFormats/Textures/TextureBMP.h" line="87"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/dcf/classTextureBMP_1a3b95019fdb9a31098b3a942298fae0b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>virtual Bool Load</definition>
+        <argsstring>(const GChar *strFilename)</argsstring>
+        <name>Load</name>
+        <reimplements refid="db/ddb/classTextureFile_1aa3e9af4d7ef00182901a1a0351aa0cbb">Load</reimplements>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strFilename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/FileFormats/Textures/TextureBMP.h" line="89"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/dcf/classTextureBMP_1a74fb7403a6634ffdc1d35b9f6fc89c27" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>virtual Bool Save</definition>
+        <argsstring>(const GChar *strFilename) const </argsstring>
+        <name>Save</name>
+        <reimplements refid="db/ddb/classTextureFile_1a0d9f67157c9f62d0fbfd160047a45df4">Save</reimplements>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strFilename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/FileFormats/Textures/TextureBMP.h" line="90"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="dc/dcf/classTextureBMP_1a8e37d9385889269501ef8b4156cf60b3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _Load_RGB</definition>
+        <argsstring>(const HFile &amp;hFile)</argsstring>
+        <name>_Load_RGB</name>
+        <param>
+          <type>const <ref refid="d9/da7/classHFile" kindref="compound">HFile</ref> &amp;</type>
+          <declname>hFile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/FileFormats/Textures/TextureBMP.h" line="93"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/dcf/classTextureBMP_1a2914e41ca8e80d829da7c7f7b5b21f0e" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _Save_RGB</definition>
+        <argsstring>(const HFile &amp;hFile) const </argsstring>
+        <name>_Save_RGB</name>
+        <param>
+          <type>const <ref refid="d9/da7/classHFile" kindref="compound">HFile</ref> &amp;</type>
+          <declname>hFile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/FileFormats/Textures/TextureBMP.h" line="94"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="12463">
+        <label>TextureBMP</label>
+        <link refid="dc/dcf/classTextureBMP"/>
+        <childnode refid="12464" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12465">
+        <label>ResourceFile</label>
+        <link refid="df/d88/classResourceFile"/>
+      </node>
+      <node id="12464">
+        <label>TextureFile</label>
+        <link refid="db/ddb/classTextureFile"/>
+        <childnode refid="12465" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="12469">
+        <label>ResourceFileHeader</label>
+        <link refid="d0/dc3/structResourceFileHeader"/>
+        <childnode refid="12470" relation="usage">
+          <edgelabel>dwDataSize</edgelabel>
+        </childnode>
+      </node>
+      <node id="12473">
+        <label>_BMP_InfoHeader</label>
+        <link refid="dc/d2b/struct__BMP__InfoHeader"/>
+        <childnode refid="12474" relation="usage">
+          <edgelabel>Planes</edgelabel>
+          <edgelabel>Bpp</edgelabel>
+        </childnode>
+        <childnode refid="12470" relation="usage">
+          <edgelabel>PaletteUse</edgelabel>
+          <edgelabel>Compression</edgelabel>
+          <edgelabel>ImageSize</edgelabel>
+          <edgelabel>ThisSize</edgelabel>
+          <edgelabel>PaletteImportant</edgelabel>
+        </childnode>
+        <childnode refid="12475" relation="usage">
+          <edgelabel>Width</edgelabel>
+          <edgelabel>XPixelsByMeter</edgelabel>
+          <edgelabel>YPixelsByMeter</edgelabel>
+          <edgelabel>Height</edgelabel>
+        </childnode>
+      </node>
+      <node id="12474">
+        <label>unsigned short</label>
+      </node>
+      <node id="12472">
+        <label>TextureHeader</label>
+        <link refid="da/d8e/structTextureHeader"/>
+        <childnode refid="12470" relation="usage">
+          <edgelabel>dwBounds</edgelabel>
+          <edgelabel>dwFormat</edgelabel>
+          <edgelabel>dwDataSize</edgelabel>
+          <edgelabel>dwUsage</edgelabel>
+          <edgelabel>dwMipMapLevels</edgelabel>
+          <edgelabel>dwType</edgelabel>
+        </childnode>
+      </node>
+      <node id="12476">
+        <label>_BMP_FileHeader</label>
+        <link refid="d0/d30/struct__BMP__FileHeader"/>
+        <childnode refid="12474" relation="usage">
+          <edgelabel>Magic</edgelabel>
+        </childnode>
+        <childnode refid="12470" relation="usage">
+          <edgelabel>OffBits</edgelabel>
+          <edgelabel>Size</edgelabel>
+          <edgelabel>Reserved</edgelabel>
+        </childnode>
+      </node>
+      <node id="12470">
+        <label>ULong</label>
+      </node>
+      <node id="12475">
+        <label>long</label>
+      </node>
+      <node id="12471">
+        <label>unsigned char</label>
+      </node>
+      <node id="12466">
+        <label>TextureBMP</label>
+        <link refid="dc/dcf/classTextureBMP"/>
+        <childnode refid="12467" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12473" relation="usage">
+          <edgelabel>m_bmpInfoHeader</edgelabel>
+        </childnode>
+        <childnode refid="12476" relation="usage">
+          <edgelabel>m_bmpFileHeader</edgelabel>
+        </childnode>
+      </node>
+      <node id="12468">
+        <label>ResourceFile</label>
+        <link refid="df/d88/classResourceFile"/>
+        <childnode refid="12469" relation="usage">
+          <edgelabel>m_pHeader</edgelabel>
+        </childnode>
+        <childnode refid="12471" relation="usage">
+          <edgelabel>m_pData</edgelabel>
+        </childnode>
+      </node>
+      <node id="12467">
+        <label>TextureFile</label>
+        <link refid="db/ddb/classTextureFile"/>
+        <childnode refid="12468" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12472" relation="usage">
+          <edgelabel>m_hTextureHeader</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/FileFormats/Textures/TextureBMP.h" line="82" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/FileFormats/Textures/TextureBMP.h" bodystart="81" bodyend="98"/>
+    <listofallmembers>
+      <member refid="df/d88/classResourceFile_1abd9be72fcc1aaddd55c5e9bde73cb5f0" prot="protected" virt="non-virtual"><scope>TextureBMP</scope><name>_CreateData</name></member>
+      <member refid="dc/dcf/classTextureBMP_1a8e37d9385889269501ef8b4156cf60b3" prot="private" virt="non-virtual"><scope>TextureBMP</scope><name>_Load_RGB</name></member>
+      <member refid="db/ddb/classTextureFile_1a54931b72635e2c299396ef274ff53bb0" prot="protected" virt="virtual"><scope>TextureBMP</scope><name>_OnExport</name></member>
+      <member refid="db/ddb/classTextureFile_1ae9e693ee2dc874f7d0200d9f51bb12b9" prot="protected" virt="virtual"><scope>TextureBMP</scope><name>_OnImport</name></member>
+      <member refid="dc/dcf/classTextureBMP_1a2914e41ca8e80d829da7c7f7b5b21f0e" prot="private" virt="non-virtual"><scope>TextureBMP</scope><name>_Save_RGB</name></member>
+      <member refid="db/ddb/classTextureFile_1af381e624cf21a3156c07da88cd6371f1" prot="public" virt="virtual"><scope>TextureBMP</scope><name>CreateData</name></member>
+      <member refid="df/d88/classResourceFile_1ae18f3b7b13e231c8e2e5e1a3e101fbe9" prot="public" virt="non-virtual"><scope>TextureBMP</scope><name>DestroyData</name></member>
+      <member refid="df/d88/classResourceFile_1af432df0af325b940e0c5f2cf082c27d5" prot="public" virt="non-virtual"><scope>TextureBMP</scope><name>Export</name></member>
+      <member refid="df/d88/classResourceFile_1ac2f41dba5f93e685f0672b80b8b3cafc" prot="public" virt="non-virtual"><scope>TextureBMP</scope><name>GetData</name></member>
+      <member refid="df/d88/classResourceFile_1af74f0879a54c461ee0aacca3842d4aab" prot="public" virt="non-virtual"><scope>TextureBMP</scope><name>GetHeader</name></member>
+      <member refid="db/ddb/classTextureFile_1a67178d7f27f6ec5e2185f2fb0688386a" prot="public" virt="virtual"><scope>TextureBMP</scope><name>GetResourceType</name></member>
+      <member refid="dc/dcf/classTextureBMP_1a4709ad3160bd9f9df43843aea53f4d1c" prot="public" virt="virtual"><scope>TextureBMP</scope><name>GetType</name></member>
+      <member refid="db/ddb/classTextureFile_1a5e1f550acdfd2a8be264b49c28e15b14" prot="public" virt="non-virtual" ambiguityscope="TextureFile::"><scope>TextureBMP</scope><name>GetType</name></member>
+      <member refid="db/ddb/classTextureFile_1a6a6fbb83048a018726da6967160c7d4d" prot="public" virt="non-virtual"><scope>TextureBMP</scope><name>GetTypeName</name></member>
+      <member refid="df/d88/classResourceFile_1a3e4d3044de77c24aee30b49c4bbb41d9" prot="public" virt="non-virtual"><scope>TextureBMP</scope><name>HasData</name></member>
+      <member refid="df/d88/classResourceFile_1ade39979c41936b3fad710f3bf7b1929f" prot="public" virt="non-virtual"><scope>TextureBMP</scope><name>Import</name></member>
+      <member refid="dc/dcf/classTextureBMP_1a3b95019fdb9a31098b3a942298fae0b6" prot="public" virt="virtual"><scope>TextureBMP</scope><name>Load</name></member>
+      <member refid="dc/dcf/classTextureBMP_1a09aff2a9e8b665bb0a8c0e9aefbd095d" prot="private" virt="non-virtual"><scope>TextureBMP</scope><name>m_bmpFileHeader</name></member>
+      <member refid="dc/dcf/classTextureBMP_1a67b4a74242dc845b0f5696f525dffda6" prot="private" virt="non-virtual"><scope>TextureBMP</scope><name>m_bmpInfoHeader</name></member>
+      <member refid="db/ddb/classTextureFile_1a7bb2efc7469fbd26218eda460b89cc3b" prot="protected" virt="non-virtual"><scope>TextureBMP</scope><name>m_hTextureHeader</name></member>
+      <member refid="df/d88/classResourceFile_1a9a4be9b3f12c420d0d8cf1c8059e65a5" prot="protected" virt="non-virtual"><scope>TextureBMP</scope><name>m_pData</name></member>
+      <member refid="df/d88/classResourceFile_1a36793addb7fa9e56d64288e496273822" prot="protected" virt="non-virtual"><scope>TextureBMP</scope><name>m_pHeader</name></member>
+      <member refid="df/d88/classResourceFile_1a2270d0ec468b7a3a08342354d8b7b5cc" prot="public" virt="non-virtual"><scope>TextureBMP</scope><name>ResourceFile</name></member>
+      <member refid="dc/dcf/classTextureBMP_1a74fb7403a6634ffdc1d35b9f6fc89c27" prot="public" virt="virtual"><scope>TextureBMP</scope><name>Save</name></member>
+      <member refid="dc/dcf/classTextureBMP_1a5d1f53a742136bc87db1ec3df17de8ec" prot="public" virt="non-virtual"><scope>TextureBMP</scope><name>TextureBMP</name></member>
+      <member refid="db/ddb/classTextureFile_1a754358337550f9f3d8062e50a8359245" prot="public" virt="non-virtual"><scope>TextureBMP</scope><name>TextureFile</name></member>
+      <member refid="df/d88/classResourceFile_1a7988f8d931b8b079a69596451ff32263" prot="public" virt="virtual"><scope>TextureBMP</scope><name>~ResourceFile</name></member>
+      <member refid="dc/dcf/classTextureBMP_1a7995dc1d19e91d6629d14dcc5e48e3c7" prot="public" virt="non-virtual"><scope>TextureBMP</scope><name>~TextureBMP</name></member>
+      <member refid="db/ddb/classTextureFile_1a1ba5210e601dc877a88fc104a9a30bff" prot="public" virt="virtual"><scope>TextureBMP</scope><name>~TextureFile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

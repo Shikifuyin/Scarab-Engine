@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="de/d2b/structHashMapNode" kind="struct" prot="private">
+    <compoundname>HashMapNode</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename Key</type>
+      </param>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="de/d2b/structHashMapNode_1a233e459a41c358cb3860bcba94c83dbb" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool bAllocated</definition>
+        <argsstring></argsstring>
+        <name>bAllocated</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Table/HashMap.h" line="44" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Table/HashMap.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d2b/structHashMapNode_1ab52ab9f4ecb9a8a632007c6b5af00b50" prot="public" static="no" mutable="no">
+        <type>struct _hashmap_node *</type>
+        <definition>struct _hashmap_node* pPrev</definition>
+        <argsstring></argsstring>
+        <name>pPrev</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Table/HashMap.h" line="45" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Table/HashMap.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d2b/structHashMapNode_1a491faab4b57ad0c1baf1492e9c071918" prot="public" static="no" mutable="no">
+        <type>struct _hashmap_node *</type>
+        <definition>struct _hashmap_node* pNext</definition>
+        <argsstring></argsstring>
+        <name>pNext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Table/HashMap.h" line="46" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Table/HashMap.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d2b/structHashMapNode_1ac4461b76d37f9c9c319728eee61b1085" prot="public" static="no" mutable="no">
+        <type>Key</type>
+        <definition>Key nodeKey</definition>
+        <argsstring></argsstring>
+        <name>nodeKey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Table/HashMap.h" line="47" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Table/HashMap.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d2b/structHashMapNode_1ae76754367b2a77c2bcde5342ad346a26" prot="public" static="no" mutable="no">
+        <type>T</type>
+        <definition>T Item</definition>
+        <argsstring></argsstring>
+        <name>Item</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Table/HashMap.h" line="48" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Table/HashMap.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4770">
+        <label>T</label>
+      </node>
+      <node id="4767">
+        <label>struct _hashmap_node *</label>
+      </node>
+      <node id="4766">
+        <label>HashMapNode&lt; Key, T &gt;</label>
+        <link refid="de/d2b/structHashMapNode"/>
+        <childnode refid="4767" relation="usage">
+          <edgelabel>pPrev</edgelabel>
+          <edgelabel>pNext</edgelabel>
+        </childnode>
+        <childnode refid="4768" relation="usage">
+          <edgelabel>nodeKey</edgelabel>
+        </childnode>
+        <childnode refid="4769" relation="usage">
+          <edgelabel>bAllocated</edgelabel>
+        </childnode>
+        <childnode refid="4770" relation="usage">
+          <edgelabel>Item</edgelabel>
+        </childnode>
+      </node>
+      <node id="4768">
+        <label>Key</label>
+      </node>
+      <node id="4769">
+        <label>bool</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Table/HashMap.h" line="43" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Table/HashMap.h" bodystart="42" bodyend="49"/>
+    <listofallmembers>
+      <member refid="de/d2b/structHashMapNode_1a233e459a41c358cb3860bcba94c83dbb" prot="public" virt="non-virtual"><scope>HashMapNode</scope><name>bAllocated</name></member>
+      <member refid="de/d2b/structHashMapNode_1ae76754367b2a77c2bcde5342ad346a26" prot="public" virt="non-virtual"><scope>HashMapNode</scope><name>Item</name></member>
+      <member refid="de/d2b/structHashMapNode_1ac4461b76d37f9c9c319728eee61b1085" prot="public" virt="non-virtual"><scope>HashMapNode</scope><name>nodeKey</name></member>
+      <member refid="de/d2b/structHashMapNode_1a491faab4b57ad0c1baf1492e9c071918" prot="public" virt="non-virtual"><scope>HashMapNode</scope><name>pNext</name></member>
+      <member refid="de/d2b/structHashMapNode_1ab52ab9f4ecb9a8a632007c6b5af00b50" prot="public" virt="non-virtual"><scope>HashMapNode</scope><name>pPrev</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

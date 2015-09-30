@@ -1,0 +1,217 @@
+/*///////////////////////////////////////////////////////////////////////////////
+// File : <Root>/CSS/Account.css
+/////////////////////////////////////////////////////////////////////////////////
+// Version : 1.0
+// Began Code : 05/06/2012
+// Status : Alpha
+// Portability : Any
+/////////////////////////////////////////////////////////////////////////////////
+// Description : Account integration
+/////////////////////////////////////////////////////////////////////////////////
+// Part of Scarab-Engine, licensed under the
+// Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License
+//   http://creativecommons.org/licenses/by-nc-nd/3.0/
+/////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////////
+// Known Bugs : None.
+///////////////////////////////////////////////////////////////////////////////*/
+
+/*///////////////////////////////////////////////////////////////////////////////
+// Account Integration : Hierarchic containment classes */
+.AccountContainer_Level0 {
+    /* Dimensions */
+    width:96%;
+	height:auto;
+
+    /* Positioning */
+    position:relative;
+
+	margin-left:2%;
+    margin-top:16px;
+    margin-bottom:16px;
+    
+    /* Skinning */
+    background-color:#4a516d;
+    
+    border-radius:8px;
+}
+
+.AccountContainer_Level1 {
+    /* Dimensions */
+    width:98%;
+    height:auto;
+    
+    /* Positioning */
+    position:relative;
+
+    margin-left:1%;
+    margin-top:8px;
+    margin-bottom:8px;
+}
+
+.AccountContainer_Level2 {
+    /* Dimensions */
+    width:100%;
+    height:auto;
+    
+    /* Positioning */
+    position:relative;
+
+    margin-left:0%;
+    margin-top:4px;
+    margin-bottom:4px;
+
+    /* Skinning */
+    line-height:22px;
+    /*font:;*/
+}
+
+.AccountContainer_Level3 {
+    /* Dimensions */
+    width:100%;
+    height:auto;
+    
+    /* Positioning */
+    position:relative;
+
+    margin-top:0px;
+    margin-bottom:0px;
+
+    /* Skinning */
+    line-height:22px;
+    /*font:;*/
+}
+
+/*///////////////////////////////////////////////////////////////////////////////
+// Account Integration : Property affectation classes */
+.AccountProperties_AccountHeaderText {
+    /* Skinning */
+    font-weight:bold;
+
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+.AccountProperties_HeaderText {
+    /* Dimensions */
+    width:16%;
+    
+    /* Positioning */
+    position:relative;
+    float:left;
+
+    margin-left:0%;
+
+    /* Skinning */
+    font-size:18px;
+    font-weight:bold;
+    color:#ee8122;
+
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+.AccountProperties_ContentText {
+    /* Dimensions */
+    width:84%;
+    
+    /* Positioning */
+    position:relative;
+    float:right;
+
+    margin-right:0%;
+
+    /* Skinning */
+    font-size:14px;
+    color:#ffffff;
+}
+
+.AccountProperties_ItemSelect {
+    /* Positioning */
+    position:relative;
+    float:left;
+    
+    margin-right:8px;
+}
+
+.AccountProperties_FooterLeftItem {
+    /* Dimensions */
+    width:auto;
+    
+    /* Positioning */
+    position:relative;
+    float:left;
+
+    margin-left:1%;
+}
+
+.AccountProperties_FooterRightItem {
+    /* Dimensions */
+    width:auto;
+
+    /* Positioning */
+    position:relative;
+    float:right;
+
+    margin-right:1%;
+}
+
+/*///////////////////////////////////////////////////////////////////////////////
+// Account Integration : Specific styling */
+
+/* Root ************************************************************************/
+
+/* AccountContent : Registration : Header **************************************/
+#AccountContent_Registration_Header_Message {
+    /* Skinning */
+    font-size:16px;
+    color:#ff0000;
+}
+
+/* AccountContent : Registration : Footer **************************************/
+#AccountContent_Registration_Footer_PrivacyPolicy {
+    /* Skinning */
+    font-size:14px;
+    color:#ffffff;
+}
+
+/* AccountContent : Registered *************************************************/
+#AccountContent_Registered {
+    /* Skinning */
+    line-height:22px;
+    /*font:;*/
+    font-size:14px;
+    color:#ffffff;
+}
+
+/* AccountContent : Management : Header ****************************************/
+#AccountContent_Management_Header_Banner {
+    /* Skinning */
+    font-size:18px;
+    color:#ee8122;
+}
+
+#AccountContent_Management_Header_Ranking {
+    /* Dimensions */
+    width:98%;
+    
+    /* Positioning */
+    position:relative;
+
+    margin-left:2%;
+    
+    /* Skinning */
+    font-size:16px;
+    color:#ffffff;
+}
+
+#AccountContent_Management_Header_Message {    
+    /* Skinning */
+    font-size:16px;
+    color:#ff0000;
+}
+
+

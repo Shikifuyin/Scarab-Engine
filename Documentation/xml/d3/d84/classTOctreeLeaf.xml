@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d3/d84/classTOctreeLeaf" kind="class" prot="public">
+    <compoundname>TOctreeLeaf</compoundname>
+    <basecompoundref refid="da/d3a/classTOctreeBaseNode" prot="public" virt="non-virtual">TOctreeBaseNode&lt; Real &gt;</basecompoundref>
+    <includes refid="d2/dc3/Octree_8h" local="no">Octree.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>Real</declname>
+        <defname>Real</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d3/d84/classTOctreeLeaf_1a8ac05e68fe9df9f9c643172bfa19b318" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt iDataCount</definition>
+        <argsstring></argsstring>
+        <name>iDataCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/Octree.h" line="96" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/Octree.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d84/classTOctreeLeaf_1a17e489d5bdcc20cb9690570e1d93efff" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/d90/classTBVAABox" kindref="compound">TBVAABox</ref>&lt; Real &gt;</type>
+        <definition>TBVAABox&lt;Real&gt; arrAABoxes[OCTREE_LEAF_CAPACITY]</definition>
+        <argsstring>[OCTREE_LEAF_CAPACITY]</argsstring>
+        <name>arrAABoxes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/Octree.h" line="97" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/Octree.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d84/classTOctreeLeaf_1a20905a66922d6f1ecce44609c19e5fbd" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> *</type>
+        <definition>Void* arrDatas[OCTREE_LEAF_CAPACITY]</definition>
+        <argsstring>[OCTREE_LEAF_CAPACITY]</argsstring>
+        <name>arrDatas</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/Octree.h" line="98" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/Octree.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d3/d84/classTOctreeLeaf_1a9ad8177411c561ea1d28cd64fdbf0305" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TOctreeLeaf</definition>
+        <argsstring>(const TBVAABox&lt; Real &gt; &amp;bvNodeAABox)</argsstring>
+        <name>TOctreeLeaf</name>
+        <param>
+          <type>const <ref refid="d9/d90/classTBVAABox" kindref="compound">TBVAABox</ref>&lt; Real &gt; &amp;</type>
+          <declname>bvNodeAABox</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/Octree.h" line="89"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d84/classTOctreeLeaf_1a57f0e39238d451ac2f9b3faf13fc9a0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~TOctreeLeaf</definition>
+        <argsstring>()</argsstring>
+        <name>~TOctreeLeaf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/Octree.h" line="90"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d84/classTOctreeLeaf_1ac9cc046e88fe1d1b6984344acb1b93f8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>virtual Bool IsNode</definition>
+        <argsstring>() const </argsstring>
+        <name>IsNode</name>
+        <reimplements refid="da/d3a/classTOctreeBaseNode_1aab7dff9576b619d2dee5137d79a8143a">IsNode</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/Octree.h" line="92"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d84/classTOctreeLeaf_1ab1957a32292d766b8a9345889ab3c299" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>virtual Bool IsLeaf</definition>
+        <argsstring>() const </argsstring>
+        <name>IsLeaf</name>
+        <reimplements refid="da/d3a/classTOctreeBaseNode_1a5e359bdaa1484c70f0fde48d22f472ff">IsLeaf</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/Octree.h" line="93"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="12825">
+        <label>TOctreeBaseNode&lt; Real &gt;</label>
+        <link refid="da/d3a/classTOctreeBaseNode"/>
+      </node>
+      <node id="12824">
+        <label>TOctreeLeaf&lt; Real &gt;</label>
+        <link refid="d3/d84/classTOctreeLeaf"/>
+        <childnode refid="12825" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="12827">
+        <label>TOctreeBaseNode&lt; Real &gt;</label>
+        <link refid="da/d3a/classTOctreeBaseNode"/>
+        <childnode refid="12828" relation="usage">
+          <edgelabel>bvAABox</edgelabel>
+        </childnode>
+      </node>
+      <node id="12829">
+        <label>int</label>
+      </node>
+      <node id="12826">
+        <label>TOctreeLeaf&lt; Real &gt;</label>
+        <link refid="d3/d84/classTOctreeLeaf"/>
+        <childnode refid="12827" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12828" relation="usage">
+          <edgelabel>arrAABoxes</edgelabel>
+        </childnode>
+        <childnode refid="12829" relation="usage">
+          <edgelabel>iDataCount</edgelabel>
+        </childnode>
+        <childnode refid="12830" relation="usage">
+          <edgelabel>arrDatas</edgelabel>
+        </childnode>
+      </node>
+      <node id="12828">
+        <label>TBVAABox&lt; Real &gt;</label>
+      </node>
+      <node id="12830">
+        <label>Void *</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/Octree.h" line="87" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/Octree.h" bodystart="86" bodyend="99"/>
+    <listofallmembers>
+      <member refid="d3/d84/classTOctreeLeaf_1a17e489d5bdcc20cb9690570e1d93efff" prot="public" virt="non-virtual"><scope>TOctreeLeaf</scope><name>arrAABoxes</name></member>
+      <member refid="d3/d84/classTOctreeLeaf_1a20905a66922d6f1ecce44609c19e5fbd" prot="public" virt="non-virtual"><scope>TOctreeLeaf</scope><name>arrDatas</name></member>
+      <member refid="da/d3a/classTOctreeBaseNode_1a6be792daf46228cf47c0b3b3854117ae" prot="public" virt="non-virtual"><scope>TOctreeLeaf</scope><name>bvAABox</name></member>
+      <member refid="d3/d84/classTOctreeLeaf_1a8ac05e68fe9df9f9c643172bfa19b318" prot="public" virt="non-virtual"><scope>TOctreeLeaf</scope><name>iDataCount</name></member>
+      <member refid="d3/d84/classTOctreeLeaf_1ab1957a32292d766b8a9345889ab3c299" prot="public" virt="virtual"><scope>TOctreeLeaf</scope><name>IsLeaf</name></member>
+      <member refid="d3/d84/classTOctreeLeaf_1ac9cc046e88fe1d1b6984344acb1b93f8" prot="public" virt="virtual"><scope>TOctreeLeaf</scope><name>IsNode</name></member>
+      <member refid="da/d3a/classTOctreeBaseNode_1a52d065348ef9f243a2fcc1e1e6c4313d" prot="public" virt="non-virtual"><scope>TOctreeLeaf</scope><name>TOctreeBaseNode</name></member>
+      <member refid="d3/d84/classTOctreeLeaf_1a9ad8177411c561ea1d28cd64fdbf0305" prot="public" virt="non-virtual"><scope>TOctreeLeaf</scope><name>TOctreeLeaf</name></member>
+      <member refid="da/d3a/classTOctreeBaseNode_1a9892b1ae9d0369fcf5111415f8d9b135" prot="public" virt="virtual"><scope>TOctreeLeaf</scope><name>~TOctreeBaseNode</name></member>
+      <member refid="d3/d84/classTOctreeLeaf_1a57f0e39238d451ac2f9b3faf13fc9a0a" prot="public" virt="virtual"><scope>TOctreeLeaf</scope><name>~TOctreeLeaf</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

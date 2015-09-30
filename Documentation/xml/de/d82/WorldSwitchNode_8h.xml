@@ -1,0 +1,604 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="de/d82/WorldSwitchNode_8h" kind="file">
+    <compoundname>WorldSwitchNode.h</compoundname>
+    <includes refid="df/d61/WorldNode_8h" local="yes">../Nodes/WorldNode.h</includes>
+    <includes local="yes">WorldSwitchNode.inl</includes>
+    <includedby refid="db/d98/WorldManager_8h" local="yes">WorldManager.h</includedby>
+    <includedby refid="d9/d6f/WorldCaster_8h" local="yes">WorldCaster.h</includedby>
+    <includedby refid="d1/df3/WorldDebugDraw_8h" local="yes">WorldDebugDraw.h</includedby>
+    <includedby refid="df/d7d/WorldDLODNode_8h" local="yes">WorldDLODNode.h</includedby>
+    <incdepgraph>
+      <node id="49170">
+        <label>../Vector/Vector4.h</label>
+        <link refid="d7/d36/Vector4_8h"/>
+        <childnode refid="49121" relation="include">
+        </childnode>
+        <childnode refid="49171" relation="include">
+        </childnode>
+      </node>
+      <node id="49174">
+        <label>Matrix4.inl</label>
+      </node>
+      <node id="49153">
+        <label>RedBlackTree.inl</label>
+      </node>
+      <node id="49131">
+        <label>SSE.inl</label>
+      </node>
+      <node id="49135">
+        <label>Threading.h</label>
+        <link refid="dd/d0e/Threading_8h"/>
+        <childnode refid="49113" relation="include">
+        </childnode>
+        <childnode refid="49115" relation="include">
+        </childnode>
+        <childnode refid="49136" relation="include">
+        </childnode>
+      </node>
+      <node id="49180">
+        <label>BoundingVolume.inl</label>
+      </node>
+      <node id="49147">
+        <label>Allocators/BreakAllocator.h</label>
+        <link refid="d4/dac/BreakAllocator_8h"/>
+        <childnode refid="49142" relation="include">
+        </childnode>
+        <childnode refid="49148" relation="include">
+        </childnode>
+      </node>
+      <node id="49110">
+        <label>../Memory/MemoryManager.h</label>
+        <link refid="d7/d7b/MemoryManager_8h"/>
+        <childnode refid="49111" relation="include">
+        </childnode>
+        <childnode refid="49121" relation="include">
+        </childnode>
+        <childnode refid="49127" relation="include">
+        </childnode>
+        <childnode refid="49141" relation="include">
+        </childnode>
+        <childnode refid="49145" relation="include">
+        </childnode>
+        <childnode refid="49147" relation="include">
+        </childnode>
+        <childnode refid="49149" relation="include">
+        </childnode>
+        <childnode refid="49151" relation="include">
+        </childnode>
+      </node>
+      <node id="49176">
+        <label>../../Primitives/3D/Linear/Line3.h</label>
+        <link refid="db/d9b/Line3_8h"/>
+        <childnode refid="49127" relation="include">
+        </childnode>
+        <childnode refid="49162" relation="include">
+        </childnode>
+        <childnode refid="49166" relation="include">
+        </childnode>
+        <childnode refid="49177" relation="include">
+        </childnode>
+      </node>
+      <node id="49128">
+        <label>../../ThirdParty/System/System.h</label>
+        <link refid="db/d39/System_8h"/>
+        <childnode refid="49113" relation="include">
+        </childnode>
+        <childnode refid="49115" relation="include">
+        </childnode>
+        <childnode refid="49129" relation="include">
+        </childnode>
+        <childnode refid="49112" relation="include">
+        </childnode>
+        <childnode refid="49133" relation="include">
+        </childnode>
+        <childnode refid="49135" relation="include">
+        </childnode>
+        <childnode refid="49137" relation="include">
+        </childnode>
+        <childnode refid="49139" relation="include">
+        </childnode>
+      </node>
+      <node id="49136">
+        <label>Threading.inl</label>
+      </node>
+      <node id="49148">
+        <label>BreakAllocator.inl</label>
+      </node>
+      <node id="49109">
+        <label>../Datastruct.h</label>
+        <link refid="d5/db1/Datastruct_8h"/>
+        <childnode refid="49110" relation="include">
+        </childnode>
+        <childnode refid="49152" relation="include">
+        </childnode>
+      </node>
+      <node id="49152">
+        <label>Datastruct.inl</label>
+      </node>
+      <node id="49108">
+        <label>../Tree/RedBlackTree.h</label>
+        <link refid="d6/dff/RedBlackTree_8h"/>
+        <childnode refid="49109" relation="include">
+        </childnode>
+        <childnode refid="49153" relation="include">
+        </childnode>
+      </node>
+      <node id="49177">
+        <label>Line3.inl</label>
+      </node>
+      <node id="49115">
+        <label>Platform.h</label>
+        <link refid="d9/dd0/Platform_8h"/>
+        <childnode refid="49116" relation="include">
+        </childnode>
+      </node>
+      <node id="49172">
+        <label>../Vertex/Vertex4.h</label>
+        <link refid="d1/dca/Vertex4_8h"/>
+        <childnode refid="49170" relation="include">
+        </childnode>
+        <childnode refid="49173" relation="include">
+        </childnode>
+      </node>
+      <node id="49145">
+        <label>Allocators/PoolAllocator.h</label>
+        <link refid="d3/d03/PoolAllocator_8h"/>
+        <childnode refid="49142" relation="include">
+        </childnode>
+        <childnode refid="49146" relation="include">
+        </childnode>
+      </node>
+      <node id="49162">
+        <label>../Vector/Vector3.h</label>
+        <link refid="dd/d8c/Vector3_8h"/>
+        <childnode refid="49121" relation="include">
+        </childnode>
+        <childnode refid="49163" relation="include">
+        </childnode>
+      </node>
+      <node id="49118">
+        <label>FPU.inl</label>
+      </node>
+      <node id="49120">
+        <label>Hashing.inl</label>
+      </node>
+      <node id="49126">
+        <label>MathFunction.inl</label>
+      </node>
+      <node id="49154">
+        <label>TreeMap.inl</label>
+      </node>
+      <node id="49122">
+        <label>../Formats/Scalar.h</label>
+        <link refid="d0/d10/Scalar_8h"/>
+        <childnode refid="49115" relation="include">
+        </childnode>
+        <childnode refid="49123" relation="include">
+        </childnode>
+      </node>
+      <node id="49182">
+        <label>WorldBaseNode.inl</label>
+      </node>
+      <node id="49143">
+        <label>MemoryAllocator.inl</label>
+      </node>
+      <node id="49183">
+        <label>WorldNode.inl</label>
+      </node>
+      <node id="49111">
+        <label>../Math/Hash/Hashing.h</label>
+        <link refid="d0/d4e/Hashing_8h"/>
+        <childnode refid="49112" relation="include">
+        </childnode>
+        <childnode refid="49120" relation="include">
+        </childnode>
+      </node>
+      <node id="49142">
+        <label>MemoryAllocator.h</label>
+        <link refid="d2/d75/MemoryAllocator_8h"/>
+        <childnode refid="49127" relation="include">
+        </childnode>
+        <childnode refid="49143" relation="include">
+        </childnode>
+      </node>
+      <node id="49106">
+        <label>../Nodes/WorldNode.h</label>
+        <link refid="df/d61/WorldNode_8h"/>
+        <childnode refid="49107" relation="include">
+        </childnode>
+        <childnode refid="49155" relation="include">
+        </childnode>
+        <childnode refid="49183" relation="include">
+        </childnode>
+      </node>
+      <node id="49169">
+        <label>../Matrix/Matrix4.h</label>
+        <link refid="d6/d64/Matrix4_8h"/>
+        <childnode refid="49162" relation="include">
+        </childnode>
+        <childnode refid="49170" relation="include">
+        </childnode>
+        <childnode refid="49166" relation="include">
+        </childnode>
+        <childnode refid="49172" relation="include">
+        </childnode>
+        <childnode refid="49174" relation="include">
+        </childnode>
+      </node>
+      <node id="49178">
+        <label>../../Primitives/3D/Planar/Plane.h</label>
+        <link refid="d8/d2f/Plane_8h"/>
+        <childnode refid="49162" relation="include">
+        </childnode>
+        <childnode refid="49166" relation="include">
+        </childnode>
+        <childnode refid="49179" relation="include">
+        </childnode>
+      </node>
+      <node id="49134">
+        <label>File.inl</label>
+      </node>
+      <node id="49179">
+        <label>Plane.inl</label>
+      </node>
+      <node id="49129">
+        <label>Hardware/Hardware.h</label>
+        <link refid="da/dec/Hardware_8h"/>
+        <childnode refid="49115" relation="include">
+        </childnode>
+        <childnode refid="49117" relation="include">
+        </childnode>
+        <childnode refid="49130" relation="include">
+        </childnode>
+        <childnode refid="49132" relation="include">
+        </childnode>
+      </node>
+      <node id="49141">
+        <label>Allocators/StackAllocator.h</label>
+        <link refid="db/d84/StackAllocator_8h"/>
+        <childnode refid="49142" relation="include">
+        </childnode>
+        <childnode refid="49144" relation="include">
+        </childnode>
+      </node>
+      <node id="49132">
+        <label>Hardware.inl</label>
+      </node>
+      <node id="49181">
+        <label>BVAABox.inl</label>
+      </node>
+      <node id="49160">
+        <label>../Vector/Vector2.h</label>
+        <link refid="d0/df7/Vector2_8h"/>
+        <childnode refid="49121" relation="include">
+        </childnode>
+        <childnode refid="49161" relation="include">
+        </childnode>
+      </node>
+      <node id="49171">
+        <label>Vector4.inl</label>
+      </node>
+      <node id="49146">
+        <label>PoolAllocator.inl</label>
+      </node>
+      <node id="49184">
+        <label>WorldSwitchNode.inl</label>
+      </node>
+      <node id="49123">
+        <label>Scalar.inl</label>
+      </node>
+      <node id="49158">
+        <label>../../../Types/Transform/Transform3.h</label>
+        <link refid="d2/d67/Transform3_8h"/>
+        <childnode refid="49127" relation="include">
+        </childnode>
+        <childnode refid="49159" relation="include">
+        </childnode>
+        <childnode refid="49169" relation="include">
+        </childnode>
+        <childnode refid="49175" relation="include">
+        </childnode>
+      </node>
+      <node id="49119">
+        <label>String.inl</label>
+      </node>
+      <node id="49163">
+        <label>Vector3.inl</label>
+      </node>
+      <node id="49161">
+        <label>Vector2.inl</label>
+      </node>
+      <node id="49117">
+        <label>Hardware/FPU.h</label>
+        <link refid="dd/d2f/FPU_8h"/>
+        <childnode refid="49115" relation="include">
+        </childnode>
+        <childnode refid="49118" relation="include">
+        </childnode>
+      </node>
+      <node id="49164">
+        <label>../Vertex/Vertex2.h</label>
+        <link refid="dc/d05/Vertex2_8h"/>
+        <childnode refid="49160" relation="include">
+        </childnode>
+        <childnode refid="49165" relation="include">
+        </childnode>
+      </node>
+      <node id="49156">
+        <label>../../../Lib/Math/Geometry/BoundingShapes/3D/BVAABox.h</label>
+        <link refid="dc/d7d/BVAABox_8h"/>
+        <childnode refid="49157" relation="include">
+        </childnode>
+        <childnode refid="49181" relation="include">
+        </childnode>
+      </node>
+      <node id="49159">
+        <label>../Matrix/Matrix3.h</label>
+        <link refid="d1/d41/Matrix3_8h"/>
+        <childnode refid="49160" relation="include">
+        </childnode>
+        <childnode refid="49162" relation="include">
+        </childnode>
+        <childnode refid="49164" relation="include">
+        </childnode>
+        <childnode refid="49166" relation="include">
+        </childnode>
+        <childnode refid="49168" relation="include">
+        </childnode>
+      </node>
+      <node id="49149">
+        <label>Allocators/HeapAllocator.h</label>
+        <link refid="d3/d89/HeapAllocator_8h"/>
+        <childnode refid="49142" relation="include">
+        </childnode>
+        <childnode refid="49150" relation="include">
+        </childnode>
+      </node>
+      <node id="49112">
+        <label>../../../ThirdParty/System/String.h</label>
+        <link refid="d9/dba/String_8h"/>
+        <childnode refid="49113" relation="include">
+        </childnode>
+        <childnode refid="49115" relation="include">
+        </childnode>
+        <childnode refid="49117" relation="include">
+        </childnode>
+        <childnode refid="49119" relation="include">
+        </childnode>
+      </node>
+      <node id="49175">
+        <label>Transform3.inl</label>
+      </node>
+      <node id="49116">
+        <label>Platform.inl</label>
+      </node>
+      <node id="49151">
+        <label>MemoryManager.inl</label>
+      </node>
+      <node id="49139">
+        <label>System.inl</label>
+      </node>
+      <node id="49137">
+        <label>Networking.h</label>
+        <link refid="df/dfb/Networking_8h"/>
+        <childnode refid="49113" relation="include">
+        </childnode>
+        <childnode refid="49115" relation="include">
+        </childnode>
+        <childnode refid="49138" relation="include">
+        </childnode>
+      </node>
+      <node id="49157">
+        <label>BoundingVolume.h</label>
+        <link refid="dd/d3b/BoundingVolume_8h"/>
+        <childnode refid="49158" relation="include">
+        </childnode>
+        <childnode refid="49176" relation="include">
+        </childnode>
+        <childnode refid="49178" relation="include">
+        </childnode>
+        <childnode refid="49180" relation="include">
+        </childnode>
+      </node>
+      <node id="49133">
+        <label>File.h</label>
+        <link refid="d6/db7/File_8h"/>
+        <childnode refid="49113" relation="include">
+        </childnode>
+        <childnode refid="49115" relation="include">
+        </childnode>
+        <childnode refid="49112" relation="include">
+        </childnode>
+        <childnode refid="49134" relation="include">
+        </childnode>
+      </node>
+      <node id="49144">
+        <label>StackAllocator.inl</label>
+      </node>
+      <node id="49155">
+        <label>WorldBaseNode.h</label>
+        <link refid="d6/d3d/WorldBaseNode_8h"/>
+        <childnode refid="49156" relation="include">
+        </childnode>
+        <childnode refid="49182" relation="include">
+        </childnode>
+      </node>
+      <node id="49114">
+        <label>ForwardWin32.inl</label>
+      </node>
+      <node id="49130">
+        <label>SSE.h</label>
+        <link refid="d0/d02/SSE_8h"/>
+        <childnode refid="49115" relation="include">
+        </childnode>
+        <childnode refid="49131" relation="include">
+        </childnode>
+      </node>
+      <node id="49107">
+        <label>../../../Lib/Datastruct/Table/TreeMap.h</label>
+        <link refid="da/d29/TreeMap_8h"/>
+        <childnode refid="49108" relation="include">
+        </childnode>
+        <childnode refid="49154" relation="include">
+        </childnode>
+      </node>
+      <node id="49138">
+        <label>Networking.inl</label>
+      </node>
+      <node id="49173">
+        <label>Vertex4.inl</label>
+      </node>
+      <node id="49125">
+        <label>Fixed.inl</label>
+      </node>
+      <node id="49121">
+        <label>../Math/Functions/MathFunction.h</label>
+        <link refid="d1/d98/MathFunction_8h"/>
+        <childnode refid="49117" relation="include">
+        </childnode>
+        <childnode refid="49122" relation="include">
+        </childnode>
+        <childnode refid="49124" relation="include">
+        </childnode>
+        <childnode refid="49126" relation="include">
+        </childnode>
+      </node>
+      <node id="49124">
+        <label>../Formats/Fixed.h</label>
+        <link refid="d4/d76/Fixed_8h"/>
+        <childnode refid="49122" relation="include">
+        </childnode>
+        <childnode refid="49125" relation="include">
+        </childnode>
+      </node>
+      <node id="49140">
+        <label>ErrorManager.inl</label>
+      </node>
+      <node id="49167">
+        <label>Vertex3.inl</label>
+      </node>
+      <node id="49166">
+        <label>../Vertex/Vertex3.h</label>
+        <link refid="d0/df3/Vertex3_8h"/>
+        <childnode refid="49162" relation="include">
+        </childnode>
+        <childnode refid="49167" relation="include">
+        </childnode>
+      </node>
+      <node id="49150">
+        <label>HeapAllocator.inl</label>
+      </node>
+      <node id="49168">
+        <label>Matrix3.inl</label>
+      </node>
+      <node id="49113">
+        <label>../Forwards/ForwardWin32.h</label>
+        <link refid="d5/dea/ForwardWin32_8h"/>
+        <childnode refid="49114" relation="include">
+        </childnode>
+      </node>
+      <node id="49165">
+        <label>Vertex2.inl</label>
+      </node>
+      <node id="49127">
+        <label>../Error/ErrorManager.h</label>
+        <link refid="d1/db6/ErrorManager_8h"/>
+        <childnode refid="49128" relation="include">
+        </childnode>
+        <childnode refid="49140" relation="include">
+        </childnode>
+      </node>
+      <node id="49105">
+        <label>WorldSwitchNode.h</label>
+        <link refid="WorldSwitchNode.h"/>
+        <childnode refid="49106" relation="include">
+        </childnode>
+        <childnode refid="49184" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="49186">
+        <label>WorldManager.h</label>
+        <link refid="db/d98/WorldManager_8h"/>
+        <childnode refid="49187" relation="include">
+        </childnode>
+      </node>
+      <node id="49192">
+        <label>MyDungeon.h</label>
+        <link refid="d0/de7/MyDungeon_8h"/>
+        <childnode refid="49190" relation="include">
+        </childnode>
+      </node>
+      <node id="49195">
+        <label>WorldDLODNode.h</label>
+        <link refid="df/d7d/WorldDLODNode_8h"/>
+      </node>
+      <node id="49193">
+        <label>WorldCaster.h</label>
+        <link refid="d9/d6f/WorldCaster_8h"/>
+        <childnode refid="49186" relation="include">
+        </childnode>
+      </node>
+      <node id="49190">
+        <label>Main.h</label>
+        <link refid="da/d94/Main_8h"/>
+      </node>
+      <node id="49191">
+        <label>MyLandscape.h</label>
+        <link refid="d7/d2b/MyLandscape_8h"/>
+        <childnode refid="49190" relation="include">
+        </childnode>
+      </node>
+      <node id="49188">
+        <label>ApplicationManager.h</label>
+        <link refid="d2/d9d/ApplicationManager_8h"/>
+        <childnode refid="49189" relation="include">
+        </childnode>
+        <childnode refid="49190" relation="include">
+        </childnode>
+        <childnode refid="49191" relation="include">
+        </childnode>
+        <childnode refid="49192" relation="include">
+        </childnode>
+      </node>
+      <node id="49187">
+        <label>WindowApplication.h</label>
+        <link refid="d4/d72/WindowApplication_8h"/>
+        <childnode refid="49188" relation="include">
+        </childnode>
+      </node>
+      <node id="49194">
+        <label>WorldDebugDraw.h</label>
+        <link refid="d1/df3/WorldDebugDraw_8h"/>
+        <childnode refid="49186" relation="include">
+        </childnode>
+      </node>
+      <node id="49189">
+        <label>Entities.h</label>
+        <link refid="d7/d5d/Entities_8h"/>
+        <childnode refid="49190" relation="include">
+        </childnode>
+      </node>
+      <node id="49185">
+        <label>WorldSwitchNode.h</label>
+        <link refid="WorldSwitchNode.h"/>
+        <childnode refid="49186" relation="include">
+        </childnode>
+        <childnode refid="49193" relation="include">
+        </childnode>
+        <childnode refid="49194" relation="include">
+        </childnode>
+        <childnode refid="49195" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d4/dce/classWorldSwitchNode" prot="public">WorldSwitchNode</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/Container/WorldSwitchNode.h"/>
+  </compounddef>
+</doxygen>

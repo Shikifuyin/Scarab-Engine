@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d6/dc4/struct__FontData" kind="struct" prot="private">
+    <compoundname>_FontData</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d6/dc4/struct__FontData_1a63719db07f6ef338ede2b0db626b4922" prot="public" static="no" mutable="no">
+        <type><ref refid="d5/df6/structFontDescriptor" kindref="compound">FontDescriptor</ref></type>
+        <definition>FontDescriptor hDesc</definition>
+        <argsstring></argsstring>
+        <name>hDesc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/RenderingManager.h" line="460" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/RenderingManager.h" bodystart="460" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/dc4/struct__FontData_1a26a66b1ee674f9c66cd58f310854e81f" prot="public" static="no" mutable="no">
+        <type><ref refid="d3/d79/classTexture2D" kindref="compound">Texture2D</ref> *</type>
+        <definition>Texture2D* pTexture</definition>
+        <argsstring></argsstring>
+        <name>pTexture</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/RenderingManager.h" line="461" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/RenderingManager.h" bodystart="461" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="46">
+        <label>FontDescriptor</label>
+        <link refid="d5/df6/structFontDescriptor"/>
+        <childnode refid="47" relation="usage">
+          <edgelabel>iCharMaxHeight</edgelabel>
+          <edgelabel>iCharMaxWidth</edgelabel>
+          <edgelabel>iCharCount</edgelabel>
+          <edgelabel>iCellSize</edgelabel>
+          <edgelabel>iCellBaseline</edgelabel>
+        </childnode>
+        <childnode refid="48" relation="usage">
+          <edgelabel>strName</edgelabel>
+        </childnode>
+        <childnode refid="49" relation="usage">
+          <edgelabel>arrCells</edgelabel>
+        </childnode>
+      </node>
+      <node id="53">
+        <label>static Bool</label>
+      </node>
+      <node id="57">
+        <label>unsigned int</label>
+      </node>
+      <node id="54">
+        <label>unsigned char</label>
+      </node>
+      <node id="47">
+        <label>int</label>
+      </node>
+      <node id="51">
+        <label>Texture</label>
+        <link refid="d6/d97/classTexture"/>
+        <childnode refid="52" relation="public-inheritance">
+        </childnode>
+        <childnode refid="53" relation="usage">
+          <edgelabel>sm_arrMipMapable</edgelabel>
+          <edgelabel>sm_arrCompressed</edgelabel>
+        </childnode>
+        <childnode refid="54" relation="usage">
+          <edgelabel>m_pData</edgelabel>
+        </childnode>
+        <childnode refid="55" relation="usage">
+          <edgelabel>m_iFormat</edgelabel>
+        </childnode>
+        <childnode refid="56" relation="usage">
+          <edgelabel>m_iUsage</edgelabel>
+        </childnode>
+        <childnode refid="47" relation="usage">
+          <edgelabel>m_arrLevelOffsets</edgelabel>
+          <edgelabel>m_arrLevelBytes</edgelabel>
+          <edgelabel>m_arrLevelBounds</edgelabel>
+          <edgelabel>m_iMipMapLevels</edgelabel>
+          <edgelabel>m_iTotalBytes</edgelabel>
+        </childnode>
+        <childnode refid="57" relation="usage">
+          <edgelabel>sm_arrDimensions</edgelabel>
+          <edgelabel>sm_arrPixelBytes</edgelabel>
+        </childnode>
+        <childnode refid="58" relation="usage">
+          <edgelabel>m_arrUserFields</edgelabel>
+        </childnode>
+      </node>
+      <node id="55">
+        <label>TextureFormat</label>
+      </node>
+      <node id="45">
+        <label>_FontData</label>
+        <link refid="d6/dc4/struct__FontData"/>
+        <childnode refid="46" relation="usage">
+          <edgelabel>hDesc</edgelabel>
+        </childnode>
+        <childnode refid="50" relation="usage">
+          <edgelabel>pTexture</edgelabel>
+        </childnode>
+      </node>
+      <node id="52">
+        <label>Resource</label>
+        <link refid="da/dcd/classResource"/>
+      </node>
+      <node id="56">
+        <label>TextureUsage</label>
+      </node>
+      <node id="50">
+        <label>Texture2D</label>
+        <link refid="d3/d79/classTexture2D"/>
+        <childnode refid="51" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="58">
+        <label>Void *</label>
+      </node>
+      <node id="49">
+        <label>FontCell</label>
+        <link refid="d4/dfc/structFontCell"/>
+        <childnode refid="47" relation="usage">
+          <edgelabel>iCharX</edgelabel>
+          <edgelabel>iCharHeight</edgelabel>
+          <edgelabel>iCharY</edgelabel>
+          <edgelabel>iCharWidth</edgelabel>
+        </childnode>
+      </node>
+      <node id="48">
+        <label>MBChar</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/RenderingManager.h" line="459" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/RenderingManager.h" bodystart="459" bodyend="462"/>
+    <listofallmembers>
+      <member refid="d6/dc4/struct__FontData_1a63719db07f6ef338ede2b0db626b4922" prot="public" virt="non-virtual"><scope>_FontData</scope><name>hDesc</name></member>
+      <member refid="d6/dc4/struct__FontData_1a26a66b1ee674f9c66cd58f310854e81f" prot="public" virt="non-virtual"><scope>_FontData</scope><name>pTexture</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

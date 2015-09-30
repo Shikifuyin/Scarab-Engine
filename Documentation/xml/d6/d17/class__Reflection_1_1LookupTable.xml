@@ -1,0 +1,195 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d6/d17/class__Reflection_1_1LookupTable" kind="class" prot="public">
+    <compoundname>_Reflection::LookupTable</compoundname>
+    <includes refid="df/d3d/Definitions_8h" local="no">Definitions.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+      <param>
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <declname>SIZE</declname>
+        <defname>SIZE</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d6/d17/class__Reflection_1_1LookupTable_1a0d2ee8ee86f6ab668e224fd4e2ca573d" prot="private" static="no" mutable="no">
+        <type><ref refid="d5/dff/structLookupItem" kindref="compound">LookupItem</ref></type>
+        <definition>LookupItem m_arrItems[SIZE]</definition>
+        <argsstring>[SIZE]</argsstring>
+        <name>m_arrItems</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="231" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="231" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d6/d17/class__Reflection_1_1LookupTable_1a3e23fe9a514a9db42b1cf0985a73625a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LookupTable</definition>
+        <argsstring>()</argsstring>
+        <name>LookupTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="213"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d17/class__Reflection_1_1LookupTable_1a365aef0dc4381d3364e22bf9246f2ee1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~LookupTable</definition>
+        <argsstring>()</argsstring>
+        <name>~LookupTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="214"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d17/class__Reflection_1_1LookupTable_1a38e5f9160b13017a0752684bc28514db" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>T *</type>
+        <definition>T* Get</definition>
+        <argsstring>(const GChar *strName) const </argsstring>
+        <name>Get</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="216"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d17/class__Reflection_1_1LookupTable_1a6201bf82807b5160a10a22d7ca013f11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+        <definition>const GChar* Insert</definition>
+        <argsstring>(T *pItem)</argsstring>
+        <name>Insert</name>
+        <param>
+          <type>T *</type>
+          <declname>pItem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="217"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d17/class__Reflection_1_1LookupTable_1a4a79adec99c6d8d314f6e285221d0bd9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Remove</definition>
+        <argsstring>(const GChar *strName)</argsstring>
+        <name>Remove</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="218"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d6/d17/class__Reflection_1_1LookupTable_1aa7ba2ea709b9d6248392db98ba2ace8b" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord _Hash</definition>
+        <argsstring>(const GChar *strName) const </argsstring>
+        <name>_Hash</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="221"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d17/class__Reflection_1_1LookupTable_1a7c67f46ce357fcd31a63faf6a2c40acc" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt _Index</definition>
+        <argsstring>(DWord dwHash) const </argsstring>
+        <name>_Index</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+          <declname>dwHash</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="222"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="6007">
+        <label>T</label>
+      </node>
+      <node id="6006">
+        <label>ULong</label>
+      </node>
+      <node id="6003">
+        <label>LookupTable&lt; T, SIZE &gt;</label>
+        <link refid="d6/d17/class__Reflection_1_1LookupTable"/>
+        <childnode refid="6004" relation="usage">
+          <edgelabel>m_arrItems</edgelabel>
+        </childnode>
+      </node>
+      <node id="6004">
+        <label>LookupItem&lt; T, SIZE &gt;</label>
+        <link refid="d5/dff/structLookupItem"/>
+        <childnode refid="6005" relation="usage">
+          <edgelabel>strName</edgelabel>
+        </childnode>
+        <childnode refid="6006" relation="usage">
+          <edgelabel>dwHash</edgelabel>
+        </childnode>
+        <childnode refid="6007" relation="usage">
+          <edgelabel>pItem</edgelabel>
+        </childnode>
+      </node>
+      <node id="6005">
+        <label>char</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" line="211" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Definitions.h" bodystart="210" bodyend="232"/>
+    <listofallmembers>
+      <member refid="d6/d17/class__Reflection_1_1LookupTable_1aa7ba2ea709b9d6248392db98ba2ace8b" prot="private" virt="non-virtual"><scope>_Reflection::LookupTable</scope><name>_Hash</name></member>
+      <member refid="d6/d17/class__Reflection_1_1LookupTable_1a7c67f46ce357fcd31a63faf6a2c40acc" prot="private" virt="non-virtual"><scope>_Reflection::LookupTable</scope><name>_Index</name></member>
+      <member refid="d6/d17/class__Reflection_1_1LookupTable_1a38e5f9160b13017a0752684bc28514db" prot="public" virt="non-virtual"><scope>_Reflection::LookupTable</scope><name>Get</name></member>
+      <member refid="d6/d17/class__Reflection_1_1LookupTable_1a6201bf82807b5160a10a22d7ca013f11" prot="public" virt="non-virtual"><scope>_Reflection::LookupTable</scope><name>Insert</name></member>
+      <member refid="d6/d17/class__Reflection_1_1LookupTable_1a3e23fe9a514a9db42b1cf0985a73625a" prot="public" virt="non-virtual"><scope>_Reflection::LookupTable</scope><name>LookupTable</name></member>
+      <member refid="d6/d17/class__Reflection_1_1LookupTable_1a0d2ee8ee86f6ab668e224fd4e2ca573d" prot="private" virt="non-virtual"><scope>_Reflection::LookupTable</scope><name>m_arrItems</name></member>
+      <member refid="d6/d17/class__Reflection_1_1LookupTable_1a4a79adec99c6d8d314f6e285221d0bd9" prot="public" virt="non-virtual"><scope>_Reflection::LookupTable</scope><name>Remove</name></member>
+      <member refid="d6/d17/class__Reflection_1_1LookupTable_1a365aef0dc4381d3364e22bf9246f2ee1" prot="public" virt="non-virtual"><scope>_Reflection::LookupTable</scope><name>~LookupTable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

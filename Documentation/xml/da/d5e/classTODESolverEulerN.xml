@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="da/d5e/classTODESolverEulerN" kind="class" prot="public">
+    <compoundname>TODESolverEulerN</compoundname>
+    <basecompoundref refid="d2/da5/classTODESolverN" prot="public" virt="non-virtual">TODESolverN&lt; Real &gt;</basecompoundref>
+    <includes refid="d0/da8/ODESolverN_8h" local="no">ODESolverN.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename Real</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="da/d5e/classTODESolverEulerN_1a0f5fa10f59af16fc2b3309f2d6f2cee5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TODESolverEulerN</definition>
+        <argsstring>(Function pfFunction, UInt iDimension, Void *pUserData=NULL)</argsstring>
+        <name>TODESolverEulerN</name>
+        <param>
+          <type><ref refid="d6/d2f/Reflect_8h_1ae8fcc70dfa03aed8a097850896d32b0f" kindref="member">Function</ref></type>
+          <declname>pfFunction</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDimension</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> *</type>
+          <declname>pUserData</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Integration/ODESolverN.h" line="74"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d5e/classTODESolverEulerN_1aff56d69d307caabb86b28369846cfdc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~TODESolverEulerN</definition>
+        <argsstring>()</argsstring>
+        <name>~TODESolverEulerN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Integration/ODESolverN.h" line="75"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d5e/classTODESolverEulerN_1a689cccfaf0b65bf6e0e4d05d5e84f652" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void SetStepValue</definition>
+        <argsstring>(Real fStepValue)</argsstring>
+        <name>SetStepValue</name>
+        <reimplements refid="d2/da5/classTODESolverN_1ad114dbc39b02c15881f33d1b45ca6b7b">SetStepValue</reimplements>
+        <param>
+          <type>Real</type>
+          <declname>fStepValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Integration/ODESolverN.h" line="78"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d5e/classTODESolverEulerN_1aacdc405cabcb6e19045447f5c02a04e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void Update</definition>
+        <argsstring>(TVectorN&lt; Real &gt; &amp;outX, Real &amp;outT, const TVectorN&lt; Real &gt; &amp;vX, Real fT)</argsstring>
+        <name>Update</name>
+        <reimplements refid="d2/da5/classTODESolverN_1aa7ffeb3b0fbc8afff2eb1b20f5f0bf5a">Update</reimplements>
+        <param>
+          <type><ref refid="d4/d23/classTVectorN" kindref="compound">TVectorN</ref>&lt; Real &gt; &amp;</type>
+          <declname>outX</declname>
+        </param>
+        <param>
+          <type>Real &amp;</type>
+          <declname>outT</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d4/d23/classTVectorN" kindref="compound">TVectorN</ref>&lt; Real &gt; &amp;</type>
+          <declname>vX</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fT</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Integration/ODESolverN.h" line="81"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="12838">
+        <label>TODESolverN&lt; Real &gt;</label>
+        <link refid="d2/da5/classTODESolverN"/>
+      </node>
+      <node id="12837">
+        <label>TODESolverEulerN&lt; Real &gt;</label>
+        <link refid="da/d5e/classTODESolverEulerN"/>
+        <childnode refid="12838" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="12843">
+        <label>Real</label>
+      </node>
+      <node id="12840">
+        <label>TODESolverN&lt; Real &gt;</label>
+        <link refid="d2/da5/classTODESolverN"/>
+        <childnode refid="12841" relation="usage">
+          <edgelabel>m_iDimension</edgelabel>
+        </childnode>
+        <childnode refid="12842" relation="usage">
+          <edgelabel>m_pUserData</edgelabel>
+        </childnode>
+        <childnode refid="12843" relation="usage">
+          <edgelabel>m_fStepValue</edgelabel>
+        </childnode>
+        <childnode refid="12844" relation="usage">
+          <edgelabel>m_pfFunction</edgelabel>
+        </childnode>
+      </node>
+      <node id="12841">
+        <label>int</label>
+      </node>
+      <node id="12844">
+        <label>TVectorN&lt; Real &gt;</label>
+      </node>
+      <node id="12839">
+        <label>TODESolverEulerN&lt; Real &gt;</label>
+        <link refid="da/d5e/classTODESolverEulerN"/>
+        <childnode refid="12840" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12842">
+        <label>Void *</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Integration/ODESolverN.h" line="71" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Integration/ODESolverN.h" bodystart="70" bodyend="82"/>
+    <listofallmembers>
+      <member refid="d2/da5/classTODESolverN_1adb31538241b4b835550192c751a9e03f" prot="public" virt="non-virtual"><scope>TODESolverEulerN</scope><name>Function</name></member>
+      <member refid="d2/da5/classTODESolverN_1a4e09e3d51755f656163fe726368182f6" prot="public" virt="non-virtual"><scope>TODESolverEulerN</scope><name>GetDimension</name></member>
+      <member refid="d2/da5/classTODESolverN_1a5c028437fe08eeea73fbd642a3e7f0ac" prot="public" virt="non-virtual"><scope>TODESolverEulerN</scope><name>GetFunction</name></member>
+      <member refid="d2/da5/classTODESolverN_1a7112be5e1e0a11c87b602066b475c5bb" prot="public" virt="non-virtual"><scope>TODESolverEulerN</scope><name>GetStepValue</name></member>
+      <member refid="d2/da5/classTODESolverN_1a0b83f136e6f9aefd43434c9c4c4c5b4c" prot="public" virt="non-virtual"><scope>TODESolverEulerN</scope><name>GetUserData</name></member>
+      <member refid="d2/da5/classTODESolverN_1a71ccc52e94d4e89e31e511cd37dbabbb" prot="protected" virt="non-virtual"><scope>TODESolverEulerN</scope><name>m_fStepValue</name></member>
+      <member refid="d2/da5/classTODESolverN_1a9041ec9b42364efdf8877e441cc51e3e" prot="protected" virt="non-virtual"><scope>TODESolverEulerN</scope><name>m_iDimension</name></member>
+      <member refid="d2/da5/classTODESolverN_1a4fc39fa831fd31920eecfc516b4a262c" prot="protected" virt="non-virtual"><scope>TODESolverEulerN</scope><name>m_pfFunction</name></member>
+      <member refid="d2/da5/classTODESolverN_1a91f0e9a4012edb773b7a59705e4e90a0" prot="protected" virt="non-virtual"><scope>TODESolverEulerN</scope><name>m_pUserData</name></member>
+      <member refid="d2/da5/classTODESolverN_1a862197498d1dedf95d7c95b99edde2ed" prot="public" virt="non-virtual"><scope>TODESolverEulerN</scope><name>SetFunction</name></member>
+      <member refid="da/d5e/classTODESolverEulerN_1a689cccfaf0b65bf6e0e4d05d5e84f652" prot="public" virt="virtual"><scope>TODESolverEulerN</scope><name>SetStepValue</name></member>
+      <member refid="d2/da5/classTODESolverN_1a164138c0b5d72c34a644809e30453f64" prot="public" virt="non-virtual"><scope>TODESolverEulerN</scope><name>SetUserData</name></member>
+      <member refid="da/d5e/classTODESolverEulerN_1a0f5fa10f59af16fc2b3309f2d6f2cee5" prot="public" virt="non-virtual"><scope>TODESolverEulerN</scope><name>TODESolverEulerN</name></member>
+      <member refid="d2/da5/classTODESolverN_1a0d7f075f00094e0fdf09f5ab3ce41954" prot="public" virt="non-virtual"><scope>TODESolverEulerN</scope><name>TODESolverN</name></member>
+      <member refid="da/d5e/classTODESolverEulerN_1aacdc405cabcb6e19045447f5c02a04e7" prot="public" virt="virtual"><scope>TODESolverEulerN</scope><name>Update</name></member>
+      <member refid="da/d5e/classTODESolverEulerN_1aff56d69d307caabb86b28369846cfdc4" prot="public" virt="virtual"><scope>TODESolverEulerN</scope><name>~TODESolverEulerN</name></member>
+      <member refid="d2/da5/classTODESolverN_1ac37c82c6c6bf4cc0015381fe8019e35a" prot="public" virt="virtual"><scope>TODESolverEulerN</scope><name>~TODESolverN</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

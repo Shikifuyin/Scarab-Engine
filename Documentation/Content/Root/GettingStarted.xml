@@ -1,0 +1,353 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+
+<documentationdata>
+	<documentation id="GettingStarted">
+		<shortdesc>
+			<lang-en>
+				A Quick-Start Introduction to Scarab-Engine.
+			</lang-en>
+			<lang-fr>
+				Bientôt ...
+			</lang-fr>
+		</shortdesc>
+	
+		<doccontent>
+			<lang-en> There is allways a point to start from and here it is ! Let's dive into Scarab-Engine ...
+
+				I/ General Things to Know
+
+				    First things first, you need to be aware of a few behaviours used accross the whole engine to make
+				sure you make proper use of the interfaces provided.
+				
+				    A/ Error Handling
+
+				    Scarab-Engine is extremely picky and any invalid parameter or usage will spawn assertions at you and
+				halt execution. Error recovery or abort behaviour is entirely yours to decide as long at it isn't an
+				engine-level error which are allways asserted out. You can use the ErrorManager from the Lib module to
+				handle and classify errors. The same goes for exceptions, if you want to use them, do it at your level.
+				The engine itself doesn't use exceptions for obvious performance reasons ...
+				The big advantage here is that if it works, then you know you've done it the right/best way. No complex
+				though about is there a better/optimized to do this ... Only optimized stuff is available anyway !
+
+				    B/ Managers
+
+				    The whole engine is organized by modules and each module is represented in the code by a manager class.
+				Managers are stand-alone singleton classes that holds the main hooks to the API. Each manager has its own
+				tasks and capabilities and they are bound to each other by dependencies. For example, the Modeling manager
+				builds and uses objects to be rendered, so it depends on the Rendering manager. Since there is a fair
+				amount of managers, they also are separated by code-level layers.
+				    All of these managers are accessible through a shortcut macro of the form '(name)Fn' with Fn being a
+				suffix for 'Function'. So you want to do something about Rendering ? Use RenderingFn. About Modeling ? Use
+				ModelingFn. Want a math function ? Use MathFn. And so on ... Easy enough !
+				    The lowest level managers are in the Third-Party module including the very important SystemFn that gives
+				you a consistent and platform-independent API for system operations such as file IO, network IO, threading,
+				etc ... At this level you can also find special managers that are not exposed by the engine end-user API.
+				Those are wrappers to the various third-party API that we have to rely on. I tried to keep their number
+				as small as possible but there are ones we just have to use (OS APIs, DirectX/OpenGL, CUDA, ...).
+				    On the second layer is the Lib module and all its definitions. Here you will find all standard libraries
+				you could expect: data structures, math, strings, objects, ... Two managers are of special importance here.
+				The ErrorManager allows you to define error contexts and values and manage them in a way that allows easy
+				logging and referencing. The engine itself only uses strict assertions but the top-level user can of course
+				make more forgiving error recovery management using this. The MemoryManager manages ... memory ! This is
+				probably the most important and usage-intensive one so we will discuss it in its own section just below.
+				    On the third layer is the Engine module itself and all the important managers like RenderingManager,
+				GUIManager,	PhysicsManager, ...
+				This is where most of the work is done and you will uses these managers	heavily.
+				The WorldManager is of particular importance since it is your scene representation interface to
+				put game entities into. Each object in this world can then be assigned a rendering representation and an
+				animation representation, respectively crafted using the ModelingManager and PhysicsManager. Take a note
+				here that all animation features are in the PhysicsManager. Kinematic controllers like keyframes are there
+				to integrate scripted animation inside the physical world smoothly.
+				The Application manager may be considered on layer '3.5' as it is a little above all other managers in the
+				Engine module in abstraction. Its purpose is to merge all the engine and lower level parts into one hook
+				to expose a base interface for application frameworks.
+				    Lastly, the fourth layer is the 'user-level' layer and stands above the whole engine so everything is
+				available to build an application. There is no master header though and you must take care to include exactly
+				what you need. Still, managers do have master headers and some key files like System.h, MemoryManager.h or
+				other managers will provide you all-in-one inclusion. You can go both ways here and use an hybrid approach by
+				including master module headers for things you use intensively and pick extra support for what you exactly
+				need using specific include files. This is a great way to build your own customized 'master header'.
+				The Basic Framework discussed later in the documentation is implemented in this layer.
+
+				    C/ Memory budgets
+
+				    Memory in Scarab-Engine is handled in a very controlled way. In fact you don't even have the right to
+				allocate memory yourself ! malloc/free, HeapAlloc/HeapFree or C++ new/delete are all banned ! The engine
+				uses them internally and you don't want to mess with that, do you ? To provide almost constant-time dynamic
+				memory allocation, the engine pre-allocates big chunks of memory and gives them to each manager as a workspace.
+				Each manager has a set of memory chunks which is called its memory budget. This concept is very important
+				since you will have to precisely adjust them to fit your application consumption. You can monitor the memory
+				easily using the manager's tracing and reporting systems. A release build will want them as small and tight
+				fitting as possible while a debugging environment will want them large enough so there is not to worry about
+				them anymore.
+				    Memory budgets are found in each engine's inline (.inl) file, this will soon be moved to the configuration
+				module and loaded from a file. Sizes are given in bytes. Note that for the RenderingManager, this only applies
+				to system memory, video memory is never exposed and is dealt with inside the engine.
+				You should see the memory budget declarations have three properties : A label name, an allocation type and a
+				pool size in bytes. A memory chunk is uniquely identified by its owning manager and its label name.
+				The allocation type describes the type of allocator to use for this memory chunk, it can be either break, stack,
+				pool or heap. Heap is the default and the most generic but also the slowest, a good memory budget uses stacks
+				(fixed allocation ordering) and pools (fixed allocation size) as much as possible. The break allocator is an
+				old-fashioned assembler-like memory chunk breaker, it is very fast, very manual and very unsafe, use it at your
+				own risk ... (it was removed for now, will be back with some security improvements).
+				    Note that all managers have a "Scratch" memory chunk to be used for temporary data, this is a good place to
+				use a stack for example ... Note there is also a special memory budget bound to no manager in particular, called
+				the shared memory context. It can be selected for occasional interactions with out-of-context data regarding
+				memory and for multi-thread communication.
+				    I have those memory budgets ok ... now what ? Hmm ... you use the engine's operators of course ! You have,
+				just like C++, three operators given to you in the form of macros : 'New', 'Delete()' and 'DeleteA()' to fill
+				the respective roles and behaviour of new, delete and delete[]. Simple ... but you also need a way to specify
+				the budget you want to use ! This is done using the memory context stack.
+				    The MemoryManager maintains a stack of each memory chunk that has been selected/unselected. A memory context
+				is opened when you select a memory chunk using a manager's '->SelectMemory("BudgetName")' method and closed when
+				you unselect it using that same	manager's '->UnSelectMemory()' method. These acts like Push/Pop operations on
+				the memory context stack.
+				    The 'New', 'Delete()' and 'DeleteA()' operators will act on memory relative to the memory context selected
+				in the current code block (ie the memory context at the top of the stack). Note that the MemoryManagers pushes
+				the shared memory context as the first bottom-most context in the stack and the ApplicationManager then adds its
+				Scratch context on top of it. Those must never be unpushed manually.
+				    From here there is mainly two behaviours, you can either select a block for each memory operation or select
+				once, do lots of operations, then unselect. Of course, you need to find the optimal balance between these two
+				that best fits what you want to do, however, you should be warned that side effects happen when using unclosed
+				contexts in objects methods, particularly constructors and destructors. Do not do this. Allways open and close
+				your context inside the same method, this will avoid confusion too. Remember explicit is better than implicit.
+				    A final remark about objects allocated by managers, they are managed by the manager and you don't need to
+				worry about them. However this require you to strictly use each manager's factory functions, you should never
+				allocate an engine object by yourself (except those made for derivation of course like GUI models). Each manager
+				has its own Create* / Destroy* interface that gives access to all objects related to this manager. Those objects
+				can in turn have such factory functions for other objects and so on ...
+				    I know this can be a bit confusing and code-cluttering at first but it is a lot easier than it looks and it
+				gives you a lot of freedom on memory along with a powerful abstraction for allocators and segmentation.
+				You will never need to pass allocation-related data to anything as long as it is implemented in the context of a
+				manager ... which is the case for everything in the engine. On the bonus side you have integrated memory tracing
+				and reporting with logging and you have a great way to track bugs you find at the 'memory corrupted' stage.
+
+				    D/ Math conventions
+
+				    Maths in Scarab-Engine are simple : we use the same conventions as real maths ! If ever in doubt, read this
+				again and you have your answer. Well some precisions about computer ... precision. Though.
+				The engine uses a generic template math library that can be used with all fundamental number formats defined in
+				Lib/Math/Formats. In addition to the built-in float and double formats, we define Scalar at compile-time to be
+				either float or double and represent the engine's default precision mode. Fixed format represents fixed-precision
+				arithmetics, Integer format represents infinite precision integers and Rational format represents exact	rational
+				arithmetics. By default Scalar is bound to float.
+				On top of those, Types are defined for various non-scalar math objects like vectors, matrices, colors, ...
+				All matrix operations are row based, matrices are stored by row and vectors are viewed as columns. All vector
+				operations use right hans side convention (ie TrVector2 = Matrix32 * Vector3). This way the first index is
+				allways the row index, then column index, ...
+				    The MathManager holds all basic math functions for arithmetics, analysis and geometry/trigonometry. You can
+				set	various compile-time toggles here to enable tricks on some functions or switch between assembler, taylor,
+				and other implementations.
+				The math library is then split into various domains : Algebra, Analysis and Geometry mainly. A full description
+				of all those is beyond the scope of this introduction and will be discussed in details in the developper manual.
+				However you can browse the code easily and I'm sure you can figure out most of it just by reading the code.
+				    Some specific stuff about rendering to clear things out though ...
+				The engine uses Right Hand Side representation for frames and vector bases. View and projection transform are
+				both RHS too of course. The Z-Axis should be the Up-Axis (not strictly enforced but you WILL confuse yourself).
+				2D viewports are also RHS, with origin at the top-left corner, X-Axis going right, Y-Axis going down and Z-Axis
+				going into the screen. Everything is RHS, That's it !
+
+				II/ Using the Engine
+
+				    When you download the project on the home page, you get a few important things. First, a text file giving
+				installation instructions and Release notes. The root folder itself contains three main folders. '_VCProject'
+				contains the Microsoft Visual C++ project files, 'Source' contains the engine source code and 'Working' contains
+				the engine's run-time data, ie its working directory. This 'Working' folder also contains three main sub-folders,
+				'Data', 'Logs' and 'Screenshots'. 'Data' contains important information the engine needs to be persistent like
+				various states, configuration settings, scripts, resource databases, etc ... 'Logs' contains all logs generated
+				by the error management system of the engine. And 'Screenshots' is a sample of a custom application folder used
+				to store screenshots ...
+				    After installing and opening the project in Microsoft Visual C++, use the solution explorer to navigate in
+				the code and get your marks. Each module is compiled as a static library (dynamic library build is in project).
+				Except for the EntryPoint module which contains a sample test application using the basic framework and is
+				compiled as an executable.
+				    In each main folder in the 'Engine' module you will find the manager's master header from which you can see
+				the whole interface available to you for this manager. You just need to play with the objects then ...
+
+				    A/ ResourceManager (ResourceFn) : Import and Export scene data in various formats
+
+				    The ResourceManager is divided in two main parts : a persistent database and a resource format pipeline.
+				The database (*.rdb files) is a self-contained filesystem using journalization and B+Tree based file allocation
+				to provide optimized persistent storage and on-demand load/save for assets and resources. The ResourceManager
+				gives interfaces to access data in a RDB database just like you would with a file.
+				    Files in these databases can be of any arbitrary format as long as it is declared as a valid ResourceType.
+				Those are the types supported by the resource pipeline. This pipeline handles data exchange operations between
+				a database and external files, or between a database and loaded memory. This makes pre-loading resources very
+				easy, you just need then to pass them to the renderer to load them into video memory and you're ready.
+				Each resource type can have many formats (images-bmp/png/jpg ...) and the pipeline will be in constant evolution
+				to support as many formats as possible, using a custom COLLADA-compliant format as the reference external
+				representation and a custom binary engine-compliant format as the reference internal representation.
+				Format conversion is transparent through the pipeline so you can input/output in any format you want.
+
+				    B/ ModelingManager (ModelingFn) : Build geometry for scene objects
+
+				    The ModelingManager is all about object crafting and geometry management. Here you will find objects to
+				create and represent standard primitives, curves, surfaces, extrusions, or more complex compounds like LOD trees,
+				CSG trees (in project), etc ...
+				    I think this manager is pretty self-explaining ... no catch here. All primitives use standard conventions.
+				See a primitive's header file, at the constructor's comment, to get details about vertices and facet layouts.
+
+				    C/ RenderingManager (RenderingFn) : Rendering platform for scene objects
+
+				    This is the visible part of your virtual world. Every object in the scene will have its rendering
+				representation, if any, rendered using the parameters in this manager. This manager provides a lot of functions
+				that can be further splitted into several parts : display modes management, render states management, viewport
+				management, buffer clearing/color masking, camera management, rendering primitives, resource management, font
+				management and cursor management. Quite a few ...
+				Most of those concern standard rendering operations you should already be familiar with. However a few ones are
+				worth a closer look. Also note that in this section, the term 'resource' refers to rendering resources specific
+				to the RenderingManager.
+				Render states can be set indirectly. We use an override system with two values : a base value and an override
+				value. If the override value exists, it takes precedence over the base value. Any change to the base value is
+				voided while the override value is active. This enables lots of tricks to ease render states switches.
+				Camera management uses the Camera rendering resource. The manager gives you methods to create and destroy cameras
+				and also to set the active rendering camera. Mouse ray-picking is also provided here.
+				Rendering primitives includes the classic buffer-based primitive routine but it also provides a lot of batched
+				procedures to help with fast 2D and text rendering among other things ...
+				Rendering resources includes VertexFormat, VertexBuffer, IndexBuffer, Texture*, RenderTarget, VertexShader and
+				PixelShader. These represent the low-level rendering mechanics and are not directly used, geometry related data
+				is gathered into Mesh objects, rendering related data into Camera/RenderTarget/Light/Material/Texture objects
+				and shader related data into ShaderProgram/ShaderParameters/ShaderConst. On top of those are the modeling manager
+				handling Mesh objects and the Effect library of the RenderingManager dealing with lights, materials, textures and
+				shaders ... All that being said you should know that rendering resources represent data that is actually copied
+				to video memory and thus those objects must be bound to the manager and locked to access their memory.
+				Precise management of those items in your scene is the key to performance ... (ie use instanciation a lot,
+				preload anything you can). But you can do that from the top-level interfaces too of course.
+				Lastly, font management includes loading/unloading but also basic functions for font and character properties and
+				a very handy function for text-picking.
+
+				    D/ PhysicsManager (PhysicsFn) : Animation platform for scene objects
+
+				    This is the invisible part of your virtual world. Every object in the scene has its animation representation,
+				if any, registered in this manager. This manager does a lot of things, it takes geometric representation of
+				objects classified into shapes and provides real-time collision detection. Each shape is associated with a body
+				that represents the physical properties of the object.
+				Using results from collisions, the engine then animates each object according to the laws of constrained physics
+				(Lagrange) using a constraint solver (A lot more details on those in the Developper Manual). You can also use a
+				kinematic controller to enforce your own scripted animation to an object (key-frames, paths, ...).
+				    A few indications on the structure of this world. The physical world is basically a graph with nodes and edges,
+				where nodes represent objects while edges represent constraints or relations. From this you deduce that bodies
+				are nodes ... yes that's it. But there are several types of bodies: rigid bodies for dynamic animation, kinematic
+				bodies for kinematic animation or soft bodies for soft dynamics animation. You also have systems of bodies like
+				particle systems, ragdolls or skeletons.
+				    About edges, they are a few too. Contact edges are special and you don't control them as they exist only when
+				a contact is being solved. Contacts are non-persistent constraints. Joints, on the other hand, are persistent
+				constraints and describe axis-specific translation and rotation constraints between either an object and the
+				world or between two objects. A ragdoll is a composition of rigid bodies and joints.
+				    Controllers, on the kinematic side, are quite different. A controller applies a scripted or pre-computed
+				animation to a kinematic body. Only the special BlendController blends the animation between two other controllers.
+				Controllers do not usually 'connect' objects like joints do, however there is an exception : the IKJointController
+				which represents a joint constraint but in a kinematic form. A skeleton is a composition of kinematic bodies and
+				ikjoint controllers.
+				    Systems are a little more complex, because of deformable shapes handling. This part is left to further study
+				in the Developper Manual.
+
+				    E/ WorldManager (WorldFn) : Assemble your scene objects
+
+				    To centralize all the data needed in a virtual environment, a scene manager is mandatory. A good manager has
+				multiple objectives : provide easy scene manipulation and hierarchic object representation and integrate side
+				functions like visibility culling, ray casting, debug drawing, cameras, lights and global effects such as shadows
+				and reflection. This is exactly what you will find here. The scene is organized as a tree where each node is a
+				logical container and each leaf is a scene object. Leaves can have mesh and bodies attached to them to provide
+				both rendering and animation representations. Nodes can have many uses, you have container nodes like BSP nodes
+				or Switch nodes, etc ...
+				    A particular attention here about the indoor and outdoor scene systems.
+				The indoor system, first, uses portals to compute visible rooms in a room graph. An indoor scene is composed of
+				several 'convex room' objects, organized in a BSP tree using 'indoor area' objects. Each 'convex room' object can
+				be assigned 'portal' objects pointing to another target 'convex room' object to materialize an oriented 'doorway'
+				between	the rooms (note I said oriented, usually you want the other room to have a portal to the first one too).
+				Also a special 'portal culler' object must be used to compute visibility for an indoor scene.
+				See the example MyDungeon.h in the EntryPoint test module of the release package.
+				The outdoor system is quite simpler and only consists of a grid of areas which in turn are grids of regions. Each
+				region is a rectangular section of the landscape and uses an height-map as geometry data. Visibility is computed
+				using a simple view distance estimation and regions are dynamically loaded/unloaded/refreshed using a cache.
+
+				    F/ GUIManager (GUIFn) : Build user interfaces
+
+				    You have your scene and everything but it looks too static ... user interaction to the rescue ! Scarab-Engine
+				provides a fully-featured GUI to help you build wonderful interfaces using all standard widgets. The GUI is
+				event-driven and follows the MVC model. This basically means that for any graphical object you want on the screen
+				you will need a window as a primary container and a widget to represent your object. The GUI itself is a collection
+				of windows, each one being a tree of widgets.
+				    Widgets can be used to show data (Labels, Lists, ...), to take input (InputText, CheckBox, Button, ...) or both.
+				To use a widget you want two things : access the widgets events to do what you want and have some control over the
+				widget's appearence. In a MVC model, both of those can be achieved easily. A widget is in fact composed of two
+				classes, one that represents the widget itself containing the drawing method (the view), and another one that
+				contains both methods to retrieve the appearence of the widget (the model) and callback methods to control what
+				happen when the user does something to the widget (click a button, etc ...).
+				    Another important aspect of the GUI is the layout. Positionning and sizing properties of widgets are controlled
+				using layout objects that basically give rules on a method to deduce the properties of a widget from the properties
+				of its parent container and a set of given parameters. The region computed by a layout for its widget is called the
+				widget's client area or client rect. All widgets are in the client rect of something above, the top	level being a
+				window. On the opposite of widgets, windows don't have any hierarchy between them.
+				    Another type of element exists along windows and widgets : overlays. Overlays are used to represent on-screen
+				elements such as context menus or tooltips ... Those act mostly like a mix between a window and a widget, they
+				behave like top-most windows but instead of containing a tree of widgets, they have a stand-alone function as if
+				they were a widget themselves.
+				    Last but not least, the GUI will need you to feed him application events manually, because you might want to
+				not	use it ! So this is done easily by just forwarding event parameters in the application's class's callbacks to
+				the	GUIManager's callbacks and you're good. However, you do not want to mix dealing event in both that application's
+				callbacks and the GUI's callbacks this would be a mess, even worse with multi-threading ...
+				In order to handle events that are not handled by the GUI again, the manager provides the backboard class, a
+				special widget that	represents ... a virtual backboard ! Any event that ends up being 'unfocused' (ie no destination
+				widget) or unhandled by any window or overlay is sent to this backboard as an event that was not dealt with but
+				might still	need attention. The backboard itself is an allways present widget and cannot be modified, however its
+				model can be dynamically changed.
+				    For common usage you will typically derivate your own model from the widget's model overriding appearence
+				functions to control the view and overriding event callbacks to handle the controller. Then you will use an instance
+				of your class to build the widget and lastly add that widget to your GUI tree using an appropriate layout.
+				You will also want to register your own derivate model for the backboard, to handle unfocused events.
+				The console manager described below is a good sample of a basic interface design.
+
+				    G/ ConsoleManager (ConsoleFn) : Automate things using scripts
+
+				    If you know a bit about coding, you know one of the most precious talent of an excellent programmer is ...
+				His/Her's lazyness ! We are all lazy and we want to be. So much that we want to be 'optimal' in lazyness.
+				That means we have to get smart about doing the fewest things we can and this is where it becomes an art.
+				    Scripting is probably the best example of such lazyness in the programming world, in fact almost anything that
+				do not require you to solve a complex math problem can be scripted. It's all a matter of layers. The more layers
+				of abstraction you have, the more complex problem you handle with ease, the more complex tasks you can achieve.
+				    The modular architecture of the engine itself is an example of this regarding code design. But here we want
+				more. We want to be able to drive the engine at runtime and 'call' its API in an interactive shell ... A console.
+				    This opens a complete world of awesomeness since through this the whole engine becomes interactive and you can
+				virtually, but tediously, do anything. The tedious part will be removed using a nice and rich editor GUI ...
+				    The console has its own environment where you can create generic variables to hold any kind of object handled
+				by the engine. Add a simple /run command to execute a sequence of console commands from a file and you have	basic
+				scripting in the engine ! This is extremely useful ... think of what you can do here about modeling, GUI building,
+				scene setups, etc ...
+				    A basic script that lists all available commands in a naive way is in the release package under /Working/Data
+				/Scripts/Console. You can run it using '/run CmdList'. Use the '/help' command in the console to get specific help
+				about commands.
+
+				    H/ ApplicationManager (ApplicationFn) : Putting it all together
+
+				    Once you have all the parts understood, it is time to make it all work together using the ApplicationManager.
+				This manager is here to provide you with two classes : ConsoleApplication and WindowApplication to handle both
+				text-based and graphical-based applications. All you need to do is to create a class that will represent your
+				application and derivate it from either of those two classes.
+				    In fact, this will give you more work to do to override all minimal callbacks you need to handle your application
+				properly but it also abstracts you from the	system-dependent entry point (main function) and takes care of basic
+				system handling (event loop, graphic context, ...). From there you have Callbacks for anything you need, more details
+				will follow in the basic framework section of the documentation.
+
+				III/ Conclusion
+
+				    Congratulations ! You now know enough about the engine to start coding on very good bases. You should try
+				and experiment all those concepts with the test application in the release package to get a feeling of what
+				you do. You can also read the Basic Framework section for further information about the top-level API's basic
+				operations and code samples.
+				    However before you start some serious code, I strongly advise you to read the Coding Conventions section.
+				It is boring I know but it is the only way to have everyone agree on the same behaviour to write consistent
+				code and limit refactoring headaches.
+					
+				    Once again, the forum is your friend, you have an undocumented problem ? Just ask me, I'll answer as fast
+				as I can ! Thank you for reading this documentation, see you on the forum !
+			</lang-en>
+			<lang-fr>
+				Bientôt ...
+			</lang-fr>
+		</doccontent>
+	
+	</documentation>
+</documentationdata>
+

@@ -1,0 +1,392 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="dc/de5/classTBezierPatch3" kind="class" prot="public">
+    <compoundname>TBezierPatch3</compoundname>
+    <basecompoundref refid="d8/d69/classTCurvePatch3" prot="public" virt="non-virtual">TCurvePatch3&lt; Real &gt;</basecompoundref>
+    <includes refid="db/d75/BezierPatch3_8h" local="no">BezierPatch3.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename Real</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="dc/de5/classTBezierPatch3_1ad29d8d4caa1fa3903cad221ee7072d4f" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iDegree</definition>
+        <argsstring></argsstring>
+        <name>m_iDegree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/BezierPatch3.h" line="59" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/BezierPatch3.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/de5/classTBezierPatch3_1a3abde46ff5ad06449aea7bf4e6de1228" prot="private" static="no" mutable="no">
+        <type>Real *</type>
+        <definition>Real* m_arrBinomial</definition>
+        <argsstring></argsstring>
+        <name>m_arrBinomial</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/BezierPatch3.h" line="60" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/BezierPatch3.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/de5/classTBezierPatch3_1ae6297dfd89746a092179e7b7a63ea5bf" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iControlPointCount</definition>
+        <argsstring></argsstring>
+        <name>m_iControlPointCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/BezierPatch3.h" line="63" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/BezierPatch3.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/de5/classTBezierPatch3_1ae2252236b0acb5a361cf1259747b3c00" prot="private" static="no" mutable="no">
+        <type><ref refid="dc/d75/classTVertex3" kindref="compound">TVertex3</ref>&lt; Real &gt; *</type>
+        <definition>TVertex3&lt;Real&gt;* m_arrControlPoints</definition>
+        <argsstring></argsstring>
+        <name>m_arrControlPoints</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/BezierPatch3.h" line="64" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/BezierPatch3.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/de5/classTBezierPatch3_1a260e3b0b6f4d2f37a0e77061e91706cf" prot="private" static="no" mutable="no">
+        <type><ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt; *</type>
+        <definition>TVector3&lt;Real&gt;* m_arrPdT</definition>
+        <argsstring></argsstring>
+        <name>m_arrPdT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/BezierPatch3.h" line="67" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/BezierPatch3.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/de5/classTBezierPatch3_1adebb6fd666d2946de0ef9bf832e8aac3" prot="private" static="no" mutable="no">
+        <type><ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt; *</type>
+        <definition>TVector3&lt;Real&gt;* m_arrPdT2</definition>
+        <argsstring></argsstring>
+        <name>m_arrPdT2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/BezierPatch3.h" line="68" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/BezierPatch3.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/de5/classTBezierPatch3_1abf45d90b82115284f3b28a1b3191d9f8" prot="private" static="no" mutable="no">
+        <type><ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt; *</type>
+        <definition>TVector3&lt;Real&gt;* m_arrPdT3</definition>
+        <argsstring></argsstring>
+        <name>m_arrPdT3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/BezierPatch3.h" line="69" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/BezierPatch3.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="dc/de5/classTBezierPatch3_1a9366f84db051c8dc8cbf0d11ac556480" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TBezierPatch3</definition>
+        <argsstring>(const TVertex3&lt; Real &gt; *arrControlPoints, UInt iCount)</argsstring>
+        <name>TBezierPatch3</name>
+        <param>
+          <type>const <ref refid="dc/d75/classTVertex3" kindref="compound">TVertex3</ref>&lt; Real &gt; *</type>
+          <declname>arrControlPoints</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iCount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/BezierPatch3.h" line="40"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/de5/classTBezierPatch3_1ac1c01f3b8cdc3b2d4865631f6668939d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~TBezierPatch3</definition>
+        <argsstring>()</argsstring>
+        <name>~TBezierPatch3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/BezierPatch3.h" line="41"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/de5/classTBezierPatch3_1a9e26d80c88fe73bba5272cab6f54058d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetDegree</definition>
+        <argsstring>() const </argsstring>
+        <name>GetDegree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/BezierPatch3.h" line="44"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/de5/classTBezierPatch3_1a514b11a360bc71df762a4e13e9531aab" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetControlPointCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetControlPointCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/BezierPatch3.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/de5/classTBezierPatch3_1a2f741774f71041a8fdffe2bbdd2563a1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="dc/d75/classTVertex3" kindref="compound">TVertex3</ref>&lt; Real &gt; &amp;</type>
+        <definition>const TVertex3&lt;Real&gt;&amp; GetControlPoint</definition>
+        <argsstring>(UInt iControlPoint) const </argsstring>
+        <name>GetControlPoint</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iControlPoint</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/BezierPatch3.h" line="48"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/de5/classTBezierPatch3_1a1c441c90f9d7ab8695af98968bd2653b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetControlPoint</definition>
+        <argsstring>(UInt iControlPoint, const TVertex3&lt; Real &gt; &amp;vPoint)</argsstring>
+        <name>SetControlPoint</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iControlPoint</declname>
+        </param>
+        <param>
+          <type>const <ref refid="dc/d75/classTVertex3" kindref="compound">TVertex3</ref>&lt; Real &gt; &amp;</type>
+          <declname>vPoint</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/BezierPatch3.h" line="49"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/de5/classTBezierPatch3_1aadf53385bb27306313392ec422ee55cf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="dc/d75/classTVertex3" kindref="compound">TVertex3</ref>&lt; Real &gt;</type>
+        <definition>virtual TVertex3&lt;Real&gt; P</definition>
+        <argsstring>(Real fT) const </argsstring>
+        <name>P</name>
+        <reimplements refid="d7/d44/classTCurve3_1ae60e3c8e857142c000a4e8b0045f471a">P</reimplements>
+        <param>
+          <type>Real</type>
+          <declname>fT</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/BezierPatch3.h" line="52"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/de5/classTBezierPatch3_1a515c52de4527f7f5875e03d5140b96d5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt;</type>
+        <definition>virtual TVector3&lt;Real&gt; PdT</definition>
+        <argsstring>(Real fT) const </argsstring>
+        <name>PdT</name>
+        <reimplements refid="d7/d44/classTCurve3_1ae8d5b471e4a3942ced691be25e639f29">PdT</reimplements>
+        <param>
+          <type>Real</type>
+          <declname>fT</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/BezierPatch3.h" line="53"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/de5/classTBezierPatch3_1a4e798ea1edafc64d5ae7655ef5fe2800" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt;</type>
+        <definition>virtual TVector3&lt;Real&gt; PdT2</definition>
+        <argsstring>(Real fT) const </argsstring>
+        <name>PdT2</name>
+        <reimplements refid="d7/d44/classTCurve3_1afe9b76fb621d8d4485ca19f1f531f8c6">PdT2</reimplements>
+        <param>
+          <type>Real</type>
+          <declname>fT</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/BezierPatch3.h" line="54"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/de5/classTBezierPatch3_1a9af3cfd8b5c507674ab954612fff91a6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt;</type>
+        <definition>virtual TVector3&lt;Real&gt; PdT3</definition>
+        <argsstring>(Real fT) const </argsstring>
+        <name>PdT3</name>
+        <reimplements refid="d7/d44/classTCurve3_1ae736addda24094d218947db26cc0703b">PdT3</reimplements>
+        <param>
+          <type>Real</type>
+          <declname>fT</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/BezierPatch3.h" line="55"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="12231">
+        <label>TCurvePatch3&lt; Real &gt;</label>
+        <link refid="d8/d69/classTCurvePatch3"/>
+        <childnode refid="12232" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12232">
+        <label>TCurve3&lt; Real &gt;</label>
+        <link refid="d7/d44/classTCurve3"/>
+      </node>
+      <node id="12230">
+        <label>TBezierPatch3&lt; Real &gt;</label>
+        <link refid="dc/de5/classTBezierPatch3"/>
+        <childnode refid="12231" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="12236">
+        <label>Real</label>
+      </node>
+      <node id="12234">
+        <label>TCurvePatch3&lt; Real &gt;</label>
+        <link refid="d8/d69/classTCurvePatch3"/>
+        <childnode refid="12235" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12239">
+        <label>int</label>
+      </node>
+      <node id="12238">
+        <label>TVertex3&lt; Real &gt;</label>
+      </node>
+      <node id="12237">
+        <label>TVector3&lt; Real &gt;</label>
+      </node>
+      <node id="12235">
+        <label>TCurve3&lt; Real &gt;</label>
+        <link refid="d7/d44/classTCurve3"/>
+        <childnode refid="12236" relation="usage">
+          <edgelabel>m_fMinT</edgelabel>
+          <edgelabel>m_fMaxT</edgelabel>
+        </childnode>
+      </node>
+      <node id="12233">
+        <label>TBezierPatch3&lt; Real &gt;</label>
+        <link refid="dc/de5/classTBezierPatch3"/>
+        <childnode refid="12234" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12237" relation="usage">
+          <edgelabel>m_arrPdT</edgelabel>
+          <edgelabel>m_arrPdT2</edgelabel>
+          <edgelabel>m_arrPdT3</edgelabel>
+        </childnode>
+        <childnode refid="12238" relation="usage">
+          <edgelabel>m_arrControlPoints</edgelabel>
+        </childnode>
+        <childnode refid="12239" relation="usage">
+          <edgelabel>m_iDegree</edgelabel>
+          <edgelabel>m_iControlPointCount</edgelabel>
+        </childnode>
+        <childnode refid="12236" relation="usage">
+          <edgelabel>m_arrBinomial</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/BezierPatch3.h" line="38" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/BezierPatch3.h" bodystart="37" bodyend="70"/>
+    <listofallmembers>
+      <member refid="d7/d44/classTCurve3_1a0e17782121bbafbd94520f83795637eb" prot="public" virt="non-virtual"><scope>TBezierPatch3</scope><name>BiNormal</name></member>
+      <member refid="d7/d44/classTCurve3_1a4cd922dcf079e1ee21634e5640493508" prot="public" virt="non-virtual"><scope>TBezierPatch3</scope><name>Curvature</name></member>
+      <member refid="d7/d44/classTCurve3_1a779367191813076badc1827de2c973cd" prot="public" virt="non-virtual"><scope>TBezierPatch3</scope><name>Frame</name></member>
+      <member refid="dc/de5/classTBezierPatch3_1a2f741774f71041a8fdffe2bbdd2563a1" prot="public" virt="non-virtual"><scope>TBezierPatch3</scope><name>GetControlPoint</name></member>
+      <member refid="dc/de5/classTBezierPatch3_1a514b11a360bc71df762a4e13e9531aab" prot="public" virt="non-virtual"><scope>TBezierPatch3</scope><name>GetControlPointCount</name></member>
+      <member refid="dc/de5/classTBezierPatch3_1a9e26d80c88fe73bba5272cab6f54058d" prot="public" virt="non-virtual"><scope>TBezierPatch3</scope><name>GetDegree</name></member>
+      <member refid="d7/d44/classTCurve3_1aa4080b9170a97ff3b0a9af376d5f7d81" prot="public" virt="non-virtual"><scope>TBezierPatch3</scope><name>GetMaxT</name></member>
+      <member refid="d7/d44/classTCurve3_1aafc97dcc199fefb4bba21ff59f43cdbb" prot="public" virt="non-virtual"><scope>TBezierPatch3</scope><name>GetMinT</name></member>
+      <member refid="d8/d69/classTCurvePatch3_1adbecc7a9419b8db515196177304db946" prot="public" virt="virtual"><scope>TBezierPatch3</scope><name>Length</name></member>
+      <member refid="d7/d44/classTCurve3_1a8f0e1fd4ef91850a26bbd5975708d371" prot="public" virt="non-virtual" ambiguityscope="TCurve3::"><scope>TBezierPatch3</scope><name>Length</name></member>
+      <member refid="dc/de5/classTBezierPatch3_1a3abde46ff5ad06449aea7bf4e6de1228" prot="private" virt="non-virtual"><scope>TBezierPatch3</scope><name>m_arrBinomial</name></member>
+      <member refid="dc/de5/classTBezierPatch3_1ae2252236b0acb5a361cf1259747b3c00" prot="private" virt="non-virtual"><scope>TBezierPatch3</scope><name>m_arrControlPoints</name></member>
+      <member refid="dc/de5/classTBezierPatch3_1a260e3b0b6f4d2f37a0e77061e91706cf" prot="private" virt="non-virtual"><scope>TBezierPatch3</scope><name>m_arrPdT</name></member>
+      <member refid="dc/de5/classTBezierPatch3_1adebb6fd666d2946de0ef9bf832e8aac3" prot="private" virt="non-virtual"><scope>TBezierPatch3</scope><name>m_arrPdT2</name></member>
+      <member refid="dc/de5/classTBezierPatch3_1abf45d90b82115284f3b28a1b3191d9f8" prot="private" virt="non-virtual"><scope>TBezierPatch3</scope><name>m_arrPdT3</name></member>
+      <member refid="d7/d44/classTCurve3_1aeb65f01f1950df1be56159acada0f137" prot="protected" virt="non-virtual"><scope>TBezierPatch3</scope><name>m_fMaxT</name></member>
+      <member refid="d7/d44/classTCurve3_1a908d8e638688977192614addf140fe47" prot="protected" virt="non-virtual"><scope>TBezierPatch3</scope><name>m_fMinT</name></member>
+      <member refid="dc/de5/classTBezierPatch3_1ae6297dfd89746a092179e7b7a63ea5bf" prot="private" virt="non-virtual"><scope>TBezierPatch3</scope><name>m_iControlPointCount</name></member>
+      <member refid="dc/de5/classTBezierPatch3_1ad29d8d4caa1fa3903cad221ee7072d4f" prot="private" virt="non-virtual"><scope>TBezierPatch3</scope><name>m_iDegree</name></member>
+      <member refid="d7/d44/classTCurve3_1a71d0c6f1911fa67a99f80fb55ec7990a" prot="public" virt="non-virtual"><scope>TBezierPatch3</scope><name>Normal</name></member>
+      <member refid="dc/de5/classTBezierPatch3_1aadf53385bb27306313392ec422ee55cf" prot="public" virt="virtual"><scope>TBezierPatch3</scope><name>P</name></member>
+      <member refid="d8/d69/classTCurvePatch3_1a88b2bd67587d5bf1700021b56b14bff4" prot="public" virt="virtual"><scope>TBezierPatch3</scope><name>Parameter</name></member>
+      <member refid="dc/de5/classTBezierPatch3_1a515c52de4527f7f5875e03d5140b96d5" prot="public" virt="virtual"><scope>TBezierPatch3</scope><name>PdT</name></member>
+      <member refid="dc/de5/classTBezierPatch3_1a4e798ea1edafc64d5ae7655ef5fe2800" prot="public" virt="virtual"><scope>TBezierPatch3</scope><name>PdT2</name></member>
+      <member refid="dc/de5/classTBezierPatch3_1a9af3cfd8b5c507674ab954612fff91a6" prot="public" virt="virtual"><scope>TBezierPatch3</scope><name>PdT3</name></member>
+      <member refid="d7/d44/classTCurve3_1a3a82d7e08c87636b16ba9d447e0d38c7" prot="public" virt="non-virtual"><scope>TBezierPatch3</scope><name>Position</name></member>
+      <member refid="dc/de5/classTBezierPatch3_1a1c441c90f9d7ab8695af98968bd2653b" prot="public" virt="non-virtual"><scope>TBezierPatch3</scope><name>SetControlPoint</name></member>
+      <member refid="d7/d44/classTCurve3_1a8a1f9ee1b484dba5bc73c90ef753a393" prot="public" virt="non-virtual"><scope>TBezierPatch3</scope><name>SetIntervalT</name></member>
+      <member refid="d7/d44/classTCurve3_1a76cdda297dd49acc0e33ce1de0096d08" prot="public" virt="non-virtual"><scope>TBezierPatch3</scope><name>Speed</name></member>
+      <member refid="d7/d44/classTCurve3_1a6a0138b6d642d85bfec9aeaac35d5283" prot="public" virt="non-virtual"><scope>TBezierPatch3</scope><name>SubDivideByLength</name></member>
+      <member refid="d7/d44/classTCurve3_1a7ec387b9730213f310bad0a330100148" prot="public" virt="non-virtual"><scope>TBezierPatch3</scope><name>SubDivideByParameter</name></member>
+      <member refid="d7/d44/classTCurve3_1a7ac1d2f0d770069db4eceec61b22e063" prot="public" virt="non-virtual"><scope>TBezierPatch3</scope><name>Tangent</name></member>
+      <member refid="dc/de5/classTBezierPatch3_1a9366f84db051c8dc8cbf0d11ac556480" prot="public" virt="non-virtual"><scope>TBezierPatch3</scope><name>TBezierPatch3</name></member>
+      <member refid="d7/d44/classTCurve3_1a0f4c46a88ae85956f2664556b4475bc3" prot="public" virt="non-virtual"><scope>TBezierPatch3</scope><name>TCurve3</name></member>
+      <member refid="d8/d69/classTCurvePatch3_1a9da70b95aba6a236a75f838cfa6530a2" prot="public" virt="non-virtual"><scope>TBezierPatch3</scope><name>TCurvePatch3</name></member>
+      <member refid="d7/d44/classTCurve3_1a0a4c7d825e57a5ca54b75126e10011c4" prot="public" virt="non-virtual"><scope>TBezierPatch3</scope><name>Torsion</name></member>
+      <member refid="d7/d44/classTCurve3_1af8febaa4811d92c3c96c30eb8c46ae18" prot="public" virt="non-virtual"><scope>TBezierPatch3</scope><name>Velocity</name></member>
+      <member refid="dc/de5/classTBezierPatch3_1ac1c01f3b8cdc3b2d4865631f6668939d" prot="public" virt="virtual"><scope>TBezierPatch3</scope><name>~TBezierPatch3</name></member>
+      <member refid="d7/d44/classTCurve3_1a0ab441bd89b56aaead25c7595155b585" prot="public" virt="virtual"><scope>TBezierPatch3</scope><name>~TCurve3</name></member>
+      <member refid="d8/d69/classTCurvePatch3_1a597774ddce01deae53669fe894401a06" prot="public" virt="virtual"><scope>TBezierPatch3</scope><name>~TCurvePatch3</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

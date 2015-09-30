@@ -1,0 +1,814 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="da/daa/GUIWidget_8h" kind="file">
+    <compoundname>GUIWidget.h</compoundname>
+    <includes refid="da/d29/TreeMap_8h" local="yes">../../Lib/Datastruct/Table/TreeMap.h</includes>
+    <includes refid="d4/dd6/GUIEventProcessor_8h" local="yes">GUIEventProcessor.h</includes>
+    <includes refid="d6/dde/GUILayout_8h" local="yes">Tools/GUILayout.h</includes>
+    <includes local="yes">GUIWidget.inl</includes>
+    <includedby refid="d6/db3/GUIManager_8h" local="yes">GUIManager.h</includedby>
+    <includedby refid="d4/dd5/GUIWindow_8h" local="yes">GUIWindow.h</includedby>
+    <includedby refid="d1/d55/GUIBorders_8h" local="yes">GUIBorders.h</includedby>
+    <includedby refid="dd/d52/GUITitleBar_8h" local="yes">GUITitleBar.h</includedby>
+    <includedby refid="d3/d84/GUISection_8h" local="yes">GUISection.h</includedby>
+    <includedby refid="d0/de3/GUILabel_8h" local="yes">GUILabel.h</includedby>
+    <includedby refid="dc/d97/GUIText_8h" local="yes">GUIText.h</includedby>
+    <includedby refid="d3/df9/GUIButton_8h" local="yes">GUIButton.h</includedby>
+    <includedby refid="dc/ddb/GUIContainer_8h" local="yes">GUIContainer.h</includedby>
+    <includedby refid="d4/df2/GUICheckBox_8h" local="yes">GUICheckBox.h</includedby>
+    <includedby refid="d9/da2/GUIRadioButton_8h" local="yes">GUIRadioButton.h</includedby>
+    <includedby refid="dd/d0b/GUITextInput_8h" local="yes">GUITextInput.h</includedby>
+    <includedby refid="d1/ddc/GUITextLog_8h" local="yes">GUITextLog.h</includedby>
+    <includedby refid="d3/dae/GUIList_8h" local="yes">GUIList.h</includedby>
+    <includedby refid="d1/d0d/GUITree_8h" local="yes">GUITree.h</includedby>
+    <incdepgraph>
+      <node id="16687">
+        <label>RedBlackTree.inl</label>
+      </node>
+      <node id="16665">
+        <label>SSE.inl</label>
+      </node>
+      <node id="16669">
+        <label>Threading.h</label>
+        <link refid="dd/d0e/Threading_8h"/>
+        <childnode refid="16647" relation="include">
+        </childnode>
+        <childnode refid="16649" relation="include">
+        </childnode>
+        <childnode refid="16670" relation="include">
+        </childnode>
+      </node>
+      <node id="16681">
+        <label>Allocators/BreakAllocator.h</label>
+        <link refid="d4/dac/BreakAllocator_8h"/>
+        <childnode refid="16676" relation="include">
+        </childnode>
+        <childnode refid="16682" relation="include">
+        </childnode>
+      </node>
+      <node id="16644">
+        <label>../Memory/MemoryManager.h</label>
+        <link refid="d7/d7b/MemoryManager_8h"/>
+        <childnode refid="16645" relation="include">
+        </childnode>
+        <childnode refid="16655" relation="include">
+        </childnode>
+        <childnode refid="16661" relation="include">
+        </childnode>
+        <childnode refid="16675" relation="include">
+        </childnode>
+        <childnode refid="16679" relation="include">
+        </childnode>
+        <childnode refid="16681" relation="include">
+        </childnode>
+        <childnode refid="16683" relation="include">
+        </childnode>
+        <childnode refid="16685" relation="include">
+        </childnode>
+      </node>
+      <node id="16694">
+        <label>Point2.inl</label>
+      </node>
+      <node id="16640">
+        <label>GUIWidget.h</label>
+        <link refid="GUIWidget.h"/>
+        <childnode refid="16641" relation="include">
+        </childnode>
+        <childnode refid="16689" relation="include">
+        </childnode>
+        <childnode refid="16701" relation="include">
+        </childnode>
+        <childnode refid="16707" relation="include">
+        </childnode>
+      </node>
+      <node id="16662">
+        <label>../../ThirdParty/System/System.h</label>
+        <link refid="db/d39/System_8h"/>
+        <childnode refid="16647" relation="include">
+        </childnode>
+        <childnode refid="16649" relation="include">
+        </childnode>
+        <childnode refid="16663" relation="include">
+        </childnode>
+        <childnode refid="16646" relation="include">
+        </childnode>
+        <childnode refid="16667" relation="include">
+        </childnode>
+        <childnode refid="16669" relation="include">
+        </childnode>
+        <childnode refid="16671" relation="include">
+        </childnode>
+        <childnode refid="16673" relation="include">
+        </childnode>
+      </node>
+      <node id="16700">
+        <label>GUIEventProcessor.inl</label>
+      </node>
+      <node id="16670">
+        <label>Threading.inl</label>
+      </node>
+      <node id="16697">
+        <label>RingBuffer.inl</label>
+      </node>
+      <node id="16682">
+        <label>BreakAllocator.inl</label>
+      </node>
+      <node id="16643">
+        <label>../Datastruct.h</label>
+        <link refid="d5/db1/Datastruct_8h"/>
+        <childnode refid="16644" relation="include">
+        </childnode>
+        <childnode refid="16686" relation="include">
+        </childnode>
+      </node>
+      <node id="16686">
+        <label>Datastruct.inl</label>
+      </node>
+      <node id="16642">
+        <label>../Tree/RedBlackTree.h</label>
+        <link refid="d6/dff/RedBlackTree_8h"/>
+        <childnode refid="16643" relation="include">
+        </childnode>
+        <childnode refid="16687" relation="include">
+        </childnode>
+      </node>
+      <node id="16707">
+        <label>GUIWidget.inl</label>
+      </node>
+      <node id="16649">
+        <label>Platform.h</label>
+        <link refid="d9/dd0/Platform_8h"/>
+        <childnode refid="16650" relation="include">
+        </childnode>
+      </node>
+      <node id="16698">
+        <label>Tools/GUIEvent.h</label>
+        <link refid="d0/df0/GUIEvent_8h"/>
+        <childnode refid="16661" relation="include">
+        </childnode>
+        <childnode refid="16699" relation="include">
+        </childnode>
+      </node>
+      <node id="16679">
+        <label>Allocators/PoolAllocator.h</label>
+        <link refid="d3/d03/PoolAllocator_8h"/>
+        <childnode refid="16676" relation="include">
+        </childnode>
+        <childnode refid="16680" relation="include">
+        </childnode>
+      </node>
+      <node id="16652">
+        <label>FPU.inl</label>
+      </node>
+      <node id="16654">
+        <label>Hashing.inl</label>
+      </node>
+      <node id="16660">
+        <label>MathFunction.inl</label>
+      </node>
+      <node id="16688">
+        <label>TreeMap.inl</label>
+      </node>
+      <node id="16656">
+        <label>../Formats/Scalar.h</label>
+        <link refid="d0/d10/Scalar_8h"/>
+        <childnode refid="16649" relation="include">
+        </childnode>
+        <childnode refid="16657" relation="include">
+        </childnode>
+      </node>
+      <node id="16677">
+        <label>MemoryAllocator.inl</label>
+      </node>
+      <node id="16695">
+        <label>Rectangle2.inl</label>
+      </node>
+      <node id="16645">
+        <label>../Math/Hash/Hashing.h</label>
+        <link refid="d0/d4e/Hashing_8h"/>
+        <childnode refid="16646" relation="include">
+        </childnode>
+        <childnode refid="16654" relation="include">
+        </childnode>
+      </node>
+      <node id="16676">
+        <label>MemoryAllocator.h</label>
+        <link refid="d2/d75/MemoryAllocator_8h"/>
+        <childnode refid="16661" relation="include">
+        </childnode>
+        <childnode refid="16677" relation="include">
+        </childnode>
+      </node>
+      <node id="16668">
+        <label>File.inl</label>
+      </node>
+      <node id="16663">
+        <label>Hardware/Hardware.h</label>
+        <link refid="da/dec/Hardware_8h"/>
+        <childnode refid="16649" relation="include">
+        </childnode>
+        <childnode refid="16651" relation="include">
+        </childnode>
+        <childnode refid="16664" relation="include">
+        </childnode>
+        <childnode refid="16666" relation="include">
+        </childnode>
+      </node>
+      <node id="16675">
+        <label>Allocators/StackAllocator.h</label>
+        <link refid="db/d84/StackAllocator_8h"/>
+        <childnode refid="16676" relation="include">
+        </childnode>
+        <childnode refid="16678" relation="include">
+        </childnode>
+      </node>
+      <node id="16666">
+        <label>Hardware.inl</label>
+      </node>
+      <node id="16696">
+        <label>../../Lib/Datastruct/Array/RingBuffer.h</label>
+        <link refid="d1/dc6/RingBuffer_8h"/>
+        <childnode refid="16643" relation="include">
+        </childnode>
+        <childnode refid="16697" relation="include">
+        </childnode>
+      </node>
+      <node id="16703">
+        <label>../Vector/Vector2.h</label>
+        <link refid="d0/df7/Vector2_8h"/>
+        <childnode refid="16655" relation="include">
+        </childnode>
+        <childnode refid="16704" relation="include">
+        </childnode>
+      </node>
+      <node id="16680">
+        <label>PoolAllocator.inl</label>
+      </node>
+      <node id="16657">
+        <label>Scalar.inl</label>
+      </node>
+      <node id="16653">
+        <label>String.inl</label>
+      </node>
+      <node id="16693">
+        <label>Offset2.inl</label>
+      </node>
+      <node id="16704">
+        <label>Vector2.inl</label>
+      </node>
+      <node id="16651">
+        <label>Hardware/FPU.h</label>
+        <link refid="dd/d2f/FPU_8h"/>
+        <childnode refid="16649" relation="include">
+        </childnode>
+        <childnode refid="16652" relation="include">
+        </childnode>
+      </node>
+      <node id="16702">
+        <label>../../../Lib/Math/Types/Vertex/Vertex2.h</label>
+        <link refid="dc/d05/Vertex2_8h"/>
+        <childnode refid="16703" relation="include">
+        </childnode>
+        <childnode refid="16705" relation="include">
+        </childnode>
+      </node>
+      <node id="16683">
+        <label>Allocators/HeapAllocator.h</label>
+        <link refid="d3/d89/HeapAllocator_8h"/>
+        <childnode refid="16676" relation="include">
+        </childnode>
+        <childnode refid="16684" relation="include">
+        </childnode>
+      </node>
+      <node id="16646">
+        <label>../../../ThirdParty/System/String.h</label>
+        <link refid="d9/dba/String_8h"/>
+        <childnode refid="16647" relation="include">
+        </childnode>
+        <childnode refid="16649" relation="include">
+        </childnode>
+        <childnode refid="16651" relation="include">
+        </childnode>
+        <childnode refid="16653" relation="include">
+        </childnode>
+      </node>
+      <node id="16650">
+        <label>Platform.inl</label>
+      </node>
+      <node id="16685">
+        <label>MemoryManager.inl</label>
+      </node>
+      <node id="16689">
+        <label>GUIEventProcessor.h</label>
+        <link refid="d4/dd6/GUIEventProcessor_8h"/>
+        <childnode refid="16690" relation="include">
+        </childnode>
+        <childnode refid="16696" relation="include">
+        </childnode>
+        <childnode refid="16698" relation="include">
+        </childnode>
+        <childnode refid="16700" relation="include">
+        </childnode>
+      </node>
+      <node id="16692">
+        <label>Offset2.h</label>
+        <link refid="de/d80/Offset2_8h"/>
+        <childnode refid="16655" relation="include">
+        </childnode>
+        <childnode refid="16693" relation="include">
+        </childnode>
+      </node>
+      <node id="16701">
+        <label>Tools/GUILayout.h</label>
+        <link refid="d6/dde/GUILayout_8h"/>
+        <childnode refid="16661" relation="include">
+        </childnode>
+        <childnode refid="16690" relation="include">
+        </childnode>
+        <childnode refid="16702" relation="include">
+        </childnode>
+        <childnode refid="16706" relation="include">
+        </childnode>
+      </node>
+      <node id="16673">
+        <label>System.inl</label>
+      </node>
+      <node id="16671">
+        <label>Networking.h</label>
+        <link refid="df/dfb/Networking_8h"/>
+        <childnode refid="16647" relation="include">
+        </childnode>
+        <childnode refid="16649" relation="include">
+        </childnode>
+        <childnode refid="16672" relation="include">
+        </childnode>
+      </node>
+      <node id="16667">
+        <label>File.h</label>
+        <link refid="d6/db7/File_8h"/>
+        <childnode refid="16647" relation="include">
+        </childnode>
+        <childnode refid="16649" relation="include">
+        </childnode>
+        <childnode refid="16646" relation="include">
+        </childnode>
+        <childnode refid="16668" relation="include">
+        </childnode>
+      </node>
+      <node id="16678">
+        <label>StackAllocator.inl</label>
+      </node>
+      <node id="16648">
+        <label>ForwardWin32.inl</label>
+      </node>
+      <node id="16664">
+        <label>SSE.h</label>
+        <link refid="d0/d02/SSE_8h"/>
+        <childnode refid="16649" relation="include">
+        </childnode>
+        <childnode refid="16665" relation="include">
+        </childnode>
+      </node>
+      <node id="16691">
+        <label>Point2.h</label>
+        <link refid="d3/d91/Point2_8h"/>
+        <childnode refid="16692" relation="include">
+        </childnode>
+        <childnode refid="16694" relation="include">
+        </childnode>
+      </node>
+      <node id="16641">
+        <label>../../Lib/Datastruct/Table/TreeMap.h</label>
+        <link refid="da/d29/TreeMap_8h"/>
+        <childnode refid="16642" relation="include">
+        </childnode>
+        <childnode refid="16688" relation="include">
+        </childnode>
+      </node>
+      <node id="16706">
+        <label>GUILayout.inl</label>
+      </node>
+      <node id="16672">
+        <label>Networking.inl</label>
+      </node>
+      <node id="16690">
+        <label>../../Lib/Math/Types/Discrete/Rectangle2.h</label>
+        <link refid="dd/d50/Rectangle2_8h"/>
+        <childnode refid="16691" relation="include">
+        </childnode>
+        <childnode refid="16695" relation="include">
+        </childnode>
+      </node>
+      <node id="16659">
+        <label>Fixed.inl</label>
+      </node>
+      <node id="16655">
+        <label>../Math/Functions/MathFunction.h</label>
+        <link refid="d1/d98/MathFunction_8h"/>
+        <childnode refid="16651" relation="include">
+        </childnode>
+        <childnode refid="16656" relation="include">
+        </childnode>
+        <childnode refid="16658" relation="include">
+        </childnode>
+        <childnode refid="16660" relation="include">
+        </childnode>
+      </node>
+      <node id="16658">
+        <label>../Formats/Fixed.h</label>
+        <link refid="d4/d76/Fixed_8h"/>
+        <childnode refid="16656" relation="include">
+        </childnode>
+        <childnode refid="16659" relation="include">
+        </childnode>
+      </node>
+      <node id="16674">
+        <label>ErrorManager.inl</label>
+      </node>
+      <node id="16699">
+        <label>GUIEvent.inl</label>
+      </node>
+      <node id="16684">
+        <label>HeapAllocator.inl</label>
+      </node>
+      <node id="16647">
+        <label>../Forwards/ForwardWin32.h</label>
+        <link refid="d5/dea/ForwardWin32_8h"/>
+        <childnode refid="16648" relation="include">
+        </childnode>
+      </node>
+      <node id="16705">
+        <label>Vertex2.inl</label>
+      </node>
+      <node id="16661">
+        <label>../Error/ErrorManager.h</label>
+        <link refid="d1/db6/ErrorManager_8h"/>
+        <childnode refid="16662" relation="include">
+        </childnode>
+        <childnode refid="16674" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="16722">
+        <label>GUISection.h</label>
+        <link refid="d3/d84/GUISection_8h"/>
+        <childnode refid="16719" relation="include">
+        </childnode>
+        <childnode refid="16709" relation="include">
+        </childnode>
+        <childnode refid="16723" relation="include">
+        </childnode>
+      </node>
+      <node id="16715">
+        <label>MyDungeon.h</label>
+        <link refid="d0/de7/MyDungeon_8h"/>
+        <childnode refid="16713" relation="include">
+        </childnode>
+      </node>
+      <node id="16718">
+        <label>GUIWindow.h</label>
+        <link refid="d4/dd5/GUIWindow_8h"/>
+        <childnode refid="16709" relation="include">
+        </childnode>
+        <childnode refid="16719" relation="include">
+        </childnode>
+      </node>
+      <node id="16708">
+        <label>GUIWidget.h</label>
+        <link refid="GUIWidget.h"/>
+        <childnode refid="16709" relation="include">
+        </childnode>
+        <childnode refid="16718" relation="include">
+        </childnode>
+        <childnode refid="16720" relation="include">
+        </childnode>
+        <childnode refid="16721" relation="include">
+        </childnode>
+        <childnode refid="16722" relation="include">
+        </childnode>
+        <childnode refid="16724" relation="include">
+        </childnode>
+        <childnode refid="16725" relation="include">
+        </childnode>
+        <childnode refid="16726" relation="include">
+        </childnode>
+        <childnode refid="16727" relation="include">
+        </childnode>
+        <childnode refid="16728" relation="include">
+        </childnode>
+        <childnode refid="16729" relation="include">
+        </childnode>
+        <childnode refid="16730" relation="include">
+        </childnode>
+        <childnode refid="16731" relation="include">
+        </childnode>
+        <childnode refid="16732" relation="include">
+        </childnode>
+        <childnode refid="16733" relation="include">
+        </childnode>
+      </node>
+      <node id="16729">
+        <label>GUIRadioButton.h</label>
+        <link refid="d9/da2/GUIRadioButton_8h"/>
+        <childnode refid="16709" relation="include">
+        </childnode>
+      </node>
+      <node id="16713">
+        <label>Main.h</label>
+        <link refid="da/d94/Main_8h"/>
+      </node>
+      <node id="16720">
+        <label>GUIBorders.h</label>
+        <link refid="d1/d55/GUIBorders_8h"/>
+        <childnode refid="16718" relation="include">
+        </childnode>
+      </node>
+      <node id="16721">
+        <label>GUITitleBar.h</label>
+        <link refid="dd/d52/GUITitleBar_8h"/>
+        <childnode refid="16718" relation="include">
+        </childnode>
+      </node>
+      <node id="16717">
+        <label>CommandShowTree.h</label>
+        <link refid="d8/d84/CommandShowTree_8h"/>
+        <childnode refid="16716" relation="include">
+        </childnode>
+      </node>
+      <node id="16714">
+        <label>MyLandscape.h</label>
+        <link refid="d7/d2b/MyLandscape_8h"/>
+        <childnode refid="16713" relation="include">
+        </childnode>
+      </node>
+      <node id="16711">
+        <label>ApplicationManager.h</label>
+        <link refid="d2/d9d/ApplicationManager_8h"/>
+        <childnode refid="16712" relation="include">
+        </childnode>
+        <childnode refid="16713" relation="include">
+        </childnode>
+        <childnode refid="16714" relation="include">
+        </childnode>
+        <childnode refid="16715" relation="include">
+        </childnode>
+      </node>
+      <node id="16723">
+        <label>GUISwitchTabs.h</label>
+        <link refid="da/d04/GUISwitchTabs_8h"/>
+        <childnode refid="16709" relation="include">
+        </childnode>
+      </node>
+      <node id="16719">
+        <label>GUIMessageBox.h</label>
+        <link refid="dc/d89/GUIMessageBox_8h"/>
+        <childnode refid="16709" relation="include">
+        </childnode>
+      </node>
+      <node id="16727">
+        <label>GUIContainer.h</label>
+        <link refid="dc/ddb/GUIContainer_8h"/>
+        <childnode refid="16709" relation="include">
+        </childnode>
+      </node>
+      <node id="16710">
+        <label>WindowApplication.h</label>
+        <link refid="d4/d72/WindowApplication_8h"/>
+        <childnode refid="16711" relation="include">
+        </childnode>
+      </node>
+      <node id="16733">
+        <label>GUITree.h</label>
+        <link refid="d1/d0d/GUITree_8h"/>
+        <childnode refid="16709" relation="include">
+        </childnode>
+      </node>
+      <node id="16725">
+        <label>GUIText.h</label>
+        <link refid="dc/d97/GUIText_8h"/>
+        <childnode refid="16719" relation="include">
+        </childnode>
+        <childnode refid="16709" relation="include">
+        </childnode>
+      </node>
+      <node id="16712">
+        <label>Entities.h</label>
+        <link refid="d7/d5d/Entities_8h"/>
+        <childnode refid="16713" relation="include">
+        </childnode>
+      </node>
+      <node id="16732">
+        <label>GUIList.h</label>
+        <link refid="d3/dae/GUIList_8h"/>
+        <childnode refid="16709" relation="include">
+        </childnode>
+      </node>
+      <node id="16716">
+        <label>ConsoleManager.h</label>
+        <link refid="d3/d63/ConsoleManager_8h"/>
+        <childnode refid="16710" relation="include">
+        </childnode>
+      </node>
+      <node id="16709">
+        <label>GUIManager.h</label>
+        <link refid="d6/db3/GUIManager_8h"/>
+        <childnode refid="16710" relation="include">
+        </childnode>
+        <childnode refid="16716" relation="include">
+        </childnode>
+        <childnode refid="16717" relation="include">
+        </childnode>
+      </node>
+      <node id="16731">
+        <label>GUITextLog.h</label>
+        <link refid="d1/ddc/GUITextLog_8h"/>
+        <childnode refid="16709" relation="include">
+        </childnode>
+      </node>
+      <node id="16724">
+        <label>GUILabel.h</label>
+        <link refid="d0/de3/GUILabel_8h"/>
+        <childnode refid="16719" relation="include">
+        </childnode>
+        <childnode refid="16709" relation="include">
+        </childnode>
+      </node>
+      <node id="16728">
+        <label>GUICheckBox.h</label>
+        <link refid="d4/df2/GUICheckBox_8h"/>
+        <childnode refid="16709" relation="include">
+        </childnode>
+      </node>
+      <node id="16726">
+        <label>GUIButton.h</label>
+        <link refid="d3/df9/GUIButton_8h"/>
+        <childnode refid="16719" relation="include">
+        </childnode>
+        <childnode refid="16709" relation="include">
+        </childnode>
+        <childnode refid="16723" relation="include">
+        </childnode>
+      </node>
+      <node id="16730">
+        <label>GUITextInput.h</label>
+        <link refid="dd/d0b/GUITextInput_8h"/>
+        <childnode refid="16709" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d0/d61/classGUIWidgetModel" prot="public">GUIWidgetModel</innerclass>
+    <innerclass refid="d4/d99/classGUIWidget" prot="public">GUIWidget</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="da/daa/GUIWidget_8h_1a16799d0cecd3dbe3c36e79356281b319" prot="public" static="no">
+        <name>GUIWidgetType</name>
+        <enumvalue id="da/daa/GUIWidget_8h_1a16799d0cecd3dbe3c36e79356281b319a1bdb9d4302304e529a781360531760b2" prot="public">
+          <name>GUIWIDGET_UNDEFINED</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/daa/GUIWidget_8h_1a16799d0cecd3dbe3c36e79356281b319a81bd01a4cac44a8c5df8e5b9a7217757" prot="public">
+          <name>GUIWIDGET_CONTAINER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/daa/GUIWidget_8h_1a16799d0cecd3dbe3c36e79356281b319a4614a02f05cd061b778498ff22c7c7b9" prot="public">
+          <name>GUIWIDGET_SECTION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/daa/GUIWidget_8h_1a16799d0cecd3dbe3c36e79356281b319ae22970108625b1db203b5c70e242edc0" prot="public">
+          <name>GUIWIDGET_SWITCHTABS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/daa/GUIWidget_8h_1a16799d0cecd3dbe3c36e79356281b319a999ac22ad1b42333c17ae4e5a48f59cd" prot="public">
+          <name>GUIWIDGET_LABEL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/daa/GUIWidget_8h_1a16799d0cecd3dbe3c36e79356281b319aaa5bda0cbe83b38085f4cac8b077b71a" prot="public">
+          <name>GUIWIDGET_TEXT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/daa/GUIWidget_8h_1a16799d0cecd3dbe3c36e79356281b319aa41011a50eccff5fc5493d156f0b1223" prot="public">
+          <name>GUIWIDGET_BUTTON</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/daa/GUIWidget_8h_1a16799d0cecd3dbe3c36e79356281b319a6adc696cec4e7b7784bc364c246c73f0" prot="public">
+          <name>GUIWIDGET_CHECKBOX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/daa/GUIWidget_8h_1a16799d0cecd3dbe3c36e79356281b319ab9d7a63e0cdb78153b31c9b58ebad230" prot="public">
+          <name>GUIWIDGET_RADIOBUTTON</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/daa/GUIWidget_8h_1a16799d0cecd3dbe3c36e79356281b319a65fdc6407093613eeb3547614b96cf9c" prot="public">
+          <name>GUIWIDGET_TEXTINPUT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/daa/GUIWidget_8h_1a16799d0cecd3dbe3c36e79356281b319af6a936b83ba1c7c6692cf9c051b62c0a" prot="public">
+          <name>GUIWIDGET_TEXTLOG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/daa/GUIWidget_8h_1a16799d0cecd3dbe3c36e79356281b319a7823eb73a795f2d508f261d0edb18c56" prot="public">
+          <name>GUIWIDGET_LIST</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/daa/GUIWidget_8h_1a16799d0cecd3dbe3c36e79356281b319a13a1492dfe72a1d261912a46fbe3e1bd" prot="public">
+          <name>GUIWIDGET_TREE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/daa/GUIWidget_8h_1a16799d0cecd3dbe3c36e79356281b319a7a7c1e02dc7bd30fb69d45de4321a6c6" prot="public">
+          <name>GUIWIDGET_WINDOW_BORDER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/daa/GUIWidget_8h_1a16799d0cecd3dbe3c36e79356281b319a6bb8662ddfd55ac2bded7a87cd6b60dd" prot="public">
+          <name>GUIWIDGET_WINDOW_CORNER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/daa/GUIWidget_8h_1a16799d0cecd3dbe3c36e79356281b319a46c6680c6ecf8cfda1a23359c972ec4b" prot="public">
+          <name>GUIWIDGET_WINDOW_TITLEBAR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/daa/GUIWidget_8h_1a16799d0cecd3dbe3c36e79356281b319a7e3ec649ec1eafd15f669529b4150af5" prot="public">
+          <name>GUIWIDGET_WINDOW_MENUBAR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/daa/GUIWidget_8h_1a16799d0cecd3dbe3c36e79356281b319ae93c84fd05c55691aabc9d7d7ca76c52" prot="public">
+          <name>GUIWIDGET_WINDOW_STATUSBAR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/daa/GUIWidget_8h_1a16799d0cecd3dbe3c36e79356281b319a84e7cebf991ca65e94d735cc9fae6eca" prot="public">
+          <name>GUIWIDGET_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIWidget.h" line="36" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIWidget.h" bodystart="35" bodyend="64"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIWidget.h"/>
+  </compounddef>
+</doxygen>

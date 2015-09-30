@@ -1,0 +1,540 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d3/dc2/classTTCBSplineChain3" kind="class" prot="public">
+    <compoundname>TTCBSplineChain3</compoundname>
+    <basecompoundref refid="dc/d70/classTCurveChain3" prot="public" virt="non-virtual">TCurveChain3&lt; Real &gt;</basecompoundref>
+    <includes refid="dc/d4a/TCBSplineChain3_8h" local="no">TCBSplineChain3.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename Real</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d3/dc2/classTTCBSplineChain3_1ae6297dfd89746a092179e7b7a63ea5bf" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iControlPointCount</definition>
+        <argsstring></argsstring>
+        <name>m_iControlPointCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/TCBSplineChain3.h" line="70" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/TCBSplineChain3.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc2/classTTCBSplineChain3_1ae2252236b0acb5a361cf1259747b3c00" prot="private" static="no" mutable="no">
+        <type><ref refid="dc/d75/classTVertex3" kindref="compound">TVertex3</ref>&lt; Real &gt; *</type>
+        <definition>TVertex3&lt;Real&gt;* m_arrControlPoints</definition>
+        <argsstring></argsstring>
+        <name>m_arrControlPoints</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/TCBSplineChain3.h" line="71" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/TCBSplineChain3.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc2/classTTCBSplineChain3_1ab0a19a81a7c1bb687007628e530a69a4" prot="private" static="no" mutable="no">
+        <type>Real *</type>
+        <definition>Real* m_arrTensions</definition>
+        <argsstring></argsstring>
+        <name>m_arrTensions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/TCBSplineChain3.h" line="72" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/TCBSplineChain3.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc2/classTTCBSplineChain3_1aabe46d3c1a686014c678048ae052af0b" prot="private" static="no" mutable="no">
+        <type>Real *</type>
+        <definition>Real* m_arrContinuities</definition>
+        <argsstring></argsstring>
+        <name>m_arrContinuities</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/TCBSplineChain3.h" line="73" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/TCBSplineChain3.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc2/classTTCBSplineChain3_1a08fd13df2a658291cfd631f69dcae649" prot="private" static="no" mutable="no">
+        <type>Real *</type>
+        <definition>Real* m_arrBiases</definition>
+        <argsstring></argsstring>
+        <name>m_arrBiases</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/TCBSplineChain3.h" line="74" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/TCBSplineChain3.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc2/classTTCBSplineChain3_1a260e3b0b6f4d2f37a0e77061e91706cf" prot="private" static="no" mutable="no">
+        <type><ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt; *</type>
+        <definition>TVector3&lt;Real&gt;* m_arrPdT</definition>
+        <argsstring></argsstring>
+        <name>m_arrPdT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/TCBSplineChain3.h" line="77" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/TCBSplineChain3.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc2/classTTCBSplineChain3_1adebb6fd666d2946de0ef9bf832e8aac3" prot="private" static="no" mutable="no">
+        <type><ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt; *</type>
+        <definition>TVector3&lt;Real&gt;* m_arrPdT2</definition>
+        <argsstring></argsstring>
+        <name>m_arrPdT2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/TCBSplineChain3.h" line="78" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/TCBSplineChain3.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc2/classTTCBSplineChain3_1abf45d90b82115284f3b28a1b3191d9f8" prot="private" static="no" mutable="no">
+        <type><ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt; *</type>
+        <definition>TVector3&lt;Real&gt;* m_arrPdT3</definition>
+        <argsstring></argsstring>
+        <name>m_arrPdT3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/TCBSplineChain3.h" line="79" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/TCBSplineChain3.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d3/dc2/classTTCBSplineChain3_1a8995fba1eaeae996ad02a7bf1c33cc98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TTCBSplineChain3</definition>
+        <argsstring>(const Real *arrParameters, UInt iPatchCount, const TVertex3&lt; Real &gt; *arrControlPoints, const Real *arrTensions, const Real *arrContinuities, const Real *arrBiases)</argsstring>
+        <name>TTCBSplineChain3</name>
+        <param>
+          <type>const Real *</type>
+          <declname>arrParameters</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iPatchCount</declname>
+        </param>
+        <param>
+          <type>const <ref refid="dc/d75/classTVertex3" kindref="compound">TVertex3</ref>&lt; Real &gt; *</type>
+          <declname>arrControlPoints</declname>
+        </param>
+        <param>
+          <type>const Real *</type>
+          <declname>arrTensions</declname>
+        </param>
+        <param>
+          <type>const Real *</type>
+          <declname>arrContinuities</declname>
+        </param>
+        <param>
+          <type>const Real *</type>
+          <declname>arrBiases</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/TCBSplineChain3.h" line="44"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/dc2/classTTCBSplineChain3_1a9e22db74b6c548c63ed21b6a4fa9c2a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~TTCBSplineChain3</definition>
+        <argsstring>()</argsstring>
+        <name>~TTCBSplineChain3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/TCBSplineChain3.h" line="45"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/dc2/classTTCBSplineChain3_1a514b11a360bc71df762a4e13e9531aab" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetControlPointCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetControlPointCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/TCBSplineChain3.h" line="48"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/dc2/classTTCBSplineChain3_1a2f741774f71041a8fdffe2bbdd2563a1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="dc/d75/classTVertex3" kindref="compound">TVertex3</ref>&lt; Real &gt; &amp;</type>
+        <definition>const TVertex3&lt;Real&gt;&amp; GetControlPoint</definition>
+        <argsstring>(UInt iControlPoint) const </argsstring>
+        <name>GetControlPoint</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iControlPoint</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/TCBSplineChain3.h" line="49"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/dc2/classTTCBSplineChain3_1abb137584b835abc728f7383b801a686b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real GetTension</definition>
+        <argsstring>(UInt iControlPoint) const </argsstring>
+        <name>GetTension</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iControlPoint</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/TCBSplineChain3.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/dc2/classTTCBSplineChain3_1ac9af75d8afe15329c9804e928cc2f551" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real GetContinuity</definition>
+        <argsstring>(UInt iControlPoint) const </argsstring>
+        <name>GetContinuity</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iControlPoint</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/TCBSplineChain3.h" line="52"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/dc2/classTTCBSplineChain3_1a9a32809dba9218212db3e5954c969ac2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real GetBias</definition>
+        <argsstring>(UInt iControlPoint) const </argsstring>
+        <name>GetBias</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iControlPoint</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/TCBSplineChain3.h" line="53"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/dc2/classTTCBSplineChain3_1aadf53385bb27306313392ec422ee55cf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="dc/d75/classTVertex3" kindref="compound">TVertex3</ref>&lt; Real &gt;</type>
+        <definition>virtual TVertex3&lt;Real&gt; P</definition>
+        <argsstring>(Real fT) const </argsstring>
+        <name>P</name>
+        <reimplements refid="d7/d44/classTCurve3_1ae60e3c8e857142c000a4e8b0045f471a">P</reimplements>
+        <param>
+          <type>Real</type>
+          <declname>fT</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/TCBSplineChain3.h" line="56"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/dc2/classTTCBSplineChain3_1a515c52de4527f7f5875e03d5140b96d5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt;</type>
+        <definition>virtual TVector3&lt;Real&gt; PdT</definition>
+        <argsstring>(Real fT) const </argsstring>
+        <name>PdT</name>
+        <reimplements refid="d7/d44/classTCurve3_1ae8d5b471e4a3942ced691be25e639f29">PdT</reimplements>
+        <param>
+          <type>Real</type>
+          <declname>fT</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/TCBSplineChain3.h" line="57"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/dc2/classTTCBSplineChain3_1a4e798ea1edafc64d5ae7655ef5fe2800" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt;</type>
+        <definition>virtual TVector3&lt;Real&gt; PdT2</definition>
+        <argsstring>(Real fT) const </argsstring>
+        <name>PdT2</name>
+        <reimplements refid="d7/d44/classTCurve3_1afe9b76fb621d8d4485ca19f1f531f8c6">PdT2</reimplements>
+        <param>
+          <type>Real</type>
+          <declname>fT</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/TCBSplineChain3.h" line="58"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/dc2/classTTCBSplineChain3_1a9af3cfd8b5c507674ab954612fff91a6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt;</type>
+        <definition>virtual TVector3&lt;Real&gt; PdT3</definition>
+        <argsstring>(Real fT) const </argsstring>
+        <name>PdT3</name>
+        <reimplements refid="d7/d44/classTCurve3_1ae736addda24094d218947db26cc0703b">PdT3</reimplements>
+        <param>
+          <type>Real</type>
+          <declname>fT</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/TCBSplineChain3.h" line="59"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d3/dc2/classTTCBSplineChain3_1adb5301d793718dc85158a39fe8b75596" prot="private" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>Real</type>
+        <definition>virtual Real _GetPatchSpeed</definition>
+        <argsstring>(UInt iPatch, Real fT) const </argsstring>
+        <name>_GetPatchSpeed</name>
+        <reimplements refid="dc/d70/classTCurveChain3_1ad574fa73c216091ce31b4bcf1a845611">_GetPatchSpeed</reimplements>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iPatch</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fT</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/TCBSplineChain3.h" line="63"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/dc2/classTTCBSplineChain3_1a540652fa5ced907ea0e1a715944a57d4" prot="private" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>Real</type>
+        <definition>virtual Real _GetPatchLength</definition>
+        <argsstring>(UInt iPatch, Real fT0, Real fT1) const </argsstring>
+        <name>_GetPatchLength</name>
+        <reimplements refid="dc/d70/classTCurveChain3_1a034882b6917276437bfec0415524cf14">_GetPatchLength</reimplements>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iPatch</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fT0</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fT1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/TCBSplineChain3.h" line="64"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/dc2/classTTCBSplineChain3_1a59a5282fc41b552aa64bc9f9ea37a9b1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _ComputeDerivatives</definition>
+        <argsstring>(UInt iPrev, UInt iA, UInt iB, UInt iNext)</argsstring>
+        <name>_ComputeDerivatives</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iPrev</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iA</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iB</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iNext</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/TCBSplineChain3.h" line="67"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="13309">
+        <label>TTCBSplineChain3&lt; Real &gt;</label>
+        <link refid="d3/dc2/classTTCBSplineChain3"/>
+        <childnode refid="13310" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13310">
+        <label>TCurveChain3&lt; Real &gt;</label>
+        <link refid="dc/d70/classTCurveChain3"/>
+        <childnode refid="13311" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13311">
+        <label>TCurve3&lt; Real &gt;</label>
+        <link refid="d7/d44/classTCurve3"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="13315">
+        <label>Real</label>
+      </node>
+      <node id="13312">
+        <label>TTCBSplineChain3&lt; Real &gt;</label>
+        <link refid="d3/dc2/classTTCBSplineChain3"/>
+        <childnode refid="13313" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13317" relation="usage">
+          <edgelabel>m_arrPdT</edgelabel>
+          <edgelabel>m_arrPdT2</edgelabel>
+          <edgelabel>m_arrPdT3</edgelabel>
+        </childnode>
+        <childnode refid="13318" relation="usage">
+          <edgelabel>m_arrControlPoints</edgelabel>
+        </childnode>
+        <childnode refid="13316" relation="usage">
+          <edgelabel>m_iControlPointCount</edgelabel>
+        </childnode>
+        <childnode refid="13315" relation="usage">
+          <edgelabel>m_arrContinuities</edgelabel>
+          <edgelabel>m_arrTensions</edgelabel>
+          <edgelabel>m_arrBiases</edgelabel>
+        </childnode>
+      </node>
+      <node id="13313">
+        <label>TCurveChain3&lt; Real &gt;</label>
+        <link refid="dc/d70/classTCurveChain3"/>
+        <childnode refid="13314" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13316" relation="usage">
+          <edgelabel>m_iPatchCount</edgelabel>
+        </childnode>
+        <childnode refid="13315" relation="usage">
+          <edgelabel>m_arrLengths</edgelabel>
+          <edgelabel>m_arrParameters</edgelabel>
+          <edgelabel>m_arrAccumLengths</edgelabel>
+        </childnode>
+      </node>
+      <node id="13316">
+        <label>int</label>
+      </node>
+      <node id="13318">
+        <label>TVertex3&lt; Real &gt;</label>
+      </node>
+      <node id="13317">
+        <label>TVector3&lt; Real &gt;</label>
+      </node>
+      <node id="13314">
+        <label>TCurve3&lt; Real &gt;</label>
+        <link refid="d7/d44/classTCurve3"/>
+        <childnode refid="13315" relation="usage">
+          <edgelabel>m_fMinT</edgelabel>
+          <edgelabel>m_fMaxT</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/TCBSplineChain3.h" line="40" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurveLibrary/TCBSplineChain3.h" bodystart="39" bodyend="80"/>
+    <listofallmembers>
+      <member refid="d3/dc2/classTTCBSplineChain3_1a59a5282fc41b552aa64bc9f9ea37a9b1" prot="private" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>_ComputeDerivatives</name></member>
+      <member refid="dc/d70/classTCurveChain3_1a3b8e36b86e45bdbd13ecb54ad2b28440" prot="protected" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>_GetPatchInfo</name></member>
+      <member refid="d3/dc2/classTTCBSplineChain3_1a540652fa5ced907ea0e1a715944a57d4" prot="private" virt="virtual"><scope>TTCBSplineChain3</scope><name>_GetPatchLength</name></member>
+      <member refid="d3/dc2/classTTCBSplineChain3_1adb5301d793718dc85158a39fe8b75596" prot="private" virt="virtual"><scope>TTCBSplineChain3</scope><name>_GetPatchSpeed</name></member>
+      <member refid="dc/d70/classTCurveChain3_1a4e61adede9e368832d1c632ef938b92a" prot="protected" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>_SpeedFunction</name></member>
+      <member refid="d7/d44/classTCurve3_1a0e17782121bbafbd94520f83795637eb" prot="public" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>BiNormal</name></member>
+      <member refid="d7/d44/classTCurve3_1a4cd922dcf079e1ee21634e5640493508" prot="public" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>Curvature</name></member>
+      <member refid="d7/d44/classTCurve3_1a779367191813076badc1827de2c973cd" prot="public" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>Frame</name></member>
+      <member refid="d3/dc2/classTTCBSplineChain3_1a9a32809dba9218212db3e5954c969ac2" prot="public" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>GetBias</name></member>
+      <member refid="d3/dc2/classTTCBSplineChain3_1ac9af75d8afe15329c9804e928cc2f551" prot="public" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>GetContinuity</name></member>
+      <member refid="d3/dc2/classTTCBSplineChain3_1a2f741774f71041a8fdffe2bbdd2563a1" prot="public" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>GetControlPoint</name></member>
+      <member refid="d3/dc2/classTTCBSplineChain3_1a514b11a360bc71df762a4e13e9531aab" prot="public" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>GetControlPointCount</name></member>
+      <member refid="d7/d44/classTCurve3_1aa4080b9170a97ff3b0a9af376d5f7d81" prot="public" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>GetMaxT</name></member>
+      <member refid="d7/d44/classTCurve3_1aafc97dcc199fefb4bba21ff59f43cdbb" prot="public" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>GetMinT</name></member>
+      <member refid="dc/d70/classTCurveChain3_1a8a8dfedf69ecaa9da5255da903b31fdd" prot="public" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>GetPatch</name></member>
+      <member refid="dc/d70/classTCurveChain3_1ab21b692750ebe45fa81174593e922b24" prot="public" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>GetPatchCount</name></member>
+      <member refid="d3/dc2/classTTCBSplineChain3_1abb137584b835abc728f7383b801a686b" prot="public" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>GetTension</name></member>
+      <member refid="dc/d70/classTCurveChain3_1adbecc7a9419b8db515196177304db946" prot="public" virt="virtual"><scope>TTCBSplineChain3</scope><name>Length</name></member>
+      <member refid="d7/d44/classTCurve3_1a8f0e1fd4ef91850a26bbd5975708d371" prot="public" virt="non-virtual" ambiguityscope="TCurve3::"><scope>TTCBSplineChain3</scope><name>Length</name></member>
+      <member refid="dc/d70/classTCurveChain3_1a2b6766a03d49fa9e9fb12ecaffeaca78" prot="protected" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>m_arrAccumLengths</name></member>
+      <member refid="d3/dc2/classTTCBSplineChain3_1a08fd13df2a658291cfd631f69dcae649" prot="private" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>m_arrBiases</name></member>
+      <member refid="d3/dc2/classTTCBSplineChain3_1aabe46d3c1a686014c678048ae052af0b" prot="private" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>m_arrContinuities</name></member>
+      <member refid="d3/dc2/classTTCBSplineChain3_1ae2252236b0acb5a361cf1259747b3c00" prot="private" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>m_arrControlPoints</name></member>
+      <member refid="dc/d70/classTCurveChain3_1ada516cc274a44d6b0ae0c414b6cfcf58" prot="protected" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>m_arrLengths</name></member>
+      <member refid="dc/d70/classTCurveChain3_1a444dafb4614673281a72994ad292a145" prot="protected" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>m_arrParameters</name></member>
+      <member refid="d3/dc2/classTTCBSplineChain3_1a260e3b0b6f4d2f37a0e77061e91706cf" prot="private" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>m_arrPdT</name></member>
+      <member refid="d3/dc2/classTTCBSplineChain3_1adebb6fd666d2946de0ef9bf832e8aac3" prot="private" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>m_arrPdT2</name></member>
+      <member refid="d3/dc2/classTTCBSplineChain3_1abf45d90b82115284f3b28a1b3191d9f8" prot="private" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>m_arrPdT3</name></member>
+      <member refid="d3/dc2/classTTCBSplineChain3_1ab0a19a81a7c1bb687007628e530a69a4" prot="private" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>m_arrTensions</name></member>
+      <member refid="d7/d44/classTCurve3_1aeb65f01f1950df1be56159acada0f137" prot="protected" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>m_fMaxT</name></member>
+      <member refid="d7/d44/classTCurve3_1a908d8e638688977192614addf140fe47" prot="protected" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>m_fMinT</name></member>
+      <member refid="d3/dc2/classTTCBSplineChain3_1ae6297dfd89746a092179e7b7a63ea5bf" prot="private" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>m_iControlPointCount</name></member>
+      <member refid="dc/d70/classTCurveChain3_1a10dd7d87364ea66dc0a7ab90b4cbf9af" prot="protected" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>m_iPatchCount</name></member>
+      <member refid="d7/d44/classTCurve3_1a71d0c6f1911fa67a99f80fb55ec7990a" prot="public" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>Normal</name></member>
+      <member refid="d3/dc2/classTTCBSplineChain3_1aadf53385bb27306313392ec422ee55cf" prot="public" virt="virtual"><scope>TTCBSplineChain3</scope><name>P</name></member>
+      <member refid="dc/d70/classTCurveChain3_1a88b2bd67587d5bf1700021b56b14bff4" prot="public" virt="virtual"><scope>TTCBSplineChain3</scope><name>Parameter</name></member>
+      <member refid="d3/dc2/classTTCBSplineChain3_1a515c52de4527f7f5875e03d5140b96d5" prot="public" virt="virtual"><scope>TTCBSplineChain3</scope><name>PdT</name></member>
+      <member refid="d3/dc2/classTTCBSplineChain3_1a4e798ea1edafc64d5ae7655ef5fe2800" prot="public" virt="virtual"><scope>TTCBSplineChain3</scope><name>PdT2</name></member>
+      <member refid="d3/dc2/classTTCBSplineChain3_1a9af3cfd8b5c507674ab954612fff91a6" prot="public" virt="virtual"><scope>TTCBSplineChain3</scope><name>PdT3</name></member>
+      <member refid="d7/d44/classTCurve3_1a3a82d7e08c87636b16ba9d447e0d38c7" prot="public" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>Position</name></member>
+      <member refid="d7/d44/classTCurve3_1a8a1f9ee1b484dba5bc73c90ef753a393" prot="public" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>SetIntervalT</name></member>
+      <member refid="dc/d70/classTCurveChain3_1a82b916dea472331ae5d44a9504a60481" prot="public" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>SetPatch</name></member>
+      <member refid="d7/d44/classTCurve3_1a76cdda297dd49acc0e33ce1de0096d08" prot="public" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>Speed</name></member>
+      <member refid="d7/d44/classTCurve3_1a6a0138b6d642d85bfec9aeaac35d5283" prot="public" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>SubDivideByLength</name></member>
+      <member refid="d7/d44/classTCurve3_1a7ec387b9730213f310bad0a330100148" prot="public" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>SubDivideByParameter</name></member>
+      <member refid="d7/d44/classTCurve3_1a7ac1d2f0d770069db4eceec61b22e063" prot="public" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>Tangent</name></member>
+      <member refid="d7/d44/classTCurve3_1a0f4c46a88ae85956f2664556b4475bc3" prot="public" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>TCurve3</name></member>
+      <member refid="dc/d70/classTCurveChain3_1a76d396fc9f2dda1a188063de36dcd7d5" prot="public" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>TCurveChain3</name></member>
+      <member refid="d7/d44/classTCurve3_1a0a4c7d825e57a5ca54b75126e10011c4" prot="public" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>Torsion</name></member>
+      <member refid="d3/dc2/classTTCBSplineChain3_1a8995fba1eaeae996ad02a7bf1c33cc98" prot="public" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>TTCBSplineChain3</name></member>
+      <member refid="d7/d44/classTCurve3_1af8febaa4811d92c3c96c30eb8c46ae18" prot="public" virt="non-virtual"><scope>TTCBSplineChain3</scope><name>Velocity</name></member>
+      <member refid="d7/d44/classTCurve3_1a0ab441bd89b56aaead25c7595155b585" prot="public" virt="virtual"><scope>TTCBSplineChain3</scope><name>~TCurve3</name></member>
+      <member refid="dc/d70/classTCurveChain3_1aa6fef60e99cc36fac4f1504d50a53bd7" prot="public" virt="virtual"><scope>TTCBSplineChain3</scope><name>~TCurveChain3</name></member>
+      <member refid="d3/dc2/classTTCBSplineChain3_1a9e22db74b6c548c63ed21b6a4fa9c2a5" prot="public" virt="virtual"><scope>TTCBSplineChain3</scope><name>~TTCBSplineChain3</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,882 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="de/d51/ResourceManager_8h" kind="file">
+    <compoundname>ResourceManager.h</compoundname>
+    <includes local="yes">../Lib/Object/Patterns/Manager.h</includes>
+    <includes refid="de/dd9/ResourceDB_8h" local="yes">Database/ResourceDB.h</includes>
+    <includes refid="de/d4a/ResourceFile_8h" local="yes">ResourceFile.h</includes>
+    <includes refid="da/d1f/Resource_8h" local="yes">Resource.h</includes>
+    <includes refid="df/d99/TextureTEX_8h" local="yes">FileFormats/Textures/TextureTEX.h</includes>
+    <includes refid="d6/d80/TextureBMP_8h" local="yes">FileFormats/Textures/TextureBMP.h</includes>
+    <includes local="yes">ResourceManager.inl</includes>
+    <includedby refid="d4/d72/WindowApplication_8h" local="yes">WindowApplication.h</includedby>
+    <includedby refid="de/d07/RenderingManager_8h" local="yes">RenderingManager.h</includedby>
+    <includedby refid="d6/db3/GUIManager_8h" local="yes">GUIManager.h</includedby>
+    <includedby refid="da/dbc/ConsoleEnvironment_8h" local="yes">ConsoleEnvironment.h</includedby>
+    <includedby refid="db/d8b/CommandRDB_8h" local="yes">CommandRDB.h</includedby>
+    <includedby refid="dc/db1/CommandOpen_8h" local="yes">CommandOpen.h</includedby>
+    <includedby refid="db/d14/CommandClose_8h" local="yes">CommandClose.h</includedby>
+    <includedby refid="d4/d98/CommandCreate_8h" local="yes">CommandCreate.h</includedby>
+    <includedby refid="da/d5c/CommandDestroy_8h" local="yes">CommandDestroy.h</includedby>
+    <includedby refid="d6/da1/CommandCWD_8h" local="yes">CommandCWD.h</includedby>
+    <includedby refid="db/da2/CommandList_8h" local="yes">CommandList.h</includedby>
+    <includedby refid="d2/d08/CommandInspect_8h" local="yes">CommandInspect.h</includedby>
+    <includedby refid="da/d4c/CommandRename_8h" local="yes">CommandRename.h</includedby>
+    <includedby refid="d5/d5b/CommandMove_8h" local="yes">CommandMove.h</includedby>
+    <includedby refid="dc/db1/CommandLoad_8h" local="yes">CommandLoad.h</includedby>
+    <includedby refid="d1/df6/CommandSave_8h" local="yes">CommandSave.h</includedby>
+    <includedby refid="d5/d90/CommandImport_8h" local="yes">CommandImport.h</includedby>
+    <includedby refid="d3/dd7/CommandExport_8h" local="yes">CommandExport.h</includedby>
+    <incdepgraph>
+      <node id="34685">
+        <label>TextureBMP.inl</label>
+      </node>
+      <node id="34662">
+        <label>../../../Lib/Math/Hash/SHA1.h</label>
+        <link refid="d1/de3/SHA1_8h"/>
+        <childnode refid="34610" relation="include">
+        </childnode>
+        <childnode refid="34663" relation="include">
+        </childnode>
+      </node>
+      <node id="34658">
+        <label>RedBlackTree.inl</label>
+      </node>
+      <node id="34668">
+        <label>RDBTreeOperator.inl</label>
+      </node>
+      <node id="34633">
+        <label>SSE.inl</label>
+      </node>
+      <node id="34637">
+        <label>Threading.h</label>
+        <link refid="dd/d0e/Threading_8h"/>
+        <childnode refid="34608" relation="include">
+        </childnode>
+        <childnode refid="34610" relation="include">
+        </childnode>
+        <childnode refid="34638" relation="include">
+        </childnode>
+      </node>
+      <node id="34649">
+        <label>Allocators/BreakAllocator.h</label>
+        <link refid="d4/dac/BreakAllocator_8h"/>
+        <childnode refid="34644" relation="include">
+        </childnode>
+        <childnode refid="34650" relation="include">
+        </childnode>
+      </node>
+      <node id="34620">
+        <label>../Memory/MemoryManager.h</label>
+        <link refid="d7/d7b/MemoryManager_8h"/>
+        <childnode refid="34621" relation="include">
+        </childnode>
+        <childnode refid="34623" relation="include">
+        </childnode>
+        <childnode refid="34629" relation="include">
+        </childnode>
+        <childnode refid="34643" relation="include">
+        </childnode>
+        <childnode refid="34647" relation="include">
+        </childnode>
+        <childnode refid="34649" relation="include">
+        </childnode>
+        <childnode refid="34651" relation="include">
+        </childnode>
+        <childnode refid="34653" relation="include">
+        </childnode>
+      </node>
+      <node id="34670">
+        <label>ResourceFile.h</label>
+        <link refid="de/d4a/ResourceFile_8h"/>
+        <childnode refid="34606" relation="include">
+        </childnode>
+        <childnode refid="34671" relation="include">
+        </childnode>
+      </node>
+      <node id="34630">
+        <label>../../ThirdParty/System/System.h</label>
+        <link refid="db/d39/System_8h"/>
+        <childnode refid="34608" relation="include">
+        </childnode>
+        <childnode refid="34610" relation="include">
+        </childnode>
+        <childnode refid="34631" relation="include">
+        </childnode>
+        <childnode refid="34607" relation="include">
+        </childnode>
+        <childnode refid="34635" relation="include">
+        </childnode>
+        <childnode refid="34637" relation="include">
+        </childnode>
+        <childnode refid="34639" relation="include">
+        </childnode>
+        <childnode refid="34641" relation="include">
+        </childnode>
+      </node>
+      <node id="34682">
+        <label>Color4.h</label>
+        <link refid="d7/d4d/Color4_8h"/>
+        <childnode refid="34623" relation="include">
+        </childnode>
+        <childnode refid="34683" relation="include">
+        </childnode>
+      </node>
+      <node id="34638">
+        <label>Threading.inl</label>
+      </node>
+      <node id="34617">
+        <label>RDBPersistentStorage.h</label>
+        <link refid="d2/d3d/RDBPersistentStorage_8h"/>
+        <childnode refid="34618" relation="include">
+        </childnode>
+        <childnode refid="34656" relation="include">
+        </childnode>
+        <childnode refid="34660" relation="include">
+        </childnode>
+        <childnode refid="34662" relation="include">
+        </childnode>
+        <childnode refid="34664" relation="include">
+        </childnode>
+        <childnode refid="34666" relation="include">
+        </childnode>
+      </node>
+      <node id="34650">
+        <label>BreakAllocator.inl</label>
+      </node>
+      <node id="34619">
+        <label>../Datastruct.h</label>
+        <link refid="d5/db1/Datastruct_8h"/>
+        <childnode refid="34620" relation="include">
+        </childnode>
+        <childnode refid="34654" relation="include">
+        </childnode>
+      </node>
+      <node id="34616">
+        <label>PatternMatching.inl</label>
+      </node>
+      <node id="34654">
+        <label>Datastruct.inl</label>
+      </node>
+      <node id="34657">
+        <label>../Tree/RedBlackTree.h</label>
+        <link refid="d6/dff/RedBlackTree_8h"/>
+        <childnode refid="34619" relation="include">
+        </childnode>
+        <childnode refid="34658" relation="include">
+        </childnode>
+      </node>
+      <node id="34610">
+        <label>Platform.h</label>
+        <link refid="d9/dd0/Platform_8h"/>
+        <childnode refid="34611" relation="include">
+        </childnode>
+      </node>
+      <node id="34660">
+        <label>../../../Lib/Datastruct/Tree/SplayTree.h</label>
+        <link refid="d7/d5f/SplayTree_8h"/>
+        <childnode refid="34619" relation="include">
+        </childnode>
+        <childnode refid="34661" relation="include">
+        </childnode>
+      </node>
+      <node id="34647">
+        <label>Allocators/PoolAllocator.h</label>
+        <link refid="d3/d03/PoolAllocator_8h"/>
+        <childnode refid="34644" relation="include">
+        </childnode>
+        <childnode refid="34648" relation="include">
+        </childnode>
+      </node>
+      <node id="34675">
+        <label>TextureFile.h</label>
+        <link refid="db/dd1/TextureFile_8h"/>
+        <childnode refid="34670" relation="include">
+        </childnode>
+        <childnode refid="34676" relation="include">
+        </childnode>
+      </node>
+      <node id="34613">
+        <label>FPU.inl</label>
+      </node>
+      <node id="34622">
+        <label>Hashing.inl</label>
+      </node>
+      <node id="34628">
+        <label>MathFunction.inl</label>
+      </node>
+      <node id="34659">
+        <label>TreeMap.inl</label>
+      </node>
+      <node id="34667">
+        <label>RDBTreeOperator.h</label>
+        <link refid="d3/dd8/RDBTreeOperator_8h"/>
+        <childnode refid="34617" relation="include">
+        </childnode>
+        <childnode refid="34668" relation="include">
+        </childnode>
+      </node>
+      <node id="34624">
+        <label>../Formats/Scalar.h</label>
+        <link refid="d0/d10/Scalar_8h"/>
+        <childnode refid="34610" relation="include">
+        </childnode>
+        <childnode refid="34625" relation="include">
+        </childnode>
+      </node>
+      <node id="34645">
+        <label>MemoryAllocator.inl</label>
+      </node>
+      <node id="34671">
+        <label>ResourceFile.inl</label>
+      </node>
+      <node id="34664">
+        <label>RDBFileStructure.h</label>
+        <link refid="d5/dae/RDBFileStructure_8h"/>
+        <childnode refid="34629" relation="include">
+        </childnode>
+        <childnode refid="34665" relation="include">
+        </childnode>
+      </node>
+      <node id="34666">
+        <label>RDBPersistentStorage.inl</label>
+      </node>
+      <node id="34621">
+        <label>../Math/Hash/Hashing.h</label>
+        <link refid="d0/d4e/Hashing_8h"/>
+        <childnode refid="34607" relation="include">
+        </childnode>
+        <childnode refid="34622" relation="include">
+        </childnode>
+      </node>
+      <node id="34644">
+        <label>MemoryAllocator.h</label>
+        <link refid="d2/d75/MemoryAllocator_8h"/>
+        <childnode refid="34629" relation="include">
+        </childnode>
+        <childnode refid="34645" relation="include">
+        </childnode>
+      </node>
+      <node id="34604">
+        <label>ResourceManager.h</label>
+        <link refid="ResourceManager.h"/>
+        <childnode refid="34605" relation="include">
+        </childnode>
+        <childnode refid="34606" relation="include">
+        </childnode>
+        <childnode refid="34670" relation="include">
+        </childnode>
+        <childnode refid="34672" relation="include">
+        </childnode>
+        <childnode refid="34674" relation="include">
+        </childnode>
+        <childnode refid="34678" relation="include">
+        </childnode>
+        <childnode refid="34686" relation="include">
+        </childnode>
+      </node>
+      <node id="34669">
+        <label>ResourceDB.inl</label>
+      </node>
+      <node id="34678">
+        <label>FileFormats/Textures/TextureBMP.h</label>
+        <link refid="d6/d80/TextureBMP_8h"/>
+        <childnode refid="34679" relation="include">
+        </childnode>
+        <childnode refid="34675" relation="include">
+        </childnode>
+        <childnode refid="34685" relation="include">
+        </childnode>
+      </node>
+      <node id="34636">
+        <label>File.inl</label>
+      </node>
+      <node id="34631">
+        <label>Hardware/Hardware.h</label>
+        <link refid="da/dec/Hardware_8h"/>
+        <childnode refid="34610" relation="include">
+        </childnode>
+        <childnode refid="34612" relation="include">
+        </childnode>
+        <childnode refid="34632" relation="include">
+        </childnode>
+        <childnode refid="34634" relation="include">
+        </childnode>
+      </node>
+      <node id="34643">
+        <label>Allocators/StackAllocator.h</label>
+        <link refid="db/d84/StackAllocator_8h"/>
+        <childnode refid="34644" relation="include">
+        </childnode>
+        <childnode refid="34646" relation="include">
+        </childnode>
+      </node>
+      <node id="34634">
+        <label>Hardware.inl</label>
+      </node>
+      <node id="34673">
+        <label>Resource.inl</label>
+      </node>
+      <node id="34648">
+        <label>PoolAllocator.inl</label>
+      </node>
+      <node id="34672">
+        <label>Resource.h</label>
+        <link refid="da/d1f/Resource_8h"/>
+        <childnode refid="34606" relation="include">
+        </childnode>
+        <childnode refid="34673" relation="include">
+        </childnode>
+      </node>
+      <node id="34625">
+        <label>Scalar.inl</label>
+      </node>
+      <node id="34614">
+        <label>String.inl</label>
+      </node>
+      <node id="34665">
+        <label>RDBFileStructure.inl</label>
+      </node>
+      <node id="34663">
+        <label>SHA1.inl</label>
+      </node>
+      <node id="34677">
+        <label>TextureTEX.inl</label>
+      </node>
+      <node id="34618">
+        <label>../../../Lib/Datastruct/Array/Array.h</label>
+        <link refid="df/dd0/Array_8h"/>
+        <childnode refid="34619" relation="include">
+        </childnode>
+        <childnode refid="34655" relation="include">
+        </childnode>
+      </node>
+      <node id="34612">
+        <label>Hardware/FPU.h</label>
+        <link refid="dd/d2f/FPU_8h"/>
+        <childnode refid="34610" relation="include">
+        </childnode>
+        <childnode refid="34613" relation="include">
+        </childnode>
+      </node>
+      <node id="34606">
+        <label>Database/ResourceDB.h</label>
+        <link refid="de/dd9/ResourceDB_8h"/>
+        <childnode refid="34607" relation="include">
+        </childnode>
+        <childnode refid="34615" relation="include">
+        </childnode>
+        <childnode refid="34617" relation="include">
+        </childnode>
+        <childnode refid="34667" relation="include">
+        </childnode>
+        <childnode refid="34669" relation="include">
+        </childnode>
+      </node>
+      <node id="34684">
+        <label>ColorFunction.inl</label>
+      </node>
+      <node id="34615">
+        <label>../../../Lib/String/PatternMatching.h</label>
+        <link refid="d8/d12/PatternMatching_8h"/>
+        <childnode refid="34607" relation="include">
+        </childnode>
+        <childnode refid="34616" relation="include">
+        </childnode>
+      </node>
+      <node id="34651">
+        <label>Allocators/HeapAllocator.h</label>
+        <link refid="d3/d89/HeapAllocator_8h"/>
+        <childnode refid="34644" relation="include">
+        </childnode>
+        <childnode refid="34652" relation="include">
+        </childnode>
+      </node>
+      <node id="34607">
+        <label>../../../ThirdParty/System/String.h</label>
+        <link refid="d9/dba/String_8h"/>
+        <childnode refid="34608" relation="include">
+        </childnode>
+        <childnode refid="34610" relation="include">
+        </childnode>
+        <childnode refid="34612" relation="include">
+        </childnode>
+        <childnode refid="34614" relation="include">
+        </childnode>
+      </node>
+      <node id="34679">
+        <label>../../../../Lib/Math/Types/Color/ColorFunction.h</label>
+        <link refid="dc/d75/ColorFunction_8h"/>
+        <childnode refid="34680" relation="include">
+        </childnode>
+        <childnode refid="34682" relation="include">
+        </childnode>
+        <childnode refid="34684" relation="include">
+        </childnode>
+      </node>
+      <node id="34611">
+        <label>Platform.inl</label>
+      </node>
+      <node id="34653">
+        <label>MemoryManager.inl</label>
+      </node>
+      <node id="34641">
+        <label>System.inl</label>
+      </node>
+      <node id="34639">
+        <label>Networking.h</label>
+        <link refid="df/dfb/Networking_8h"/>
+        <childnode refid="34608" relation="include">
+        </childnode>
+        <childnode refid="34610" relation="include">
+        </childnode>
+        <childnode refid="34640" relation="include">
+        </childnode>
+      </node>
+      <node id="34635">
+        <label>File.h</label>
+        <link refid="d6/db7/File_8h"/>
+        <childnode refid="34608" relation="include">
+        </childnode>
+        <childnode refid="34610" relation="include">
+        </childnode>
+        <childnode refid="34607" relation="include">
+        </childnode>
+        <childnode refid="34636" relation="include">
+        </childnode>
+      </node>
+      <node id="34646">
+        <label>StackAllocator.inl</label>
+      </node>
+      <node id="34605">
+        <label>../Lib/Object/Patterns/Manager.h</label>
+      </node>
+      <node id="34609">
+        <label>ForwardWin32.inl</label>
+      </node>
+      <node id="34632">
+        <label>SSE.h</label>
+        <link refid="d0/d02/SSE_8h"/>
+        <childnode refid="34610" relation="include">
+        </childnode>
+        <childnode refid="34633" relation="include">
+        </childnode>
+      </node>
+      <node id="34683">
+        <label>Color4.inl</label>
+      </node>
+      <node id="34656">
+        <label>../../../Lib/Datastruct/Table/TreeMap.h</label>
+        <link refid="da/d29/TreeMap_8h"/>
+        <childnode refid="34657" relation="include">
+        </childnode>
+        <childnode refid="34659" relation="include">
+        </childnode>
+      </node>
+      <node id="34640">
+        <label>Networking.inl</label>
+      </node>
+      <node id="34680">
+        <label>Color3.h</label>
+        <link refid="d1/d32/Color3_8h"/>
+        <childnode refid="34623" relation="include">
+        </childnode>
+        <childnode refid="34681" relation="include">
+        </childnode>
+      </node>
+      <node id="34627">
+        <label>Fixed.inl</label>
+      </node>
+      <node id="34676">
+        <label>TextureFile.inl</label>
+      </node>
+      <node id="34623">
+        <label>../Math/Functions/MathFunction.h</label>
+        <link refid="d1/d98/MathFunction_8h"/>
+        <childnode refid="34612" relation="include">
+        </childnode>
+        <childnode refid="34624" relation="include">
+        </childnode>
+        <childnode refid="34626" relation="include">
+        </childnode>
+        <childnode refid="34628" relation="include">
+        </childnode>
+      </node>
+      <node id="34661">
+        <label>SplayTree.inl</label>
+      </node>
+      <node id="34626">
+        <label>../Formats/Fixed.h</label>
+        <link refid="d4/d76/Fixed_8h"/>
+        <childnode refid="34624" relation="include">
+        </childnode>
+        <childnode refid="34627" relation="include">
+        </childnode>
+      </node>
+      <node id="34642">
+        <label>ErrorManager.inl</label>
+      </node>
+      <node id="34681">
+        <label>Color3.inl</label>
+      </node>
+      <node id="34652">
+        <label>HeapAllocator.inl</label>
+      </node>
+      <node id="34608">
+        <label>../Forwards/ForwardWin32.h</label>
+        <link refid="d5/dea/ForwardWin32_8h"/>
+        <childnode refid="34609" relation="include">
+        </childnode>
+      </node>
+      <node id="34686">
+        <label>ResourceManager.inl</label>
+      </node>
+      <node id="34629">
+        <label>../Error/ErrorManager.h</label>
+        <link refid="d1/db6/ErrorManager_8h"/>
+        <childnode refid="34630" relation="include">
+        </childnode>
+        <childnode refid="34642" relation="include">
+        </childnode>
+      </node>
+      <node id="34674">
+        <label>FileFormats/Textures/TextureTEX.h</label>
+        <link refid="df/d99/TextureTEX_8h"/>
+        <childnode refid="34675" relation="include">
+        </childnode>
+        <childnode refid="34677" relation="include">
+        </childnode>
+      </node>
+      <node id="34655">
+        <label>Array.inl</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="34713">
+        <label>CommandImport.h</label>
+        <link refid="d5/d90/CommandImport_8h"/>
+        <childnode refid="34698" relation="include">
+        </childnode>
+      </node>
+      <node id="34696">
+        <label>WorldManager.h</label>
+        <link refid="db/d98/WorldManager_8h"/>
+        <childnode refid="34688" relation="include">
+        </childnode>
+      </node>
+      <node id="34693">
+        <label>MyDungeon.h</label>
+        <link refid="d0/de7/MyDungeon_8h"/>
+        <childnode refid="34691" relation="include">
+        </childnode>
+      </node>
+      <node id="34703">
+        <label>CommandClose.h</label>
+        <link refid="db/d14/CommandClose_8h"/>
+        <childnode refid="34698" relation="include">
+        </childnode>
+      </node>
+      <node id="34694">
+        <label>RenderingManager.h</label>
+        <link refid="de/d07/RenderingManager_8h"/>
+        <childnode refid="34688" relation="include">
+        </childnode>
+        <childnode refid="34695" relation="include">
+        </childnode>
+        <childnode refid="34696" relation="include">
+        </childnode>
+        <childnode refid="34697" relation="include">
+        </childnode>
+      </node>
+      <node id="34712">
+        <label>CommandSave.h</label>
+        <link refid="d1/df6/CommandSave_8h"/>
+        <childnode refid="34698" relation="include">
+        </childnode>
+      </node>
+      <node id="34708">
+        <label>CommandInspect.h</label>
+        <link refid="d2/d08/CommandInspect_8h"/>
+        <childnode refid="34698" relation="include">
+        </childnode>
+      </node>
+      <node id="34691">
+        <label>Main.h</label>
+        <link refid="da/d94/Main_8h"/>
+      </node>
+      <node id="34707">
+        <label>CommandList.h</label>
+        <link refid="db/da2/CommandList_8h"/>
+        <childnode refid="34698" relation="include">
+        </childnode>
+      </node>
+      <node id="34700">
+        <label>ConsoleEnvironment.h</label>
+        <link refid="da/dbc/ConsoleEnvironment_8h"/>
+        <childnode refid="34698" relation="include">
+        </childnode>
+      </node>
+      <node id="34705">
+        <label>CommandDestroy.h</label>
+        <link refid="da/d5c/CommandDestroy_8h"/>
+        <childnode refid="34698" relation="include">
+        </childnode>
+      </node>
+      <node id="34699">
+        <label>CommandShowTree.h</label>
+        <link refid="d8/d84/CommandShowTree_8h"/>
+        <childnode refid="34698" relation="include">
+        </childnode>
+      </node>
+      <node id="34692">
+        <label>MyLandscape.h</label>
+        <link refid="d7/d2b/MyLandscape_8h"/>
+        <childnode refid="34691" relation="include">
+        </childnode>
+      </node>
+      <node id="34689">
+        <label>ApplicationManager.h</label>
+        <link refid="d2/d9d/ApplicationManager_8h"/>
+        <childnode refid="34690" relation="include">
+        </childnode>
+        <childnode refid="34691" relation="include">
+        </childnode>
+        <childnode refid="34692" relation="include">
+        </childnode>
+        <childnode refid="34693" relation="include">
+        </childnode>
+      </node>
+      <node id="34710">
+        <label>CommandMove.h</label>
+        <link refid="d5/d5b/CommandMove_8h"/>
+        <childnode refid="34698" relation="include">
+        </childnode>
+      </node>
+      <node id="34687">
+        <label>ResourceManager.h</label>
+        <link refid="ResourceManager.h"/>
+        <childnode refid="34688" relation="include">
+        </childnode>
+        <childnode refid="34694" relation="include">
+        </childnode>
+        <childnode refid="34697" relation="include">
+        </childnode>
+        <childnode refid="34700" relation="include">
+        </childnode>
+        <childnode refid="34701" relation="include">
+        </childnode>
+        <childnode refid="34702" relation="include">
+        </childnode>
+        <childnode refid="34703" relation="include">
+        </childnode>
+        <childnode refid="34704" relation="include">
+        </childnode>
+        <childnode refid="34705" relation="include">
+        </childnode>
+        <childnode refid="34706" relation="include">
+        </childnode>
+        <childnode refid="34707" relation="include">
+        </childnode>
+        <childnode refid="34708" relation="include">
+        </childnode>
+        <childnode refid="34709" relation="include">
+        </childnode>
+        <childnode refid="34710" relation="include">
+        </childnode>
+        <childnode refid="34711" relation="include">
+        </childnode>
+        <childnode refid="34712" relation="include">
+        </childnode>
+        <childnode refid="34713" relation="include">
+        </childnode>
+        <childnode refid="34714" relation="include">
+        </childnode>
+      </node>
+      <node id="34688">
+        <label>WindowApplication.h</label>
+        <link refid="d4/d72/WindowApplication_8h"/>
+        <childnode refid="34689" relation="include">
+        </childnode>
+      </node>
+      <node id="34701">
+        <label>CommandRDB.h</label>
+        <link refid="db/d8b/CommandRDB_8h"/>
+        <childnode refid="34698" relation="include">
+        </childnode>
+      </node>
+      <node id="34709">
+        <label>CommandRename.h</label>
+        <link refid="da/d4c/CommandRename_8h"/>
+        <childnode refid="34698" relation="include">
+        </childnode>
+      </node>
+      <node id="34704">
+        <label>CommandCreate.h</label>
+        <link refid="d4/d98/CommandCreate_8h"/>
+        <childnode refid="34698" relation="include">
+        </childnode>
+      </node>
+      <node id="34690">
+        <label>Entities.h</label>
+        <link refid="d7/d5d/Entities_8h"/>
+        <childnode refid="34691" relation="include">
+        </childnode>
+      </node>
+      <node id="34711">
+        <label>CommandLoad.h</label>
+        <link refid="dc/db1/CommandLoad_8h"/>
+        <childnode refid="34698" relation="include">
+        </childnode>
+      </node>
+      <node id="34695">
+        <label>ModelingManager.h</label>
+        <link refid="dc/ddb/ModelingManager_8h"/>
+        <childnode refid="34688" relation="include">
+        </childnode>
+        <childnode refid="34696" relation="include">
+        </childnode>
+      </node>
+      <node id="34698">
+        <label>ConsoleManager.h</label>
+        <link refid="d3/d63/ConsoleManager_8h"/>
+        <childnode refid="34688" relation="include">
+        </childnode>
+      </node>
+      <node id="34697">
+        <label>GUIManager.h</label>
+        <link refid="d6/db3/GUIManager_8h"/>
+        <childnode refid="34688" relation="include">
+        </childnode>
+        <childnode refid="34698" relation="include">
+        </childnode>
+        <childnode refid="34699" relation="include">
+        </childnode>
+      </node>
+      <node id="34702">
+        <label>CommandOpen.h</label>
+        <link refid="dc/db1/CommandOpen_8h"/>
+        <childnode refid="34698" relation="include">
+        </childnode>
+      </node>
+      <node id="34706">
+        <label>CommandCWD.h</label>
+        <link refid="d6/da1/CommandCWD_8h"/>
+        <childnode refid="34698" relation="include">
+        </childnode>
+      </node>
+      <node id="34714">
+        <label>CommandExport.h</label>
+        <link refid="d3/dd7/CommandExport_8h"/>
+        <childnode refid="34698" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="de/d6b/classResourceManager" prot="public">ResourceManager</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="de/d51/ResourceManager_8h_1ae8c6cba654ba750b5a36df7b798b3e9c" prot="public" static="no">
+        <name>ResourceFn</name>
+        <initializer><ref refid="dd/dcd/classManager_1a7fa7098f43df61eb754bbf4c91938d74" kindref="member">ResourceManager::GetInstancePtr</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h" line="40" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="de/d51/ResourceManager_8h_1a9ec2f3462f72511f683110471d37c6db" prot="public" static="no">
+        <name>RDB_PATH_BASE</name>
+        <initializer><ref refid="d9/dd0/Platform_8h_1a73bc5d2c175e0e221460a8b524c0412b" kindref="member">TEXT</ref>(&quot;Data/Resources&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h" line="43" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="de/d51/ResourceManager_8h_1a661b0bea47be7596d06ce9d62f24bfbf" prot="public" static="no">
+        <name>RDB_PATH_IMPORTS</name>
+        <initializer><ref refid="d9/dd0/Platform_8h_1a73bc5d2c175e0e221460a8b524c0412b" kindref="member">TEXT</ref>(&quot;Data/Resources/Imports&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h" line="44" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="de/d51/ResourceManager_8h_1a10be8f5378bd31e67191a81dfbb8513b" prot="public" static="no">
+        <name>RDB_PATH_EXPORTS</name>
+        <initializer><ref refid="d9/dd0/Platform_8h_1a73bc5d2c175e0e221460a8b524c0412b" kindref="member">TEXT</ref>(&quot;Data/Resources/Exports&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h" line="45" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="de/d51/ResourceManager_8h_1a8dbb08f0a17c6d31b7642f3227356509" prot="public" static="no">
+        <name>RDB_MASTER</name>
+        <initializer><ref refid="d9/dd0/Platform_8h_1a73bc5d2c175e0e221460a8b524c0412b" kindref="member">TEXT</ref>(&quot;MasterDB&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h" line="47" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="de/d51/ResourceManager_8h_1a97c10b96513d8d53ab4360988d894cd0" prot="public" static="no">
+        <name>RDB_PACKAGE_NULL</name>
+        <initializer><ref refid="d9/dd0/Platform_8h_1a73bc5d2c175e0e221460a8b524c0412b" kindref="member">TEXT</ref>(&quot;/Package_Null&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h" line="50" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="de/d51/ResourceManager_8h_1acfef403f7fa3dbf4881d9312045dc241" prot="public" static="no">
+        <name>RDB_LOCATION_FONTS</name>
+        <initializer><ref refid="d9/dd0/Platform_8h_1a73bc5d2c175e0e221460a8b524c0412b" kindref="member">TEXT</ref>(&quot;/Fonts&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h" line="53" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="de/d51/ResourceManager_8h_1aa6dc579e671779de8821079ac0a49eef" prot="public" static="no">
+        <name>RDB_LOCATION_GUI</name>
+        <initializer><ref refid="d9/dd0/Platform_8h_1a73bc5d2c175e0e221460a8b524c0412b" kindref="member">TEXT</ref>(&quot;/GUI&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h" line="55" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="de/d51/ResourceManager_8h_1a6afea8e27ad6a81cb39fb3c973cbbe94" prot="public" static="no">
+        <name>RDB_LOCATION_GUI_SKINS</name>
+        <initializer><ref refid="d9/dd0/Platform_8h_1a73bc5d2c175e0e221460a8b524c0412b" kindref="member">TEXT</ref>(&quot;/GUI/Skins&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h" line="56" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceManager.h"/>
+  </compounddef>
+</doxygen>

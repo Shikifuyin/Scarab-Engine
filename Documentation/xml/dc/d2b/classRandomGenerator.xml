@@ -1,0 +1,1093 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="dc/d2b/classRandomGenerator" kind="class" prot="public">
+    <compoundname>RandomGenerator</compoundname>
+    <includes refid="dd/d6d/Random_8h" local="no">Random.h</includes>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="dc/d2b/classRandomGenerator_1a7c70085ea14a31b872673a4dbd36de31" prot="private" static="yes" mutable="no">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a3bb1dddc49d9e4f6f66634f964e6131c" kindref="member">Long</ref></type>
+        <definition>const Long sm_iLecuyerTableSize</definition>
+        <argsstring></argsstring>
+        <name>sm_iLecuyerTableSize</name>
+        <initializer>= 32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="136" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d2b/classRandomGenerator_1af6c6e38a6e2a85b6f1913a5453d32a87" prot="private" static="yes" mutable="no">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a3bb1dddc49d9e4f6f66634f964e6131c" kindref="member">Long</ref></type>
+        <definition>const Long sm_iLecuyerM1</definition>
+        <argsstring></argsstring>
+        <name>sm_iLecuyerM1</name>
+        <initializer>= 2147483563</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="137" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d2b/classRandomGenerator_1a4780be7d90696f01982bd45b55494330" prot="private" static="yes" mutable="no">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a3bb1dddc49d9e4f6f66634f964e6131c" kindref="member">Long</ref></type>
+        <definition>const Long sm_iLecuyerNDIVS</definition>
+        <argsstring></argsstring>
+        <name>sm_iLecuyerNDIVS</name>
+        <initializer>= 1 + ( (<ref refid="dc/d2b/classRandomGenerator_1af6c6e38a6e2a85b6f1913a5453d32a87" kindref="member">sm_iLecuyerM1</ref> - 1) / <ref refid="dc/d2b/classRandomGenerator_1a7c70085ea14a31b872673a4dbd36de31" kindref="member">sm_iLecuyerTableSize</ref> )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="138" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d2b/classRandomGenerator_1a6da2c83f2f45269000aefd167ac80cd7" prot="private" static="yes" mutable="no">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a3bb1dddc49d9e4f6f66634f964e6131c" kindref="member">Long</ref></type>
+        <definition>const Long sm_iKnuthTableSize</definition>
+        <argsstring></argsstring>
+        <name>sm_iKnuthTableSize</name>
+        <initializer>= 56</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="144" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d2b/classRandomGenerator_1a900cbdbd98bdfb6b100ba7df3850bb42" prot="private" static="yes" mutable="no">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a3bb1dddc49d9e4f6f66634f964e6131c" kindref="member">Long</ref></type>
+        <definition>const Long sm_iKnuthBig</definition>
+        <argsstring></argsstring>
+        <name>sm_iKnuthBig</name>
+        <initializer>= 2147483647</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="145" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d2b/classRandomGenerator_1a1d704e3e400315b9d92416b11c20d374" prot="private" static="yes" mutable="no">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+        <definition>const ULong sm_iRanRotTableSize</definition>
+        <argsstring></argsstring>
+        <name>sm_iRanRotTableSize</name>
+        <initializer>= 17</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="150" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d2b/classRandomGenerator_1a282aa7d7e6168942e9cc61bcacf4d31a" prot="private" static="yes" mutable="no">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+        <definition>const ULong sm_iMersTwistStateSize</definition>
+        <argsstring></argsstring>
+        <name>sm_iMersTwistStateSize</name>
+        <initializer>= 624</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="159" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d2b/classRandomGenerator_1a922c262ec1ba89c4bbabae1017bca82d" prot="private" static="yes" mutable="no">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a3bb1dddc49d9e4f6f66634f964e6131c" kindref="member">Long</ref></type>
+        <definition>const Long sm_iMersTwistRecOffset</definition>
+        <argsstring></argsstring>
+        <name>sm_iMersTwistRecOffset</name>
+        <initializer>= 397</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="160" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d2b/classRandomGenerator_1a45dd7dec3e69a05206dfc54261246289" prot="private" static="yes" mutable="no">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+        <definition>const ULong sm_iCMWCTableSize</definition>
+        <argsstring></argsstring>
+        <name>sm_iCMWCTableSize</name>
+        <initializer>= 4096</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="170" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="dc/d2b/classRandomGenerator_1a13f35ea4a1444ff5eeeede9ab51e46f5" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a3bb1dddc49d9e4f6f66634f964e6131c" kindref="member">Long</ref></type>
+        <definition>Long m_arrLecuyerTable[sm_iLecuyerTableSize]</definition>
+        <argsstring>[sm_iLecuyerTableSize]</argsstring>
+        <name>m_arrLecuyerTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="139" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d2b/classRandomGenerator_1a415ab5010f2d7f73c89a0fd044ad6510" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a3bb1dddc49d9e4f6f66634f964e6131c" kindref="member">Long</ref></type>
+        <definition>Long m_iLecuyerSeed1</definition>
+        <argsstring></argsstring>
+        <name>m_iLecuyerSeed1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="140" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d2b/classRandomGenerator_1afdd74e3b87174d7ebb5eee1be5465a1b" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a3bb1dddc49d9e4f6f66634f964e6131c" kindref="member">Long</ref></type>
+        <definition>Long m_iLecuyerSeed2</definition>
+        <argsstring></argsstring>
+        <name>m_iLecuyerSeed2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="140" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d2b/classRandomGenerator_1aca2cba5868bcffd7d781faf44b375022" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a3bb1dddc49d9e4f6f66634f964e6131c" kindref="member">Long</ref></type>
+        <definition>Long m_iLecuyerCurrent</definition>
+        <argsstring></argsstring>
+        <name>m_iLecuyerCurrent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="141" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d2b/classRandomGenerator_1a2c14cfbf2781b4e8924799d8bb562bbb" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a3bb1dddc49d9e4f6f66634f964e6131c" kindref="member">Long</ref></type>
+        <definition>Long m_arrKnuthTable[sm_iKnuthTableSize]</definition>
+        <argsstring>[sm_iKnuthTableSize]</argsstring>
+        <name>m_arrKnuthTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="146" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d2b/classRandomGenerator_1ae18777b431904f2aa9cb76ff024d3d42" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+        <definition>ULong m_iKnuthNext</definition>
+        <argsstring></argsstring>
+        <name>m_iKnuthNext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="147" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d2b/classRandomGenerator_1a87cc8258cdfa53b25bc3cd7c3d76b8c8" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+        <definition>ULong m_iKnuthNextP</definition>
+        <argsstring></argsstring>
+        <name>m_iKnuthNextP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="147" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d2b/classRandomGenerator_1aa25e0b1ceae2d3128179856e384e8a02" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+        <definition>ULong m_arrRanRotTable[sm_iRanRotTableSize][2]</definition>
+        <argsstring>[sm_iRanRotTableSize][2]</argsstring>
+        <name>m_arrRanRotTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="151" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d2b/classRandomGenerator_1aad064af0cbb754bd4e374165a155271a" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a3bb1dddc49d9e4f6f66634f964e6131c" kindref="member">Long</ref></type>
+        <definition>Long m_iRanRotP1</definition>
+        <argsstring></argsstring>
+        <name>m_iRanRotP1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="152" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d2b/classRandomGenerator_1ad832719e28d0c0426e67254ab13ca37c" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a3bb1dddc49d9e4f6f66634f964e6131c" kindref="member">Long</ref></type>
+        <definition>Long m_iRanRotP2</definition>
+        <argsstring></argsstring>
+        <name>m_iRanRotP2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="152" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d2b/classRandomGenerator_1a08f7ed01cf26206736713f9cb26bc3d4" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+        <definition>ULong m_arrMersTwistTable[sm_iMersTwistStateSize]</definition>
+        <argsstring>[sm_iMersTwistStateSize]</argsstring>
+        <name>m_arrMersTwistTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="161" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d2b/classRandomGenerator_1a46cbc50f06db5b6d0a79adba6c36996d" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iMersTwistCurrent</definition>
+        <argsstring></argsstring>
+        <name>m_iMersTwistCurrent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="162" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d2b/classRandomGenerator_1a12e2aae35b50388aa6ed423aa3a36151" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+        <definition>ULong m_arrMOA32Table[5]</definition>
+        <argsstring>[5]</argsstring>
+        <name>m_arrMOA32Table</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="165" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d2b/classRandomGenerator_1a34d5bdacc67927a8ce905d03b2598ae8" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a18e281e95408f2e45895ae32957c4888" kindref="member">UShort</ref></type>
+        <definition>UShort m_arrMOA16Table1[10]</definition>
+        <argsstring>[10]</argsstring>
+        <name>m_arrMOA16Table1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="166" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d2b/classRandomGenerator_1a567a05d67c67b9fd4b6ba0aa17a804bc" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a18e281e95408f2e45895ae32957c4888" kindref="member">UShort</ref></type>
+        <definition>UShort m_arrMOA16Table2[10]</definition>
+        <argsstring>[10]</argsstring>
+        <name>m_arrMOA16Table2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="167" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d2b/classRandomGenerator_1aa303a21fea60b8b4ad6bf93b50eba206" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+        <definition>ULong m_arrCMWCTable[sm_iCMWCTableSize]</definition>
+        <argsstring>[sm_iCMWCTableSize]</argsstring>
+        <name>m_arrCMWCTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="171" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d2b/classRandomGenerator_1a2fa72f5e0fab2f86f9c2388d5ed0376b" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+        <definition>ULong m_iCMWCCarry</definition>
+        <argsstring></argsstring>
+        <name>m_iCMWCCarry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="172" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d2b/classRandomGenerator_1ab396f0c3ed8e04add522e53506b89fd1" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iCMWCCurrent</definition>
+        <argsstring></argsstring>
+        <name>m_iCMWCCurrent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="173" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d2b/classRandomGenerator_1a769c8e0ab3683a4871cb26398afa8f1b" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+        <definition>ULong m_iXorShiftX</definition>
+        <argsstring></argsstring>
+        <name>m_iXorShiftX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="176" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d2b/classRandomGenerator_1a5299d74fae9db248bf4f28ac6ecc713d" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+        <definition>ULong m_iXorShiftY</definition>
+        <argsstring></argsstring>
+        <name>m_iXorShiftY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="177" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d2b/classRandomGenerator_1aa4cf40c71ec874799fa004445e53fdd9" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+        <definition>ULong m_iXorShiftZ</definition>
+        <argsstring></argsstring>
+        <name>m_iXorShiftZ</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="178" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d2b/classRandomGenerator_1aeda20aa79bbed913a1a36b92c3566f23" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+        <definition>ULong m_iXorShiftW</definition>
+        <argsstring></argsstring>
+        <name>m_iXorShiftW</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="179" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d2b/classRandomGenerator_1a5fe8c7e2e4c0d2dbb6d4ed71493b684b" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+        <definition>ULong m_iXorShiftV</definition>
+        <argsstring></argsstring>
+        <name>m_iXorShiftV</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="180" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d2b/classRandomGenerator_1a856e9df2703356f05c0423587b8cbec3" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+        <definition>ULong m_iXorShiftD</definition>
+        <argsstring></argsstring>
+        <name>m_iXorShiftD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="181" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="dc/d2b/classRandomGenerator_1a142b629a7ef30f3fcdf69c4807ad9f04" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="dc/d2b/classRandomGenerator" kindref="compound">RandomGenerator</ref> *</type>
+        <definition>static RandomGenerator* GetInstancePtr</definition>
+        <argsstring>()</argsstring>
+        <name>GetInstancePtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="42"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="dc/d2b/classRandomGenerator_1aa97942f0d367d0e1e40c5f9a3f18faab" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RandomGenerator</definition>
+        <argsstring>()</argsstring>
+        <name>RandomGenerator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="45"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d2b/classRandomGenerator_1ade8f2329044c31f01a83f86ac1481d38" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~RandomGenerator</definition>
+        <argsstring>()</argsstring>
+        <name>~RandomGenerator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="46"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d2b/classRandomGenerator_1ad0c6ef3b55015d4aa0b83b90102a231a" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+        <definition>ULong _MT_MultiplyMatrix</definition>
+        <argsstring>(ULong iX, ULong iY) const </argsstring>
+        <name>_MT_MultiplyMatrix</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+          <declname>iX</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+          <declname>iY</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="155"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d2b/classRandomGenerator_1a265a1930ba02134ecd885874d2a30fe6" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+        <definition>ULong _MT_CombineBits</definition>
+        <argsstring>(ULong iX, ULong iY) const </argsstring>
+        <name>_MT_CombineBits</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+          <declname>iX</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+          <declname>iY</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="156"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d2b/classRandomGenerator_1a3ab7939b3954b2d0c735a38e1c5f52b3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _MT_RefreshTable</definition>
+        <argsstring>()</argsstring>
+        <name>_MT_RefreshTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="157"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="dc/d2b/classRandomGenerator_1aafc20f8fe265934294eece39d5b55b98" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+        <definition>ULong LecuyerMax</definition>
+        <argsstring>() const </argsstring>
+        <name>LecuyerMax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="76"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d2b/classRandomGenerator_1aeeb0d4fa8ad0bb59f0ffbc40c21f3b9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void LecuyerSeed</definition>
+        <argsstring>(ULong iSeed, UInt iWarmUp=0)</argsstring>
+        <name>LecuyerSeed</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+          <declname>iSeed</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iWarmUp</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="77"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d2b/classRandomGenerator_1a3ef2a00796a04d70c041d6892a5bf28b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+        <definition>ULong Lecuyer</definition>
+        <argsstring>()</argsstring>
+        <name>Lecuyer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="78"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d2b/classRandomGenerator_1a1058b9a8314d855a5e8bdf67b79f345f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+        <definition>ULong KnuthMax</definition>
+        <argsstring>() const </argsstring>
+        <name>KnuthMax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="80"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d2b/classRandomGenerator_1aa2a1a2f2e369b6d47212095b30ab372e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void KnuthSeed</definition>
+        <argsstring>(ULong iSeed, UInt iWarmUp=0)</argsstring>
+        <name>KnuthSeed</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+          <declname>iSeed</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iWarmUp</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="81"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d2b/classRandomGenerator_1a312d299f4489e514762e0b0614cddd16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+        <definition>ULong Knuth</definition>
+        <argsstring>()</argsstring>
+        <name>Knuth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="82"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d2b/classRandomGenerator_1a37e67b45a9bc87937cd11406de08b03c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>UInt64</type>
+        <definition>UInt64 RanRotMax</definition>
+        <argsstring>() const </argsstring>
+        <name>RanRotMax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="84"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d2b/classRandomGenerator_1ad29985e5583cef6f1d63c846dafa1d74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void RanRotSeed</definition>
+        <argsstring>(UInt64 iSeed, UInt iWarmUp=0)</argsstring>
+        <name>RanRotSeed</name>
+        <param>
+          <type>UInt64</type>
+          <declname>iSeed</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iWarmUp</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="85"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d2b/classRandomGenerator_1a228ad36451945560b5f5d53f8f50f926" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UInt64</type>
+        <definition>UInt64 RanRot</definition>
+        <argsstring>()</argsstring>
+        <name>RanRot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="86"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d2b/classRandomGenerator_1aa454cd640ea55848f5e1f3ed2698dee5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+        <definition>ULong MersenneTwisterMax</definition>
+        <argsstring>() const </argsstring>
+        <name>MersenneTwisterMax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="89"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d2b/classRandomGenerator_1a5506c2bf0a438478280586bc9f809747" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void MersenneTwisterSeed</definition>
+        <argsstring>(ULong iSeed, UInt iWarmUp=0)</argsstring>
+        <name>MersenneTwisterSeed</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+          <declname>iSeed</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iWarmUp</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="90"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d2b/classRandomGenerator_1a0b0ebcbbeb19b1ac68ea8c466912fe92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+        <definition>ULong MersenneTwister</definition>
+        <argsstring>()</argsstring>
+        <name>MersenneTwister</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="91"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d2b/classRandomGenerator_1a626d3b3b6246c9ecb4f8b2664f1840a5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+        <definition>ULong MotherOfAllMax</definition>
+        <argsstring>() const </argsstring>
+        <name>MotherOfAllMax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="96"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d2b/classRandomGenerator_1a8b1f83a94986d30e772d78b4a3c2fafb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void MotherOfAll32Seed</definition>
+        <argsstring>(ULong iSeed, UInt iWarmUp=0)</argsstring>
+        <name>MotherOfAll32Seed</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+          <declname>iSeed</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iWarmUp</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="97"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d2b/classRandomGenerator_1ac0129049dc47a9f3805bb2fdca1487db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+        <definition>ULong MotherOfAll32</definition>
+        <argsstring>()</argsstring>
+        <name>MotherOfAll32</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="98"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d2b/classRandomGenerator_1a99692ca3048553b68382bf162cdddf3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void MotherOfAll16Seed</definition>
+        <argsstring>(ULong iSeed, UInt iWarmUp=0)</argsstring>
+        <name>MotherOfAll16Seed</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+          <declname>iSeed</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iWarmUp</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="99"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d2b/classRandomGenerator_1ad0d8038691a109861f50c1a58d2dfcff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+        <definition>ULong MotherOfAll16</definition>
+        <argsstring>()</argsstring>
+        <name>MotherOfAll16</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="100"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d2b/classRandomGenerator_1a89e418471ac2280dc329754ca07d6d00" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+        <definition>ULong CompMWCMax</definition>
+        <argsstring>() const </argsstring>
+        <name>CompMWCMax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="103"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d2b/classRandomGenerator_1a2a8546047031a52f41eeb0a5da73b1f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void CompMWCSeed</definition>
+        <argsstring>(ULong iSeed, UInt iWarmUp=0)</argsstring>
+        <name>CompMWCSeed</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+          <declname>iSeed</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iWarmUp</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="104"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d2b/classRandomGenerator_1a06a3b3f063a945cf0421a200dc1bcc4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+        <definition>ULong CompMWC</definition>
+        <argsstring>()</argsstring>
+        <name>CompMWC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="105"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d2b/classRandomGenerator_1ab4cdd28c7a3eb0e8106139d4185b7ad4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+        <definition>ULong XorShiftMax</definition>
+        <argsstring>() const </argsstring>
+        <name>XorShiftMax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="110"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d2b/classRandomGenerator_1a59c7d348123f5b38d18322e9151b53c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void XorShift128Seed</definition>
+        <argsstring>(ULong iSeed, UInt iWarmUp=0)</argsstring>
+        <name>XorShift128Seed</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+          <declname>iSeed</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iWarmUp</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="111"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d2b/classRandomGenerator_1a979b3392ffe1f1fadbedb1e4ab89ae1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+        <definition>ULong XorShift128</definition>
+        <argsstring>()</argsstring>
+        <name>XorShift128</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="112"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d2b/classRandomGenerator_1a5339a3872b6e55b8b60d1d4d536cd8d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void XorShiftWeylSeed</definition>
+        <argsstring>(ULong iSeed, UInt iWarmUp=0)</argsstring>
+        <name>XorShiftWeylSeed</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+          <declname>iSeed</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iWarmUp</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="113"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d2b/classRandomGenerator_1a21de36461a82783ac015f880c9778d25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+        <definition>ULong XorShiftWeyl</definition>
+        <argsstring>()</argsstring>
+        <name>XorShiftWeyl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="114"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d2b/classRandomGenerator_1ac908eca6beef0955e58ead0c443b1d31" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SeedAll</definition>
+        <argsstring>(ULong iSeed, UInt iWarmUp=0)</argsstring>
+        <name>SeedAll</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a758b09c0b13933408d1f96e0b78f0c17" kindref="member">ULong</ref></type>
+          <declname>iSeed</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iWarmUp</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="117"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="10071">
+        <label>unsigned short</label>
+      </node>
+      <node id="10073">
+        <label>static const ULong</label>
+      </node>
+      <node id="10074">
+        <label>long</label>
+      </node>
+      <node id="10072">
+        <label>int</label>
+      </node>
+      <node id="10070">
+        <label>RandomGenerator</label>
+        <link refid="dc/d2b/classRandomGenerator"/>
+        <childnode refid="10071" relation="usage">
+          <edgelabel>m_arrMOA16Table1</edgelabel>
+          <edgelabel>m_arrMOA16Table2</edgelabel>
+        </childnode>
+        <childnode refid="10072" relation="usage">
+          <edgelabel>m_iCMWCCurrent</edgelabel>
+          <edgelabel>m_iMersTwistCurrent</edgelabel>
+        </childnode>
+        <childnode refid="10073" relation="usage">
+          <edgelabel>sm_iRanRotTableSize</edgelabel>
+          <edgelabel>sm_iCMWCTableSize</edgelabel>
+          <edgelabel>sm_iMersTwistStateSize</edgelabel>
+        </childnode>
+        <childnode refid="10074" relation="usage">
+          <edgelabel>m_iLecuyerCurrent</edgelabel>
+          <edgelabel>m_arrLecuyerTable</edgelabel>
+          <edgelabel>sm_iLecuyerTableSize</edgelabel>
+          <edgelabel>m_iLecuyerSeed1</edgelabel>
+          <edgelabel>m_iKnuthNextP</edgelabel>
+          <edgelabel>m_arrKnuthTable</edgelabel>
+          <edgelabel>m_iLecuyerSeed2</edgelabel>
+          <edgelabel>m_arrRanRotTable</edgelabel>
+          <edgelabel>sm_iLecuyerM1</edgelabel>
+          <edgelabel>sm_iLecuyerNDIVS</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="39" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" bodystart="38" bodyend="182"/>
+    <listofallmembers>
+      <member refid="dc/d2b/classRandomGenerator_1a265a1930ba02134ecd885874d2a30fe6" prot="private" virt="non-virtual"><scope>RandomGenerator</scope><name>_MT_CombineBits</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1ad0c6ef3b55015d4aa0b83b90102a231a" prot="private" virt="non-virtual"><scope>RandomGenerator</scope><name>_MT_MultiplyMatrix</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1a3ab7939b3954b2d0c735a38e1c5f52b3" prot="private" virt="non-virtual"><scope>RandomGenerator</scope><name>_MT_RefreshTable</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1a06a3b3f063a945cf0421a200dc1bcc4a" prot="public" virt="non-virtual"><scope>RandomGenerator</scope><name>CompMWC</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1a89e418471ac2280dc329754ca07d6d00" prot="public" virt="non-virtual"><scope>RandomGenerator</scope><name>CompMWCMax</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1a2a8546047031a52f41eeb0a5da73b1f5" prot="public" virt="non-virtual"><scope>RandomGenerator</scope><name>CompMWCSeed</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1a142b629a7ef30f3fcdf69c4807ad9f04" prot="public" virt="non-virtual"><scope>RandomGenerator</scope><name>GetInstancePtr</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1a312d299f4489e514762e0b0614cddd16" prot="public" virt="non-virtual"><scope>RandomGenerator</scope><name>Knuth</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1a1058b9a8314d855a5e8bdf67b79f345f" prot="public" virt="non-virtual"><scope>RandomGenerator</scope><name>KnuthMax</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1aa2a1a2f2e369b6d47212095b30ab372e" prot="public" virt="non-virtual"><scope>RandomGenerator</scope><name>KnuthSeed</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1a3ef2a00796a04d70c041d6892a5bf28b" prot="public" virt="non-virtual"><scope>RandomGenerator</scope><name>Lecuyer</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1aafc20f8fe265934294eece39d5b55b98" prot="public" virt="non-virtual"><scope>RandomGenerator</scope><name>LecuyerMax</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1aeeb0d4fa8ad0bb59f0ffbc40c21f3b9d" prot="public" virt="non-virtual"><scope>RandomGenerator</scope><name>LecuyerSeed</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1aa303a21fea60b8b4ad6bf93b50eba206" prot="private" virt="non-virtual"><scope>RandomGenerator</scope><name>m_arrCMWCTable</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1a2c14cfbf2781b4e8924799d8bb562bbb" prot="private" virt="non-virtual"><scope>RandomGenerator</scope><name>m_arrKnuthTable</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1a13f35ea4a1444ff5eeeede9ab51e46f5" prot="private" virt="non-virtual"><scope>RandomGenerator</scope><name>m_arrLecuyerTable</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1a08f7ed01cf26206736713f9cb26bc3d4" prot="private" virt="non-virtual"><scope>RandomGenerator</scope><name>m_arrMersTwistTable</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1a34d5bdacc67927a8ce905d03b2598ae8" prot="private" virt="non-virtual"><scope>RandomGenerator</scope><name>m_arrMOA16Table1</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1a567a05d67c67b9fd4b6ba0aa17a804bc" prot="private" virt="non-virtual"><scope>RandomGenerator</scope><name>m_arrMOA16Table2</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1a12e2aae35b50388aa6ed423aa3a36151" prot="private" virt="non-virtual"><scope>RandomGenerator</scope><name>m_arrMOA32Table</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1aa25e0b1ceae2d3128179856e384e8a02" prot="private" virt="non-virtual"><scope>RandomGenerator</scope><name>m_arrRanRotTable</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1a2fa72f5e0fab2f86f9c2388d5ed0376b" prot="private" virt="non-virtual"><scope>RandomGenerator</scope><name>m_iCMWCCarry</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1ab396f0c3ed8e04add522e53506b89fd1" prot="private" virt="non-virtual"><scope>RandomGenerator</scope><name>m_iCMWCCurrent</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1ae18777b431904f2aa9cb76ff024d3d42" prot="private" virt="non-virtual"><scope>RandomGenerator</scope><name>m_iKnuthNext</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1a87cc8258cdfa53b25bc3cd7c3d76b8c8" prot="private" virt="non-virtual"><scope>RandomGenerator</scope><name>m_iKnuthNextP</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1aca2cba5868bcffd7d781faf44b375022" prot="private" virt="non-virtual"><scope>RandomGenerator</scope><name>m_iLecuyerCurrent</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1a415ab5010f2d7f73c89a0fd044ad6510" prot="private" virt="non-virtual"><scope>RandomGenerator</scope><name>m_iLecuyerSeed1</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1afdd74e3b87174d7ebb5eee1be5465a1b" prot="private" virt="non-virtual"><scope>RandomGenerator</scope><name>m_iLecuyerSeed2</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1a46cbc50f06db5b6d0a79adba6c36996d" prot="private" virt="non-virtual"><scope>RandomGenerator</scope><name>m_iMersTwistCurrent</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1aad064af0cbb754bd4e374165a155271a" prot="private" virt="non-virtual"><scope>RandomGenerator</scope><name>m_iRanRotP1</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1ad832719e28d0c0426e67254ab13ca37c" prot="private" virt="non-virtual"><scope>RandomGenerator</scope><name>m_iRanRotP2</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1a856e9df2703356f05c0423587b8cbec3" prot="private" virt="non-virtual"><scope>RandomGenerator</scope><name>m_iXorShiftD</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1a5fe8c7e2e4c0d2dbb6d4ed71493b684b" prot="private" virt="non-virtual"><scope>RandomGenerator</scope><name>m_iXorShiftV</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1aeda20aa79bbed913a1a36b92c3566f23" prot="private" virt="non-virtual"><scope>RandomGenerator</scope><name>m_iXorShiftW</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1a769c8e0ab3683a4871cb26398afa8f1b" prot="private" virt="non-virtual"><scope>RandomGenerator</scope><name>m_iXorShiftX</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1a5299d74fae9db248bf4f28ac6ecc713d" prot="private" virt="non-virtual"><scope>RandomGenerator</scope><name>m_iXorShiftY</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1aa4cf40c71ec874799fa004445e53fdd9" prot="private" virt="non-virtual"><scope>RandomGenerator</scope><name>m_iXorShiftZ</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1a0b0ebcbbeb19b1ac68ea8c466912fe92" prot="public" virt="non-virtual"><scope>RandomGenerator</scope><name>MersenneTwister</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1aa454cd640ea55848f5e1f3ed2698dee5" prot="public" virt="non-virtual"><scope>RandomGenerator</scope><name>MersenneTwisterMax</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1a5506c2bf0a438478280586bc9f809747" prot="public" virt="non-virtual"><scope>RandomGenerator</scope><name>MersenneTwisterSeed</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1ad0d8038691a109861f50c1a58d2dfcff" prot="public" virt="non-virtual"><scope>RandomGenerator</scope><name>MotherOfAll16</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1a99692ca3048553b68382bf162cdddf3f" prot="public" virt="non-virtual"><scope>RandomGenerator</scope><name>MotherOfAll16Seed</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1ac0129049dc47a9f3805bb2fdca1487db" prot="public" virt="non-virtual"><scope>RandomGenerator</scope><name>MotherOfAll32</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1a8b1f83a94986d30e772d78b4a3c2fafb" prot="public" virt="non-virtual"><scope>RandomGenerator</scope><name>MotherOfAll32Seed</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1a626d3b3b6246c9ecb4f8b2664f1840a5" prot="public" virt="non-virtual"><scope>RandomGenerator</scope><name>MotherOfAllMax</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1aa97942f0d367d0e1e40c5f9a3f18faab" prot="private" virt="non-virtual"><scope>RandomGenerator</scope><name>RandomGenerator</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1a228ad36451945560b5f5d53f8f50f926" prot="public" virt="non-virtual"><scope>RandomGenerator</scope><name>RanRot</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1a37e67b45a9bc87937cd11406de08b03c" prot="public" virt="non-virtual"><scope>RandomGenerator</scope><name>RanRotMax</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1ad29985e5583cef6f1d63c846dafa1d74" prot="public" virt="non-virtual"><scope>RandomGenerator</scope><name>RanRotSeed</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1ac908eca6beef0955e58ead0c443b1d31" prot="public" virt="non-virtual"><scope>RandomGenerator</scope><name>SeedAll</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1a45dd7dec3e69a05206dfc54261246289" prot="private" virt="non-virtual"><scope>RandomGenerator</scope><name>sm_iCMWCTableSize</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1a900cbdbd98bdfb6b100ba7df3850bb42" prot="private" virt="non-virtual"><scope>RandomGenerator</scope><name>sm_iKnuthBig</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1a6da2c83f2f45269000aefd167ac80cd7" prot="private" virt="non-virtual"><scope>RandomGenerator</scope><name>sm_iKnuthTableSize</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1af6c6e38a6e2a85b6f1913a5453d32a87" prot="private" virt="non-virtual"><scope>RandomGenerator</scope><name>sm_iLecuyerM1</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1a4780be7d90696f01982bd45b55494330" prot="private" virt="non-virtual"><scope>RandomGenerator</scope><name>sm_iLecuyerNDIVS</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1a7c70085ea14a31b872673a4dbd36de31" prot="private" virt="non-virtual"><scope>RandomGenerator</scope><name>sm_iLecuyerTableSize</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1a922c262ec1ba89c4bbabae1017bca82d" prot="private" virt="non-virtual"><scope>RandomGenerator</scope><name>sm_iMersTwistRecOffset</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1a282aa7d7e6168942e9cc61bcacf4d31a" prot="private" virt="non-virtual"><scope>RandomGenerator</scope><name>sm_iMersTwistStateSize</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1a1d704e3e400315b9d92416b11c20d374" prot="private" virt="non-virtual"><scope>RandomGenerator</scope><name>sm_iRanRotTableSize</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1a979b3392ffe1f1fadbedb1e4ab89ae1a" prot="public" virt="non-virtual"><scope>RandomGenerator</scope><name>XorShift128</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1a59c7d348123f5b38d18322e9151b53c5" prot="public" virt="non-virtual"><scope>RandomGenerator</scope><name>XorShift128Seed</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1ab4cdd28c7a3eb0e8106139d4185b7ad4" prot="public" virt="non-virtual"><scope>RandomGenerator</scope><name>XorShiftMax</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1a21de36461a82783ac015f880c9778d25" prot="public" virt="non-virtual"><scope>RandomGenerator</scope><name>XorShiftWeyl</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1a5339a3872b6e55b8b60d1d4d536cd8d7" prot="public" virt="non-virtual"><scope>RandomGenerator</scope><name>XorShiftWeylSeed</name></member>
+      <member refid="dc/d2b/classRandomGenerator_1ade8f2329044c31f01a83f86ac1481d38" prot="private" virt="non-virtual"><scope>RandomGenerator</scope><name>~RandomGenerator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

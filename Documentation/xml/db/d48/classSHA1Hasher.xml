@@ -1,0 +1,268 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="db/d48/classSHA1Hasher" kind="class" prot="public">
+    <compoundname>SHA1Hasher</compoundname>
+    <includes refid="d1/de3/SHA1_8h" local="no">SHA1.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="db/d48/classSHA1Hasher_1a656255702b1a9489d87784c20e5afec1" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref></type>
+        <definition>Byte m_arrMsgBuffer[128]</definition>
+        <argsstring>[128]</argsstring>
+        <name>m_arrMsgBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/SHA1.h" line="54" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/SHA1.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d48/classSHA1Hasher_1ae4c7a534f0d376f3d8ee259b1c1c16d2" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord m_iMsgSize</definition>
+        <argsstring></argsstring>
+        <name>m_iMsgSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/SHA1.h" line="55" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/SHA1.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d48/classSHA1Hasher_1a1a2f5209e61283b8f2ca102c76b57ca4" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord m_iBlokCount</definition>
+        <argsstring></argsstring>
+        <name>m_iBlokCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/SHA1.h" line="55" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/SHA1.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d48/classSHA1Hasher_1a812db636d2a94a18fac910c900befa59" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord m_arrBlok[5]</definition>
+        <argsstring>[5]</argsstring>
+        <name>m_arrBlok</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/SHA1.h" line="56" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/SHA1.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="db/d48/classSHA1Hasher_1a32a9afec5d50ad63700c53aec18f0b1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SHA1Hasher</definition>
+        <argsstring>()</argsstring>
+        <name>SHA1Hasher</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/SHA1.h" line="40"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d48/classSHA1Hasher_1ae5938acd8ae01c52a08bf2b2fda18899" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~SHA1Hasher</definition>
+        <argsstring>()</argsstring>
+        <name>~SHA1Hasher</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/SHA1.h" line="41"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d48/classSHA1Hasher_1af080dadeefe0a31458dc914831643d21" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Reset</definition>
+        <argsstring>()</argsstring>
+        <name>Reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/SHA1.h" line="43"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d48/classSHA1Hasher_1ab46591957f58b2f5436237b3f03d2bed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Update</definition>
+        <argsstring>(const Void *pData, DWord Size)</argsstring>
+        <name>Update</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> *</type>
+          <declname>pData</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+          <declname>Size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/SHA1.h" line="44"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d48/classSHA1Hasher_1a51768270f47a3cc3660e812698cfd81c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void GetHash</definition>
+        <argsstring>(HashSHA1 pOut)</argsstring>
+        <name>GetHash</name>
+        <param>
+          <type><ref refid="d1/de3/SHA1_8h_1abbf5751858c8139e01de2dd6431d71ea" kindref="member">HashSHA1</ref></type>
+          <declname>pOut</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/SHA1.h" line="45"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="db/d48/classSHA1Hasher_1a3f641e1126d9067986f739d70cc4b7c6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _Initialize</definition>
+        <argsstring>()</argsstring>
+        <name>_Initialize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/SHA1.h" line="48"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d48/classSHA1Hasher_1af38f14e72b6b84232caf1286b7c87c25" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _MakePadding</definition>
+        <argsstring>()</argsstring>
+        <name>_MakePadding</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/SHA1.h" line="49"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d48/classSHA1Hasher_1acbf809e0a1e1361bbe13449dc56187a4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord _Operation_F</definition>
+        <argsstring>(Byte t, DWord B, DWord C, DWord D)</argsstring>
+        <name>_Operation_F</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref></type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+          <declname>B</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+          <declname>C</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+          <declname>D</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/SHA1.h" line="50"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d48/classSHA1Hasher_1a2f3a39d85b87bd8f72404fe80fbe3f11" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord _Operation_K</definition>
+        <argsstring>(Byte t)</argsstring>
+        <name>_Operation_K</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref></type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/SHA1.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d48/classSHA1Hasher_1a8fff2e23e1670eabdc53931a90a015c9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _SHA1Transform</definition>
+        <argsstring>()</argsstring>
+        <name>_SHA1Transform</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/SHA1.h" line="52"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="10808">
+        <label>ULong</label>
+      </node>
+      <node id="10807">
+        <label>unsigned char</label>
+      </node>
+      <node id="10806">
+        <label>SHA1Hasher</label>
+        <link refid="db/d48/classSHA1Hasher"/>
+        <childnode refid="10807" relation="usage">
+          <edgelabel>m_arrMsgBuffer</edgelabel>
+        </childnode>
+        <childnode refid="10808" relation="usage">
+          <edgelabel>m_arrBlok</edgelabel>
+          <edgelabel>m_iMsgSize</edgelabel>
+          <edgelabel>m_iBlokCount</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/SHA1.h" line="38" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/SHA1.h" bodystart="37" bodyend="57"/>
+    <listofallmembers>
+      <member refid="db/d48/classSHA1Hasher_1a3f641e1126d9067986f739d70cc4b7c6" prot="private" virt="non-virtual"><scope>SHA1Hasher</scope><name>_Initialize</name></member>
+      <member refid="db/d48/classSHA1Hasher_1af38f14e72b6b84232caf1286b7c87c25" prot="private" virt="non-virtual"><scope>SHA1Hasher</scope><name>_MakePadding</name></member>
+      <member refid="db/d48/classSHA1Hasher_1acbf809e0a1e1361bbe13449dc56187a4" prot="private" virt="non-virtual"><scope>SHA1Hasher</scope><name>_Operation_F</name></member>
+      <member refid="db/d48/classSHA1Hasher_1a2f3a39d85b87bd8f72404fe80fbe3f11" prot="private" virt="non-virtual"><scope>SHA1Hasher</scope><name>_Operation_K</name></member>
+      <member refid="db/d48/classSHA1Hasher_1a8fff2e23e1670eabdc53931a90a015c9" prot="private" virt="non-virtual"><scope>SHA1Hasher</scope><name>_SHA1Transform</name></member>
+      <member refid="db/d48/classSHA1Hasher_1a51768270f47a3cc3660e812698cfd81c" prot="public" virt="non-virtual"><scope>SHA1Hasher</scope><name>GetHash</name></member>
+      <member refid="db/d48/classSHA1Hasher_1a812db636d2a94a18fac910c900befa59" prot="private" virt="non-virtual"><scope>SHA1Hasher</scope><name>m_arrBlok</name></member>
+      <member refid="db/d48/classSHA1Hasher_1a656255702b1a9489d87784c20e5afec1" prot="private" virt="non-virtual"><scope>SHA1Hasher</scope><name>m_arrMsgBuffer</name></member>
+      <member refid="db/d48/classSHA1Hasher_1a1a2f5209e61283b8f2ca102c76b57ca4" prot="private" virt="non-virtual"><scope>SHA1Hasher</scope><name>m_iBlokCount</name></member>
+      <member refid="db/d48/classSHA1Hasher_1ae4c7a534f0d376f3d8ee259b1c1c16d2" prot="private" virt="non-virtual"><scope>SHA1Hasher</scope><name>m_iMsgSize</name></member>
+      <member refid="db/d48/classSHA1Hasher_1af080dadeefe0a31458dc914831643d21" prot="public" virt="non-virtual"><scope>SHA1Hasher</scope><name>Reset</name></member>
+      <member refid="db/d48/classSHA1Hasher_1a32a9afec5d50ad63700c53aec18f0b1d" prot="public" virt="non-virtual"><scope>SHA1Hasher</scope><name>SHA1Hasher</name></member>
+      <member refid="db/d48/classSHA1Hasher_1ab46591957f58b2f5436237b3f03d2bed" prot="public" virt="non-virtual"><scope>SHA1Hasher</scope><name>Update</name></member>
+      <member refid="db/d48/classSHA1Hasher_1ae5938acd8ae01c52a08bf2b2fda18899" prot="public" virt="non-virtual"><scope>SHA1Hasher</scope><name>~SHA1Hasher</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

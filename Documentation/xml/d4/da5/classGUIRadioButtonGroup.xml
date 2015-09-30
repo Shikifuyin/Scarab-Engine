@@ -1,0 +1,343 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d4/da5/classGUIRadioButtonGroup" kind="class" prot="public">
+    <compoundname>GUIRadioButtonGroup</compoundname>
+    <includes refid="d9/da2/GUIRadioButton_8h" local="no">GUIRadioButton.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="d4/da5/classGUIRadioButtonGroup_1ab84ace2f602d12f96387ee440b27e861" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class GUIRadioButtonModel</definition>
+        <argsstring></argsstring>
+        <name>GUIRadioButtonModel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Common/GUIRadioButton.h" line="54" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Common/GUIRadioButton.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d4/da5/classGUIRadioButtonGroup_1a967b4bc0745a5a6d5d84d56185bf28f6" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iTicked</definition>
+        <argsstring></argsstring>
+        <name>m_iTicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Common/GUIRadioButton.h" line="56" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Common/GUIRadioButton.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/da5/classGUIRadioButtonGroup_1aba8d72970494aa33efa63313e6c34289" prot="private" static="no" mutable="no">
+        <type><ref refid="d0/d26/classArray" kindref="compound">Array</ref>&lt; <ref refid="dd/d96/classGUIRadioButtonModel" kindref="compound">GUIRadioButtonModel</ref> * &gt;</type>
+        <definition>Array&lt;GUIRadioButtonModel*&gt; m_arrModels</definition>
+        <argsstring></argsstring>
+        <name>m_arrModels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Common/GUIRadioButton.h" line="57" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Common/GUIRadioButton.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d4/da5/classGUIRadioButtonGroup_1aaf84a9ccc341b57ce864b5ec66125682" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GUIRadioButtonGroup</definition>
+        <argsstring>()</argsstring>
+        <name>GUIRadioButtonGroup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Common/GUIRadioButton.h" line="42"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/da5/classGUIRadioButtonGroup_1aa18d4459f1c5b748a535c5687f532e87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~GUIRadioButtonGroup</definition>
+        <argsstring>()</argsstring>
+        <name>~GUIRadioButtonGroup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Common/GUIRadioButton.h" line="43"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/da5/classGUIRadioButtonGroup_1a37aa67a66d42b1520221dcb8e3e8ce99" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetModelCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetModelCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Common/GUIRadioButton.h" line="46"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/da5/classGUIRadioButtonGroup_1aa6b9006925d957faaaea12a0ec4a3b8e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="dd/d96/classGUIRadioButtonModel" kindref="compound">GUIRadioButtonModel</ref> *</type>
+        <definition>GUIRadioButtonModel* GetModel</definition>
+        <argsstring>(UInt iModel) const </argsstring>
+        <name>GetModel</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iModel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Common/GUIRadioButton.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/da5/classGUIRadioButtonGroup_1a5620bc186f82a1e5f6e2919e7876259c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool IsTicked</definition>
+        <argsstring>(UInt iModel) const </argsstring>
+        <name>IsTicked</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iModel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Common/GUIRadioButton.h" line="49"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/da5/classGUIRadioButtonGroup_1a1517ce9c201b761d9910bc0a9277c5a2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetTickedIndex</definition>
+        <argsstring>() const </argsstring>
+        <name>GetTickedIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Common/GUIRadioButton.h" line="50"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/da5/classGUIRadioButtonGroup_1aad3d35cf0208f9aa46c89a529d79e317" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="dd/d96/classGUIRadioButtonModel" kindref="compound">GUIRadioButtonModel</ref> *</type>
+        <definition>GUIRadioButtonModel* GetTickedModel</definition>
+        <argsstring>() const </argsstring>
+        <name>GetTickedModel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Common/GUIRadioButton.h" line="51"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4003">
+        <label>RingBuffer&lt; GUIEvent &gt;</label>
+        <link refid="d8/d2d/classRingBuffer"/>
+        <childnode refid="3996" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4004" relation="usage">
+          <edgelabel>m_arrBuffer</edgelabel>
+        </childnode>
+        <childnode refid="4007" relation="usage">
+          <edgelabel>m_iRead</edgelabel>
+          <edgelabel>m_iBufferSize</edgelabel>
+          <edgelabel>m_iCount</edgelabel>
+          <edgelabel>m_iWrite</edgelabel>
+        </childnode>
+      </node>
+      <node id="4004">
+        <label>GUIEvent</label>
+        <link refid="d9/d68/classGUIEvent"/>
+        <childnode refid="4005" relation="usage">
+          <edgelabel>m_arrParameters</edgelabel>
+        </childnode>
+        <childnode refid="4006" relation="usage">
+          <edgelabel>m_iType</edgelabel>
+        </childnode>
+        <childnode refid="4007" relation="usage">
+          <edgelabel>m_arrParamOffsets</edgelabel>
+          <edgelabel>m_iParamCount</edgelabel>
+          <edgelabel>m_iParamTotalSize</edgelabel>
+        </childnode>
+        <childnode refid="3998" relation="usage">
+          <edgelabel>m_iFlags</edgelabel>
+        </childnode>
+      </node>
+      <node id="4009">
+        <label>GUIMenuModel</label>
+        <link refid="da/dfd/classGUIMenuModel"/>
+        <childnode refid="4010" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4011" relation="usage">
+          <edgelabel>m_arrItems</edgelabel>
+        </childnode>
+        <childnode refid="4007" relation="usage">
+          <edgelabel>m_iItemCount</edgelabel>
+          <edgelabel>m_iItemHeight</edgelabel>
+          <edgelabel>m_iSelectedItem</edgelabel>
+        </childnode>
+      </node>
+      <node id="4011">
+        <label>GUIMenuItem</label>
+        <link refid="d0/db3/classGUIMenuItem"/>
+        <childnode refid="3997" relation="usage">
+          <edgelabel>m_strName</edgelabel>
+        </childnode>
+        <childnode refid="4009" relation="usage">
+          <edgelabel>m_pSubMenu</edgelabel>
+        </childnode>
+        <childnode refid="4008" relation="usage">
+          <edgelabel>m_bActive</edgelabel>
+        </childnode>
+        <childnode refid="4012" relation="usage">
+          <edgelabel>m_idIcon</edgelabel>
+        </childnode>
+      </node>
+      <node id="3998">
+        <label>unsigned int</label>
+      </node>
+      <node id="4005">
+        <label>unsigned char</label>
+      </node>
+      <node id="4000">
+        <label>GUIWidgetModel</label>
+        <link refid="d0/d61/classGUIWidgetModel"/>
+        <childnode refid="4001" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4009" relation="usage">
+          <edgelabel>m_pContextMenuModel</edgelabel>
+        </childnode>
+      </node>
+      <node id="4007">
+        <label>int</label>
+      </node>
+      <node id="4006">
+        <label>GUIEventType</label>
+      </node>
+      <node id="3999">
+        <label>GUIRadioButtonModel</label>
+        <link refid="dd/d96/classGUIRadioButtonModel"/>
+        <childnode refid="4000" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3994" relation="usage">
+          <edgelabel>m_pGroup</edgelabel>
+        </childnode>
+        <childnode refid="4007" relation="usage">
+          <edgelabel>m_iGroupIndex</edgelabel>
+        </childnode>
+        <childnode refid="4008" relation="usage">
+          <edgelabel>m_bTicked</edgelabel>
+        </childnode>
+      </node>
+      <node id="4001">
+        <label>GUIEventProcessorModel</label>
+        <link refid="dd/d40/classGUIEventProcessorModel"/>
+        <childnode refid="4002" relation="usage">
+          <edgelabel>m_pEventProcessor</edgelabel>
+        </childnode>
+      </node>
+      <node id="3995">
+        <label>Array&lt; GUIRadioButtonModel * &gt;</label>
+        <link refid="d0/d26/classArray"/>
+        <childnode refid="3996" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3999" relation="usage">
+          <edgelabel>m_arrBuffer</edgelabel>
+        </childnode>
+        <childnode refid="4007" relation="usage">
+          <edgelabel>m_iShrinkFactor</edgelabel>
+          <edgelabel>m_iNextFree</edgelabel>
+          <edgelabel>m_iBufferSize</edgelabel>
+          <edgelabel>m_iPageSize</edgelabel>
+        </childnode>
+      </node>
+      <node id="4008">
+        <label>bool</label>
+      </node>
+      <node id="4012">
+        <label>GUISkinImage</label>
+      </node>
+      <node id="4010">
+        <label>GUIOverlayModel</label>
+        <link refid="d5/db8/classGUIOverlayModel"/>
+        <childnode refid="4001" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3997">
+        <label>char</label>
+      </node>
+      <node id="3994">
+        <label>GUIRadioButtonGroup</label>
+        <link refid="d4/da5/classGUIRadioButtonGroup"/>
+        <childnode refid="3995" relation="usage">
+          <edgelabel>m_arrModels</edgelabel>
+        </childnode>
+        <childnode refid="4007" relation="usage">
+          <edgelabel>m_iTicked</edgelabel>
+        </childnode>
+      </node>
+      <node id="4002">
+        <label>GUIEventProcessor</label>
+        <link refid="d2/de5/classGUIEventProcessor"/>
+        <childnode refid="3997" relation="usage">
+          <edgelabel>m_strName</edgelabel>
+        </childnode>
+        <childnode refid="4003" relation="usage">
+          <edgelabel>m_bufEventQueue</edgelabel>
+        </childnode>
+        <childnode refid="4008" relation="usage">
+          <edgelabel>m_bHasFocus</edgelabel>
+          <edgelabel>m_bHasMouseOver</edgelabel>
+        </childnode>
+        <childnode refid="4001" relation="usage">
+          <edgelabel>m_pModel</edgelabel>
+        </childnode>
+      </node>
+      <node id="3996">
+        <label>Datastruct</label>
+        <link refid="dc/d51/classDatastruct"/>
+        <childnode refid="3997" relation="usage">
+          <edgelabel>m_strAllocatorName</edgelabel>
+        </childnode>
+        <childnode refid="3998" relation="usage">
+          <edgelabel>m_idMemoryContext</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Common/GUIRadioButton.h" line="40" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Common/GUIRadioButton.h" bodystart="39" bodyend="58"/>
+    <listofallmembers>
+      <member refid="d4/da5/classGUIRadioButtonGroup_1aa6b9006925d957faaaea12a0ec4a3b8e" prot="public" virt="non-virtual"><scope>GUIRadioButtonGroup</scope><name>GetModel</name></member>
+      <member refid="d4/da5/classGUIRadioButtonGroup_1a37aa67a66d42b1520221dcb8e3e8ce99" prot="public" virt="non-virtual"><scope>GUIRadioButtonGroup</scope><name>GetModelCount</name></member>
+      <member refid="d4/da5/classGUIRadioButtonGroup_1a1517ce9c201b761d9910bc0a9277c5a2" prot="public" virt="non-virtual"><scope>GUIRadioButtonGroup</scope><name>GetTickedIndex</name></member>
+      <member refid="d4/da5/classGUIRadioButtonGroup_1aad3d35cf0208f9aa46c89a529d79e317" prot="public" virt="non-virtual"><scope>GUIRadioButtonGroup</scope><name>GetTickedModel</name></member>
+      <member refid="d4/da5/classGUIRadioButtonGroup_1aaf84a9ccc341b57ce864b5ec66125682" prot="public" virt="non-virtual"><scope>GUIRadioButtonGroup</scope><name>GUIRadioButtonGroup</name></member>
+      <member refid="d4/da5/classGUIRadioButtonGroup_1ab84ace2f602d12f96387ee440b27e861" prot="private" virt="non-virtual"><scope>GUIRadioButtonGroup</scope><name>GUIRadioButtonModel</name></member>
+      <member refid="d4/da5/classGUIRadioButtonGroup_1a5620bc186f82a1e5f6e2919e7876259c" prot="public" virt="non-virtual"><scope>GUIRadioButtonGroup</scope><name>IsTicked</name></member>
+      <member refid="d4/da5/classGUIRadioButtonGroup_1aba8d72970494aa33efa63313e6c34289" prot="private" virt="non-virtual"><scope>GUIRadioButtonGroup</scope><name>m_arrModels</name></member>
+      <member refid="d4/da5/classGUIRadioButtonGroup_1a967b4bc0745a5a6d5d84d56185bf28f6" prot="private" virt="non-virtual"><scope>GUIRadioButtonGroup</scope><name>m_iTicked</name></member>
+      <member refid="d4/da5/classGUIRadioButtonGroup_1aa18d4459f1c5b748a535c5687f532e87" prot="public" virt="non-virtual"><scope>GUIRadioButtonGroup</scope><name>~GUIRadioButtonGroup</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

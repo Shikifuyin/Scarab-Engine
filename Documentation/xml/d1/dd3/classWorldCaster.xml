@@ -1,0 +1,1371 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d1/dd3/classWorldCaster" kind="class" prot="public">
+    <compoundname>WorldCaster</compoundname>
+    <includes refid="d9/d6f/WorldCaster_8h" local="no">WorldCaster.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d1/dd3/classWorldCaster_1a656d853eb9a0124743e9b4afe3df9066" prot="private" static="no" mutable="no">
+        <type><ref refid="db/d9b/Line3_8h_1a8d403d6260979c7b4b84bd66f2fd67a9" kindref="member">Line3</ref></type>
+        <definition>Line3 m_vRay</definition>
+        <argsstring></argsstring>
+        <name>m_vRay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/WorldCaster.h" line="82" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/WorldCaster.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/dd3/classWorldCaster_1a8a638e102b046fa0233da88940c47bd4" prot="private" static="no" mutable="no">
+        <type><ref refid="d0/d10/Scalar_8h_1abee0aca51a3a3e16c628155aa4ac6f12" kindref="member">Scalar</ref></type>
+        <definition>Scalar m_fMinDistance</definition>
+        <argsstring></argsstring>
+        <name>m_fMinDistance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/WorldCaster.h" line="83" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/WorldCaster.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/dd3/classWorldCaster_1adf593943c8c731e21eb22a387b6f26ce" prot="private" static="no" mutable="no">
+        <type><ref refid="d0/d10/Scalar_8h_1abee0aca51a3a3e16c628155aa4ac6f12" kindref="member">Scalar</ref></type>
+        <definition>Scalar m_fMaxDistance</definition>
+        <argsstring></argsstring>
+        <name>m_fMaxDistance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/WorldCaster.h" line="84" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/WorldCaster.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/dd3/classWorldCaster_1a640fa87825928174e24aa9d79f2204ba" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iClosest</definition>
+        <argsstring></argsstring>
+        <name>m_iClosest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/WorldCaster.h" line="87" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/WorldCaster.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/dd3/classWorldCaster_1a55257259b20c6cbe7814d0c592ce1678" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iClosestPositive</definition>
+        <argsstring></argsstring>
+        <name>m_iClosestPositive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/WorldCaster.h" line="88" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/WorldCaster.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/dd3/classWorldCaster_1a866fce0bfad5a0ce42c470857e4d47a4" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iClosestNegative</definition>
+        <argsstring></argsstring>
+        <name>m_iClosestNegative</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/WorldCaster.h" line="88" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/WorldCaster.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/dd3/classWorldCaster_1ac340346c45574955089501f89e52b75f" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool m_bSortedResults</definition>
+        <argsstring></argsstring>
+        <name>m_bSortedResults</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/WorldCaster.h" line="89" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/WorldCaster.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/dd3/classWorldCaster_1ad8f4bdd8c147a120e5a02281d58f2efe" prot="private" static="no" mutable="no">
+        <type><ref refid="d0/d26/classArray" kindref="compound">Array</ref>&lt; <ref refid="d4/d13/structWorldCastResult" kindref="compound">WorldCastResult</ref> &gt;</type>
+        <definition>Array&lt;WorldCastResult&gt; m_arrResults</definition>
+        <argsstring></argsstring>
+        <name>m_arrResults</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/WorldCaster.h" line="90" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/WorldCaster.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d1/dd3/classWorldCaster_1ad1c2c551e0e39748867c6da551df094b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>WorldCaster</definition>
+        <argsstring>()</argsstring>
+        <name>WorldCaster</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/WorldCaster.h" line="59"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/dd3/classWorldCaster_1a6614310536e0d754b2d15b95bfe8d603" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~WorldCaster</definition>
+        <argsstring>()</argsstring>
+        <name>~WorldCaster</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/WorldCaster.h" line="60"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/dd3/classWorldCaster_1a7c14c88f86c8bbc339a411aa9709c5ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void RayCast</definition>
+        <argsstring>(WorldBaseNode *pWorldGraph, const Line3 &amp;vRay, Scalar fMinDistance, Scalar fMaxDistance)</argsstring>
+        <name>RayCast</name>
+        <param>
+          <type><ref refid="de/d40/classWorldBaseNode" kindref="compound">WorldBaseNode</ref> *</type>
+          <declname>pWorldGraph</declname>
+        </param>
+        <param>
+          <type>const <ref refid="db/d9b/Line3_8h_1a8d403d6260979c7b4b84bd66f2fd67a9" kindref="member">Line3</ref> &amp;</type>
+          <declname>vRay</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/d10/Scalar_8h_1abee0aca51a3a3e16c628155aa4ac6f12" kindref="member">Scalar</ref></type>
+          <declname>fMinDistance</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/d10/Scalar_8h_1abee0aca51a3a3e16c628155aa4ac6f12" kindref="member">Scalar</ref></type>
+          <declname>fMaxDistance</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/WorldCaster.h" line="64"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/dd3/classWorldCaster_1a5833444842e6ed4edd83f5bbd62b97fd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetResultCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetResultCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/WorldCaster.h" line="67"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/dd3/classWorldCaster_1ad55846cae293ba412fd083736ec22b02" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d4/d13/structWorldCastResult" kindref="compound">WorldCastResult</ref> *</type>
+        <definition>const WorldCastResult* GetResult</definition>
+        <argsstring>(UInt iResult) const </argsstring>
+        <name>GetResult</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iResult</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/WorldCaster.h" line="68"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/dd3/classWorldCaster_1acb16107b0b18ba655f4ea1e457392a13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="d4/d13/structWorldCastResult" kindref="compound">WorldCastResult</ref> *</type>
+        <definition>const WorldCastResult* GetClosest</definition>
+        <argsstring>()</argsstring>
+        <name>GetClosest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/WorldCaster.h" line="70"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/dd3/classWorldCaster_1a5e349cf974fdf25bf96af01820a78f9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="d4/d13/structWorldCastResult" kindref="compound">WorldCastResult</ref> *</type>
+        <definition>const WorldCastResult* GetClosestPositive</definition>
+        <argsstring>()</argsstring>
+        <name>GetClosestPositive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/WorldCaster.h" line="71"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/dd3/classWorldCaster_1a03f572f7ca7fa0a089c1a544f87f6b66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="d4/d13/structWorldCastResult" kindref="compound">WorldCastResult</ref> *</type>
+        <definition>const WorldCastResult* GetClosestNegative</definition>
+        <argsstring>()</argsstring>
+        <name>GetClosestNegative</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/WorldCaster.h" line="72"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/dd3/classWorldCaster_1ab02729e3916ef7ba46850a0fbb4722dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SortResults</definition>
+        <argsstring>()</argsstring>
+        <name>SortResults</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/WorldCaster.h" line="73"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="d1/dd3/classWorldCaster_1afe71140fd1c44081f552123ec53c48ac" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref></type>
+        <definition>static Int _ResultOrdering</definition>
+        <argsstring>(const WorldCastResult &amp;rLeft, const WorldCastResult &amp;rRight)</argsstring>
+        <name>_ResultOrdering</name>
+        <param>
+          <type>const <ref refid="d4/d13/structWorldCastResult" kindref="compound">WorldCastResult</ref> &amp;</type>
+          <declname>rLeft</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d4/d13/structWorldCastResult" kindref="compound">WorldCastResult</ref> &amp;</type>
+          <declname>rRight</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/WorldCaster.h" line="77"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d1/dd3/classWorldCaster_1aceaa50cdc82ece190324307a1b9c9f02" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _Rec_RayCast</definition>
+        <argsstring>(WorldBaseNode *pNode)</argsstring>
+        <name>_Rec_RayCast</name>
+        <param>
+          <type><ref refid="de/d40/classWorldBaseNode" kindref="compound">WorldBaseNode</ref> *</type>
+          <declname>pNode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/WorldCaster.h" line="79"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="13925">
+        <label>static VertexShaderProfile</label>
+      </node>
+      <node id="13878">
+        <label>WorldCulling</label>
+      </node>
+      <node id="13941">
+        <label>CullingTest</label>
+      </node>
+      <node id="13914">
+        <label>VertexShaderProgram</label>
+        <link refid="dc/dfc/classVertexShaderProgram"/>
+        <childnode refid="13915" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13925" relation="usage">
+          <edgelabel>sm_iVSProfile</edgelabel>
+        </childnode>
+      </node>
+      <node id="13928">
+        <label>DepthState</label>
+        <link refid="df/df8/classDepthState"/>
+        <childnode refid="13876" relation="usage">
+          <edgelabel>DepthEnabled</edgelabel>
+          <edgelabel>DepthWritable</edgelabel>
+        </childnode>
+        <childnode refid="13929" relation="usage">
+          <edgelabel>sm_arrDepthTestNames</edgelabel>
+        </childnode>
+        <childnode refid="13930" relation="usage">
+          <edgelabel>DepthTest</edgelabel>
+        </childnode>
+      </node>
+      <node id="13889">
+        <label>IslandEdgeID</label>
+        <link refid="dd/d41/classIslandEdgeID"/>
+        <childnode refid="13883" relation="usage">
+          <edgelabel>pNodeA</edgelabel>
+          <edgelabel>pNodeB</edgelabel>
+        </childnode>
+      </node>
+      <node id="13899">
+        <label>Mesh</label>
+        <link refid="d9/d5e/classMesh"/>
+        <childnode refid="13900" relation="usage">
+          <edgelabel>m_pVF</edgelabel>
+        </childnode>
+        <childnode refid="13886" relation="usage">
+          <edgelabel>m_iIndexOffset</edgelabel>
+          <edgelabel>m_iVertexOffset</edgelabel>
+        </childnode>
+        <childnode refid="13876" relation="usage">
+          <edgelabel>m_bDynamicUpdate</edgelabel>
+        </childnode>
+        <childnode refid="13904" relation="usage">
+          <edgelabel>m_pIB</edgelabel>
+        </childnode>
+        <childnode refid="13906" relation="usage">
+          <edgelabel>m_pVB</edgelabel>
+        </childnode>
+      </node>
+      <node id="13892">
+        <label>JacobianConstraint</label>
+        <link refid="d2/d61/classJacobianConstraint"/>
+        <childnode refid="13873" relation="usage">
+          <edgelabel>vJAngularA</edgelabel>
+          <edgelabel>vJLinearAxis</edgelabel>
+          <edgelabel>vJAngularB</edgelabel>
+          <edgelabel>vInvIBxJtAngB</edgelabel>
+          <edgelabel>vInvIAxJtAngA</edgelabel>
+        </childnode>
+        <childnode refid="13863" relation="usage">
+          <edgelabel>fInvDiagJWJtAB</edgelabel>
+        </childnode>
+      </node>
+      <node id="13932">
+        <label>StencilState</label>
+        <link refid="d3/dc0/classStencilState"/>
+        <childnode refid="13866" relation="usage">
+          <edgelabel>sm_arrStencilOpNames</edgelabel>
+          <edgelabel>sm_arrStencilTestNames</edgelabel>
+        </childnode>
+        <childnode refid="13933" relation="usage">
+          <edgelabel>StencilTest</edgelabel>
+        </childnode>
+        <childnode refid="13876" relation="usage">
+          <edgelabel>StencilEnabled</edgelabel>
+        </childnode>
+        <childnode refid="13877" relation="usage">
+          <edgelabel>Reference</edgelabel>
+          <edgelabel>WriteMask</edgelabel>
+          <edgelabel>Mask</edgelabel>
+        </childnode>
+        <childnode refid="13934" relation="usage">
+          <edgelabel>OnDepthSuccess</edgelabel>
+          <edgelabel>OnDepthFail</edgelabel>
+          <edgelabel>OnStencilFail</edgelabel>
+        </childnode>
+      </node>
+      <node id="13909">
+        <label>static const Scalar</label>
+      </node>
+      <node id="13937">
+        <label>BlendingTestMode</label>
+      </node>
+      <node id="13868">
+        <label>WorldCastResult</label>
+        <link refid="d4/d13/structWorldCastResult"/>
+        <childnode refid="13869" relation="usage">
+          <edgelabel>pHit</edgelabel>
+        </childnode>
+        <childnode refid="13863" relation="usage">
+          <edgelabel>fDistance</edgelabel>
+        </childnode>
+        <childnode refid="13886" relation="usage">
+          <edgelabel>iTriangleIndex</edgelabel>
+        </childnode>
+        <childnode refid="13875" relation="usage">
+          <edgelabel>vTriangleParameters</edgelabel>
+        </childnode>
+      </node>
+      <node id="13907">
+        <label>VertexBufferUsage</label>
+      </node>
+      <node id="13882">
+        <label>BodyNode</label>
+        <link refid="de/df0/classBodyNode"/>
+        <childnode refid="13883" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13873" relation="usage">
+          <edgelabel>m_vTorqueBuffer</edgelabel>
+          <edgelabel>m_vLinearCorrectionBuffer</edgelabel>
+          <edgelabel>m_vForceBuffer</edgelabel>
+          <edgelabel>m_vAngularCorrectionBuffer</edgelabel>
+          <edgelabel>m_vLinearImpulseBuffer</edgelabel>
+          <edgelabel>m_vAngularSpeed</edgelabel>
+          <edgelabel>m_vLinearSpeed</edgelabel>
+          <edgelabel>m_vAngularImpulseBuffer</edgelabel>
+        </childnode>
+        <childnode refid="13881" relation="usage">
+          <edgelabel>m_matInvInertiaTensor</edgelabel>
+          <edgelabel>m_matInertiaTensor</edgelabel>
+          <edgelabel>sm_matInfinity</edgelabel>
+        </childnode>
+        <childnode refid="13863" relation="usage">
+          <edgelabel>m_fDensity</edgelabel>
+          <edgelabel>m_fMass</edgelabel>
+          <edgelabel>m_fAngularDamping</edgelabel>
+          <edgelabel>m_fRestitution</edgelabel>
+          <edgelabel>m_fFriction</edgelabel>
+          <edgelabel>m_fInvMass</edgelabel>
+          <edgelabel>m_fLinearDamping</edgelabel>
+        </childnode>
+        <childnode refid="13908" relation="usage">
+          <edgelabel>m_qOrientation</edgelabel>
+        </childnode>
+        <childnode refid="13886" relation="usage">
+          <edgelabel>m_iSleepTime</edgelabel>
+        </childnode>
+        <childnode refid="13910" relation="usage">
+          <edgelabel>m_iCollisionMask</edgelabel>
+          <edgelabel>m_iCollisionGroup</edgelabel>
+        </childnode>
+        <childnode refid="13876" relation="usage">
+          <edgelabel>m_bSensor</edgelabel>
+          <edgelabel>m_bSleeping</edgelabel>
+          <edgelabel>m_bStatic</edgelabel>
+        </childnode>
+        <childnode refid="13879" relation="usage">
+          <edgelabel>m_vTransform</edgelabel>
+        </childnode>
+        <childnode refid="13875" relation="usage">
+          <edgelabel>m_vCenterOfMass</edgelabel>
+          <edgelabel>m_vPosition</edgelabel>
+        </childnode>
+        <childnode refid="13898" relation="usage">
+          <edgelabel>m_pLocalShape</edgelabel>
+        </childnode>
+        <childnode refid="13897" relation="usage">
+          <edgelabel>m_pWorldShape</edgelabel>
+        </childnode>
+      </node>
+      <node id="13939">
+        <label>ClippingState</label>
+        <link refid="d1/de0/classClippingState"/>
+        <childnode refid="13876" relation="usage">
+          <edgelabel>ClipFrustrumReject</edgelabel>
+          <edgelabel>ClipRaster</edgelabel>
+          <edgelabel>ClipFrustrum</edgelabel>
+          <edgelabel>ClipCubeSpace</edgelabel>
+        </childnode>
+      </node>
+      <node id="13881">
+        <label>TMatrix3&lt; Scalar &gt;</label>
+        <link refid="d7/dee/classTMatrix3"/>
+        <childnode refid="13881" relation="usage">
+          <edgelabel>Identity</edgelabel>
+          <edgelabel>Null</edgelabel>
+        </childnode>
+        <childnode refid="13863" relation="usage">
+          <edgelabel>ONE</edgelabel>
+          <edgelabel>m20</edgelabel>
+          <edgelabel>m21</edgelabel>
+          <edgelabel>m10</edgelabel>
+          <edgelabel>m22</edgelabel>
+          <edgelabel>m11</edgelabel>
+          <edgelabel>m00</edgelabel>
+          <edgelabel>TWO</edgelabel>
+          <edgelabel>m12</edgelabel>
+          <edgelabel>m01</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="13924">
+        <label>ShaderProgramConstant</label>
+        <link refid="d2/d9e/structShaderProgramConstant"/>
+        <childnode refid="13866" relation="usage">
+          <edgelabel>strName</edgelabel>
+        </childnode>
+        <childnode refid="13886" relation="usage">
+          <edgelabel>iRegisterCount</edgelabel>
+          <edgelabel>iBaseRegister</edgelabel>
+        </childnode>
+      </node>
+      <node id="13926">
+        <label>PixelShaderProgram</label>
+        <link refid="d1/dc0/classPixelShaderProgram"/>
+        <childnode refid="13915" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13927" relation="usage">
+          <edgelabel>sm_iPSProfile</edgelabel>
+        </childnode>
+      </node>
+      <node id="13931">
+        <label>PolygonState</label>
+        <link refid="d5/de7/classPolygonState"/>
+        <childnode refid="13863" relation="usage">
+          <edgelabel>DepthBias</edgelabel>
+          <edgelabel>SlopeScale</edgelabel>
+        </childnode>
+        <childnode refid="13876" relation="usage">
+          <edgelabel>OffsetPoints</edgelabel>
+          <edgelabel>OffsetLines</edgelabel>
+          <edgelabel>WireframeEnabled</edgelabel>
+          <edgelabel>OffsetFills</edgelabel>
+        </childnode>
+      </node>
+      <node id="13947">
+        <label>static Bool</label>
+      </node>
+      <node id="13933">
+        <label>StencilTestMode</label>
+      </node>
+      <node id="13863">
+        <label>float</label>
+      </node>
+      <node id="13910">
+        <label>UInt64</label>
+      </node>
+      <node id="13880">
+        <label>TMatrix4&lt; Scalar &gt;</label>
+        <link refid="d5/d09/classTMatrix4"/>
+        <childnode refid="13880" relation="usage">
+          <edgelabel>Identity</edgelabel>
+          <edgelabel>Null</edgelabel>
+        </childnode>
+        <childnode refid="13863" relation="usage">
+          <edgelabel>ONE</edgelabel>
+          <edgelabel>m30</edgelabel>
+          <edgelabel>m31</edgelabel>
+          <edgelabel>m20</edgelabel>
+          <edgelabel>m32</edgelabel>
+          <edgelabel>m21</edgelabel>
+          <edgelabel>m10</edgelabel>
+          <edgelabel>m33</edgelabel>
+          <edgelabel>m22</edgelabel>
+          <edgelabel>m11</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="13900">
+        <label>VertexFormat</label>
+        <link refid="da/dc2/classVertexFormat"/>
+        <childnode refid="13901" relation="usage">
+          <edgelabel>m_arrFields</edgelabel>
+        </childnode>
+        <childnode refid="13886" relation="usage">
+          <edgelabel>m_iSize</edgelabel>
+          <edgelabel>m_iFieldCount</edgelabel>
+          <edgelabel>m_arrUsageLUT</edgelabel>
+        </childnode>
+        <childnode refid="13876" relation="usage">
+          <edgelabel>m_bFinalized</edgelabel>
+        </childnode>
+        <childnode refid="13867" relation="usage">
+          <edgelabel>sm_arrComponentCount</edgelabel>
+          <edgelabel>sm_arrTypeSize</edgelabel>
+          <edgelabel>sm_arrComponentSize</edgelabel>
+        </childnode>
+      </node>
+      <node id="13942">
+        <label>CullingConvention</label>
+      </node>
+      <node id="13908">
+        <label>TQuaternion&lt; Scalar &gt;</label>
+        <link refid="d5/dad/classTQuaternion"/>
+        <childnode refid="13908" relation="usage">
+          <edgelabel>Identity</edgelabel>
+          <edgelabel>Null</edgelabel>
+        </childnode>
+        <childnode refid="13909" relation="usage">
+          <edgelabel>ONE</edgelabel>
+          <edgelabel>TWO</edgelabel>
+          <edgelabel>ZERO</edgelabel>
+        </childnode>
+        <childnode refid="13874" relation="usage">
+          <edgelabel>W</edgelabel>
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+          <edgelabel>Z</edgelabel>
+        </childnode>
+      </node>
+      <node id="13901">
+        <label>VFField</label>
+        <link refid="de/d92/structVFField"/>
+        <childnode refid="13902" relation="usage">
+          <edgelabel>iUsage</edgelabel>
+        </childnode>
+        <childnode refid="13886" relation="usage">
+          <edgelabel>iSize</edgelabel>
+          <edgelabel>iUsageIndex</edgelabel>
+          <edgelabel>iOffset</edgelabel>
+        </childnode>
+        <childnode refid="13903" relation="usage">
+          <edgelabel>iType</edgelabel>
+        </childnode>
+      </node>
+      <node id="13877">
+        <label>ULong</label>
+      </node>
+      <node id="13918">
+        <label>ShaderVarType</label>
+      </node>
+      <node id="13867">
+        <label>unsigned int</label>
+      </node>
+      <node id="13885">
+        <label>unsigned char</label>
+      </node>
+      <node id="13936">
+        <label>BlendingSrcMode</label>
+      </node>
+      <node id="13911">
+        <label>EffectInstance</label>
+        <link refid="da/d3f/classEffectInstance"/>
+        <childnode refid="13912" relation="usage">
+          <edgelabel>m_pTechnique</edgelabel>
+        </childnode>
+        <childnode refid="13886" relation="usage">
+          <edgelabel>m_iPassCount</edgelabel>
+          <edgelabel>m_iTechniqueIndex</edgelabel>
+        </childnode>
+        <childnode refid="13943" relation="usage">
+          <edgelabel>m_arrVertexParameters</edgelabel>
+          <edgelabel>m_arrPixelParameters</edgelabel>
+        </childnode>
+        <childnode refid="13951" relation="usage">
+          <edgelabel>m_pEffect</edgelabel>
+        </childnode>
+      </node>
+      <node id="13952">
+        <label>TLine3&lt; Scalar &gt;</label>
+        <link refid="d1/d7b/classTLine3"/>
+        <childnode refid="13873" relation="usage">
+          <edgelabel>Direction</edgelabel>
+        </childnode>
+        <childnode refid="13875" relation="usage">
+          <edgelabel>Position</edgelabel>
+        </childnode>
+      </node>
+      <node id="13897">
+        <label>TransformedShape</label>
+        <link refid="d2/d1b/classTransformedShape"/>
+        <childnode refid="13871" relation="usage">
+          <edgelabel>m_bvWorldAAB</edgelabel>
+        </childnode>
+        <childnode refid="13879" relation="usage">
+          <edgelabel>m_vTransform</edgelabel>
+        </childnode>
+        <childnode refid="13898" relation="usage">
+          <edgelabel>m_pShape</edgelabel>
+        </childnode>
+      </node>
+      <node id="13920">
+        <label>ShaderProgramSampler</label>
+        <link refid="d5/d69/structShaderProgramSampler"/>
+        <childnode refid="13921" relation="usage">
+          <edgelabel>iType</edgelabel>
+        </childnode>
+        <childnode refid="13922" relation="usage">
+          <edgelabel>iWrapMode</edgelabel>
+        </childnode>
+        <childnode refid="13863" relation="usage">
+          <edgelabel>fLODBias</edgelabel>
+          <edgelabel>fAnisotropy</edgelabel>
+        </childnode>
+        <childnode refid="13866" relation="usage">
+          <edgelabel>strName</edgelabel>
+        </childnode>
+        <childnode refid="13923" relation="usage">
+          <edgelabel>iFilter</edgelabel>
+        </childnode>
+        <childnode refid="13886" relation="usage">
+          <edgelabel>iTextureUnit</edgelabel>
+        </childnode>
+        <childnode refid="13877" relation="usage">
+          <edgelabel>dwBorderColor</edgelabel>
+        </childnode>
+      </node>
+      <node id="13886">
+        <label>int</label>
+      </node>
+      <node id="13871">
+        <label>TBVAABox&lt; Scalar &gt;</label>
+        <link refid="d9/d90/classTBVAABox"/>
+        <childnode refid="13872" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13873" relation="usage">
+          <edgelabel>m_vExtents</edgelabel>
+        </childnode>
+        <childnode refid="13875" relation="usage">
+          <edgelabel>m_vCenter</edgelabel>
+        </childnode>
+      </node>
+      <node id="13895">
+        <label>ContactManifold</label>
+        <link refid="d2/d6f/classContactManifold"/>
+      </node>
+      <node id="13921">
+        <label>ShaderSamplingType</label>
+      </node>
+      <node id="13874">
+        <label>Scalar</label>
+      </node>
+      <node id="13917">
+        <label>ShaderVarSemantic</label>
+      </node>
+      <node id="13887">
+        <label>JointEdge</label>
+        <link refid="df/d01/classJointEdge"/>
+        <childnode refid="13888" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13890" relation="usage">
+          <edgelabel>m_pConstraint</edgelabel>
+        </childnode>
+      </node>
+      <node id="13870">
+        <label>WorldBaseNode</label>
+        <link refid="de/d40/classWorldBaseNode"/>
+        <childnode refid="13871" relation="usage">
+          <edgelabel>WorldBV</edgelabel>
+        </childnode>
+        <childnode refid="13866" relation="usage">
+          <edgelabel>m_strName</edgelabel>
+        </childnode>
+        <childnode refid="13876" relation="usage">
+          <edgelabel>UpdateWorldTransform</edgelabel>
+          <edgelabel>UpdateWorldBV</edgelabel>
+        </childnode>
+        <childnode refid="13877" relation="usage">
+          <edgelabel>m_dwDebugFlags</edgelabel>
+        </childnode>
+        <childnode refid="13867" relation="usage">
+          <edgelabel>sm_iNoNameCount</edgelabel>
+        </childnode>
+        <childnode refid="13878" relation="usage">
+          <edgelabel>CullMode</edgelabel>
+        </childnode>
+        <childnode refid="13870" relation="usage">
+          <edgelabel>m_pParent</edgelabel>
+        </childnode>
+        <childnode refid="13879" relation="usage">
+          <edgelabel>WorldTransform</edgelabel>
+        </childnode>
+      </node>
+      <node id="13945">
+        <label>Texture</label>
+        <link refid="d6/d97/classTexture"/>
+        <childnode refid="13946" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13947" relation="usage">
+          <edgelabel>sm_arrMipMapable</edgelabel>
+          <edgelabel>sm_arrCompressed</edgelabel>
+        </childnode>
+        <childnode refid="13885" relation="usage">
+          <edgelabel>m_pData</edgelabel>
+        </childnode>
+        <childnode refid="13948" relation="usage">
+          <edgelabel>m_iFormat</edgelabel>
+        </childnode>
+        <childnode refid="13949" relation="usage">
+          <edgelabel>m_iUsage</edgelabel>
+        </childnode>
+        <childnode refid="13886" relation="usage">
+          <edgelabel>m_arrLevelOffsets</edgelabel>
+          <edgelabel>m_arrLevelBytes</edgelabel>
+          <edgelabel>m_arrLevelBounds</edgelabel>
+          <edgelabel>m_iMipMapLevels</edgelabel>
+          <edgelabel>m_iTotalBytes</edgelabel>
+        </childnode>
+        <childnode refid="13867" relation="usage">
+          <edgelabel>sm_arrDimensions</edgelabel>
+          <edgelabel>sm_arrPixelBytes</edgelabel>
+        </childnode>
+        <childnode refid="13950" relation="usage">
+          <edgelabel>m_arrUserFields</edgelabel>
+        </childnode>
+      </node>
+      <node id="13940">
+        <label>CullingState</label>
+        <link refid="d6/d50/classCullingState"/>
+        <childnode refid="13866" relation="usage">
+          <edgelabel>sm_arrCullTestNames</edgelabel>
+          <edgelabel>sm_arrCullConvNames</edgelabel>
+        </childnode>
+        <childnode refid="13941" relation="usage">
+          <edgelabel>CullTest</edgelabel>
+        </childnode>
+        <childnode refid="13876" relation="usage">
+          <edgelabel>CullEnabled</edgelabel>
+        </childnode>
+        <childnode refid="13942" relation="usage">
+          <edgelabel>CullConv</edgelabel>
+        </childnode>
+      </node>
+      <node id="13903">
+        <label>VFFieldType</label>
+      </node>
+      <node id="13893">
+        <label>RigidBody</label>
+        <link refid="d6/d88/classRigidBody"/>
+        <childnode refid="13882" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13943">
+        <label>ShaderParameters</label>
+        <link refid="d1/d32/classShaderParameters"/>
+        <childnode refid="13915" relation="usage">
+          <edgelabel>m_pProgram</edgelabel>
+        </childnode>
+        <childnode refid="13944" relation="usage">
+          <edgelabel>m_arrConstants</edgelabel>
+        </childnode>
+        <childnode refid="13945" relation="usage">
+          <edgelabel>m_arrTextures</edgelabel>
+        </childnode>
+        <childnode refid="13886" relation="usage">
+          <edgelabel>m_iTextureCount</edgelabel>
+          <edgelabel>m_iConstantCount</edgelabel>
+        </childnode>
+      </node>
+      <node id="13905">
+        <label>IndexBufferUsage</label>
+      </node>
+      <node id="13879">
+        <label>TTransform3&lt; Scalar &gt;</label>
+        <link refid="d0/d75/classTTransform3"/>
+        <childnode refid="13873" relation="usage">
+          <edgelabel>m_vScale</edgelabel>
+          <edgelabel>m_vInvScale</edgelabel>
+          <edgelabel>m_vInvTranslate</edgelabel>
+          <edgelabel>m_vTranslate</edgelabel>
+        </childnode>
+        <childnode refid="13880" relation="usage">
+          <edgelabel>m_matHMatrix</edgelabel>
+        </childnode>
+        <childnode refid="13881" relation="usage">
+          <edgelabel>m_matInvTransform</edgelabel>
+          <edgelabel>m_matTransform</edgelabel>
+        </childnode>
+        <childnode refid="13876" relation="usage">
+          <edgelabel>m_bIsUniformScale</edgelabel>
+          <edgelabel>m_bIsIdentity</edgelabel>
+          <edgelabel>m_bUpdateInverse</edgelabel>
+          <edgelabel>m_bIsRotScale</edgelabel>
+        </childnode>
+        <childnode refid="13879" relation="usage">
+          <edgelabel>Identity</edgelabel>
+        </childnode>
+      </node>
+      <node id="13873">
+        <label>TVector3&lt; Scalar &gt;</label>
+        <link refid="de/d40/classTVector3"/>
+        <childnode refid="13873" relation="usage">
+          <edgelabel>Null</edgelabel>
+          <edgelabel>eI</edgelabel>
+          <edgelabel>eJ</edgelabel>
+          <edgelabel>eK</edgelabel>
+        </childnode>
+        <childnode refid="13874" relation="usage">
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+          <edgelabel>Z</edgelabel>
+        </childnode>
+      </node>
+      <node id="13884">
+        <label>Island</label>
+        <link refid="d0/dd6/classIsland"/>
+        <childnode refid="13884" relation="usage">
+          <edgelabel>m_pNextInWorld</edgelabel>
+          <edgelabel>m_pPrevInWorld</edgelabel>
+        </childnode>
+        <childnode refid="13885" relation="usage">
+          <edgelabel>m_iColor</edgelabel>
+        </childnode>
+        <childnode refid="13882" relation="usage">
+          <edgelabel>m_pListBodies</edgelabel>
+        </childnode>
+        <childnode refid="13886" relation="usage">
+          <edgelabel>m_iContactCount</edgelabel>
+          <edgelabel>m_iJointCount</edgelabel>
+          <edgelabel>m_iBodyCount</edgelabel>
+          <edgelabel>m_iStackLayerCount</edgelabel>
+        </childnode>
+        <childnode refid="13887" relation="usage">
+          <edgelabel>m_pListJoints</edgelabel>
+        </childnode>
+        <childnode refid="13894" relation="usage">
+          <edgelabel>m_pListContacts</edgelabel>
+        </childnode>
+      </node>
+      <node id="13919">
+        <label>ShaderProgramOutputVar</label>
+        <link refid="df/df0/structShaderProgramOutputVar"/>
+        <childnode refid="13866" relation="usage">
+          <edgelabel>strName</edgelabel>
+        </childnode>
+        <childnode refid="13917" relation="usage">
+          <edgelabel>iSemantic</edgelabel>
+        </childnode>
+        <childnode refid="13918" relation="usage">
+          <edgelabel>iType</edgelabel>
+        </childnode>
+      </node>
+      <node id="13875">
+        <label>TVertex3&lt; Scalar &gt;</label>
+        <link refid="dc/d75/classTVertex3"/>
+        <childnode refid="13874" relation="usage">
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+          <edgelabel>Z</edgelabel>
+        </childnode>
+        <childnode refid="13875" relation="usage">
+          <edgelabel>Null</edgelabel>
+        </childnode>
+      </node>
+      <node id="13948">
+        <label>TextureFormat</label>
+      </node>
+      <node id="13862">
+        <label>WorldCaster</label>
+        <link refid="d1/dd3/classWorldCaster"/>
+        <childnode refid="13863" relation="usage">
+          <edgelabel>m_fMinDistance</edgelabel>
+          <edgelabel>m_fMaxDistance</edgelabel>
+        </childnode>
+        <childnode refid="13864" relation="usage">
+          <edgelabel>m_arrResults</edgelabel>
+        </childnode>
+        <childnode refid="13952" relation="usage">
+          <edgelabel>m_vRay</edgelabel>
+        </childnode>
+        <childnode refid="13886" relation="usage">
+          <edgelabel>m_iClosestNegative</edgelabel>
+          <edgelabel>m_iClosest</edgelabel>
+          <edgelabel>m_iClosestPositive</edgelabel>
+        </childnode>
+        <childnode refid="13876" relation="usage">
+          <edgelabel>m_bSortedResults</edgelabel>
+        </childnode>
+      </node>
+      <node id="13898">
+        <label>Shape</label>
+        <link refid="de/d0a/classShape"/>
+        <childnode refid="13871" relation="usage">
+          <edgelabel>m_bvLocalAAB</edgelabel>
+        </childnode>
+        <childnode refid="13899" relation="usage">
+          <edgelabel>m_pMesh</edgelabel>
+        </childnode>
+      </node>
+      <node id="13935">
+        <label>BlendingState</label>
+        <link refid="de/d89/classBlendingState"/>
+        <childnode refid="13936" relation="usage">
+          <edgelabel>BlendSrc</edgelabel>
+        </childnode>
+        <childnode refid="13937" relation="usage">
+          <edgelabel>BlendTest</edgelabel>
+        </childnode>
+        <childnode refid="13866" relation="usage">
+          <edgelabel>sm_arrBlendSrcNames</edgelabel>
+          <edgelabel>sm_arrBlendTestNames</edgelabel>
+          <edgelabel>sm_arrBlendDstNames</edgelabel>
+        </childnode>
+        <childnode refid="13938" relation="usage">
+          <edgelabel>BlendDst</edgelabel>
+        </childnode>
+        <childnode refid="13876" relation="usage">
+          <edgelabel>BlendEnabled</edgelabel>
+          <edgelabel>BlendTestEnabled</edgelabel>
+        </childnode>
+        <childnode refid="13877" relation="usage">
+          <edgelabel>ConstantColor</edgelabel>
+          <edgelabel>Reference</edgelabel>
+        </childnode>
+      </node>
+      <node id="13944">
+        <label>ShaderConst</label>
+        <link refid="de/d52/classShaderConst"/>
+        <childnode refid="13863" relation="usage">
+          <edgelabel>m_arrRegisters</edgelabel>
+        </childnode>
+        <childnode refid="13886" relation="usage">
+          <edgelabel>m_iSize</edgelabel>
+          <edgelabel>m_iRegisterCount</edgelabel>
+        </childnode>
+        <childnode refid="13876" relation="usage">
+          <edgelabel>m_bAllowUpdate</edgelabel>
+        </childnode>
+      </node>
+      <node id="13930">
+        <label>DepthTestMode</label>
+      </node>
+      <node id="13923">
+        <label>ShaderSamplingFilter</label>
+      </node>
+      <node id="13894">
+        <label>ContactEdge</label>
+        <link refid="dc/d79/classContactEdge"/>
+        <childnode refid="13888" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13895" relation="usage">
+          <edgelabel>m_pContactManifold</edgelabel>
+        </childnode>
+        <childnode refid="13896" relation="usage">
+          <edgelabel>m_pNarrowPhase</edgelabel>
+        </childnode>
+      </node>
+      <node id="13912">
+        <label>EffectTechnique</label>
+        <link refid="db/df6/classEffectTechnique"/>
+        <childnode refid="13913" relation="usage">
+          <edgelabel>m_arrPasses</edgelabel>
+        </childnode>
+        <childnode refid="13886" relation="usage">
+          <edgelabel>m_iPassCount</edgelabel>
+        </childnode>
+      </node>
+      <node id="13902">
+        <label>VFFieldUsage</label>
+      </node>
+      <node id="13888">
+        <label>IslandEdge</label>
+        <link refid="da/d63/classIslandEdge"/>
+        <childnode refid="13889" relation="usage">
+          <edgelabel>m_idEdge</edgelabel>
+        </childnode>
+        <childnode refid="13884" relation="usage">
+          <edgelabel>m_pIsland</edgelabel>
+        </childnode>
+        <childnode refid="13885" relation="usage">
+          <edgelabel>m_iColor</edgelabel>
+        </childnode>
+        <childnode refid="13883" relation="usage">
+          <edgelabel>m_pNodeA</edgelabel>
+          <edgelabel>m_pNodeB</edgelabel>
+        </childnode>
+        <childnode refid="13886" relation="usage">
+          <edgelabel>m_iStackLayer</edgelabel>
+        </childnode>
+        <childnode refid="13888" relation="usage">
+          <edgelabel>m_pNextInWorld</edgelabel>
+          <edgelabel>m_pNextInIsland</edgelabel>
+          <edgelabel>m_pPrevInNodeA</edgelabel>
+          <edgelabel>m_pNextInNodeA</edgelabel>
+          <edgelabel>m_pPrevInNodeB</edgelabel>
+          <edgelabel>m_pNextInNodeB</edgelabel>
+          <edgelabel>m_pPrevInWorld</edgelabel>
+          <edgelabel>m_pPrevInIsland</edgelabel>
+        </childnode>
+      </node>
+      <node id="13906">
+        <label>VertexBuffer</label>
+        <link refid="d7/d72/classVertexBuffer"/>
+        <childnode refid="13885" relation="usage">
+          <edgelabel>m_arrVertices</edgelabel>
+        </childnode>
+        <childnode refid="13886" relation="usage">
+          <edgelabel>m_iSize</edgelabel>
+          <edgelabel>m_iVertexCount</edgelabel>
+          <edgelabel>m_iVertexSize</edgelabel>
+        </childnode>
+        <childnode refid="13907" relation="usage">
+          <edgelabel>m_iUsage</edgelabel>
+        </childnode>
+      </node>
+      <node id="13913">
+        <label>EffectPass</label>
+        <link refid="dc/dfd/classEffectPass"/>
+        <childnode refid="13914" relation="usage">
+          <edgelabel>m_pVSProgram</edgelabel>
+        </childnode>
+        <childnode refid="13926" relation="usage">
+          <edgelabel>m_pPSProgram</edgelabel>
+        </childnode>
+        <childnode refid="13928" relation="usage">
+          <edgelabel>m_pDepthState</edgelabel>
+        </childnode>
+        <childnode refid="13931" relation="usage">
+          <edgelabel>m_pPolygonState</edgelabel>
+        </childnode>
+        <childnode refid="13932" relation="usage">
+          <edgelabel>m_pStencilState</edgelabel>
+        </childnode>
+        <childnode refid="13935" relation="usage">
+          <edgelabel>m_pBlendingState</edgelabel>
+        </childnode>
+        <childnode refid="13939" relation="usage">
+          <edgelabel>m_pClippingState</edgelabel>
+        </childnode>
+        <childnode refid="13940" relation="usage">
+          <edgelabel>m_pCullingState</edgelabel>
+        </childnode>
+      </node>
+      <node id="13927">
+        <label>static PixelShaderProfile</label>
+      </node>
+      <node id="13915">
+        <label>ShaderProgram</label>
+        <link refid="d0/d2d/classShaderProgram"/>
+        <childnode refid="13916" relation="usage">
+          <edgelabel>m_arrInputs</edgelabel>
+        </childnode>
+        <childnode refid="13866" relation="usage">
+          <edgelabel>m_arrProgramTexts</edgelabel>
+          <edgelabel>m_strProgramName</edgelabel>
+        </childnode>
+        <childnode refid="13919" relation="usage">
+          <edgelabel>m_arrOutputs</edgelabel>
+        </childnode>
+        <childnode refid="13886" relation="usage">
+          <edgelabel>m_iSamplerCount</edgelabel>
+          <edgelabel>m_iInputCount</edgelabel>
+          <edgelabel>m_iOutputCount</edgelabel>
+          <edgelabel>m_iConstantCount</edgelabel>
+        </childnode>
+        <childnode refid="13920" relation="usage">
+          <edgelabel>m_arrSamplers</edgelabel>
+        </childnode>
+        <childnode refid="13924" relation="usage">
+          <edgelabel>m_arrConstants</edgelabel>
+        </childnode>
+      </node>
+      <node id="13946">
+        <label>Resource</label>
+        <link refid="da/dcd/classResource"/>
+      </node>
+      <node id="13864">
+        <label>Array&lt; WorldCastResult &gt;</label>
+        <link refid="d0/d26/classArray"/>
+        <childnode refid="13865" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13868" relation="usage">
+          <edgelabel>m_arrBuffer</edgelabel>
+        </childnode>
+        <childnode refid="13886" relation="usage">
+          <edgelabel>m_iShrinkFactor</edgelabel>
+          <edgelabel>m_iNextFree</edgelabel>
+          <edgelabel>m_iBufferSize</edgelabel>
+          <edgelabel>m_iPageSize</edgelabel>
+        </childnode>
+      </node>
+      <node id="13949">
+        <label>TextureUsage</label>
+      </node>
+      <node id="13951">
+        <label>Effect</label>
+        <link refid="d3/df0/classEffect"/>
+        <childnode refid="13912" relation="usage">
+          <edgelabel>m_arrTechniques</edgelabel>
+        </childnode>
+        <childnode refid="13886" relation="usage">
+          <edgelabel>m_iTechniqueCount</edgelabel>
+        </childnode>
+      </node>
+      <node id="13869">
+        <label>WorldLeaf</label>
+        <link refid="dc/d09/classWorldLeaf"/>
+        <childnode refid="13870" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13871" relation="usage">
+          <edgelabel>ModelBV</edgelabel>
+        </childnode>
+        <childnode refid="13882" relation="usage">
+          <edgelabel>m_pBody</edgelabel>
+        </childnode>
+        <childnode refid="13911" relation="usage">
+          <edgelabel>m_pEffectInstance</edgelabel>
+        </childnode>
+        <childnode refid="13876" relation="usage">
+          <edgelabel>CastShadows</edgelabel>
+        </childnode>
+        <childnode refid="13899" relation="usage">
+          <edgelabel>m_pMesh</edgelabel>
+        </childnode>
+      </node>
+      <node id="13876">
+        <label>bool</label>
+      </node>
+      <node id="13890">
+        <label>Constraint</label>
+        <link refid="d8/dcd/classConstraint"/>
+        <childnode refid="13891" relation="usage">
+          <edgelabel>m_arrRows</edgelabel>
+        </childnode>
+        <childnode refid="13886" relation="usage">
+          <edgelabel>m_iRowCount</edgelabel>
+        </childnode>
+        <childnode refid="13893" relation="usage">
+          <edgelabel>m_pRigidBodyA</edgelabel>
+          <edgelabel>m_pRigidBodyB</edgelabel>
+        </childnode>
+      </node>
+      <node id="13872">
+        <label>TBoundingVolume&lt; Scalar &gt;</label>
+        <link refid="d6/d19/classTBoundingVolume"/>
+      </node>
+      <node id="13866">
+        <label>char</label>
+      </node>
+      <node id="13916">
+        <label>ShaderProgramInputVar</label>
+        <link refid="d9/dbd/structShaderProgramInputVar"/>
+        <childnode refid="13866" relation="usage">
+          <edgelabel>strName</edgelabel>
+        </childnode>
+        <childnode refid="13917" relation="usage">
+          <edgelabel>iSemantic</edgelabel>
+        </childnode>
+        <childnode refid="13918" relation="usage">
+          <edgelabel>iType</edgelabel>
+        </childnode>
+      </node>
+      <node id="13896">
+        <label>NarrowPhase</label>
+        <link refid="dd/d93/classNarrowPhase"/>
+        <childnode refid="13863" relation="usage">
+          <edgelabel>ZeroTolerance</edgelabel>
+        </childnode>
+        <childnode refid="13895" relation="usage">
+          <edgelabel>m_pCollisionManifold</edgelabel>
+        </childnode>
+        <childnode refid="13897" relation="usage">
+          <edgelabel>m_pShapeA</edgelabel>
+          <edgelabel>m_pShapeB</edgelabel>
+        </childnode>
+      </node>
+      <node id="13934">
+        <label>StencilOperation</label>
+      </node>
+      <node id="13950">
+        <label>Void *</label>
+      </node>
+      <node id="13904">
+        <label>IndexBuffer</label>
+        <link refid="dd/df7/classIndexBuffer"/>
+        <childnode refid="13885" relation="usage">
+          <edgelabel>m_arrIndices</edgelabel>
+        </childnode>
+        <childnode refid="13886" relation="usage">
+          <edgelabel>m_iIndexSize</edgelabel>
+          <edgelabel>m_iSize</edgelabel>
+          <edgelabel>m_iIndexCount</edgelabel>
+        </childnode>
+        <childnode refid="13905" relation="usage">
+          <edgelabel>m_iUsage</edgelabel>
+        </childnode>
+      </node>
+      <node id="13891">
+        <label>ConstraintRow</label>
+        <link refid="dd/d74/structConstraintRow"/>
+        <childnode refid="13892" relation="usage">
+          <edgelabel>constrJacobian</edgelabel>
+        </childnode>
+        <childnode refid="13863" relation="usage">
+          <edgelabel>fUpperLimit</edgelabel>
+          <edgelabel>fLowerLimit</edgelabel>
+          <edgelabel>fError</edgelabel>
+          <edgelabel>fCFM</edgelabel>
+          <edgelabel>fImpulse</edgelabel>
+        </childnode>
+      </node>
+      <node id="13929">
+        <label>static const GChar *</label>
+      </node>
+      <node id="13938">
+        <label>BlendingDstMode</label>
+      </node>
+      <node id="13865">
+        <label>Datastruct</label>
+        <link refid="dc/d51/classDatastruct"/>
+        <childnode refid="13866" relation="usage">
+          <edgelabel>m_strAllocatorName</edgelabel>
+        </childnode>
+        <childnode refid="13867" relation="usage">
+          <edgelabel>m_idMemoryContext</edgelabel>
+        </childnode>
+      </node>
+      <node id="13883">
+        <label>IslandNode</label>
+        <link refid="d4/d8c/classIslandNode"/>
+        <childnode refid="13884" relation="usage">
+          <edgelabel>m_pIsland</edgelabel>
+        </childnode>
+        <childnode refid="13883" relation="usage">
+          <edgelabel>m_pNextInWorld</edgelabel>
+          <edgelabel>m_pNextInIsland</edgelabel>
+          <edgelabel>m_pPrevInWorld</edgelabel>
+          <edgelabel>m_pPrevInIsland</edgelabel>
+        </childnode>
+        <childnode refid="13886" relation="usage">
+          <edgelabel>m_iContactCount</edgelabel>
+          <edgelabel>m_iJointCount</edgelabel>
+          <edgelabel>m_iStackLayer</edgelabel>
+          <edgelabel>m_iIslandRefCount</edgelabel>
+        </childnode>
+        <childnode refid="13876" relation="usage">
+          <edgelabel>m_bFixed</edgelabel>
+        </childnode>
+        <childnode refid="13887" relation="usage">
+          <edgelabel>m_pListJoints</edgelabel>
+        </childnode>
+        <childnode refid="13894" relation="usage">
+          <edgelabel>m_pListContacts</edgelabel>
+        </childnode>
+      </node>
+      <node id="13922">
+        <label>ShaderSamplingWrapMode</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/WorldCaster.h" line="57" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/WorldCaster.h" bodystart="56" bodyend="91"/>
+    <listofallmembers>
+      <member refid="d1/dd3/classWorldCaster_1aceaa50cdc82ece190324307a1b9c9f02" prot="private" virt="non-virtual"><scope>WorldCaster</scope><name>_Rec_RayCast</name></member>
+      <member refid="d1/dd3/classWorldCaster_1afe71140fd1c44081f552123ec53c48ac" prot="private" virt="non-virtual"><scope>WorldCaster</scope><name>_ResultOrdering</name></member>
+      <member refid="d1/dd3/classWorldCaster_1acb16107b0b18ba655f4ea1e457392a13" prot="public" virt="non-virtual"><scope>WorldCaster</scope><name>GetClosest</name></member>
+      <member refid="d1/dd3/classWorldCaster_1a03f572f7ca7fa0a089c1a544f87f6b66" prot="public" virt="non-virtual"><scope>WorldCaster</scope><name>GetClosestNegative</name></member>
+      <member refid="d1/dd3/classWorldCaster_1a5e349cf974fdf25bf96af01820a78f9b" prot="public" virt="non-virtual"><scope>WorldCaster</scope><name>GetClosestPositive</name></member>
+      <member refid="d1/dd3/classWorldCaster_1ad55846cae293ba412fd083736ec22b02" prot="public" virt="non-virtual"><scope>WorldCaster</scope><name>GetResult</name></member>
+      <member refid="d1/dd3/classWorldCaster_1a5833444842e6ed4edd83f5bbd62b97fd" prot="public" virt="non-virtual"><scope>WorldCaster</scope><name>GetResultCount</name></member>
+      <member refid="d1/dd3/classWorldCaster_1ad8f4bdd8c147a120e5a02281d58f2efe" prot="private" virt="non-virtual"><scope>WorldCaster</scope><name>m_arrResults</name></member>
+      <member refid="d1/dd3/classWorldCaster_1ac340346c45574955089501f89e52b75f" prot="private" virt="non-virtual"><scope>WorldCaster</scope><name>m_bSortedResults</name></member>
+      <member refid="d1/dd3/classWorldCaster_1adf593943c8c731e21eb22a387b6f26ce" prot="private" virt="non-virtual"><scope>WorldCaster</scope><name>m_fMaxDistance</name></member>
+      <member refid="d1/dd3/classWorldCaster_1a8a638e102b046fa0233da88940c47bd4" prot="private" virt="non-virtual"><scope>WorldCaster</scope><name>m_fMinDistance</name></member>
+      <member refid="d1/dd3/classWorldCaster_1a640fa87825928174e24aa9d79f2204ba" prot="private" virt="non-virtual"><scope>WorldCaster</scope><name>m_iClosest</name></member>
+      <member refid="d1/dd3/classWorldCaster_1a866fce0bfad5a0ce42c470857e4d47a4" prot="private" virt="non-virtual"><scope>WorldCaster</scope><name>m_iClosestNegative</name></member>
+      <member refid="d1/dd3/classWorldCaster_1a55257259b20c6cbe7814d0c592ce1678" prot="private" virt="non-virtual"><scope>WorldCaster</scope><name>m_iClosestPositive</name></member>
+      <member refid="d1/dd3/classWorldCaster_1a656d853eb9a0124743e9b4afe3df9066" prot="private" virt="non-virtual"><scope>WorldCaster</scope><name>m_vRay</name></member>
+      <member refid="d1/dd3/classWorldCaster_1a7c14c88f86c8bbc339a411aa9709c5ce" prot="public" virt="non-virtual"><scope>WorldCaster</scope><name>RayCast</name></member>
+      <member refid="d1/dd3/classWorldCaster_1ab02729e3916ef7ba46850a0fbb4722dc" prot="public" virt="non-virtual"><scope>WorldCaster</scope><name>SortResults</name></member>
+      <member refid="d1/dd3/classWorldCaster_1ad1c2c551e0e39748867c6da551df094b" prot="public" virt="non-virtual"><scope>WorldCaster</scope><name>WorldCaster</name></member>
+      <member refid="d1/dd3/classWorldCaster_1a6614310536e0d754b2d15b95bfe8d603" prot="public" virt="non-virtual"><scope>WorldCaster</scope><name>~WorldCaster</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

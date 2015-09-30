@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="de/dc1/classShapeDeformable_1_1SelfCollider" kind="class" prot="private">
+    <compoundname>ShapeDeformable::SelfCollider</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">HCollider</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="de/dc1/classShapeDeformable_1_1SelfCollider_1a31ab28493a0717c41552a30f19876e3e" prot="public" static="no" mutable="no">
+        <type><ref refid="d0/d26/classArray" kindref="compound">Array</ref>&lt; <ref refid="d6/d24/classContactPoint" kindref="compound">ContactPoint</ref> &gt;</type>
+        <definition>Array&lt;ContactPoint&gt; arrSelfContacts</definition>
+        <argsstring></argsstring>
+        <name>arrSelfContacts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="142" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="de/dc1/classShapeDeformable_1_1SelfCollider_1a3a9b7bcb565b6233f403f51f5462dcf0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SelfCollider</definition>
+        <argsstring>()</argsstring>
+        <name>SelfCollider</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="137"/>
+      </memberdef>
+      <memberdef kind="function" id="de/dc1/classShapeDeformable_1_1SelfCollider_1a4cae02d186463ba920a1f3615e4b8553" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~SelfCollider</definition>
+        <argsstring>()</argsstring>
+        <name>~SelfCollider</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="138"/>
+      </memberdef>
+      <memberdef kind="function" id="de/dc1/classShapeDeformable_1_1SelfCollider_1acd75af13f7f3fcb165ee5424db9086bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void Process</definition>
+        <argsstring>(const AABoxNode *pLeafA, const AABoxNode *pLeafB)</argsstring>
+        <name>Process</name>
+        <param>
+          <type>const <ref refid="d3/db4/AABoxTree_8h_1a6849c78f63b49a35e1dd7b5f2db97e95" kindref="member">AABoxNode</ref> *</type>
+          <declname>pLeafA</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d3/db4/AABoxTree_8h_1a6849c78f63b49a35e1dd7b5f2db97e95" kindref="member">AABoxNode</ref> *</type>
+          <declname>pLeafB</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="140"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="10790">
+        <label>HCollider</label>
+      </node>
+      <node id="10789">
+        <label>ShapeDeformable::SelfCollider</label>
+        <link refid="de/dc1/classShapeDeformable_1_1SelfCollider"/>
+        <childnode refid="10790" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="10793">
+        <label>Array&lt; ContactPoint &gt;</label>
+        <link refid="d0/d26/classArray"/>
+        <childnode refid="10794" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10797" relation="usage">
+          <edgelabel>m_arrBuffer</edgelabel>
+        </childnode>
+        <childnode refid="10803" relation="usage">
+          <edgelabel>m_iShrinkFactor</edgelabel>
+          <edgelabel>m_iNextFree</edgelabel>
+          <edgelabel>m_iBufferSize</edgelabel>
+          <edgelabel>m_iPageSize</edgelabel>
+        </childnode>
+      </node>
+      <node id="10797">
+        <label>ContactPoint</label>
+        <link refid="d6/d24/classContactPoint"/>
+        <childnode refid="10798" relation="usage">
+          <edgelabel>vWorldNormal</edgelabel>
+        </childnode>
+        <childnode refid="10800" relation="usage">
+          <edgelabel>idCPID</edgelabel>
+        </childnode>
+        <childnode refid="10802" relation="usage">
+          <edgelabel>fFrictionImpulse0</edgelabel>
+          <edgelabel>fNormalImpulse</edgelabel>
+          <edgelabel>fFrictionImpulse1</edgelabel>
+          <edgelabel>fDistance</edgelabel>
+        </childnode>
+        <childnode refid="10803" relation="usage">
+          <edgelabel>iLifeTime</edgelabel>
+        </childnode>
+        <childnode refid="10804" relation="usage">
+          <edgelabel>vWorldPointA</edgelabel>
+          <edgelabel>vWorldPointB</edgelabel>
+        </childnode>
+      </node>
+      <node id="10800">
+        <label>ContactPointID</label>
+        <link refid="dc/d77/classContactPointID"/>
+        <childnode refid="10800" relation="usage">
+          <edgelabel>CPID_NULL</edgelabel>
+        </childnode>
+        <childnode refid="10801" relation="usage">
+          <edgelabel>dwSpecifierA</edgelabel>
+          <edgelabel>dwSpecifierB</edgelabel>
+          <edgelabel>dwFeatureA</edgelabel>
+          <edgelabel>dwFeatureB</edgelabel>
+        </childnode>
+      </node>
+      <node id="10792">
+        <label>HCollider</label>
+      </node>
+      <node id="10802">
+        <label>float</label>
+      </node>
+      <node id="10801">
+        <label>ULong</label>
+      </node>
+      <node id="10796">
+        <label>unsigned int</label>
+      </node>
+      <node id="10803">
+        <label>int</label>
+      </node>
+      <node id="10799">
+        <label>Scalar</label>
+      </node>
+      <node id="10791">
+        <label>ShapeDeformable::SelfCollider</label>
+        <link refid="de/dc1/classShapeDeformable_1_1SelfCollider"/>
+        <childnode refid="10792" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10793" relation="usage">
+          <edgelabel>arrSelfContacts</edgelabel>
+        </childnode>
+      </node>
+      <node id="10798">
+        <label>TVector3&lt; Scalar &gt;</label>
+        <link refid="de/d40/classTVector3"/>
+        <childnode refid="10798" relation="usage">
+          <edgelabel>Null</edgelabel>
+          <edgelabel>eI</edgelabel>
+          <edgelabel>eJ</edgelabel>
+          <edgelabel>eK</edgelabel>
+        </childnode>
+        <childnode refid="10799" relation="usage">
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+          <edgelabel>Z</edgelabel>
+        </childnode>
+      </node>
+      <node id="10804">
+        <label>TVertex3&lt; Scalar &gt;</label>
+        <link refid="dc/d75/classTVertex3"/>
+        <childnode refid="10799" relation="usage">
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+          <edgelabel>Z</edgelabel>
+        </childnode>
+        <childnode refid="10804" relation="usage">
+          <edgelabel>Null</edgelabel>
+        </childnode>
+      </node>
+      <node id="10795">
+        <label>char</label>
+      </node>
+      <node id="10794">
+        <label>Datastruct</label>
+        <link refid="dc/d51/classDatastruct"/>
+        <childnode refid="10795" relation="usage">
+          <edgelabel>m_strAllocatorName</edgelabel>
+        </childnode>
+        <childnode refid="10796" relation="usage">
+          <edgelabel>m_idMemoryContext</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="136" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" bodystart="136" bodyend="143"/>
+    <listofallmembers>
+      <member refid="de/dc1/classShapeDeformable_1_1SelfCollider_1a31ab28493a0717c41552a30f19876e3e" prot="public" virt="non-virtual"><scope>ShapeDeformable::SelfCollider</scope><name>arrSelfContacts</name></member>
+      <member refid="de/dc1/classShapeDeformable_1_1SelfCollider_1acd75af13f7f3fcb165ee5424db9086bc" prot="public" virt="virtual"><scope>ShapeDeformable::SelfCollider</scope><name>Process</name></member>
+      <member refid="de/dc1/classShapeDeformable_1_1SelfCollider_1a3a9b7bcb565b6233f403f51f5462dcf0" prot="public" virt="non-virtual"><scope>ShapeDeformable::SelfCollider</scope><name>SelfCollider</name></member>
+      <member refid="de/dc1/classShapeDeformable_1_1SelfCollider_1a4cae02d186463ba920a1f3615e4b8553" prot="public" virt="virtual"><scope>ShapeDeformable::SelfCollider</scope><name>~SelfCollider</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

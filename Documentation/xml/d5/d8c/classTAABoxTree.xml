@@ -1,0 +1,1110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d5/d8c/classTAABoxTree" kind="class" prot="public">
+    <compoundname>TAABoxTree</compoundname>
+    <basecompoundref refid="dc/d51/classDatastruct" prot="public" virt="non-virtual">Datastruct</basecompoundref>
+    <includes refid="d3/db4/AABoxTree_8h" local="no">AABoxTree.h</includes>
+    <innerclass refid="dc/df3/classTAABoxTree_1_1HCloner" prot="public">TAABoxTree::HCloner</innerclass>
+    <innerclass refid="d0/d3d/classTAABoxTree_1_1HCollider" prot="public">TAABoxTree::HCollider</innerclass>
+    <innerclass refid="d9/d09/classTAABoxTree_1_1HEnumerator" prot="public">TAABoxTree::HEnumerator</innerclass>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>Real</declname>
+        <defname>Real</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d5/d8c/classTAABoxTree_1a33926fcde1b630cd01ac7b2f0c46150a" prot="private" static="no" mutable="no">
+        <type><ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; *</type>
+        <definition>TAABoxNode&lt;Real&gt;* m_pRoot</definition>
+        <argsstring></argsstring>
+        <name>m_pRoot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="192" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d5/d8c/classTAABoxTree_1a23a17f6bf3b4f3c796e3ca5429557a43" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iNodeCount</definition>
+        <argsstring></argsstring>
+        <name>m_iNodeCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="193" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1ac6312cb2fab8041b5eb3ee03ecc1a044" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TAABoxTree</definition>
+        <argsstring>()</argsstring>
+        <name>TAABoxTree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="97"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1ae3f106898545f2e9aec3b6559a91beda" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~TAABoxTree</definition>
+        <argsstring>()</argsstring>
+        <name>~TAABoxTree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="98"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1aab77352722e193be864ad3e317f0a967" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void Create</definition>
+        <argsstring>()</argsstring>
+        <name>Create</name>
+        <reimplements refid="dc/d51/classDatastruct_1a0609a196f6f3d0c6b77f63eb850c0ac7">Create</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="101"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1a04b98e1741147ccd8731588392091ac0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void Destroy</definition>
+        <argsstring>()</argsstring>
+        <name>Destroy</name>
+        <reimplements refid="dc/d51/classDatastruct_1a5f87413a244467d525a1e593ff2c1c27">Destroy</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="102"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1abe6db4496cfdd90f917f4ca76d4bdcb1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>virtual UInt MemorySize</definition>
+        <argsstring>() const </argsstring>
+        <name>MemorySize</name>
+        <reimplements refid="dc/d51/classDatastruct_1a9797d1e194be5ac1f59da06f4017ab52">MemorySize</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="104"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1a0956cac53fbbd2baead454e29106a8cd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>virtual UInt Count</definition>
+        <argsstring>() const </argsstring>
+        <name>Count</name>
+        <reimplements refid="dc/d51/classDatastruct_1a64d0429c6ea513aff9aed72a84ac5e07">Count</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="105"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1aa31f188be923c718868036f9486390ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void Clear</definition>
+        <argsstring>()</argsstring>
+        <name>Clear</name>
+        <reimplements refid="dc/d51/classDatastruct_1a12a20256ada86a94610094792cbc6e2b">Clear</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="107"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1a2e8da03af3b5de3cb44704b6b1bf9b51" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; *</type>
+        <definition>TAABoxNode&lt;Real&gt;* GetRoot</definition>
+        <argsstring>() const </argsstring>
+        <name>GetRoot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="110"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1ac88587ee8b95126a626fc7f3338fd824" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; *</type>
+        <definition>TAABoxNode&lt;Real&gt;* Insert</definition>
+        <argsstring>(const TBVAABox&lt; Real &gt; &amp;bvAABox, Void *pLeafData)</argsstring>
+        <name>Insert</name>
+        <param>
+          <type>const <ref refid="d9/d90/classTBVAABox" kindref="compound">TBVAABox</ref>&lt; Real &gt; &amp;</type>
+          <declname>bvAABox</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> *</type>
+          <declname>pLeafData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="113"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1a14d3a7e16fb38d61d476395bf88ce454" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Remove</definition>
+        <argsstring>(TAABoxNode&lt; Real &gt; *pLeaf)</argsstring>
+        <name>Remove</name>
+        <param>
+          <type><ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; *</type>
+          <declname>pLeaf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="116"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1ae116be061a315ab90a27f6c6897399c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Update</definition>
+        <argsstring>(TAABoxNode&lt; Real &gt; *pLeaf, UInt iLookAhead=INVALID_OFFSET)</argsstring>
+        <name>Update</name>
+        <param>
+          <type><ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; *</type>
+          <declname>pLeaf</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iLookAhead</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a56f8e75d6ce827dcee2b97f88852f991" kindref="member">INVALID_OFFSET</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="119"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1afc26e9d5d6266bd603b74ce6aee21cb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Update</definition>
+        <argsstring>(TAABoxNode&lt; Real &gt; *pLeaf, const TBVAABox&lt; Real &gt; &amp;bvAABox, UInt iLookAhead=INVALID_OFFSET)</argsstring>
+        <name>Update</name>
+        <param>
+          <type><ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; *</type>
+          <declname>pLeaf</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/d90/classTBVAABox" kindref="compound">TBVAABox</ref>&lt; Real &gt; &amp;</type>
+          <declname>bvAABox</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iLookAhead</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a56f8e75d6ce827dcee2b97f88852f991" kindref="member">INVALID_OFFSET</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="120"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1a5d5ce8ad178132b44cd74e3cc3202386" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void OptimizeBottomUp</definition>
+        <argsstring>()</argsstring>
+        <name>OptimizeBottomUp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="123"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1af8f2ea88fab1462fa070757fa0d1f689" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void OptimizeTopDown</definition>
+        <argsstring>(UInt iThreshold=128)</argsstring>
+        <name>OptimizeTopDown</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iThreshold</declname>
+          <defval>128</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="124"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1afe224b9544b92840ec8203762e278eec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void OptimizeIncremental</definition>
+        <argsstring>(UInt iPasses=INVALID_OFFSET)</argsstring>
+        <name>OptimizeIncremental</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iPasses</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a56f8e75d6ce827dcee2b97f88852f991" kindref="member">INVALID_OFFSET</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="125"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1a53cbb432f7b3b9b5866a0d6a3af4c513" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetMaxDepth</definition>
+        <argsstring>() const </argsstring>
+        <name>GetMaxDepth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="128"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1a3432eada7b6c08a837f1e5596b60492b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetLeafCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetLeafCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="129"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1a3e8d40197eb069ef5af66232e0c758f8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt ExtractLeaves</definition>
+        <argsstring>(TAABoxNode&lt; Real &gt; **outLeaves, Bool bDeleteNodes=false)</argsstring>
+        <name>ExtractLeaves</name>
+        <param>
+          <type><ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; **</type>
+          <declname>outLeaves</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+          <declname>bDeleteNodes</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1ae9de385ef6fe9bf3360d1038396b884c" kindref="member">false</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="130"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1ae0118215f55c2e0ee8da148c9df94ce7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Enumerate</definition>
+        <argsstring>(HEnumerator *pEnumerator) const </argsstring>
+        <name>Enumerate</name>
+        <param>
+          <type><ref refid="d9/d09/classTAABoxTree_1_1HEnumerator" kindref="compound">HEnumerator</ref> *</type>
+          <declname>pEnumerator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="133"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1aef86735187904f4ca692a950ccd49485" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Clone</definition>
+        <argsstring>(TAABoxTree&lt; Real &gt; *pTarget, HCloner *pCloner) const </argsstring>
+        <name>Clone</name>
+        <param>
+          <type><ref refid="d5/d8c/classTAABoxTree" kindref="compound">TAABoxTree</ref>&lt; Real &gt; *</type>
+          <declname>pTarget</declname>
+        </param>
+        <param>
+          <type><ref refid="dc/df3/classTAABoxTree_1_1HCloner" kindref="compound">HCloner</ref> *</type>
+          <declname>pCloner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="136"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1af0d5d3c38d567b715217ffaef3ac2a8b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void CollideRay</definition>
+        <argsstring>(const TLine3&lt; Real &gt; &amp;vRay, Real fMinDistance, Real fMaxDistance, HCollider *pCollider) const </argsstring>
+        <name>CollideRay</name>
+        <param>
+          <type>const <ref refid="d1/d7b/classTLine3" kindref="compound">TLine3</ref>&lt; Real &gt; &amp;</type>
+          <declname>vRay</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fMinDistance</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fMaxDistance</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/d3d/classTAABoxTree_1_1HCollider" kindref="compound">HCollider</ref> *</type>
+          <declname>pCollider</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="139"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1afbbd5076fa687d7bd15e1bd0444e5521" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void CollideAABox</definition>
+        <argsstring>(const TBVAABox&lt; Real &gt; &amp;bvAABox, HCollider *pCollider) const </argsstring>
+        <name>CollideAABox</name>
+        <param>
+          <type>const <ref refid="d9/d90/classTBVAABox" kindref="compound">TBVAABox</ref>&lt; Real &gt; &amp;</type>
+          <declname>bvAABox</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/d3d/classTAABoxTree_1_1HCollider" kindref="compound">HCollider</ref> *</type>
+          <declname>pCollider</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="140"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1ab2c487207520e19ad82282b026812ceb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void CollideTree</definition>
+        <argsstring>(const TAABoxTree&lt; Real &gt; *pTree, HCollider *pCollider) const </argsstring>
+        <name>CollideTree</name>
+        <param>
+          <type>const <ref refid="d5/d8c/classTAABoxTree" kindref="compound">TAABoxTree</ref>&lt; Real &gt; *</type>
+          <declname>pTree</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/d3d/classTAABoxTree_1_1HCollider" kindref="compound">HCollider</ref> *</type>
+          <declname>pCollider</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="141"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1a5c1e699d981b95748218e2675a24c644" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void CollidePlanes</definition>
+        <argsstring>(TPlane&lt; Real &gt; *arrPlanes, UInt iPlaneCount, HCollider *pCollider) const </argsstring>
+        <name>CollidePlanes</name>
+        <param>
+          <type><ref refid="d1/d37/classTPlane" kindref="compound">TPlane</ref>&lt; Real &gt; *</type>
+          <declname>arrPlanes</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iPlaneCount</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/d3d/classTAABoxTree_1_1HCollider" kindref="compound">HCollider</ref> *</type>
+          <declname>pCollider</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="142"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1a8c82f3e041401fd66001c326353e6ebe" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void CollideOcclusion</definition>
+        <argsstring>(TPlane&lt; Real &gt; *arrPlanes, UInt iPlaneCount, const TVector3&lt; Real &gt; &amp;vSortAxis, HCollider *pCollider) const </argsstring>
+        <name>CollideOcclusion</name>
+        <param>
+          <type><ref refid="d1/d37/classTPlane" kindref="compound">TPlane</ref>&lt; Real &gt; *</type>
+          <declname>arrPlanes</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iPlaneCount</declname>
+        </param>
+        <param>
+          <type>const <ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt; &amp;</type>
+          <declname>vSortAxis</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/d3d/classTAABoxTree_1_1HCollider" kindref="compound">HCollider</ref> *</type>
+          <declname>pCollider</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="144"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1a30baf1fc8d1bcab63003fe7eda3bf57a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void CollideUser</definition>
+        <argsstring>(HCollider *pCollider) const </argsstring>
+        <name>CollideUser</name>
+        <param>
+          <type><ref refid="d0/d3d/classTAABoxTree_1_1HCollider" kindref="compound">HCollider</ref> *</type>
+          <declname>pCollider</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="145"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1a5fbfb1c8c87813e2fd618baf6565eb89" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Real</type>
+        <definition>static Real _ProjectMinimum</definition>
+        <argsstring>(const TBVAABox&lt; Real &gt; &amp;bvAABox, const TVector3&lt; Real &gt; &amp;vAxis)</argsstring>
+        <name>_ProjectMinimum</name>
+        <param>
+          <type>const <ref refid="d9/d90/classTBVAABox" kindref="compound">TBVAABox</ref>&lt; Real &gt; &amp;</type>
+          <declname>bvAABox</declname>
+        </param>
+        <param>
+          <type>const <ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt; &amp;</type>
+          <declname>vAxis</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="149"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1a77314c3f08e298be344f83d3390d6083" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; *</type>
+        <definition>static TAABoxNode&lt;Real&gt;* _SelectChild</definition>
+        <argsstring>(const TAABoxNode&lt; Real &gt; *pNode, const TBVAABox&lt; Real &gt; &amp;dbvReference)</argsstring>
+        <name>_SelectChild</name>
+        <param>
+          <type>const <ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; *</type>
+          <declname>pNode</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/d90/classTBVAABox" kindref="compound">TBVAABox</ref>&lt; Real &gt; &amp;</type>
+          <declname>dbvReference</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="150"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1a9f0e7957e94e7e1aad7eb349057d0241" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>static UInt _rec_GetMaxDepth</definition>
+        <argsstring>(const TAABoxNode&lt; Real &gt; *pNode)</argsstring>
+        <name>_rec_GetMaxDepth</name>
+        <param>
+          <type>const <ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; *</type>
+          <declname>pNode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="163"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1a95c66a50c27bfe9711b00eee14d543b7" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>static UInt _rec_GetLeafCount</definition>
+        <argsstring>(const TAABoxNode&lt; Real &gt; *pNode)</argsstring>
+        <name>_rec_GetLeafCount</name>
+        <param>
+          <type>const <ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; *</type>
+          <declname>pNode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="164"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1a50b1e6e4adb973eb6781febdaa8f7257" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>static Void _rec_Enumerate</definition>
+        <argsstring>(const TAABoxNode&lt; Real &gt; *pNode, HEnumerator *pEnumerator)</argsstring>
+        <name>_rec_Enumerate</name>
+        <param>
+          <type>const <ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; *</type>
+          <declname>pNode</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/d09/classTAABoxTree_1_1HEnumerator" kindref="compound">HEnumerator</ref> *</type>
+          <declname>pEnumerator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="168"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1a9adffde01e2f5b13e8e1400b6e23a68b" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>static Void _rec_Clone</definition>
+        <argsstring>(const TAABoxNode&lt; Real &gt; *pNode, TAABoxTree&lt; Real &gt; *pTarget, TAABoxNode&lt; Real &gt; *pTargetParent, UInt iTargetParentIndex, HCloner *pCloner)</argsstring>
+        <name>_rec_Clone</name>
+        <param>
+          <type>const <ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; *</type>
+          <declname>pNode</declname>
+        </param>
+        <param>
+          <type><ref refid="d5/d8c/classTAABoxTree" kindref="compound">TAABoxTree</ref>&lt; Real &gt; *</type>
+          <declname>pTarget</declname>
+        </param>
+        <param>
+          <type><ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; *</type>
+          <declname>pTargetParent</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iTargetParentIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="dc/df3/classTAABoxTree_1_1HCloner" kindref="compound">HCloner</ref> *</type>
+          <declname>pCloner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="172"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1a87ec5be9243cc85c78c2f457694f3744" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>static Void _rec_CollideRay</definition>
+        <argsstring>(const TAABoxNode&lt; Real &gt; *pNode, const TLine3&lt; Real &gt; &amp;vRay, Real fMinDistance, Real fMaxDistance, HCollider *pCollider)</argsstring>
+        <name>_rec_CollideRay</name>
+        <param>
+          <type>const <ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; *</type>
+          <declname>pNode</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d1/d7b/classTLine3" kindref="compound">TLine3</ref>&lt; Real &gt; &amp;</type>
+          <declname>vRay</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fMinDistance</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fMaxDistance</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/d3d/classTAABoxTree_1_1HCollider" kindref="compound">HCollider</ref> *</type>
+          <declname>pCollider</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="176"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1aaead5f8b5fa61f9472da0f18997b976e" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>static Void _rec_CollideAABox</definition>
+        <argsstring>(const TAABoxNode&lt; Real &gt; *pNode, const TBVAABox&lt; Real &gt; &amp;bvAABox, HCollider *pCollider)</argsstring>
+        <name>_rec_CollideAABox</name>
+        <param>
+          <type>const <ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; *</type>
+          <declname>pNode</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/d90/classTBVAABox" kindref="compound">TBVAABox</ref>&lt; Real &gt; &amp;</type>
+          <declname>bvAABox</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/d3d/classTAABoxTree_1_1HCollider" kindref="compound">HCollider</ref> *</type>
+          <declname>pCollider</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="178"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1a3cf3502ffbaaaaf4964f343479fd4c8f" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>static Void _rec_CollideTree</definition>
+        <argsstring>(const TAABoxNode&lt; Real &gt; *pNodeA, const TAABoxNode&lt; Real &gt; *pNodeB, HCollider *pCollider)</argsstring>
+        <name>_rec_CollideTree</name>
+        <param>
+          <type>const <ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; *</type>
+          <declname>pNodeA</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; *</type>
+          <declname>pNodeB</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/d3d/classTAABoxTree_1_1HCollider" kindref="compound">HCollider</ref> *</type>
+          <declname>pCollider</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="180"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1a2d9a2b66ccec273c04e713129b3a70ef" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>static Void _rec_CollidePlanes</definition>
+        <argsstring>(const TAABoxNode&lt; Real &gt; *pNode, UInt iMask, TPlane&lt; Real &gt; *arrPlanes, UInt iPlaneCount, HCollider *pCollider)</argsstring>
+        <name>_rec_CollidePlanes</name>
+        <param>
+          <type>const <ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; *</type>
+          <declname>pNode</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iMask</declname>
+        </param>
+        <param>
+          <type><ref refid="d1/d37/classTPlane" kindref="compound">TPlane</ref>&lt; Real &gt; *</type>
+          <declname>arrPlanes</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iPlaneCount</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/d3d/classTAABoxTree_1_1HCollider" kindref="compound">HCollider</ref> *</type>
+          <declname>pCollider</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="183"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1a0cdf63d8d0c529dd5a1d30dc20accc4a" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>static Void _rec_CollideOcclusion</definition>
+        <argsstring>(const TAABoxNode&lt; Real &gt; *pNode, UInt iMask, Real fProjection, TPlane&lt; Real &gt; *arrPlanes, UInt iPlaneCount, const TVector3&lt; Real &gt; &amp;vSortAxis, HCollider *pCollider)</argsstring>
+        <name>_rec_CollideOcclusion</name>
+        <param>
+          <type>const <ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; *</type>
+          <declname>pNode</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iMask</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fProjection</declname>
+        </param>
+        <param>
+          <type><ref refid="d1/d37/classTPlane" kindref="compound">TPlane</ref>&lt; Real &gt; *</type>
+          <declname>arrPlanes</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iPlaneCount</declname>
+        </param>
+        <param>
+          <type>const <ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt; &amp;</type>
+          <declname>vSortAxis</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/d3d/classTAABoxTree_1_1HCollider" kindref="compound">HCollider</ref> *</type>
+          <declname>pCollider</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="186"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1a0a4850ce88eee7099999af6f94c667ef" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>static Void _rec_CollideUser</definition>
+        <argsstring>(const TAABoxNode&lt; Real &gt; *pNode, HCollider *pCollider)</argsstring>
+        <name>_rec_CollideUser</name>
+        <param>
+          <type>const <ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; *</type>
+          <declname>pNode</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/d3d/classTAABoxTree_1_1HCollider" kindref="compound">HCollider</ref> *</type>
+          <declname>pCollider</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="187"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1a74c6fef12afdb1a3b9def207ae3bf169" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>static Void _rec_CollidePlanes_AllLeaves</definition>
+        <argsstring>(const TAABoxNode&lt; Real &gt; *pNode, HCollider *pCollider)</argsstring>
+        <name>_rec_CollidePlanes_AllLeaves</name>
+        <param>
+          <type>const <ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; *</type>
+          <declname>pNode</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/d3d/classTAABoxTree_1_1HCollider" kindref="compound">HCollider</ref> *</type>
+          <declname>pCollider</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="189"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1aa8edf594a56fd0f46370539ab0bd807b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; *</type>
+        <definition>TAABoxNode&lt;Real&gt;* _SortNodes</definition>
+        <argsstring>(TAABoxNode&lt; Real &gt; *pNode)</argsstring>
+        <name>_SortNodes</name>
+        <param>
+          <type><ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; *</type>
+          <declname>pNode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="152"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1a4d75268905649ca5204651e0a90fa893" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _InsertLeaf</definition>
+        <argsstring>(TAABoxNode&lt; Real &gt; *pNode, TAABoxNode&lt; Real &gt; *pLeaf)</argsstring>
+        <name>_InsertLeaf</name>
+        <param>
+          <type><ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; *</type>
+          <declname>pNode</declname>
+        </param>
+        <param>
+          <type><ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; *</type>
+          <declname>pLeaf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="155"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1a5ce7f801b98cfaa6dce614590837ce00" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; *</type>
+        <definition>TAABoxNode&lt;Real&gt;* _RemoveLeaf</definition>
+        <argsstring>(TAABoxNode&lt; Real &gt; *pLeaf)</argsstring>
+        <name>_RemoveLeaf</name>
+        <param>
+          <type><ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; *</type>
+          <declname>pLeaf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="156"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1aa4d59c4f931d08f274ad53f59f8668ae" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _rec_DestroyTree</definition>
+        <argsstring>(TAABoxNode&lt; Real &gt; *pNode)</argsstring>
+        <name>_rec_DestroyTree</name>
+        <param>
+          <type><ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; *</type>
+          <declname>pNode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="158"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1a24f302746bd94d7077e72d9d7eef8aec" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; *</type>
+        <definition>TAABoxNode&lt;Real&gt;* _BottomUp</definition>
+        <argsstring>(TAABoxNode&lt; Real &gt; **arrLeaves, UInt iLeafCount)</argsstring>
+        <name>_BottomUp</name>
+        <param>
+          <type><ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; **</type>
+          <declname>arrLeaves</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iLeafCount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="160"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1a7ef932df3154ce43b57484ad5ad83c4d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; *</type>
+        <definition>TAABoxNode&lt;Real&gt;* _rec_TopDown</definition>
+        <argsstring>(TAABoxNode&lt; Real &gt; **arrLeaves, UInt iLeafCount, UInt iThreshold)</argsstring>
+        <name>_rec_TopDown</name>
+        <param>
+          <type><ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; **</type>
+          <declname>arrLeaves</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iLeafCount</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iThreshold</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="161"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d8c/classTAABoxTree_1aee214282e1aadf56e47817289df53300" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt _rec_ExtractLeaves</definition>
+        <argsstring>(TAABoxNode&lt; Real &gt; *pNode, TAABoxNode&lt; Real &gt; **outLeaves, UInt iLeafCount, Bool bDeleteNodes=false)</argsstring>
+        <name>_rec_ExtractLeaves</name>
+        <param>
+          <type><ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; *</type>
+          <declname>pNode</declname>
+        </param>
+        <param>
+          <type><ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; **</type>
+          <declname>outLeaves</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iLeafCount</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+          <declname>bDeleteNodes</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1ae9de385ef6fe9bf3360d1038396b884c" kindref="member">false</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="166"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="12217">
+        <label>TAABoxTree&lt; Real &gt;</label>
+        <link refid="d5/d8c/classTAABoxTree"/>
+        <childnode refid="12218" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12218">
+        <label>Datastruct</label>
+        <link refid="dc/d51/classDatastruct"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="12219">
+        <label>TAABoxTree&lt; Real &gt;</label>
+        <link refid="d5/d8c/classTAABoxTree"/>
+        <childnode refid="12220" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12223" relation="usage">
+          <edgelabel>m_pRoot</edgelabel>
+        </childnode>
+        <childnode refid="12224" relation="usage">
+          <edgelabel>m_iNodeCount</edgelabel>
+        </childnode>
+      </node>
+      <node id="12222">
+        <label>unsigned int</label>
+      </node>
+      <node id="12224">
+        <label>int</label>
+      </node>
+      <node id="12221">
+        <label>char</label>
+      </node>
+      <node id="12223">
+        <label>TAABoxNode&lt; Real &gt; *</label>
+      </node>
+      <node id="12220">
+        <label>Datastruct</label>
+        <link refid="dc/d51/classDatastruct"/>
+        <childnode refid="12221" relation="usage">
+          <edgelabel>m_strAllocatorName</edgelabel>
+        </childnode>
+        <childnode refid="12222" relation="usage">
+          <edgelabel>m_idMemoryContext</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="69" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" bodystart="68" bodyend="194"/>
+    <listofallmembers>
+      <member refid="d5/d8c/classTAABoxTree_1a24f302746bd94d7077e72d9d7eef8aec" prot="private" virt="non-virtual"><scope>TAABoxTree</scope><name>_BottomUp</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1a4d75268905649ca5204651e0a90fa893" prot="private" virt="non-virtual"><scope>TAABoxTree</scope><name>_InsertLeaf</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1a5fbfb1c8c87813e2fd618baf6565eb89" prot="private" virt="non-virtual"><scope>TAABoxTree</scope><name>_ProjectMinimum</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1a9adffde01e2f5b13e8e1400b6e23a68b" prot="private" virt="non-virtual"><scope>TAABoxTree</scope><name>_rec_Clone</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1aaead5f8b5fa61f9472da0f18997b976e" prot="private" virt="non-virtual"><scope>TAABoxTree</scope><name>_rec_CollideAABox</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1a0cdf63d8d0c529dd5a1d30dc20accc4a" prot="private" virt="non-virtual"><scope>TAABoxTree</scope><name>_rec_CollideOcclusion</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1a2d9a2b66ccec273c04e713129b3a70ef" prot="private" virt="non-virtual"><scope>TAABoxTree</scope><name>_rec_CollidePlanes</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1a74c6fef12afdb1a3b9def207ae3bf169" prot="private" virt="non-virtual"><scope>TAABoxTree</scope><name>_rec_CollidePlanes_AllLeaves</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1a87ec5be9243cc85c78c2f457694f3744" prot="private" virt="non-virtual"><scope>TAABoxTree</scope><name>_rec_CollideRay</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1a3cf3502ffbaaaaf4964f343479fd4c8f" prot="private" virt="non-virtual"><scope>TAABoxTree</scope><name>_rec_CollideTree</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1a0a4850ce88eee7099999af6f94c667ef" prot="private" virt="non-virtual"><scope>TAABoxTree</scope><name>_rec_CollideUser</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1aa4d59c4f931d08f274ad53f59f8668ae" prot="private" virt="non-virtual"><scope>TAABoxTree</scope><name>_rec_DestroyTree</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1a50b1e6e4adb973eb6781febdaa8f7257" prot="private" virt="non-virtual"><scope>TAABoxTree</scope><name>_rec_Enumerate</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1aee214282e1aadf56e47817289df53300" prot="private" virt="non-virtual"><scope>TAABoxTree</scope><name>_rec_ExtractLeaves</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1a95c66a50c27bfe9711b00eee14d543b7" prot="private" virt="non-virtual"><scope>TAABoxTree</scope><name>_rec_GetLeafCount</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1a9f0e7957e94e7e1aad7eb349057d0241" prot="private" virt="non-virtual"><scope>TAABoxTree</scope><name>_rec_GetMaxDepth</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1a7ef932df3154ce43b57484ad5ad83c4d" prot="private" virt="non-virtual"><scope>TAABoxTree</scope><name>_rec_TopDown</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1a5ce7f801b98cfaa6dce614590837ce00" prot="private" virt="non-virtual"><scope>TAABoxTree</scope><name>_RemoveLeaf</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1a77314c3f08e298be344f83d3390d6083" prot="private" virt="non-virtual"><scope>TAABoxTree</scope><name>_SelectChild</name></member>
+      <member refid="dc/d51/classDatastruct_1a4208dfdad6dc1178ee1f80481598500c" prot="protected" virt="non-virtual"><scope>TAABoxTree</scope><name>_SelectMemory</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1aa8edf594a56fd0f46370539ab0bd807b" prot="private" virt="non-virtual"><scope>TAABoxTree</scope><name>_SortNodes</name></member>
+      <member refid="dc/d51/classDatastruct_1ae0aad9bef0dc76ed43f8c4fc59a10d78" prot="protected" virt="non-virtual"><scope>TAABoxTree</scope><name>_UnSelectMemory</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1aa31f188be923c718868036f9486390ea" prot="public" virt="virtual"><scope>TAABoxTree</scope><name>Clear</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1aef86735187904f4ca692a950ccd49485" prot="public" virt="non-virtual"><scope>TAABoxTree</scope><name>Clone</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1afbbd5076fa687d7bd15e1bd0444e5521" prot="public" virt="non-virtual"><scope>TAABoxTree</scope><name>CollideAABox</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1a8c82f3e041401fd66001c326353e6ebe" prot="public" virt="non-virtual"><scope>TAABoxTree</scope><name>CollideOcclusion</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1a5c1e699d981b95748218e2675a24c644" prot="public" virt="non-virtual"><scope>TAABoxTree</scope><name>CollidePlanes</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1af0d5d3c38d567b715217ffaef3ac2a8b" prot="public" virt="non-virtual"><scope>TAABoxTree</scope><name>CollideRay</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1ab2c487207520e19ad82282b026812ceb" prot="public" virt="non-virtual"><scope>TAABoxTree</scope><name>CollideTree</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1a30baf1fc8d1bcab63003fe7eda3bf57a" prot="public" virt="non-virtual"><scope>TAABoxTree</scope><name>CollideUser</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1a0956cac53fbbd2baead454e29106a8cd" prot="public" virt="virtual"><scope>TAABoxTree</scope><name>Count</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1aab77352722e193be864ad3e317f0a967" prot="public" virt="virtual"><scope>TAABoxTree</scope><name>Create</name></member>
+      <member refid="dc/d51/classDatastruct_1aebb55795e668a005cf660ce216962a2f" prot="public" virt="non-virtual"><scope>TAABoxTree</scope><name>Datastruct</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1a04b98e1741147ccd8731588392091ac0" prot="public" virt="virtual"><scope>TAABoxTree</scope><name>Destroy</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1ae0118215f55c2e0ee8da148c9df94ce7" prot="public" virt="non-virtual"><scope>TAABoxTree</scope><name>Enumerate</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1a3e8d40197eb069ef5af66232e0c758f8" prot="public" virt="non-virtual"><scope>TAABoxTree</scope><name>ExtractLeaves</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1a3432eada7b6c08a837f1e5596b60492b" prot="public" virt="non-virtual"><scope>TAABoxTree</scope><name>GetLeafCount</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1a53cbb432f7b3b9b5866a0d6a3af4c513" prot="public" virt="non-virtual"><scope>TAABoxTree</scope><name>GetMaxDepth</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1a2e8da03af3b5de3cb44704b6b1bf9b51" prot="public" virt="non-virtual"><scope>TAABoxTree</scope><name>GetRoot</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1ac88587ee8b95126a626fc7f3338fd824" prot="public" virt="non-virtual"><scope>TAABoxTree</scope><name>Insert</name></member>
+      <member refid="dc/d51/classDatastruct_1a4e2abc9751fdc8571b9d9a1d02639ebe" prot="public" virt="non-virtual"><scope>TAABoxTree</scope><name>IsEmpty</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1a23a17f6bf3b4f3c796e3ca5429557a43" prot="private" virt="non-virtual"><scope>TAABoxTree</scope><name>m_iNodeCount</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1a33926fcde1b630cd01ac7b2f0c46150a" prot="private" virt="non-virtual"><scope>TAABoxTree</scope><name>m_pRoot</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1abe6db4496cfdd90f917f4ca76d4bdcb1" prot="public" virt="virtual"><scope>TAABoxTree</scope><name>MemorySize</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1a5d5ce8ad178132b44cd74e3cc3202386" prot="public" virt="non-virtual"><scope>TAABoxTree</scope><name>OptimizeBottomUp</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1afe224b9544b92840ec8203762e278eec" prot="public" virt="non-virtual"><scope>TAABoxTree</scope><name>OptimizeIncremental</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1af8f2ea88fab1462fa070757fa0d1f689" prot="public" virt="non-virtual"><scope>TAABoxTree</scope><name>OptimizeTopDown</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1a14d3a7e16fb38d61d476395bf88ce454" prot="public" virt="non-virtual"><scope>TAABoxTree</scope><name>Remove</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1ac6312cb2fab8041b5eb3ee03ecc1a044" prot="public" virt="non-virtual"><scope>TAABoxTree</scope><name>TAABoxTree</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1ae116be061a315ab90a27f6c6897399c3" prot="public" virt="non-virtual"><scope>TAABoxTree</scope><name>Update</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1afc26e9d5d6266bd603b74ce6aee21cb7" prot="public" virt="non-virtual"><scope>TAABoxTree</scope><name>Update</name></member>
+      <member refid="dc/d51/classDatastruct_1a605325d1c1fc3f3c761365595701f9c4" prot="public" virt="virtual"><scope>TAABoxTree</scope><name>UseMemoryContext</name></member>
+      <member refid="dc/d51/classDatastruct_1a59e1e9769598d5606e0a335692f89c15" prot="public" virt="virtual"><scope>TAABoxTree</scope><name>~Datastruct</name></member>
+      <member refid="d5/d8c/classTAABoxTree_1ae3f106898545f2e9aec3b6559a91beda" prot="public" virt="virtual"><scope>TAABoxTree</scope><name>~TAABoxTree</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

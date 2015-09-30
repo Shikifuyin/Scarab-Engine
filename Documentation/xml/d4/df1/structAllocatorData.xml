@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d4/df1/structAllocatorData" kind="struct" prot="public">
+    <compoundname>AllocatorData</compoundname>
+    <includes refid="d7/d7b/MemoryManager_8h" local="no">MemoryManager.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d4/df1/structAllocatorData_1ac76efff874609b26f0a5d5e6c4105452" prot="public" static="no" mutable="no">
+        <type><ref refid="d7/d7b/MemoryManager_8h_1aec941861fea8dd1ae50294f05724a436" kindref="member">MemoryAllocatorID</ref></type>
+        <definition>MemoryAllocatorID idAlloc</definition>
+        <argsstring></argsstring>
+        <name>idAlloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="109" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/df1/structAllocatorData_1a661b06ac80b4256ae1499ab3207411f6" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref></type>
+        <definition>GChar strName[MEMORY_MAX_NAMELENGTH]</definition>
+        <argsstring>[MEMORY_MAX_NAMELENGTH]</argsstring>
+        <name>strName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="110" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/df1/structAllocatorData_1a596e4f4e9c48395323af484489117fe7" prot="public" static="no" mutable="no">
+        <type><ref refid="d0/de0/classMemoryAllocator" kindref="compound">MemoryAllocator</ref> *</type>
+        <definition>MemoryAllocator* pAllocator</definition>
+        <argsstring></argsstring>
+        <name>pAllocator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="112" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="205">
+        <label>unsigned int</label>
+      </node>
+      <node id="207">
+        <label>int</label>
+      </node>
+      <node id="203">
+        <label>AllocatorData</label>
+        <link refid="d4/df1/structAllocatorData"/>
+        <childnode refid="204" relation="usage">
+          <edgelabel>strName</edgelabel>
+        </childnode>
+        <childnode refid="205" relation="usage">
+          <edgelabel>idAlloc</edgelabel>
+        </childnode>
+        <childnode refid="206" relation="usage">
+          <edgelabel>pAllocator</edgelabel>
+        </childnode>
+      </node>
+      <node id="206">
+        <label>MemoryAllocator</label>
+        <link refid="d0/de0/classMemoryAllocator"/>
+        <childnode refid="204" relation="usage">
+          <edgelabel>m_strContextName</edgelabel>
+          <edgelabel>m_strAllocatorName</edgelabel>
+        </childnode>
+        <childnode refid="207" relation="usage">
+          <edgelabel>m_idAllocator</edgelabel>
+          <edgelabel>m_idContext</edgelabel>
+        </childnode>
+      </node>
+      <node id="204">
+        <label>char</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="108" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" bodystart="107" bodyend="113"/>
+    <listofallmembers>
+      <member refid="d4/df1/structAllocatorData_1ac76efff874609b26f0a5d5e6c4105452" prot="public" virt="non-virtual"><scope>AllocatorData</scope><name>idAlloc</name></member>
+      <member refid="d4/df1/structAllocatorData_1a596e4f4e9c48395323af484489117fe7" prot="public" virt="non-virtual"><scope>AllocatorData</scope><name>pAllocator</name></member>
+      <member refid="d4/df1/structAllocatorData_1a661b06ac80b4256ae1499ab3207411f6" prot="public" virt="non-virtual"><scope>AllocatorData</scope><name>strName</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

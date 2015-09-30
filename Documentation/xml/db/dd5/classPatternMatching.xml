@@ -1,0 +1,1440 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="db/dd5/classPatternMatching" kind="class" prot="public">
+    <compoundname>PatternMatching</compoundname>
+    <includes refid="d8/d12/PatternMatching_8h" local="no">PatternMatching.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" prot="public" static="no">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref></type>
+        <definition>typedef const GChar UInt</definition>
+        <argsstring></argsstring>
+        <name>UInt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="133" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="db/dd5/classPatternMatching_1a1acde2efbe69c934af3b73e63c3dd30d" prot="public" static="no">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref>(*</type>
+        <definition>typedef Void(* DebugLogFunction)(const GChar *)</definition>
+        <argsstring>)(const GChar *)</argsstring>
+        <name>DebugLogFunction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="134" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="db/dd5/classPatternMatching_1af0944e1065e7b81f814cae4aea2642fd" prot="public" static="no" mutable="no">
+        <type>typedef</type>
+        <definition>typedef UInt</definition>
+        <argsstring></argsstring>
+        <name>UInt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="133" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="db/dd5/classPatternMatching_1a40a39fd68a9f63189d92253befaf26e2" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref></type>
+        <definition>Byte m_arrScratch[PATTERNMATCHING_MEMORY]</definition>
+        <argsstring>[PATTERNMATCHING_MEMORY]</argsstring>
+        <name>m_arrScratch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="165" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dd5/classPatternMatching_1a931edcd0289229346e2282c31169a90a" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+        <definition>Byte* m_pFirstBreak</definition>
+        <argsstring></argsstring>
+        <name>m_pFirstBreak</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="166" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dd5/classPatternMatching_1ab11ce934f57f82f75c42957104ef906c" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+        <definition>Byte* m_pLastBreak</definition>
+        <argsstring></argsstring>
+        <name>m_pLastBreak</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="167" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dd5/classPatternMatching_1a55a31a3ab2671ccf7587448a68269c48" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+        <definition>Byte* m_pBreak</definition>
+        <argsstring></argsstring>
+        <name>m_pBreak</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="168" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dd5/classPatternMatching_1a8c60ea17fffef70826f27d87df5aa433" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool m_bKeepMemory</definition>
+        <argsstring></argsstring>
+        <name>m_bKeepMemory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="169" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dd5/classPatternMatching_1a855da0f41cd23b1951262338400260da" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool m_bMemoryFilled</definition>
+        <argsstring></argsstring>
+        <name>m_bMemoryFilled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="170" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1ad9b22cb2d9b7eb4e9bdb27f4a93de504" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="db/dd5/classPatternMatching" kindref="compound">PatternMatching</ref> *</type>
+        <definition>static PatternMatching* GetInstancePtr</definition>
+        <argsstring>()</argsstring>
+        <name>GetInstancePtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="41"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1a7e42ca87a58cb2e1a38647639c36adf8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PatternMatching</definition>
+        <argsstring>()</argsstring>
+        <name>PatternMatching</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="44"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1ac967bc07b45c1fa15f96ea8a41f578d5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~PatternMatching</definition>
+        <argsstring>()</argsstring>
+        <name>~PatternMatching</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="45"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1ad8c78f21c9ad7a615f99df07a35b4e0e" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref></type>
+        <definition>Int _KMPSkipSearch_Attempt</definition>
+        <argsstring>(const GChar *strText, const GChar *strPattern, UInt iLengthP, Int iStart, Int iWall) const </argsstring>
+        <name>_KMPSkipSearch_Attempt</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strText</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strPattern</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthP</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref></type>
+          <declname>iStart</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref></type>
+          <declname>iWall</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="142"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1aee3deb3deaf3d722241fa1b542fc5be1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1a557c9c5ae94abf5436f9c39c049c8f72" kindref="member">QWord</ref></type>
+        <definition>QWord _Preprocess_ShiftOr</definition>
+        <argsstring>(const GChar *strPattern, UInt iLengthP, QWord *arrShifts)</argsstring>
+        <name>_Preprocess_ShiftOr</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strPattern</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthP</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a557c9c5ae94abf5436f9c39c049c8f72" kindref="member">QWord</ref> *</type>
+          <declname>arrShifts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="145"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1af5429930470358910d68b328b0885e19" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _Preprocess_BNDD</definition>
+        <argsstring>(const GChar *strPattern, UInt iLengthP, QWord *arrBTable)</argsstring>
+        <name>_Preprocess_BNDD</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strPattern</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthP</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a557c9c5ae94abf5436f9c39c049c8f72" kindref="member">QWord</ref> *</type>
+          <declname>arrBTable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="146"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1a17403b7056d5093a1789b504912d0d8f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _Preprocess_MP</definition>
+        <argsstring>(const GChar *strPattern, UInt iLengthP, Int *arrMPNext)</argsstring>
+        <name>_Preprocess_MP</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strPattern</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthP</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref> *</type>
+          <declname>arrMPNext</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="148"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1a165b145b203eb7229979e8bc89c9d53d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _Preprocess_KMP</definition>
+        <argsstring>(const GChar *strPattern, UInt iLengthP, Int *arrKMPNext)</argsstring>
+        <name>_Preprocess_KMP</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strPattern</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthP</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref> *</type>
+          <declname>arrKMPNext</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="149"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1a2bdda9d7b6f5f4de37649c64b9192e0e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref></type>
+        <definition>Int _Preprocess_Colussi</definition>
+        <argsstring>(const GChar *strPattern, UInt iLengthP, Int *arrHoles, Int *arrNext, Int *arrShift)</argsstring>
+        <name>_Preprocess_Colussi</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strPattern</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthP</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref> *</type>
+          <declname>arrHoles</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref> *</type>
+          <declname>arrNext</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref> *</type>
+          <declname>arrShift</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="150"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1a71f6734a04b064249579a684a72e94a6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _Preprocess_BM_BadCharShift</definition>
+        <argsstring>(const GChar *strPattern, UInt iLengthP, Int *arrBCShift)</argsstring>
+        <name>_Preprocess_BM_BadCharShift</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strPattern</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthP</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref> *</type>
+          <declname>arrBCShift</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="152"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1a53c03ca07d43fdf061e95b4396fb14b4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _Preprocess_BM_QS_BadCharShift</definition>
+        <argsstring>(const GChar *strPattern, UInt iLengthP, Int *arrBCShift)</argsstring>
+        <name>_Preprocess_BM_QS_BadCharShift</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strPattern</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthP</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref> *</type>
+          <declname>arrBCShift</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="153"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1a11d44a7b375622ac571050ea210bfa65" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _Preprocess_BM_Suffixes</definition>
+        <argsstring>(const GChar *strPattern, UInt iLengthP, Int *arrSuffixes)</argsstring>
+        <name>_Preprocess_BM_Suffixes</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strPattern</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthP</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref> *</type>
+          <declname>arrSuffixes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="154"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1af088d7cb60047a52838404b43ddfffb0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _Preprocess_BM_GoodSuffShift</definition>
+        <argsstring>(const GChar *strPattern, UInt iLengthP, Int *arrGSShift, Int *arrSuffixes=NULL)</argsstring>
+        <name>_Preprocess_BM_GoodSuffShift</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strPattern</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthP</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref> *</type>
+          <declname>arrGSShift</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref> *</type>
+          <declname>arrSuffixes</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="155"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1ab1df675371fc6fa0b9d389229ea00967" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _Preprocess_ReverseColussi</definition>
+        <argsstring>(const GChar *strPattern, UInt iLengthP, Int *arrHoles, Int *arrGSShift, Int *arrBCShift)</argsstring>
+        <name>_Preprocess_ReverseColussi</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strPattern</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthP</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref> *</type>
+          <declname>arrHoles</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref> *</type>
+          <declname>arrGSShift</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref> *</type>
+          <declname>arrBCShift</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="156"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1ab247e21c2f9ec2211ea8673c69a608b9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref></type>
+        <definition>Int _Preprocess_TW_MaxSuffix</definition>
+        <argsstring>(const GChar *strPattern, UInt iLengthP, Int *pP)</argsstring>
+        <name>_Preprocess_TW_MaxSuffix</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strPattern</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthP</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref> *</type>
+          <declname>pP</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="158"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1aa57006adb9034b528700bc03f0f17301" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref></type>
+        <definition>Int _Preprocess_TW_MaxSuffixInv</definition>
+        <argsstring>(const GChar *strPattern, UInt iLengthP, Int *pQ)</argsstring>
+        <name>_Preprocess_TW_MaxSuffixInv</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strPattern</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthP</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref> *</type>
+          <declname>pQ</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="159"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1a6669e5cdfb865a4ff7a1b759137779df" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+        <definition>Byte* _Break</definition>
+        <argsstring>(UInt iSize)</argsstring>
+        <name>_Break</name>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="162"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1aa7f76bcbd7a69b8d559f8f4fdcc5a0f4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _Unbreak</definition>
+        <argsstring>(UInt iSize)</argsstring>
+        <name>_Unbreak</name>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="163"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1a50b28cf6150f8d177ba790157f46bf1b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _Free</definition>
+        <argsstring>()</argsstring>
+        <name>_Free</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="164"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1a3d8a9f1de3b6073f2895e5dba1f1fabd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void EnterChain</definition>
+        <argsstring>()</argsstring>
+        <name>EnterChain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="52"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1acdc5c56706012177a40823f1217b4b11" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void LeaveChain</definition>
+        <argsstring>()</argsstring>
+        <name>LeaveChain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="53"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1a3389e8bfabd03ba26ed413f5f0f8e791" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+        <definition>UInt BruteForce</definition>
+        <argsstring>(const GChar *strText, UInt iLengthT, const GChar *strPattern, UInt iLengthP=1)</argsstring>
+        <name>BruteForce</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strText</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthT</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strPattern</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthP</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="103"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1a8782a7e47771645e130361361eaddfbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+        <definition>UInt BackwardBruteForce</definition>
+        <argsstring>(const GChar *strText, UInt iLengthT, const GChar *strPattern, UInt iLengthP=1)</argsstring>
+        <name>BackwardBruteForce</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strText</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthT</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strPattern</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthP</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="104"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1a7f2beffe1268d886277215a8f4b4f8be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+        <definition>UInt NotSoNaive</definition>
+        <argsstring>(const GChar *strText, UInt iLengthT, const GChar *strPattern, UInt iLengthP=1)</argsstring>
+        <name>NotSoNaive</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strText</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthT</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strPattern</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthP</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="105"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1a5ae851f0db0cfe09d4f7f0650e5c69ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+        <definition>UInt KarpRabin</definition>
+        <argsstring>(const GChar *strText, UInt iLengthT, const GChar *strPattern, UInt iLengthP=1)</argsstring>
+        <name>KarpRabin</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strText</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthT</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strPattern</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthP</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="106"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1aa2c8202129638289c61eca7bcea4334a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+        <definition>UInt ShiftOr</definition>
+        <argsstring>(const GChar *strText, UInt iLengthT, const GChar *strPattern, UInt iLengthP=1)</argsstring>
+        <name>ShiftOr</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strText</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthT</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strPattern</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthP</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="109"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1a990995997450133579f645d223d41c74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+        <definition>UInt BackwardNDDawg</definition>
+        <argsstring>(const GChar *strText, UInt iLengthT, const GChar *strPattern, UInt iLengthP=1)</argsstring>
+        <name>BackwardNDDawg</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strText</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthT</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strPattern</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthP</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="110"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1a4b84c692eca4945640383da7617b125c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+        <definition>UInt MorrisPratt</definition>
+        <argsstring>(const GChar *strText, UInt iLengthT, const GChar *strPattern, UInt iLengthP=1)</argsstring>
+        <name>MorrisPratt</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strText</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthT</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strPattern</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthP</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="113"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1ae6bc69b72c29dd9d83a58d3a1bc20231" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+        <definition>UInt KnuthMorrisPratt</definition>
+        <argsstring>(const GChar *strText, UInt iLengthT, const GChar *strPattern, UInt iLengthP=1)</argsstring>
+        <name>KnuthMorrisPratt</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strText</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthT</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strPattern</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthP</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="114"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1ab055a7e7fc78d0fe583388d63011413c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+        <definition>UInt Colussi</definition>
+        <argsstring>(const GChar *strText, UInt iLengthT, const GChar *strPattern, UInt iLengthP=1)</argsstring>
+        <name>Colussi</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strText</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthT</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strPattern</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthP</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="115"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1a3a242183f8464a7c49bad380934026a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+        <definition>UInt GalilGiancarlo</definition>
+        <argsstring>(const GChar *strText, UInt iLengthT, const GChar *strPattern, UInt iLengthP=1)</argsstring>
+        <name>GalilGiancarlo</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strText</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthT</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strPattern</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthP</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="116"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1a56060c79e17f7d7da01c6b4f50837c82" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+        <definition>UInt ApostolicoCrochemore</definition>
+        <argsstring>(const GChar *strText, UInt iLengthT, const GChar *strPattern, UInt iLengthP=1)</argsstring>
+        <name>ApostolicoCrochemore</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strText</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthT</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strPattern</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthP</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="117"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1a9038f64bc2915ed20f40fac0f1228d88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+        <definition>UInt KMPSkipSearch</definition>
+        <argsstring>(const GChar *strText, UInt iLengthT, const GChar *strPattern, UInt iLengthP=1)</argsstring>
+        <name>KMPSkipSearch</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strText</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthT</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strPattern</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthP</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="118"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1ab69e86306501fc320cac98354e8dfa79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+        <definition>UInt BoyerMoore</definition>
+        <argsstring>(const GChar *strText, UInt iLengthT, const GChar *strPattern, UInt iLengthP=1)</argsstring>
+        <name>BoyerMoore</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strText</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthT</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strPattern</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthP</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="121"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1aa5746d1c8052193e24232b83a1bb55ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+        <definition>UInt BMTurbo</definition>
+        <argsstring>(const GChar *strText, UInt iLengthT, const GChar *strPattern, UInt iLengthP=1)</argsstring>
+        <name>BMTurbo</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strText</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthT</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strPattern</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthP</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="122"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1ac0c16d1dc44802b2972be1df28068191" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+        <definition>UInt ApostolicoGiancarlo</definition>
+        <argsstring>(const GChar *strText, UInt iLengthT, const GChar *strPattern, UInt iLengthP=1)</argsstring>
+        <name>ApostolicoGiancarlo</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strText</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthT</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strPattern</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthP</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="123"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1ad2b846fd5a82774ee76145cf1b57adaf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+        <definition>UInt ReverseColussi</definition>
+        <argsstring>(const GChar *strText, UInt iLengthT, const GChar *strPattern, UInt iLengthP=1)</argsstring>
+        <name>ReverseColussi</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strText</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthT</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strPattern</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthP</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="124"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1aad9d745121753f953d7fb36fba2e3840" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+        <definition>UInt HorsPool</definition>
+        <argsstring>(const GChar *strText, UInt iLengthT, const GChar *strPattern, UInt iLengthP=1)</argsstring>
+        <name>HorsPool</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strText</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthT</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strPattern</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthP</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="125"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1a265e9f0d9763cfe2030ac8e1e8003e72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+        <definition>UInt QuickSearch</definition>
+        <argsstring>(const GChar *strText, UInt iLengthT, const GChar *strPattern, UInt iLengthP=1)</argsstring>
+        <name>QuickSearch</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strText</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthT</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strPattern</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthP</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="126"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1a1c253f3c459419cb9831aaab2f42fdda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+        <definition>UInt BMTuned</definition>
+        <argsstring>(const GChar *strText, UInt iLengthT, const GChar *strPattern, UInt iLengthP=1)</argsstring>
+        <name>BMTuned</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strText</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthT</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strPattern</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthP</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="127"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1a4350c60b0c46524486867b0870c36dd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+        <definition>UInt Smith</definition>
+        <argsstring>(const GChar *strText, UInt iLengthT, const GChar *strPattern, UInt iLengthP=1)</argsstring>
+        <name>Smith</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strText</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthT</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strPattern</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthP</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="128"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1a458959bb5c061947e026b4f51eee8b6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+        <definition>UInt Raita</definition>
+        <argsstring>(const GChar *strText, UInt iLengthT, const GChar *strPattern, UInt iLengthP=1)</argsstring>
+        <name>Raita</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strText</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthT</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strPattern</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthP</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="129"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1a014c4ea0f02fe04f10df687572856673" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+        <definition>UInt TwoWay</definition>
+        <argsstring>(const GChar *strText, UInt iLengthT, const GChar *strPattern, UInt iLengthP=1)</argsstring>
+        <name>TwoWay</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strText</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthT</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strPattern</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iLengthP</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="130"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1ac616a67fe79bea7a9963a572e362bcb0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>typedef</type>
+        <definition>typedef UInt</definition>
+        <argsstring>(__thiscall PatternMatching::*PatternMatchingFunction)(const GChar *</argsstring>
+        <name>UInt</name>
+        <param>
+          <type>__thiscall PatternMatching::*</type>
+          <declname>PatternMatchingFunction</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="133"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1ad1fd523996802d47b551d85009b5a8d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void StressTest</definition>
+        <argsstring>(DebugLogFunction pfLog, PatternMatchingFunction pfPMAlgo, const GChar *strAlgoName, const GChar *strAlphabet, UInt iPatternSamples, UInt iTextSamples, Bool bBackWard=false)</argsstring>
+        <name>StressTest</name>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a1acde2efbe69c934af3b73e63c3dd30d" kindref="member">DebugLogFunction</ref></type>
+          <declname>pfLog</declname>
+        </param>
+        <param>
+          <type>PatternMatchingFunction</type>
+          <declname>pfPMAlgo</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strAlgoName</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strAlphabet</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iPatternSamples</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iTextSamples</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+          <declname>bBackWard</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1ae9de385ef6fe9bf3360d1038396b884c" kindref="member">false</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="137"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd5/classPatternMatching_1a2d88760d6fa014c43d3aecd33ae3d94b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void StressTestAll</definition>
+        <argsstring>(DebugLogFunction pfLog, const GChar *strAlphabet, UInt iPatternSamples, UInt iTextSamples)</argsstring>
+        <name>StressTestAll</name>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a1acde2efbe69c934af3b73e63c3dd30d" kindref="member">DebugLogFunction</ref></type>
+          <declname>pfLog</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strAlphabet</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iPatternSamples</declname>
+        </param>
+        <param>
+          <type><ref refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" kindref="member">UInt</ref></type>
+          <declname>iTextSamples</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="138"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="9738">
+        <label>unsigned char</label>
+      </node>
+      <node id="9737">
+        <label>PatternMatching</label>
+        <link refid="db/dd5/classPatternMatching"/>
+        <childnode refid="9738" relation="usage">
+          <edgelabel>m_pBreak</edgelabel>
+          <edgelabel>m_pLastBreak</edgelabel>
+          <edgelabel>m_arrScratch</edgelabel>
+          <edgelabel>m_pFirstBreak</edgelabel>
+        </childnode>
+        <childnode refid="9739" relation="usage">
+          <edgelabel>m_bMemoryFilled</edgelabel>
+          <edgelabel>m_bKeepMemory</edgelabel>
+        </childnode>
+        <childnode refid="9740" relation="usage">
+          <edgelabel>UInt</edgelabel>
+        </childnode>
+      </node>
+      <node id="9739">
+        <label>bool</label>
+      </node>
+      <node id="9740">
+        <label>typedef</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" line="38" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/String/PatternMatching.h" bodystart="37" bodyend="171"/>
+    <listofallmembers>
+      <member refid="db/dd5/classPatternMatching_1a6669e5cdfb865a4ff7a1b759137779df" prot="private" virt="non-virtual"><scope>PatternMatching</scope><name>_Break</name></member>
+      <member refid="db/dd5/classPatternMatching_1a50b28cf6150f8d177ba790157f46bf1b" prot="private" virt="non-virtual"><scope>PatternMatching</scope><name>_Free</name></member>
+      <member refid="db/dd5/classPatternMatching_1ad8c78f21c9ad7a615f99df07a35b4e0e" prot="private" virt="non-virtual"><scope>PatternMatching</scope><name>_KMPSkipSearch_Attempt</name></member>
+      <member refid="db/dd5/classPatternMatching_1a71f6734a04b064249579a684a72e94a6" prot="private" virt="non-virtual"><scope>PatternMatching</scope><name>_Preprocess_BM_BadCharShift</name></member>
+      <member refid="db/dd5/classPatternMatching_1af088d7cb60047a52838404b43ddfffb0" prot="private" virt="non-virtual"><scope>PatternMatching</scope><name>_Preprocess_BM_GoodSuffShift</name></member>
+      <member refid="db/dd5/classPatternMatching_1a53c03ca07d43fdf061e95b4396fb14b4" prot="private" virt="non-virtual"><scope>PatternMatching</scope><name>_Preprocess_BM_QS_BadCharShift</name></member>
+      <member refid="db/dd5/classPatternMatching_1a11d44a7b375622ac571050ea210bfa65" prot="private" virt="non-virtual"><scope>PatternMatching</scope><name>_Preprocess_BM_Suffixes</name></member>
+      <member refid="db/dd5/classPatternMatching_1af5429930470358910d68b328b0885e19" prot="private" virt="non-virtual"><scope>PatternMatching</scope><name>_Preprocess_BNDD</name></member>
+      <member refid="db/dd5/classPatternMatching_1a2bdda9d7b6f5f4de37649c64b9192e0e" prot="private" virt="non-virtual"><scope>PatternMatching</scope><name>_Preprocess_Colussi</name></member>
+      <member refid="db/dd5/classPatternMatching_1a165b145b203eb7229979e8bc89c9d53d" prot="private" virt="non-virtual"><scope>PatternMatching</scope><name>_Preprocess_KMP</name></member>
+      <member refid="db/dd5/classPatternMatching_1a17403b7056d5093a1789b504912d0d8f" prot="private" virt="non-virtual"><scope>PatternMatching</scope><name>_Preprocess_MP</name></member>
+      <member refid="db/dd5/classPatternMatching_1ab1df675371fc6fa0b9d389229ea00967" prot="private" virt="non-virtual"><scope>PatternMatching</scope><name>_Preprocess_ReverseColussi</name></member>
+      <member refid="db/dd5/classPatternMatching_1aee3deb3deaf3d722241fa1b542fc5be1" prot="private" virt="non-virtual"><scope>PatternMatching</scope><name>_Preprocess_ShiftOr</name></member>
+      <member refid="db/dd5/classPatternMatching_1ab247e21c2f9ec2211ea8673c69a608b9" prot="private" virt="non-virtual"><scope>PatternMatching</scope><name>_Preprocess_TW_MaxSuffix</name></member>
+      <member refid="db/dd5/classPatternMatching_1aa57006adb9034b528700bc03f0f17301" prot="private" virt="non-virtual"><scope>PatternMatching</scope><name>_Preprocess_TW_MaxSuffixInv</name></member>
+      <member refid="db/dd5/classPatternMatching_1aa7f76bcbd7a69b8d559f8f4fdcc5a0f4" prot="private" virt="non-virtual"><scope>PatternMatching</scope><name>_Unbreak</name></member>
+      <member refid="db/dd5/classPatternMatching_1a56060c79e17f7d7da01c6b4f50837c82" prot="public" virt="non-virtual"><scope>PatternMatching</scope><name>ApostolicoCrochemore</name></member>
+      <member refid="db/dd5/classPatternMatching_1ac0c16d1dc44802b2972be1df28068191" prot="public" virt="non-virtual"><scope>PatternMatching</scope><name>ApostolicoGiancarlo</name></member>
+      <member refid="db/dd5/classPatternMatching_1a8782a7e47771645e130361361eaddfbe" prot="public" virt="non-virtual"><scope>PatternMatching</scope><name>BackwardBruteForce</name></member>
+      <member refid="db/dd5/classPatternMatching_1a990995997450133579f645d223d41c74" prot="public" virt="non-virtual"><scope>PatternMatching</scope><name>BackwardNDDawg</name></member>
+      <member refid="db/dd5/classPatternMatching_1a1c253f3c459419cb9831aaab2f42fdda" prot="public" virt="non-virtual"><scope>PatternMatching</scope><name>BMTuned</name></member>
+      <member refid="db/dd5/classPatternMatching_1aa5746d1c8052193e24232b83a1bb55ff" prot="public" virt="non-virtual"><scope>PatternMatching</scope><name>BMTurbo</name></member>
+      <member refid="db/dd5/classPatternMatching_1ab69e86306501fc320cac98354e8dfa79" prot="public" virt="non-virtual"><scope>PatternMatching</scope><name>BoyerMoore</name></member>
+      <member refid="db/dd5/classPatternMatching_1a3389e8bfabd03ba26ed413f5f0f8e791" prot="public" virt="non-virtual"><scope>PatternMatching</scope><name>BruteForce</name></member>
+      <member refid="db/dd5/classPatternMatching_1ab055a7e7fc78d0fe583388d63011413c" prot="public" virt="non-virtual"><scope>PatternMatching</scope><name>Colussi</name></member>
+      <member refid="db/dd5/classPatternMatching_1a1acde2efbe69c934af3b73e63c3dd30d" prot="public" virt="non-virtual"><scope>PatternMatching</scope><name>DebugLogFunction</name></member>
+      <member refid="db/dd5/classPatternMatching_1a3d8a9f1de3b6073f2895e5dba1f1fabd" prot="public" virt="non-virtual"><scope>PatternMatching</scope><name>EnterChain</name></member>
+      <member refid="db/dd5/classPatternMatching_1a3a242183f8464a7c49bad380934026a6" prot="public" virt="non-virtual"><scope>PatternMatching</scope><name>GalilGiancarlo</name></member>
+      <member refid="db/dd5/classPatternMatching_1ad9b22cb2d9b7eb4e9bdb27f4a93de504" prot="public" virt="non-virtual"><scope>PatternMatching</scope><name>GetInstancePtr</name></member>
+      <member refid="db/dd5/classPatternMatching_1aad9d745121753f953d7fb36fba2e3840" prot="public" virt="non-virtual"><scope>PatternMatching</scope><name>HorsPool</name></member>
+      <member refid="db/dd5/classPatternMatching_1a5ae851f0db0cfe09d4f7f0650e5c69ad" prot="public" virt="non-virtual"><scope>PatternMatching</scope><name>KarpRabin</name></member>
+      <member refid="db/dd5/classPatternMatching_1a9038f64bc2915ed20f40fac0f1228d88" prot="public" virt="non-virtual"><scope>PatternMatching</scope><name>KMPSkipSearch</name></member>
+      <member refid="db/dd5/classPatternMatching_1ae6bc69b72c29dd9d83a58d3a1bc20231" prot="public" virt="non-virtual"><scope>PatternMatching</scope><name>KnuthMorrisPratt</name></member>
+      <member refid="db/dd5/classPatternMatching_1acdc5c56706012177a40823f1217b4b11" prot="public" virt="non-virtual"><scope>PatternMatching</scope><name>LeaveChain</name></member>
+      <member refid="db/dd5/classPatternMatching_1a40a39fd68a9f63189d92253befaf26e2" prot="private" virt="non-virtual"><scope>PatternMatching</scope><name>m_arrScratch</name></member>
+      <member refid="db/dd5/classPatternMatching_1a8c60ea17fffef70826f27d87df5aa433" prot="private" virt="non-virtual"><scope>PatternMatching</scope><name>m_bKeepMemory</name></member>
+      <member refid="db/dd5/classPatternMatching_1a855da0f41cd23b1951262338400260da" prot="private" virt="non-virtual"><scope>PatternMatching</scope><name>m_bMemoryFilled</name></member>
+      <member refid="db/dd5/classPatternMatching_1a55a31a3ab2671ccf7587448a68269c48" prot="private" virt="non-virtual"><scope>PatternMatching</scope><name>m_pBreak</name></member>
+      <member refid="db/dd5/classPatternMatching_1a931edcd0289229346e2282c31169a90a" prot="private" virt="non-virtual"><scope>PatternMatching</scope><name>m_pFirstBreak</name></member>
+      <member refid="db/dd5/classPatternMatching_1ab11ce934f57f82f75c42957104ef906c" prot="private" virt="non-virtual"><scope>PatternMatching</scope><name>m_pLastBreak</name></member>
+      <member refid="db/dd5/classPatternMatching_1a4b84c692eca4945640383da7617b125c" prot="public" virt="non-virtual"><scope>PatternMatching</scope><name>MorrisPratt</name></member>
+      <member refid="db/dd5/classPatternMatching_1a7f2beffe1268d886277215a8f4b4f8be" prot="public" virt="non-virtual"><scope>PatternMatching</scope><name>NotSoNaive</name></member>
+      <member refid="db/dd5/classPatternMatching_1a7e42ca87a58cb2e1a38647639c36adf8" prot="private" virt="non-virtual"><scope>PatternMatching</scope><name>PatternMatching</name></member>
+      <member refid="db/dd5/classPatternMatching_1a265e9f0d9763cfe2030ac8e1e8003e72" prot="public" virt="non-virtual"><scope>PatternMatching</scope><name>QuickSearch</name></member>
+      <member refid="db/dd5/classPatternMatching_1a458959bb5c061947e026b4f51eee8b6e" prot="public" virt="non-virtual"><scope>PatternMatching</scope><name>Raita</name></member>
+      <member refid="db/dd5/classPatternMatching_1ad2b846fd5a82774ee76145cf1b57adaf" prot="public" virt="non-virtual"><scope>PatternMatching</scope><name>ReverseColussi</name></member>
+      <member refid="db/dd5/classPatternMatching_1aa2c8202129638289c61eca7bcea4334a" prot="public" virt="non-virtual"><scope>PatternMatching</scope><name>ShiftOr</name></member>
+      <member refid="db/dd5/classPatternMatching_1a4350c60b0c46524486867b0870c36dd4" prot="public" virt="non-virtual"><scope>PatternMatching</scope><name>Smith</name></member>
+      <member refid="db/dd5/classPatternMatching_1ad1fd523996802d47b551d85009b5a8d5" prot="public" virt="non-virtual"><scope>PatternMatching</scope><name>StressTest</name></member>
+      <member refid="db/dd5/classPatternMatching_1a2d88760d6fa014c43d3aecd33ae3d94b" prot="public" virt="non-virtual"><scope>PatternMatching</scope><name>StressTestAll</name></member>
+      <member refid="db/dd5/classPatternMatching_1a014c4ea0f02fe04f10df687572856673" prot="public" virt="non-virtual"><scope>PatternMatching</scope><name>TwoWay</name></member>
+      <member refid="db/dd5/classPatternMatching_1a08f1dd78a9479dc1808437730d247697" prot="public" virt="non-virtual"><scope>PatternMatching</scope><name>UInt</name></member>
+      <member refid="db/dd5/classPatternMatching_1af0944e1065e7b81f814cae4aea2642fd" prot="public" virt="non-virtual"><scope>PatternMatching</scope><name>UInt</name></member>
+      <member refid="db/dd5/classPatternMatching_1ac616a67fe79bea7a9963a572e362bcb0" prot="public" virt="non-virtual"><scope>PatternMatching</scope><name>UInt</name></member>
+      <member refid="db/dd5/classPatternMatching_1ac967bc07b45c1fa15f96ea8a41f578d5" prot="private" virt="non-virtual"><scope>PatternMatching</scope><name>~PatternMatching</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,295 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="da/d76/TextureCoord4_8h" kind="file">
+    <compoundname>TextureCoord4.h</compoundname>
+    <includes refid="d0/df7/Vector2_8h" local="yes">../Vector/Vector2.h</includes>
+    <includes refid="dd/d8c/Vector3_8h" local="yes">../Vector/Vector3.h</includes>
+    <includes refid="d7/d36/Vector4_8h" local="yes">../Vector/Vector4.h</includes>
+    <includes local="yes">TextureCoord4.inl</includes>
+    <incdepgraph>
+      <node id="40951">
+        <label>../Vector/Vector4.h</label>
+        <link refid="d7/d36/Vector4_8h"/>
+        <childnode refid="40938" relation="include">
+        </childnode>
+        <childnode refid="40952" relation="include">
+        </childnode>
+      </node>
+      <node id="40940">
+        <label>../Platform.h</label>
+        <link refid="d9/dd0/Platform_8h"/>
+        <childnode refid="40941" relation="include">
+        </childnode>
+      </node>
+      <node id="40949">
+        <label>../Vector/Vector3.h</label>
+        <link refid="dd/d8c/Vector3_8h"/>
+        <childnode refid="40938" relation="include">
+        </childnode>
+        <childnode refid="40950" relation="include">
+        </childnode>
+      </node>
+      <node id="40942">
+        <label>FPU.inl</label>
+      </node>
+      <node id="40947">
+        <label>MathFunction.inl</label>
+      </node>
+      <node id="40943">
+        <label>../Formats/Scalar.h</label>
+        <link refid="d0/d10/Scalar_8h"/>
+        <childnode refid="40940" relation="include">
+        </childnode>
+        <childnode refid="40944" relation="include">
+        </childnode>
+      </node>
+      <node id="40936">
+        <label>TextureCoord4.h</label>
+        <link refid="TextureCoord4.h"/>
+        <childnode refid="40937" relation="include">
+        </childnode>
+        <childnode refid="40949" relation="include">
+        </childnode>
+        <childnode refid="40951" relation="include">
+        </childnode>
+        <childnode refid="40953" relation="include">
+        </childnode>
+      </node>
+      <node id="40937">
+        <label>../Vector/Vector2.h</label>
+        <link refid="d0/df7/Vector2_8h"/>
+        <childnode refid="40938" relation="include">
+        </childnode>
+        <childnode refid="40948" relation="include">
+        </childnode>
+      </node>
+      <node id="40952">
+        <label>Vector4.inl</label>
+      </node>
+      <node id="40944">
+        <label>Scalar.inl</label>
+      </node>
+      <node id="40950">
+        <label>Vector3.inl</label>
+      </node>
+      <node id="40948">
+        <label>Vector2.inl</label>
+      </node>
+      <node id="40939">
+        <label>../../../ThirdParty/System/Hardware/FPU.h</label>
+        <link refid="dd/d2f/FPU_8h"/>
+        <childnode refid="40940" relation="include">
+        </childnode>
+        <childnode refid="40942" relation="include">
+        </childnode>
+      </node>
+      <node id="40953">
+        <label>TextureCoord4.inl</label>
+      </node>
+      <node id="40941">
+        <label>Platform.inl</label>
+      </node>
+      <node id="40946">
+        <label>Fixed.inl</label>
+      </node>
+      <node id="40938">
+        <label>../../Functions/MathFunction.h</label>
+        <link refid="d1/d98/MathFunction_8h"/>
+        <childnode refid="40939" relation="include">
+        </childnode>
+        <childnode refid="40943" relation="include">
+        </childnode>
+        <childnode refid="40945" relation="include">
+        </childnode>
+        <childnode refid="40947" relation="include">
+        </childnode>
+      </node>
+      <node id="40945">
+        <label>../Formats/Fixed.h</label>
+        <link refid="d4/d76/Fixed_8h"/>
+        <childnode refid="40943" relation="include">
+        </childnode>
+        <childnode refid="40946" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="d9/dee/classTTextureCoord1" prot="public">TTextureCoord1</innerclass>
+    <innerclass refid="d5/db3/classTTextureCoord2" prot="public">TTextureCoord2</innerclass>
+    <innerclass refid="d0/d2d/classTTextureCoord3" prot="public">TTextureCoord3</innerclass>
+    <innerclass refid="d4/d1a/classTTextureCoord4" prot="public">TTextureCoord4</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="da/d76/TextureCoord4_8h_1abbef8aee05248dd593e11b8f53932fdf" prot="public" static="no">
+        <name>TextureCoordDimension</name>
+        <enumvalue id="db/dd0/TextureCoord1_8h_1abbef8aee05248dd593e11b8f53932fdfac9fa9e06680e5c2388f4ddfe517b4b68" prot="public">
+          <name>TEXCOORD_1D</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="db/dd0/TextureCoord1_8h_1abbef8aee05248dd593e11b8f53932fdfaff13d70bd14584383dba518366a94fd2" prot="public">
+          <name>TEXCOORD_2D</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="db/dd0/TextureCoord1_8h_1abbef8aee05248dd593e11b8f53932fdfa40201a28b67536426f8dca2602a08510" prot="public">
+          <name>TEXCOORD_3D</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="db/dd0/TextureCoord1_8h_1abbef8aee05248dd593e11b8f53932fdfa0cb9649cc7fd921f253b9c3bf95b6c25" prot="public">
+          <name>TEXCOORD_4D</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d6/d21/TextureCoord2_8h_1abbef8aee05248dd593e11b8f53932fdfac9fa9e06680e5c2388f4ddfe517b4b68" prot="public">
+          <name>TEXCOORD_1D</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d6/d21/TextureCoord2_8h_1abbef8aee05248dd593e11b8f53932fdfaff13d70bd14584383dba518366a94fd2" prot="public">
+          <name>TEXCOORD_2D</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d6/d21/TextureCoord2_8h_1abbef8aee05248dd593e11b8f53932fdfa40201a28b67536426f8dca2602a08510" prot="public">
+          <name>TEXCOORD_3D</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d6/d21/TextureCoord2_8h_1abbef8aee05248dd593e11b8f53932fdfa0cb9649cc7fd921f253b9c3bf95b6c25" prot="public">
+          <name>TEXCOORD_4D</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d6/d57/TextureCoord3_8h_1abbef8aee05248dd593e11b8f53932fdfac9fa9e06680e5c2388f4ddfe517b4b68" prot="public">
+          <name>TEXCOORD_1D</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d6/d57/TextureCoord3_8h_1abbef8aee05248dd593e11b8f53932fdfaff13d70bd14584383dba518366a94fd2" prot="public">
+          <name>TEXCOORD_2D</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d6/d57/TextureCoord3_8h_1abbef8aee05248dd593e11b8f53932fdfa40201a28b67536426f8dca2602a08510" prot="public">
+          <name>TEXCOORD_3D</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d6/d57/TextureCoord3_8h_1abbef8aee05248dd593e11b8f53932fdfa0cb9649cc7fd921f253b9c3bf95b6c25" prot="public">
+          <name>TEXCOORD_4D</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/d76/TextureCoord4_8h_1abbef8aee05248dd593e11b8f53932fdfac9fa9e06680e5c2388f4ddfe517b4b68" prot="public">
+          <name>TEXCOORD_1D</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/d76/TextureCoord4_8h_1abbef8aee05248dd593e11b8f53932fdfaff13d70bd14584383dba518366a94fd2" prot="public">
+          <name>TEXCOORD_2D</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/d76/TextureCoord4_8h_1abbef8aee05248dd593e11b8f53932fdfa40201a28b67536426f8dca2602a08510" prot="public">
+          <name>TEXCOORD_3D</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/d76/TextureCoord4_8h_1abbef8aee05248dd593e11b8f53932fdfa0cb9649cc7fd921f253b9c3bf95b6c25" prot="public">
+          <name>TEXCOORD_4D</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/TextureCoord/TextureCoord4.h" line="36" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/TextureCoord/TextureCoord4.h" bodystart="35" bodyend="41"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="da/d76/TextureCoord4_8h_1a16b8b5b4779ce26172b2efb6a57f85c1" prot="public" static="no">
+        <type><ref refid="d4/d1a/classTTextureCoord4" kindref="compound">TTextureCoord4</ref>&lt; <ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref> &gt;</type>
+        <definition>typedef TTextureCoord4&lt;Float&gt; TextureCoord4f</definition>
+        <argsstring></argsstring>
+        <name>TextureCoord4f</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/TextureCoord/TextureCoord4.h" line="132" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/TextureCoord/TextureCoord4.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="da/d76/TextureCoord4_8h_1a119e0c2d634aeac76720594dddff00a8" prot="public" static="no">
+        <type><ref refid="d4/d1a/classTTextureCoord4" kindref="compound">TTextureCoord4</ref>&lt; <ref refid="d9/dd0/Platform_8h_1a1f2c5f02159fb28428e23074cc04166d" kindref="member">Double</ref> &gt;</type>
+        <definition>typedef TTextureCoord4&lt;Double&gt; TextureCoord4d</definition>
+        <argsstring></argsstring>
+        <name>TextureCoord4d</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/TextureCoord/TextureCoord4.h" line="133" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/TextureCoord/TextureCoord4.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="da/d76/TextureCoord4_8h_1a65bb36c4525b1f50e8a8e7e2bae68f31" prot="public" static="no">
+        <type><ref refid="d4/d1a/classTTextureCoord4" kindref="compound">TTextureCoord4</ref>&lt; <ref refid="d0/d10/Scalar_8h_1abee0aca51a3a3e16c628155aa4ac6f12" kindref="member">Scalar</ref> &gt;</type>
+        <definition>typedef TTextureCoord4&lt;Scalar&gt; TextureCoord4</definition>
+        <argsstring></argsstring>
+        <name>TextureCoord4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/TextureCoord/TextureCoord4.h" line="134" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/TextureCoord/TextureCoord4.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/TextureCoord/TextureCoord4.h"/>
+  </compounddef>
+</doxygen>

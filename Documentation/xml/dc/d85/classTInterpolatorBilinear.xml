@@ -1,0 +1,347 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="dc/d85/classTInterpolatorBilinear" kind="class" prot="public">
+    <compoundname>TInterpolatorBilinear</compoundname>
+    <includes refid="d1/d76/InterpolatorBilinear_8h" local="no">InterpolatorBilinear.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename Real</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="dc/d85/classTInterpolatorBilinear_1af662b20afd0f559691b5bd7c10ac04a0" prot="private" static="yes" mutable="no">
+        <type>const <ref refid="d5/dac/classTMatrix2" kindref="compound">TMatrix2</ref>&lt; Real &gt;</type>
+        <definition>const TMatrix2&lt;Real&gt; sm_matBlend</definition>
+        <argsstring></argsstring>
+        <name>sm_matBlend</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorBilinear.h" line="60" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorBilinear.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="dc/d85/classTInterpolatorBilinear_1aa16971804844b396d302d0f2b6397597" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iBoundX</definition>
+        <argsstring></argsstring>
+        <name>m_iBoundX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorBilinear.h" line="62" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorBilinear.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d85/classTInterpolatorBilinear_1ad93f2fbe92f266583a84afadc4de0b0e" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iBoundY</definition>
+        <argsstring></argsstring>
+        <name>m_iBoundY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorBilinear.h" line="62" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorBilinear.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d85/classTInterpolatorBilinear_1a6b449757d29d424a2a44a761377ef4bb" prot="private" static="no" mutable="no">
+        <type>Real *</type>
+        <definition>Real* m_arrValues</definition>
+        <argsstring></argsstring>
+        <name>m_arrValues</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorBilinear.h" line="63" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorBilinear.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d85/classTInterpolatorBilinear_1a8c44bb725465a310b5b5988b3e7d613b" prot="private" static="no" mutable="no">
+        <type><ref refid="da/d58/classTVector2" kindref="compound">TVector2</ref>&lt; Real &gt;</type>
+        <definition>TVector2&lt;Real&gt; m_vMin</definition>
+        <argsstring></argsstring>
+        <name>m_vMin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorBilinear.h" line="65" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorBilinear.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d85/classTInterpolatorBilinear_1aeded4e8b919235b42cbc9de9a1ec3473" prot="private" static="no" mutable="no">
+        <type><ref refid="da/d58/classTVector2" kindref="compound">TVector2</ref>&lt; Real &gt;</type>
+        <definition>TVector2&lt;Real&gt; m_vMax</definition>
+        <argsstring></argsstring>
+        <name>m_vMax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorBilinear.h" line="65" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorBilinear.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d85/classTInterpolatorBilinear_1a96585891ee3ae6c11dfa8ecc5413f8f5" prot="private" static="no" mutable="no">
+        <type><ref refid="da/d58/classTVector2" kindref="compound">TVector2</ref>&lt; Real &gt;</type>
+        <definition>TVector2&lt;Real&gt; m_vSpacing</definition>
+        <argsstring></argsstring>
+        <name>m_vSpacing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorBilinear.h" line="66" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorBilinear.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d85/classTInterpolatorBilinear_1aae063d8d83ec104eac7b887bb9df77c8" prot="private" static="no" mutable="no">
+        <type><ref refid="da/d58/classTVector2" kindref="compound">TVector2</ref>&lt; Real &gt;</type>
+        <definition>TVector2&lt;Real&gt; m_vInvSpacing</definition>
+        <argsstring></argsstring>
+        <name>m_vInvSpacing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorBilinear.h" line="66" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorBilinear.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="dc/d85/classTInterpolatorBilinear_1aea437d1344580fe72be75e9fd3ba653d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TInterpolatorBilinear</definition>
+        <argsstring>(Real *arrValues, UInt iBoundX, UInt iBoundY, const TVector2&lt; Real &gt; &amp;vMin, const TVector2&lt; Real &gt; &amp;vSpacing)</argsstring>
+        <name>TInterpolatorBilinear</name>
+        <param>
+          <type>Real *</type>
+          <declname>arrValues</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iBoundX</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iBoundY</declname>
+        </param>
+        <param>
+          <type>const <ref refid="da/d58/classTVector2" kindref="compound">TVector2</ref>&lt; Real &gt; &amp;</type>
+          <declname>vMin</declname>
+        </param>
+        <param>
+          <type>const <ref refid="da/d58/classTVector2" kindref="compound">TVector2</ref>&lt; Real &gt; &amp;</type>
+          <declname>vSpacing</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorBilinear.h" line="42"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d85/classTInterpolatorBilinear_1a221d58adeeec975b109b9ece17057b45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~TInterpolatorBilinear</definition>
+        <argsstring>()</argsstring>
+        <name>~TInterpolatorBilinear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorBilinear.h" line="43"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d85/classTInterpolatorBilinear_1ae66c7864d95967a4ed76088062538854" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetBoundX</definition>
+        <argsstring>() const </argsstring>
+        <name>GetBoundX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorBilinear.h" line="46"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d85/classTInterpolatorBilinear_1ae8eefba18e120824bc79878a7cf68ba1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetBoundY</definition>
+        <argsstring>() const </argsstring>
+        <name>GetBoundY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorBilinear.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d85/classTInterpolatorBilinear_1a9531ac4b1851db76b35a0c41c2df93d9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real *</type>
+        <definition>Real* GetValues</definition>
+        <argsstring>() const </argsstring>
+        <name>GetValues</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorBilinear.h" line="48"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d85/classTInterpolatorBilinear_1a5c3e043270e92dd73dbbfeef2c0e2cd4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="da/d58/classTVector2" kindref="compound">TVector2</ref>&lt; Real &gt; &amp;</type>
+        <definition>const TVector2&lt;Real&gt;&amp; GetMin</definition>
+        <argsstring>() const </argsstring>
+        <name>GetMin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorBilinear.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d85/classTInterpolatorBilinear_1adf9fdb526a8e5ab9ae012999ba10333b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="da/d58/classTVector2" kindref="compound">TVector2</ref>&lt; Real &gt; &amp;</type>
+        <definition>const TVector2&lt;Real&gt;&amp; GetMax</definition>
+        <argsstring>() const </argsstring>
+        <name>GetMax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorBilinear.h" line="52"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d85/classTInterpolatorBilinear_1a144d2c62000cbb7bd5757857551ea312" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="da/d58/classTVector2" kindref="compound">TVector2</ref>&lt; Real &gt; &amp;</type>
+        <definition>const TVector2&lt;Real&gt;&amp; GetSpacing</definition>
+        <argsstring>() const </argsstring>
+        <name>GetSpacing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorBilinear.h" line="53"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d85/classTInterpolatorBilinear_1ae26b3fd8ef403f10beae959984253d6e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real Evaluate</definition>
+        <argsstring>(const TVector2&lt; Real &gt; &amp;vParameter) const </argsstring>
+        <name>Evaluate</name>
+        <param>
+          <type>const <ref refid="da/d58/classTVector2" kindref="compound">TVector2</ref>&lt; Real &gt; &amp;</type>
+          <declname>vParameter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorBilinear.h" line="56"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d85/classTInterpolatorBilinear_1ab1e7d614f8e8c83be10aa4f840b808ad" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real Evaluate</definition>
+        <argsstring>(const TVector2&lt; Real &gt; &amp;vParameter, UInt iOrderX, UInt iOrderY) const </argsstring>
+        <name>Evaluate</name>
+        <param>
+          <type>const <ref refid="da/d58/classTVector2" kindref="compound">TVector2</ref>&lt; Real &gt; &amp;</type>
+          <declname>vParameter</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iOrderX</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iOrderY</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorBilinear.h" line="57"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="12553">
+        <label>Real</label>
+      </node>
+      <node id="12551">
+        <label>TVector2&lt; Real &gt;</label>
+      </node>
+      <node id="12552">
+        <label>int</label>
+      </node>
+      <node id="12549">
+        <label>TInterpolatorBilinear&lt; Real &gt;</label>
+        <link refid="dc/d85/classTInterpolatorBilinear"/>
+        <childnode refid="12550" relation="usage">
+          <edgelabel>sm_matBlend</edgelabel>
+        </childnode>
+        <childnode refid="12551" relation="usage">
+          <edgelabel>m_vMin</edgelabel>
+          <edgelabel>m_vMax</edgelabel>
+          <edgelabel>m_vInvSpacing</edgelabel>
+          <edgelabel>m_vSpacing</edgelabel>
+        </childnode>
+        <childnode refid="12552" relation="usage">
+          <edgelabel>m_iBoundX</edgelabel>
+          <edgelabel>m_iBoundY</edgelabel>
+        </childnode>
+        <childnode refid="12553" relation="usage">
+          <edgelabel>m_arrValues</edgelabel>
+        </childnode>
+      </node>
+      <node id="12550">
+        <label>TMatrix2&lt; Real &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorBilinear.h" line="38" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Interpolation/InterpolatorBilinear.h" bodystart="37" bodyend="67"/>
+    <listofallmembers>
+      <member refid="dc/d85/classTInterpolatorBilinear_1ae26b3fd8ef403f10beae959984253d6e" prot="public" virt="non-virtual"><scope>TInterpolatorBilinear</scope><name>Evaluate</name></member>
+      <member refid="dc/d85/classTInterpolatorBilinear_1ab1e7d614f8e8c83be10aa4f840b808ad" prot="public" virt="non-virtual"><scope>TInterpolatorBilinear</scope><name>Evaluate</name></member>
+      <member refid="dc/d85/classTInterpolatorBilinear_1ae66c7864d95967a4ed76088062538854" prot="public" virt="non-virtual"><scope>TInterpolatorBilinear</scope><name>GetBoundX</name></member>
+      <member refid="dc/d85/classTInterpolatorBilinear_1ae8eefba18e120824bc79878a7cf68ba1" prot="public" virt="non-virtual"><scope>TInterpolatorBilinear</scope><name>GetBoundY</name></member>
+      <member refid="dc/d85/classTInterpolatorBilinear_1adf9fdb526a8e5ab9ae012999ba10333b" prot="public" virt="non-virtual"><scope>TInterpolatorBilinear</scope><name>GetMax</name></member>
+      <member refid="dc/d85/classTInterpolatorBilinear_1a5c3e043270e92dd73dbbfeef2c0e2cd4" prot="public" virt="non-virtual"><scope>TInterpolatorBilinear</scope><name>GetMin</name></member>
+      <member refid="dc/d85/classTInterpolatorBilinear_1a144d2c62000cbb7bd5757857551ea312" prot="public" virt="non-virtual"><scope>TInterpolatorBilinear</scope><name>GetSpacing</name></member>
+      <member refid="dc/d85/classTInterpolatorBilinear_1a9531ac4b1851db76b35a0c41c2df93d9" prot="public" virt="non-virtual"><scope>TInterpolatorBilinear</scope><name>GetValues</name></member>
+      <member refid="dc/d85/classTInterpolatorBilinear_1a6b449757d29d424a2a44a761377ef4bb" prot="private" virt="non-virtual"><scope>TInterpolatorBilinear</scope><name>m_arrValues</name></member>
+      <member refid="dc/d85/classTInterpolatorBilinear_1aa16971804844b396d302d0f2b6397597" prot="private" virt="non-virtual"><scope>TInterpolatorBilinear</scope><name>m_iBoundX</name></member>
+      <member refid="dc/d85/classTInterpolatorBilinear_1ad93f2fbe92f266583a84afadc4de0b0e" prot="private" virt="non-virtual"><scope>TInterpolatorBilinear</scope><name>m_iBoundY</name></member>
+      <member refid="dc/d85/classTInterpolatorBilinear_1aae063d8d83ec104eac7b887bb9df77c8" prot="private" virt="non-virtual"><scope>TInterpolatorBilinear</scope><name>m_vInvSpacing</name></member>
+      <member refid="dc/d85/classTInterpolatorBilinear_1aeded4e8b919235b42cbc9de9a1ec3473" prot="private" virt="non-virtual"><scope>TInterpolatorBilinear</scope><name>m_vMax</name></member>
+      <member refid="dc/d85/classTInterpolatorBilinear_1a8c44bb725465a310b5b5988b3e7d613b" prot="private" virt="non-virtual"><scope>TInterpolatorBilinear</scope><name>m_vMin</name></member>
+      <member refid="dc/d85/classTInterpolatorBilinear_1a96585891ee3ae6c11dfa8ecc5413f8f5" prot="private" virt="non-virtual"><scope>TInterpolatorBilinear</scope><name>m_vSpacing</name></member>
+      <member refid="dc/d85/classTInterpolatorBilinear_1af662b20afd0f559691b5bd7c10ac04a0" prot="private" virt="non-virtual"><scope>TInterpolatorBilinear</scope><name>sm_matBlend</name></member>
+      <member refid="dc/d85/classTInterpolatorBilinear_1aea437d1344580fe72be75e9fd3ba653d" prot="public" virt="non-virtual"><scope>TInterpolatorBilinear</scope><name>TInterpolatorBilinear</name></member>
+      <member refid="dc/d85/classTInterpolatorBilinear_1a221d58adeeec975b109b9ece17057b45" prot="public" virt="non-virtual"><scope>TInterpolatorBilinear</scope><name>~TInterpolatorBilinear</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

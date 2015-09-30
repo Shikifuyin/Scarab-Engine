@@ -1,0 +1,314 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d3/daf/classShaderConstProjectorMatrix" kind="class" prot="public">
+    <compoundname>ShaderConstProjectorMatrix</compoundname>
+    <basecompoundref refid="de/d52/classShaderConst" prot="public" virt="non-virtual">ShaderConst</basecompoundref>
+    <includes refid="d2/dc2/ShaderConstCamera_8h" local="no">ShaderConstCamera.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d3/daf/classShaderConstProjectorMatrix_1a42885159cb8416cdbb88cae526792ae4" prot="private" static="no" mutable="no">
+        <type><ref refid="d7/def/classProjector" kindref="compound">Projector</ref> *</type>
+        <definition>Projector* m_pProjector</definition>
+        <argsstring></argsstring>
+        <name>m_pProjector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderConstant/ShaderConstCamera.h" line="105" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderConstant/ShaderConstCamera.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/daf/classShaderConstProjectorMatrix_1a6b090762fb441193e44a630a43c3856b" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool m_bBiased</definition>
+        <argsstring></argsstring>
+        <name>m_bBiased</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderConstant/ShaderConstCamera.h" line="106" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderConstant/ShaderConstCamera.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/daf/classShaderConstProjectorMatrix_1a2b35a89cfb68f37d2e90f63f479092d1" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iBiasScaleMatrix</definition>
+        <argsstring></argsstring>
+        <name>m_iBiasScaleMatrix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderConstant/ShaderConstCamera.h" line="107" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderConstant/ShaderConstCamera.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d3/daf/classShaderConstProjectorMatrix_1a0015caf3288cb70e11d5def8e65cf510" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShaderConstProjectorMatrix</definition>
+        <argsstring>(Projector *pProjector, Bool bBiased, UInt iBiasScaleMatrix)</argsstring>
+        <name>ShaderConstProjectorMatrix</name>
+        <param>
+          <type><ref refid="d7/def/classProjector" kindref="compound">Projector</ref> *</type>
+          <declname>pProjector</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+          <declname>bBiased</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iBiasScaleMatrix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderConstant/ShaderConstCamera.h" line="97"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/daf/classShaderConstProjectorMatrix_1aa39ee6f23c3bcda374ec70b8f8613d54" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~ShaderConstProjectorMatrix</definition>
+        <argsstring>()</argsstring>
+        <name>~ShaderConstProjectorMatrix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderConstant/ShaderConstCamera.h" line="98"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/daf/classShaderConstProjectorMatrix_1a1276a8458a0ab53496a9c298c358628a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d7/def/classProjector" kindref="compound">Projector</ref> *</type>
+        <definition>Projector* GetProjector</definition>
+        <argsstring>()</argsstring>
+        <name>GetProjector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderConstant/ShaderConstCamera.h" line="100"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/daf/classShaderConstProjectorMatrix_1a5782be23213bca07aa8c7b111ac27701" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void Update</definition>
+        <argsstring>(const Transform3 &amp;trWorldTransform, const Camera *pCamera)</argsstring>
+        <name>Update</name>
+        <reimplements refid="de/d52/classShaderConst_1a5782be23213bca07aa8c7b111ac27701">Update</reimplements>
+        <param>
+          <type>const <ref refid="d2/d67/Transform3_8h_1a1ae384ec738794e9d688355477f546cd" kindref="member">Transform3</ref> &amp;</type>
+          <declname>trWorldTransform</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d1/df0/classCamera" kindref="compound">Camera</ref> *</type>
+          <declname>pCamera</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderConstant/ShaderConstCamera.h" line="102"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="11067">
+        <label>ShaderConst</label>
+        <link refid="de/d52/classShaderConst"/>
+      </node>
+      <node id="11066">
+        <label>ShaderConstProjectorMatrix</label>
+        <link refid="d3/daf/classShaderConstProjectorMatrix"/>
+        <childnode refid="11067" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="11079">
+        <label>ProjectionDepthMapping</label>
+      </node>
+      <node id="11074">
+        <label>Camera</label>
+        <link refid="d1/df0/classCamera"/>
+        <childnode refid="11075" relation="usage">
+          <edgelabel>m_vSide</edgelabel>
+          <edgelabel>m_vUp</edgelabel>
+          <edgelabel>m_vView</edgelabel>
+        </childnode>
+        <childnode refid="11077" relation="usage">
+          <edgelabel>m_matView</edgelabel>
+          <edgelabel>m_matPostProjection</edgelabel>
+          <edgelabel>m_matCamera</edgelabel>
+          <edgelabel>m_matProjection</edgelabel>
+          <edgelabel>m_matInvView</edgelabel>
+          <edgelabel>m_matPreView</edgelabel>
+          <edgelabel>m_matBillboard</edgelabel>
+        </childnode>
+        <childnode refid="11070" relation="usage">
+          <edgelabel>m_fFrustrum</edgelabel>
+        </childnode>
+        <childnode refid="11072" relation="usage">
+          <edgelabel>m_bHasPostProjection</edgelabel>
+          <edgelabel>m_bPerspective</edgelabel>
+          <edgelabel>m_bHasPreView</edgelabel>
+        </childnode>
+        <childnode refid="11078" relation="usage">
+          <edgelabel>m_vEye</edgelabel>
+        </childnode>
+        <childnode refid="11079" relation="usage">
+          <edgelabel>m_iDepthMapping</edgelabel>
+        </childnode>
+        <childnode refid="11080" relation="usage">
+          <edgelabel>sm_iDefaultDepthMapping</edgelabel>
+        </childnode>
+      </node>
+      <node id="11070">
+        <label>float</label>
+      </node>
+      <node id="11077">
+        <label>TMatrix4&lt; Scalar &gt;</label>
+        <link refid="d5/d09/classTMatrix4"/>
+        <childnode refid="11077" relation="usage">
+          <edgelabel>Identity</edgelabel>
+          <edgelabel>Null</edgelabel>
+        </childnode>
+        <childnode refid="11070" relation="usage">
+          <edgelabel>ONE</edgelabel>
+          <edgelabel>m30</edgelabel>
+          <edgelabel>m31</edgelabel>
+          <edgelabel>m20</edgelabel>
+          <edgelabel>m32</edgelabel>
+          <edgelabel>m21</edgelabel>
+          <edgelabel>m10</edgelabel>
+          <edgelabel>m33</edgelabel>
+          <edgelabel>m22</edgelabel>
+          <edgelabel>m11</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="11080">
+        <label>static ProjectionDepthMapping</label>
+      </node>
+      <node id="11071">
+        <label>int</label>
+      </node>
+      <node id="11076">
+        <label>Scalar</label>
+      </node>
+      <node id="11073">
+        <label>Projector</label>
+        <link refid="d7/def/classProjector"/>
+        <childnode refid="11074" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11077" relation="usage">
+          <edgelabel>BiasScaleMatrix</edgelabel>
+        </childnode>
+      </node>
+      <node id="11075">
+        <label>TVector3&lt; Scalar &gt;</label>
+        <link refid="de/d40/classTVector3"/>
+        <childnode refid="11075" relation="usage">
+          <edgelabel>Null</edgelabel>
+          <edgelabel>eI</edgelabel>
+          <edgelabel>eJ</edgelabel>
+          <edgelabel>eK</edgelabel>
+        </childnode>
+        <childnode refid="11076" relation="usage">
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+          <edgelabel>Z</edgelabel>
+        </childnode>
+      </node>
+      <node id="11078">
+        <label>TVertex3&lt; Scalar &gt;</label>
+        <link refid="dc/d75/classTVertex3"/>
+        <childnode refid="11076" relation="usage">
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+          <edgelabel>Z</edgelabel>
+        </childnode>
+        <childnode refid="11078" relation="usage">
+          <edgelabel>Null</edgelabel>
+        </childnode>
+      </node>
+      <node id="11069">
+        <label>ShaderConst</label>
+        <link refid="de/d52/classShaderConst"/>
+        <childnode refid="11070" relation="usage">
+          <edgelabel>m_arrRegisters</edgelabel>
+        </childnode>
+        <childnode refid="11071" relation="usage">
+          <edgelabel>m_iSize</edgelabel>
+          <edgelabel>m_iRegisterCount</edgelabel>
+        </childnode>
+        <childnode refid="11072" relation="usage">
+          <edgelabel>m_bAllowUpdate</edgelabel>
+        </childnode>
+      </node>
+      <node id="11072">
+        <label>bool</label>
+      </node>
+      <node id="11068">
+        <label>ShaderConstProjectorMatrix</label>
+        <link refid="d3/daf/classShaderConstProjectorMatrix"/>
+        <childnode refid="11069" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11073" relation="usage">
+          <edgelabel>m_pProjector</edgelabel>
+        </childnode>
+        <childnode refid="11071" relation="usage">
+          <edgelabel>m_iBiasScaleMatrix</edgelabel>
+        </childnode>
+        <childnode refid="11072" relation="usage">
+          <edgelabel>m_bBiased</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderConstant/ShaderConstCamera.h" line="95" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderConstant/ShaderConstCamera.h" bodystart="94" bodyend="108"/>
+    <listofallmembers>
+      <member refid="de/d52/classShaderConst_1a7a4dc66ad629e9518da35a902dcdea34" prot="public" virt="non-virtual"><scope>ShaderConstProjectorMatrix</scope><name>AllowUpdate</name></member>
+      <member refid="de/d52/classShaderConst_1a11c5e1e1e6158fff7baa8d5b6e8f34cd" prot="public" virt="non-virtual"><scope>ShaderConstProjectorMatrix</scope><name>DisableUpdate</name></member>
+      <member refid="de/d52/classShaderConst_1ac010c67a74dcef0916ae14b867d9ec44" prot="public" virt="non-virtual"><scope>ShaderConstProjectorMatrix</scope><name>EnableUpdate</name></member>
+      <member refid="de/d52/classShaderConst_1a50e902d7f969995b2336d63852eb9fda" prot="public" virt="non-virtual"><scope>ShaderConstProjectorMatrix</scope><name>GetAllRegisters</name></member>
+      <member refid="de/d52/classShaderConst_1af4033417615c1aea829cf2dc8894035b" prot="public" virt="non-virtual"><scope>ShaderConstProjectorMatrix</scope><name>GetData</name></member>
+      <member refid="de/d52/classShaderConst_1afb6b91f17f4326c1f2353c71ebcd0d83" prot="public" virt="non-virtual"><scope>ShaderConstProjectorMatrix</scope><name>GetData</name></member>
+      <member refid="d3/daf/classShaderConstProjectorMatrix_1a1276a8458a0ab53496a9c298c358628a" prot="public" virt="non-virtual"><scope>ShaderConstProjectorMatrix</scope><name>GetProjector</name></member>
+      <member refid="de/d52/classShaderConst_1ae136a1db29e70b7d55dbf47ea2e7ad09" prot="public" virt="non-virtual"><scope>ShaderConstProjectorMatrix</scope><name>GetRegister</name></member>
+      <member refid="de/d52/classShaderConst_1ae2d6ef3efd3be82af77081c98d54ab24" prot="public" virt="non-virtual"><scope>ShaderConstProjectorMatrix</scope><name>GetRegisterCount</name></member>
+      <member refid="de/d52/classShaderConst_1a9636cef8c458f6976f30d05b7cdc9d76" prot="protected" virt="non-virtual"><scope>ShaderConstProjectorMatrix</scope><name>m_arrRegisters</name></member>
+      <member refid="de/d52/classShaderConst_1aa92c1992af4dbb8a556c11e6ecc49c48" prot="protected" virt="non-virtual"><scope>ShaderConstProjectorMatrix</scope><name>m_bAllowUpdate</name></member>
+      <member refid="d3/daf/classShaderConstProjectorMatrix_1a6b090762fb441193e44a630a43c3856b" prot="private" virt="non-virtual"><scope>ShaderConstProjectorMatrix</scope><name>m_bBiased</name></member>
+      <member refid="d3/daf/classShaderConstProjectorMatrix_1a2b35a89cfb68f37d2e90f63f479092d1" prot="private" virt="non-virtual"><scope>ShaderConstProjectorMatrix</scope><name>m_iBiasScaleMatrix</name></member>
+      <member refid="de/d52/classShaderConst_1a848aaa42b37afd2f78b80b1ce477b511" prot="protected" virt="non-virtual"><scope>ShaderConstProjectorMatrix</scope><name>m_iRegisterCount</name></member>
+      <member refid="de/d52/classShaderConst_1a33a55c582674ff392fce44bc9bb82ddf" prot="protected" virt="non-virtual"><scope>ShaderConstProjectorMatrix</scope><name>m_iSize</name></member>
+      <member refid="d3/daf/classShaderConstProjectorMatrix_1a42885159cb8416cdbb88cae526792ae4" prot="private" virt="non-virtual"><scope>ShaderConstProjectorMatrix</scope><name>m_pProjector</name></member>
+      <member refid="de/d52/classShaderConst_1aee0ea3e77fbfd3854a3366e2936217a1" prot="public" virt="non-virtual"><scope>ShaderConstProjectorMatrix</scope><name>operator=</name></member>
+      <member refid="de/d52/classShaderConst_1a7e6ca6c89055d2a4acddb2be718273c4" prot="public" virt="non-virtual"><scope>ShaderConstProjectorMatrix</scope><name>operator[]</name></member>
+      <member refid="de/d52/classShaderConst_1aa8d07edbe05f03a9f80a8d1c017e7686" prot="public" virt="non-virtual"><scope>ShaderConstProjectorMatrix</scope><name>operator[]</name></member>
+      <member refid="de/d52/classShaderConst_1ab5505d160734a1db29c39589e4a3de79" prot="public" virt="non-virtual"><scope>ShaderConstProjectorMatrix</scope><name>operator[]</name></member>
+      <member refid="de/d52/classShaderConst_1acb3c22a2b177f5679a15abc1134a9308" prot="public" virt="non-virtual"><scope>ShaderConstProjectorMatrix</scope><name>operator[]</name></member>
+      <member refid="de/d52/classShaderConst_1ad30971abfdff3038d6846c3d911205ef" prot="public" virt="non-virtual"><scope>ShaderConstProjectorMatrix</scope><name>Reset</name></member>
+      <member refid="de/d52/classShaderConst_1a45510119cd87b2efcd8dabda6331d172" prot="public" virt="non-virtual"><scope>ShaderConstProjectorMatrix</scope><name>SetAllRegisters</name></member>
+      <member refid="de/d52/classShaderConst_1a3cdd17d91759d6bbfd8e51e7daef8e4d" prot="public" virt="non-virtual"><scope>ShaderConstProjectorMatrix</scope><name>SetRegister</name></member>
+      <member refid="de/d52/classShaderConst_1ad349755c85e97424d0712b6df8eb56e7" prot="public" virt="non-virtual"><scope>ShaderConstProjectorMatrix</scope><name>ShaderConst</name></member>
+      <member refid="de/d52/classShaderConst_1ac7aedbc7e4808bf2939641838da5dae3" prot="public" virt="non-virtual"><scope>ShaderConstProjectorMatrix</scope><name>ShaderConst</name></member>
+      <member refid="d3/daf/classShaderConstProjectorMatrix_1a0015caf3288cb70e11d5def8e65cf510" prot="public" virt="non-virtual"><scope>ShaderConstProjectorMatrix</scope><name>ShaderConstProjectorMatrix</name></member>
+      <member refid="d3/daf/classShaderConstProjectorMatrix_1a5782be23213bca07aa8c7b111ac27701" prot="public" virt="virtual"><scope>ShaderConstProjectorMatrix</scope><name>Update</name></member>
+      <member refid="de/d52/classShaderConst_1aea5e35c6267a55d591a2a36f2661a791" prot="public" virt="non-virtual"><scope>ShaderConstProjectorMatrix</scope><name>~ShaderConst</name></member>
+      <member refid="d3/daf/classShaderConstProjectorMatrix_1aa39ee6f23c3bcda374ec70b8f8613d54" prot="public" virt="virtual"><scope>ShaderConstProjectorMatrix</scope><name>~ShaderConstProjectorMatrix</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1237 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="dc/d93/SoftBody_8h" kind="file">
+    <compoundname>SoftBody.h</compoundname>
+    <includes refid="df/dd0/Array_8h" local="yes">../../../Lib/Datastruct/Array/Array.h</includes>
+    <includes refid="dd/d6d/Random_8h" local="yes">../../../Lib/Math/Random/Random.h</includes>
+    <includes refid="d7/d66/ShapeDeformable_8h" local="yes">../Shape/Concave/ShapeDeformable.h</includes>
+    <includes refid="d7/d87/BodyNode_8h" local="yes">../IslandSolver/Nodes/BodyNode.h</includes>
+    <includes local="yes">SoftBody.inl</includes>
+    <includedby refid="d2/d6b/PhysicsManager_8h" local="yes">PhysicsManager.h</includedby>
+    <includedby refid="d1/d3a/SoftConstraintSolver_8h" local="yes">SoftConstraintSolver.h</includedby>
+    <incdepgraph>
+      <node id="38035">
+        <label>Features/Facets/MeshTriangleManifoldN.h</label>
+        <link refid="df/de2/MeshTriangleManifoldN_8h"/>
+        <childnode refid="38012" relation="include">
+        </childnode>
+        <childnode refid="38036" relation="include">
+        </childnode>
+      </node>
+      <node id="38030">
+        <label>MeshEdgeManifold3.inl</label>
+      </node>
+      <node id="38047">
+        <label>MeshDeformableGraph.inl</label>
+      </node>
+      <node id="37996">
+        <label>../Vector/Vector4.h</label>
+        <link refid="d7/d36/Vector4_8h"/>
+        <childnode refid="37944" relation="include">
+        </childnode>
+        <childnode refid="37997" relation="include">
+        </childnode>
+      </node>
+      <node id="38000">
+        <label>Matrix4.inl</label>
+      </node>
+      <node id="38015">
+        <label>RedBlackTree.inl</label>
+      </node>
+      <node id="37954">
+        <label>SSE.inl</label>
+      </node>
+      <node id="37958">
+        <label>Threading.h</label>
+        <link refid="dd/d0e/Threading_8h"/>
+        <childnode refid="37936" relation="include">
+        </childnode>
+        <childnode refid="37938" relation="include">
+        </childnode>
+        <childnode refid="37959" relation="include">
+        </childnode>
+      </node>
+      <node id="38006">
+        <label>BoundingVolume.inl</label>
+      </node>
+      <node id="38083">
+        <label>IslandNode.inl</label>
+      </node>
+      <node id="38019">
+        <label>VirtualHolder.inl</label>
+      </node>
+      <node id="37970">
+        <label>Allocators/BreakAllocator.h</label>
+        <link refid="d4/dac/BreakAllocator_8h"/>
+        <childnode refid="37965" relation="include">
+        </childnode>
+        <childnode refid="37971" relation="include">
+        </childnode>
+      </node>
+      <node id="37933">
+        <label>../Memory/MemoryManager.h</label>
+        <link refid="d7/d7b/MemoryManager_8h"/>
+        <childnode refid="37934" relation="include">
+        </childnode>
+        <childnode refid="37944" relation="include">
+        </childnode>
+        <childnode refid="37950" relation="include">
+        </childnode>
+        <childnode refid="37964" relation="include">
+        </childnode>
+        <childnode refid="37968" relation="include">
+        </childnode>
+        <childnode refid="37970" relation="include">
+        </childnode>
+        <childnode refid="37972" relation="include">
+        </childnode>
+        <childnode refid="37974" relation="include">
+        </childnode>
+      </node>
+      <node id="38023">
+        <label>MeshFeature.inl</label>
+      </node>
+      <node id="38066">
+        <label>Geometry/VertexFormat.h</label>
+        <link refid="da/df2/VertexFormat_8h"/>
+        <childnode refid="37950" relation="include">
+        </childnode>
+        <childnode refid="38067" relation="include">
+        </childnode>
+      </node>
+      <node id="38069">
+        <label>VertexBuffer.inl</label>
+      </node>
+      <node id="38002">
+        <label>../../Primitives/3D/Linear/Line3.h</label>
+        <link refid="db/d9b/Line3_8h"/>
+        <childnode refid="37950" relation="include">
+        </childnode>
+        <childnode refid="37988" relation="include">
+        </childnode>
+        <childnode refid="37992" relation="include">
+        </childnode>
+        <childnode refid="38003" relation="include">
+        </childnode>
+      </node>
+      <node id="37951">
+        <label>../../ThirdParty/System/System.h</label>
+        <link refid="db/d39/System_8h"/>
+        <childnode refid="37936" relation="include">
+        </childnode>
+        <childnode refid="37938" relation="include">
+        </childnode>
+        <childnode refid="37952" relation="include">
+        </childnode>
+        <childnode refid="37935" relation="include">
+        </childnode>
+        <childnode refid="37956" relation="include">
+        </childnode>
+        <childnode refid="37958" relation="include">
+        </childnode>
+        <childnode refid="37960" relation="include">
+        </childnode>
+        <childnode refid="37962" relation="include">
+        </childnode>
+      </node>
+      <node id="37980">
+        <label>../../../../Lib/Math/Geometry/MeshGraphs/Graphs/MeshDeformableGraph.h</label>
+        <link refid="df/dc5/MeshDeformableGraph_8h"/>
+        <childnode refid="37981" relation="include">
+        </childnode>
+        <childnode refid="38009" relation="include">
+        </childnode>
+        <childnode refid="38047" relation="include">
+        </childnode>
+      </node>
+      <node id="38033">
+        <label>Features/Facets/MeshTriangleManifold3.h</label>
+        <link refid="d1/d33/MeshTriangleManifold3_8h"/>
+        <childnode refid="38012" relation="include">
+        </childnode>
+        <childnode refid="38034" relation="include">
+        </childnode>
+      </node>
+      <node id="37959">
+        <label>Threading.inl</label>
+      </node>
+      <node id="38024">
+        <label>MeshVertexManifold2.inl</label>
+      </node>
+      <node id="37971">
+        <label>BreakAllocator.inl</label>
+      </node>
+      <node id="38039">
+        <label>Features/Facets/MeshQuadManifoldN.h</label>
+        <link refid="d5/dcc/MeshQuadManifoldN_8h"/>
+        <childnode refid="38012" relation="include">
+        </childnode>
+        <childnode refid="38040" relation="include">
+        </childnode>
+      </node>
+      <node id="38017">
+        <label>MeshFeatureKey.h</label>
+        <link refid="d8/da5/MeshFeatureKey_8h"/>
+        <childnode refid="37933" relation="include">
+        </childnode>
+        <childnode refid="38018" relation="include">
+        </childnode>
+        <childnode refid="38020" relation="include">
+        </childnode>
+      </node>
+      <node id="38067">
+        <label>VertexFormat.inl</label>
+      </node>
+      <node id="37932">
+        <label>../Datastruct.h</label>
+        <link refid="d5/db1/Datastruct_8h"/>
+        <childnode refid="37933" relation="include">
+        </childnode>
+        <childnode refid="37975" relation="include">
+        </childnode>
+      </node>
+      <node id="38079">
+        <label>TransformedShape.inl</label>
+      </node>
+      <node id="37975">
+        <label>Datastruct.inl</label>
+      </node>
+      <node id="38014">
+        <label>../Tree/RedBlackTree.h</label>
+        <link refid="d6/dff/RedBlackTree_8h"/>
+        <childnode refid="37932" relation="include">
+        </childnode>
+        <childnode refid="38015" relation="include">
+        </childnode>
+      </node>
+      <node id="38003">
+        <label>Line3.inl</label>
+      </node>
+      <node id="38029">
+        <label>Features/Edges/MeshEdgeManifold3.h</label>
+        <link refid="da/da9/MeshEdgeManifold3_8h"/>
+        <childnode refid="38012" relation="include">
+        </childnode>
+        <childnode refid="38030" relation="include">
+        </childnode>
+      </node>
+      <node id="38044">
+        <label>MeshPolygonManifoldN.inl</label>
+      </node>
+      <node id="37938">
+        <label>Platform.h</label>
+        <link refid="d9/dd0/Platform_8h"/>
+        <childnode refid="37939" relation="include">
+        </childnode>
+      </node>
+      <node id="38043">
+        <label>Features/Facets/MeshPolygonManifoldN.h</label>
+        <link refid="dc/de6/MeshPolygonManifoldN_8h"/>
+        <childnode refid="38012" relation="include">
+        </childnode>
+        <childnode refid="38044" relation="include">
+        </childnode>
+      </node>
+      <node id="37998">
+        <label>../Vertex/Vertex4.h</label>
+        <link refid="d1/dca/Vertex4_8h"/>
+        <childnode refid="37996" relation="include">
+        </childnode>
+        <childnode refid="37999" relation="include">
+        </childnode>
+      </node>
+      <node id="38036">
+        <label>MeshTriangleManifoldN.inl</label>
+      </node>
+      <node id="38031">
+        <label>Features/Edges/MeshEdgeManifoldN.h</label>
+        <link refid="d7/d8a/MeshEdgeManifoldN_8h"/>
+        <childnode refid="38012" relation="include">
+        </childnode>
+        <childnode refid="38032" relation="include">
+        </childnode>
+      </node>
+      <node id="37968">
+        <label>Allocators/PoolAllocator.h</label>
+        <link refid="d3/d03/PoolAllocator_8h"/>
+        <childnode refid="37965" relation="include">
+        </childnode>
+        <childnode refid="37969" relation="include">
+        </childnode>
+      </node>
+      <node id="38050">
+        <label>../Shape.h</label>
+        <link refid="de/d8f/Shape_8h"/>
+        <childnode refid="37984" relation="include">
+        </childnode>
+        <childnode refid="38051" relation="include">
+        </childnode>
+        <childnode refid="37982" relation="include">
+        </childnode>
+        <childnode refid="38053" relation="include">
+        </childnode>
+        <childnode refid="38055" relation="include">
+        </childnode>
+        <childnode refid="38057" relation="include">
+        </childnode>
+        <childnode refid="37980" relation="include">
+        </childnode>
+        <childnode refid="37981" relation="include">
+        </childnode>
+        <childnode refid="38059" relation="include">
+        </childnode>
+        <childnode refid="38048" relation="include">
+        </childnode>
+        <childnode refid="38075" relation="include">
+        </childnode>
+      </node>
+      <node id="38081">
+        <label>IslandEdge.h</label>
+        <link refid="df/dbc/IslandEdge_8h"/>
+        <childnode refid="37950" relation="include">
+        </childnode>
+        <childnode refid="38082" relation="include">
+        </childnode>
+      </node>
+      <node id="37988">
+        <label>../Vector/Vector3.h</label>
+        <link refid="dd/d8c/Vector3_8h"/>
+        <childnode refid="37944" relation="include">
+        </childnode>
+        <childnode refid="37989" relation="include">
+        </childnode>
+      </node>
+      <node id="38085">
+        <label>SoftBody.inl</label>
+      </node>
+      <node id="37941">
+        <label>FPU.inl</label>
+      </node>
+      <node id="37943">
+        <label>Hashing.inl</label>
+      </node>
+      <node id="37949">
+        <label>MathFunction.inl</label>
+      </node>
+      <node id="38016">
+        <label>TreeMap.inl</label>
+      </node>
+      <node id="38053">
+        <label>../../../Lib/Math/Geometry/Primitives/3D/Sphere.h</label>
+        <link refid="d3/dca/Sphere_8h"/>
+        <childnode refid="37950" relation="include">
+        </childnode>
+        <childnode refid="37988" relation="include">
+        </childnode>
+        <childnode refid="37992" relation="include">
+        </childnode>
+        <childnode refid="38054" relation="include">
+        </childnode>
+      </node>
+      <node id="37945">
+        <label>../Formats/Scalar.h</label>
+        <link refid="d0/d10/Scalar_8h"/>
+        <childnode refid="37938" relation="include">
+        </childnode>
+        <childnode refid="37946" relation="include">
+        </childnode>
+      </node>
+      <node id="38076">
+        <label>ShapeDeformable.inl</label>
+      </node>
+      <node id="38022">
+        <label>MeshFeatureDeclarations.inl</label>
+      </node>
+      <node id="37966">
+        <label>MemoryAllocator.inl</label>
+      </node>
+      <node id="38080">
+        <label>../IslandNode.h</label>
+        <link refid="d7/dcb/IslandNode_8h"/>
+        <childnode refid="38081" relation="include">
+        </childnode>
+        <childnode refid="38083" relation="include">
+        </childnode>
+      </node>
+      <node id="38078">
+        <label>../../Shape/TransformedShape.h</label>
+        <link refid="d1/da1/TransformedShape_8h"/>
+        <childnode refid="38050" relation="include">
+        </childnode>
+        <childnode refid="38079" relation="include">
+        </childnode>
+      </node>
+      <node id="38070">
+        <label>Geometry/IndexBuffer.h</label>
+        <link refid="da/d3a/IndexBuffer_8h"/>
+        <childnode refid="37933" relation="include">
+        </childnode>
+        <childnode refid="38071" relation="include">
+        </childnode>
+      </node>
+      <node id="38045">
+        <label>MeshGraph.inl</label>
+      </node>
+      <node id="38034">
+        <label>MeshTriangleManifold3.inl</label>
+      </node>
+      <node id="38032">
+        <label>MeshEdgeManifoldN.inl</label>
+      </node>
+      <node id="38074">
+        <label>Mesh.inl</label>
+      </node>
+      <node id="37934">
+        <label>../Math/Hash/Hashing.h</label>
+        <link refid="d0/d4e/Hashing_8h"/>
+        <childnode refid="37935" relation="include">
+        </childnode>
+        <childnode refid="37943" relation="include">
+        </childnode>
+      </node>
+      <node id="38072">
+        <label>Geometry/VertexBufferAccessor.h</label>
+        <link refid="d8/d41/VertexBufferAccessor_8h"/>
+        <childnode refid="38066" relation="include">
+        </childnode>
+        <childnode refid="38068" relation="include">
+        </childnode>
+        <childnode refid="38073" relation="include">
+        </childnode>
+      </node>
+      <node id="37965">
+        <label>MemoryAllocator.h</label>
+        <link refid="d2/d75/MemoryAllocator_8h"/>
+        <childnode refid="37950" relation="include">
+        </childnode>
+        <childnode refid="37966" relation="include">
+        </childnode>
+      </node>
+      <node id="38027">
+        <label>Features/Edges/MeshEdgeManifold2.h</label>
+        <link refid="df/df1/MeshEdgeManifold2_8h"/>
+        <childnode refid="38012" relation="include">
+        </childnode>
+        <childnode refid="38028" relation="include">
+        </childnode>
+      </node>
+      <node id="38025">
+        <label>Features/Vertices/MeshVertexManifoldN.h</label>
+        <link refid="de/d75/MeshVertexManifoldN_8h"/>
+        <childnode refid="38012" relation="include">
+        </childnode>
+        <childnode refid="38026" relation="include">
+        </childnode>
+      </node>
+      <node id="37995">
+        <label>../Matrix/Matrix4.h</label>
+        <link refid="d6/d64/Matrix4_8h"/>
+        <childnode refid="37988" relation="include">
+        </childnode>
+        <childnode refid="37996" relation="include">
+        </childnode>
+        <childnode refid="37992" relation="include">
+        </childnode>
+        <childnode refid="37998" relation="include">
+        </childnode>
+        <childnode refid="38000" relation="include">
+        </childnode>
+      </node>
+      <node id="38004">
+        <label>../../Primitives/3D/Planar/Plane.h</label>
+        <link refid="d8/d2f/Plane_8h"/>
+        <childnode refid="37988" relation="include">
+        </childnode>
+        <childnode refid="37992" relation="include">
+        </childnode>
+        <childnode refid="38005" relation="include">
+        </childnode>
+      </node>
+      <node id="38046">
+        <label>MeshManifold3.inl</label>
+      </node>
+      <node id="37957">
+        <label>File.inl</label>
+      </node>
+      <node id="38005">
+        <label>Plane.inl</label>
+      </node>
+      <node id="38075">
+        <label>Shape.inl</label>
+      </node>
+      <node id="38037">
+        <label>Features/Facets/MeshQuadManifold3.h</label>
+        <link refid="dd/d34/MeshQuadManifold3_8h"/>
+        <childnode refid="38012" relation="include">
+        </childnode>
+        <childnode refid="38038" relation="include">
+        </childnode>
+      </node>
+      <node id="37952">
+        <label>Hardware/Hardware.h</label>
+        <link refid="da/dec/Hardware_8h"/>
+        <childnode refid="37938" relation="include">
+        </childnode>
+        <childnode refid="37940" relation="include">
+        </childnode>
+        <childnode refid="37953" relation="include">
+        </childnode>
+        <childnode refid="37955" relation="include">
+        </childnode>
+      </node>
+      <node id="37964">
+        <label>Allocators/StackAllocator.h</label>
+        <link refid="db/d84/StackAllocator_8h"/>
+        <childnode refid="37965" relation="include">
+        </childnode>
+        <childnode refid="37967" relation="include">
+        </childnode>
+      </node>
+      <node id="38018">
+        <label>../../../../Object/Patterns/VirtualHolder.h</label>
+        <link refid="df/d40/VirtualHolder_8h"/>
+        <childnode refid="37950" relation="include">
+        </childnode>
+        <childnode refid="38019" relation="include">
+        </childnode>
+      </node>
+      <node id="37955">
+        <label>Hardware.inl</label>
+      </node>
+      <node id="38084">
+        <label>BodyNode.inl</label>
+      </node>
+      <node id="38007">
+        <label>BVAABox.inl</label>
+      </node>
+      <node id="37986">
+        <label>../Vector/Vector2.h</label>
+        <link refid="d0/df7/Vector2_8h"/>
+        <childnode refid="37944" relation="include">
+        </childnode>
+        <childnode refid="37987" relation="include">
+        </childnode>
+      </node>
+      <node id="37997">
+        <label>Vector4.inl</label>
+      </node>
+      <node id="38052">
+        <label>Quaternion.inl</label>
+      </node>
+      <node id="37969">
+        <label>PoolAllocator.inl</label>
+      </node>
+      <node id="38056">
+        <label>Triangle3.inl</label>
+      </node>
+      <node id="38073">
+        <label>VertexBufferAccessor.inl</label>
+      </node>
+      <node id="37946">
+        <label>Scalar.inl</label>
+      </node>
+      <node id="37984">
+        <label>../../../Types/Transform/Transform3.h</label>
+        <link refid="d2/d67/Transform3_8h"/>
+        <childnode refid="37950" relation="include">
+        </childnode>
+        <childnode refid="37985" relation="include">
+        </childnode>
+        <childnode refid="37995" relation="include">
+        </childnode>
+        <childnode refid="38001" relation="include">
+        </childnode>
+      </node>
+      <node id="38082">
+        <label>IslandEdge.inl</label>
+      </node>
+      <node id="37942">
+        <label>String.inl</label>
+      </node>
+      <node id="38042">
+        <label>MeshPolygonManifold3.inl</label>
+      </node>
+      <node id="37978">
+        <label>Random.inl</label>
+      </node>
+      <node id="37989">
+        <label>Vector3.inl</label>
+      </node>
+      <node id="38020">
+        <label>MeshFeatureKey.inl</label>
+      </node>
+      <node id="37930">
+        <label>SoftBody.h</label>
+        <link refid="SoftBody.h"/>
+        <childnode refid="37931" relation="include">
+        </childnode>
+        <childnode refid="37977" relation="include">
+        </childnode>
+        <childnode refid="37979" relation="include">
+        </childnode>
+        <childnode refid="38077" relation="include">
+        </childnode>
+        <childnode refid="38085" relation="include">
+        </childnode>
+      </node>
+      <node id="37931">
+        <label>../../../Lib/Datastruct/Array/Array.h</label>
+        <link refid="df/dd0/Array_8h"/>
+        <childnode refid="37932" relation="include">
+        </childnode>
+        <childnode refid="37976" relation="include">
+        </childnode>
+      </node>
+      <node id="37987">
+        <label>Vector2.inl</label>
+      </node>
+      <node id="38065">
+        <label>TextureCoord2.inl</label>
+      </node>
+      <node id="38062">
+        <label>../../../Lib/Math/Types/TextureCoord/TextureCoord1.h</label>
+        <link refid="db/dd0/TextureCoord1_8h"/>
+        <childnode refid="37986" relation="include">
+        </childnode>
+        <childnode refid="37988" relation="include">
+        </childnode>
+        <childnode refid="37996" relation="include">
+        </childnode>
+        <childnode refid="38063" relation="include">
+        </childnode>
+      </node>
+      <node id="37940">
+        <label>Hardware/FPU.h</label>
+        <link refid="dd/d2f/FPU_8h"/>
+        <childnode refid="37938" relation="include">
+        </childnode>
+        <childnode refid="37941" relation="include">
+        </childnode>
+      </node>
+      <node id="38009">
+        <label>../MeshManifold3.h</label>
+        <link refid="dd/dfb/MeshManifold3_8h"/>
+        <childnode refid="38010" relation="include">
+        </childnode>
+        <childnode refid="38046" relation="include">
+        </childnode>
+      </node>
+      <node id="37981">
+        <label>../../SpacePartitions/AABoxTree.h</label>
+        <link refid="d3/db4/AABoxTree_8h"/>
+        <childnode refid="37932" relation="include">
+        </childnode>
+        <childnode refid="37982" relation="include">
+        </childnode>
+        <childnode refid="38008" relation="include">
+        </childnode>
+      </node>
+      <node id="37977">
+        <label>../../../Lib/Math/Random/Random.h</label>
+        <link refid="dd/d6d/Random_8h"/>
+        <childnode refid="37938" relation="include">
+        </childnode>
+        <childnode refid="37978" relation="include">
+        </childnode>
+      </node>
+      <node id="37990">
+        <label>../Vertex/Vertex2.h</label>
+        <link refid="dc/d05/Vertex2_8h"/>
+        <childnode refid="37986" relation="include">
+        </childnode>
+        <childnode refid="37991" relation="include">
+        </childnode>
+      </node>
+      <node id="37982">
+        <label>../BoundingShapes/3D/BVAABox.h</label>
+        <link refid="dc/d7d/BVAABox_8h"/>
+        <childnode refid="37983" relation="include">
+        </childnode>
+        <childnode refid="38007" relation="include">
+        </childnode>
+      </node>
+      <node id="37985">
+        <label>../Matrix/Matrix3.h</label>
+        <link refid="d1/d41/Matrix3_8h"/>
+        <childnode refid="37986" relation="include">
+        </childnode>
+        <childnode refid="37988" relation="include">
+        </childnode>
+        <childnode refid="37990" relation="include">
+        </childnode>
+        <childnode refid="37992" relation="include">
+        </childnode>
+        <childnode refid="37994" relation="include">
+        </childnode>
+      </node>
+      <node id="37972">
+        <label>Allocators/HeapAllocator.h</label>
+        <link refid="d3/d89/HeapAllocator_8h"/>
+        <childnode refid="37965" relation="include">
+        </childnode>
+        <childnode refid="37973" relation="include">
+        </childnode>
+      </node>
+      <node id="37935">
+        <label>../../../ThirdParty/System/String.h</label>
+        <link refid="d9/dba/String_8h"/>
+        <childnode refid="37936" relation="include">
+        </childnode>
+        <childnode refid="37938" relation="include">
+        </childnode>
+        <childnode refid="37940" relation="include">
+        </childnode>
+        <childnode refid="37942" relation="include">
+        </childnode>
+      </node>
+      <node id="38001">
+        <label>Transform3.inl</label>
+      </node>
+      <node id="38055">
+        <label>../../../Lib/Math/Geometry/Primitives/3D/Planar/Triangle3.h</label>
+        <link refid="d0/de4/Triangle3_8h"/>
+        <childnode refid="37988" relation="include">
+        </childnode>
+        <childnode refid="37992" relation="include">
+        </childnode>
+        <childnode refid="38004" relation="include">
+        </childnode>
+        <childnode refid="38056" relation="include">
+        </childnode>
+      </node>
+      <node id="37939">
+        <label>Platform.inl</label>
+      </node>
+      <node id="37974">
+        <label>MemoryManager.inl</label>
+      </node>
+      <node id="37962">
+        <label>System.inl</label>
+      </node>
+      <node id="38058">
+        <label>MeshVoronoiGraph.inl</label>
+      </node>
+      <node id="37960">
+        <label>Networking.h</label>
+        <link refid="df/dfb/Networking_8h"/>
+        <childnode refid="37936" relation="include">
+        </childnode>
+        <childnode refid="37938" relation="include">
+        </childnode>
+        <childnode refid="37961" relation="include">
+        </childnode>
+      </node>
+      <node id="37983">
+        <label>BoundingVolume.h</label>
+        <link refid="dd/d3b/BoundingVolume_8h"/>
+        <childnode refid="37984" relation="include">
+        </childnode>
+        <childnode refid="38002" relation="include">
+        </childnode>
+        <childnode refid="38004" relation="include">
+        </childnode>
+        <childnode refid="38006" relation="include">
+        </childnode>
+      </node>
+      <node id="38011">
+        <label>Features/Vertices/MeshVertexManifold2.h</label>
+        <link refid="d5/d60/MeshVertexManifold2_8h"/>
+        <childnode refid="38012" relation="include">
+        </childnode>
+        <childnode refid="38024" relation="include">
+        </childnode>
+      </node>
+      <node id="38077">
+        <label>../IslandSolver/Nodes/BodyNode.h</label>
+        <link refid="d7/d87/BodyNode_8h"/>
+        <childnode refid="38050" relation="include">
+        </childnode>
+        <childnode refid="38078" relation="include">
+        </childnode>
+        <childnode refid="38080" relation="include">
+        </childnode>
+        <childnode refid="38084" relation="include">
+        </childnode>
+      </node>
+      <node id="37956">
+        <label>File.h</label>
+        <link refid="d6/db7/File_8h"/>
+        <childnode refid="37936" relation="include">
+        </childnode>
+        <childnode refid="37938" relation="include">
+        </childnode>
+        <childnode refid="37935" relation="include">
+        </childnode>
+        <childnode refid="37957" relation="include">
+        </childnode>
+      </node>
+      <node id="37967">
+        <label>StackAllocator.inl</label>
+      </node>
+      <node id="37937">
+        <label>ForwardWin32.inl</label>
+      </node>
+      <node id="38008">
+        <label>AABoxTree.inl</label>
+      </node>
+      <node id="37953">
+        <label>SSE.h</label>
+        <link refid="d0/d02/SSE_8h"/>
+        <childnode refid="37938" relation="include">
+        </childnode>
+        <childnode refid="37954" relation="include">
+        </childnode>
+      </node>
+      <node id="38068">
+        <label>Geometry/VertexBuffer.h</label>
+        <link refid="d9/d38/VertexBuffer_8h"/>
+        <childnode refid="37933" relation="include">
+        </childnode>
+        <childnode refid="38069" relation="include">
+        </childnode>
+      </node>
+      <node id="38059">
+        <label>../../Rendering/Resources/Mesh.h</label>
+        <link refid="d9/d31/Mesh_8h"/>
+        <childnode refid="38060" relation="include">
+        </childnode>
+        <childnode refid="37984" relation="include">
+        </childnode>
+        <childnode refid="38062" relation="include">
+        </childnode>
+        <childnode refid="38064" relation="include">
+        </childnode>
+        <childnode refid="38066" relation="include">
+        </childnode>
+        <childnode refid="38068" relation="include">
+        </childnode>
+        <childnode refid="38070" relation="include">
+        </childnode>
+        <childnode refid="38072" relation="include">
+        </childnode>
+        <childnode refid="38074" relation="include">
+        </childnode>
+      </node>
+      <node id="38013">
+        <label>../../../../Datastruct/Table/TreeMap.h</label>
+        <link refid="da/d29/TreeMap_8h"/>
+        <childnode refid="38014" relation="include">
+        </childnode>
+        <childnode refid="38016" relation="include">
+        </childnode>
+      </node>
+      <node id="37961">
+        <label>Networking.inl</label>
+      </node>
+      <node id="37999">
+        <label>Vertex4.inl</label>
+      </node>
+      <node id="38038">
+        <label>MeshQuadManifold3.inl</label>
+      </node>
+      <node id="37948">
+        <label>Fixed.inl</label>
+      </node>
+      <node id="38064">
+        <label>../../../Lib/Math/Types/TextureCoord/TextureCoord2.h</label>
+        <link refid="d6/d21/TextureCoord2_8h"/>
+        <childnode refid="37986" relation="include">
+        </childnode>
+        <childnode refid="37988" relation="include">
+        </childnode>
+        <childnode refid="37996" relation="include">
+        </childnode>
+        <childnode refid="38065" relation="include">
+        </childnode>
+      </node>
+      <node id="38010">
+        <label>MeshGraph.h</label>
+        <link refid="d3/d8a/MeshGraph_8h"/>
+        <childnode refid="38011" relation="include">
+        </childnode>
+        <childnode refid="38025" relation="include">
+        </childnode>
+        <childnode refid="38027" relation="include">
+        </childnode>
+        <childnode refid="38029" relation="include">
+        </childnode>
+        <childnode refid="38031" relation="include">
+        </childnode>
+        <childnode refid="38033" relation="include">
+        </childnode>
+        <childnode refid="38035" relation="include">
+        </childnode>
+        <childnode refid="38037" relation="include">
+        </childnode>
+        <childnode refid="38039" relation="include">
+        </childnode>
+        <childnode refid="38041" relation="include">
+        </childnode>
+        <childnode refid="38043" relation="include">
+        </childnode>
+        <childnode refid="38045" relation="include">
+        </childnode>
+      </node>
+      <node id="37944">
+        <label>../Math/Functions/MathFunction.h</label>
+        <link refid="d1/d98/MathFunction_8h"/>
+        <childnode refid="37940" relation="include">
+        </childnode>
+        <childnode refid="37945" relation="include">
+        </childnode>
+        <childnode refid="37947" relation="include">
+        </childnode>
+        <childnode refid="37949" relation="include">
+        </childnode>
+      </node>
+      <node id="37947">
+        <label>../Formats/Fixed.h</label>
+        <link refid="d4/d76/Fixed_8h"/>
+        <childnode refid="37945" relation="include">
+        </childnode>
+        <childnode refid="37948" relation="include">
+        </childnode>
+      </node>
+      <node id="37963">
+        <label>ErrorManager.inl</label>
+      </node>
+      <node id="38071">
+        <label>IndexBuffer.inl</label>
+      </node>
+      <node id="38051">
+        <label>../../../Lib/Math/Types/Quaternion/Quaternion.h</label>
+        <link refid="d1/d4a/Quaternion_8h"/>
+        <childnode refid="37988" relation="include">
+        </childnode>
+        <childnode refid="37996" relation="include">
+        </childnode>
+        <childnode refid="37985" relation="include">
+        </childnode>
+        <childnode refid="37995" relation="include">
+        </childnode>
+        <childnode refid="38052" relation="include">
+        </childnode>
+      </node>
+      <node id="38061">
+        <label>Matrix2.inl</label>
+      </node>
+      <node id="38026">
+        <label>MeshVertexManifoldN.inl</label>
+      </node>
+      <node id="37993">
+        <label>Vertex3.inl</label>
+      </node>
+      <node id="38012">
+        <label>../MeshFeature.h</label>
+        <link refid="d2/d43/MeshFeature_8h"/>
+        <childnode refid="37931" relation="include">
+        </childnode>
+        <childnode refid="38013" relation="include">
+        </childnode>
+        <childnode refid="38017" relation="include">
+        </childnode>
+        <childnode refid="38021" relation="include">
+        </childnode>
+        <childnode refid="38023" relation="include">
+        </childnode>
+      </node>
+      <node id="38048">
+        <label>../../CollisionDetection/NarrowPhase/ContactManifold.h</label>
+        <link refid="d1/d5f/ContactManifold_8h"/>
+        <childnode refid="37950" relation="include">
+        </childnode>
+        <childnode refid="37988" relation="include">
+        </childnode>
+        <childnode refid="37992" relation="include">
+        </childnode>
+        <childnode refid="38049" relation="include">
+        </childnode>
+      </node>
+      <node id="38057">
+        <label>../../../Lib/Math/Geometry/MeshGraphs/Graphs/MeshVoronoiGraph.h</label>
+        <link refid="d0/dd3/MeshVoronoiGraph_8h"/>
+        <childnode refid="38004" relation="include">
+        </childnode>
+        <childnode refid="38009" relation="include">
+        </childnode>
+        <childnode refid="38058" relation="include">
+        </childnode>
+      </node>
+      <node id="38021">
+        <label>MeshFeatureDeclarations.h</label>
+        <link refid="d3/df6/MeshFeatureDeclarations_8h"/>
+        <childnode refid="38022" relation="include">
+        </childnode>
+      </node>
+      <node id="38028">
+        <label>MeshEdgeManifold2.inl</label>
+      </node>
+      <node id="38040">
+        <label>MeshQuadManifoldN.inl</label>
+      </node>
+      <node id="37979">
+        <label>../Shape/Concave/ShapeDeformable.h</label>
+        <link refid="d7/d66/ShapeDeformable_8h"/>
+        <childnode refid="37980" relation="include">
+        </childnode>
+        <childnode refid="38048" relation="include">
+        </childnode>
+        <childnode refid="38050" relation="include">
+        </childnode>
+        <childnode refid="38076" relation="include">
+        </childnode>
+      </node>
+      <node id="37992">
+        <label>../Vertex/Vertex3.h</label>
+        <link refid="d0/df3/Vertex3_8h"/>
+        <childnode refid="37988" relation="include">
+        </childnode>
+        <childnode refid="37993" relation="include">
+        </childnode>
+      </node>
+      <node id="37973">
+        <label>HeapAllocator.inl</label>
+      </node>
+      <node id="37994">
+        <label>Matrix3.inl</label>
+      </node>
+      <node id="37936">
+        <label>../Forwards/ForwardWin32.h</label>
+        <link refid="d5/dea/ForwardWin32_8h"/>
+        <childnode refid="37937" relation="include">
+        </childnode>
+      </node>
+      <node id="37991">
+        <label>Vertex2.inl</label>
+      </node>
+      <node id="38041">
+        <label>Features/Facets/MeshPolygonManifold3.h</label>
+        <link refid="d7/da5/MeshPolygonManifold3_8h"/>
+        <childnode refid="38012" relation="include">
+        </childnode>
+        <childnode refid="38042" relation="include">
+        </childnode>
+      </node>
+      <node id="37950">
+        <label>../Error/ErrorManager.h</label>
+        <link refid="d1/db6/ErrorManager_8h"/>
+        <childnode refid="37951" relation="include">
+        </childnode>
+        <childnode refid="37963" relation="include">
+        </childnode>
+      </node>
+      <node id="38060">
+        <label>../../../Lib/Math/Types/Matrix/Matrix2.h</label>
+        <link refid="dc/d1a/Matrix2_8h"/>
+        <childnode refid="37986" relation="include">
+        </childnode>
+        <childnode refid="37990" relation="include">
+        </childnode>
+        <childnode refid="38061" relation="include">
+        </childnode>
+      </node>
+      <node id="38049">
+        <label>ContactManifold.inl</label>
+      </node>
+      <node id="37976">
+        <label>Array.inl</label>
+      </node>
+      <node id="38054">
+        <label>Sphere.inl</label>
+      </node>
+      <node id="38063">
+        <label>TextureCoord1.inl</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="38094">
+        <label>WorldManager.h</label>
+        <link refid="db/d98/WorldManager_8h"/>
+        <childnode refid="38088" relation="include">
+        </childnode>
+      </node>
+      <node id="38093">
+        <label>MyDungeon.h</label>
+        <link refid="d0/de7/MyDungeon_8h"/>
+        <childnode refid="38091" relation="include">
+        </childnode>
+      </node>
+      <node id="38087">
+        <label>PhysicsManager.h</label>
+        <link refid="d2/d6b/PhysicsManager_8h"/>
+        <childnode refid="38088" relation="include">
+        </childnode>
+        <childnode refid="38094" relation="include">
+        </childnode>
+      </node>
+      <node id="38091">
+        <label>Main.h</label>
+        <link refid="da/d94/Main_8h"/>
+      </node>
+      <node id="38092">
+        <label>MyLandscape.h</label>
+        <link refid="d7/d2b/MyLandscape_8h"/>
+        <childnode refid="38091" relation="include">
+        </childnode>
+      </node>
+      <node id="38089">
+        <label>ApplicationManager.h</label>
+        <link refid="d2/d9d/ApplicationManager_8h"/>
+        <childnode refid="38090" relation="include">
+        </childnode>
+        <childnode refid="38091" relation="include">
+        </childnode>
+        <childnode refid="38092" relation="include">
+        </childnode>
+        <childnode refid="38093" relation="include">
+        </childnode>
+      </node>
+      <node id="38088">
+        <label>WindowApplication.h</label>
+        <link refid="d4/d72/WindowApplication_8h"/>
+        <childnode refid="38089" relation="include">
+        </childnode>
+      </node>
+      <node id="38095">
+        <label>SoftConstraintSolver.h</label>
+        <link refid="d1/d3a/SoftConstraintSolver_8h"/>
+        <childnode refid="38096" relation="include">
+        </childnode>
+      </node>
+      <node id="38086">
+        <label>SoftBody.h</label>
+        <link refid="SoftBody.h"/>
+        <childnode refid="38087" relation="include">
+        </childnode>
+        <childnode refid="38095" relation="include">
+        </childnode>
+      </node>
+      <node id="38090">
+        <label>Entities.h</label>
+        <link refid="d7/d5d/Entities_8h"/>
+        <childnode refid="38091" relation="include">
+        </childnode>
+      </node>
+      <node id="38096">
+        <label>ConstraintSolver.h</label>
+        <link refid="da/db5/ConstraintSolver_8h"/>
+        <childnode refid="38087" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d1/da9/structSoftBodyEnvironment" prot="public">SoftBodyEnvironment</innerclass>
+    <innerclass refid="d8/d6e/classSoftBody" prot="public">SoftBody</innerclass>
+    <innerclass refid="d2/d10/structMaterial" prot="public">Material</innerclass>
+    <innerclass refid="d1/d01/classSoftBody_1_1Node" prot="public">SoftBody::Node</innerclass>
+    <innerclass refid="d2/db4/classSoftBody_1_1Link" prot="public">SoftBody::Link</innerclass>
+    <innerclass refid="db/d1c/classSoftBody_1_1Facet" prot="public">SoftBody::Facet</innerclass>
+    <innerclass refid="d5/dc1/structMedium" prot="private">Medium</innerclass>
+    <innerclass refid="d3/d35/structShapePose" prot="private">ShapePose</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="dc/d93/SoftBody_8h_1a8a3bab6e8b861191d649d2cd2c0e75ae" prot="public" static="no">
+        <name>SoftBodyFeatureType</name>
+        <enumvalue id="dc/d93/SoftBody_8h_1a8a3bab6e8b861191d649d2cd2c0e75aea0e82beb8f8c50c68704d73c1d48b44cc" prot="public">
+          <name>SOFTBODY_FEATURE_UNDEFINED</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d93/SoftBody_8h_1a8a3bab6e8b861191d649d2cd2c0e75aea2c2f3634f1b00ca1cd0801d08d3c8a3e" prot="public">
+          <name>SOFTBODY_FEATURE_NODE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d93/SoftBody_8h_1a8a3bab6e8b861191d649d2cd2c0e75aea3bee439f03fa1db58e97c65e333f267e" prot="public">
+          <name>SOFTBODY_FEATURE_LINK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d93/SoftBody_8h_1a8a3bab6e8b861191d649d2cd2c0e75aea42f0b062daca8b7efe10a53d571b2815" prot="public">
+          <name>SOFTBODY_FEATURE_FACET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d93/SoftBody_8h_1a8a3bab6e8b861191d649d2cd2c0e75aea80574185463968da9287b0409d6deba0" prot="public">
+          <name>SOFTBODY_FEATURE_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Bodies/SoftBody.h" line="39" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Bodies/SoftBody.h" bodystart="38" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="enum" id="dc/d93/SoftBody_8h_1ace7d85018c65836c632aeec446d1d52a" prot="public" static="no">
+        <name>SoftBodyAeroDynamics</name>
+        <enumvalue id="dc/d93/SoftBody_8h_1ace7d85018c65836c632aeec446d1d52aa8a0b0a8fe3d37bacac53551b803c51b3" prot="public">
+          <name>SOFTBODY_AERODYNAMICS_V_Point</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d93/SoftBody_8h_1ace7d85018c65836c632aeec446d1d52aaaea918004f7343b9c656f48b18e4f74d" prot="public">
+          <name>SOFTBODY_AERODYNAMICS_V_OneSided</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d93/SoftBody_8h_1ace7d85018c65836c632aeec446d1d52aa080f444a41786eca414a55ac33b99b58" prot="public">
+          <name>SOFTBODY_AERODYNAMICS_V_TwoSided</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d93/SoftBody_8h_1ace7d85018c65836c632aeec446d1d52aa79f626d14e2b87ec90c0de6d1a2806b7" prot="public">
+          <name>SOFTBODY_AERODYNAMICS_F_OneSided</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d93/SoftBody_8h_1ace7d85018c65836c632aeec446d1d52aa6f8e8698803cfd279ae2373a66bc6eba" prot="public">
+          <name>SOFTBODY_AERODYNAMICS_F_TwoSided</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d93/SoftBody_8h_1ace7d85018c65836c632aeec446d1d52aa41c03e0ad853d847ee04e571b66dffb5" prot="public">
+          <name>SOFTBODY_AERODYNAMICS_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Bodies/SoftBody.h" line="71" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Bodies/SoftBody.h" bodystart="70" bodyend="79"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Bodies/SoftBody.h"/>
+  </compounddef>
+</doxygen>

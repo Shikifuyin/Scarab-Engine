@@ -1,0 +1,636 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d1/dc7/classGUITreeNode" kind="class" prot="public">
+    <compoundname>GUITreeNode</compoundname>
+    <includes refid="d1/d0d/GUITree_8h" local="no">GUITree.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="d1/dc7/classGUITreeNode_1a64000c01757277ed2fd8bd83a2cc5b25" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class GUITreeModel</definition>
+        <argsstring></argsstring>
+        <name>GUITreeModel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" line="68" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d1/dc7/classGUITreeNode_1aba08d400acc27e9835e1748b6c328984" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool m_bIsLastChild</definition>
+        <argsstring></argsstring>
+        <name>m_bIsLastChild</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" line="79" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/dc7/classGUITreeNode_1a781e5e60fced90da45796c96d1a820f6" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iDepth</definition>
+        <argsstring></argsstring>
+        <name>m_iDepth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" line="80" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/dc7/classGUITreeNode_1afa1943a9269f210d99855c8b7e17eb01" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool m_bPopulated</definition>
+        <argsstring></argsstring>
+        <name>m_bPopulated</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" line="82" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/dc7/classGUITreeNode_1a23a17f6bf3b4f3c796e3ca5429557a43" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iNodeCount</definition>
+        <argsstring></argsstring>
+        <name>m_iNodeCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" line="83" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/dc7/classGUITreeNode_1aba810fa06e13e4e2bec1c174f3c980bc" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool m_bExpanded</definition>
+        <argsstring></argsstring>
+        <name>m_bExpanded</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" line="85" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/dc7/classGUITreeNode_1ada32429967bb703a4ddf1275e31a8dcc" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool m_bSelected</definition>
+        <argsstring></argsstring>
+        <name>m_bSelected</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" line="86" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/dc7/classGUITreeNode_1a53e34109b142ecb5dd16678ea552b4e3" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iParentIndex</definition>
+        <argsstring></argsstring>
+        <name>m_iParentIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" line="89" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/dc7/classGUITreeNode_1aba3fded72bdac2241331e3c41082eb89" prot="private" static="no" mutable="no">
+        <type><ref refid="d1/dc7/classGUITreeNode" kindref="compound">GUITreeNode</ref> *</type>
+        <definition>GUITreeNode* m_pParent</definition>
+        <argsstring></argsstring>
+        <name>m_pParent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" line="90" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/dc7/classGUITreeNode_1a2b8e8216d4248b970409aab2fe71e022" prot="private" static="no" mutable="no">
+        <type><ref refid="d0/d26/classArray" kindref="compound">Array</ref>&lt; <ref refid="d1/dc7/classGUITreeNode" kindref="compound">GUITreeNode</ref> * &gt;</type>
+        <definition>Array&lt;GUITreeNode*&gt; m_arrChildren</definition>
+        <argsstring></argsstring>
+        <name>m_arrChildren</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" line="93" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/dc7/classGUITreeNode_1a75e04544d744c006ad79d2e529ded1dd" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool m_bIsLeaf</definition>
+        <argsstring></argsstring>
+        <name>m_bIsLeaf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" line="96" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/dc7/classGUITreeNode_1acc3512734a93c31534597f5f29cba401" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref></type>
+        <definition>GChar m_strName[GUI_NAME_LENGTH]</definition>
+        <argsstring>[GUI_NAME_LENGTH]</argsstring>
+        <name>m_strName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" line="97" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/dc7/classGUITreeNode_1a0427c2600e152068118fbdf1201a6d71" prot="private" static="no" mutable="no">
+        <type><ref refid="d4/deb/GUISkin_8h_1a65a8f0b464f4b1b7ec4e49e99ca6107c" kindref="member">GUISkinImage</ref></type>
+        <definition>GUISkinImage m_idIcon</definition>
+        <argsstring></argsstring>
+        <name>m_idIcon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" line="98" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d1/dc7/classGUITreeNode_1ac43a6d4d4a5059f8ddbe3f93949fb1ca" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool IsRoot</definition>
+        <argsstring>() const </argsstring>
+        <name>IsRoot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" line="42"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/dc7/classGUITreeNode_1acd551a6aca3b3743b3f0031ab33d7c38" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool IsLeaf</definition>
+        <argsstring>() const </argsstring>
+        <name>IsLeaf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" line="43"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/dc7/classGUITreeNode_1ac7359a19e7c18134628da657a71eae8b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool IsLastChild</definition>
+        <argsstring>() const </argsstring>
+        <name>IsLastChild</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" line="44"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/dc7/classGUITreeNode_1ab9be62f8be95ea35dd80cdf01a4f389e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetDepth</definition>
+        <argsstring>() const </argsstring>
+        <name>GetDepth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" line="45"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/dc7/classGUITreeNode_1a987b135ecec30415d3a78bac26db8e8a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool IsExpanded</definition>
+        <argsstring>() const </argsstring>
+        <name>IsExpanded</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/dc7/classGUITreeNode_1aad72872bcf68bc65a64b3f38d1a9dfab" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool IsSelected</definition>
+        <argsstring>() const </argsstring>
+        <name>IsSelected</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" line="48"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/dc7/classGUITreeNode_1ad049b14f8f318a65bf1af588dd9a6183" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetParentIndex</definition>
+        <argsstring>() const </argsstring>
+        <name>GetParentIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" line="50"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/dc7/classGUITreeNode_1a378e2eb75daa524cf5c166fbbea2e3cb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d1/dc7/classGUITreeNode" kindref="compound">GUITreeNode</ref> *</type>
+        <definition>GUITreeNode* GetParent</definition>
+        <argsstring>() const </argsstring>
+        <name>GetParent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/dc7/classGUITreeNode_1ab6b5557368bb70a6a76b14f377d74923" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetChildCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetChildCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" line="52"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/dc7/classGUITreeNode_1a150ba65b03eb3e39a5030cc758a72a29" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d1/dc7/classGUITreeNode" kindref="compound">GUITreeNode</ref> *</type>
+        <definition>GUITreeNode* GetChild</definition>
+        <argsstring>(UInt iChild) const </argsstring>
+        <name>GetChild</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iChild</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" line="53"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/dc7/classGUITreeNode_1acb24949ad36a8ed7b0008515d78ac5ae" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+        <definition>const GChar* GetName</definition>
+        <argsstring>() const </argsstring>
+        <name>GetName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" line="55"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/dc7/classGUITreeNode_1a1791aa92336017e7e7367eae659dd497" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d4/deb/GUISkin_8h_1a65a8f0b464f4b1b7ec4e49e99ca6107c" kindref="member">GUISkinImage</ref></type>
+        <definition>GUISkinImage GetIcon</definition>
+        <argsstring>() const </argsstring>
+        <name>GetIcon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" line="56"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/dc7/classGUITreeNode_1abc38e72cfc1661a40b079fc1955a7b38" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetNodeCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetNodeCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" line="59"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/dc7/classGUITreeNode_1aea57d7edfd9fa3aa374401731ad017f3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/dc7/classGUITreeNode" kindref="compound">GUITreeNode</ref> *</type>
+        <definition>GUITreeNode* GetNode</definition>
+        <argsstring>(UInt iNode) const </argsstring>
+        <name>GetNode</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iNode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" line="60"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/dc7/classGUITreeNode_1a51bf1839ddedc9115eac8c315019ba9c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/dc7/classGUITreeNode" kindref="compound">GUITreeNode</ref> *</type>
+        <definition>GUITreeNode* GetNextNode</definition>
+        <argsstring>() const </argsstring>
+        <name>GetNextNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" line="61"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/dc7/classGUITreeNode_1af8a99efb1b643e04d48ee1fe355461f6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/dc7/classGUITreeNode" kindref="compound">GUITreeNode</ref> *</type>
+        <definition>GUITreeNode* GetNode</definition>
+        <argsstring>(const GChar *strPath) const </argsstring>
+        <name>GetNode</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strPath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" line="63"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/dc7/classGUITreeNode_1a3a053f4c5f47ff6e5125c00e6c1188f7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void GetPath</definition>
+        <argsstring>(GChar *outPath, UInt *outLength) const </argsstring>
+        <name>GetPath</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>outPath</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref> *</type>
+          <declname>outLength</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" line="64"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d1/dc7/classGUITreeNode_1a2b5d1eda326a9618d7692c2daa6ce774" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GUITreeNode</definition>
+        <argsstring>()</argsstring>
+        <name>GUITreeNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" line="69"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/dc7/classGUITreeNode_1a1fdcc0624db3140b4630da778e2653d9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GUITreeNode</definition>
+        <argsstring>(GUITreeNode *pParent, Bool bIsLeaf, const GChar *strName, GUISkinImage idIcon)</argsstring>
+        <name>GUITreeNode</name>
+        <param>
+          <type><ref refid="d1/dc7/classGUITreeNode" kindref="compound">GUITreeNode</ref> *</type>
+          <declname>pParent</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+          <declname>bIsLeaf</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strName</declname>
+        </param>
+        <param>
+          <type><ref refid="d4/deb/GUISkin_8h_1a65a8f0b464f4b1b7ec4e49e99ca6107c" kindref="member">GUISkinImage</ref></type>
+          <declname>idIcon</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" line="70"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/dc7/classGUITreeNode_1a8f7e7a1919893b83bee7ece66a4691f1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~GUITreeNode</definition>
+        <argsstring>()</argsstring>
+        <name>~GUITreeNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" line="71"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/dc7/classGUITreeNode_1a76bd3751b9130ec2944be4c89c92086e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _DestroyChild</definition>
+        <argsstring>(UInt iChild)</argsstring>
+        <name>_DestroyChild</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iChild</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" line="74"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/dc7/classGUITreeNode_1a8fb31549fb81ea72f503e940738be63a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _Expand</definition>
+        <argsstring>()</argsstring>
+        <name>_Expand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" line="75"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/dc7/classGUITreeNode_1aa5a9d705d229b5c85bcd6c961914fc79" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _Collapse</definition>
+        <argsstring>()</argsstring>
+        <name>_Collapse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" line="76"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4605">
+        <label>Array&lt; GUITreeNode * &gt;</label>
+        <link refid="d0/d26/classArray"/>
+        <childnode refid="4606" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4604" relation="usage">
+          <edgelabel>m_arrBuffer</edgelabel>
+        </childnode>
+        <childnode refid="4609" relation="usage">
+          <edgelabel>m_iShrinkFactor</edgelabel>
+          <edgelabel>m_iNextFree</edgelabel>
+          <edgelabel>m_iBufferSize</edgelabel>
+          <edgelabel>m_iPageSize</edgelabel>
+        </childnode>
+      </node>
+      <node id="4604">
+        <label>GUITreeNode</label>
+        <link refid="d1/dc7/classGUITreeNode"/>
+        <childnode refid="4605" relation="usage">
+          <edgelabel>m_arrChildren</edgelabel>
+        </childnode>
+        <childnode refid="4604" relation="usage">
+          <edgelabel>m_pParent</edgelabel>
+        </childnode>
+        <childnode refid="4607" relation="usage">
+          <edgelabel>m_strName</edgelabel>
+        </childnode>
+        <childnode refid="4609" relation="usage">
+          <edgelabel>m_iParentIndex</edgelabel>
+          <edgelabel>m_iDepth</edgelabel>
+          <edgelabel>m_iNodeCount</edgelabel>
+        </childnode>
+        <childnode refid="4610" relation="usage">
+          <edgelabel>m_bPopulated</edgelabel>
+          <edgelabel>m_bIsLeaf</edgelabel>
+          <edgelabel>m_bIsLastChild</edgelabel>
+          <edgelabel>m_bExpanded</edgelabel>
+          <edgelabel>m_bSelected</edgelabel>
+        </childnode>
+        <childnode refid="4611" relation="usage">
+          <edgelabel>m_idIcon</edgelabel>
+        </childnode>
+      </node>
+      <node id="4608">
+        <label>unsigned int</label>
+      </node>
+      <node id="4609">
+        <label>int</label>
+      </node>
+      <node id="4610">
+        <label>bool</label>
+      </node>
+      <node id="4611">
+        <label>GUISkinImage</label>
+      </node>
+      <node id="4607">
+        <label>char</label>
+      </node>
+      <node id="4606">
+        <label>Datastruct</label>
+        <link refid="dc/d51/classDatastruct"/>
+        <childnode refid="4607" relation="usage">
+          <edgelabel>m_strAllocatorName</edgelabel>
+        </childnode>
+        <childnode refid="4608" relation="usage">
+          <edgelabel>m_idMemoryContext</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" line="39" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Extended/GUITree.h" bodystart="38" bodyend="99"/>
+    <listofallmembers>
+      <member refid="d1/dc7/classGUITreeNode_1aa5a9d705d229b5c85bcd6c961914fc79" prot="private" virt="non-virtual"><scope>GUITreeNode</scope><name>_Collapse</name></member>
+      <member refid="d1/dc7/classGUITreeNode_1a76bd3751b9130ec2944be4c89c92086e" prot="private" virt="non-virtual"><scope>GUITreeNode</scope><name>_DestroyChild</name></member>
+      <member refid="d1/dc7/classGUITreeNode_1a8fb31549fb81ea72f503e940738be63a" prot="private" virt="non-virtual"><scope>GUITreeNode</scope><name>_Expand</name></member>
+      <member refid="d1/dc7/classGUITreeNode_1a150ba65b03eb3e39a5030cc758a72a29" prot="public" virt="non-virtual"><scope>GUITreeNode</scope><name>GetChild</name></member>
+      <member refid="d1/dc7/classGUITreeNode_1ab6b5557368bb70a6a76b14f377d74923" prot="public" virt="non-virtual"><scope>GUITreeNode</scope><name>GetChildCount</name></member>
+      <member refid="d1/dc7/classGUITreeNode_1ab9be62f8be95ea35dd80cdf01a4f389e" prot="public" virt="non-virtual"><scope>GUITreeNode</scope><name>GetDepth</name></member>
+      <member refid="d1/dc7/classGUITreeNode_1a1791aa92336017e7e7367eae659dd497" prot="public" virt="non-virtual"><scope>GUITreeNode</scope><name>GetIcon</name></member>
+      <member refid="d1/dc7/classGUITreeNode_1acb24949ad36a8ed7b0008515d78ac5ae" prot="public" virt="non-virtual"><scope>GUITreeNode</scope><name>GetName</name></member>
+      <member refid="d1/dc7/classGUITreeNode_1a51bf1839ddedc9115eac8c315019ba9c" prot="public" virt="non-virtual"><scope>GUITreeNode</scope><name>GetNextNode</name></member>
+      <member refid="d1/dc7/classGUITreeNode_1aea57d7edfd9fa3aa374401731ad017f3" prot="public" virt="non-virtual"><scope>GUITreeNode</scope><name>GetNode</name></member>
+      <member refid="d1/dc7/classGUITreeNode_1af8a99efb1b643e04d48ee1fe355461f6" prot="public" virt="non-virtual"><scope>GUITreeNode</scope><name>GetNode</name></member>
+      <member refid="d1/dc7/classGUITreeNode_1abc38e72cfc1661a40b079fc1955a7b38" prot="public" virt="non-virtual"><scope>GUITreeNode</scope><name>GetNodeCount</name></member>
+      <member refid="d1/dc7/classGUITreeNode_1a378e2eb75daa524cf5c166fbbea2e3cb" prot="public" virt="non-virtual"><scope>GUITreeNode</scope><name>GetParent</name></member>
+      <member refid="d1/dc7/classGUITreeNode_1ad049b14f8f318a65bf1af588dd9a6183" prot="public" virt="non-virtual"><scope>GUITreeNode</scope><name>GetParentIndex</name></member>
+      <member refid="d1/dc7/classGUITreeNode_1a3a053f4c5f47ff6e5125c00e6c1188f7" prot="public" virt="non-virtual"><scope>GUITreeNode</scope><name>GetPath</name></member>
+      <member refid="d1/dc7/classGUITreeNode_1a64000c01757277ed2fd8bd83a2cc5b25" prot="private" virt="non-virtual"><scope>GUITreeNode</scope><name>GUITreeModel</name></member>
+      <member refid="d1/dc7/classGUITreeNode_1a2b5d1eda326a9618d7692c2daa6ce774" prot="private" virt="non-virtual"><scope>GUITreeNode</scope><name>GUITreeNode</name></member>
+      <member refid="d1/dc7/classGUITreeNode_1a1fdcc0624db3140b4630da778e2653d9" prot="private" virt="non-virtual"><scope>GUITreeNode</scope><name>GUITreeNode</name></member>
+      <member refid="d1/dc7/classGUITreeNode_1a987b135ecec30415d3a78bac26db8e8a" prot="public" virt="non-virtual"><scope>GUITreeNode</scope><name>IsExpanded</name></member>
+      <member refid="d1/dc7/classGUITreeNode_1ac7359a19e7c18134628da657a71eae8b" prot="public" virt="non-virtual"><scope>GUITreeNode</scope><name>IsLastChild</name></member>
+      <member refid="d1/dc7/classGUITreeNode_1acd551a6aca3b3743b3f0031ab33d7c38" prot="public" virt="non-virtual"><scope>GUITreeNode</scope><name>IsLeaf</name></member>
+      <member refid="d1/dc7/classGUITreeNode_1ac43a6d4d4a5059f8ddbe3f93949fb1ca" prot="public" virt="non-virtual"><scope>GUITreeNode</scope><name>IsRoot</name></member>
+      <member refid="d1/dc7/classGUITreeNode_1aad72872bcf68bc65a64b3f38d1a9dfab" prot="public" virt="non-virtual"><scope>GUITreeNode</scope><name>IsSelected</name></member>
+      <member refid="d1/dc7/classGUITreeNode_1a2b8e8216d4248b970409aab2fe71e022" prot="private" virt="non-virtual"><scope>GUITreeNode</scope><name>m_arrChildren</name></member>
+      <member refid="d1/dc7/classGUITreeNode_1aba810fa06e13e4e2bec1c174f3c980bc" prot="private" virt="non-virtual"><scope>GUITreeNode</scope><name>m_bExpanded</name></member>
+      <member refid="d1/dc7/classGUITreeNode_1aba08d400acc27e9835e1748b6c328984" prot="private" virt="non-virtual"><scope>GUITreeNode</scope><name>m_bIsLastChild</name></member>
+      <member refid="d1/dc7/classGUITreeNode_1a75e04544d744c006ad79d2e529ded1dd" prot="private" virt="non-virtual"><scope>GUITreeNode</scope><name>m_bIsLeaf</name></member>
+      <member refid="d1/dc7/classGUITreeNode_1afa1943a9269f210d99855c8b7e17eb01" prot="private" virt="non-virtual"><scope>GUITreeNode</scope><name>m_bPopulated</name></member>
+      <member refid="d1/dc7/classGUITreeNode_1ada32429967bb703a4ddf1275e31a8dcc" prot="private" virt="non-virtual"><scope>GUITreeNode</scope><name>m_bSelected</name></member>
+      <member refid="d1/dc7/classGUITreeNode_1a781e5e60fced90da45796c96d1a820f6" prot="private" virt="non-virtual"><scope>GUITreeNode</scope><name>m_iDepth</name></member>
+      <member refid="d1/dc7/classGUITreeNode_1a0427c2600e152068118fbdf1201a6d71" prot="private" virt="non-virtual"><scope>GUITreeNode</scope><name>m_idIcon</name></member>
+      <member refid="d1/dc7/classGUITreeNode_1a23a17f6bf3b4f3c796e3ca5429557a43" prot="private" virt="non-virtual"><scope>GUITreeNode</scope><name>m_iNodeCount</name></member>
+      <member refid="d1/dc7/classGUITreeNode_1a53e34109b142ecb5dd16678ea552b4e3" prot="private" virt="non-virtual"><scope>GUITreeNode</scope><name>m_iParentIndex</name></member>
+      <member refid="d1/dc7/classGUITreeNode_1aba3fded72bdac2241331e3c41082eb89" prot="private" virt="non-virtual"><scope>GUITreeNode</scope><name>m_pParent</name></member>
+      <member refid="d1/dc7/classGUITreeNode_1acc3512734a93c31534597f5f29cba401" prot="private" virt="non-virtual"><scope>GUITreeNode</scope><name>m_strName</name></member>
+      <member refid="d1/dc7/classGUITreeNode_1a8f7e7a1919893b83bee7ece66a4691f1" prot="private" virt="non-virtual"><scope>GUITreeNode</scope><name>~GUITreeNode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

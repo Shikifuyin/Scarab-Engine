@@ -1,0 +1,870 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d1/de1/MeshSurface_8h" kind="file">
+    <compoundname>MeshSurface.h</compoundname>
+    <includes refid="dc/d68/ParametricSurface_8h" local="yes">../../../Lib/Math/Geometry/Surfaces/ParametricSurface.h</includes>
+    <includes refid="dd/dfb/MeshManifold3_8h" local="yes">../../../Lib/Math/Geometry/MeshGraphs/MeshManifold3.h</includes>
+    <includes refid="d9/d31/Mesh_8h" local="yes">../../Rendering/Resources/Mesh.h</includes>
+    <includes local="yes">MeshSurface.inl</includes>
+    <includedby refid="dc/ddb/ModelingManager_8h" local="yes">ModelingManager.h</includedby>
+    <incdepgraph>
+      <node id="27030">
+        <label>Features/Facets/MeshTriangleManifoldN.h</label>
+        <link refid="df/de2/MeshTriangleManifoldN_8h"/>
+        <childnode refid="26989" relation="include">
+        </childnode>
+        <childnode refid="27031" relation="include">
+        </childnode>
+      </node>
+      <node id="27025">
+        <label>MeshEdgeManifold3.inl</label>
+      </node>
+      <node id="26946">
+        <label>../../../Lib/Math/Geometry/Surfaces/ParametricSurface.h</label>
+        <link refid="dc/d68/ParametricSurface_8h"/>
+        <childnode refid="26947" relation="include">
+        </childnode>
+        <childnode refid="26969" relation="include">
+        </childnode>
+        <childnode refid="26977" relation="include">
+        </childnode>
+        <childnode refid="26979" relation="include">
+        </childnode>
+        <childnode refid="26985" relation="include">
+        </childnode>
+      </node>
+      <node id="27047">
+        <label>../Vector/Vector4.h</label>
+        <link refid="d7/d36/Vector4_8h"/>
+        <childnode refid="26970" relation="include">
+        </childnode>
+        <childnode refid="27048" relation="include">
+        </childnode>
+      </node>
+      <node id="27051">
+        <label>Matrix4.inl</label>
+      </node>
+      <node id="27010">
+        <label>RedBlackTree.inl</label>
+      </node>
+      <node id="26957">
+        <label>SSE.inl</label>
+      </node>
+      <node id="26963">
+        <label>Threading.h</label>
+        <link refid="dd/d0e/Threading_8h"/>
+        <childnode refid="26949" relation="include">
+        </childnode>
+        <childnode refid="26951" relation="include">
+        </childnode>
+        <childnode refid="26964" relation="include">
+        </childnode>
+      </node>
+      <node id="27014">
+        <label>VirtualHolder.inl</label>
+      </node>
+      <node id="27001">
+        <label>Allocators/BreakAllocator.h</label>
+        <link refid="d4/dac/BreakAllocator_8h"/>
+        <childnode refid="26996" relation="include">
+        </childnode>
+        <childnode refid="27002" relation="include">
+        </childnode>
+      </node>
+      <node id="26992">
+        <label>../Memory/MemoryManager.h</label>
+        <link refid="d7/d7b/MemoryManager_8h"/>
+        <childnode refid="26993" relation="include">
+        </childnode>
+        <childnode refid="26970" relation="include">
+        </childnode>
+        <childnode refid="26947" relation="include">
+        </childnode>
+        <childnode refid="26995" relation="include">
+        </childnode>
+        <childnode refid="26999" relation="include">
+        </childnode>
+        <childnode refid="27001" relation="include">
+        </childnode>
+        <childnode refid="27003" relation="include">
+        </childnode>
+        <childnode refid="27005" relation="include">
+        </childnode>
+      </node>
+      <node id="26945">
+        <label>MeshSurface.h</label>
+        <link refid="MeshSurface.h"/>
+        <childnode refid="26946" relation="include">
+        </childnode>
+        <childnode refid="26986" relation="include">
+        </childnode>
+        <childnode refid="27042" relation="include">
+        </childnode>
+        <childnode refid="27066" relation="include">
+        </childnode>
+      </node>
+      <node id="27018">
+        <label>MeshFeature.inl</label>
+      </node>
+      <node id="27057">
+        <label>Geometry/VertexFormat.h</label>
+        <link refid="da/df2/VertexFormat_8h"/>
+        <childnode refid="26947" relation="include">
+        </childnode>
+        <childnode refid="27058" relation="include">
+        </childnode>
+      </node>
+      <node id="27060">
+        <label>VertexBuffer.inl</label>
+      </node>
+      <node id="26948">
+        <label>../../ThirdParty/System/System.h</label>
+        <link refid="db/d39/System_8h"/>
+        <childnode refid="26949" relation="include">
+        </childnode>
+        <childnode refid="26951" relation="include">
+        </childnode>
+        <childnode refid="26953" relation="include">
+        </childnode>
+        <childnode refid="26959" relation="include">
+        </childnode>
+        <childnode refid="26961" relation="include">
+        </childnode>
+        <childnode refid="26963" relation="include">
+        </childnode>
+        <childnode refid="26965" relation="include">
+        </childnode>
+        <childnode refid="26967" relation="include">
+        </childnode>
+      </node>
+      <node id="27028">
+        <label>Features/Facets/MeshTriangleManifold3.h</label>
+        <link refid="d1/d33/MeshTriangleManifold3_8h"/>
+        <childnode refid="26989" relation="include">
+        </childnode>
+        <childnode refid="27029" relation="include">
+        </childnode>
+      </node>
+      <node id="26964">
+        <label>Threading.inl</label>
+      </node>
+      <node id="27019">
+        <label>MeshVertexManifold2.inl</label>
+      </node>
+      <node id="27002">
+        <label>BreakAllocator.inl</label>
+      </node>
+      <node id="27034">
+        <label>Features/Facets/MeshQuadManifoldN.h</label>
+        <link refid="d5/dcc/MeshQuadManifoldN_8h"/>
+        <childnode refid="26989" relation="include">
+        </childnode>
+        <childnode refid="27035" relation="include">
+        </childnode>
+      </node>
+      <node id="27012">
+        <label>MeshFeatureKey.h</label>
+        <link refid="d8/da5/MeshFeatureKey_8h"/>
+        <childnode refid="26992" relation="include">
+        </childnode>
+        <childnode refid="27013" relation="include">
+        </childnode>
+        <childnode refid="27015" relation="include">
+        </childnode>
+      </node>
+      <node id="27058">
+        <label>VertexFormat.inl</label>
+      </node>
+      <node id="26991">
+        <label>../Datastruct.h</label>
+        <link refid="d5/db1/Datastruct_8h"/>
+        <childnode refid="26992" relation="include">
+        </childnode>
+        <childnode refid="27006" relation="include">
+        </childnode>
+      </node>
+      <node id="27006">
+        <label>Datastruct.inl</label>
+      </node>
+      <node id="27009">
+        <label>../Tree/RedBlackTree.h</label>
+        <link refid="d6/dff/RedBlackTree_8h"/>
+        <childnode refid="26991" relation="include">
+        </childnode>
+        <childnode refid="27010" relation="include">
+        </childnode>
+      </node>
+      <node id="27024">
+        <label>Features/Edges/MeshEdgeManifold3.h</label>
+        <link refid="da/da9/MeshEdgeManifold3_8h"/>
+        <childnode refid="26989" relation="include">
+        </childnode>
+        <childnode refid="27025" relation="include">
+        </childnode>
+      </node>
+      <node id="27039">
+        <label>MeshPolygonManifoldN.inl</label>
+      </node>
+      <node id="26951">
+        <label>Platform.h</label>
+        <link refid="d9/dd0/Platform_8h"/>
+        <childnode refid="26952" relation="include">
+        </childnode>
+      </node>
+      <node id="27038">
+        <label>Features/Facets/MeshPolygonManifoldN.h</label>
+        <link refid="dc/de6/MeshPolygonManifoldN_8h"/>
+        <childnode refid="26989" relation="include">
+        </childnode>
+        <childnode refid="27039" relation="include">
+        </childnode>
+      </node>
+      <node id="27049">
+        <label>../Vertex/Vertex4.h</label>
+        <link refid="d1/dca/Vertex4_8h"/>
+        <childnode refid="27047" relation="include">
+        </childnode>
+        <childnode refid="27050" relation="include">
+        </childnode>
+      </node>
+      <node id="27031">
+        <label>MeshTriangleManifoldN.inl</label>
+      </node>
+      <node id="27026">
+        <label>Features/Edges/MeshEdgeManifoldN.h</label>
+        <link refid="d7/d8a/MeshEdgeManifoldN_8h"/>
+        <childnode refid="26989" relation="include">
+        </childnode>
+        <childnode refid="27027" relation="include">
+        </childnode>
+      </node>
+      <node id="26999">
+        <label>Allocators/PoolAllocator.h</label>
+        <link refid="d3/d03/PoolAllocator_8h"/>
+        <childnode refid="26996" relation="include">
+        </childnode>
+        <childnode refid="27000" relation="include">
+        </childnode>
+      </node>
+      <node id="26985">
+        <label>ParametricSurface.inl</label>
+      </node>
+      <node id="26969">
+        <label>../../Types/Vector/Vector3.h</label>
+        <link refid="dd/d8c/Vector3_8h"/>
+        <childnode refid="26970" relation="include">
+        </childnode>
+        <childnode refid="26976" relation="include">
+        </childnode>
+      </node>
+      <node id="27066">
+        <label>MeshSurface.inl</label>
+      </node>
+      <node id="26955">
+        <label>FPU.inl</label>
+      </node>
+      <node id="26994">
+        <label>Hashing.inl</label>
+      </node>
+      <node id="26975">
+        <label>MathFunction.inl</label>
+      </node>
+      <node id="27011">
+        <label>TreeMap.inl</label>
+      </node>
+      <node id="26971">
+        <label>../Formats/Scalar.h</label>
+        <link refid="d0/d10/Scalar_8h"/>
+        <childnode refid="26951" relation="include">
+        </childnode>
+        <childnode refid="26972" relation="include">
+        </childnode>
+      </node>
+      <node id="27017">
+        <label>MeshFeatureDeclarations.inl</label>
+      </node>
+      <node id="26997">
+        <label>MemoryAllocator.inl</label>
+      </node>
+      <node id="27061">
+        <label>Geometry/IndexBuffer.h</label>
+        <link refid="da/d3a/IndexBuffer_8h"/>
+        <childnode refid="26992" relation="include">
+        </childnode>
+        <childnode refid="27062" relation="include">
+        </childnode>
+      </node>
+      <node id="27040">
+        <label>MeshGraph.inl</label>
+      </node>
+      <node id="27029">
+        <label>MeshTriangleManifold3.inl</label>
+      </node>
+      <node id="27027">
+        <label>MeshEdgeManifoldN.inl</label>
+      </node>
+      <node id="27065">
+        <label>Mesh.inl</label>
+      </node>
+      <node id="26993">
+        <label>../Math/Hash/Hashing.h</label>
+        <link refid="d0/d4e/Hashing_8h"/>
+        <childnode refid="26959" relation="include">
+        </childnode>
+        <childnode refid="26994" relation="include">
+        </childnode>
+      </node>
+      <node id="27063">
+        <label>Geometry/VertexBufferAccessor.h</label>
+        <link refid="d8/d41/VertexBufferAccessor_8h"/>
+        <childnode refid="27057" relation="include">
+        </childnode>
+        <childnode refid="27059" relation="include">
+        </childnode>
+        <childnode refid="27064" relation="include">
+        </childnode>
+      </node>
+      <node id="26996">
+        <label>MemoryAllocator.h</label>
+        <link refid="d2/d75/MemoryAllocator_8h"/>
+        <childnode refid="26947" relation="include">
+        </childnode>
+        <childnode refid="26997" relation="include">
+        </childnode>
+      </node>
+      <node id="27022">
+        <label>Features/Edges/MeshEdgeManifold2.h</label>
+        <link refid="df/df1/MeshEdgeManifold2_8h"/>
+        <childnode refid="26989" relation="include">
+        </childnode>
+        <childnode refid="27023" relation="include">
+        </childnode>
+      </node>
+      <node id="27020">
+        <label>Features/Vertices/MeshVertexManifoldN.h</label>
+        <link refid="de/d75/MeshVertexManifoldN_8h"/>
+        <childnode refid="26989" relation="include">
+        </childnode>
+        <childnode refid="27021" relation="include">
+        </childnode>
+      </node>
+      <node id="27046">
+        <label>../Matrix/Matrix4.h</label>
+        <link refid="d6/d64/Matrix4_8h"/>
+        <childnode refid="26969" relation="include">
+        </childnode>
+        <childnode refid="27047" relation="include">
+        </childnode>
+        <childnode refid="26977" relation="include">
+        </childnode>
+        <childnode refid="27049" relation="include">
+        </childnode>
+        <childnode refid="27051" relation="include">
+        </childnode>
+      </node>
+      <node id="27041">
+        <label>MeshManifold3.inl</label>
+      </node>
+      <node id="26962">
+        <label>File.inl</label>
+      </node>
+      <node id="27032">
+        <label>Features/Facets/MeshQuadManifold3.h</label>
+        <link refid="dd/d34/MeshQuadManifold3_8h"/>
+        <childnode refid="26989" relation="include">
+        </childnode>
+        <childnode refid="27033" relation="include">
+        </childnode>
+      </node>
+      <node id="26953">
+        <label>Hardware/Hardware.h</label>
+        <link refid="da/dec/Hardware_8h"/>
+        <childnode refid="26951" relation="include">
+        </childnode>
+        <childnode refid="26954" relation="include">
+        </childnode>
+        <childnode refid="26956" relation="include">
+        </childnode>
+        <childnode refid="26958" relation="include">
+        </childnode>
+      </node>
+      <node id="26995">
+        <label>Allocators/StackAllocator.h</label>
+        <link refid="db/d84/StackAllocator_8h"/>
+        <childnode refid="26996" relation="include">
+        </childnode>
+        <childnode refid="26998" relation="include">
+        </childnode>
+      </node>
+      <node id="27013">
+        <label>../../../../Object/Patterns/VirtualHolder.h</label>
+        <link refid="df/d40/VirtualHolder_8h"/>
+        <childnode refid="26947" relation="include">
+        </childnode>
+        <childnode refid="27014" relation="include">
+        </childnode>
+      </node>
+      <node id="26958">
+        <label>Hardware.inl</label>
+      </node>
+      <node id="26980">
+        <label>../Vector/Vector2.h</label>
+        <link refid="d0/df7/Vector2_8h"/>
+        <childnode refid="26970" relation="include">
+        </childnode>
+        <childnode refid="26981" relation="include">
+        </childnode>
+      </node>
+      <node id="27048">
+        <label>Vector4.inl</label>
+      </node>
+      <node id="27000">
+        <label>PoolAllocator.inl</label>
+      </node>
+      <node id="27064">
+        <label>VertexBufferAccessor.inl</label>
+      </node>
+      <node id="26972">
+        <label>Scalar.inl</label>
+      </node>
+      <node id="27043">
+        <label>../../../Lib/Math/Types/Transform/Transform3.h</label>
+        <link refid="d2/d67/Transform3_8h"/>
+        <childnode refid="26947" relation="include">
+        </childnode>
+        <childnode refid="27044" relation="include">
+        </childnode>
+        <childnode refid="27046" relation="include">
+        </childnode>
+        <childnode refid="27052" relation="include">
+        </childnode>
+      </node>
+      <node id="26960">
+        <label>String.inl</label>
+      </node>
+      <node id="27037">
+        <label>MeshPolygonManifold3.inl</label>
+      </node>
+      <node id="26976">
+        <label>Vector3.inl</label>
+      </node>
+      <node id="27015">
+        <label>MeshFeatureKey.inl</label>
+      </node>
+      <node id="26990">
+        <label>../../../../Datastruct/Array/Array.h</label>
+        <link refid="df/dd0/Array_8h"/>
+        <childnode refid="26991" relation="include">
+        </childnode>
+        <childnode refid="27007" relation="include">
+        </childnode>
+      </node>
+      <node id="26981">
+        <label>Vector2.inl</label>
+      </node>
+      <node id="27056">
+        <label>TextureCoord2.inl</label>
+      </node>
+      <node id="27053">
+        <label>../../../Lib/Math/Types/TextureCoord/TextureCoord1.h</label>
+        <link refid="db/dd0/TextureCoord1_8h"/>
+        <childnode refid="26980" relation="include">
+        </childnode>
+        <childnode refid="26969" relation="include">
+        </childnode>
+        <childnode refid="27047" relation="include">
+        </childnode>
+        <childnode refid="27054" relation="include">
+        </childnode>
+      </node>
+      <node id="26954">
+        <label>FPU.h</label>
+        <link refid="dd/d2f/FPU_8h"/>
+        <childnode refid="26951" relation="include">
+        </childnode>
+        <childnode refid="26955" relation="include">
+        </childnode>
+      </node>
+      <node id="26986">
+        <label>../../../Lib/Math/Geometry/MeshGraphs/MeshManifold3.h</label>
+        <link refid="dd/dfb/MeshManifold3_8h"/>
+        <childnode refid="26987" relation="include">
+        </childnode>
+        <childnode refid="27041" relation="include">
+        </childnode>
+      </node>
+      <node id="26982">
+        <label>../Vertex/Vertex2.h</label>
+        <link refid="dc/d05/Vertex2_8h"/>
+        <childnode refid="26980" relation="include">
+        </childnode>
+        <childnode refid="26983" relation="include">
+        </childnode>
+      </node>
+      <node id="27044">
+        <label>../Matrix/Matrix3.h</label>
+        <link refid="d1/d41/Matrix3_8h"/>
+        <childnode refid="26980" relation="include">
+        </childnode>
+        <childnode refid="26969" relation="include">
+        </childnode>
+        <childnode refid="26982" relation="include">
+        </childnode>
+        <childnode refid="26977" relation="include">
+        </childnode>
+        <childnode refid="27045" relation="include">
+        </childnode>
+      </node>
+      <node id="27003">
+        <label>Allocators/HeapAllocator.h</label>
+        <link refid="d3/d89/HeapAllocator_8h"/>
+        <childnode refid="26996" relation="include">
+        </childnode>
+        <childnode refid="27004" relation="include">
+        </childnode>
+      </node>
+      <node id="26959">
+        <label>String.h</label>
+        <link refid="d9/dba/String_8h"/>
+        <childnode refid="26949" relation="include">
+        </childnode>
+        <childnode refid="26951" relation="include">
+        </childnode>
+        <childnode refid="26954" relation="include">
+        </childnode>
+        <childnode refid="26960" relation="include">
+        </childnode>
+      </node>
+      <node id="27052">
+        <label>Transform3.inl</label>
+      </node>
+      <node id="26952">
+        <label>Platform.inl</label>
+      </node>
+      <node id="27005">
+        <label>MemoryManager.inl</label>
+      </node>
+      <node id="26967">
+        <label>System.inl</label>
+      </node>
+      <node id="26965">
+        <label>Networking.h</label>
+        <link refid="df/dfb/Networking_8h"/>
+        <childnode refid="26949" relation="include">
+        </childnode>
+        <childnode refid="26951" relation="include">
+        </childnode>
+        <childnode refid="26966" relation="include">
+        </childnode>
+      </node>
+      <node id="26988">
+        <label>Features/Vertices/MeshVertexManifold2.h</label>
+        <link refid="d5/d60/MeshVertexManifold2_8h"/>
+        <childnode refid="26989" relation="include">
+        </childnode>
+        <childnode refid="27019" relation="include">
+        </childnode>
+      </node>
+      <node id="26961">
+        <label>File.h</label>
+        <link refid="d6/db7/File_8h"/>
+        <childnode refid="26949" relation="include">
+        </childnode>
+        <childnode refid="26951" relation="include">
+        </childnode>
+        <childnode refid="26959" relation="include">
+        </childnode>
+        <childnode refid="26962" relation="include">
+        </childnode>
+      </node>
+      <node id="26998">
+        <label>StackAllocator.inl</label>
+      </node>
+      <node id="26950">
+        <label>ForwardWin32.inl</label>
+      </node>
+      <node id="26956">
+        <label>SSE.h</label>
+        <link refid="d0/d02/SSE_8h"/>
+        <childnode refid="26951" relation="include">
+        </childnode>
+        <childnode refid="26957" relation="include">
+        </childnode>
+      </node>
+      <node id="27059">
+        <label>Geometry/VertexBuffer.h</label>
+        <link refid="d9/d38/VertexBuffer_8h"/>
+        <childnode refid="26992" relation="include">
+        </childnode>
+        <childnode refid="27060" relation="include">
+        </childnode>
+      </node>
+      <node id="27042">
+        <label>../../Rendering/Resources/Mesh.h</label>
+        <link refid="d9/d31/Mesh_8h"/>
+        <childnode refid="26979" relation="include">
+        </childnode>
+        <childnode refid="27043" relation="include">
+        </childnode>
+        <childnode refid="27053" relation="include">
+        </childnode>
+        <childnode refid="27055" relation="include">
+        </childnode>
+        <childnode refid="27057" relation="include">
+        </childnode>
+        <childnode refid="27059" relation="include">
+        </childnode>
+        <childnode refid="27061" relation="include">
+        </childnode>
+        <childnode refid="27063" relation="include">
+        </childnode>
+        <childnode refid="27065" relation="include">
+        </childnode>
+      </node>
+      <node id="27008">
+        <label>../../../../Datastruct/Table/TreeMap.h</label>
+        <link refid="da/d29/TreeMap_8h"/>
+        <childnode refid="27009" relation="include">
+        </childnode>
+        <childnode refid="27011" relation="include">
+        </childnode>
+      </node>
+      <node id="26966">
+        <label>Networking.inl</label>
+      </node>
+      <node id="27050">
+        <label>Vertex4.inl</label>
+      </node>
+      <node id="27033">
+        <label>MeshQuadManifold3.inl</label>
+      </node>
+      <node id="26974">
+        <label>Fixed.inl</label>
+      </node>
+      <node id="27055">
+        <label>../../../Lib/Math/Types/TextureCoord/TextureCoord2.h</label>
+        <link refid="d6/d21/TextureCoord2_8h"/>
+        <childnode refid="26980" relation="include">
+        </childnode>
+        <childnode refid="26969" relation="include">
+        </childnode>
+        <childnode refid="27047" relation="include">
+        </childnode>
+        <childnode refid="27056" relation="include">
+        </childnode>
+      </node>
+      <node id="26987">
+        <label>MeshGraph.h</label>
+        <link refid="d3/d8a/MeshGraph_8h"/>
+        <childnode refid="26988" relation="include">
+        </childnode>
+        <childnode refid="27020" relation="include">
+        </childnode>
+        <childnode refid="27022" relation="include">
+        </childnode>
+        <childnode refid="27024" relation="include">
+        </childnode>
+        <childnode refid="27026" relation="include">
+        </childnode>
+        <childnode refid="27028" relation="include">
+        </childnode>
+        <childnode refid="27030" relation="include">
+        </childnode>
+        <childnode refid="27032" relation="include">
+        </childnode>
+        <childnode refid="27034" relation="include">
+        </childnode>
+        <childnode refid="27036" relation="include">
+        </childnode>
+        <childnode refid="27038" relation="include">
+        </childnode>
+        <childnode refid="27040" relation="include">
+        </childnode>
+      </node>
+      <node id="26970">
+        <label>../../Functions/MathFunction.h</label>
+        <link refid="d1/d98/MathFunction_8h"/>
+        <childnode refid="26954" relation="include">
+        </childnode>
+        <childnode refid="26971" relation="include">
+        </childnode>
+        <childnode refid="26973" relation="include">
+        </childnode>
+        <childnode refid="26975" relation="include">
+        </childnode>
+      </node>
+      <node id="26973">
+        <label>../Formats/Fixed.h</label>
+        <link refid="d4/d76/Fixed_8h"/>
+        <childnode refid="26971" relation="include">
+        </childnode>
+        <childnode refid="26974" relation="include">
+        </childnode>
+      </node>
+      <node id="26968">
+        <label>ErrorManager.inl</label>
+      </node>
+      <node id="27062">
+        <label>IndexBuffer.inl</label>
+      </node>
+      <node id="26984">
+        <label>Matrix2.inl</label>
+      </node>
+      <node id="27021">
+        <label>MeshVertexManifoldN.inl</label>
+      </node>
+      <node id="26978">
+        <label>Vertex3.inl</label>
+      </node>
+      <node id="26989">
+        <label>../MeshFeature.h</label>
+        <link refid="d2/d43/MeshFeature_8h"/>
+        <childnode refid="26990" relation="include">
+        </childnode>
+        <childnode refid="27008" relation="include">
+        </childnode>
+        <childnode refid="27012" relation="include">
+        </childnode>
+        <childnode refid="27016" relation="include">
+        </childnode>
+        <childnode refid="27018" relation="include">
+        </childnode>
+      </node>
+      <node id="27016">
+        <label>MeshFeatureDeclarations.h</label>
+        <link refid="d3/df6/MeshFeatureDeclarations_8h"/>
+        <childnode refid="27017" relation="include">
+        </childnode>
+      </node>
+      <node id="27023">
+        <label>MeshEdgeManifold2.inl</label>
+      </node>
+      <node id="27035">
+        <label>MeshQuadManifoldN.inl</label>
+      </node>
+      <node id="26977">
+        <label>../../Types/Vertex/Vertex3.h</label>
+        <link refid="d0/df3/Vertex3_8h"/>
+        <childnode refid="26969" relation="include">
+        </childnode>
+        <childnode refid="26978" relation="include">
+        </childnode>
+      </node>
+      <node id="27004">
+        <label>HeapAllocator.inl</label>
+      </node>
+      <node id="27045">
+        <label>Matrix3.inl</label>
+      </node>
+      <node id="26949">
+        <label>../Forwards/ForwardWin32.h</label>
+        <link refid="d5/dea/ForwardWin32_8h"/>
+        <childnode refid="26950" relation="include">
+        </childnode>
+      </node>
+      <node id="26983">
+        <label>Vertex2.inl</label>
+      </node>
+      <node id="27036">
+        <label>Features/Facets/MeshPolygonManifold3.h</label>
+        <link refid="d7/da5/MeshPolygonManifold3_8h"/>
+        <childnode refid="26989" relation="include">
+        </childnode>
+        <childnode refid="27037" relation="include">
+        </childnode>
+      </node>
+      <node id="26947">
+        <label>../../../Error/ErrorManager.h</label>
+        <link refid="d1/db6/ErrorManager_8h"/>
+        <childnode refid="26948" relation="include">
+        </childnode>
+        <childnode refid="26968" relation="include">
+        </childnode>
+      </node>
+      <node id="26979">
+        <label>../../Types/Matrix/Matrix2.h</label>
+        <link refid="dc/d1a/Matrix2_8h"/>
+        <childnode refid="26980" relation="include">
+        </childnode>
+        <childnode refid="26982" relation="include">
+        </childnode>
+        <childnode refid="26984" relation="include">
+        </childnode>
+      </node>
+      <node id="27007">
+        <label>Array.inl</label>
+      </node>
+      <node id="27054">
+        <label>TextureCoord1.inl</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="27075">
+        <label>WorldManager.h</label>
+        <link refid="db/d98/WorldManager_8h"/>
+        <childnode refid="27069" relation="include">
+        </childnode>
+      </node>
+      <node id="27074">
+        <label>MyDungeon.h</label>
+        <link refid="d0/de7/MyDungeon_8h"/>
+        <childnode refid="27072" relation="include">
+        </childnode>
+      </node>
+      <node id="27067">
+        <label>MeshSurface.h</label>
+        <link refid="MeshSurface.h"/>
+        <childnode refid="27068" relation="include">
+        </childnode>
+      </node>
+      <node id="27072">
+        <label>Main.h</label>
+        <link refid="da/d94/Main_8h"/>
+      </node>
+      <node id="27073">
+        <label>MyLandscape.h</label>
+        <link refid="d7/d2b/MyLandscape_8h"/>
+        <childnode refid="27072" relation="include">
+        </childnode>
+      </node>
+      <node id="27070">
+        <label>ApplicationManager.h</label>
+        <link refid="d2/d9d/ApplicationManager_8h"/>
+        <childnode refid="27071" relation="include">
+        </childnode>
+        <childnode refid="27072" relation="include">
+        </childnode>
+        <childnode refid="27073" relation="include">
+        </childnode>
+        <childnode refid="27074" relation="include">
+        </childnode>
+      </node>
+      <node id="27069">
+        <label>WindowApplication.h</label>
+        <link refid="d4/d72/WindowApplication_8h"/>
+        <childnode refid="27070" relation="include">
+        </childnode>
+      </node>
+      <node id="27071">
+        <label>Entities.h</label>
+        <link refid="d7/d5d/Entities_8h"/>
+        <childnode refid="27072" relation="include">
+        </childnode>
+      </node>
+      <node id="27068">
+        <label>ModelingManager.h</label>
+        <link refid="dc/ddb/ModelingManager_8h"/>
+        <childnode refid="27069" relation="include">
+        </childnode>
+        <childnode refid="27075" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d1/d82/classMeshSurface" prot="public">MeshSurface</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Modeling/Surfaces/MeshSurface.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,264 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d2/dc6/classTAABoxNode" kind="class" prot="public">
+    <compoundname>TAABoxNode</compoundname>
+    <includes refid="d3/db4/AABoxTree_8h" local="no">AABoxTree.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>Real</declname>
+        <defname>Real</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d2/dc6/classTAABoxNode_1a6be792daf46228cf47c0b3b3854117ae" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/d90/classTBVAABox" kindref="compound">TBVAABox</ref>&lt; Real &gt;</type>
+        <definition>TBVAABox&lt;Real&gt; bvAABox</definition>
+        <argsstring></argsstring>
+        <name>bvAABox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="51" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/dc6/classTAABoxNode_1aded65c0be32dcae36ac7eccd190122ad" prot="public" static="no" mutable="no">
+        <type><ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; *</type>
+        <definition>TAABoxNode&lt;Real&gt;* pParent</definition>
+        <argsstring></argsstring>
+        <name>pParent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="53" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/dc6/classTAABoxNode_1abe2f49a846aa53c6b0358bfef258aee9" prot="public" static="no" mutable="no">
+        <type><ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; *</type>
+        <definition>TAABoxNode&lt;Real&gt;* pChild[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>pChild</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="55" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/dc6/classTAABoxNode_1aecdc9e136102de80839737b5cf01bac4" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> *</type>
+        <definition>Void* pLeafData</definition>
+        <argsstring></argsstring>
+        <name>pLeafData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="56" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/dc6/classTAABoxNode_1af2a026fab6ff92096e1c35a14585a43b" prot="public" static="no" mutable="no">
+        <type>union TAABoxNode::@13</type>
+        <definition>union TAABoxNode::@13 @14</definition>
+        <argsstring></argsstring>
+        <name>@14</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="57"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d2/dc6/classTAABoxNode_1acf7010cdfc1d6df222e026a1392d2612" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TAABoxNode</definition>
+        <argsstring>(const TBVAABox&lt; Real &gt; &amp;bvNodeAABox, TAABoxNode&lt; Real &gt; *pParentNode=NULL)</argsstring>
+        <name>TAABoxNode</name>
+        <param>
+          <type>const <ref refid="d9/d90/classTBVAABox" kindref="compound">TBVAABox</ref>&lt; Real &gt; &amp;</type>
+          <declname>bvNodeAABox</declname>
+        </param>
+        <param>
+          <type><ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; *</type>
+          <declname>pParentNode</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="40"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/dc6/classTAABoxNode_1aa5f480a6ac5c0ac1c393b9ab9c1e2560" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TAABoxNode</definition>
+        <argsstring>(const TBVAABox&lt; Real &gt; &amp;bvNodeAABox, TAABoxNode&lt; Real &gt; *pParentNode, Void *pData)</argsstring>
+        <name>TAABoxNode</name>
+        <param>
+          <type>const <ref refid="d9/d90/classTBVAABox" kindref="compound">TBVAABox</ref>&lt; Real &gt; &amp;</type>
+          <declname>bvNodeAABox</declname>
+        </param>
+        <param>
+          <type><ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; *</type>
+          <declname>pParentNode</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> *</type>
+          <declname>pData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="41"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/dc6/classTAABoxNode_1adc30586a85024a9db451d46adf250ffa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TAABoxNode</definition>
+        <argsstring>(const TBVAABox&lt; Real &gt; &amp;bvNodeAABox, TAABoxNode&lt; Real &gt; *pParentNode, TAABoxNode&lt; Real &gt; *pChildA, TAABoxNode&lt; Real &gt; *pChildB)</argsstring>
+        <name>TAABoxNode</name>
+        <param>
+          <type>const <ref refid="d9/d90/classTBVAABox" kindref="compound">TBVAABox</ref>&lt; Real &gt; &amp;</type>
+          <declname>bvNodeAABox</declname>
+        </param>
+        <param>
+          <type><ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; *</type>
+          <declname>pParentNode</declname>
+        </param>
+        <param>
+          <type><ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; *</type>
+          <declname>pChildA</declname>
+        </param>
+        <param>
+          <type><ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; *</type>
+          <declname>pChildB</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="43"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/dc6/classTAABoxNode_1abf5733fa63432041cd1ec6a3433d3226" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TAABoxNode</definition>
+        <argsstring>(const TAABoxNode&lt; Real &gt; &amp;rhs)</argsstring>
+        <name>TAABoxNode</name>
+        <param>
+          <type>const <ref refid="d2/dc6/classTAABoxNode" kindref="compound">TAABoxNode</ref>&lt; Real &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="44"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/dc6/classTAABoxNode_1aee170615e01264e8d5adf4b22c9ffefb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~TAABoxNode</definition>
+        <argsstring>()</argsstring>
+        <name>~TAABoxNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="45"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/dc6/classTAABoxNode_1a9497472535cc78941df825084781b23e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool IsNode</definition>
+        <argsstring>() const </argsstring>
+        <name>IsNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/dc6/classTAABoxNode_1acd551a6aca3b3743b3f0031ab33d7c38" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool IsLeaf</definition>
+        <argsstring>() const </argsstring>
+        <name>IsLeaf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="48"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="12213">
+        <label>@13</label>
+      </node>
+      <node id="12212">
+        <label>TAABoxNode&lt; Real &gt;</label>
+        <link refid="d2/dc6/classTAABoxNode"/>
+        <childnode refid="12213" relation="usage">
+          <edgelabel>@14</edgelabel>
+        </childnode>
+        <childnode refid="12214" relation="usage">
+          <edgelabel>pParent</edgelabel>
+          <edgelabel>pChild</edgelabel>
+        </childnode>
+        <childnode refid="12215" relation="usage">
+          <edgelabel>bvAABox</edgelabel>
+        </childnode>
+        <childnode refid="12216" relation="usage">
+          <edgelabel>pLeafData</edgelabel>
+        </childnode>
+      </node>
+      <node id="12215">
+        <label>TBVAABox&lt; Real &gt;</label>
+      </node>
+      <node id="12214">
+        <label>TAABoxNode&lt; Real &gt; *</label>
+      </node>
+      <node id="12216">
+        <label>Void *</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" line="38" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/SpacePartitions/AABoxTree.h" bodystart="37" bodyend="58"/>
+    <listofallmembers>
+      <member refid="d2/dc6/classTAABoxNode_1a6be792daf46228cf47c0b3b3854117ae" prot="public" virt="non-virtual"><scope>TAABoxNode</scope><name>bvAABox</name></member>
+      <member refid="d2/dc6/classTAABoxNode_1acd551a6aca3b3743b3f0031ab33d7c38" prot="public" virt="non-virtual"><scope>TAABoxNode</scope><name>IsLeaf</name></member>
+      <member refid="d2/dc6/classTAABoxNode_1a9497472535cc78941df825084781b23e" prot="public" virt="non-virtual"><scope>TAABoxNode</scope><name>IsNode</name></member>
+      <member refid="d2/dc6/classTAABoxNode_1abe2f49a846aa53c6b0358bfef258aee9" prot="public" virt="non-virtual"><scope>TAABoxNode</scope><name>pChild</name></member>
+      <member refid="d2/dc6/classTAABoxNode_1aecdc9e136102de80839737b5cf01bac4" prot="public" virt="non-virtual"><scope>TAABoxNode</scope><name>pLeafData</name></member>
+      <member refid="d2/dc6/classTAABoxNode_1aded65c0be32dcae36ac7eccd190122ad" prot="public" virt="non-virtual"><scope>TAABoxNode</scope><name>pParent</name></member>
+      <member refid="d2/dc6/classTAABoxNode_1acf7010cdfc1d6df222e026a1392d2612" prot="public" virt="non-virtual"><scope>TAABoxNode</scope><name>TAABoxNode</name></member>
+      <member refid="d2/dc6/classTAABoxNode_1aa5f480a6ac5c0ac1c393b9ab9c1e2560" prot="public" virt="non-virtual"><scope>TAABoxNode</scope><name>TAABoxNode</name></member>
+      <member refid="d2/dc6/classTAABoxNode_1adc30586a85024a9db451d46adf250ffa" prot="public" virt="non-virtual"><scope>TAABoxNode</scope><name>TAABoxNode</name></member>
+      <member refid="d2/dc6/classTAABoxNode_1abf5733fa63432041cd1ec6a3433d3226" prot="public" virt="non-virtual"><scope>TAABoxNode</scope><name>TAABoxNode</name></member>
+      <member refid="d2/dc6/classTAABoxNode_1aee170615e01264e8d5adf4b22c9ffefb" prot="public" virt="non-virtual"><scope>TAABoxNode</scope><name>~TAABoxNode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="dd/d6d/Random_8h" kind="file">
+    <compoundname>Random.h</compoundname>
+    <includes refid="d9/dd0/Platform_8h" local="yes">../../../ThirdParty/System/Platform.h</includes>
+    <includes local="yes">Random.inl</includes>
+    <includedby refid="dc/d93/SoftBody_8h" local="yes">SoftBody.h</includedby>
+    <includedby refid="d7/d33/ParticleSystem_8h" local="yes">ParticleSystem.h</includedby>
+    <includedby refid="da/db5/ConstraintSolver_8h" local="yes">ConstraintSolver.h</includedby>
+    <includedby refid="d7/d9f/BVSphere_8h" local="yes">BVSphere.h</includedby>
+    <includedby refid="df/d3f/UID_8h" local="yes">UID.h</includedby>
+    <incdepgraph>
+      <node id="33166">
+        <label>../../../ThirdParty/System/Platform.h</label>
+        <link refid="d9/dd0/Platform_8h"/>
+        <childnode refid="33167" relation="include">
+        </childnode>
+      </node>
+      <node id="33168">
+        <label>Random.inl</label>
+      </node>
+      <node id="33165">
+        <label>Random.h</label>
+        <link refid="Random.h"/>
+        <childnode refid="33166" relation="include">
+        </childnode>
+        <childnode refid="33168" relation="include">
+        </childnode>
+      </node>
+      <node id="33167">
+        <label>Platform.inl</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="33178">
+        <label>WorldManager.h</label>
+        <link refid="db/d98/WorldManager_8h"/>
+        <childnode refid="33172" relation="include">
+        </childnode>
+      </node>
+      <node id="33177">
+        <label>MyDungeon.h</label>
+        <link refid="d0/de7/MyDungeon_8h"/>
+        <childnode refid="33175" relation="include">
+        </childnode>
+      </node>
+      <node id="33171">
+        <label>PhysicsManager.h</label>
+        <link refid="d2/d6b/PhysicsManager_8h"/>
+        <childnode refid="33172" relation="include">
+        </childnode>
+        <childnode refid="33178" relation="include">
+        </childnode>
+      </node>
+      <node id="33175">
+        <label>Main.h</label>
+        <link refid="da/d94/Main_8h"/>
+      </node>
+      <node id="33176">
+        <label>MyLandscape.h</label>
+        <link refid="d7/d2b/MyLandscape_8h"/>
+        <childnode refid="33175" relation="include">
+        </childnode>
+      </node>
+      <node id="33173">
+        <label>ApplicationManager.h</label>
+        <link refid="d2/d9d/ApplicationManager_8h"/>
+        <childnode refid="33174" relation="include">
+        </childnode>
+        <childnode refid="33175" relation="include">
+        </childnode>
+        <childnode refid="33176" relation="include">
+        </childnode>
+        <childnode refid="33177" relation="include">
+        </childnode>
+      </node>
+      <node id="33183">
+        <label>UID.h</label>
+        <link refid="df/d3f/UID_8h"/>
+      </node>
+      <node id="33182">
+        <label>BVSphere.h</label>
+        <link refid="d7/d9f/BVSphere_8h"/>
+      </node>
+      <node id="33172">
+        <label>WindowApplication.h</label>
+        <link refid="d4/d72/WindowApplication_8h"/>
+        <childnode refid="33173" relation="include">
+        </childnode>
+      </node>
+      <node id="33179">
+        <label>SoftConstraintSolver.h</label>
+        <link refid="d1/d3a/SoftConstraintSolver_8h"/>
+        <childnode refid="33180" relation="include">
+        </childnode>
+      </node>
+      <node id="33181">
+        <label>ParticleSystem.h</label>
+        <link refid="d7/d33/ParticleSystem_8h"/>
+        <childnode refid="33171" relation="include">
+        </childnode>
+      </node>
+      <node id="33170">
+        <label>SoftBody.h</label>
+        <link refid="dc/d93/SoftBody_8h"/>
+        <childnode refid="33171" relation="include">
+        </childnode>
+        <childnode refid="33179" relation="include">
+        </childnode>
+      </node>
+      <node id="33174">
+        <label>Entities.h</label>
+        <link refid="d7/d5d/Entities_8h"/>
+        <childnode refid="33175" relation="include">
+        </childnode>
+      </node>
+      <node id="33169">
+        <label>Random.h</label>
+        <link refid="Random.h"/>
+        <childnode refid="33170" relation="include">
+        </childnode>
+        <childnode refid="33181" relation="include">
+        </childnode>
+        <childnode refid="33180" relation="include">
+        </childnode>
+        <childnode refid="33182" relation="include">
+        </childnode>
+        <childnode refid="33183" relation="include">
+        </childnode>
+      </node>
+      <node id="33180">
+        <label>ConstraintSolver.h</label>
+        <link refid="da/db5/ConstraintSolver_8h"/>
+        <childnode refid="33171" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="dc/d2b/classRandomGenerator" prot="public">RandomGenerator</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="dd/d6d/Random_8h_1ad7d1f7aa06b6854cbf4ed3def1f5eabd" prot="public" static="no">
+        <name>RANDOM_SEED_DEFAULT</name>
+        <initializer>0xdeadbeeful</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="31" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dd/d6d/Random_8h_1a8b014f309bfa3bcf5189428807c3e46a" prot="public" static="no">
+        <name>RANDOM_SEED64_DEFAULT</name>
+        <initializer>0x12345678deadbeefui64</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="32" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dd/d6d/Random_8h_1a8679fe22a8f8fcef8735f667aa6959b3" prot="public" static="no">
+        <name>RandFn</name>
+        <initializer><ref refid="dc/d2b/classRandomGenerator_1a142b629a7ef30f3fcdf69c4807ad9f04" kindref="member">RandomGenerator::GetInstancePtr</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" line="34" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Random/Random.h"/>
+  </compounddef>
+</doxygen>

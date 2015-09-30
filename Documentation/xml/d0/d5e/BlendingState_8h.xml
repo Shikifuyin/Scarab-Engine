@@ -1,0 +1,997 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d0/d5e/BlendingState_8h" kind="file">
+    <compoundname>BlendingState.h</compoundname>
+    <includes refid="d7/d4d/Color4_8h" local="yes">../../../Lib/Math/Types/Color/Color4.h</includes>
+    <includes local="yes">BlendingState.inl</includes>
+    <includedby refid="de/d07/RenderingManager_8h" local="yes">RenderingManager.h</includedby>
+    <includedby refid="dc/d95/EffectPass_8h" local="yes">EffectPass.h</includedby>
+    <incdepgraph>
+      <node id="1322">
+        <label>../../../Lib/Math/Types/Color/Color4.h</label>
+        <link refid="d7/d4d/Color4_8h"/>
+        <childnode refid="1323" relation="include">
+        </childnode>
+        <childnode refid="1333" relation="include">
+        </childnode>
+      </node>
+      <node id="1325">
+        <label>../Platform.h</label>
+        <link refid="d9/dd0/Platform_8h"/>
+        <childnode refid="1326" relation="include">
+        </childnode>
+      </node>
+      <node id="1334">
+        <label>BlendingState.inl</label>
+      </node>
+      <node id="1327">
+        <label>FPU.inl</label>
+      </node>
+      <node id="1332">
+        <label>MathFunction.inl</label>
+      </node>
+      <node id="1328">
+        <label>../Formats/Scalar.h</label>
+        <link refid="d0/d10/Scalar_8h"/>
+        <childnode refid="1325" relation="include">
+        </childnode>
+        <childnode refid="1329" relation="include">
+        </childnode>
+      </node>
+      <node id="1329">
+        <label>Scalar.inl</label>
+      </node>
+      <node id="1324">
+        <label>../../../ThirdParty/System/Hardware/FPU.h</label>
+        <link refid="dd/d2f/FPU_8h"/>
+        <childnode refid="1325" relation="include">
+        </childnode>
+        <childnode refid="1327" relation="include">
+        </childnode>
+      </node>
+      <node id="1326">
+        <label>Platform.inl</label>
+      </node>
+      <node id="1333">
+        <label>Color4.inl</label>
+      </node>
+      <node id="1321">
+        <label>BlendingState.h</label>
+        <link refid="BlendingState.h"/>
+        <childnode refid="1322" relation="include">
+        </childnode>
+        <childnode refid="1334" relation="include">
+        </childnode>
+      </node>
+      <node id="1331">
+        <label>Fixed.inl</label>
+      </node>
+      <node id="1323">
+        <label>../../Functions/MathFunction.h</label>
+        <link refid="d1/d98/MathFunction_8h"/>
+        <childnode refid="1324" relation="include">
+        </childnode>
+        <childnode refid="1328" relation="include">
+        </childnode>
+        <childnode refid="1330" relation="include">
+        </childnode>
+        <childnode refid="1332" relation="include">
+        </childnode>
+      </node>
+      <node id="1330">
+        <label>../Formats/Fixed.h</label>
+        <link refid="d4/d76/Fixed_8h"/>
+        <childnode refid="1328" relation="include">
+        </childnode>
+        <childnode refid="1331" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1344">
+        <label>WorldManager.h</label>
+        <link refid="db/d98/WorldManager_8h"/>
+        <childnode refid="1337" relation="include">
+        </childnode>
+      </node>
+      <node id="1368">
+        <label>EffectPlanarReflection.h</label>
+        <link refid="d1/d6b/EffectPlanarReflection_8h"/>
+      </node>
+      <node id="1342">
+        <label>MyDungeon.h</label>
+        <link refid="d0/de7/MyDungeon_8h"/>
+        <childnode refid="1340" relation="include">
+        </childnode>
+      </node>
+      <node id="1369">
+        <label>WorldDLODNode.h</label>
+        <link refid="df/d7d/WorldDLODNode_8h"/>
+      </node>
+      <node id="1350">
+        <label>Effect.h</label>
+        <link refid="d3/d24/Effect_8h"/>
+        <childnode refid="1336" relation="include">
+        </childnode>
+        <childnode refid="1351" relation="include">
+        </childnode>
+        <childnode refid="1352" relation="include">
+        </childnode>
+        <childnode refid="1353" relation="include">
+        </childnode>
+        <childnode refid="1354" relation="include">
+        </childnode>
+        <childnode refid="1355" relation="include">
+        </childnode>
+        <childnode refid="1371" relation="include">
+        </childnode>
+        <childnode refid="1372" relation="include">
+        </childnode>
+        <childnode refid="1373" relation="include">
+        </childnode>
+        <childnode refid="1374" relation="include">
+        </childnode>
+        <childnode refid="1375" relation="include">
+        </childnode>
+        <childnode refid="1376" relation="include">
+        </childnode>
+        <childnode refid="1377" relation="include">
+        </childnode>
+        <childnode refid="1378" relation="include">
+        </childnode>
+      </node>
+      <node id="1365">
+        <label>WorldConvexRoom.h</label>
+        <link refid="d0/d27/WorldConvexRoom_8h"/>
+        <childnode refid="1363" relation="include">
+        </childnode>
+      </node>
+      <node id="1357">
+        <label>WorldLight.h</label>
+        <link refid="d3/d85/WorldLight_8h"/>
+        <childnode refid="1344" relation="include">
+        </childnode>
+        <childnode refid="1358" relation="include">
+        </childnode>
+      </node>
+      <node id="1370">
+        <label>WorldCaster.h</label>
+        <link refid="d9/d6f/WorldCaster_8h"/>
+        <childnode refid="1344" relation="include">
+        </childnode>
+      </node>
+      <node id="1336">
+        <label>RenderingManager.h</label>
+        <link refid="de/d07/RenderingManager_8h"/>
+        <childnode refid="1337" relation="include">
+        </childnode>
+        <childnode refid="1343" relation="include">
+        </childnode>
+        <childnode refid="1344" relation="include">
+        </childnode>
+        <childnode refid="1345" relation="include">
+        </childnode>
+      </node>
+      <node id="1355">
+        <label>EffectColor.h</label>
+        <link refid="db/d7c/EffectColor_8h"/>
+        <childnode refid="1336" relation="include">
+        </childnode>
+      </node>
+      <node id="1340">
+        <label>Main.h</label>
+        <link refid="da/d94/Main_8h"/>
+      </node>
+      <node id="1362">
+        <label>WorldPortalCuller.h</label>
+        <link refid="d1/d27/WorldPortalCuller_8h"/>
+        <childnode refid="1363" relation="include">
+        </childnode>
+        <childnode refid="1364" relation="include">
+        </childnode>
+        <childnode refid="1365" relation="include">
+        </childnode>
+      </node>
+      <node id="1347">
+        <label>CommandShowTree.h</label>
+        <link refid="d8/d84/CommandShowTree_8h"/>
+        <childnode refid="1346" relation="include">
+        </childnode>
+      </node>
+      <node id="1376">
+        <label>EffectTexture1D.h</label>
+        <link refid="db/df9/EffectTexture1D_8h"/>
+      </node>
+      <node id="1341">
+        <label>MyLandscape.h</label>
+        <link refid="d7/d2b/MyLandscape_8h"/>
+        <childnode refid="1340" relation="include">
+        </childnode>
+      </node>
+      <node id="1349">
+        <label>EffectTechnique.h</label>
+        <link refid="d3/d77/EffectTechnique_8h"/>
+        <childnode refid="1350" relation="include">
+        </childnode>
+      </node>
+      <node id="1338">
+        <label>ApplicationManager.h</label>
+        <link refid="d2/d9d/ApplicationManager_8h"/>
+        <childnode refid="1339" relation="include">
+        </childnode>
+        <childnode refid="1340" relation="include">
+        </childnode>
+        <childnode refid="1341" relation="include">
+        </childnode>
+        <childnode refid="1342" relation="include">
+        </childnode>
+      </node>
+      <node id="1361">
+        <label>WorldCuller.h</label>
+        <link refid="da/daf/WorldCuller_8h"/>
+        <childnode refid="1362" relation="include">
+        </childnode>
+        <childnode refid="1366" relation="include">
+        </childnode>
+        <childnode refid="1344" relation="include">
+        </childnode>
+        <childnode refid="1369" relation="include">
+        </childnode>
+      </node>
+      <node id="1377">
+        <label>EffectTexture2D.h</label>
+        <link refid="db/d40/EffectTexture2D_8h"/>
+      </node>
+      <node id="1378">
+        <label>EffectTexture3D.h</label>
+        <link refid="d7/d48/EffectTexture3D_8h"/>
+      </node>
+      <node id="1337">
+        <label>WindowApplication.h</label>
+        <link refid="d4/d72/WindowApplication_8h"/>
+        <childnode refid="1338" relation="include">
+        </childnode>
+      </node>
+      <node id="1352">
+        <label>EffectDefault.h</label>
+        <link refid="da/d69/EffectDefault_8h"/>
+        <childnode refid="1336" relation="include">
+        </childnode>
+      </node>
+      <node id="1374">
+        <label>EffectLightPointGouraud.h</label>
+        <link refid="de/da9/EffectLightPointGouraud_8h"/>
+      </node>
+      <node id="1359">
+        <label>WorldOutdoorRegion.h</label>
+        <link refid="d0/d1d/WorldOutdoorRegion_8h"/>
+        <childnode refid="1360" relation="include">
+        </childnode>
+      </node>
+      <node id="1354">
+        <label>EffectText.h</label>
+        <link refid="d8/d5f/EffectText_8h"/>
+        <childnode refid="1336" relation="include">
+        </childnode>
+      </node>
+      <node id="1358">
+        <label>WorldDebugDraw.h</label>
+        <link refid="d1/df3/WorldDebugDraw_8h"/>
+        <childnode refid="1344" relation="include">
+        </childnode>
+      </node>
+      <node id="1360">
+        <label>WorldOutdoorArea.h</label>
+        <link refid="dd/d4f/WorldOutdoorArea_8h"/>
+        <childnode refid="1344" relation="include">
+        </childnode>
+        <childnode refid="1358" relation="include">
+        </childnode>
+      </node>
+      <node id="1339">
+        <label>Entities.h</label>
+        <link refid="d7/d5d/Entities_8h"/>
+        <childnode refid="1340" relation="include">
+        </childnode>
+      </node>
+      <node id="1366">
+        <label>GlobalEffect.h</label>
+        <link refid="d2/d5d/GlobalEffect_8h"/>
+        <childnode refid="1367" relation="include">
+        </childnode>
+        <childnode refid="1368" relation="include">
+        </childnode>
+      </node>
+      <node id="1363">
+        <label>WorldIndoorArea.h</label>
+        <link refid="d2/d61/WorldIndoorArea_8h"/>
+        <childnode refid="1344" relation="include">
+        </childnode>
+        <childnode refid="1358" relation="include">
+        </childnode>
+      </node>
+      <node id="1353">
+        <label>Effect2D.h</label>
+        <link refid="db/d27/Effect2D_8h"/>
+        <childnode refid="1336" relation="include">
+        </childnode>
+      </node>
+      <node id="1367">
+        <label>EffectPlanarShadows.h</label>
+        <link refid="d6/d73/EffectPlanarShadows_8h"/>
+        <childnode refid="1344" relation="include">
+        </childnode>
+      </node>
+      <node id="1343">
+        <label>ModelingManager.h</label>
+        <link refid="dc/ddb/ModelingManager_8h"/>
+        <childnode refid="1337" relation="include">
+        </childnode>
+        <childnode refid="1344" relation="include">
+        </childnode>
+      </node>
+      <node id="1346">
+        <label>ConsoleManager.h</label>
+        <link refid="d3/d63/ConsoleManager_8h"/>
+        <childnode refid="1337" relation="include">
+        </childnode>
+      </node>
+      <node id="1345">
+        <label>GUIManager.h</label>
+        <link refid="d6/db3/GUIManager_8h"/>
+        <childnode refid="1337" relation="include">
+        </childnode>
+        <childnode refid="1346" relation="include">
+        </childnode>
+        <childnode refid="1347" relation="include">
+        </childnode>
+      </node>
+      <node id="1371">
+        <label>EffectMaterial.h</label>
+        <link refid="d6/d58/EffectMaterial_8h"/>
+        <childnode refid="1367" relation="include">
+        </childnode>
+        <childnode refid="1340" relation="include">
+        </childnode>
+      </node>
+      <node id="1348">
+        <label>EffectPass.h</label>
+        <link refid="dc/d95/EffectPass_8h"/>
+        <childnode refid="1349" relation="include">
+        </childnode>
+      </node>
+      <node id="1364">
+        <label>WorldPortal.h</label>
+        <link refid="df/d65/WorldPortal_8h"/>
+        <childnode refid="1363" relation="include">
+        </childnode>
+        <childnode refid="1365" relation="include">
+        </childnode>
+      </node>
+      <node id="1351">
+        <label>EffectInstance.h</label>
+        <link refid="dc/d13/EffectInstance_8h"/>
+        <childnode refid="1336" relation="include">
+        </childnode>
+        <childnode refid="1352" relation="include">
+        </childnode>
+        <childnode refid="1353" relation="include">
+        </childnode>
+        <childnode refid="1354" relation="include">
+        </childnode>
+        <childnode refid="1355" relation="include">
+        </childnode>
+        <childnode refid="1356" relation="include">
+        </childnode>
+        <childnode refid="1359" relation="include">
+        </childnode>
+        <childnode refid="1371" relation="include">
+        </childnode>
+        <childnode refid="1372" relation="include">
+        </childnode>
+        <childnode refid="1373" relation="include">
+        </childnode>
+        <childnode refid="1374" relation="include">
+        </childnode>
+        <childnode refid="1375" relation="include">
+        </childnode>
+        <childnode refid="1376" relation="include">
+        </childnode>
+        <childnode refid="1377" relation="include">
+        </childnode>
+        <childnode refid="1378" relation="include">
+        </childnode>
+      </node>
+      <node id="1375">
+        <label>EffectLightPointPhong.h</label>
+        <link refid="dc/d62/EffectLightPointPhong_8h"/>
+        <childnode refid="1342" relation="include">
+        </childnode>
+        <childnode refid="1340" relation="include">
+        </childnode>
+      </node>
+      <node id="1373">
+        <label>EffectLightAmbient.h</label>
+        <link refid="da/d0a/EffectLightAmbient_8h"/>
+      </node>
+      <node id="1335">
+        <label>BlendingState.h</label>
+        <link refid="BlendingState.h"/>
+        <childnode refid="1336" relation="include">
+        </childnode>
+        <childnode refid="1348" relation="include">
+        </childnode>
+      </node>
+      <node id="1372">
+        <label>EffectMaterialTexture.h</label>
+        <link refid="d1/d26/EffectMaterialTexture_8h"/>
+      </node>
+      <node id="1356">
+        <label>WorldLeaf.h</label>
+        <link refid="de/d75/WorldLeaf_8h"/>
+        <childnode refid="1344" relation="include">
+        </childnode>
+        <childnode refid="1357" relation="include">
+        </childnode>
+        <childnode refid="1359" relation="include">
+        </childnode>
+        <childnode refid="1361" relation="include">
+        </childnode>
+        <childnode refid="1367" relation="include">
+        </childnode>
+        <childnode refid="1370" relation="include">
+        </childnode>
+        <childnode refid="1358" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="de/d89/classBlendingState" prot="public">BlendingState</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="d0/d5e/BlendingState_8h_1af00471f75daa6670ba48c87abf1f8347" prot="public" static="no">
+        <name>BlendingSrcMode</name>
+        <enumvalue id="d0/d5e/BlendingState_8h_1af00471f75daa6670ba48c87abf1f8347a66d4c15097149ddf5aad8fd38f63879f" prot="public">
+          <name>BLENDING_SRC_ZERO</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1af00471f75daa6670ba48c87abf1f8347a7a8fa62523b283c54866efdca8376ad9" prot="public">
+          <name>BLENDING_SRC_ONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1af00471f75daa6670ba48c87abf1f8347a0f8a99b3748d917fc729f5def1da592c" prot="public">
+          <name>BLENDING_SRC_DST_COLOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1af00471f75daa6670ba48c87abf1f8347a4de8ef81700fdc82af7bff7fb3157e8a" prot="public">
+          <name>BLENDING_SRC_DST_COLOR_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1af00471f75daa6670ba48c87abf1f8347a52e509d2b97027f944b970b7eecb5882" prot="public">
+          <name>BLENDING_SRC_SRC_ALPHA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1af00471f75daa6670ba48c87abf1f8347a03aad175800a9b43303def563445849d" prot="public">
+          <name>BLENDING_SRC_SRC_ALPHA_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1af00471f75daa6670ba48c87abf1f8347ae94fbb4a6a55aea4fc6d72e9bb7cb4c8" prot="public">
+          <name>BLENDING_SRC_SRC_ALPHA_SATURATE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1af00471f75daa6670ba48c87abf1f8347a2387cefd949641d4164efe29ffc9cfbb" prot="public">
+          <name>BLENDING_SRC_DST_ALPHA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1af00471f75daa6670ba48c87abf1f8347ac8c23081340885f97707745794a2eb0f" prot="public">
+          <name>BLENDING_SRC_DST_ALPHA_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1af00471f75daa6670ba48c87abf1f8347a24951abf5605e5dd8a0b229991b970c4" prot="public">
+          <name>BLENDING_SRC_CONST_COLOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1af00471f75daa6670ba48c87abf1f8347ad8a017d886281b3beeb7186a0babfb59" prot="public">
+          <name>BLENDING_SRC_CONST_COLOR_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1af00471f75daa6670ba48c87abf1f8347afe4415e5dbde11cab138888cebf71f10" prot="public">
+          <name>BLENDING_SRC_CONST_ALPHA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1af00471f75daa6670ba48c87abf1f8347a8d3e4454a8e31d7ffb98ed1c81af93da" prot="public">
+          <name>BLENDING_SRC_CONST_ALPHA_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1af00471f75daa6670ba48c87abf1f8347a2b5dcd38ccfced9702d7a9ba05d7a50a" prot="public">
+          <name>BLENDING_SRC_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1af00471f75daa6670ba48c87abf1f8347a66d4c15097149ddf5aad8fd38f63879f" prot="public">
+          <name>BLENDING_SRC_ZERO</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1af00471f75daa6670ba48c87abf1f8347a7a8fa62523b283c54866efdca8376ad9" prot="public">
+          <name>BLENDING_SRC_ONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1af00471f75daa6670ba48c87abf1f8347a0f8a99b3748d917fc729f5def1da592c" prot="public">
+          <name>BLENDING_SRC_DST_COLOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1af00471f75daa6670ba48c87abf1f8347a4de8ef81700fdc82af7bff7fb3157e8a" prot="public">
+          <name>BLENDING_SRC_DST_COLOR_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1af00471f75daa6670ba48c87abf1f8347a52e509d2b97027f944b970b7eecb5882" prot="public">
+          <name>BLENDING_SRC_SRC_ALPHA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1af00471f75daa6670ba48c87abf1f8347a03aad175800a9b43303def563445849d" prot="public">
+          <name>BLENDING_SRC_SRC_ALPHA_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1af00471f75daa6670ba48c87abf1f8347ae94fbb4a6a55aea4fc6d72e9bb7cb4c8" prot="public">
+          <name>BLENDING_SRC_SRC_ALPHA_SATURATE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1af00471f75daa6670ba48c87abf1f8347a2387cefd949641d4164efe29ffc9cfbb" prot="public">
+          <name>BLENDING_SRC_DST_ALPHA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1af00471f75daa6670ba48c87abf1f8347ac8c23081340885f97707745794a2eb0f" prot="public">
+          <name>BLENDING_SRC_DST_ALPHA_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1af00471f75daa6670ba48c87abf1f8347a24951abf5605e5dd8a0b229991b970c4" prot="public">
+          <name>BLENDING_SRC_CONST_COLOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1af00471f75daa6670ba48c87abf1f8347ad8a017d886281b3beeb7186a0babfb59" prot="public">
+          <name>BLENDING_SRC_CONST_COLOR_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1af00471f75daa6670ba48c87abf1f8347afe4415e5dbde11cab138888cebf71f10" prot="public">
+          <name>BLENDING_SRC_CONST_ALPHA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1af00471f75daa6670ba48c87abf1f8347a8d3e4454a8e31d7ffb98ed1c81af93da" prot="public">
+          <name>BLENDING_SRC_CONST_ALPHA_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1af00471f75daa6670ba48c87abf1f8347a2b5dcd38ccfced9702d7a9ba05d7a50a" prot="public">
+          <name>BLENDING_SRC_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/States/BlendingState.h" line="32" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/States/BlendingState.h" bodystart="31" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="enum" id="d0/d5e/BlendingState_8h_1a548269dd60a089aac50a35fe98ff3963" prot="public" static="no">
+        <name>BlendingDstMode</name>
+        <enumvalue id="d0/d5e/BlendingState_8h_1a548269dd60a089aac50a35fe98ff3963a2bfea5afbf20ae6e74595d7dc6d4e576" prot="public">
+          <name>BLENDING_DST_ZERO</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1a548269dd60a089aac50a35fe98ff3963a7a5c62db3f66eeaa04efd5f3dda91dc6" prot="public">
+          <name>BLENDING_DST_ONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1a548269dd60a089aac50a35fe98ff3963a8bc731e3460b8861bf40d6405d6880e9" prot="public">
+          <name>BLENDING_DST_SRC_COLOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1a548269dd60a089aac50a35fe98ff3963ab887e7590c3c3997b3187c8194eaa256" prot="public">
+          <name>BLENDING_DST_SRC_COLOR_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1a548269dd60a089aac50a35fe98ff3963aa19065c31c4fa3e5c1d1df0ca47f4911" prot="public">
+          <name>BLENDING_DST_SRC_ALPHA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1a548269dd60a089aac50a35fe98ff3963abe74dc6844e61cddf74992a856e955a3" prot="public">
+          <name>BLENDING_DST_SRC_ALPHA_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1a548269dd60a089aac50a35fe98ff3963a7f96eb88e38c120824f679920ca067e5" prot="public">
+          <name>BLENDING_DST_DST_ALPHA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1a548269dd60a089aac50a35fe98ff3963a9e1be5a5550adb87b24dd02f457b6160" prot="public">
+          <name>BLENDING_DST_DST_ALPHA_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1a548269dd60a089aac50a35fe98ff3963a5af9492bfdcf46ab42a8d0e70229e6f3" prot="public">
+          <name>BLENDING_DST_CONST_COLOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1a548269dd60a089aac50a35fe98ff3963af4391734fe586ef9b4d75ec67312d150" prot="public">
+          <name>BLENDING_DST_CONST_COLOR_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1a548269dd60a089aac50a35fe98ff3963a55972dd587ca0c896e249e634408dbef" prot="public">
+          <name>BLENDING_DST_CONST_ALPHA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1a548269dd60a089aac50a35fe98ff3963a72864aaac8a192c7012c6b69e24c61da" prot="public">
+          <name>BLENDING_DST_CONST_ALPHA_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1a548269dd60a089aac50a35fe98ff3963add452602f220667e017b8092cdcb70a3" prot="public">
+          <name>BLENDING_DST_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a548269dd60a089aac50a35fe98ff3963a2bfea5afbf20ae6e74595d7dc6d4e576" prot="public">
+          <name>BLENDING_DST_ZERO</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a548269dd60a089aac50a35fe98ff3963a7a5c62db3f66eeaa04efd5f3dda91dc6" prot="public">
+          <name>BLENDING_DST_ONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a548269dd60a089aac50a35fe98ff3963a8bc731e3460b8861bf40d6405d6880e9" prot="public">
+          <name>BLENDING_DST_SRC_COLOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a548269dd60a089aac50a35fe98ff3963ab887e7590c3c3997b3187c8194eaa256" prot="public">
+          <name>BLENDING_DST_SRC_COLOR_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a548269dd60a089aac50a35fe98ff3963aa19065c31c4fa3e5c1d1df0ca47f4911" prot="public">
+          <name>BLENDING_DST_SRC_ALPHA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a548269dd60a089aac50a35fe98ff3963abe74dc6844e61cddf74992a856e955a3" prot="public">
+          <name>BLENDING_DST_SRC_ALPHA_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a548269dd60a089aac50a35fe98ff3963a7f96eb88e38c120824f679920ca067e5" prot="public">
+          <name>BLENDING_DST_DST_ALPHA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a548269dd60a089aac50a35fe98ff3963a9e1be5a5550adb87b24dd02f457b6160" prot="public">
+          <name>BLENDING_DST_DST_ALPHA_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a548269dd60a089aac50a35fe98ff3963a5af9492bfdcf46ab42a8d0e70229e6f3" prot="public">
+          <name>BLENDING_DST_CONST_COLOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a548269dd60a089aac50a35fe98ff3963af4391734fe586ef9b4d75ec67312d150" prot="public">
+          <name>BLENDING_DST_CONST_COLOR_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a548269dd60a089aac50a35fe98ff3963a55972dd587ca0c896e249e634408dbef" prot="public">
+          <name>BLENDING_DST_CONST_ALPHA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a548269dd60a089aac50a35fe98ff3963a72864aaac8a192c7012c6b69e24c61da" prot="public">
+          <name>BLENDING_DST_CONST_ALPHA_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a548269dd60a089aac50a35fe98ff3963add452602f220667e017b8092cdcb70a3" prot="public">
+          <name>BLENDING_DST_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/States/BlendingState.h" line="50" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/States/BlendingState.h" bodystart="49" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="enum" id="d0/d5e/BlendingState_8h_1aba2e84fa11d964b214e0cc2f92860e23" prot="public" static="no">
+        <name>BlendingTestMode</name>
+        <enumvalue id="d0/d5e/BlendingState_8h_1aba2e84fa11d964b214e0cc2f92860e23a1f5e23916f2254ae5fa3e27dc323306c" prot="public">
+          <name>BLENDING_TEST_NEVER</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1aba2e84fa11d964b214e0cc2f92860e23ac18ffaae2f6d45597252c740435fcf12" prot="public">
+          <name>BLENDING_TEST_ALLWAYS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1aba2e84fa11d964b214e0cc2f92860e23a40189d8f80c7235940ea8616812ae396" prot="public">
+          <name>BLENDING_TEST_EQUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1aba2e84fa11d964b214e0cc2f92860e23aeaf2b5b94ff9083cf35f80a28f611b73" prot="public">
+          <name>BLENDING_TEST_NOTEQUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1aba2e84fa11d964b214e0cc2f92860e23a01191e747f2c319f85e66ab5e7fd4d30" prot="public">
+          <name>BLENDING_TEST_LESSER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1aba2e84fa11d964b214e0cc2f92860e23a20952a948d8c85d5f11ef922a41a1243" prot="public">
+          <name>BLENDING_TEST_LESSER_EQUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1aba2e84fa11d964b214e0cc2f92860e23a77583bf71eb7a1c09bb4b04cd9fcf797" prot="public">
+          <name>BLENDING_TEST_GREATER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1aba2e84fa11d964b214e0cc2f92860e23aa0b27f8da194f86f2d10040987db6d99" prot="public">
+          <name>BLENDING_TEST_GREATER_EQUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d0/d5e/BlendingState_8h_1aba2e84fa11d964b214e0cc2f92860e23aa516e914d948d007489d10fd4de1ce79" prot="public">
+          <name>BLENDING_TEST_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1aba2e84fa11d964b214e0cc2f92860e23a1f5e23916f2254ae5fa3e27dc323306c" prot="public">
+          <name>BLENDING_TEST_NEVER</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1aba2e84fa11d964b214e0cc2f92860e23ac18ffaae2f6d45597252c740435fcf12" prot="public">
+          <name>BLENDING_TEST_ALLWAYS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1aba2e84fa11d964b214e0cc2f92860e23a40189d8f80c7235940ea8616812ae396" prot="public">
+          <name>BLENDING_TEST_EQUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1aba2e84fa11d964b214e0cc2f92860e23aeaf2b5b94ff9083cf35f80a28f611b73" prot="public">
+          <name>BLENDING_TEST_NOTEQUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1aba2e84fa11d964b214e0cc2f92860e23a01191e747f2c319f85e66ab5e7fd4d30" prot="public">
+          <name>BLENDING_TEST_LESSER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1aba2e84fa11d964b214e0cc2f92860e23a20952a948d8c85d5f11ef922a41a1243" prot="public">
+          <name>BLENDING_TEST_LESSER_EQUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1aba2e84fa11d964b214e0cc2f92860e23a77583bf71eb7a1c09bb4b04cd9fcf797" prot="public">
+          <name>BLENDING_TEST_GREATER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1aba2e84fa11d964b214e0cc2f92860e23aa0b27f8da194f86f2d10040987db6d99" prot="public">
+          <name>BLENDING_TEST_GREATER_EQUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1aba2e84fa11d964b214e0cc2f92860e23aa516e914d948d007489d10fd4de1ce79" prot="public">
+          <name>BLENDING_TEST_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/States/BlendingState.h" line="67" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/States/BlendingState.h" bodystart="66" bodyend="78"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/States/BlendingState.h"/>
+  </compounddef>
+</doxygen>

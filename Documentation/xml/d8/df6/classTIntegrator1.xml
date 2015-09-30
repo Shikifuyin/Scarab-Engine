@@ -1,0 +1,289 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d8/df6/classTIntegrator1" kind="class" prot="public">
+    <compoundname>TIntegrator1</compoundname>
+    <includes refid="d8/d5b/Integrator1_8h" local="no">Integrator1.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename Real</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="d8/df6/classTIntegrator1_1a203719f68ff3eb578252cb00b0d3cd0d" prot="public" static="no">
+        <type>Real(*</type>
+        <definition>typedef Real(* Function)(Real, Void *)</definition>
+        <argsstring>)(Real, Void *)</argsstring>
+        <name>Function</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Integration/Integrator1.h" line="42" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Integration/Integrator1.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d8/df6/classTIntegrator1_1a440377b892046dea189850a5033d14ee" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt TrapezoidSampleCount</definition>
+        <argsstring></argsstring>
+        <name>TrapezoidSampleCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Integration/Integrator1.h" line="49" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Integration/Integrator1.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/df6/classTIntegrator1_1ae78bd48afd4c768df35858d7ae342b26" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt RombergOrder</definition>
+        <argsstring></argsstring>
+        <name>RombergOrder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Integration/Integrator1.h" line="50" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Integration/Integrator1.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d8/df6/classTIntegrator1_1a4fc39fa831fd31920eecfc516b4a262c" prot="private" static="no" mutable="no">
+        <type><ref refid="d6/d2f/Reflect_8h_1ae8fcc70dfa03aed8a097850896d32b0f" kindref="member">Function</ref></type>
+        <definition>Function m_pfFunction</definition>
+        <argsstring></argsstring>
+        <name>m_pfFunction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Integration/Integrator1.h" line="66" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Integration/Integrator1.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/df6/classTIntegrator1_1a91f0e9a4012edb773b7a59705e4e90a0" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> *</type>
+        <definition>Void* m_pUserData</definition>
+        <argsstring></argsstring>
+        <name>m_pUserData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Integration/Integrator1.h" line="67" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Integration/Integrator1.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d8/df6/classTIntegrator1_1af26c791b2e8d4fd6bef96d914253ef6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TIntegrator1</definition>
+        <argsstring>(Function pfFunction, Void *pUserData=NULL)</argsstring>
+        <name>TIntegrator1</name>
+        <param>
+          <type><ref refid="d6/d2f/Reflect_8h_1ae8fcc70dfa03aed8a097850896d32b0f" kindref="member">Function</ref></type>
+          <declname>pfFunction</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> *</type>
+          <declname>pUserData</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Integration/Integrator1.h" line="45"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/df6/classTIntegrator1_1aa45f37259e8f13f28d6ad8d2343f8399" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~TIntegrator1</definition>
+        <argsstring>()</argsstring>
+        <name>~TIntegrator1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Integration/Integrator1.h" line="46"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/df6/classTIntegrator1_1a0b83f136e6f9aefd43434c9c4c4c5b4c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> *</type>
+        <definition>Void* GetUserData</definition>
+        <argsstring>() const </argsstring>
+        <name>GetUserData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Integration/Integrator1.h" line="53"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/df6/classTIntegrator1_1a164138c0b5d72c34a644809e30453f64" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetUserData</definition>
+        <argsstring>(Void *pUserData)</argsstring>
+        <name>SetUserData</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> *</type>
+          <declname>pUserData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Integration/Integrator1.h" line="54"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/df6/classTIntegrator1_1a5c028437fe08eeea73fbd642a3e7f0ac" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d6/d2f/Reflect_8h_1ae8fcc70dfa03aed8a097850896d32b0f" kindref="member">Function</ref></type>
+        <definition>Function GetFunction</definition>
+        <argsstring>() const </argsstring>
+        <name>GetFunction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Integration/Integrator1.h" line="57"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/df6/classTIntegrator1_1a862197498d1dedf95d7c95b99edde2ed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetFunction</definition>
+        <argsstring>(Function pfFunction)</argsstring>
+        <name>SetFunction</name>
+        <param>
+          <type><ref refid="d6/d2f/Reflect_8h_1ae8fcc70dfa03aed8a097850896d32b0f" kindref="member">Function</ref></type>
+          <declname>pfFunction</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Integration/Integrator1.h" line="58"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/df6/classTIntegrator1_1a21a9fb71b2ca927d3f3364777bad1d08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real GaussianQuadrature</definition>
+        <argsstring>(Real fT0, Real fT1)</argsstring>
+        <name>GaussianQuadrature</name>
+        <param>
+          <type>Real</type>
+          <declname>fT0</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fT1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Integration/Integrator1.h" line="61"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/df6/classTIntegrator1_1aa1f13d73cf6e2d76edd6616602d44635" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real TrapezoidRule</definition>
+        <argsstring>(Real fT0, Real fT1)</argsstring>
+        <name>TrapezoidRule</name>
+        <param>
+          <type>Real</type>
+          <declname>fT0</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fT1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Integration/Integrator1.h" line="62"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/df6/classTIntegrator1_1aa969354bdb0c969be158b2540d29b50b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real RombergIntegral</definition>
+        <argsstring>(Real fT0, Real fT1)</argsstring>
+        <name>RombergIntegral</name>
+        <param>
+          <type>Real</type>
+          <declname>fT0</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fT1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Integration/Integrator1.h" line="63"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="12547">
+        <label>Real</label>
+      </node>
+      <node id="12544">
+        <label>TIntegrator1&lt; Real &gt;</label>
+        <link refid="d8/df6/classTIntegrator1"/>
+        <childnode refid="12545" relation="usage">
+          <edgelabel>RombergOrder</edgelabel>
+          <edgelabel>TrapezoidSampleCount</edgelabel>
+        </childnode>
+        <childnode refid="12546" relation="usage">
+          <edgelabel>m_pUserData</edgelabel>
+        </childnode>
+        <childnode refid="12547" relation="usage">
+          <edgelabel>m_pfFunction</edgelabel>
+        </childnode>
+      </node>
+      <node id="12545">
+        <label>int</label>
+      </node>
+      <node id="12546">
+        <label>Void *</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Integration/Integrator1.h" line="39" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/Integration/Integrator1.h" bodystart="38" bodyend="68"/>
+    <listofallmembers>
+      <member refid="d8/df6/classTIntegrator1_1a203719f68ff3eb578252cb00b0d3cd0d" prot="public" virt="non-virtual"><scope>TIntegrator1</scope><name>Function</name></member>
+      <member refid="d8/df6/classTIntegrator1_1a21a9fb71b2ca927d3f3364777bad1d08" prot="public" virt="non-virtual"><scope>TIntegrator1</scope><name>GaussianQuadrature</name></member>
+      <member refid="d8/df6/classTIntegrator1_1a5c028437fe08eeea73fbd642a3e7f0ac" prot="public" virt="non-virtual"><scope>TIntegrator1</scope><name>GetFunction</name></member>
+      <member refid="d8/df6/classTIntegrator1_1a0b83f136e6f9aefd43434c9c4c4c5b4c" prot="public" virt="non-virtual"><scope>TIntegrator1</scope><name>GetUserData</name></member>
+      <member refid="d8/df6/classTIntegrator1_1a4fc39fa831fd31920eecfc516b4a262c" prot="private" virt="non-virtual"><scope>TIntegrator1</scope><name>m_pfFunction</name></member>
+      <member refid="d8/df6/classTIntegrator1_1a91f0e9a4012edb773b7a59705e4e90a0" prot="private" virt="non-virtual"><scope>TIntegrator1</scope><name>m_pUserData</name></member>
+      <member refid="d8/df6/classTIntegrator1_1aa969354bdb0c969be158b2540d29b50b" prot="public" virt="non-virtual"><scope>TIntegrator1</scope><name>RombergIntegral</name></member>
+      <member refid="d8/df6/classTIntegrator1_1ae78bd48afd4c768df35858d7ae342b26" prot="public" virt="non-virtual"><scope>TIntegrator1</scope><name>RombergOrder</name></member>
+      <member refid="d8/df6/classTIntegrator1_1a862197498d1dedf95d7c95b99edde2ed" prot="public" virt="non-virtual"><scope>TIntegrator1</scope><name>SetFunction</name></member>
+      <member refid="d8/df6/classTIntegrator1_1a164138c0b5d72c34a644809e30453f64" prot="public" virt="non-virtual"><scope>TIntegrator1</scope><name>SetUserData</name></member>
+      <member refid="d8/df6/classTIntegrator1_1af26c791b2e8d4fd6bef96d914253ef6f" prot="public" virt="non-virtual"><scope>TIntegrator1</scope><name>TIntegrator1</name></member>
+      <member refid="d8/df6/classTIntegrator1_1aa1f13d73cf6e2d76edd6616602d44635" prot="public" virt="non-virtual"><scope>TIntegrator1</scope><name>TrapezoidRule</name></member>
+      <member refid="d8/df6/classTIntegrator1_1a440377b892046dea189850a5033d14ee" prot="public" virt="non-virtual"><scope>TIntegrator1</scope><name>TrapezoidSampleCount</name></member>
+      <member refid="d8/df6/classTIntegrator1_1aa45f37259e8f13f28d6ad8d2343f8399" prot="public" virt="non-virtual"><scope>TIntegrator1</scope><name>~TIntegrator1</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

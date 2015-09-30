@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d6/dc5/structChunkListNode" kind="struct" prot="public">
+    <compoundname>ChunkListNode</compoundname>
+    <includes refid="d3/d89/HeapAllocator_8h" local="no">HeapAllocator.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d6/dc5/structChunkListNode_1a4a73143f9507d525dd40819306e98128" prot="public" static="no" mutable="no">
+        <type>struct _chunk_listnode *</type>
+        <definition>struct _chunk_listnode* pNext</definition>
+        <argsstring></argsstring>
+        <name>pNext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/Allocators/HeapAllocator.h" line="53" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/Allocators/HeapAllocator.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/dc5/structChunkListNode_1a4c21d0da7946bba92b2b0b77aacc5009" prot="public" static="no" mutable="no">
+        <type>struct _chunk_listnode *</type>
+        <definition>struct _chunk_listnode* pPrev</definition>
+        <argsstring></argsstring>
+        <name>pPrev</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/Allocators/HeapAllocator.h" line="54" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/Allocators/HeapAllocator.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/dc5/structChunkListNode_1ad26693b2c8dd1386f343c9f0f6aff420" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref></type>
+        <definition>Int Padding</definition>
+        <argsstring></argsstring>
+        <name>Padding</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/Allocators/HeapAllocator.h" line="55" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/Allocators/HeapAllocator.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/dc5/structChunkListNode_1a9351ae577e1650e03a33bcafc78e9331" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref></type>
+        <definition>Int FakeBalance</definition>
+        <argsstring></argsstring>
+        <name>FakeBalance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/Allocators/HeapAllocator.h" line="56" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/Allocators/HeapAllocator.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="557">
+        <label>struct _chunk_listnode *</label>
+      </node>
+      <node id="556">
+        <label>int</label>
+      </node>
+      <node id="555">
+        <label>ChunkListNode</label>
+        <link refid="d6/dc5/structChunkListNode"/>
+        <childnode refid="556" relation="usage">
+          <edgelabel>Padding</edgelabel>
+          <edgelabel>FakeBalance</edgelabel>
+        </childnode>
+        <childnode refid="557" relation="usage">
+          <edgelabel>pPrev</edgelabel>
+          <edgelabel>pNext</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/Allocators/HeapAllocator.h" line="52" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/Allocators/HeapAllocator.h" bodystart="51" bodyend="57"/>
+    <listofallmembers>
+      <member refid="d6/dc5/structChunkListNode_1a9351ae577e1650e03a33bcafc78e9331" prot="public" virt="non-virtual"><scope>ChunkListNode</scope><name>FakeBalance</name></member>
+      <member refid="d6/dc5/structChunkListNode_1ad26693b2c8dd1386f343c9f0f6aff420" prot="public" virt="non-virtual"><scope>ChunkListNode</scope><name>Padding</name></member>
+      <member refid="d6/dc5/structChunkListNode_1a4a73143f9507d525dd40819306e98128" prot="public" virt="non-virtual"><scope>ChunkListNode</scope><name>pNext</name></member>
+      <member refid="d6/dc5/structChunkListNode_1a4c21d0da7946bba92b2b0b77aacc5009" prot="public" virt="non-virtual"><scope>ChunkListNode</scope><name>pPrev</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

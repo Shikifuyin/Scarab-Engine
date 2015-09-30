@@ -1,0 +1,1161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d6/d0b/classShapeDeformable" kind="class" prot="public">
+    <compoundname>ShapeDeformable</compoundname>
+    <basecompoundref refid="d5/d20/classShapeConcave" prot="public" virt="non-virtual">ShapeConcave</basecompoundref>
+    <includes refid="d7/d66/ShapeDeformable_8h" local="no">ShapeDeformable.h</includes>
+    <innerclass refid="dc/d74/classShapeDeformable_1_1Facet" prot="public">ShapeDeformable::Facet</innerclass>
+    <innerclass refid="de/d0b/classShapeDeformable_1_1Link" prot="public">ShapeDeformable::Link</innerclass>
+    <innerclass refid="de/d08/classShapeDeformable_1_1Node" prot="public">ShapeDeformable::Node</innerclass>
+    <innerclass refid="de/dc1/classShapeDeformable_1_1SelfCollider" prot="private">ShapeDeformable::SelfCollider</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d6/d0b/classShapeDeformable_1aba012c9ca2694b7842ee280c128fc9a0" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool m_bOwningGraph</definition>
+        <argsstring></argsstring>
+        <name>m_bOwningGraph</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="130" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d0b/classShapeDeformable_1aa9b853c09109f84ddfa306cd532fdf6a" prot="private" static="no" mutable="no">
+        <type><ref refid="df/dc5/MeshDeformableGraph_8h_1ac806106a25fcce0b0a9a8bcd9bf88cc6" kindref="member">MeshDeformableGraph</ref> *</type>
+        <definition>MeshDeformableGraph* m_pGraph</definition>
+        <argsstring></argsstring>
+        <name>m_pGraph</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="131" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d0b/classShapeDeformable_1a24dad430ec680732eb7df12f8a5e26a1" prot="private" static="no" mutable="no">
+        <type>const <ref refid="d3/db4/AABoxTree_8h_1af243efa59a460eccea03448e97dfe8de" kindref="member">AABoxTree</ref> *</type>
+        <definition>const AABoxTree* m_pNodeTree</definition>
+        <argsstring></argsstring>
+        <name>m_pNodeTree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="132" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d0b/classShapeDeformable_1acc2a4551c1387f27adb18cad07a5e42e" prot="private" static="no" mutable="no">
+        <type>const <ref refid="d3/db4/AABoxTree_8h_1af243efa59a460eccea03448e97dfe8de" kindref="member">AABoxTree</ref> *</type>
+        <definition>const AABoxTree* m_pFacetTree</definition>
+        <argsstring></argsstring>
+        <name>m_pFacetTree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="133" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d0b/classShapeDeformable_1a7569dc1cef2877f0d3c342c4d0c6f0e9" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool m_bUseSelfCollisions</definition>
+        <argsstring></argsstring>
+        <name>m_bUseSelfCollisions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="145" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d0b/classShapeDeformable_1a28d06051fb1385439669501eac1cc923" prot="private" static="no" mutable="no">
+        <type><ref refid="de/dc1/classShapeDeformable_1_1SelfCollider" kindref="compound">SelfCollider</ref></type>
+        <definition>SelfCollider m_hSelfCollider</definition>
+        <argsstring></argsstring>
+        <name>m_hSelfCollider</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="146" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="d6/d0b/classShapeDeformable_1a9b981c44edaddef905e2f1e467f4093a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d6/d37/classMeshVertex" kindref="compound">MeshVertex</ref> *</type>
+        <definition>static MeshVertex* DefaultNodeBuilder</definition>
+        <argsstring>(const MeshVertexKey &amp;vertexKey)</argsstring>
+        <name>DefaultNodeBuilder</name>
+        <param>
+          <type>const <ref refid="d2/d6b/classMeshVertexKey" kindref="compound">MeshVertexKey</ref> &amp;</type>
+          <declname>vertexKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="73"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d0b/classShapeDeformable_1af5984f46688d6c3a8883b5432219c9f6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d7/da3/classMeshEdge" kindref="compound">MeshEdge</ref> *</type>
+        <definition>static MeshEdge* DefaultLinkBuilder</definition>
+        <argsstring>(const MeshEdgeKey &amp;edgeKey)</argsstring>
+        <name>DefaultLinkBuilder</name>
+        <param>
+          <type>const <ref refid="db/dab/classMeshEdgeKey" kindref="compound">MeshEdgeKey</ref> &amp;</type>
+          <declname>edgeKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="74"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d0b/classShapeDeformable_1a5b8b85b28fe353110b0a11d91cbe64e8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d5/da2/classMeshFacet" kindref="compound">MeshFacet</ref> *</type>
+        <definition>static MeshFacet* DefaultFacetBuilder</definition>
+        <argsstring>(const MeshFacetKey &amp;facetKey)</argsstring>
+        <name>DefaultFacetBuilder</name>
+        <param>
+          <type>const <ref refid="dc/d28/classMeshFacetKey" kindref="compound">MeshFacetKey</ref> &amp;</type>
+          <declname>facetKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="75"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d6/d0b/classShapeDeformable_1a9366962257384836de40137c4fedf6f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShapeDeformable</definition>
+        <argsstring>(MeshDeformableGraph *pGraph, TriangleMesh *pMesh=NULL)</argsstring>
+        <name>ShapeDeformable</name>
+        <param>
+          <type><ref refid="df/dc5/MeshDeformableGraph_8h_1ac806106a25fcce0b0a9a8bcd9bf88cc6" kindref="member">MeshDeformableGraph</ref> *</type>
+          <declname>pGraph</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d7e/classTriangleMesh" kindref="compound">TriangleMesh</ref> *</type>
+          <declname>pMesh</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="78"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d0b/classShapeDeformable_1ab703deeb7f4b25b19b153482a9be74c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShapeDeformable</definition>
+        <argsstring>(TriangleMesh *pMesh, MeshManifold3::VertexBuilder pfNodeBuilder=DefaultNodeBuilder, MeshManifold3::EdgeBuilder pfLinkBuilder=DefaultLinkBuilder, MeshManifold3::FacetBuilder pfFacetBuilder=DefaultFacetBuilder)</argsstring>
+        <name>ShapeDeformable</name>
+        <param>
+          <type><ref refid="d7/d7e/classTriangleMesh" kindref="compound">TriangleMesh</ref> *</type>
+          <declname>pMesh</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd4/classMeshManifold3_1a1b6f7934ca6ca46b153492f7abfef1eb" kindref="member">MeshManifold3::VertexBuilder</ref></type>
+          <declname>pfNodeBuilder</declname>
+          <defval><ref refid="d6/d0b/classShapeDeformable_1a9b981c44edaddef905e2f1e467f4093a" kindref="member">DefaultNodeBuilder</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="d9/dd4/classMeshManifold3_1a41a270d706178371f261898ce5a0145e" kindref="member">MeshManifold3::EdgeBuilder</ref></type>
+          <declname>pfLinkBuilder</declname>
+          <defval><ref refid="d6/d0b/classShapeDeformable_1af5984f46688d6c3a8883b5432219c9f6" kindref="member">DefaultLinkBuilder</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="d9/dd4/classMeshManifold3_1a9691ed7d09051ce3102c6a739230890e" kindref="member">MeshManifold3::FacetBuilder</ref></type>
+          <declname>pfFacetBuilder</declname>
+          <defval><ref refid="d6/d0b/classShapeDeformable_1a5b8b85b28fe353110b0a11d91cbe64e8" kindref="member">DefaultFacetBuilder</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="81"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d0b/classShapeDeformable_1ad7be5b494a6a1e91f6b875c6f6f65cc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~ShapeDeformable</definition>
+        <argsstring>()</argsstring>
+        <name>~ShapeDeformable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="82"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d0b/classShapeDeformable_1a9f7af3dac98c12d5916d4b5d8880ff5c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="de/d8f/Shape_8h_1a5a4538eeab397888d88a4eefcc5a1345" kindref="member">ShapeType</ref></type>
+        <definition>virtual ShapeType GetType</definition>
+        <argsstring>() const </argsstring>
+        <name>GetType</name>
+        <reimplements refid="de/d0a/classShape_1aecd8bd495d73d62925318fd6cb97c371">GetType</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="85"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d0b/classShapeDeformable_1abc38e72cfc1661a40b079fc1955a7b38" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetNodeCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetNodeCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="88"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d0b/classShapeDeformable_1a4c17173ce8168fd553f3c6f7a5ac122c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void EnumNodes</definition>
+        <argsstring>() const </argsstring>
+        <name>EnumNodes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="89"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d0b/classShapeDeformable_1a54ee79e0954d8e0dffd18a9e29773789" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="de/d08/classShapeDeformable_1_1Node" kindref="compound">Node</ref> *</type>
+        <definition>Node* EnumNextNode</definition>
+        <argsstring>() const </argsstring>
+        <name>EnumNextNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="90"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d0b/classShapeDeformable_1a10871a967fcddf58f9c642c130332baa" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="de/d08/classShapeDeformable_1_1Node" kindref="compound">Node</ref> *</type>
+        <definition>Node* GetNode</definition>
+        <argsstring>(UInt iNode) const </argsstring>
+        <name>GetNode</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iNode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="91"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d0b/classShapeDeformable_1a1883294938e24ad7cfd52f2bf5a59a39" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetLinkCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetLinkCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="93"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d0b/classShapeDeformable_1a86c61a26422e8b4b9b84e174addc5731" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void EnumLinks</definition>
+        <argsstring>() const </argsstring>
+        <name>EnumLinks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="94"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d0b/classShapeDeformable_1af4e06f04d6d9b8d5f4a49b7827b688f3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="de/d0b/classShapeDeformable_1_1Link" kindref="compound">Link</ref> *</type>
+        <definition>Link* EnumNextLink</definition>
+        <argsstring>() const </argsstring>
+        <name>EnumNextLink</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="95"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d0b/classShapeDeformable_1ae6f007fb61011daa8a89b681323784f6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetFacetCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetFacetCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="97"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d0b/classShapeDeformable_1ad91cb53fccee3dddd63a52a73dbb252d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void EnumFacets</definition>
+        <argsstring>() const </argsstring>
+        <name>EnumFacets</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="98"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d0b/classShapeDeformable_1a98d228245e6171813ff314d630fd8f99" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="dc/d74/classShapeDeformable_1_1Facet" kindref="compound">Facet</ref> *</type>
+        <definition>Facet* EnumNextFacet</definition>
+        <argsstring>() const </argsstring>
+        <name>EnumNextFacet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="99"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d0b/classShapeDeformable_1a019957dc0e557bfe4093f2ff97973da0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="df/dc5/MeshDeformableGraph_8h_1ac806106a25fcce0b0a9a8bcd9bf88cc6" kindref="member">MeshDeformableGraph</ref> *</type>
+        <definition>MeshDeformableGraph* GetGraph</definition>
+        <argsstring>() const </argsstring>
+        <name>GetGraph</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="101"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d0b/classShapeDeformable_1abc955e8b05095be99269c5c7d5bee0e1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d3/db4/AABoxTree_8h_1af243efa59a460eccea03448e97dfe8de" kindref="member">AABoxTree</ref> *</type>
+        <definition>const AABoxTree* GetNodeTree</definition>
+        <argsstring>() const </argsstring>
+        <name>GetNodeTree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="103"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d0b/classShapeDeformable_1a5973b93992f8fc848f047b1a72536520" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d3/db4/AABoxTree_8h_1af243efa59a460eccea03448e97dfe8de" kindref="member">AABoxTree</ref> *</type>
+        <definition>const AABoxTree* GetFacetTree</definition>
+        <argsstring>() const </argsstring>
+        <name>GetFacetTree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="104"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d0b/classShapeDeformable_1ad0b24871337eba2da2d4b34abf434d0b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void ComputeMassProperties</definition>
+        <argsstring>(Scalar fDensity, Scalar *outMass, Vertex3 *outCenterOfMass, Matrix3 *outInertiaTensor) const </argsstring>
+        <name>ComputeMassProperties</name>
+        <reimplements refid="de/d0a/classShape_1a912b5df73c43efbe2d1f01088875e0f5">ComputeMassProperties</reimplements>
+        <param>
+          <type><ref refid="d0/d10/Scalar_8h_1abee0aca51a3a3e16c628155aa4ac6f12" kindref="member">Scalar</ref></type>
+          <declname>fDensity</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/d10/Scalar_8h_1abee0aca51a3a3e16c628155aa4ac6f12" kindref="member">Scalar</ref> *</type>
+          <declname>outMass</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/df3/Vertex3_8h_1a77dfdbfba4bf6ee1a522233ccef29ff5" kindref="member">Vertex3</ref> *</type>
+          <declname>outCenterOfMass</declname>
+        </param>
+        <param>
+          <type><ref refid="d1/d41/Matrix3_8h_1a210f4e2fb57345f4ab321f3ee0728bff" kindref="member">Matrix3</ref> *</type>
+          <declname>outInertiaTensor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="107"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d0b/classShapeDeformable_1a139cace71ef43512ae869d8c8456fb11" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void QueryNodes</definition>
+        <argsstring>(const BVAABox &amp;bvAABox, HNodeQuery *pQuery) const </argsstring>
+        <name>QueryNodes</name>
+        <reimplements refid="d5/d20/classShapeConcave_1ac3baa9962dd80301dd58bd6df833bbac">QueryNodes</reimplements>
+        <param>
+          <type>const <ref refid="dc/d7d/BVAABox_8h_1a74b3a18f58c8e67e4b20257d8a928716" kindref="member">BVAABox</ref> &amp;</type>
+          <declname>bvAABox</declname>
+        </param>
+        <param>
+          <type><ref refid="d1/d88/classShapeConcave_1_1HNodeQuery" kindref="compound">HNodeQuery</ref> *</type>
+          <declname>pQuery</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="110"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d0b/classShapeDeformable_1a5dfa0f1de2bb1ebdefe819ebab129c6b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void QueryTriangles</definition>
+        <argsstring>(const BVAABox &amp;bvAABox, HTriangleQuery *pQuery) const </argsstring>
+        <name>QueryTriangles</name>
+        <reimplements refid="d5/d20/classShapeConcave_1a5b484e519635920b34c34598e9749651">QueryTriangles</reimplements>
+        <param>
+          <type>const <ref refid="dc/d7d/BVAABox_8h_1a74b3a18f58c8e67e4b20257d8a928716" kindref="member">BVAABox</ref> &amp;</type>
+          <declname>bvAABox</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d87/classShapeConcave_1_1HTriangleQuery" kindref="compound">HTriangleQuery</ref> *</type>
+          <declname>pQuery</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="113"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d0b/classShapeDeformable_1ac94bbe5308cdc93fffce5637e683cf58" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void ToggleSelfCollisions</definition>
+        <argsstring>(Bool bEnable)</argsstring>
+        <name>ToggleSelfCollisions</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+          <declname>bEnable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="116"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d0b/classShapeDeformable_1ad7de34d70f79ed4949faa02652844cdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SelfCollisionDetection</definition>
+        <argsstring>()</argsstring>
+        <name>SelfCollisionDetection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="117"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d0b/classShapeDeformable_1a2e982c638182afdaa199c32210d9db21" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetSelfContactCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetSelfContactCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="119"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d0b/classShapeDeformable_1aeaf3fb763b42a77d2528052c9da334e6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d6/d24/classContactPoint" kindref="compound">ContactPoint</ref> *</type>
+        <definition>const ContactPoint* GetSelfContact</definition>
+        <argsstring>(UInt iSelfContact) const </argsstring>
+        <name>GetSelfContact</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iSelfContact</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="120"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d0b/classShapeDeformable_1acee5967d6fef4a59688ff89853a491db" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void UpdateCollisionData</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateCollisionData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="123"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d0b/classShapeDeformable_1a40d326a4123b49584d428b0c79e8773e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void UpdateMesh</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateMesh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="124"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d6/d0b/classShapeDeformable_1a984abdb6e512d8df59bb404022580685" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _UpdateNormalsAreas</definition>
+        <argsstring>() const </argsstring>
+        <name>_UpdateNormalsAreas</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="128"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="11435">
+        <label>ShapeDeformable</label>
+        <link refid="d6/d0b/classShapeDeformable"/>
+        <childnode refid="11436" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11436">
+        <label>ShapeConcave</label>
+        <link refid="d5/d20/classShapeConcave"/>
+        <childnode refid="11437" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11437">
+        <label>Shape</label>
+        <link refid="de/d0a/classShape"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="11483">
+        <label>@1</label>
+      </node>
+      <node id="11488">
+        <label>Array&lt; ContactPoint &gt;</label>
+        <link refid="d0/d26/classArray"/>
+        <childnode refid="11462" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11489" relation="usage">
+          <edgelabel>m_arrBuffer</edgelabel>
+        </childnode>
+        <childnode refid="11450" relation="usage">
+          <edgelabel>m_iShrinkFactor</edgelabel>
+          <edgelabel>m_iNextFree</edgelabel>
+          <edgelabel>m_iBufferSize</edgelabel>
+          <edgelabel>m_iPageSize</edgelabel>
+        </childnode>
+      </node>
+      <node id="11485">
+        <label>TAABoxTree&lt; Real &gt;</label>
+      </node>
+      <node id="11471">
+        <label>T</label>
+      </node>
+      <node id="11470">
+        <label>RBTreeColor</label>
+      </node>
+      <node id="11468">
+        <label>RedBlackNode&lt; T &gt;</label>
+        <link refid="da/d9d/structRedBlackNode"/>
+        <childnode refid="11469" relation="usage">
+          <edgelabel>pPrev</edgelabel>
+          <edgelabel>pNext</edgelabel>
+          <edgelabel>pParent</edgelabel>
+          <edgelabel>pChild</edgelabel>
+        </childnode>
+        <childnode refid="11470" relation="usage">
+          <edgelabel>iColor</edgelabel>
+        </childnode>
+        <childnode refid="11471" relation="usage">
+          <edgelabel>Item</edgelabel>
+        </childnode>
+      </node>
+      <node id="11438">
+        <label>ShapeDeformable</label>
+        <link refid="d6/d0b/classShapeDeformable"/>
+        <childnode refid="11439" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11459" relation="usage">
+          <edgelabel>m_pGraph</edgelabel>
+        </childnode>
+        <childnode refid="11452" relation="usage">
+          <edgelabel>m_bUseSelfCollisions</edgelabel>
+          <edgelabel>m_bOwningGraph</edgelabel>
+        </childnode>
+        <childnode refid="11485" relation="usage">
+          <edgelabel>m_pNodeTree</edgelabel>
+          <edgelabel>m_pFacetTree</edgelabel>
+        </childnode>
+        <childnode refid="11486" relation="usage">
+          <edgelabel>m_hSelfCollider</edgelabel>
+        </childnode>
+      </node>
+      <node id="11467">
+        <label>RedBlackTree&lt; TreeMapNode &gt;</label>
+        <link refid="d9/d5d/classRedBlackTree"/>
+        <childnode refid="11462" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11468" relation="usage">
+          <edgelabel>m_pEnd</edgelabel>
+          <edgelabel>m_pHead</edgelabel>
+          <edgelabel>m_pRoot</edgelabel>
+          <edgelabel>sm_SentinelNode</edgelabel>
+          <edgelabel>RBTREE_LEAF</edgelabel>
+        </childnode>
+        <childnode refid="11453" relation="usage">
+          <edgelabel>m_iNodeCount</edgelabel>
+        </childnode>
+        <childnode refid="11472" relation="usage">
+          <edgelabel>m_pfCompare</edgelabel>
+        </childnode>
+        <childnode refid="11474" relation="usage">
+          <edgelabel>m_pUserData</edgelabel>
+        </childnode>
+      </node>
+      <node id="11489">
+        <label>ContactPoint</label>
+        <link refid="d6/d24/classContactPoint"/>
+        <childnode refid="11443" relation="usage">
+          <edgelabel>vWorldNormal</edgelabel>
+        </childnode>
+        <childnode refid="11490" relation="usage">
+          <edgelabel>idCPID</edgelabel>
+        </childnode>
+        <childnode refid="11492" relation="usage">
+          <edgelabel>fFrictionImpulse0</edgelabel>
+          <edgelabel>fNormalImpulse</edgelabel>
+          <edgelabel>fFrictionImpulse1</edgelabel>
+          <edgelabel>fDistance</edgelabel>
+        </childnode>
+        <childnode refid="11450" relation="usage">
+          <edgelabel>iLifeTime</edgelabel>
+        </childnode>
+        <childnode refid="11445" relation="usage">
+          <edgelabel>vWorldPointA</edgelabel>
+          <edgelabel>vWorldPointB</edgelabel>
+        </childnode>
+      </node>
+      <node id="11446">
+        <label>Mesh</label>
+        <link refid="d9/d5e/classMesh"/>
+        <childnode refid="11447" relation="usage">
+          <edgelabel>m_pVF</edgelabel>
+        </childnode>
+        <childnode refid="11450" relation="usage">
+          <edgelabel>m_iIndexOffset</edgelabel>
+          <edgelabel>m_iVertexOffset</edgelabel>
+        </childnode>
+        <childnode refid="11452" relation="usage">
+          <edgelabel>m_bDynamicUpdate</edgelabel>
+        </childnode>
+        <childnode refid="11454" relation="usage">
+          <edgelabel>m_pIB</edgelabel>
+        </childnode>
+        <childnode refid="11457" relation="usage">
+          <edgelabel>m_pVB</edgelabel>
+        </childnode>
+      </node>
+      <node id="11490">
+        <label>ContactPointID</label>
+        <link refid="dc/d77/classContactPointID"/>
+        <childnode refid="11490" relation="usage">
+          <edgelabel>CPID_NULL</edgelabel>
+        </childnode>
+        <childnode refid="11491" relation="usage">
+          <edgelabel>dwSpecifierA</edgelabel>
+          <edgelabel>dwSpecifierB</edgelabel>
+          <edgelabel>dwFeatureA</edgelabel>
+          <edgelabel>dwFeatureB</edgelabel>
+        </childnode>
+      </node>
+      <node id="11477">
+        <label>MeshFeature</label>
+        <link refid="dc/dcb/classMeshFeature"/>
+      </node>
+      <node id="11480">
+        <label>MeshFeatureKey</label>
+        <link refid="dc/d22/classMeshFeatureKey"/>
+      </node>
+      <node id="11458">
+        <label>VertexBufferUsage</label>
+      </node>
+      <node id="11460">
+        <label>MeshManifold3</label>
+        <link refid="d9/dd4/classMeshManifold3"/>
+        <childnode refid="11461" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11465" relation="usage">
+          <edgelabel>m_itVertex</edgelabel>
+        </childnode>
+        <childnode refid="11465" relation="usage">
+          <edgelabel>m_itFacet</edgelabel>
+        </childnode>
+        <childnode refid="11466" relation="usage">
+          <edgelabel>m_mapEdges</edgelabel>
+        </childnode>
+        <childnode refid="11475" relation="usage">
+          <edgelabel>m_mapVertices</edgelabel>
+        </childnode>
+        <childnode refid="11476" relation="usage">
+          <edgelabel>m_pfFacetBuilder</edgelabel>
+        </childnode>
+        <childnode refid="11478" relation="usage">
+          <edgelabel>m_pfVertexBuilder</edgelabel>
+        </childnode>
+        <childnode refid="11481" relation="usage">
+          <edgelabel>m_pfEdgeBuilder</edgelabel>
+        </childnode>
+        <childnode refid="11484" relation="usage">
+          <edgelabel>m_mapFacets</edgelabel>
+        </childnode>
+        <childnode refid="11465" relation="usage">
+          <edgelabel>m_itEdge</edgelabel>
+        </childnode>
+      </node>
+      <node id="11487">
+        <label>HCollider</label>
+      </node>
+      <node id="11479">
+        <label>MeshVertexKey</label>
+        <link refid="d2/d6b/classMeshVertexKey"/>
+        <childnode refid="11480" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11479" relation="usage">
+          <edgelabel>Null</edgelabel>
+        </childnode>
+        <childnode refid="11450" relation="usage">
+          <edgelabel>V</edgelabel>
+        </childnode>
+      </node>
+      <node id="11492">
+        <label>float</label>
+      </node>
+      <node id="11482">
+        <label>MeshEdgeKey</label>
+        <link refid="db/dab/classMeshEdgeKey"/>
+        <childnode refid="11480" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11483" relation="usage">
+          <edgelabel>@2</edgelabel>
+        </childnode>
+        <childnode refid="11482" relation="usage">
+          <edgelabel>Null</edgelabel>
+        </childnode>
+        <childnode refid="11450" relation="usage">
+          <edgelabel>V</edgelabel>
+          <edgelabel>A</edgelabel>
+          <edgelabel>B</edgelabel>
+        </childnode>
+      </node>
+      <node id="11447">
+        <label>VertexFormat</label>
+        <link refid="da/dc2/classVertexFormat"/>
+        <childnode refid="11448" relation="usage">
+          <edgelabel>m_arrFields</edgelabel>
+        </childnode>
+        <childnode refid="11450" relation="usage">
+          <edgelabel>m_iSize</edgelabel>
+          <edgelabel>m_iFieldCount</edgelabel>
+          <edgelabel>m_arrUsageLUT</edgelabel>
+        </childnode>
+        <childnode refid="11452" relation="usage">
+          <edgelabel>m_bFinalized</edgelabel>
+        </childnode>
+        <childnode refid="11453" relation="usage">
+          <edgelabel>sm_arrComponentCount</edgelabel>
+          <edgelabel>sm_arrTypeSize</edgelabel>
+          <edgelabel>sm_arrComponentSize</edgelabel>
+        </childnode>
+      </node>
+      <node id="11484">
+        <label>TreeMap&lt; const MeshFacetKey *, MeshFacet * &gt;</label>
+        <link refid="d0/da4/classTreeMap"/>
+        <childnode refid="11462" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11467" relation="usage">
+          <edgelabel>m_rbTreeMap</edgelabel>
+        </childnode>
+        <childnode refid="11450" relation="usage">
+          <edgelabel>m_pfCompare</edgelabel>
+        </childnode>
+        <childnode refid="11474" relation="usage">
+          <edgelabel>m_pUserData</edgelabel>
+        </childnode>
+      </node>
+      <node id="11448">
+        <label>VFField</label>
+        <link refid="de/d92/structVFField"/>
+        <childnode refid="11449" relation="usage">
+          <edgelabel>iUsage</edgelabel>
+        </childnode>
+        <childnode refid="11450" relation="usage">
+          <edgelabel>iSize</edgelabel>
+          <edgelabel>iUsageIndex</edgelabel>
+          <edgelabel>iOffset</edgelabel>
+        </childnode>
+        <childnode refid="11451" relation="usage">
+          <edgelabel>iType</edgelabel>
+        </childnode>
+      </node>
+      <node id="11491">
+        <label>ULong</label>
+      </node>
+      <node id="11453">
+        <label>unsigned int</label>
+      </node>
+      <node id="11455">
+        <label>unsigned char</label>
+      </node>
+      <node id="11469">
+        <label>struct _red_black_node *</label>
+      </node>
+      <node id="11439">
+        <label>ShapeConcave</label>
+        <link refid="d5/d20/classShapeConcave"/>
+        <childnode refid="11440" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11450">
+        <label>int</label>
+      </node>
+      <node id="11464">
+        <label>static const _LinkageResult</label>
+      </node>
+      <node id="11441">
+        <label>TBVAABox&lt; Scalar &gt;</label>
+        <link refid="d9/d90/classTBVAABox"/>
+        <childnode refid="11442" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11443" relation="usage">
+          <edgelabel>m_vExtents</edgelabel>
+        </childnode>
+        <childnode refid="11445" relation="usage">
+          <edgelabel>m_vCenter</edgelabel>
+        </childnode>
+      </node>
+      <node id="11444">
+        <label>Scalar</label>
+      </node>
+      <node id="11451">
+        <label>VFFieldType</label>
+      </node>
+      <node id="11486">
+        <label>SelfCollider</label>
+        <link refid="de/dc1/classShapeDeformable_1_1SelfCollider"/>
+        <childnode refid="11487" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11488" relation="usage">
+          <edgelabel>arrSelfContacts</edgelabel>
+        </childnode>
+      </node>
+      <node id="11456">
+        <label>IndexBufferUsage</label>
+      </node>
+      <node id="11443">
+        <label>TVector3&lt; Scalar &gt;</label>
+        <link refid="de/d40/classTVector3"/>
+        <childnode refid="11443" relation="usage">
+          <edgelabel>Null</edgelabel>
+          <edgelabel>eI</edgelabel>
+          <edgelabel>eJ</edgelabel>
+          <edgelabel>eK</edgelabel>
+        </childnode>
+        <childnode refid="11444" relation="usage">
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+          <edgelabel>Z</edgelabel>
+        </childnode>
+      </node>
+      <node id="11475">
+        <label>TreeMap&lt; const MeshVertexKey *, MeshVertex * &gt;</label>
+        <link refid="d0/da4/classTreeMap"/>
+        <childnode refid="11462" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11467" relation="usage">
+          <edgelabel>m_rbTreeMap</edgelabel>
+        </childnode>
+        <childnode refid="11450" relation="usage">
+          <edgelabel>m_pfCompare</edgelabel>
+        </childnode>
+        <childnode refid="11474" relation="usage">
+          <edgelabel>m_pUserData</edgelabel>
+        </childnode>
+      </node>
+      <node id="11445">
+        <label>TVertex3&lt; Scalar &gt;</label>
+        <link refid="dc/d75/classTVertex3"/>
+        <childnode refid="11444" relation="usage">
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+          <edgelabel>Z</edgelabel>
+        </childnode>
+        <childnode refid="11445" relation="usage">
+          <edgelabel>Null</edgelabel>
+        </childnode>
+      </node>
+      <node id="11465">
+        <label>Iterator</label>
+      </node>
+      <node id="11440">
+        <label>Shape</label>
+        <link refid="de/d0a/classShape"/>
+        <childnode refid="11441" relation="usage">
+          <edgelabel>m_bvLocalAAB</edgelabel>
+        </childnode>
+        <childnode refid="11446" relation="usage">
+          <edgelabel>m_pMesh</edgelabel>
+        </childnode>
+      </node>
+      <node id="11472">
+        <label>TreeMapNode&lt; Key, T &gt;</label>
+        <link refid="db/dd2/structTreeMapNode"/>
+        <childnode refid="11473" relation="usage">
+          <edgelabel>nodeKey</edgelabel>
+        </childnode>
+        <childnode refid="11471" relation="usage">
+          <edgelabel>nodeItem</edgelabel>
+        </childnode>
+      </node>
+      <node id="11449">
+        <label>VFFieldUsage</label>
+      </node>
+      <node id="11459">
+        <label>TMeshDeformableGraph&lt; Real &gt;</label>
+        <link refid="dc/dd3/classTMeshDeformableGraph"/>
+        <childnode refid="11460" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11485" relation="usage">
+          <edgelabel>m_hVertexTree</edgelabel>
+          <edgelabel>m_hTriangleTree</edgelabel>
+        </childnode>
+      </node>
+      <node id="11457">
+        <label>VertexBuffer</label>
+        <link refid="d7/d72/classVertexBuffer"/>
+        <childnode refid="11455" relation="usage">
+          <edgelabel>m_arrVertices</edgelabel>
+        </childnode>
+        <childnode refid="11450" relation="usage">
+          <edgelabel>m_iSize</edgelabel>
+          <edgelabel>m_iVertexCount</edgelabel>
+          <edgelabel>m_iVertexSize</edgelabel>
+        </childnode>
+        <childnode refid="11458" relation="usage">
+          <edgelabel>m_iUsage</edgelabel>
+        </childnode>
+      </node>
+      <node id="11473">
+        <label>Key</label>
+      </node>
+      <node id="11466">
+        <label>TreeMap&lt; const MeshEdgeKey *, MeshEdge * &gt;</label>
+        <link refid="d0/da4/classTreeMap"/>
+        <childnode refid="11462" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11467" relation="usage">
+          <edgelabel>m_rbTreeMap</edgelabel>
+        </childnode>
+        <childnode refid="11450" relation="usage">
+          <edgelabel>m_pfCompare</edgelabel>
+        </childnode>
+        <childnode refid="11474" relation="usage">
+          <edgelabel>m_pUserData</edgelabel>
+        </childnode>
+      </node>
+      <node id="11478">
+        <label>MeshVertex</label>
+        <link refid="d6/d37/classMeshVertex"/>
+        <childnode refid="11477" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11479" relation="usage">
+          <edgelabel>Key</edgelabel>
+        </childnode>
+      </node>
+      <node id="11461">
+        <label>MeshGraph</label>
+        <link refid="d6/df9/classMeshGraph"/>
+        <childnode refid="11462" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11464" relation="usage">
+          <edgelabel>_LINKAGE_FACETSIZE_A</edgelabel>
+          <edgelabel>_LINKAGE_DONE</edgelabel>
+          <edgelabel>_LINKAGE_FULLEDGE</edgelabel>
+          <edgelabel>_LINKAGE_GRADE_A</edgelabel>
+          <edgelabel>_LINKAGE_NOLINK</edgelabel>
+          <edgelabel>_LINKAGE_GRADE_B</edgelabel>
+        </childnode>
+      </node>
+      <node id="11452">
+        <label>bool</label>
+      </node>
+      <node id="11476">
+        <label>MeshFacet</label>
+        <link refid="d5/da2/classMeshFacet"/>
+        <childnode refid="11477" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11442">
+        <label>TBoundingVolume&lt; Scalar &gt;</label>
+        <link refid="d6/d19/classTBoundingVolume"/>
+      </node>
+      <node id="11463">
+        <label>char</label>
+      </node>
+      <node id="11481">
+        <label>MeshEdge</label>
+        <link refid="d7/da3/classMeshEdge"/>
+        <childnode refid="11477" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11482" relation="usage">
+          <edgelabel>Key</edgelabel>
+        </childnode>
+      </node>
+      <node id="11474">
+        <label>Void *</label>
+      </node>
+      <node id="11454">
+        <label>IndexBuffer</label>
+        <link refid="dd/df7/classIndexBuffer"/>
+        <childnode refid="11455" relation="usage">
+          <edgelabel>m_arrIndices</edgelabel>
+        </childnode>
+        <childnode refid="11450" relation="usage">
+          <edgelabel>m_iIndexSize</edgelabel>
+          <edgelabel>m_iSize</edgelabel>
+          <edgelabel>m_iIndexCount</edgelabel>
+        </childnode>
+        <childnode refid="11456" relation="usage">
+          <edgelabel>m_iUsage</edgelabel>
+        </childnode>
+      </node>
+      <node id="11462">
+        <label>Datastruct</label>
+        <link refid="dc/d51/classDatastruct"/>
+        <childnode refid="11463" relation="usage">
+          <edgelabel>m_strAllocatorName</edgelabel>
+        </childnode>
+        <childnode refid="11453" relation="usage">
+          <edgelabel>m_idMemoryContext</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" line="39" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Concave/ShapeDeformable.h" bodystart="38" bodyend="147"/>
+    <listofallmembers>
+      <member refid="d6/d0b/classShapeDeformable_1a984abdb6e512d8df59bb404022580685" prot="private" virt="non-virtual"><scope>ShapeDeformable</scope><name>_UpdateNormalsAreas</name></member>
+      <member refid="d6/d0b/classShapeDeformable_1ad0b24871337eba2da2d4b34abf434d0b" prot="public" virt="virtual"><scope>ShapeDeformable</scope><name>ComputeMassProperties</name></member>
+      <member refid="d6/d0b/classShapeDeformable_1a5b8b85b28fe353110b0a11d91cbe64e8" prot="public" virt="non-virtual"><scope>ShapeDeformable</scope><name>DefaultFacetBuilder</name></member>
+      <member refid="d6/d0b/classShapeDeformable_1af5984f46688d6c3a8883b5432219c9f6" prot="public" virt="non-virtual"><scope>ShapeDeformable</scope><name>DefaultLinkBuilder</name></member>
+      <member refid="d6/d0b/classShapeDeformable_1a9b981c44edaddef905e2f1e467f4093a" prot="public" virt="non-virtual"><scope>ShapeDeformable</scope><name>DefaultNodeBuilder</name></member>
+      <member refid="d6/d0b/classShapeDeformable_1ad91cb53fccee3dddd63a52a73dbb252d" prot="public" virt="non-virtual"><scope>ShapeDeformable</scope><name>EnumFacets</name></member>
+      <member refid="d6/d0b/classShapeDeformable_1a86c61a26422e8b4b9b84e174addc5731" prot="public" virt="non-virtual"><scope>ShapeDeformable</scope><name>EnumLinks</name></member>
+      <member refid="d6/d0b/classShapeDeformable_1a98d228245e6171813ff314d630fd8f99" prot="public" virt="non-virtual"><scope>ShapeDeformable</scope><name>EnumNextFacet</name></member>
+      <member refid="d6/d0b/classShapeDeformable_1af4e06f04d6d9b8d5f4a49b7827b688f3" prot="public" virt="non-virtual"><scope>ShapeDeformable</scope><name>EnumNextLink</name></member>
+      <member refid="d6/d0b/classShapeDeformable_1a54ee79e0954d8e0dffd18a9e29773789" prot="public" virt="non-virtual"><scope>ShapeDeformable</scope><name>EnumNextNode</name></member>
+      <member refid="d6/d0b/classShapeDeformable_1a4c17173ce8168fd553f3c6f7a5ac122c" prot="public" virt="non-virtual"><scope>ShapeDeformable</scope><name>EnumNodes</name></member>
+      <member refid="de/d0a/classShape_1a39e02093801770e75999c765e55a27e5" prot="public" virt="non-virtual"><scope>ShapeDeformable</scope><name>GetAAB</name></member>
+      <member refid="d6/d0b/classShapeDeformable_1ae6f007fb61011daa8a89b681323784f6" prot="public" virt="non-virtual"><scope>ShapeDeformable</scope><name>GetFacetCount</name></member>
+      <member refid="d6/d0b/classShapeDeformable_1a5973b93992f8fc848f047b1a72536520" prot="public" virt="non-virtual"><scope>ShapeDeformable</scope><name>GetFacetTree</name></member>
+      <member refid="d6/d0b/classShapeDeformable_1a019957dc0e557bfe4093f2ff97973da0" prot="public" virt="non-virtual"><scope>ShapeDeformable</scope><name>GetGraph</name></member>
+      <member refid="d6/d0b/classShapeDeformable_1a1883294938e24ad7cfd52f2bf5a59a39" prot="public" virt="non-virtual"><scope>ShapeDeformable</scope><name>GetLinkCount</name></member>
+      <member refid="de/d0a/classShape_1abdecaac893d9dedf89328c62a3fb66c9" prot="public" virt="non-virtual"><scope>ShapeDeformable</scope><name>GetMesh</name></member>
+      <member refid="d6/d0b/classShapeDeformable_1a10871a967fcddf58f9c642c130332baa" prot="public" virt="non-virtual"><scope>ShapeDeformable</scope><name>GetNode</name></member>
+      <member refid="d6/d0b/classShapeDeformable_1abc38e72cfc1661a40b079fc1955a7b38" prot="public" virt="non-virtual"><scope>ShapeDeformable</scope><name>GetNodeCount</name></member>
+      <member refid="d6/d0b/classShapeDeformable_1abc955e8b05095be99269c5c7d5bee0e1" prot="public" virt="non-virtual"><scope>ShapeDeformable</scope><name>GetNodeTree</name></member>
+      <member refid="d6/d0b/classShapeDeformable_1aeaf3fb763b42a77d2528052c9da334e6" prot="public" virt="non-virtual"><scope>ShapeDeformable</scope><name>GetSelfContact</name></member>
+      <member refid="d6/d0b/classShapeDeformable_1a2e982c638182afdaa199c32210d9db21" prot="public" virt="non-virtual"><scope>ShapeDeformable</scope><name>GetSelfContactCount</name></member>
+      <member refid="d6/d0b/classShapeDeformable_1a9f7af3dac98c12d5916d4b5d8880ff5c" prot="public" virt="virtual"><scope>ShapeDeformable</scope><name>GetType</name></member>
+      <member refid="de/d0a/classShape_1a88278eb8de82740a5624f8d6f9466a8f" prot="public" virt="non-virtual"><scope>ShapeDeformable</scope><name>IsConcave</name></member>
+      <member refid="de/d0a/classShape_1a2b914288d63c06683ce88f35f6dcfd08" prot="public" virt="non-virtual"><scope>ShapeDeformable</scope><name>IsConvex</name></member>
+      <member refid="de/d0a/classShape_1a20ff026aba888333e673bc6fda51f661" prot="public" virt="non-virtual"><scope>ShapeDeformable</scope><name>IsDeformable</name></member>
+      <member refid="d6/d0b/classShapeDeformable_1aba012c9ca2694b7842ee280c128fc9a0" prot="private" virt="non-virtual"><scope>ShapeDeformable</scope><name>m_bOwningGraph</name></member>
+      <member refid="d6/d0b/classShapeDeformable_1a7569dc1cef2877f0d3c342c4d0c6f0e9" prot="private" virt="non-virtual"><scope>ShapeDeformable</scope><name>m_bUseSelfCollisions</name></member>
+      <member refid="de/d0a/classShape_1a75d7ab1a1411adeb33ddc30bcda580e4" prot="protected" virt="non-virtual"><scope>ShapeDeformable</scope><name>m_bvLocalAAB</name></member>
+      <member refid="d6/d0b/classShapeDeformable_1a28d06051fb1385439669501eac1cc923" prot="private" virt="non-virtual"><scope>ShapeDeformable</scope><name>m_hSelfCollider</name></member>
+      <member refid="d6/d0b/classShapeDeformable_1acc2a4551c1387f27adb18cad07a5e42e" prot="private" virt="non-virtual"><scope>ShapeDeformable</scope><name>m_pFacetTree</name></member>
+      <member refid="d6/d0b/classShapeDeformable_1aa9b853c09109f84ddfa306cd532fdf6a" prot="private" virt="non-virtual"><scope>ShapeDeformable</scope><name>m_pGraph</name></member>
+      <member refid="de/d0a/classShape_1ac4e066c3fc28a8693e18e251bf681607" prot="protected" virt="non-virtual"><scope>ShapeDeformable</scope><name>m_pMesh</name></member>
+      <member refid="d6/d0b/classShapeDeformable_1a24dad430ec680732eb7df12f8a5e26a1" prot="private" virt="non-virtual"><scope>ShapeDeformable</scope><name>m_pNodeTree</name></member>
+      <member refid="d6/d0b/classShapeDeformable_1a139cace71ef43512ae869d8c8456fb11" prot="public" virt="virtual"><scope>ShapeDeformable</scope><name>QueryNodes</name></member>
+      <member refid="d6/d0b/classShapeDeformable_1a5dfa0f1de2bb1ebdefe819ebab129c6b" prot="public" virt="virtual"><scope>ShapeDeformable</scope><name>QueryTriangles</name></member>
+      <member refid="d6/d0b/classShapeDeformable_1ad7de34d70f79ed4949faa02652844cdc" prot="public" virt="non-virtual"><scope>ShapeDeformable</scope><name>SelfCollisionDetection</name></member>
+      <member refid="de/d0a/classShape_1a6e60807bb9ba2b970a0fe337f6b3673c" prot="public" virt="non-virtual"><scope>ShapeDeformable</scope><name>Shape</name></member>
+      <member refid="d5/d20/classShapeConcave_1a12328d065d4a1104d1ed5ca49323ef8b" prot="public" virt="non-virtual"><scope>ShapeDeformable</scope><name>ShapeConcave</name></member>
+      <member refid="d6/d0b/classShapeDeformable_1a9366962257384836de40137c4fedf6f9" prot="public" virt="non-virtual"><scope>ShapeDeformable</scope><name>ShapeDeformable</name></member>
+      <member refid="d6/d0b/classShapeDeformable_1ab703deeb7f4b25b19b153482a9be74c7" prot="public" virt="non-virtual"><scope>ShapeDeformable</scope><name>ShapeDeformable</name></member>
+      <member refid="d6/d0b/classShapeDeformable_1ac94bbe5308cdc93fffce5637e683cf58" prot="public" virt="non-virtual"><scope>ShapeDeformable</scope><name>ToggleSelfCollisions</name></member>
+      <member refid="d6/d0b/classShapeDeformable_1acee5967d6fef4a59688ff89853a491db" prot="public" virt="virtual"><scope>ShapeDeformable</scope><name>UpdateCollisionData</name></member>
+      <member refid="d6/d0b/classShapeDeformable_1a40d326a4123b49584d428b0c79e8773e" prot="public" virt="virtual"><scope>ShapeDeformable</scope><name>UpdateMesh</name></member>
+      <member refid="de/d0a/classShape_1ae7755ce81583b9f776b857856f7cc218" prot="public" virt="virtual"><scope>ShapeDeformable</scope><name>~Shape</name></member>
+      <member refid="d5/d20/classShapeConcave_1ad5938638619081947edf54caf1c4f8f5" prot="public" virt="virtual"><scope>ShapeDeformable</scope><name>~ShapeConcave</name></member>
+      <member refid="d6/d0b/classShapeDeformable_1ad7be5b494a6a1e91f6b875c6f6f65cc4" prot="public" virt="virtual"><scope>ShapeDeformable</scope><name>~ShapeDeformable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,959 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d5/d57/classHashing" kind="class" prot="public">
+    <compoundname>Hashing</compoundname>
+    <includes refid="d0/d4e/Hashing_8h" local="no">Hashing.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d5/d57/classHashing_1ad8b413c040b2897f4f4bad5949e40d67" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord m_arrTableCRC32[256]</definition>
+        <argsstring>[256]</argsstring>
+        <name>m_arrTableCRC32</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="115" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d5/d57/classHashing_1ab4d3ef3afaab39aef7d55e3b90dda023" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord m_arrTableCRCGeneric[256]</definition>
+        <argsstring>[256]</argsstring>
+        <name>m_arrTableCRCGeneric</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="118" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="d5/d57/classHashing_1ace79109616fe2d918905c236f403cfa7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d5/d57/classHashing" kindref="compound">Hashing</ref> *</type>
+        <definition>static Hashing* GetInstancePtr</definition>
+        <argsstring>()</argsstring>
+        <name>GetInstancePtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="39"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d5/d57/classHashing_1a7e68a58786031ebc988586b632ded2f6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hashing</definition>
+        <argsstring>()</argsstring>
+        <name>Hashing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="42"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1a69c073a483d27505841eec88d8ea1f87" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~Hashing</definition>
+        <argsstring>()</argsstring>
+        <name>~Hashing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="43"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1a40799cd4c5937fcf4b440af7a21abe70" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1ababfaab5b98853d83213da5af32270e3" kindref="member">Word</ref></type>
+        <definition>Word _Get16Bits</definition>
+        <argsstring>(const Byte *str) const </argsstring>
+        <name>_Get16Bits</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="107"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1aff10cc15fd7fb667acacf81faa8c7903" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1ababfaab5b98853d83213da5af32270e3" kindref="member">Word</ref></type>
+        <definition>Word _Get16Bits</definition>
+        <argsstring>(const AChar *str) const </argsstring>
+        <name>_Get16Bits</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a92009681dba35a2a92297d218d095fab" kindref="member">AChar</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="108"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1a9bcdb072a6edc5bf18cbe5a367be275b" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1ababfaab5b98853d83213da5af32270e3" kindref="member">Word</ref></type>
+        <definition>Word _Get16Bits</definition>
+        <argsstring>(const WChar *str) const </argsstring>
+        <name>_Get16Bits</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a1b1d389d55a46c84ab8981022ef0746f" kindref="member">WChar</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="109"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1a75fb834d255dcdc5c831b1dc9f7eb172" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord _Get32Bits</definition>
+        <argsstring>(const Byte *str) const </argsstring>
+        <name>_Get32Bits</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="110"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1a301dcc2fac2c346f08b4a6abc8de3f69" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord _Get32Bits</definition>
+        <argsstring>(const AChar *str) const </argsstring>
+        <name>_Get32Bits</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a92009681dba35a2a92297d218d095fab" kindref="member">AChar</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="111"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1a73c5455c93dd63624525f8c4eefb5d86" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord _Get32Bits</definition>
+        <argsstring>(const WChar *str) const </argsstring>
+        <name>_Get32Bits</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a1b1d389d55a46c84ab8981022ef0746f" kindref="member">WChar</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="112"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1ab2450dcea29b3087fe383e17344f51a4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _CRC32_GenerateTable</definition>
+        <argsstring>(DWord dwPolynomial)</argsstring>
+        <name>_CRC32_GenerateTable</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+          <declname>dwPolynomial</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="114"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1aba895f88c762c24b46bb7f076bbaf5aa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _CRCGeneric_GenerateTable</definition>
+        <argsstring>()</argsstring>
+        <name>_CRCGeneric_GenerateTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="117"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1a3e083dc2a123029fc64130bca98052c1" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _BobJenkins_Mix</definition>
+        <argsstring>(DWord &amp;a, DWord &amp;b, DWord &amp;c) const </argsstring>
+        <name>_BobJenkins_Mix</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="120"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1a2aa678aca6b545bfc759062a13bd3202" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _BobJenkins_MixRot</definition>
+        <argsstring>(DWord &amp;a, DWord &amp;b, DWord &amp;c) const </argsstring>
+        <name>_BobJenkins_MixRot</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="121"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1aa58e7347d69b7274c189ee63a94b0247" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _BobJenkins_Final</definition>
+        <argsstring>(DWord &amp;a, DWord &amp;b, DWord &amp;c) const </argsstring>
+        <name>_BobJenkins_Final</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="122"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d5/d57/classHashing_1a93c2f81cd9a31b0ae5b32d9cfcfff20d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord MixedBits</definition>
+        <argsstring>(DWord dwValue) const </argsstring>
+        <name>MixedBits</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+          <declname>dwValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="69"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1a32f2ea9cc2fad5e2f9db721b260effeb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord ThomasWang</definition>
+        <argsstring>(DWord dwValue) const </argsstring>
+        <name>ThomasWang</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+          <declname>dwValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="70"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1a538ff09449bd02343bef2c54cfc1adfc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord BKDR</definition>
+        <argsstring>(const Byte *str, UInt iLength) const </argsstring>
+        <name>BKDR</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iLength</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="72"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1aeb56893cde701a6dc5865232fe04b0e9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord BKDR</definition>
+        <argsstring>(const GChar *str) const </argsstring>
+        <name>BKDR</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="73"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1a5820c2f605cbdfb55b932699cba75cbe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord Bernstein</definition>
+        <argsstring>(const Byte *str, UInt iLength) const </argsstring>
+        <name>Bernstein</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iLength</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="74"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1adda3b3c0341531d61f7fd02423f470d2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord Bernstein</definition>
+        <argsstring>(const GChar *str) const </argsstring>
+        <name>Bernstein</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="75"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1ac069e0a482ee68a0e62f44b1c403d01b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord AlphaNum</definition>
+        <argsstring>(const Byte *str, UInt iLength) const </argsstring>
+        <name>AlphaNum</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iLength</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="76"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1a55cb2ddac4e8cc6f76e79ffd5b46652e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord AlphaNum</definition>
+        <argsstring>(const GChar *str) const </argsstring>
+        <name>AlphaNum</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="77"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1a90efd058aac17e4faf7feb8b403ef217" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord SDBM</definition>
+        <argsstring>(const Byte *str, UInt iLength) const </argsstring>
+        <name>SDBM</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iLength</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="78"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1a6d2c737ba19c1bb74723b8f10be487eb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord SDBM</definition>
+        <argsstring>(const GChar *str) const </argsstring>
+        <name>SDBM</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="79"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1abebb9f76046cb1231a30bc6996dacfcf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord RS</definition>
+        <argsstring>(const Byte *str, UInt iLength) const </argsstring>
+        <name>RS</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iLength</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="80"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1af2e1ca36f9f71702c1f8818f0d2c978b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord RS</definition>
+        <argsstring>(const GChar *str) const </argsstring>
+        <name>RS</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="81"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1a49f5f74c39588ccd7ee711264aa4fc36" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord ELF</definition>
+        <argsstring>(const Byte *str, UInt iLength) const </argsstring>
+        <name>ELF</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iLength</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="82"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1a682d50250b290e519ef4dbaca284ce2a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord ELF</definition>
+        <argsstring>(const GChar *str) const </argsstring>
+        <name>ELF</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="83"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1ac444012b86e795e5fc5ac9bfe6435fac" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord FNV</definition>
+        <argsstring>(const Byte *str, UInt iLength) const </argsstring>
+        <name>FNV</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iLength</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="84"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1a0ae02a09a7e77d920fb1a46d6ec275d2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord FNV</definition>
+        <argsstring>(const GChar *str) const </argsstring>
+        <name>FNV</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="85"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1a9512d51f00a34763f9c8ed6dfaa1be9a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord JS</definition>
+        <argsstring>(const Byte *str, UInt iLength) const </argsstring>
+        <name>JS</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iLength</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="86"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1aee8e866db9c8f118ebde5eb48b0c20dc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord JS</definition>
+        <argsstring>(const GChar *str) const </argsstring>
+        <name>JS</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="87"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1a3c69150bb5532246ef3b8ea6c57c9291" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord AP</definition>
+        <argsstring>(const Byte *str, UInt iLength) const </argsstring>
+        <name>AP</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iLength</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="88"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1a4da1462f1d42ac5818ff050a8c96fe50" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord AP</definition>
+        <argsstring>(const GChar *str) const </argsstring>
+        <name>AP</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="89"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1afc103b08e47701b36863692db1ba52d1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord CRC32</definition>
+        <argsstring>(const Byte *str, UInt iLength) const </argsstring>
+        <name>CRC32</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iLength</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="91"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1a28329fb9d4c957a9160de1fa903c2bd8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord CRC32</definition>
+        <argsstring>(const GChar *str) const </argsstring>
+        <name>CRC32</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="92"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1a2da77e1be5e41ce0096c904fb8196e95" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord CRCGeneric</definition>
+        <argsstring>(const Byte *str, UInt iLength) const </argsstring>
+        <name>CRCGeneric</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iLength</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="93"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1a767c61a438ade3072db462b34d01fb05" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord CRCGeneric</definition>
+        <argsstring>(const GChar *str) const </argsstring>
+        <name>CRCGeneric</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="94"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1a772aa57d862b10c93365087e384b158e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord OneAtATime</definition>
+        <argsstring>(const Byte *str, UInt iLength) const </argsstring>
+        <name>OneAtATime</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iLength</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="96"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1a914689364e3205d2d71404fa2ff531f2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord OneAtATime</definition>
+        <argsstring>(const GChar *str) const </argsstring>
+        <name>OneAtATime</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="97"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1a58a3d109d75fb3e9dd0c1dec6db88410" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord BobJenkins</definition>
+        <argsstring>(const Byte *str, UInt iLength) const </argsstring>
+        <name>BobJenkins</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iLength</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="98"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1ac5b8483d02012a5f48e88dc91f51e268" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord BobJenkins</definition>
+        <argsstring>(const GChar *str) const </argsstring>
+        <name>BobJenkins</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="99"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1a2bb8a9cb3418b6726306e3debb3c14e4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord PaulHsieh</definition>
+        <argsstring>(const Byte *str, UInt iLength) const </argsstring>
+        <name>PaulHsieh</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iLength</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="100"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1a5cabe6b0abc9ecb4b5a0c71b5d916bd3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord PaulHsieh</definition>
+        <argsstring>(const GChar *str) const </argsstring>
+        <name>PaulHsieh</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="101"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1a70a09ac94671a6f9a0ec345402389654" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord BobJenkinsRot</definition>
+        <argsstring>(const Byte *str, UInt iLength) const </argsstring>
+        <name>BobJenkinsRot</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iLength</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="102"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d57/classHashing_1a2a50d1500d9bf9bf43bf9fa5482e96f9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord BobJenkinsRot</definition>
+        <argsstring>(const GChar *str) const </argsstring>
+        <name>BobJenkinsRot</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="103"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4752">
+        <label>Hashing</label>
+        <link refid="d5/d57/classHashing"/>
+        <childnode refid="4753" relation="usage">
+          <edgelabel>m_arrTableCRC32</edgelabel>
+          <edgelabel>m_arrTableCRCGeneric</edgelabel>
+        </childnode>
+      </node>
+      <node id="4753">
+        <label>ULong</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" line="36" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Hash/Hashing.h" bodystart="35" bodyend="123"/>
+    <listofallmembers>
+      <member refid="d5/d57/classHashing_1aa58e7347d69b7274c189ee63a94b0247" prot="private" virt="non-virtual"><scope>Hashing</scope><name>_BobJenkins_Final</name></member>
+      <member refid="d5/d57/classHashing_1a3e083dc2a123029fc64130bca98052c1" prot="private" virt="non-virtual"><scope>Hashing</scope><name>_BobJenkins_Mix</name></member>
+      <member refid="d5/d57/classHashing_1a2aa678aca6b545bfc759062a13bd3202" prot="private" virt="non-virtual"><scope>Hashing</scope><name>_BobJenkins_MixRot</name></member>
+      <member refid="d5/d57/classHashing_1ab2450dcea29b3087fe383e17344f51a4" prot="private" virt="non-virtual"><scope>Hashing</scope><name>_CRC32_GenerateTable</name></member>
+      <member refid="d5/d57/classHashing_1aba895f88c762c24b46bb7f076bbaf5aa" prot="private" virt="non-virtual"><scope>Hashing</scope><name>_CRCGeneric_GenerateTable</name></member>
+      <member refid="d5/d57/classHashing_1a40799cd4c5937fcf4b440af7a21abe70" prot="private" virt="non-virtual"><scope>Hashing</scope><name>_Get16Bits</name></member>
+      <member refid="d5/d57/classHashing_1aff10cc15fd7fb667acacf81faa8c7903" prot="private" virt="non-virtual"><scope>Hashing</scope><name>_Get16Bits</name></member>
+      <member refid="d5/d57/classHashing_1a9bcdb072a6edc5bf18cbe5a367be275b" prot="private" virt="non-virtual"><scope>Hashing</scope><name>_Get16Bits</name></member>
+      <member refid="d5/d57/classHashing_1a75fb834d255dcdc5c831b1dc9f7eb172" prot="private" virt="non-virtual"><scope>Hashing</scope><name>_Get32Bits</name></member>
+      <member refid="d5/d57/classHashing_1a301dcc2fac2c346f08b4a6abc8de3f69" prot="private" virt="non-virtual"><scope>Hashing</scope><name>_Get32Bits</name></member>
+      <member refid="d5/d57/classHashing_1a73c5455c93dd63624525f8c4eefb5d86" prot="private" virt="non-virtual"><scope>Hashing</scope><name>_Get32Bits</name></member>
+      <member refid="d5/d57/classHashing_1ac069e0a482ee68a0e62f44b1c403d01b" prot="public" virt="non-virtual"><scope>Hashing</scope><name>AlphaNum</name></member>
+      <member refid="d5/d57/classHashing_1a55cb2ddac4e8cc6f76e79ffd5b46652e" prot="public" virt="non-virtual"><scope>Hashing</scope><name>AlphaNum</name></member>
+      <member refid="d5/d57/classHashing_1a3c69150bb5532246ef3b8ea6c57c9291" prot="public" virt="non-virtual"><scope>Hashing</scope><name>AP</name></member>
+      <member refid="d5/d57/classHashing_1a4da1462f1d42ac5818ff050a8c96fe50" prot="public" virt="non-virtual"><scope>Hashing</scope><name>AP</name></member>
+      <member refid="d5/d57/classHashing_1a5820c2f605cbdfb55b932699cba75cbe" prot="public" virt="non-virtual"><scope>Hashing</scope><name>Bernstein</name></member>
+      <member refid="d5/d57/classHashing_1adda3b3c0341531d61f7fd02423f470d2" prot="public" virt="non-virtual"><scope>Hashing</scope><name>Bernstein</name></member>
+      <member refid="d5/d57/classHashing_1a538ff09449bd02343bef2c54cfc1adfc" prot="public" virt="non-virtual"><scope>Hashing</scope><name>BKDR</name></member>
+      <member refid="d5/d57/classHashing_1aeb56893cde701a6dc5865232fe04b0e9" prot="public" virt="non-virtual"><scope>Hashing</scope><name>BKDR</name></member>
+      <member refid="d5/d57/classHashing_1a58a3d109d75fb3e9dd0c1dec6db88410" prot="public" virt="non-virtual"><scope>Hashing</scope><name>BobJenkins</name></member>
+      <member refid="d5/d57/classHashing_1ac5b8483d02012a5f48e88dc91f51e268" prot="public" virt="non-virtual"><scope>Hashing</scope><name>BobJenkins</name></member>
+      <member refid="d5/d57/classHashing_1a70a09ac94671a6f9a0ec345402389654" prot="public" virt="non-virtual"><scope>Hashing</scope><name>BobJenkinsRot</name></member>
+      <member refid="d5/d57/classHashing_1a2a50d1500d9bf9bf43bf9fa5482e96f9" prot="public" virt="non-virtual"><scope>Hashing</scope><name>BobJenkinsRot</name></member>
+      <member refid="d5/d57/classHashing_1afc103b08e47701b36863692db1ba52d1" prot="public" virt="non-virtual"><scope>Hashing</scope><name>CRC32</name></member>
+      <member refid="d5/d57/classHashing_1a28329fb9d4c957a9160de1fa903c2bd8" prot="public" virt="non-virtual"><scope>Hashing</scope><name>CRC32</name></member>
+      <member refid="d5/d57/classHashing_1a2da77e1be5e41ce0096c904fb8196e95" prot="public" virt="non-virtual"><scope>Hashing</scope><name>CRCGeneric</name></member>
+      <member refid="d5/d57/classHashing_1a767c61a438ade3072db462b34d01fb05" prot="public" virt="non-virtual"><scope>Hashing</scope><name>CRCGeneric</name></member>
+      <member refid="d5/d57/classHashing_1a49f5f74c39588ccd7ee711264aa4fc36" prot="public" virt="non-virtual"><scope>Hashing</scope><name>ELF</name></member>
+      <member refid="d5/d57/classHashing_1a682d50250b290e519ef4dbaca284ce2a" prot="public" virt="non-virtual"><scope>Hashing</scope><name>ELF</name></member>
+      <member refid="d5/d57/classHashing_1ac444012b86e795e5fc5ac9bfe6435fac" prot="public" virt="non-virtual"><scope>Hashing</scope><name>FNV</name></member>
+      <member refid="d5/d57/classHashing_1a0ae02a09a7e77d920fb1a46d6ec275d2" prot="public" virt="non-virtual"><scope>Hashing</scope><name>FNV</name></member>
+      <member refid="d5/d57/classHashing_1ace79109616fe2d918905c236f403cfa7" prot="public" virt="non-virtual"><scope>Hashing</scope><name>GetInstancePtr</name></member>
+      <member refid="d5/d57/classHashing_1a7e68a58786031ebc988586b632ded2f6" prot="private" virt="non-virtual"><scope>Hashing</scope><name>Hashing</name></member>
+      <member refid="d5/d57/classHashing_1a9512d51f00a34763f9c8ed6dfaa1be9a" prot="public" virt="non-virtual"><scope>Hashing</scope><name>JS</name></member>
+      <member refid="d5/d57/classHashing_1aee8e866db9c8f118ebde5eb48b0c20dc" prot="public" virt="non-virtual"><scope>Hashing</scope><name>JS</name></member>
+      <member refid="d5/d57/classHashing_1ad8b413c040b2897f4f4bad5949e40d67" prot="private" virt="non-virtual"><scope>Hashing</scope><name>m_arrTableCRC32</name></member>
+      <member refid="d5/d57/classHashing_1ab4d3ef3afaab39aef7d55e3b90dda023" prot="private" virt="non-virtual"><scope>Hashing</scope><name>m_arrTableCRCGeneric</name></member>
+      <member refid="d5/d57/classHashing_1a93c2f81cd9a31b0ae5b32d9cfcfff20d" prot="public" virt="non-virtual"><scope>Hashing</scope><name>MixedBits</name></member>
+      <member refid="d5/d57/classHashing_1a772aa57d862b10c93365087e384b158e" prot="public" virt="non-virtual"><scope>Hashing</scope><name>OneAtATime</name></member>
+      <member refid="d5/d57/classHashing_1a914689364e3205d2d71404fa2ff531f2" prot="public" virt="non-virtual"><scope>Hashing</scope><name>OneAtATime</name></member>
+      <member refid="d5/d57/classHashing_1a2bb8a9cb3418b6726306e3debb3c14e4" prot="public" virt="non-virtual"><scope>Hashing</scope><name>PaulHsieh</name></member>
+      <member refid="d5/d57/classHashing_1a5cabe6b0abc9ecb4b5a0c71b5d916bd3" prot="public" virt="non-virtual"><scope>Hashing</scope><name>PaulHsieh</name></member>
+      <member refid="d5/d57/classHashing_1abebb9f76046cb1231a30bc6996dacfcf" prot="public" virt="non-virtual"><scope>Hashing</scope><name>RS</name></member>
+      <member refid="d5/d57/classHashing_1af2e1ca36f9f71702c1f8818f0d2c978b" prot="public" virt="non-virtual"><scope>Hashing</scope><name>RS</name></member>
+      <member refid="d5/d57/classHashing_1a90efd058aac17e4faf7feb8b403ef217" prot="public" virt="non-virtual"><scope>Hashing</scope><name>SDBM</name></member>
+      <member refid="d5/d57/classHashing_1a6d2c737ba19c1bb74723b8f10be487eb" prot="public" virt="non-virtual"><scope>Hashing</scope><name>SDBM</name></member>
+      <member refid="d5/d57/classHashing_1a32f2ea9cc2fad5e2f9db721b260effeb" prot="public" virt="non-virtual"><scope>Hashing</scope><name>ThomasWang</name></member>
+      <member refid="d5/d57/classHashing_1a69c073a483d27505841eec88d8ea1f87" prot="private" virt="non-virtual"><scope>Hashing</scope><name>~Hashing</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

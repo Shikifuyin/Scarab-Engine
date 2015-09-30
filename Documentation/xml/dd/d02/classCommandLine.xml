@@ -1,0 +1,344 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="dd/d02/classCommandLine" kind="class" prot="public">
+    <compoundname>CommandLine</compoundname>
+    <includes refid="d9/d41/CommandLine_8h" local="no">CommandLine.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="dd/d02/classCommandLine_1a52e9f35ec2014cbdf99e01d9288eab2b" prot="private" static="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref></type>
+        <definition>typedef GChar ArgumentString[CMDLINE_MAX_ARGUMENT_LENGTH]</definition>
+        <argsstring>[CMDLINE_MAX_ARGUMENT_LENGTH]</argsstring>
+        <name>ArgumentString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Tools/CommandLine.h" line="70" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Tools/CommandLine.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="dd/d02/classCommandLine_1a23c14fe4fa6c977c1257c4d3427e2fa8" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iArgCount</definition>
+        <argsstring></argsstring>
+        <name>m_iArgCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Tools/CommandLine.h" line="69" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Tools/CommandLine.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d02/classCommandLine_1a4b8963e2399ebc2daf4cff45d7326d51" prot="private" static="no" mutable="no">
+        <type><ref refid="dd/d02/classCommandLine_1a52e9f35ec2014cbdf99e01d9288eab2b" kindref="member">ArgumentString</ref></type>
+        <definition>ArgumentString m_arrArguments[CMDLINE_MAX_ARGUMENTS]</definition>
+        <argsstring>[CMDLINE_MAX_ARGUMENTS]</argsstring>
+        <name>m_arrArguments</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Tools/CommandLine.h" line="71" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Tools/CommandLine.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d02/classCommandLine_1a91af6e25eb05deda68e61eaa215ce285" prot="private" static="no" mutable="no">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+        <definition>const GChar* m_strProgName</definition>
+        <argsstring></argsstring>
+        <name>m_strProgName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Tools/CommandLine.h" line="73" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Tools/CommandLine.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d02/classCommandLine_1ae0b4d7375d0c01e446c72c518137d3b7" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iOptionCount</definition>
+        <argsstring></argsstring>
+        <name>m_iOptionCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Tools/CommandLine.h" line="75" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Tools/CommandLine.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d02/classCommandLine_1ab8e83619f8b55861724c6ecb3d118292" prot="private" static="no" mutable="no">
+        <type><ref refid="da/d4a/structCmdLineOption" kindref="compound">CmdLineOption</ref></type>
+        <definition>CmdLineOption m_arrOptions[CMDLINE_MAX_OPTIONS]</definition>
+        <argsstring>[CMDLINE_MAX_OPTIONS]</argsstring>
+        <name>m_arrOptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Tools/CommandLine.h" line="76" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Tools/CommandLine.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="dd/d02/classCommandLine_1a3256d49065ac22bb752e87b9b3493fef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CommandLine</definition>
+        <argsstring>(UInt iArgCount, const AChar **arrArguments)</argsstring>
+        <name>CommandLine</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iArgCount</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a92009681dba35a2a92297d218d095fab" kindref="member">AChar</ref> **</type>
+          <declname>arrArguments</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Tools/CommandLine.h" line="45"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d02/classCommandLine_1af6def2e74aa8974431877cc22674a785" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~CommandLine</definition>
+        <argsstring>()</argsstring>
+        <name>~CommandLine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Tools/CommandLine.h" line="46"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d02/classCommandLine_1ac97947ad584f734d8500fdb02c2f1531" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+        <definition>const GChar* GetProgramName</definition>
+        <argsstring>() const </argsstring>
+        <name>GetProgramName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Tools/CommandLine.h" line="48"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d02/classCommandLine_1a77781de5a059754e50cdf1ea59316320" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetOptionCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetOptionCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Tools/CommandLine.h" line="50"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d02/classCommandLine_1a9841777539d8868534e6d568d5041cf6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetOption</definition>
+        <argsstring>(const GChar *strName) const </argsstring>
+        <name>GetOption</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Tools/CommandLine.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d02/classCommandLine_1a028f6372c2e5919fd40ffefc42b7d61c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+        <definition>const GChar* GetName</definition>
+        <argsstring>(UInt iOption) const </argsstring>
+        <name>GetName</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iOption</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Tools/CommandLine.h" line="53"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d02/classCommandLine_1a6d13cc04f622f90fdee47de6cae13036" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetArgCount</definition>
+        <argsstring>(UInt iOption) const </argsstring>
+        <name>GetArgCount</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iOption</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Tools/CommandLine.h" line="54"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d02/classCommandLine_1a9e94bc0d9d6dad217985f462794498a8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool GetBool</definition>
+        <argsstring>(UInt iOption, UInt iArg) const </argsstring>
+        <name>GetBool</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iOption</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iArg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Tools/CommandLine.h" line="56"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d02/classCommandLine_1aa6f322b52aa6f1a8d3ff10e61c5b1b99" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref></type>
+        <definition>Int GetInteger</definition>
+        <argsstring>(UInt iOption, UInt iArg) const </argsstring>
+        <name>GetInteger</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iOption</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iArg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Tools/CommandLine.h" line="57"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d02/classCommandLine_1ae8174ffbde5917a453f1f4d2fbea70ca" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref></type>
+        <definition>Float GetFloat</definition>
+        <argsstring>(UInt iOption, UInt iArg) const </argsstring>
+        <name>GetFloat</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iOption</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iArg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Tools/CommandLine.h" line="58"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d02/classCommandLine_1a1f2b96aa3e5e094bae46ddbaec3532e1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+        <definition>const GChar* GetString</definition>
+        <argsstring>(UInt iOption, UInt iArg) const </argsstring>
+        <name>GetString</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iOption</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iArg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Tools/CommandLine.h" line="59"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="872">
+        <label>CmdLineOption</label>
+        <link refid="da/d4a/structCmdLineOption"/>
+        <childnode refid="870" relation="usage">
+          <edgelabel>strName</edgelabel>
+          <edgelabel>arrArguments</edgelabel>
+        </childnode>
+        <childnode refid="871" relation="usage">
+          <edgelabel>iArgCount</edgelabel>
+        </childnode>
+      </node>
+      <node id="871">
+        <label>int</label>
+      </node>
+      <node id="869">
+        <label>CommandLine</label>
+        <link refid="dd/d02/classCommandLine"/>
+        <childnode refid="870" relation="usage">
+          <edgelabel>m_strProgName</edgelabel>
+          <edgelabel>m_arrArguments</edgelabel>
+        </childnode>
+        <childnode refid="871" relation="usage">
+          <edgelabel>m_iArgCount</edgelabel>
+          <edgelabel>m_iOptionCount</edgelabel>
+        </childnode>
+        <childnode refid="872" relation="usage">
+          <edgelabel>m_arrOptions</edgelabel>
+        </childnode>
+      </node>
+      <node id="870">
+        <label>char</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Tools/CommandLine.h" line="43" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Tools/CommandLine.h" bodystart="42" bodyend="77"/>
+    <listofallmembers>
+      <member refid="dd/d02/classCommandLine_1a52e9f35ec2014cbdf99e01d9288eab2b" prot="private" virt="non-virtual"><scope>CommandLine</scope><name>ArgumentString</name></member>
+      <member refid="dd/d02/classCommandLine_1a3256d49065ac22bb752e87b9b3493fef" prot="public" virt="non-virtual"><scope>CommandLine</scope><name>CommandLine</name></member>
+      <member refid="dd/d02/classCommandLine_1a6d13cc04f622f90fdee47de6cae13036" prot="public" virt="non-virtual"><scope>CommandLine</scope><name>GetArgCount</name></member>
+      <member refid="dd/d02/classCommandLine_1a9e94bc0d9d6dad217985f462794498a8" prot="public" virt="non-virtual"><scope>CommandLine</scope><name>GetBool</name></member>
+      <member refid="dd/d02/classCommandLine_1ae8174ffbde5917a453f1f4d2fbea70ca" prot="public" virt="non-virtual"><scope>CommandLine</scope><name>GetFloat</name></member>
+      <member refid="dd/d02/classCommandLine_1aa6f322b52aa6f1a8d3ff10e61c5b1b99" prot="public" virt="non-virtual"><scope>CommandLine</scope><name>GetInteger</name></member>
+      <member refid="dd/d02/classCommandLine_1a028f6372c2e5919fd40ffefc42b7d61c" prot="public" virt="non-virtual"><scope>CommandLine</scope><name>GetName</name></member>
+      <member refid="dd/d02/classCommandLine_1a9841777539d8868534e6d568d5041cf6" prot="public" virt="non-virtual"><scope>CommandLine</scope><name>GetOption</name></member>
+      <member refid="dd/d02/classCommandLine_1a77781de5a059754e50cdf1ea59316320" prot="public" virt="non-virtual"><scope>CommandLine</scope><name>GetOptionCount</name></member>
+      <member refid="dd/d02/classCommandLine_1ac97947ad584f734d8500fdb02c2f1531" prot="public" virt="non-virtual"><scope>CommandLine</scope><name>GetProgramName</name></member>
+      <member refid="dd/d02/classCommandLine_1a1f2b96aa3e5e094bae46ddbaec3532e1" prot="public" virt="non-virtual"><scope>CommandLine</scope><name>GetString</name></member>
+      <member refid="dd/d02/classCommandLine_1a4b8963e2399ebc2daf4cff45d7326d51" prot="private" virt="non-virtual"><scope>CommandLine</scope><name>m_arrArguments</name></member>
+      <member refid="dd/d02/classCommandLine_1ab8e83619f8b55861724c6ecb3d118292" prot="private" virt="non-virtual"><scope>CommandLine</scope><name>m_arrOptions</name></member>
+      <member refid="dd/d02/classCommandLine_1a23c14fe4fa6c977c1257c4d3427e2fa8" prot="private" virt="non-virtual"><scope>CommandLine</scope><name>m_iArgCount</name></member>
+      <member refid="dd/d02/classCommandLine_1ae0b4d7375d0c01e446c72c518137d3b7" prot="private" virt="non-virtual"><scope>CommandLine</scope><name>m_iOptionCount</name></member>
+      <member refid="dd/d02/classCommandLine_1a91af6e25eb05deda68e61eaa215ce285" prot="private" virt="non-virtual"><scope>CommandLine</scope><name>m_strProgName</name></member>
+      <member refid="dd/d02/classCommandLine_1af6def2e74aa8974431877cc22674a785" prot="public" virt="non-virtual"><scope>CommandLine</scope><name>~CommandLine</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

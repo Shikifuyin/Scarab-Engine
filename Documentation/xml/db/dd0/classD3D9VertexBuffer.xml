@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="db/dd0/classD3D9VertexBuffer" kind="class" prot="public">
+    <compoundname>D3D9VertexBuffer</compoundname>
+    <includes refid="d4/dab/D3D9Buffers_8h" local="no">D3D9Buffers.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="db/dd0/classD3D9VertexBuffer_1ab647a79b1716972baa9569d25e4bfd6b" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iStride</definition>
+        <argsstring></argsstring>
+        <name>m_iStride</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Resources/D3D9Buffers.h" line="49" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Resources/D3D9Buffers.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dd0/classD3D9VertexBuffer_1ab2ca39e4f2e90c85602366b92255a85c" prot="private" static="no" mutable="no">
+        <type>IDirect3DVertexBuffer9 *</type>
+        <definition>IDirect3DVertexBuffer9* m_pVB</definition>
+        <argsstring></argsstring>
+        <name>m_pVB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Resources/D3D9Buffers.h" line="50" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Resources/D3D9Buffers.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="db/dd0/classD3D9VertexBuffer_1a1d114bb4a0158521799d461339b979e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>D3D9VertexBuffer</definition>
+        <argsstring>(Direct3D9Renderer *pRenderer, VertexBufferUsage iUsage, UInt iDataSize, UInt iDataStride)</argsstring>
+        <name>D3D9VertexBuffer</name>
+        <param>
+          <type><ref refid="dc/db7/classDirect3D9Renderer" kindref="compound">Direct3D9Renderer</ref> *</type>
+          <declname>pRenderer</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/d38/VertexBuffer_8h_1a1c6343bbe63d1be98f60c9de75659cd1" kindref="member">VertexBufferUsage</ref></type>
+          <declname>iUsage</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDataSize</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDataStride</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Resources/D3D9Buffers.h" line="40"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd0/classD3D9VertexBuffer_1a09a654f739b00c5c9c1ead159272fbbc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~D3D9VertexBuffer</definition>
+        <argsstring>()</argsstring>
+        <name>~D3D9VertexBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Resources/D3D9Buffers.h" line="41"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd0/classD3D9VertexBuffer_1aff4629f1e8ff2b7e328c3cf187fd4892" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Enable</definition>
+        <argsstring>(Direct3D9Renderer *pRenderer, UInt iStream, UInt iOffset)</argsstring>
+        <name>Enable</name>
+        <param>
+          <type><ref refid="dc/db7/classDirect3D9Renderer" kindref="compound">Direct3D9Renderer</ref> *</type>
+          <declname>pRenderer</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iStream</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iOffset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Resources/D3D9Buffers.h" line="43"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd0/classD3D9VertexBuffer_1a4f1ab49bee28402de16147ada6563182" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Disable</definition>
+        <argsstring>(Direct3D9Renderer *pRenderer, UInt iStream)</argsstring>
+        <name>Disable</name>
+        <param>
+          <type><ref refid="dc/db7/classDirect3D9Renderer" kindref="compound">Direct3D9Renderer</ref> *</type>
+          <declname>pRenderer</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iStream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Resources/D3D9Buffers.h" line="44"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd0/classD3D9VertexBuffer_1a1c98f1ddd146352bdd2bfa7ce64f80dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> *</type>
+        <definition>Void* Lock</definition>
+        <argsstring>(VertexBufferLock iLockMode)</argsstring>
+        <name>Lock</name>
+        <param>
+          <type><ref refid="d9/d38/VertexBuffer_8h_1afa38e258903b029e10ce58ddfd42da70" kindref="member">VertexBufferLock</ref></type>
+          <declname>iLockMode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Resources/D3D9Buffers.h" line="45"/>
+      </memberdef>
+      <memberdef kind="function" id="db/dd0/classD3D9VertexBuffer_1ad58e4d6271297c893df4f13add5ef439" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Unlock</definition>
+        <argsstring>()</argsstring>
+        <name>Unlock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Resources/D3D9Buffers.h" line="46"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1972">
+        <label>IDirect3DVertexBuffer9 *</label>
+      </node>
+      <node id="1971">
+        <label>int</label>
+      </node>
+      <node id="1970">
+        <label>D3D9VertexBuffer</label>
+        <link refid="db/dd0/classD3D9VertexBuffer"/>
+        <childnode refid="1971" relation="usage">
+          <edgelabel>m_iStride</edgelabel>
+        </childnode>
+        <childnode refid="1972" relation="usage">
+          <edgelabel>m_pVB</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Resources/D3D9Buffers.h" line="38" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/DirectX9/Direct3D/Resources/D3D9Buffers.h" bodystart="37" bodyend="51"/>
+    <listofallmembers>
+      <member refid="db/dd0/classD3D9VertexBuffer_1a1d114bb4a0158521799d461339b979e1" prot="public" virt="non-virtual"><scope>D3D9VertexBuffer</scope><name>D3D9VertexBuffer</name></member>
+      <member refid="db/dd0/classD3D9VertexBuffer_1a4f1ab49bee28402de16147ada6563182" prot="public" virt="non-virtual"><scope>D3D9VertexBuffer</scope><name>Disable</name></member>
+      <member refid="db/dd0/classD3D9VertexBuffer_1aff4629f1e8ff2b7e328c3cf187fd4892" prot="public" virt="non-virtual"><scope>D3D9VertexBuffer</scope><name>Enable</name></member>
+      <member refid="db/dd0/classD3D9VertexBuffer_1a1c98f1ddd146352bdd2bfa7ce64f80dd" prot="public" virt="non-virtual"><scope>D3D9VertexBuffer</scope><name>Lock</name></member>
+      <member refid="db/dd0/classD3D9VertexBuffer_1ab647a79b1716972baa9569d25e4bfd6b" prot="private" virt="non-virtual"><scope>D3D9VertexBuffer</scope><name>m_iStride</name></member>
+      <member refid="db/dd0/classD3D9VertexBuffer_1ab2ca39e4f2e90c85602366b92255a85c" prot="private" virt="non-virtual"><scope>D3D9VertexBuffer</scope><name>m_pVB</name></member>
+      <member refid="db/dd0/classD3D9VertexBuffer_1ad58e4d6271297c893df4f13add5ef439" prot="public" virt="non-virtual"><scope>D3D9VertexBuffer</scope><name>Unlock</name></member>
+      <member refid="db/dd0/classD3D9VertexBuffer_1a09a654f739b00c5c9c1ead159272fbbc" prot="public" virt="non-virtual"><scope>D3D9VertexBuffer</scope><name>~D3D9VertexBuffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

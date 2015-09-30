@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d6/d0e/structChunkHeapNode" kind="struct" prot="public">
+    <compoundname>ChunkHeapNode</compoundname>
+    <includes refid="d3/d89/HeapAllocator_8h" local="no">HeapAllocator.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d6/d0e/structChunkHeapNode_1a4a73143f9507d525dd40819306e98128" prot="public" static="no" mutable="no">
+        <type>struct _chunk_listnode *</type>
+        <definition>struct _chunk_listnode* pNext</definition>
+        <argsstring></argsstring>
+        <name>pNext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/Allocators/HeapAllocator.h" line="47" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/Allocators/HeapAllocator.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d0e/structChunkHeapNode_1a39e13c349f68150897011a1df4c93bc3" prot="public" static="no" mutable="no">
+        <type>struct _chunk_heapnode *</type>
+        <definition>struct _chunk_heapnode* pChild[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>pChild</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/Allocators/HeapAllocator.h" line="48" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/Allocators/HeapAllocator.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d0e/structChunkHeapNode_1a173ff7b574b7158a63fac81ef4470d02" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref></type>
+        <definition>Int iBalanceFactor</definition>
+        <argsstring></argsstring>
+        <name>iBalanceFactor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/Allocators/HeapAllocator.h" line="49" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/Allocators/HeapAllocator.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="553">
+        <label>struct _chunk_heapnode *</label>
+      </node>
+      <node id="552">
+        <label>struct _chunk_listnode *</label>
+      </node>
+      <node id="551">
+        <label>int</label>
+      </node>
+      <node id="550">
+        <label>ChunkHeapNode</label>
+        <link refid="d6/d0e/structChunkHeapNode"/>
+        <childnode refid="551" relation="usage">
+          <edgelabel>iBalanceFactor</edgelabel>
+        </childnode>
+        <childnode refid="552" relation="usage">
+          <edgelabel>pNext</edgelabel>
+        </childnode>
+        <childnode refid="553" relation="usage">
+          <edgelabel>pChild</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/Allocators/HeapAllocator.h" line="46" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/Allocators/HeapAllocator.h" bodystart="45" bodyend="50"/>
+    <listofallmembers>
+      <member refid="d6/d0e/structChunkHeapNode_1a173ff7b574b7158a63fac81ef4470d02" prot="public" virt="non-virtual"><scope>ChunkHeapNode</scope><name>iBalanceFactor</name></member>
+      <member refid="d6/d0e/structChunkHeapNode_1a39e13c349f68150897011a1df4c93bc3" prot="public" virt="non-virtual"><scope>ChunkHeapNode</scope><name>pChild</name></member>
+      <member refid="d6/d0e/structChunkHeapNode_1a4a73143f9507d525dd40819306e98128" prot="public" virt="non-virtual"><scope>ChunkHeapNode</scope><name>pNext</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

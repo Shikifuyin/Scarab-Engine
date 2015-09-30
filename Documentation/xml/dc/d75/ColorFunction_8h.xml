@@ -1,0 +1,701 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="dc/d75/ColorFunction_8h" kind="file">
+    <compoundname>ColorFunction.h</compoundname>
+    <includes refid="d1/d32/Color3_8h" local="yes">Color3.h</includes>
+    <includes refid="d7/d4d/Color4_8h" local="yes">Color4.h</includes>
+    <includes local="yes">ColorFunction.inl</includes>
+    <includedby refid="d6/d80/TextureBMP_8h" local="yes">TextureBMP.h</includedby>
+    <includedby refid="d9/dbf/Texture_8h" local="yes">Texture.h</includedby>
+    <incdepgraph>
+      <node id="3288">
+        <label>Color4.h</label>
+        <link refid="d7/d4d/Color4_8h"/>
+        <childnode refid="3277" relation="include">
+        </childnode>
+        <childnode refid="3289" relation="include">
+        </childnode>
+      </node>
+      <node id="3279">
+        <label>../Platform.h</label>
+        <link refid="d9/dd0/Platform_8h"/>
+        <childnode refid="3280" relation="include">
+        </childnode>
+      </node>
+      <node id="3281">
+        <label>FPU.inl</label>
+      </node>
+      <node id="3286">
+        <label>MathFunction.inl</label>
+      </node>
+      <node id="3282">
+        <label>../Formats/Scalar.h</label>
+        <link refid="d0/d10/Scalar_8h"/>
+        <childnode refid="3279" relation="include">
+        </childnode>
+        <childnode refid="3283" relation="include">
+        </childnode>
+      </node>
+      <node id="3283">
+        <label>Scalar.inl</label>
+      </node>
+      <node id="3278">
+        <label>../../../ThirdParty/System/Hardware/FPU.h</label>
+        <link refid="dd/d2f/FPU_8h"/>
+        <childnode refid="3279" relation="include">
+        </childnode>
+        <childnode refid="3281" relation="include">
+        </childnode>
+      </node>
+      <node id="3290">
+        <label>ColorFunction.inl</label>
+      </node>
+      <node id="3275">
+        <label>ColorFunction.h</label>
+        <link refid="ColorFunction.h"/>
+        <childnode refid="3276" relation="include">
+        </childnode>
+        <childnode refid="3288" relation="include">
+        </childnode>
+        <childnode refid="3290" relation="include">
+        </childnode>
+      </node>
+      <node id="3280">
+        <label>Platform.inl</label>
+      </node>
+      <node id="3289">
+        <label>Color4.inl</label>
+      </node>
+      <node id="3276">
+        <label>Color3.h</label>
+        <link refid="d1/d32/Color3_8h"/>
+        <childnode refid="3277" relation="include">
+        </childnode>
+        <childnode refid="3287" relation="include">
+        </childnode>
+      </node>
+      <node id="3285">
+        <label>Fixed.inl</label>
+      </node>
+      <node id="3277">
+        <label>../../Functions/MathFunction.h</label>
+        <link refid="d1/d98/MathFunction_8h"/>
+        <childnode refid="3278" relation="include">
+        </childnode>
+        <childnode refid="3282" relation="include">
+        </childnode>
+        <childnode refid="3284" relation="include">
+        </childnode>
+        <childnode refid="3286" relation="include">
+        </childnode>
+      </node>
+      <node id="3284">
+        <label>../Formats/Fixed.h</label>
+        <link refid="d4/d76/Fixed_8h"/>
+        <childnode refid="3282" relation="include">
+        </childnode>
+        <childnode refid="3285" relation="include">
+        </childnode>
+      </node>
+      <node id="3287">
+        <label>Color3.inl</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3319">
+        <label>CommandImport.h</label>
+        <link refid="d5/d90/CommandImport_8h"/>
+        <childnode refid="3304" relation="include">
+        </childnode>
+      </node>
+      <node id="3302">
+        <label>WorldManager.h</label>
+        <link refid="db/d98/WorldManager_8h"/>
+        <childnode refid="3294" relation="include">
+        </childnode>
+      </node>
+      <node id="3341">
+        <label>EffectPlanarReflection.h</label>
+        <link refid="d1/d6b/EffectPlanarReflection_8h"/>
+      </node>
+      <node id="3299">
+        <label>MyDungeon.h</label>
+        <link refid="d0/de7/MyDungeon_8h"/>
+        <childnode refid="3297" relation="include">
+        </childnode>
+      </node>
+      <node id="3342">
+        <label>WorldDLODNode.h</label>
+        <link refid="df/d7d/WorldDLODNode_8h"/>
+      </node>
+      <node id="3338">
+        <label>WorldConvexRoom.h</label>
+        <link refid="d0/d27/WorldConvexRoom_8h"/>
+        <childnode refid="3336" relation="include">
+        </childnode>
+      </node>
+      <node id="3330">
+        <label>WorldLight.h</label>
+        <link refid="d3/d85/WorldLight_8h"/>
+        <childnode refid="3302" relation="include">
+        </childnode>
+        <childnode refid="3331" relation="include">
+        </childnode>
+      </node>
+      <node id="3309">
+        <label>CommandClose.h</label>
+        <link refid="db/d14/CommandClose_8h"/>
+        <childnode refid="3304" relation="include">
+        </childnode>
+      </node>
+      <node id="3343">
+        <label>WorldCaster.h</label>
+        <link refid="d9/d6f/WorldCaster_8h"/>
+        <childnode refid="3302" relation="include">
+        </childnode>
+      </node>
+      <node id="3300">
+        <label>RenderingManager.h</label>
+        <link refid="de/d07/RenderingManager_8h"/>
+        <childnode refid="3294" relation="include">
+        </childnode>
+        <childnode refid="3301" relation="include">
+        </childnode>
+        <childnode refid="3302" relation="include">
+        </childnode>
+        <childnode refid="3303" relation="include">
+        </childnode>
+      </node>
+      <node id="3318">
+        <label>CommandSave.h</label>
+        <link refid="d1/df6/CommandSave_8h"/>
+        <childnode refid="3304" relation="include">
+        </childnode>
+      </node>
+      <node id="3328">
+        <label>EffectColor.h</label>
+        <link refid="db/d7c/EffectColor_8h"/>
+        <childnode refid="3300" relation="include">
+        </childnode>
+      </node>
+      <node id="3314">
+        <label>CommandInspect.h</label>
+        <link refid="d2/d08/CommandInspect_8h"/>
+        <childnode refid="3304" relation="include">
+        </childnode>
+      </node>
+      <node id="3297">
+        <label>Main.h</label>
+        <link refid="da/d94/Main_8h"/>
+      </node>
+      <node id="3313">
+        <label>CommandList.h</label>
+        <link refid="db/da2/CommandList_8h"/>
+        <childnode refid="3304" relation="include">
+        </childnode>
+      </node>
+      <node id="3323">
+        <label>ShaderParameters.h</label>
+        <link refid="d5/d63/ShaderParameters_8h"/>
+        <childnode refid="3300" relation="include">
+        </childnode>
+        <childnode refid="3324" relation="include">
+        </childnode>
+      </node>
+      <node id="3306">
+        <label>ConsoleEnvironment.h</label>
+        <link refid="da/dbc/ConsoleEnvironment_8h"/>
+        <childnode refid="3304" relation="include">
+        </childnode>
+      </node>
+      <node id="3311">
+        <label>CommandDestroy.h</label>
+        <link refid="da/d5c/CommandDestroy_8h"/>
+        <childnode refid="3304" relation="include">
+        </childnode>
+      </node>
+      <node id="3335">
+        <label>WorldPortalCuller.h</label>
+        <link refid="d1/d27/WorldPortalCuller_8h"/>
+        <childnode refid="3336" relation="include">
+        </childnode>
+        <childnode refid="3337" relation="include">
+        </childnode>
+        <childnode refid="3338" relation="include">
+        </childnode>
+      </node>
+      <node id="3305">
+        <label>CommandShowTree.h</label>
+        <link refid="d8/d84/CommandShowTree_8h"/>
+        <childnode refid="3304" relation="include">
+        </childnode>
+      </node>
+      <node id="3349">
+        <label>EffectTexture1D.h</label>
+        <link refid="db/df9/EffectTexture1D_8h"/>
+      </node>
+      <node id="3298">
+        <label>MyLandscape.h</label>
+        <link refid="d7/d2b/MyLandscape_8h"/>
+        <childnode refid="3297" relation="include">
+        </childnode>
+      </node>
+      <node id="3353">
+        <label>GUIMenu.h</label>
+        <link refid="d1/d51/GUIMenu_8h"/>
+        <childnode refid="3303" relation="include">
+        </childnode>
+      </node>
+      <node id="3295">
+        <label>ApplicationManager.h</label>
+        <link refid="d2/d9d/ApplicationManager_8h"/>
+        <childnode refid="3296" relation="include">
+        </childnode>
+        <childnode refid="3297" relation="include">
+        </childnode>
+        <childnode refid="3298" relation="include">
+        </childnode>
+        <childnode refid="3299" relation="include">
+        </childnode>
+      </node>
+      <node id="3334">
+        <label>WorldCuller.h</label>
+        <link refid="da/daf/WorldCuller_8h"/>
+        <childnode refid="3335" relation="include">
+        </childnode>
+        <childnode refid="3339" relation="include">
+        </childnode>
+        <childnode refid="3302" relation="include">
+        </childnode>
+        <childnode refid="3342" relation="include">
+        </childnode>
+      </node>
+      <node id="3350">
+        <label>EffectTexture2D.h</label>
+        <link refid="db/d40/EffectTexture2D_8h"/>
+      </node>
+      <node id="3322">
+        <label>RenderTarget.h</label>
+        <link refid="d7/d4f/RenderTarget_8h"/>
+        <childnode refid="3300" relation="include">
+        </childnode>
+      </node>
+      <node id="3352">
+        <label>GUISkin.h</label>
+        <link refid="d4/deb/GUISkin_8h"/>
+        <childnode refid="3303" relation="include">
+        </childnode>
+        <childnode refid="3353" relation="include">
+        </childnode>
+        <childnode refid="3354" relation="include">
+        </childnode>
+        <childnode refid="3355" relation="include">
+        </childnode>
+      </node>
+      <node id="3316">
+        <label>CommandMove.h</label>
+        <link refid="d5/d5b/CommandMove_8h"/>
+        <childnode refid="3304" relation="include">
+        </childnode>
+      </node>
+      <node id="3351">
+        <label>EffectTexture3D.h</label>
+        <link refid="d7/d48/EffectTexture3D_8h"/>
+      </node>
+      <node id="3293">
+        <label>ResourceManager.h</label>
+        <link refid="de/d51/ResourceManager_8h"/>
+        <childnode refid="3294" relation="include">
+        </childnode>
+        <childnode refid="3300" relation="include">
+        </childnode>
+        <childnode refid="3303" relation="include">
+        </childnode>
+        <childnode refid="3306" relation="include">
+        </childnode>
+        <childnode refid="3307" relation="include">
+        </childnode>
+        <childnode refid="3308" relation="include">
+        </childnode>
+        <childnode refid="3309" relation="include">
+        </childnode>
+        <childnode refid="3310" relation="include">
+        </childnode>
+        <childnode refid="3311" relation="include">
+        </childnode>
+        <childnode refid="3312" relation="include">
+        </childnode>
+        <childnode refid="3313" relation="include">
+        </childnode>
+        <childnode refid="3314" relation="include">
+        </childnode>
+        <childnode refid="3315" relation="include">
+        </childnode>
+        <childnode refid="3316" relation="include">
+        </childnode>
+        <childnode refid="3317" relation="include">
+        </childnode>
+        <childnode refid="3318" relation="include">
+        </childnode>
+        <childnode refid="3319" relation="include">
+        </childnode>
+        <childnode refid="3320" relation="include">
+        </childnode>
+      </node>
+      <node id="3292">
+        <label>TextureBMP.h</label>
+        <link refid="d6/d80/TextureBMP_8h"/>
+        <childnode refid="3293" relation="include">
+        </childnode>
+      </node>
+      <node id="3294">
+        <label>WindowApplication.h</label>
+        <link refid="d4/d72/WindowApplication_8h"/>
+        <childnode refid="3295" relation="include">
+        </childnode>
+      </node>
+      <node id="3325">
+        <label>EffectDefault.h</label>
+        <link refid="da/d69/EffectDefault_8h"/>
+        <childnode refid="3300" relation="include">
+        </childnode>
+      </node>
+      <node id="3307">
+        <label>CommandRDB.h</label>
+        <link refid="db/d8b/CommandRDB_8h"/>
+        <childnode refid="3304" relation="include">
+        </childnode>
+      </node>
+      <node id="3315">
+        <label>CommandRename.h</label>
+        <link refid="da/d4c/CommandRename_8h"/>
+        <childnode refid="3304" relation="include">
+        </childnode>
+      </node>
+      <node id="3355">
+        <label>GUITree.h</label>
+        <link refid="d1/d0d/GUITree_8h"/>
+        <childnode refid="3303" relation="include">
+        </childnode>
+      </node>
+      <node id="3347">
+        <label>EffectLightPointGouraud.h</label>
+        <link refid="de/da9/EffectLightPointGouraud_8h"/>
+      </node>
+      <node id="3332">
+        <label>WorldOutdoorRegion.h</label>
+        <link refid="d0/d1d/WorldOutdoorRegion_8h"/>
+        <childnode refid="3333" relation="include">
+        </childnode>
+      </node>
+      <node id="3327">
+        <label>EffectText.h</label>
+        <link refid="d8/d5f/EffectText_8h"/>
+        <childnode refid="3300" relation="include">
+        </childnode>
+      </node>
+      <node id="3331">
+        <label>WorldDebugDraw.h</label>
+        <link refid="d1/df3/WorldDebugDraw_8h"/>
+        <childnode refid="3302" relation="include">
+        </childnode>
+      </node>
+      <node id="3310">
+        <label>CommandCreate.h</label>
+        <link refid="d4/d98/CommandCreate_8h"/>
+        <childnode refid="3304" relation="include">
+        </childnode>
+      </node>
+      <node id="3321">
+        <label>Texture.h</label>
+        <link refid="d9/dbf/Texture_8h"/>
+        <childnode refid="3300" relation="include">
+        </childnode>
+        <childnode refid="3322" relation="include">
+        </childnode>
+        <childnode refid="3323" relation="include">
+        </childnode>
+        <childnode refid="3352" relation="include">
+        </childnode>
+        <childnode refid="3345" relation="include">
+        </childnode>
+        <childnode refid="3349" relation="include">
+        </childnode>
+        <childnode refid="3350" relation="include">
+        </childnode>
+        <childnode refid="3351" relation="include">
+        </childnode>
+      </node>
+      <node id="3333">
+        <label>WorldOutdoorArea.h</label>
+        <link refid="dd/d4f/WorldOutdoorArea_8h"/>
+        <childnode refid="3302" relation="include">
+        </childnode>
+        <childnode refid="3331" relation="include">
+        </childnode>
+      </node>
+      <node id="3296">
+        <label>Entities.h</label>
+        <link refid="d7/d5d/Entities_8h"/>
+        <childnode refid="3297" relation="include">
+        </childnode>
+      </node>
+      <node id="3339">
+        <label>GlobalEffect.h</label>
+        <link refid="d2/d5d/GlobalEffect_8h"/>
+        <childnode refid="3340" relation="include">
+        </childnode>
+        <childnode refid="3341" relation="include">
+        </childnode>
+      </node>
+      <node id="3317">
+        <label>CommandLoad.h</label>
+        <link refid="dc/db1/CommandLoad_8h"/>
+        <childnode refid="3304" relation="include">
+        </childnode>
+      </node>
+      <node id="3336">
+        <label>WorldIndoorArea.h</label>
+        <link refid="d2/d61/WorldIndoorArea_8h"/>
+        <childnode refid="3302" relation="include">
+        </childnode>
+        <childnode refid="3331" relation="include">
+        </childnode>
+      </node>
+      <node id="3354">
+        <label>GUIList.h</label>
+        <link refid="d3/dae/GUIList_8h"/>
+        <childnode refid="3303" relation="include">
+        </childnode>
+      </node>
+      <node id="3326">
+        <label>Effect2D.h</label>
+        <link refid="db/d27/Effect2D_8h"/>
+        <childnode refid="3300" relation="include">
+        </childnode>
+      </node>
+      <node id="3340">
+        <label>EffectPlanarShadows.h</label>
+        <link refid="d6/d73/EffectPlanarShadows_8h"/>
+        <childnode refid="3302" relation="include">
+        </childnode>
+      </node>
+      <node id="3301">
+        <label>ModelingManager.h</label>
+        <link refid="dc/ddb/ModelingManager_8h"/>
+        <childnode refid="3294" relation="include">
+        </childnode>
+        <childnode refid="3302" relation="include">
+        </childnode>
+      </node>
+      <node id="3291">
+        <label>ColorFunction.h</label>
+        <link refid="ColorFunction.h"/>
+        <childnode refid="3292" relation="include">
+        </childnode>
+        <childnode refid="3321" relation="include">
+        </childnode>
+      </node>
+      <node id="3304">
+        <label>ConsoleManager.h</label>
+        <link refid="d3/d63/ConsoleManager_8h"/>
+        <childnode refid="3294" relation="include">
+        </childnode>
+      </node>
+      <node id="3303">
+        <label>GUIManager.h</label>
+        <link refid="d6/db3/GUIManager_8h"/>
+        <childnode refid="3294" relation="include">
+        </childnode>
+        <childnode refid="3304" relation="include">
+        </childnode>
+        <childnode refid="3305" relation="include">
+        </childnode>
+      </node>
+      <node id="3344">
+        <label>EffectMaterial.h</label>
+        <link refid="d6/d58/EffectMaterial_8h"/>
+        <childnode refid="3340" relation="include">
+        </childnode>
+        <childnode refid="3297" relation="include">
+        </childnode>
+      </node>
+      <node id="3308">
+        <label>CommandOpen.h</label>
+        <link refid="dc/db1/CommandOpen_8h"/>
+        <childnode refid="3304" relation="include">
+        </childnode>
+      </node>
+      <node id="3337">
+        <label>WorldPortal.h</label>
+        <link refid="df/d65/WorldPortal_8h"/>
+        <childnode refid="3336" relation="include">
+        </childnode>
+        <childnode refid="3338" relation="include">
+        </childnode>
+      </node>
+      <node id="3324">
+        <label>EffectInstance.h</label>
+        <link refid="dc/d13/EffectInstance_8h"/>
+        <childnode refid="3300" relation="include">
+        </childnode>
+        <childnode refid="3325" relation="include">
+        </childnode>
+        <childnode refid="3326" relation="include">
+        </childnode>
+        <childnode refid="3327" relation="include">
+        </childnode>
+        <childnode refid="3328" relation="include">
+        </childnode>
+        <childnode refid="3329" relation="include">
+        </childnode>
+        <childnode refid="3332" relation="include">
+        </childnode>
+        <childnode refid="3344" relation="include">
+        </childnode>
+        <childnode refid="3345" relation="include">
+        </childnode>
+        <childnode refid="3346" relation="include">
+        </childnode>
+        <childnode refid="3347" relation="include">
+        </childnode>
+        <childnode refid="3348" relation="include">
+        </childnode>
+        <childnode refid="3349" relation="include">
+        </childnode>
+        <childnode refid="3350" relation="include">
+        </childnode>
+        <childnode refid="3351" relation="include">
+        </childnode>
+      </node>
+      <node id="3348">
+        <label>EffectLightPointPhong.h</label>
+        <link refid="dc/d62/EffectLightPointPhong_8h"/>
+        <childnode refid="3299" relation="include">
+        </childnode>
+        <childnode refid="3297" relation="include">
+        </childnode>
+      </node>
+      <node id="3312">
+        <label>CommandCWD.h</label>
+        <link refid="d6/da1/CommandCWD_8h"/>
+        <childnode refid="3304" relation="include">
+        </childnode>
+      </node>
+      <node id="3346">
+        <label>EffectLightAmbient.h</label>
+        <link refid="da/d0a/EffectLightAmbient_8h"/>
+      </node>
+      <node id="3345">
+        <label>EffectMaterialTexture.h</label>
+        <link refid="d1/d26/EffectMaterialTexture_8h"/>
+      </node>
+      <node id="3320">
+        <label>CommandExport.h</label>
+        <link refid="d3/dd7/CommandExport_8h"/>
+        <childnode refid="3304" relation="include">
+        </childnode>
+      </node>
+      <node id="3329">
+        <label>WorldLeaf.h</label>
+        <link refid="de/d75/WorldLeaf_8h"/>
+        <childnode refid="3302" relation="include">
+        </childnode>
+        <childnode refid="3330" relation="include">
+        </childnode>
+        <childnode refid="3332" relation="include">
+        </childnode>
+        <childnode refid="3334" relation="include">
+        </childnode>
+        <childnode refid="3340" relation="include">
+        </childnode>
+        <childnode refid="3343" relation="include">
+        </childnode>
+        <childnode refid="3331" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d3/de1/classColorFunction" prot="public">ColorFunction</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="dc/d75/ColorFunction_8h_1a746f953cf71d1ce98f48b1f5754fcc92" prot="public" static="no">
+        <name>ColorFFn</name>
+        <initializer><ref refid="d3/de1/classColorFunction_1aaf5ad794a04a6f2c43abefdb4404567d" kindref="member">ColorF::GetInstancePtr</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Color/ColorFunction.h" line="32" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Color/ColorFunction.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dc/d75/ColorFunction_8h_1ad07dd7605248392a384d837953a9382e" prot="public" static="no">
+        <name>ColorDFn</name>
+        <initializer><ref refid="d3/de1/classColorFunction_1aaf5ad794a04a6f2c43abefdb4404567d" kindref="member">ColorD::GetInstancePtr</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Color/ColorFunction.h" line="33" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Color/ColorFunction.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dc/d75/ColorFunction_8h_1a3b360916fd788792b3c8b018b9a3465c" prot="public" static="no">
+        <name>ColorFn</name>
+        <initializer><ref refid="d3/de1/classColorFunction_1aaf5ad794a04a6f2c43abefdb4404567d" kindref="member">ColorS::GetInstancePtr</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Color/ColorFunction.h" line="34" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Color/ColorFunction.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="dc/d75/ColorFunction_8h_1a66b865435fd5279fd7a4cde386456cdb" prot="public" static="no">
+        <type><ref refid="d3/de1/classColorFunction" kindref="compound">ColorFunction</ref>&lt; <ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref> &gt;</type>
+        <definition>typedef ColorFunction&lt;Float&gt; ColorF</definition>
+        <argsstring></argsstring>
+        <name>ColorF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Color/ColorFunction.h" line="156" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Color/ColorFunction.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="dc/d75/ColorFunction_8h_1aa97c69dfd18bf397c038ae38374dcd0e" prot="public" static="no">
+        <type><ref refid="d3/de1/classColorFunction" kindref="compound">ColorFunction</ref>&lt; <ref refid="d9/dd0/Platform_8h_1a1f2c5f02159fb28428e23074cc04166d" kindref="member">Double</ref> &gt;</type>
+        <definition>typedef ColorFunction&lt;Double&gt; ColorD</definition>
+        <argsstring></argsstring>
+        <name>ColorD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Color/ColorFunction.h" line="157" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Color/ColorFunction.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="dc/d75/ColorFunction_8h_1a2a7756c0bb2d627f571ba3575c340265" prot="public" static="no">
+        <type><ref refid="d3/de1/classColorFunction" kindref="compound">ColorFunction</ref>&lt; <ref refid="d0/d10/Scalar_8h_1abee0aca51a3a3e16c628155aa4ac6f12" kindref="member">Scalar</ref> &gt;</type>
+        <definition>typedef ColorFunction&lt;Scalar&gt; ColorS</definition>
+        <argsstring></argsstring>
+        <name>ColorS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Color/ColorFunction.h" line="158" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Color/ColorFunction.h" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Color/ColorFunction.h"/>
+  </compounddef>
+</doxygen>

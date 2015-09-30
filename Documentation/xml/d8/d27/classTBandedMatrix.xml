@@ -1,0 +1,659 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d8/d27/classTBandedMatrix" kind="class" prot="public">
+    <compoundname>TBandedMatrix</compoundname>
+    <includes refid="d8/d68/BandedMatrix_8h" local="no">BandedMatrix.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>Real</declname>
+        <defname>Real</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="d8/d27/classTBandedMatrix_1a861ab6a3627bfe53ae2453e2a5e1fca8" prot="private" static="yes" mutable="no">
+        <type>const Real</type>
+        <definition>const Real ZERO</definition>
+        <argsstring></argsstring>
+        <name>ZERO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" line="106" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d27/classTBandedMatrix_1acac09fd02521e2a1297f6dde618fb5ca" prot="private" static="yes" mutable="no">
+        <type>const Real</type>
+        <definition>const Real ONE</definition>
+        <argsstring></argsstring>
+        <name>ONE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" line="107" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d8/d27/classTBandedMatrix_1a33a55c582674ff392fce44bc9bb82ddf" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iSize</definition>
+        <argsstring></argsstring>
+        <name>m_iSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" line="110" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d27/classTBandedMatrix_1a0024b6fb64883610ee50831feb818389" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iLowerBands</definition>
+        <argsstring></argsstring>
+        <name>m_iLowerBands</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" line="111" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d27/classTBandedMatrix_1a8d2ff6d4e6b6fab37a601943cd339e10" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iUpperBands</definition>
+        <argsstring></argsstring>
+        <name>m_iUpperBands</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" line="111" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d27/classTBandedMatrix_1a0ab95fd1d229615eba101a954e104dbe" prot="private" static="no" mutable="no">
+        <type><ref refid="d4/d23/classTVectorN" kindref="compound">TVectorN</ref>&lt; Real &gt; *</type>
+        <definition>TVectorN&lt;Real&gt;* m_pDiagonal</definition>
+        <argsstring></argsstring>
+        <name>m_pDiagonal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" line="112" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d27/classTBandedMatrix_1a4f300023d43068587973dcfd4cbd3af3" prot="private" static="no" mutable="no">
+        <type><ref refid="d4/d23/classTVectorN" kindref="compound">TVectorN</ref>&lt; Real &gt; *</type>
+        <definition>TVectorN&lt;Real&gt;* m_arrLowerBands</definition>
+        <argsstring></argsstring>
+        <name>m_arrLowerBands</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" line="113" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d27/classTBandedMatrix_1a95eeed06a092f3e072caf30b5b619501" prot="private" static="no" mutable="no">
+        <type><ref refid="d4/d23/classTVectorN" kindref="compound">TVectorN</ref>&lt; Real &gt; *</type>
+        <definition>TVectorN&lt;Real&gt;* m_arrUpperBands</definition>
+        <argsstring></argsstring>
+        <name>m_arrUpperBands</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" line="114" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d8/d27/classTBandedMatrix_1a0a77b6bed9daf6e2dd42e3224b2ed3b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TBandedMatrix</definition>
+        <argsstring>(UInt iSize, UInt iLowerBands, UInt iUpperBands)</argsstring>
+        <name>TBandedMatrix</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iSize</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iLowerBands</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iUpperBands</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" line="41"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d27/classTBandedMatrix_1a6ea9ba2353509b97e57c2577a2c5c0d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TBandedMatrix</definition>
+        <argsstring>(const TBandedMatrix&lt; Real &gt; &amp;rhs)</argsstring>
+        <name>TBandedMatrix</name>
+        <param>
+          <type>const <ref refid="d8/d27/classTBandedMatrix" kindref="compound">TBandedMatrix</ref>&lt; Real &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" line="42"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d27/classTBandedMatrix_1a03fd49027a251983c2eda3a5a82db62d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~TBandedMatrix</definition>
+        <argsstring>()</argsstring>
+        <name>~TBandedMatrix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" line="43"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d27/classTBandedMatrix_1a933f30ef526d24fe6fe34ba64593a743" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d8/d27/classTBandedMatrix" kindref="compound">TBandedMatrix</ref>&lt; Real &gt; &amp;</type>
+        <definition>TBandedMatrix&lt;Real&gt;&amp; operator=</definition>
+        <argsstring>(const TBandedMatrix&lt; Real &gt; &amp;rhs)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="d8/d27/classTBandedMatrix" kindref="compound">TBandedMatrix</ref>&lt; Real &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" line="46"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d27/classTBandedMatrix_1aa3e352f02a9e19866aa0bd0a51a24b80" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetSize</definition>
+        <argsstring>() const </argsstring>
+        <name>GetSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" line="49"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d27/classTBandedMatrix_1a19b415c3dd5dea3e9e9c5e0f5d80471a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetLowerBandCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetLowerBandCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" line="50"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d27/classTBandedMatrix_1a2a0583cb6cd486f4558073bd1c1c153e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetLowerBandSize</definition>
+        <argsstring>(UInt iLowerBand) const </argsstring>
+        <name>GetLowerBandSize</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iLowerBand</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d27/classTBandedMatrix_1ae0180acb2b9ea6532bb973641d614942" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetUpperBandCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetUpperBandCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" line="52"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d27/classTBandedMatrix_1a1c128d5bd8fec8e254ba7556394bca20" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetUpperBandSize</definition>
+        <argsstring>(UInt iUpperBand) const </argsstring>
+        <name>GetUpperBandSize</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iUpperBand</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" line="53"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d27/classTBandedMatrix_1ac605168db738b76cd7914eb58bd7d598" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d4/d23/classTVectorN" kindref="compound">TVectorN</ref>&lt; Real &gt; &amp;</type>
+        <definition>TVectorN&lt;Real&gt;&amp; GetDiagonal</definition>
+        <argsstring>()</argsstring>
+        <name>GetDiagonal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" line="56"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d27/classTBandedMatrix_1ac476ed4e68d7327541d1203e6729c6a9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d4/d23/classTVectorN" kindref="compound">TVectorN</ref>&lt; Real &gt; &amp;</type>
+        <definition>const TVectorN&lt;Real&gt;&amp; GetDiagonal</definition>
+        <argsstring>() const </argsstring>
+        <name>GetDiagonal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" line="57"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d27/classTBandedMatrix_1a060bf3796aee28601d22e25dc54c9f3d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d4/d23/classTVectorN" kindref="compound">TVectorN</ref>&lt; Real &gt; &amp;</type>
+        <definition>TVectorN&lt;Real&gt;&amp; GetLowerBand</definition>
+        <argsstring>(UInt iLowerBand)</argsstring>
+        <name>GetLowerBand</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iLowerBand</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" line="58"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d27/classTBandedMatrix_1a99e1ecb36b9f3857b568fced3451344c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d4/d23/classTVectorN" kindref="compound">TVectorN</ref>&lt; Real &gt; &amp;</type>
+        <definition>const TVectorN&lt;Real&gt;&amp; GetLowerBand</definition>
+        <argsstring>(UInt iLowerBand) const </argsstring>
+        <name>GetLowerBand</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iLowerBand</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" line="59"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d27/classTBandedMatrix_1a20b5b2203ff685bbff61f057d4bdbb92" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d4/d23/classTVectorN" kindref="compound">TVectorN</ref>&lt; Real &gt; &amp;</type>
+        <definition>TVectorN&lt;Real&gt;&amp; GetUpperBand</definition>
+        <argsstring>(UInt iUpperBand)</argsstring>
+        <name>GetUpperBand</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iUpperBand</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" line="60"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d27/classTBandedMatrix_1af37c04c30bb05e8cd6d68b0757e16606" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d4/d23/classTVectorN" kindref="compound">TVectorN</ref>&lt; Real &gt; &amp;</type>
+        <definition>const TVectorN&lt;Real&gt;&amp; GetUpperBand</definition>
+        <argsstring>(UInt iUpperBand) const </argsstring>
+        <name>GetUpperBand</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iUpperBand</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" line="61"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d27/classTBandedMatrix_1aa40c5052876a5345ac6afc0adb5befcc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real &amp;</type>
+        <definition>Real&amp; operator()</definition>
+        <argsstring>(UInt iRow, UInt iColumn)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iRow</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iColumn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" line="63"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d27/classTBandedMatrix_1a51323249926ad3f29868011d70320103" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real operator()</definition>
+        <argsstring>(UInt iRow, UInt iColumn) const </argsstring>
+        <name>operator()</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iRow</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iColumn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" line="64"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d27/classTBandedMatrix_1a5ddff1963d0594e9e73280610470b467" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void MakeNull</definition>
+        <argsstring>()</argsstring>
+        <name>MakeNull</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" line="66"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d27/classTBandedMatrix_1a1a2be532f2f092c6acf89a35d273201d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void MakeIdentity</definition>
+        <argsstring>()</argsstring>
+        <name>MakeIdentity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" line="67"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d27/classTBandedMatrix_1a7a6fb2d6262ad06735c000a3d0432683" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool CholeskyFactorization</definition>
+        <argsstring>(Real fZeroTolerance=(Real) SCALAR_ERROR)</argsstring>
+        <name>CholeskyFactorization</name>
+        <param>
+          <type>Real</type>
+          <declname>fZeroTolerance</declname>
+          <defval>(Real) <ref refid="d0/d10/Scalar_8h_1ab84e60710e7c3a93246b807ac524d38b" kindref="member">SCALAR_ERROR</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" line="74"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d27/classTBandedMatrix_1a7b58928bd3be572ad5cabbef99772a35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool SolveSystem</definition>
+        <argsstring>(TVectorN&lt; Real &gt; &amp;outX, const TVectorN&lt; Real &gt; &amp;vB)</argsstring>
+        <name>SolveSystem</name>
+        <param>
+          <type><ref refid="d4/d23/classTVectorN" kindref="compound">TVectorN</ref>&lt; Real &gt; &amp;</type>
+          <declname>outX</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d4/d23/classTVectorN" kindref="compound">TVectorN</ref>&lt; Real &gt; &amp;</type>
+          <declname>vB</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" line="79"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d27/classTBandedMatrix_1a2d82935902507c996c9e3067b10567ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool SolveSystem</definition>
+        <argsstring>(TMatrixN&lt; Real &gt; &amp;outX, const TMatrixN&lt; Real &gt; &amp;matB)</argsstring>
+        <name>SolveSystem</name>
+        <param>
+          <type><ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt; &amp;</type>
+          <declname>outX</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt; &amp;</type>
+          <declname>matB</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" line="84"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d8/d27/classTBandedMatrix_1aaee448844615bc73ba0276e637464e08" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _AllocateBands</definition>
+        <argsstring>()</argsstring>
+        <name>_AllocateBands</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" line="88"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d27/classTBandedMatrix_1aeadc5656ad52a6fa49d00a5a78925b7c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _DestroyBands</definition>
+        <argsstring>()</argsstring>
+        <name>_DestroyBands</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" line="89"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d27/classTBandedMatrix_1a6d52eec60382d9c1527e08c8e28d26d6" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool _Solve_Lower</definition>
+        <argsstring>(TVectorN&lt; Real &gt; &amp;vData) const </argsstring>
+        <name>_Solve_Lower</name>
+        <param>
+          <type><ref refid="d4/d23/classTVectorN" kindref="compound">TVectorN</ref>&lt; Real &gt; &amp;</type>
+          <declname>vData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" line="94"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d27/classTBandedMatrix_1a43e2cf358e522fb297a58175f3e96de2" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool _Solve_Upper</definition>
+        <argsstring>(TVectorN&lt; Real &gt; &amp;vData) const </argsstring>
+        <name>_Solve_Upper</name>
+        <param>
+          <type><ref refid="d4/d23/classTVectorN" kindref="compound">TVectorN</ref>&lt; Real &gt; &amp;</type>
+          <declname>vData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" line="97"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d27/classTBandedMatrix_1ae2e91626e530fc0aa44001450f75701d" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool _Solve_Lower</definition>
+        <argsstring>(TMatrixN&lt; Real &gt; &amp;matData) const </argsstring>
+        <name>_Solve_Lower</name>
+        <param>
+          <type><ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt; &amp;</type>
+          <declname>matData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" line="101"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d27/classTBandedMatrix_1a557c32a8732749cd50c7ef18ab48a1ea" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool _Solve_Upper</definition>
+        <argsstring>(TMatrixN&lt; Real &gt; &amp;matData) const </argsstring>
+        <name>_Solve_Upper</name>
+        <param>
+          <type><ref refid="d0/d83/classTMatrixN" kindref="compound">TMatrixN</ref>&lt; Real &gt; &amp;</type>
+          <declname>matData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" line="104"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="12228">
+        <label>Real</label>
+      </node>
+      <node id="12227">
+        <label>int</label>
+      </node>
+      <node id="12226">
+        <label>TBandedMatrix&lt; Real &gt;</label>
+        <link refid="d8/d27/classTBandedMatrix"/>
+        <childnode refid="12227" relation="usage">
+          <edgelabel>m_iLowerBands</edgelabel>
+          <edgelabel>m_iSize</edgelabel>
+          <edgelabel>m_iUpperBands</edgelabel>
+        </childnode>
+        <childnode refid="12228" relation="usage">
+          <edgelabel>ONE</edgelabel>
+          <edgelabel>ZERO</edgelabel>
+        </childnode>
+        <childnode refid="12229" relation="usage">
+          <edgelabel>m_arrUpperBands</edgelabel>
+          <edgelabel>m_arrLowerBands</edgelabel>
+          <edgelabel>m_pDiagonal</edgelabel>
+        </childnode>
+      </node>
+      <node id="12229">
+        <label>TVectorN&lt; Real &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" line="37" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/LinearSystem/BandedMatrix.h" bodystart="36" bodyend="115"/>
+    <listofallmembers>
+      <member refid="d8/d27/classTBandedMatrix_1aaee448844615bc73ba0276e637464e08" prot="private" virt="non-virtual"><scope>TBandedMatrix</scope><name>_AllocateBands</name></member>
+      <member refid="d8/d27/classTBandedMatrix_1aeadc5656ad52a6fa49d00a5a78925b7c" prot="private" virt="non-virtual"><scope>TBandedMatrix</scope><name>_DestroyBands</name></member>
+      <member refid="d8/d27/classTBandedMatrix_1a6d52eec60382d9c1527e08c8e28d26d6" prot="private" virt="non-virtual"><scope>TBandedMatrix</scope><name>_Solve_Lower</name></member>
+      <member refid="d8/d27/classTBandedMatrix_1ae2e91626e530fc0aa44001450f75701d" prot="private" virt="non-virtual"><scope>TBandedMatrix</scope><name>_Solve_Lower</name></member>
+      <member refid="d8/d27/classTBandedMatrix_1a43e2cf358e522fb297a58175f3e96de2" prot="private" virt="non-virtual"><scope>TBandedMatrix</scope><name>_Solve_Upper</name></member>
+      <member refid="d8/d27/classTBandedMatrix_1a557c32a8732749cd50c7ef18ab48a1ea" prot="private" virt="non-virtual"><scope>TBandedMatrix</scope><name>_Solve_Upper</name></member>
+      <member refid="d8/d27/classTBandedMatrix_1a7a6fb2d6262ad06735c000a3d0432683" prot="public" virt="non-virtual"><scope>TBandedMatrix</scope><name>CholeskyFactorization</name></member>
+      <member refid="d8/d27/classTBandedMatrix_1ac605168db738b76cd7914eb58bd7d598" prot="public" virt="non-virtual"><scope>TBandedMatrix</scope><name>GetDiagonal</name></member>
+      <member refid="d8/d27/classTBandedMatrix_1ac476ed4e68d7327541d1203e6729c6a9" prot="public" virt="non-virtual"><scope>TBandedMatrix</scope><name>GetDiagonal</name></member>
+      <member refid="d8/d27/classTBandedMatrix_1a060bf3796aee28601d22e25dc54c9f3d" prot="public" virt="non-virtual"><scope>TBandedMatrix</scope><name>GetLowerBand</name></member>
+      <member refid="d8/d27/classTBandedMatrix_1a99e1ecb36b9f3857b568fced3451344c" prot="public" virt="non-virtual"><scope>TBandedMatrix</scope><name>GetLowerBand</name></member>
+      <member refid="d8/d27/classTBandedMatrix_1a19b415c3dd5dea3e9e9c5e0f5d80471a" prot="public" virt="non-virtual"><scope>TBandedMatrix</scope><name>GetLowerBandCount</name></member>
+      <member refid="d8/d27/classTBandedMatrix_1a2a0583cb6cd486f4558073bd1c1c153e" prot="public" virt="non-virtual"><scope>TBandedMatrix</scope><name>GetLowerBandSize</name></member>
+      <member refid="d8/d27/classTBandedMatrix_1aa3e352f02a9e19866aa0bd0a51a24b80" prot="public" virt="non-virtual"><scope>TBandedMatrix</scope><name>GetSize</name></member>
+      <member refid="d8/d27/classTBandedMatrix_1a20b5b2203ff685bbff61f057d4bdbb92" prot="public" virt="non-virtual"><scope>TBandedMatrix</scope><name>GetUpperBand</name></member>
+      <member refid="d8/d27/classTBandedMatrix_1af37c04c30bb05e8cd6d68b0757e16606" prot="public" virt="non-virtual"><scope>TBandedMatrix</scope><name>GetUpperBand</name></member>
+      <member refid="d8/d27/classTBandedMatrix_1ae0180acb2b9ea6532bb973641d614942" prot="public" virt="non-virtual"><scope>TBandedMatrix</scope><name>GetUpperBandCount</name></member>
+      <member refid="d8/d27/classTBandedMatrix_1a1c128d5bd8fec8e254ba7556394bca20" prot="public" virt="non-virtual"><scope>TBandedMatrix</scope><name>GetUpperBandSize</name></member>
+      <member refid="d8/d27/classTBandedMatrix_1a4f300023d43068587973dcfd4cbd3af3" prot="private" virt="non-virtual"><scope>TBandedMatrix</scope><name>m_arrLowerBands</name></member>
+      <member refid="d8/d27/classTBandedMatrix_1a95eeed06a092f3e072caf30b5b619501" prot="private" virt="non-virtual"><scope>TBandedMatrix</scope><name>m_arrUpperBands</name></member>
+      <member refid="d8/d27/classTBandedMatrix_1a0024b6fb64883610ee50831feb818389" prot="private" virt="non-virtual"><scope>TBandedMatrix</scope><name>m_iLowerBands</name></member>
+      <member refid="d8/d27/classTBandedMatrix_1a33a55c582674ff392fce44bc9bb82ddf" prot="private" virt="non-virtual"><scope>TBandedMatrix</scope><name>m_iSize</name></member>
+      <member refid="d8/d27/classTBandedMatrix_1a8d2ff6d4e6b6fab37a601943cd339e10" prot="private" virt="non-virtual"><scope>TBandedMatrix</scope><name>m_iUpperBands</name></member>
+      <member refid="d8/d27/classTBandedMatrix_1a0ab95fd1d229615eba101a954e104dbe" prot="private" virt="non-virtual"><scope>TBandedMatrix</scope><name>m_pDiagonal</name></member>
+      <member refid="d8/d27/classTBandedMatrix_1a1a2be532f2f092c6acf89a35d273201d" prot="public" virt="non-virtual"><scope>TBandedMatrix</scope><name>MakeIdentity</name></member>
+      <member refid="d8/d27/classTBandedMatrix_1a5ddff1963d0594e9e73280610470b467" prot="public" virt="non-virtual"><scope>TBandedMatrix</scope><name>MakeNull</name></member>
+      <member refid="d8/d27/classTBandedMatrix_1acac09fd02521e2a1297f6dde618fb5ca" prot="private" virt="non-virtual"><scope>TBandedMatrix</scope><name>ONE</name></member>
+      <member refid="d8/d27/classTBandedMatrix_1aa40c5052876a5345ac6afc0adb5befcc" prot="public" virt="non-virtual"><scope>TBandedMatrix</scope><name>operator()</name></member>
+      <member refid="d8/d27/classTBandedMatrix_1a51323249926ad3f29868011d70320103" prot="public" virt="non-virtual"><scope>TBandedMatrix</scope><name>operator()</name></member>
+      <member refid="d8/d27/classTBandedMatrix_1a933f30ef526d24fe6fe34ba64593a743" prot="public" virt="non-virtual"><scope>TBandedMatrix</scope><name>operator=</name></member>
+      <member refid="d8/d27/classTBandedMatrix_1a7b58928bd3be572ad5cabbef99772a35" prot="public" virt="non-virtual"><scope>TBandedMatrix</scope><name>SolveSystem</name></member>
+      <member refid="d8/d27/classTBandedMatrix_1a2d82935902507c996c9e3067b10567ce" prot="public" virt="non-virtual"><scope>TBandedMatrix</scope><name>SolveSystem</name></member>
+      <member refid="d8/d27/classTBandedMatrix_1a0a77b6bed9daf6e2dd42e3224b2ed3b3" prot="public" virt="non-virtual"><scope>TBandedMatrix</scope><name>TBandedMatrix</name></member>
+      <member refid="d8/d27/classTBandedMatrix_1a6ea9ba2353509b97e57c2577a2c5c0d5" prot="public" virt="non-virtual"><scope>TBandedMatrix</scope><name>TBandedMatrix</name></member>
+      <member refid="d8/d27/classTBandedMatrix_1a861ab6a3627bfe53ae2453e2a5e1fca8" prot="private" virt="non-virtual"><scope>TBandedMatrix</scope><name>ZERO</name></member>
+      <member refid="d8/d27/classTBandedMatrix_1a03fd49027a251983c2eda3a5a82db62d" prot="public" virt="non-virtual"><scope>TBandedMatrix</scope><name>~TBandedMatrix</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

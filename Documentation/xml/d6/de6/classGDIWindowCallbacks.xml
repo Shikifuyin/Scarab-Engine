@@ -1,0 +1,440 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d6/de6/classGDIWindowCallbacks" kind="class" prot="public" abstract="yes">
+    <compoundname>GDIWindowCallbacks</compoundname>
+    <derivedcompoundref refid="d0/d90/classWindowAppCallbacks" prot="public" virt="non-virtual">WindowAppCallbacks</derivedcompoundref>
+    <includes refid="d7/d03/GDIWindow_8h" local="no">GDIWindow.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="d6/de6/classGDIWindowCallbacks_1a91f0e9a4012edb773b7a59705e4e90a0" prot="protected" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> *</type>
+        <definition>Void* m_pUserData</definition>
+        <argsstring></argsstring>
+        <name>m_pUserData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/GDI+/GDIWindow.h" line="75" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/GDI+/GDIWindow.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d6/de6/classGDIWindowCallbacks_1a2b0b77847ab3e5a1ca2f26f1210c9939" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GDIWindowCallbacks</definition>
+        <argsstring>(Void *pUserData=NULL)</argsstring>
+        <name>GDIWindowCallbacks</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> *</type>
+          <declname>pUserData</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/GDI+/GDIWindow.h" line="41"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/de6/classGDIWindowCallbacks_1a18f7843ac9b8735eb36a5c888c007afc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~GDIWindowCallbacks</definition>
+        <argsstring>()</argsstring>
+        <name>~GDIWindowCallbacks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/GDI+/GDIWindow.h" line="42"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/de6/classGDIWindowCallbacks_1a164138c0b5d72c34a644809e30453f64" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetUserData</definition>
+        <argsstring>(Void *pUserData)</argsstring>
+        <name>SetUserData</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> *</type>
+          <declname>pUserData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/GDI+/GDIWindow.h" line="44"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/de6/classGDIWindowCallbacks_1aadb9f5404a335921160e6b0ce24e9107" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnIdleTime</definition>
+        <argsstring>()=0</argsstring>
+        <name>OnIdleTime</name>
+        <reimplementedby refid="d0/d90/classWindowAppCallbacks_1a9a6c0b9ebc10842865de7a744c14b382">OnIdleTime</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/GDI+/GDIWindow.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/de6/classGDIWindowCallbacks_1af934cd324de4d6073908a215a51287b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnPause</definition>
+        <argsstring>()=0</argsstring>
+        <name>OnPause</name>
+        <reimplementedby refid="d0/d90/classWindowAppCallbacks_1a90ef156a59fc03cce204b5c462302624">OnPause</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/GDI+/GDIWindow.h" line="49"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/de6/classGDIWindowCallbacks_1a2468e60d6f59bf19a2bab9955b627877" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnResume</definition>
+        <argsstring>()=0</argsstring>
+        <name>OnResume</name>
+        <reimplementedby refid="d0/d90/classWindowAppCallbacks_1aacbe4b96e12e88e47d7ff8eb3bab69d2">OnResume</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/GDI+/GDIWindow.h" line="50"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/de6/classGDIWindowCallbacks_1af34e9f693d376cd1e794cbca50e1e0a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnSizeChange</definition>
+        <argsstring>(UInt iNewWidth, UInt iNewHeight)=0</argsstring>
+        <name>OnSizeChange</name>
+        <reimplementedby refid="d0/d90/classWindowAppCallbacks_1a88277a847ab00bda9e0f714961293e57">OnSizeChange</reimplementedby>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iNewWidth</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iNewHeight</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/GDI+/GDIWindow.h" line="53"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/de6/classGDIWindowCallbacks_1a4b1bd092bf3b54152e8f64ecb26ae421" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnMonitorChange</definition>
+        <argsstring>(Void *pMonitor)=0</argsstring>
+        <name>OnMonitorChange</name>
+        <reimplementedby refid="d0/d90/classWindowAppCallbacks_1a6de5d11b01ed2ca35df31c90a30816f5">OnMonitorChange</reimplementedby>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> *</type>
+          <declname>pMonitor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/GDI+/GDIWindow.h" line="54"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/de6/classGDIWindowCallbacks_1a6b39bc1861b7b1389f66cb5127a95b70" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnWindowFocus</definition>
+        <argsstring>()=0</argsstring>
+        <name>OnWindowFocus</name>
+        <reimplementedby refid="d0/d90/classWindowAppCallbacks_1a65df26653b16aee5ec132e093f3d0246">OnWindowFocus</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/GDI+/GDIWindow.h" line="57"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/de6/classGDIWindowCallbacks_1a56b878341df40d5d409946b2c27ab198" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnWindowMove</definition>
+        <argsstring>(UInt iX, UInt iY)=0</argsstring>
+        <name>OnWindowMove</name>
+        <reimplementedby refid="d0/d90/classWindowAppCallbacks_1a2e2c9f89fcf5bb139d68d63fafb59abd">OnWindowMove</reimplementedby>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iX</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iY</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/GDI+/GDIWindow.h" line="59"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/de6/classGDIWindowCallbacks_1a301c30133e5733629c71055f30512a2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnWindowResize</definition>
+        <argsstring>(UInt iWidth, UInt iHeight)=0</argsstring>
+        <name>OnWindowResize</name>
+        <reimplementedby refid="d0/d90/classWindowAppCallbacks_1a5a7f54b38bef711d940d3f394c4c58c9">OnWindowResize</reimplementedby>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iWidth</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iHeight</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/GDI+/GDIWindow.h" line="60"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/de6/classGDIWindowCallbacks_1a47d4d647e190cb933590a6e1f2f42f44" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnWindowDraw</definition>
+        <argsstring>()=0</argsstring>
+        <name>OnWindowDraw</name>
+        <reimplementedby refid="d0/d90/classWindowAppCallbacks_1ad793cadac7660ddf50006175d4360d09">OnWindowDraw</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/GDI+/GDIWindow.h" line="62"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/de6/classGDIWindowCallbacks_1a4dbb2aa76b069f64f6ad467b62294255" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>virtual Bool OnKeyPress</definition>
+        <argsstring>(KeyCode iKey)=0</argsstring>
+        <name>OnKeyPress</name>
+        <reimplementedby refid="d0/d90/classWindowAppCallbacks_1a12b9460d445a2274daca64e627267f8b">OnKeyPress</reimplementedby>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a414bae0861cbf75db6ba1081cee1e663" kindref="member">KeyCode</ref></type>
+          <declname>iKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/GDI+/GDIWindow.h" line="65"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/de6/classGDIWindowCallbacks_1af6d7ba5951e7e3cac9dcf687cbeaaad8" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>virtual Bool OnKeyRelease</definition>
+        <argsstring>(KeyCode iKey)=0</argsstring>
+        <name>OnKeyRelease</name>
+        <reimplementedby refid="d0/d90/classWindowAppCallbacks_1a729bbec979c1ccfc77e20b8fd911f640">OnKeyRelease</reimplementedby>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a414bae0861cbf75db6ba1081cee1e663" kindref="member">KeyCode</ref></type>
+          <declname>iKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/GDI+/GDIWindow.h" line="66"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/de6/classGDIWindowCallbacks_1a2b305b1acd599723433bfe5902bac76a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnMouseMove</definition>
+        <argsstring>(UInt iX, UInt iY)=0</argsstring>
+        <name>OnMouseMove</name>
+        <reimplementedby refid="d0/d90/classWindowAppCallbacks_1a4f6accbef6b455459f2994616f3396e0">OnMouseMove</reimplementedby>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iX</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iY</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/GDI+/GDIWindow.h" line="69"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/de6/classGDIWindowCallbacks_1acb7ab182a0afba37a5a7f2e23b61822d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>virtual Bool OnMousePress</definition>
+        <argsstring>(UInt iX, UInt iY, KeyCode iKey)=0</argsstring>
+        <name>OnMousePress</name>
+        <reimplementedby refid="d0/d90/classWindowAppCallbacks_1ac308ac23645f068e5cd81294eee9fb2e">OnMousePress</reimplementedby>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iX</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iY</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a414bae0861cbf75db6ba1081cee1e663" kindref="member">KeyCode</ref></type>
+          <declname>iKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/GDI+/GDIWindow.h" line="70"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/de6/classGDIWindowCallbacks_1a07f994c0909f8897e2157547e6050638" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>virtual Bool OnMouseRelease</definition>
+        <argsstring>(UInt iX, UInt iY, KeyCode iKey)=0</argsstring>
+        <name>OnMouseRelease</name>
+        <reimplementedby refid="d0/d90/classWindowAppCallbacks_1aea6799e59bcb0ca244ca4311b0e948d1">OnMouseRelease</reimplementedby>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iX</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iY</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a414bae0861cbf75db6ba1081cee1e663" kindref="member">KeyCode</ref></type>
+          <declname>iKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/GDI+/GDIWindow.h" line="71"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/de6/classGDIWindowCallbacks_1a8b01ae7309dda69629e90083f64778e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>virtual Bool OnMouseDblClick</definition>
+        <argsstring>(UInt iX, UInt iY, KeyCode iKey)=0</argsstring>
+        <name>OnMouseDblClick</name>
+        <reimplementedby refid="d0/d90/classWindowAppCallbacks_1a2b96e94f21f0d0fe5f170d4101e0b3d3">OnMouseDblClick</reimplementedby>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iX</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iY</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a414bae0861cbf75db6ba1081cee1e663" kindref="member">KeyCode</ref></type>
+          <declname>iKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/GDI+/GDIWindow.h" line="72"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/de6/classGDIWindowCallbacks_1af8da67f0505b624a41be745fa5f19a7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>virtual Bool OnMouseWheel</definition>
+        <argsstring>(UInt iX, UInt iY, Int iWheelDelta)=0</argsstring>
+        <name>OnMouseWheel</name>
+        <reimplementedby refid="d0/d90/classWindowAppCallbacks_1ae2bdce1e8cf8d37174092f8a492c07d6">OnMouseWheel</reimplementedby>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iX</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iY</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref></type>
+          <declname>iWheelDelta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/GDI+/GDIWindow.h" line="73"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3025">
+        <label>WindowAppCallbacks</label>
+        <link refid="d0/d90/classWindowAppCallbacks"/>
+        <childnode refid="3024" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3024">
+        <label>GDIWindowCallbacks</label>
+        <link refid="d6/de6/classGDIWindowCallbacks"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3026">
+        <label>GDIWindowCallbacks</label>
+        <link refid="d6/de6/classGDIWindowCallbacks"/>
+        <childnode refid="3027" relation="usage">
+          <edgelabel>m_pUserData</edgelabel>
+        </childnode>
+      </node>
+      <node id="3027">
+        <label>Void *</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/GDI+/GDIWindow.h" line="39" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/ThirdParty/GDI+/GDIWindow.h" bodystart="38" bodyend="76"/>
+    <listofallmembers>
+      <member refid="d6/de6/classGDIWindowCallbacks_1a2b0b77847ab3e5a1ca2f26f1210c9939" prot="public" virt="non-virtual"><scope>GDIWindowCallbacks</scope><name>GDIWindowCallbacks</name></member>
+      <member refid="d6/de6/classGDIWindowCallbacks_1a91f0e9a4012edb773b7a59705e4e90a0" prot="protected" virt="non-virtual"><scope>GDIWindowCallbacks</scope><name>m_pUserData</name></member>
+      <member refid="d6/de6/classGDIWindowCallbacks_1aadb9f5404a335921160e6b0ce24e9107" prot="public" virt="pure-virtual"><scope>GDIWindowCallbacks</scope><name>OnIdleTime</name></member>
+      <member refid="d6/de6/classGDIWindowCallbacks_1a4dbb2aa76b069f64f6ad467b62294255" prot="public" virt="pure-virtual"><scope>GDIWindowCallbacks</scope><name>OnKeyPress</name></member>
+      <member refid="d6/de6/classGDIWindowCallbacks_1af6d7ba5951e7e3cac9dcf687cbeaaad8" prot="public" virt="pure-virtual"><scope>GDIWindowCallbacks</scope><name>OnKeyRelease</name></member>
+      <member refid="d6/de6/classGDIWindowCallbacks_1a4b1bd092bf3b54152e8f64ecb26ae421" prot="public" virt="pure-virtual"><scope>GDIWindowCallbacks</scope><name>OnMonitorChange</name></member>
+      <member refid="d6/de6/classGDIWindowCallbacks_1a8b01ae7309dda69629e90083f64778e9" prot="public" virt="pure-virtual"><scope>GDIWindowCallbacks</scope><name>OnMouseDblClick</name></member>
+      <member refid="d6/de6/classGDIWindowCallbacks_1a2b305b1acd599723433bfe5902bac76a" prot="public" virt="pure-virtual"><scope>GDIWindowCallbacks</scope><name>OnMouseMove</name></member>
+      <member refid="d6/de6/classGDIWindowCallbacks_1acb7ab182a0afba37a5a7f2e23b61822d" prot="public" virt="pure-virtual"><scope>GDIWindowCallbacks</scope><name>OnMousePress</name></member>
+      <member refid="d6/de6/classGDIWindowCallbacks_1a07f994c0909f8897e2157547e6050638" prot="public" virt="pure-virtual"><scope>GDIWindowCallbacks</scope><name>OnMouseRelease</name></member>
+      <member refid="d6/de6/classGDIWindowCallbacks_1af8da67f0505b624a41be745fa5f19a7c" prot="public" virt="pure-virtual"><scope>GDIWindowCallbacks</scope><name>OnMouseWheel</name></member>
+      <member refid="d6/de6/classGDIWindowCallbacks_1af934cd324de4d6073908a215a51287b0" prot="public" virt="pure-virtual"><scope>GDIWindowCallbacks</scope><name>OnPause</name></member>
+      <member refid="d6/de6/classGDIWindowCallbacks_1a2468e60d6f59bf19a2bab9955b627877" prot="public" virt="pure-virtual"><scope>GDIWindowCallbacks</scope><name>OnResume</name></member>
+      <member refid="d6/de6/classGDIWindowCallbacks_1af34e9f693d376cd1e794cbca50e1e0a0" prot="public" virt="pure-virtual"><scope>GDIWindowCallbacks</scope><name>OnSizeChange</name></member>
+      <member refid="d6/de6/classGDIWindowCallbacks_1a47d4d647e190cb933590a6e1f2f42f44" prot="public" virt="pure-virtual"><scope>GDIWindowCallbacks</scope><name>OnWindowDraw</name></member>
+      <member refid="d6/de6/classGDIWindowCallbacks_1a6b39bc1861b7b1389f66cb5127a95b70" prot="public" virt="pure-virtual"><scope>GDIWindowCallbacks</scope><name>OnWindowFocus</name></member>
+      <member refid="d6/de6/classGDIWindowCallbacks_1a56b878341df40d5d409946b2c27ab198" prot="public" virt="pure-virtual"><scope>GDIWindowCallbacks</scope><name>OnWindowMove</name></member>
+      <member refid="d6/de6/classGDIWindowCallbacks_1a301c30133e5733629c71055f30512a2e" prot="public" virt="pure-virtual"><scope>GDIWindowCallbacks</scope><name>OnWindowResize</name></member>
+      <member refid="d6/de6/classGDIWindowCallbacks_1a164138c0b5d72c34a644809e30453f64" prot="public" virt="non-virtual"><scope>GDIWindowCallbacks</scope><name>SetUserData</name></member>
+      <member refid="d6/de6/classGDIWindowCallbacks_1a18f7843ac9b8735eb36a5c888c007afc" prot="public" virt="virtual"><scope>GDIWindowCallbacks</scope><name>~GDIWindowCallbacks</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

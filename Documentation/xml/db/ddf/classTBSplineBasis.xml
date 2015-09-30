@@ -1,0 +1,562 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="db/ddf/classTBSplineBasis" kind="class" prot="public">
+    <compoundname>TBSplineBasis</compoundname>
+    <includes refid="de/ddd/BSplineBasis_8h" local="no">BSplineBasis.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename Real</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="db/ddf/classTBSplineBasis_1ae6297dfd89746a092179e7b7a63ea5bf" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iControlPointCount</definition>
+        <argsstring></argsstring>
+        <name>m_iControlPointCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" line="76" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/ddf/classTBSplineBasis_1ad29d8d4caa1fa3903cad221ee7072d4f" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iDegree</definition>
+        <argsstring></argsstring>
+        <name>m_iDegree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" line="77" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/ddf/classTBSplineBasis_1abf31b70c4c642d7a9f1bad2b5f219ad8" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iBasisPitch</definition>
+        <argsstring></argsstring>
+        <name>m_iBasisPitch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" line="78" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/ddf/classTBSplineBasis_1ae50fc24cfc36cc158ec572d40506f9dd" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iBasisDim</definition>
+        <argsstring></argsstring>
+        <name>m_iBasisDim</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" line="79" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/ddf/classTBSplineBasis_1ac5a4e4c60b93e16b8e152b2033b8265a" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool m_bUniform</definition>
+        <argsstring></argsstring>
+        <name>m_bUniform</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" line="81" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/ddf/classTBSplineBasis_1ab65abbb6e8df800227dd8e81f214ec25" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool m_bPeriodic</definition>
+        <argsstring></argsstring>
+        <name>m_bPeriodic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" line="81" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/ddf/classTBSplineBasis_1aabb75dde0d00a8fd3ddce0d54bd9d7f5" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iKnotCount</definition>
+        <argsstring></argsstring>
+        <name>m_iKnotCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" line="84" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/ddf/classTBSplineBasis_1adc927c1bb8ebc20207c5d4c42c2efc07" prot="private" static="no" mutable="no">
+        <type>Real *</type>
+        <definition>Real* m_vKnots</definition>
+        <argsstring></argsstring>
+        <name>m_vKnots</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" line="85" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/ddf/classTBSplineBasis_1a4904a98e5a478a66d866c81472c58cf4" prot="private" static="no" mutable="no">
+        <type>Real *</type>
+        <definition>Real* m_arrN</definition>
+        <argsstring></argsstring>
+        <name>m_arrN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" line="88" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/ddf/classTBSplineBasis_1a972a258aa98e8994af4bacd2caf83662" prot="private" static="no" mutable="no">
+        <type>Real *</type>
+        <definition>Real* m_arrNdT</definition>
+        <argsstring></argsstring>
+        <name>m_arrNdT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" line="89" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/ddf/classTBSplineBasis_1ae38fb60418e13e57c10977c5594ae11f" prot="private" static="no" mutable="no">
+        <type>Real *</type>
+        <definition>Real* m_arrNdT2</definition>
+        <argsstring></argsstring>
+        <name>m_arrNdT2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" line="90" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/ddf/classTBSplineBasis_1a59481d7e54021a4928e283bb295bb0ba" prot="private" static="no" mutable="no">
+        <type>Real *</type>
+        <definition>Real* m_arrNdT3</definition>
+        <argsstring></argsstring>
+        <name>m_arrNdT3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" line="91" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="db/ddf/classTBSplineBasis_1aacbfcee67249f66d76d96db85dea003d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TBSplineBasis</definition>
+        <argsstring>()</argsstring>
+        <name>TBSplineBasis</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" line="40"/>
+      </memberdef>
+      <memberdef kind="function" id="db/ddf/classTBSplineBasis_1a51d1bb8397577f64db4acb6eef5d97d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~TBSplineBasis</definition>
+        <argsstring>()</argsstring>
+        <name>~TBSplineBasis</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" line="41"/>
+      </memberdef>
+      <memberdef kind="function" id="db/ddf/classTBSplineBasis_1a38f7f7f63ae733fdd749ad41ef0e0a46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void InitUniform</definition>
+        <argsstring>(UInt iControlPointCount, UInt iDegree, Bool bPeriodic)</argsstring>
+        <name>InitUniform</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iControlPointCount</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDegree</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+          <declname>bPeriodic</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" line="44"/>
+      </memberdef>
+      <memberdef kind="function" id="db/ddf/classTBSplineBasis_1a3f40464413f4db091f626bdb4792f390" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void InitNonUniform</definition>
+        <argsstring>(UInt iControlPointCount, UInt iDegree, const Real *arrKnotVector)</argsstring>
+        <name>InitNonUniform</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iControlPointCount</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDegree</declname>
+        </param>
+        <param>
+          <type>const Real *</type>
+          <declname>arrKnotVector</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="db/ddf/classTBSplineBasis_1a514b11a360bc71df762a4e13e9531aab" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetControlPointCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetControlPointCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" line="50"/>
+      </memberdef>
+      <memberdef kind="function" id="db/ddf/classTBSplineBasis_1a9e26d80c88fe73bba5272cab6f54058d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetDegree</definition>
+        <argsstring>() const </argsstring>
+        <name>GetDegree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="db/ddf/classTBSplineBasis_1ab1e37cf7448d165effe897a40f6ade7e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool IsUniform</definition>
+        <argsstring>() const </argsstring>
+        <name>IsUniform</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" line="53"/>
+      </memberdef>
+      <memberdef kind="function" id="db/ddf/classTBSplineBasis_1abd05c2764f353b50a0600ae807676174" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool IsPeriodic</definition>
+        <argsstring>() const </argsstring>
+        <name>IsPeriodic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" line="54"/>
+      </memberdef>
+      <memberdef kind="function" id="db/ddf/classTBSplineBasis_1a8c5d90d235deacd39b021a2adade17f4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetKnotCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetKnotCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" line="57"/>
+      </memberdef>
+      <memberdef kind="function" id="db/ddf/classTBSplineBasis_1ab1b823e0bd4d3a66112cfb071764175a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real GetKnot</definition>
+        <argsstring>(UInt iKnot) const </argsstring>
+        <name>GetKnot</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iKnot</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" line="58"/>
+      </memberdef>
+      <memberdef kind="function" id="db/ddf/classTBSplineBasis_1a4beafa2aacea6baea7b5f07b8aaf21bb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetKnot</definition>
+        <argsstring>(UInt iKnot, Real fKnotValue) const </argsstring>
+        <name>SetKnot</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iKnot</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fKnotValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" line="59"/>
+      </memberdef>
+      <memberdef kind="function" id="db/ddf/classTBSplineBasis_1a876ca7eaa5313e2f4f402aef109e892b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real N</definition>
+        <argsstring>(UInt i) const </argsstring>
+        <name>N</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" line="62"/>
+      </memberdef>
+      <memberdef kind="function" id="db/ddf/classTBSplineBasis_1a672d98f3276ad96ff94a29e35c5b7f3a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real NdT</definition>
+        <argsstring>(UInt i) const </argsstring>
+        <name>NdT</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" line="63"/>
+      </memberdef>
+      <memberdef kind="function" id="db/ddf/classTBSplineBasis_1acecd2a6355b92d626e78e0ac61cc0ffd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real NdT2</definition>
+        <argsstring>(UInt i) const </argsstring>
+        <name>NdT2</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" line="64"/>
+      </memberdef>
+      <memberdef kind="function" id="db/ddf/classTBSplineBasis_1abf8c32dfde7a6b32d75cdaca9a31f864" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real NdT3</definition>
+        <argsstring>(UInt i) const </argsstring>
+        <name>NdT3</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" line="65"/>
+      </memberdef>
+      <memberdef kind="function" id="db/ddf/classTBSplineBasis_1a16620e520860e292a3d2b67b9c3b613d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Evaluate</definition>
+        <argsstring>(Real fT, UInt iOrder, UInt &amp;outMinIndex, UInt &amp;outMaxIndex) const </argsstring>
+        <name>Evaluate</name>
+        <param>
+          <type>Real</type>
+          <declname>fT</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iOrder</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref> &amp;</type>
+          <declname>outMinIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref> &amp;</type>
+          <declname>outMaxIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" line="68"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="db/ddf/classTBSplineBasis_1aa3bcdc211723f02a41f16b6ed9356595" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _Initialize</definition>
+        <argsstring>(UInt iControlPointCount, UInt iDegree, Bool bPeriodic)</argsstring>
+        <name>_Initialize</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iControlPointCount</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDegree</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+          <declname>bPeriodic</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" line="72"/>
+      </memberdef>
+      <memberdef kind="function" id="db/ddf/classTBSplineBasis_1a1b651d34ad5faba147b98d9cfb7649e8" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt _GetKnot</definition>
+        <argsstring>(Real &amp;fT) const </argsstring>
+        <name>_GetKnot</name>
+        <param>
+          <type>Real &amp;</type>
+          <declname>fT</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" line="73"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="12252">
+        <label>Real</label>
+      </node>
+      <node id="12250">
+        <label>int</label>
+      </node>
+      <node id="12251">
+        <label>bool</label>
+      </node>
+      <node id="12249">
+        <label>TBSplineBasis&lt; Real &gt;</label>
+        <link refid="db/ddf/classTBSplineBasis"/>
+        <childnode refid="12250" relation="usage">
+          <edgelabel>m_iBasisDim</edgelabel>
+          <edgelabel>m_iDegree</edgelabel>
+          <edgelabel>m_iKnotCount</edgelabel>
+          <edgelabel>m_iControlPointCount</edgelabel>
+          <edgelabel>m_iBasisPitch</edgelabel>
+        </childnode>
+        <childnode refid="12251" relation="usage">
+          <edgelabel>m_bPeriodic</edgelabel>
+          <edgelabel>m_bUniform</edgelabel>
+        </childnode>
+        <childnode refid="12252" relation="usage">
+          <edgelabel>m_arrN</edgelabel>
+          <edgelabel>m_vKnots</edgelabel>
+          <edgelabel>m_arrNdT2</edgelabel>
+          <edgelabel>m_arrNdT</edgelabel>
+          <edgelabel>m_arrNdT3</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" line="38" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Analysis/FunctionBasis/BSplineBasis.h" bodystart="37" bodyend="92"/>
+    <listofallmembers>
+      <member refid="db/ddf/classTBSplineBasis_1a1b651d34ad5faba147b98d9cfb7649e8" prot="private" virt="non-virtual"><scope>TBSplineBasis</scope><name>_GetKnot</name></member>
+      <member refid="db/ddf/classTBSplineBasis_1aa3bcdc211723f02a41f16b6ed9356595" prot="private" virt="non-virtual"><scope>TBSplineBasis</scope><name>_Initialize</name></member>
+      <member refid="db/ddf/classTBSplineBasis_1a16620e520860e292a3d2b67b9c3b613d" prot="public" virt="non-virtual"><scope>TBSplineBasis</scope><name>Evaluate</name></member>
+      <member refid="db/ddf/classTBSplineBasis_1a514b11a360bc71df762a4e13e9531aab" prot="public" virt="non-virtual"><scope>TBSplineBasis</scope><name>GetControlPointCount</name></member>
+      <member refid="db/ddf/classTBSplineBasis_1a9e26d80c88fe73bba5272cab6f54058d" prot="public" virt="non-virtual"><scope>TBSplineBasis</scope><name>GetDegree</name></member>
+      <member refid="db/ddf/classTBSplineBasis_1ab1b823e0bd4d3a66112cfb071764175a" prot="public" virt="non-virtual"><scope>TBSplineBasis</scope><name>GetKnot</name></member>
+      <member refid="db/ddf/classTBSplineBasis_1a8c5d90d235deacd39b021a2adade17f4" prot="public" virt="non-virtual"><scope>TBSplineBasis</scope><name>GetKnotCount</name></member>
+      <member refid="db/ddf/classTBSplineBasis_1a3f40464413f4db091f626bdb4792f390" prot="public" virt="non-virtual"><scope>TBSplineBasis</scope><name>InitNonUniform</name></member>
+      <member refid="db/ddf/classTBSplineBasis_1a38f7f7f63ae733fdd749ad41ef0e0a46" prot="public" virt="non-virtual"><scope>TBSplineBasis</scope><name>InitUniform</name></member>
+      <member refid="db/ddf/classTBSplineBasis_1abd05c2764f353b50a0600ae807676174" prot="public" virt="non-virtual"><scope>TBSplineBasis</scope><name>IsPeriodic</name></member>
+      <member refid="db/ddf/classTBSplineBasis_1ab1e37cf7448d165effe897a40f6ade7e" prot="public" virt="non-virtual"><scope>TBSplineBasis</scope><name>IsUniform</name></member>
+      <member refid="db/ddf/classTBSplineBasis_1a4904a98e5a478a66d866c81472c58cf4" prot="private" virt="non-virtual"><scope>TBSplineBasis</scope><name>m_arrN</name></member>
+      <member refid="db/ddf/classTBSplineBasis_1a972a258aa98e8994af4bacd2caf83662" prot="private" virt="non-virtual"><scope>TBSplineBasis</scope><name>m_arrNdT</name></member>
+      <member refid="db/ddf/classTBSplineBasis_1ae38fb60418e13e57c10977c5594ae11f" prot="private" virt="non-virtual"><scope>TBSplineBasis</scope><name>m_arrNdT2</name></member>
+      <member refid="db/ddf/classTBSplineBasis_1a59481d7e54021a4928e283bb295bb0ba" prot="private" virt="non-virtual"><scope>TBSplineBasis</scope><name>m_arrNdT3</name></member>
+      <member refid="db/ddf/classTBSplineBasis_1ab65abbb6e8df800227dd8e81f214ec25" prot="private" virt="non-virtual"><scope>TBSplineBasis</scope><name>m_bPeriodic</name></member>
+      <member refid="db/ddf/classTBSplineBasis_1ac5a4e4c60b93e16b8e152b2033b8265a" prot="private" virt="non-virtual"><scope>TBSplineBasis</scope><name>m_bUniform</name></member>
+      <member refid="db/ddf/classTBSplineBasis_1ae50fc24cfc36cc158ec572d40506f9dd" prot="private" virt="non-virtual"><scope>TBSplineBasis</scope><name>m_iBasisDim</name></member>
+      <member refid="db/ddf/classTBSplineBasis_1abf31b70c4c642d7a9f1bad2b5f219ad8" prot="private" virt="non-virtual"><scope>TBSplineBasis</scope><name>m_iBasisPitch</name></member>
+      <member refid="db/ddf/classTBSplineBasis_1ae6297dfd89746a092179e7b7a63ea5bf" prot="private" virt="non-virtual"><scope>TBSplineBasis</scope><name>m_iControlPointCount</name></member>
+      <member refid="db/ddf/classTBSplineBasis_1ad29d8d4caa1fa3903cad221ee7072d4f" prot="private" virt="non-virtual"><scope>TBSplineBasis</scope><name>m_iDegree</name></member>
+      <member refid="db/ddf/classTBSplineBasis_1aabb75dde0d00a8fd3ddce0d54bd9d7f5" prot="private" virt="non-virtual"><scope>TBSplineBasis</scope><name>m_iKnotCount</name></member>
+      <member refid="db/ddf/classTBSplineBasis_1adc927c1bb8ebc20207c5d4c42c2efc07" prot="private" virt="non-virtual"><scope>TBSplineBasis</scope><name>m_vKnots</name></member>
+      <member refid="db/ddf/classTBSplineBasis_1a876ca7eaa5313e2f4f402aef109e892b" prot="public" virt="non-virtual"><scope>TBSplineBasis</scope><name>N</name></member>
+      <member refid="db/ddf/classTBSplineBasis_1a672d98f3276ad96ff94a29e35c5b7f3a" prot="public" virt="non-virtual"><scope>TBSplineBasis</scope><name>NdT</name></member>
+      <member refid="db/ddf/classTBSplineBasis_1acecd2a6355b92d626e78e0ac61cc0ffd" prot="public" virt="non-virtual"><scope>TBSplineBasis</scope><name>NdT2</name></member>
+      <member refid="db/ddf/classTBSplineBasis_1abf8c32dfde7a6b32d75cdaca9a31f864" prot="public" virt="non-virtual"><scope>TBSplineBasis</scope><name>NdT3</name></member>
+      <member refid="db/ddf/classTBSplineBasis_1a4beafa2aacea6baea7b5f07b8aaf21bb" prot="public" virt="non-virtual"><scope>TBSplineBasis</scope><name>SetKnot</name></member>
+      <member refid="db/ddf/classTBSplineBasis_1aacbfcee67249f66d76d96db85dea003d" prot="public" virt="non-virtual"><scope>TBSplineBasis</scope><name>TBSplineBasis</name></member>
+      <member refid="db/ddf/classTBSplineBasis_1a51d1bb8397577f64db4acb6eef5d97d8" prot="public" virt="non-virtual"><scope>TBSplineBasis</scope><name>~TBSplineBasis</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

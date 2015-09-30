@@ -1,0 +1,487 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d4/dce/classWorldSwitchNode" kind="class" prot="public">
+    <compoundname>WorldSwitchNode</compoundname>
+    <basecompoundref refid="d5/d11/classWorldNode" prot="public" virt="non-virtual">WorldNode</basecompoundref>
+    <derivedcompoundref refid="d4/d4a/classWorldDLODNode" prot="public" virt="non-virtual">WorldDLODNode</derivedcompoundref>
+    <includes refid="de/d82/WorldSwitchNode_8h" local="no">WorldSwitchNode.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d4/dce/classWorldSwitchNode_1a8781ad6dc8d7ccdbf6c4ba0854d9fdab" prot="private" static="no" mutable="no">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+        <definition>const GChar* m_strActiveChild</definition>
+        <argsstring></argsstring>
+        <name>m_strActiveChild</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/Container/WorldSwitchNode.h" line="53" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/Container/WorldSwitchNode.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d4/dce/classWorldSwitchNode_1a6603c80129463b3e391cafccaa452a4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>WorldSwitchNode</definition>
+        <argsstring>(const GChar *strName=NULL)</argsstring>
+        <name>WorldSwitchNode</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strName</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/Container/WorldSwitchNode.h" line="37"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dce/classWorldSwitchNode_1a9241797ee85b21fdd412a0b7af043836" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~WorldSwitchNode</definition>
+        <argsstring>()</argsstring>
+        <name>~WorldSwitchNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/Container/WorldSwitchNode.h" line="38"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dce/classWorldSwitchNode_1a8f7b7d13e159dfc832d9fbaba2db90b7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="d6/d3d/WorldBaseNode_8h_1a6e6277cebe8ff57d01327774302dbf13" kindref="member">WorldNodeType</ref></type>
+        <definition>virtual WorldNodeType GetType</definition>
+        <argsstring>() const </argsstring>
+        <name>GetType</name>
+        <reimplements refid="d5/d11/classWorldNode_1a8f7b7d13e159dfc832d9fbaba2db90b7">GetType</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/Container/WorldSwitchNode.h" line="41"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dce/classWorldSwitchNode_1a5a65acd88a6cb0ab955e6b38130bc847" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+        <definition>const GChar* GetActiveChild</definition>
+        <argsstring>() const </argsstring>
+        <name>GetActiveChild</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/Container/WorldSwitchNode.h" line="44"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dce/classWorldSwitchNode_1ac23fbaaa8631187b4b0c4621b4d00db0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetActiveChild</definition>
+        <argsstring>(const GChar *strName)</argsstring>
+        <name>SetActiveChild</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/Container/WorldSwitchNode.h" line="45"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dce/classWorldSwitchNode_1a03c63264f75427b0afe0fab9380aa68f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Disable</definition>
+        <argsstring>()</argsstring>
+        <name>Disable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/Container/WorldSwitchNode.h" line="46"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="d4/dce/classWorldSwitchNode_1a6270828136c1e97ca6a95d900930c0f8" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void _OnVisibleGroup</definition>
+        <argsstring>(WorldCuller &amp;wCuller, Bool bNoCull)</argsstring>
+        <name>_OnVisibleGroup</name>
+        <reimplements refid="d5/d11/classWorldNode_1a6270828136c1e97ca6a95d900930c0f8">_OnVisibleGroup</reimplements>
+        <reimplementedby refid="d4/d4a/classWorldDLODNode_1a6270828136c1e97ca6a95d900930c0f8">_OnVisibleGroup</reimplementedby>
+        <param>
+          <type><ref refid="db/d43/classWorldCuller" kindref="compound">WorldCuller</ref> &amp;</type>
+          <declname>wCuller</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+          <declname>bNoCull</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/Container/WorldSwitchNode.h" line="50"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="15022">
+        <label>WorldSwitchNode</label>
+        <link refid="d4/dce/classWorldSwitchNode"/>
+        <childnode refid="15023" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15023">
+        <label>WorldNode</label>
+        <link refid="d5/d11/classWorldNode"/>
+        <childnode refid="15024" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15025">
+        <label>WorldDLODNode</label>
+        <link refid="d4/d4a/classWorldDLODNode"/>
+        <childnode refid="15022" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15024">
+        <label>WorldBaseNode</label>
+        <link refid="de/d40/classWorldBaseNode"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="15055">
+        <label>const GChar *</label>
+      </node>
+      <node id="15038">
+        <label>WorldCulling</label>
+      </node>
+      <node id="15026">
+        <label>WorldSwitchNode</label>
+        <link refid="d4/dce/classWorldSwitchNode"/>
+        <childnode refid="15027" relation="public-inheritance">
+        </childnode>
+        <childnode refid="15055" relation="usage">
+          <edgelabel>m_strActiveChild</edgelabel>
+        </childnode>
+      </node>
+      <node id="15049">
+        <label>T</label>
+      </node>
+      <node id="15048">
+        <label>RBTreeColor</label>
+      </node>
+      <node id="15046">
+        <label>RedBlackNode&lt; T &gt;</label>
+        <link refid="da/d9d/structRedBlackNode"/>
+        <childnode refid="15047" relation="usage">
+          <edgelabel>pPrev</edgelabel>
+          <edgelabel>pNext</edgelabel>
+          <edgelabel>pParent</edgelabel>
+          <edgelabel>pChild</edgelabel>
+        </childnode>
+        <childnode refid="15048" relation="usage">
+          <edgelabel>iColor</edgelabel>
+        </childnode>
+        <childnode refid="15049" relation="usage">
+          <edgelabel>Item</edgelabel>
+        </childnode>
+      </node>
+      <node id="15045">
+        <label>RedBlackTree&lt; TreeMapNode &gt;</label>
+        <link refid="d9/d5d/classRedBlackTree"/>
+        <childnode refid="15044" relation="public-inheritance">
+        </childnode>
+        <childnode refid="15046" relation="usage">
+          <edgelabel>m_pEnd</edgelabel>
+          <edgelabel>m_pHead</edgelabel>
+          <edgelabel>m_pRoot</edgelabel>
+          <edgelabel>sm_SentinelNode</edgelabel>
+          <edgelabel>RBTREE_LEAF</edgelabel>
+        </childnode>
+        <childnode refid="15037" relation="usage">
+          <edgelabel>m_iNodeCount</edgelabel>
+        </childnode>
+        <childnode refid="15050" relation="usage">
+          <edgelabel>m_pfCompare</edgelabel>
+        </childnode>
+        <childnode refid="15052" relation="usage">
+          <edgelabel>m_pUserData</edgelabel>
+        </childnode>
+      </node>
+      <node id="15027">
+        <label>WorldNode</label>
+        <link refid="d5/d11/classWorldNode"/>
+        <childnode refid="15028" relation="public-inheritance">
+        </childnode>
+        <childnode refid="15043" relation="usage">
+          <edgelabel>m_mapChildren</edgelabel>
+        </childnode>
+        <childnode refid="15054" relation="usage">
+          <edgelabel>m_itEnumerate</edgelabel>
+        </childnode>
+      </node>
+      <node id="15042">
+        <label>TMatrix3&lt; Scalar &gt;</label>
+        <link refid="d7/dee/classTMatrix3"/>
+        <childnode refid="15042" relation="usage">
+          <edgelabel>Identity</edgelabel>
+          <edgelabel>Null</edgelabel>
+        </childnode>
+        <childnode refid="15041" relation="usage">
+          <edgelabel>ONE</edgelabel>
+          <edgelabel>m20</edgelabel>
+          <edgelabel>m21</edgelabel>
+          <edgelabel>m10</edgelabel>
+          <edgelabel>m22</edgelabel>
+          <edgelabel>m11</edgelabel>
+          <edgelabel>m00</edgelabel>
+          <edgelabel>TWO</edgelabel>
+          <edgelabel>m12</edgelabel>
+          <edgelabel>m01</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="15041">
+        <label>float</label>
+      </node>
+      <node id="15040">
+        <label>TMatrix4&lt; Scalar &gt;</label>
+        <link refid="d5/d09/classTMatrix4"/>
+        <childnode refid="15040" relation="usage">
+          <edgelabel>Identity</edgelabel>
+          <edgelabel>Null</edgelabel>
+        </childnode>
+        <childnode refid="15041" relation="usage">
+          <edgelabel>ONE</edgelabel>
+          <edgelabel>m30</edgelabel>
+          <edgelabel>m31</edgelabel>
+          <edgelabel>m20</edgelabel>
+          <edgelabel>m32</edgelabel>
+          <edgelabel>m21</edgelabel>
+          <edgelabel>m10</edgelabel>
+          <edgelabel>m33</edgelabel>
+          <edgelabel>m22</edgelabel>
+          <edgelabel>m11</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="15036">
+        <label>ULong</label>
+      </node>
+      <node id="15043">
+        <label>TreeMap&lt; const GChar *, WorldBaseNode * &gt;</label>
+        <link refid="d0/da4/classTreeMap"/>
+        <childnode refid="15044" relation="public-inheritance">
+        </childnode>
+        <childnode refid="15045" relation="usage">
+          <edgelabel>m_rbTreeMap</edgelabel>
+        </childnode>
+        <childnode refid="15053" relation="usage">
+          <edgelabel>m_pfCompare</edgelabel>
+        </childnode>
+        <childnode refid="15052" relation="usage">
+          <edgelabel>m_pUserData</edgelabel>
+        </childnode>
+      </node>
+      <node id="15037">
+        <label>unsigned int</label>
+      </node>
+      <node id="15047">
+        <label>struct _red_black_node *</label>
+      </node>
+      <node id="15053">
+        <label>int</label>
+      </node>
+      <node id="15029">
+        <label>TBVAABox&lt; Scalar &gt;</label>
+        <link refid="d9/d90/classTBVAABox"/>
+        <childnode refid="15030" relation="public-inheritance">
+        </childnode>
+        <childnode refid="15031" relation="usage">
+          <edgelabel>m_vExtents</edgelabel>
+        </childnode>
+        <childnode refid="15033" relation="usage">
+          <edgelabel>m_vCenter</edgelabel>
+        </childnode>
+      </node>
+      <node id="15032">
+        <label>Scalar</label>
+      </node>
+      <node id="15028">
+        <label>WorldBaseNode</label>
+        <link refid="de/d40/classWorldBaseNode"/>
+        <childnode refid="15029" relation="usage">
+          <edgelabel>WorldBV</edgelabel>
+        </childnode>
+        <childnode refid="15034" relation="usage">
+          <edgelabel>m_strName</edgelabel>
+        </childnode>
+        <childnode refid="15035" relation="usage">
+          <edgelabel>UpdateWorldTransform</edgelabel>
+          <edgelabel>UpdateWorldBV</edgelabel>
+        </childnode>
+        <childnode refid="15036" relation="usage">
+          <edgelabel>m_dwDebugFlags</edgelabel>
+        </childnode>
+        <childnode refid="15037" relation="usage">
+          <edgelabel>sm_iNoNameCount</edgelabel>
+        </childnode>
+        <childnode refid="15038" relation="usage">
+          <edgelabel>CullMode</edgelabel>
+        </childnode>
+        <childnode refid="15028" relation="usage">
+          <edgelabel>m_pParent</edgelabel>
+        </childnode>
+        <childnode refid="15039" relation="usage">
+          <edgelabel>WorldTransform</edgelabel>
+        </childnode>
+      </node>
+      <node id="15039">
+        <label>TTransform3&lt; Scalar &gt;</label>
+        <link refid="d0/d75/classTTransform3"/>
+        <childnode refid="15031" relation="usage">
+          <edgelabel>m_vScale</edgelabel>
+          <edgelabel>m_vInvScale</edgelabel>
+          <edgelabel>m_vInvTranslate</edgelabel>
+          <edgelabel>m_vTranslate</edgelabel>
+        </childnode>
+        <childnode refid="15040" relation="usage">
+          <edgelabel>m_matHMatrix</edgelabel>
+        </childnode>
+        <childnode refid="15042" relation="usage">
+          <edgelabel>m_matInvTransform</edgelabel>
+          <edgelabel>m_matTransform</edgelabel>
+        </childnode>
+        <childnode refid="15035" relation="usage">
+          <edgelabel>m_bIsUniformScale</edgelabel>
+          <edgelabel>m_bIsIdentity</edgelabel>
+          <edgelabel>m_bUpdateInverse</edgelabel>
+          <edgelabel>m_bIsRotScale</edgelabel>
+        </childnode>
+        <childnode refid="15039" relation="usage">
+          <edgelabel>Identity</edgelabel>
+        </childnode>
+      </node>
+      <node id="15031">
+        <label>TVector3&lt; Scalar &gt;</label>
+        <link refid="de/d40/classTVector3"/>
+        <childnode refid="15031" relation="usage">
+          <edgelabel>Null</edgelabel>
+          <edgelabel>eI</edgelabel>
+          <edgelabel>eJ</edgelabel>
+          <edgelabel>eK</edgelabel>
+        </childnode>
+        <childnode refid="15032" relation="usage">
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+          <edgelabel>Z</edgelabel>
+        </childnode>
+      </node>
+      <node id="15033">
+        <label>TVertex3&lt; Scalar &gt;</label>
+        <link refid="dc/d75/classTVertex3"/>
+        <childnode refid="15032" relation="usage">
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+          <edgelabel>Z</edgelabel>
+        </childnode>
+        <childnode refid="15033" relation="usage">
+          <edgelabel>Null</edgelabel>
+        </childnode>
+      </node>
+      <node id="15054">
+        <label>Iterator</label>
+      </node>
+      <node id="15050">
+        <label>TreeMapNode&lt; Key, T &gt;</label>
+        <link refid="db/dd2/structTreeMapNode"/>
+        <childnode refid="15051" relation="usage">
+          <edgelabel>nodeKey</edgelabel>
+        </childnode>
+        <childnode refid="15049" relation="usage">
+          <edgelabel>nodeItem</edgelabel>
+        </childnode>
+      </node>
+      <node id="15051">
+        <label>Key</label>
+      </node>
+      <node id="15035">
+        <label>bool</label>
+      </node>
+      <node id="15030">
+        <label>TBoundingVolume&lt; Scalar &gt;</label>
+        <link refid="d6/d19/classTBoundingVolume"/>
+      </node>
+      <node id="15034">
+        <label>char</label>
+      </node>
+      <node id="15052">
+        <label>Void *</label>
+      </node>
+      <node id="15044">
+        <label>Datastruct</label>
+        <link refid="dc/d51/classDatastruct"/>
+        <childnode refid="15034" relation="usage">
+          <edgelabel>m_strAllocatorName</edgelabel>
+        </childnode>
+        <childnode refid="15037" relation="usage">
+          <edgelabel>m_idMemoryContext</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/Container/WorldSwitchNode.h" line="35" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/World/Container/WorldSwitchNode.h" bodystart="34" bodyend="54"/>
+    <listofallmembers>
+      <member refid="d4/dce/classWorldSwitchNode_1a6270828136c1e97ca6a95d900930c0f8" prot="protected" virt="virtual"><scope>WorldSwitchNode</scope><name>_OnVisibleGroup</name></member>
+      <member refid="de/d40/classWorldBaseNode_1a73b811fbdcb8d71730b29822a7fabd21" prot="protected" virt="non-virtual"><scope>WorldSwitchNode</scope><name>_QueryVisibleGroup</name></member>
+      <member refid="d5/d11/classWorldNode_1aeb647132fe94ad3843d4d9351a68279c" prot="protected" virt="virtual"><scope>WorldSwitchNode</scope><name>_UpdateWorldBV</name></member>
+      <member refid="d5/d11/classWorldNode_1a521e32108967f9457587b337df6616f8" prot="protected" virt="virtual"><scope>WorldSwitchNode</scope><name>_UpdateWorldTransform</name></member>
+      <member refid="d5/d11/classWorldNode_1aa52191c7fd51a97251f5695c501b87be" prot="public" virt="non-virtual"><scope>WorldSwitchNode</scope><name>AddChild</name></member>
+      <member refid="de/d40/classWorldBaseNode_1ac2da504152770a52758e85ffd52d3c28" prot="public" virt="non-virtual"><scope>WorldSwitchNode</scope><name>CullMode</name></member>
+      <member refid="d4/dce/classWorldSwitchNode_1a03c63264f75427b0afe0fab9380aa68f" prot="public" virt="non-virtual"><scope>WorldSwitchNode</scope><name>Disable</name></member>
+      <member refid="d5/d11/classWorldNode_1a0d04e96dad8301c4b1168ea62404cadc" prot="public" virt="non-virtual"><scope>WorldSwitchNode</scope><name>EnumChildren</name></member>
+      <member refid="d5/d11/classWorldNode_1a0bf5a59513ac9e65b2df233c113f8c30" prot="public" virt="non-virtual"><scope>WorldSwitchNode</scope><name>EnumNextChild</name></member>
+      <member refid="d4/dce/classWorldSwitchNode_1a5a65acd88a6cb0ab955e6b38130bc847" prot="public" virt="non-virtual"><scope>WorldSwitchNode</scope><name>GetActiveChild</name></member>
+      <member refid="d5/d11/classWorldNode_1a759322982366517ddfe4f162f6851c26" prot="public" virt="non-virtual"><scope>WorldSwitchNode</scope><name>GetChild</name></member>
+      <member refid="d5/d11/classWorldNode_1ab6b5557368bb70a6a76b14f377d74923" prot="public" virt="non-virtual"><scope>WorldSwitchNode</scope><name>GetChildCount</name></member>
+      <member refid="de/d40/classWorldBaseNode_1a8db69c2fadca821716052090e2adfe7b" prot="public" virt="non-virtual"><scope>WorldSwitchNode</scope><name>GetDebugFlags</name></member>
+      <member refid="de/d40/classWorldBaseNode_1acb24949ad36a8ed7b0008515d78ac5ae" prot="public" virt="non-virtual"><scope>WorldSwitchNode</scope><name>GetName</name></member>
+      <member refid="de/d40/classWorldBaseNode_1afbe429daa4f432beea27ff544193c80b" prot="public" virt="non-virtual"><scope>WorldSwitchNode</scope><name>GetParent</name></member>
+      <member refid="d4/dce/classWorldSwitchNode_1a8f7b7d13e159dfc832d9fbaba2db90b7" prot="public" virt="virtual"><scope>WorldSwitchNode</scope><name>GetType</name></member>
+      <member refid="d5/d11/classWorldNode_1a0a353d7e0cb82ca24200846a623136a8" prot="public" virt="non-virtual"><scope>WorldSwitchNode</scope><name>HasChild</name></member>
+      <member refid="de/d40/classWorldBaseNode_1acd551a6aca3b3743b3f0031ab33d7c38" prot="public" virt="non-virtual"><scope>WorldSwitchNode</scope><name>IsLeaf</name></member>
+      <member refid="de/d40/classWorldBaseNode_1a9497472535cc78941df825084781b23e" prot="public" virt="non-virtual"><scope>WorldSwitchNode</scope><name>IsNode</name></member>
+      <member refid="de/d40/classWorldBaseNode_1a11934f240407a72eda2c48325a9fc50f" prot="protected" virt="non-virtual"><scope>WorldSwitchNode</scope><name>m_pParent</name></member>
+      <member refid="d4/dce/classWorldSwitchNode_1a8781ad6dc8d7ccdbf6c4ba0854d9fdab" prot="private" virt="non-virtual"><scope>WorldSwitchNode</scope><name>m_strActiveChild</name></member>
+      <member refid="d5/d11/classWorldNode_1af3a788a877259d4463ac9f8db2cbbe73" prot="public" virt="non-virtual"><scope>WorldSwitchNode</scope><name>RemoveAllChildren</name></member>
+      <member refid="d5/d11/classWorldNode_1ace2671efdd9ae08c6f5992078533607f" prot="public" virt="non-virtual"><scope>WorldSwitchNode</scope><name>RemoveChild</name></member>
+      <member refid="d4/dce/classWorldSwitchNode_1ac23fbaaa8631187b4b0c4621b4d00db0" prot="public" virt="non-virtual"><scope>WorldSwitchNode</scope><name>SetActiveChild</name></member>
+      <member refid="de/d40/classWorldBaseNode_1ae9db4009e11bb8f9aded69be4a2b3352" prot="public" virt="non-virtual"><scope>WorldSwitchNode</scope><name>SetDebugFlags</name></member>
+      <member refid="de/d40/classWorldBaseNode_1a799dad89a91bb18111e77c1a65e650a3" prot="public" virt="non-virtual"><scope>WorldSwitchNode</scope><name>Update</name></member>
+      <member refid="de/d40/classWorldBaseNode_1ac9aaf65c7e38c8051a15c6b2f51ab8eb" prot="public" virt="non-virtual"><scope>WorldSwitchNode</scope><name>UpdateWorldBV</name></member>
+      <member refid="de/d40/classWorldBaseNode_1acd4c2683cf53d391727750a9adf149ed" prot="public" virt="non-virtual"><scope>WorldSwitchNode</scope><name>UpdateWorldTransform</name></member>
+      <member refid="de/d40/classWorldBaseNode_1ab1e3e2cd3df18d07511c206ad6f04116" prot="public" virt="non-virtual"><scope>WorldSwitchNode</scope><name>WorldBaseNode</name></member>
+      <member refid="de/d40/classWorldBaseNode_1ae933926ab6fe7298bb2779d061fdb70c" prot="public" virt="non-virtual"><scope>WorldSwitchNode</scope><name>WorldBV</name></member>
+      <member refid="d5/d11/classWorldNode_1af4adf665b01de872cce6b91b071ad48c" prot="public" virt="non-virtual"><scope>WorldSwitchNode</scope><name>WorldNode</name></member>
+      <member refid="d4/dce/classWorldSwitchNode_1a6603c80129463b3e391cafccaa452a4e" prot="public" virt="non-virtual"><scope>WorldSwitchNode</scope><name>WorldSwitchNode</name></member>
+      <member refid="de/d40/classWorldBaseNode_1ac1a0c98e155f5cda06389567cd84e948" prot="public" virt="non-virtual"><scope>WorldSwitchNode</scope><name>WorldTransform</name></member>
+      <member refid="de/d40/classWorldBaseNode_1a45ed1d3d0c7837cb40f80070f57d41af" prot="public" virt="virtual"><scope>WorldSwitchNode</scope><name>~WorldBaseNode</name></member>
+      <member refid="d5/d11/classWorldNode_1a7bbbec5b61fc9d8f34e3811ff6c5fcaa" prot="public" virt="virtual"><scope>WorldSwitchNode</scope><name>~WorldNode</name></member>
+      <member refid="d4/dce/classWorldSwitchNode_1a9241797ee85b21fdd412a0b7af043836" prot="public" virt="virtual"><scope>WorldSwitchNode</scope><name>~WorldSwitchNode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

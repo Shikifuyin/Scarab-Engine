@@ -1,0 +1,366 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="df/d88/classResourceFile" kind="class" prot="public" abstract="yes">
+    <compoundname>ResourceFile</compoundname>
+    <derivedcompoundref refid="db/ddb/classTextureFile" prot="public" virt="non-virtual">TextureFile</derivedcompoundref>
+    <includes refid="de/d4a/ResourceFile_8h" local="no">ResourceFile.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="df/d88/classResourceFile_1a36793addb7fa9e56d64288e496273822" prot="protected" static="no" mutable="no">
+        <type><ref refid="d0/dc3/structResourceFileHeader" kindref="compound">ResourceFileHeader</ref> *</type>
+        <definition>ResourceFileHeader* m_pHeader</definition>
+        <argsstring></argsstring>
+        <name>m_pHeader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceFile.h" line="66" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceFile.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d88/classResourceFile_1a9a4be9b3f12c420d0d8cf1c8059e65a5" prot="protected" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+        <definition>Byte* m_pData</definition>
+        <argsstring></argsstring>
+        <name>m_pData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceFile.h" line="67" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceFile.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="df/d88/classResourceFile_1a2270d0ec468b7a3a08342354d8b7b5cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ResourceFile</definition>
+        <argsstring>()</argsstring>
+        <name>ResourceFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceFile.h" line="42"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d88/classResourceFile_1a7988f8d931b8b079a69596451ff32263" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~ResourceFile</definition>
+        <argsstring>()</argsstring>
+        <name>~ResourceFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceFile.h" line="43"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d88/classResourceFile_1abcdc569930dbf5999d2c856c3cb3c429" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d5/dae/RDBFileStructure_8h_1a8571efa4409be32e28abf3ea74a0dbb1" kindref="member">ResourceType</ref></type>
+        <definition>virtual ResourceType GetResourceType</definition>
+        <argsstring>() const =0</argsstring>
+        <name>GetResourceType</name>
+        <reimplementedby refid="db/ddb/classTextureFile_1a67178d7f27f6ec5e2185f2fb0688386a">GetResourceType</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceFile.h" line="45"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d88/classResourceFile_1a3e4d3044de77c24aee30b49c4bbb41d9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool HasData</definition>
+        <argsstring>() const </argsstring>
+        <name>HasData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceFile.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d88/classResourceFile_1af74f0879a54c461ee0aacca3842d4aab" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d0/dc3/structResourceFileHeader" kindref="compound">ResourceFileHeader</ref> *</type>
+        <definition>const ResourceFileHeader* GetHeader</definition>
+        <argsstring>() const </argsstring>
+        <name>GetHeader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceFile.h" line="48"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d88/classResourceFile_1ac2f41dba5f93e685f0672b80b8b3cafc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+        <definition>Byte* GetData</definition>
+        <argsstring>() const </argsstring>
+        <name>GetData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceFile.h" line="49"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d88/classResourceFile_1a1029c4ed104a1bb524004271ae56ba31" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void CreateData</definition>
+        <argsstring>(const ResourceFileHeader &amp;resourceHeader)=0</argsstring>
+        <name>CreateData</name>
+        <reimplementedby refid="db/ddb/classTextureFile_1af381e624cf21a3156c07da88cd6371f1">CreateData</reimplementedby>
+        <param>
+          <type>const <ref refid="d0/dc3/structResourceFileHeader" kindref="compound">ResourceFileHeader</ref> &amp;</type>
+          <declname>resourceHeader</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceFile.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d88/classResourceFile_1ae18f3b7b13e231c8e2e5e1a3e101fbe9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void DestroyData</definition>
+        <argsstring>()</argsstring>
+        <name>DestroyData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceFile.h" line="52"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d88/classResourceFile_1aa3e9af4d7ef00182901a1a0351aa0cbb" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>virtual Bool Load</definition>
+        <argsstring>(const GChar *strFilename)=0</argsstring>
+        <name>Load</name>
+        <reimplementedby refid="d4/d5a/classTextureTEX_1a3b95019fdb9a31098b3a942298fae0b6">Load</reimplementedby>
+        <reimplementedby refid="db/ddb/classTextureFile_1aa3e9af4d7ef00182901a1a0351aa0cbb">Load</reimplementedby>
+        <reimplementedby refid="dc/dcf/classTextureBMP_1a3b95019fdb9a31098b3a942298fae0b6">Load</reimplementedby>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strFilename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceFile.h" line="54"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d88/classResourceFile_1a0d9f67157c9f62d0fbfd160047a45df4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>virtual Bool Save</definition>
+        <argsstring>(const GChar *strFilename) const =0</argsstring>
+        <name>Save</name>
+        <reimplementedby refid="d4/d5a/classTextureTEX_1a74fb7403a6634ffdc1d35b9f6fc89c27">Save</reimplementedby>
+        <reimplementedby refid="db/ddb/classTextureFile_1a0d9f67157c9f62d0fbfd160047a45df4">Save</reimplementedby>
+        <reimplementedby refid="dc/dcf/classTextureBMP_1a74fb7403a6634ffdc1d35b9f6fc89c27">Save</reimplementedby>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strFilename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceFile.h" line="55"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d88/classResourceFile_1af432df0af325b940e0c5f2cf082c27d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool Export</definition>
+        <argsstring>(const GChar *strDBName, const GChar *strResPath)</argsstring>
+        <name>Export</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strDBName</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strResPath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceFile.h" line="57"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d88/classResourceFile_1ade39979c41936b3fad710f3bf7b1929f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool Import</definition>
+        <argsstring>(const GChar *strDBName, const GChar *strResPath) const </argsstring>
+        <name>Import</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strDBName</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strResPath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceFile.h" line="58"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="df/d88/classResourceFile_1a1fd18ee09ef17a87a9d6a1af78c9a30d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>virtual Bool _OnExport</definition>
+        <argsstring>(ResourceDB *pRDB, RDB_ResourceHandle *hResource)=0</argsstring>
+        <name>_OnExport</name>
+        <reimplementedby refid="db/ddb/classTextureFile_1a54931b72635e2c299396ef274ff53bb0">_OnExport</reimplementedby>
+        <param>
+          <type><ref refid="d5/d53/classResourceDB" kindref="compound">ResourceDB</ref> *</type>
+          <declname>pRDB</declname>
+        </param>
+        <param>
+          <type><ref refid="d5/da4/structRDB__ResourceHandle" kindref="compound">RDB_ResourceHandle</ref> *</type>
+          <declname>hResource</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceFile.h" line="61"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d88/classResourceFile_1af66991296e2c95b877d14b285f98c167" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>virtual Bool _OnImport</definition>
+        <argsstring>(ResourceDB *pRDB, RDB_ResourceHandle *hResource) const =0</argsstring>
+        <name>_OnImport</name>
+        <reimplementedby refid="db/ddb/classTextureFile_1ae9e693ee2dc874f7d0200d9f51bb12b9">_OnImport</reimplementedby>
+        <param>
+          <type><ref refid="d5/d53/classResourceDB" kindref="compound">ResourceDB</ref> *</type>
+          <declname>pRDB</declname>
+        </param>
+        <param>
+          <type><ref refid="d5/da4/structRDB__ResourceHandle" kindref="compound">RDB_ResourceHandle</ref> *</type>
+          <declname>hResource</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceFile.h" line="62"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d88/classResourceFile_1abd9be72fcc1aaddd55c5e9bde73cb5f0" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _CreateData</definition>
+        <argsstring>(ResourceFileHeader *pHeader)</argsstring>
+        <name>_CreateData</name>
+        <param>
+          <type><ref refid="d0/dc3/structResourceFileHeader" kindref="compound">ResourceFileHeader</ref> *</type>
+          <declname>pHeader</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceFile.h" line="64"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="10539">
+        <label>TextureTEX</label>
+        <link refid="d4/d5a/classTextureTEX"/>
+        <childnode refid="10537" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10538">
+        <label>TextureBMP</label>
+        <link refid="dc/dcf/classTextureBMP"/>
+        <childnode refid="10537" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10536">
+        <label>ResourceFile</label>
+        <link refid="df/d88/classResourceFile"/>
+      </node>
+      <node id="10537">
+        <label>TextureFile</label>
+        <link refid="db/ddb/classTextureFile"/>
+        <childnode refid="10536" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="10541">
+        <label>ResourceFileHeader</label>
+        <link refid="d0/dc3/structResourceFileHeader"/>
+        <childnode refid="10542" relation="usage">
+          <edgelabel>dwDataSize</edgelabel>
+        </childnode>
+      </node>
+      <node id="10542">
+        <label>ULong</label>
+      </node>
+      <node id="10543">
+        <label>unsigned char</label>
+      </node>
+      <node id="10540">
+        <label>ResourceFile</label>
+        <link refid="df/d88/classResourceFile"/>
+        <childnode refid="10541" relation="usage">
+          <edgelabel>m_pHeader</edgelabel>
+        </childnode>
+        <childnode refid="10543" relation="usage">
+          <edgelabel>m_pData</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceFile.h" line="40" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Resource/ResourceFile.h" bodystart="39" bodyend="68"/>
+    <listofallmembers>
+      <member refid="df/d88/classResourceFile_1abd9be72fcc1aaddd55c5e9bde73cb5f0" prot="protected" virt="non-virtual"><scope>ResourceFile</scope><name>_CreateData</name></member>
+      <member refid="df/d88/classResourceFile_1a1fd18ee09ef17a87a9d6a1af78c9a30d" prot="protected" virt="pure-virtual"><scope>ResourceFile</scope><name>_OnExport</name></member>
+      <member refid="df/d88/classResourceFile_1af66991296e2c95b877d14b285f98c167" prot="protected" virt="pure-virtual"><scope>ResourceFile</scope><name>_OnImport</name></member>
+      <member refid="df/d88/classResourceFile_1a1029c4ed104a1bb524004271ae56ba31" prot="public" virt="pure-virtual"><scope>ResourceFile</scope><name>CreateData</name></member>
+      <member refid="df/d88/classResourceFile_1ae18f3b7b13e231c8e2e5e1a3e101fbe9" prot="public" virt="non-virtual"><scope>ResourceFile</scope><name>DestroyData</name></member>
+      <member refid="df/d88/classResourceFile_1af432df0af325b940e0c5f2cf082c27d5" prot="public" virt="non-virtual"><scope>ResourceFile</scope><name>Export</name></member>
+      <member refid="df/d88/classResourceFile_1ac2f41dba5f93e685f0672b80b8b3cafc" prot="public" virt="non-virtual"><scope>ResourceFile</scope><name>GetData</name></member>
+      <member refid="df/d88/classResourceFile_1af74f0879a54c461ee0aacca3842d4aab" prot="public" virt="non-virtual"><scope>ResourceFile</scope><name>GetHeader</name></member>
+      <member refid="df/d88/classResourceFile_1abcdc569930dbf5999d2c856c3cb3c429" prot="public" virt="pure-virtual"><scope>ResourceFile</scope><name>GetResourceType</name></member>
+      <member refid="df/d88/classResourceFile_1a3e4d3044de77c24aee30b49c4bbb41d9" prot="public" virt="non-virtual"><scope>ResourceFile</scope><name>HasData</name></member>
+      <member refid="df/d88/classResourceFile_1ade39979c41936b3fad710f3bf7b1929f" prot="public" virt="non-virtual"><scope>ResourceFile</scope><name>Import</name></member>
+      <member refid="df/d88/classResourceFile_1aa3e9af4d7ef00182901a1a0351aa0cbb" prot="public" virt="pure-virtual"><scope>ResourceFile</scope><name>Load</name></member>
+      <member refid="df/d88/classResourceFile_1a9a4be9b3f12c420d0d8cf1c8059e65a5" prot="protected" virt="non-virtual"><scope>ResourceFile</scope><name>m_pData</name></member>
+      <member refid="df/d88/classResourceFile_1a36793addb7fa9e56d64288e496273822" prot="protected" virt="non-virtual"><scope>ResourceFile</scope><name>m_pHeader</name></member>
+      <member refid="df/d88/classResourceFile_1a2270d0ec468b7a3a08342354d8b7b5cc" prot="public" virt="non-virtual"><scope>ResourceFile</scope><name>ResourceFile</name></member>
+      <member refid="df/d88/classResourceFile_1a0d9f67157c9f62d0fbfd160047a45df4" prot="public" virt="pure-virtual"><scope>ResourceFile</scope><name>Save</name></member>
+      <member refid="df/d88/classResourceFile_1a7988f8d931b8b079a69596451ff32263" prot="public" virt="virtual"><scope>ResourceFile</scope><name>~ResourceFile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

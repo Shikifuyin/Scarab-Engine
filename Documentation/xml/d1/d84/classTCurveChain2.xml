@@ -1,0 +1,411 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d1/d84/classTCurveChain2" kind="class" prot="public" abstract="yes">
+    <compoundname>TCurveChain2</compoundname>
+    <basecompoundref refid="de/d57/classTCurve2" prot="public" virt="non-virtual">TCurve2&lt; Real &gt;</basecompoundref>
+    <includes refid="d4/d23/CurveChain2_8h" local="no">CurveChain2.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename Real</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="d1/d84/classTCurveChain2_1a10dd7d87364ea66dc0a7ab90b4cbf9af" prot="protected" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iPatchCount</definition>
+        <argsstring></argsstring>
+        <name>m_iPatchCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/2D/CurveChain2.h" line="69" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/2D/CurveChain2.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d84/classTCurveChain2_1a444dafb4614673281a72994ad292a145" prot="protected" static="no" mutable="no">
+        <type>Real *</type>
+        <definition>Real* m_arrParameters</definition>
+        <argsstring></argsstring>
+        <name>m_arrParameters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/2D/CurveChain2.h" line="70" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/2D/CurveChain2.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d84/classTCurveChain2_1ada516cc274a44d6b0ae0c414b6cfcf58" prot="protected" static="no" mutable="no">
+        <type>Real *</type>
+        <definition>Real* m_arrLengths</definition>
+        <argsstring></argsstring>
+        <name>m_arrLengths</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/2D/CurveChain2.h" line="71" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/2D/CurveChain2.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d84/classTCurveChain2_1a2b6766a03d49fa9e9fb12ecaffeaca78" prot="protected" static="no" mutable="no">
+        <type>Real *</type>
+        <definition>Real* m_arrAccumLengths</definition>
+        <argsstring></argsstring>
+        <name>m_arrAccumLengths</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/2D/CurveChain2.h" line="72" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/2D/CurveChain2.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d1/d84/classTCurveChain2_1a7ebeb95b1c972f1d8b2c01b02d5ded25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TCurveChain2</definition>
+        <argsstring>(const Real *arrParameters, UInt iPatchCount)</argsstring>
+        <name>TCurveChain2</name>
+        <param>
+          <type>const Real *</type>
+          <declname>arrParameters</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iPatchCount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/2D/CurveChain2.h" line="42"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d84/classTCurveChain2_1a19c3b6d51e9df6f5b42fd300f1595fba" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~TCurveChain2</definition>
+        <argsstring>()</argsstring>
+        <name>~TCurveChain2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/2D/CurveChain2.h" line="43"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d84/classTCurveChain2_1adbecc7a9419b8db515196177304db946" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>Real</type>
+        <definition>virtual Real Length</definition>
+        <argsstring>(Real fT0, Real fT1) const </argsstring>
+        <name>Length</name>
+        <reimplements refid="de/d57/classTCurve2_1a1e1e157eadc4befdec43589e7ae6f3b6">Length</reimplements>
+        <param>
+          <type>Real</type>
+          <declname>fT0</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fT1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/2D/CurveChain2.h" line="46"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d84/classTCurveChain2_1a88b2bd67587d5bf1700021b56b14bff4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>Real</type>
+        <definition>virtual Real Parameter</definition>
+        <argsstring>(Real fLength, UInt iMaxIterations=32, Real fTolerance=(Real) SCALAR_ERROR) const </argsstring>
+        <name>Parameter</name>
+        <reimplements refid="de/d57/classTCurve2_1a00ef98b0143d3fe57ec19b279b19c110">Parameter</reimplements>
+        <param>
+          <type>Real</type>
+          <declname>fLength</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iMaxIterations</declname>
+          <defval>32</defval>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fTolerance</declname>
+          <defval>(Real) <ref refid="d0/d10/Scalar_8h_1ab84e60710e7c3a93246b807ac524d38b" kindref="member">SCALAR_ERROR</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/2D/CurveChain2.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d84/classTCurveChain2_1ab21b692750ebe45fa81174593e922b24" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetPatchCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetPatchCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/2D/CurveChain2.h" line="50"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d84/classTCurveChain2_1a8a8dfedf69ecaa9da5255da903b31fdd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void GetPatch</definition>
+        <argsstring>(UInt iPatch, Real &amp;outMinT, Real &amp;outMaxT) const </argsstring>
+        <name>GetPatch</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iPatch</declname>
+        </param>
+        <param>
+          <type>Real &amp;</type>
+          <declname>outMinT</declname>
+        </param>
+        <param>
+          <type>Real &amp;</type>
+          <declname>outMaxT</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/2D/CurveChain2.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d84/classTCurveChain2_1a82b916dea472331ae5d44a9504a60481" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetPatch</definition>
+        <argsstring>(UInt iPatch, Real fMinT, Real fMaxT)</argsstring>
+        <name>SetPatch</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iPatch</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fMinT</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fMaxT</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/2D/CurveChain2.h" line="52"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-func">
+      <memberdef kind="function" id="d1/d84/classTCurveChain2_1a4e61adede9e368832d1c632ef938b92a" prot="protected" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>static Real _SpeedFunction</definition>
+        <argsstring>(Real fT, Void *pUserData)</argsstring>
+        <name>_SpeedFunction</name>
+        <param>
+          <type>Real</type>
+          <declname>fT</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> *</type>
+          <declname>pUserData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/2D/CurveChain2.h" line="61"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="d1/d84/classTCurveChain2_1ad574fa73c216091ce31b4bcf1a845611" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>Real</type>
+        <definition>virtual Real _GetPatchSpeed</definition>
+        <argsstring>(UInt iPatch, Real fT) const =0</argsstring>
+        <name>_GetPatchSpeed</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iPatch</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fT</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/2D/CurveChain2.h" line="63"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d84/classTCurveChain2_1a034882b6917276437bfec0415524cf14" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>Real</type>
+        <definition>virtual Real _GetPatchLength</definition>
+        <argsstring>(UInt iPatch, Real fT0, Real fT1) const =0</argsstring>
+        <name>_GetPatchLength</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iPatch</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fT0</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fT1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/2D/CurveChain2.h" line="64"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d84/classTCurveChain2_1ad0a1c63384ae14ae2fc566485acf0853" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _ComputePatchLengths</definition>
+        <argsstring>() const </argsstring>
+        <name>_ComputePatchLengths</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/2D/CurveChain2.h" line="66"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d84/classTCurveChain2_1a3b8e36b86e45bdbd13ecb54ad2b28440" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _GetPatchInfo</definition>
+        <argsstring>(Real fT, UInt &amp;outPatch, Real &amp;outDT) const </argsstring>
+        <name>_GetPatchInfo</name>
+        <param>
+          <type>Real</type>
+          <declname>fT</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref> &amp;</type>
+          <declname>outPatch</declname>
+        </param>
+        <param>
+          <type>Real &amp;</type>
+          <declname>outDT</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/2D/CurveChain2.h" line="67"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="12347">
+        <label>TCurveChain2&lt; Real &gt;</label>
+        <link refid="d1/d84/classTCurveChain2"/>
+        <childnode refid="12348" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12348">
+        <label>TCurve2&lt; Real &gt;</label>
+        <link refid="de/d57/classTCurve2"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="12351">
+        <label>Real</label>
+      </node>
+      <node id="12349">
+        <label>TCurveChain2&lt; Real &gt;</label>
+        <link refid="d1/d84/classTCurveChain2"/>
+        <childnode refid="12350" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12352" relation="usage">
+          <edgelabel>m_iPatchCount</edgelabel>
+        </childnode>
+        <childnode refid="12351" relation="usage">
+          <edgelabel>m_arrLengths</edgelabel>
+          <edgelabel>m_arrParameters</edgelabel>
+          <edgelabel>m_arrAccumLengths</edgelabel>
+        </childnode>
+      </node>
+      <node id="12350">
+        <label>TCurve2&lt; Real &gt;</label>
+        <link refid="de/d57/classTCurve2"/>
+        <childnode refid="12351" relation="usage">
+          <edgelabel>m_fMinT</edgelabel>
+          <edgelabel>m_fMaxT</edgelabel>
+        </childnode>
+      </node>
+      <node id="12352">
+        <label>int</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/2D/CurveChain2.h" line="38" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/2D/CurveChain2.h" bodystart="37" bodyend="73"/>
+    <listofallmembers>
+      <member refid="d1/d84/classTCurveChain2_1ad0a1c63384ae14ae2fc566485acf0853" prot="protected" virt="non-virtual"><scope>TCurveChain2</scope><name>_ComputePatchLengths</name></member>
+      <member refid="d1/d84/classTCurveChain2_1a3b8e36b86e45bdbd13ecb54ad2b28440" prot="protected" virt="non-virtual"><scope>TCurveChain2</scope><name>_GetPatchInfo</name></member>
+      <member refid="d1/d84/classTCurveChain2_1a034882b6917276437bfec0415524cf14" prot="protected" virt="pure-virtual"><scope>TCurveChain2</scope><name>_GetPatchLength</name></member>
+      <member refid="d1/d84/classTCurveChain2_1ad574fa73c216091ce31b4bcf1a845611" prot="protected" virt="pure-virtual"><scope>TCurveChain2</scope><name>_GetPatchSpeed</name></member>
+      <member refid="d1/d84/classTCurveChain2_1a4e61adede9e368832d1c632ef938b92a" prot="protected" virt="non-virtual"><scope>TCurveChain2</scope><name>_SpeedFunction</name></member>
+      <member refid="de/d57/classTCurve2_1a4cd922dcf079e1ee21634e5640493508" prot="public" virt="non-virtual"><scope>TCurveChain2</scope><name>Curvature</name></member>
+      <member refid="de/d57/classTCurve2_1ac6e911399fc45c10b27cadeb67d0fd66" prot="public" virt="non-virtual"><scope>TCurveChain2</scope><name>Frame</name></member>
+      <member refid="de/d57/classTCurve2_1aa4080b9170a97ff3b0a9af376d5f7d81" prot="public" virt="non-virtual"><scope>TCurveChain2</scope><name>GetMaxT</name></member>
+      <member refid="de/d57/classTCurve2_1aafc97dcc199fefb4bba21ff59f43cdbb" prot="public" virt="non-virtual"><scope>TCurveChain2</scope><name>GetMinT</name></member>
+      <member refid="d1/d84/classTCurveChain2_1a8a8dfedf69ecaa9da5255da903b31fdd" prot="public" virt="non-virtual"><scope>TCurveChain2</scope><name>GetPatch</name></member>
+      <member refid="d1/d84/classTCurveChain2_1ab21b692750ebe45fa81174593e922b24" prot="public" virt="non-virtual"><scope>TCurveChain2</scope><name>GetPatchCount</name></member>
+      <member refid="d1/d84/classTCurveChain2_1adbecc7a9419b8db515196177304db946" prot="public" virt="virtual"><scope>TCurveChain2</scope><name>Length</name></member>
+      <member refid="de/d57/classTCurve2_1a8f0e1fd4ef91850a26bbd5975708d371" prot="public" virt="non-virtual" ambiguityscope="TCurve2::"><scope>TCurveChain2</scope><name>Length</name></member>
+      <member refid="d1/d84/classTCurveChain2_1a2b6766a03d49fa9e9fb12ecaffeaca78" prot="protected" virt="non-virtual"><scope>TCurveChain2</scope><name>m_arrAccumLengths</name></member>
+      <member refid="d1/d84/classTCurveChain2_1ada516cc274a44d6b0ae0c414b6cfcf58" prot="protected" virt="non-virtual"><scope>TCurveChain2</scope><name>m_arrLengths</name></member>
+      <member refid="d1/d84/classTCurveChain2_1a444dafb4614673281a72994ad292a145" prot="protected" virt="non-virtual"><scope>TCurveChain2</scope><name>m_arrParameters</name></member>
+      <member refid="de/d57/classTCurve2_1aeb65f01f1950df1be56159acada0f137" prot="protected" virt="non-virtual"><scope>TCurveChain2</scope><name>m_fMaxT</name></member>
+      <member refid="de/d57/classTCurve2_1a908d8e638688977192614addf140fe47" prot="protected" virt="non-virtual"><scope>TCurveChain2</scope><name>m_fMinT</name></member>
+      <member refid="d1/d84/classTCurveChain2_1a10dd7d87364ea66dc0a7ab90b4cbf9af" prot="protected" virt="non-virtual"><scope>TCurveChain2</scope><name>m_iPatchCount</name></member>
+      <member refid="de/d57/classTCurve2_1a88547ebb66e48e156ef81e21893e26c5" prot="public" virt="non-virtual"><scope>TCurveChain2</scope><name>Normal</name></member>
+      <member refid="de/d57/classTCurve2_1a999a1eb3a9b38e5b424841d5de653b6c" prot="public" virt="pure-virtual"><scope>TCurveChain2</scope><name>P</name></member>
+      <member refid="d1/d84/classTCurveChain2_1a88b2bd67587d5bf1700021b56b14bff4" prot="public" virt="virtual"><scope>TCurveChain2</scope><name>Parameter</name></member>
+      <member refid="de/d57/classTCurve2_1a3362ce99137cb2e632c6488ee9d27c31" prot="public" virt="pure-virtual"><scope>TCurveChain2</scope><name>PdT</name></member>
+      <member refid="de/d57/classTCurve2_1a5f9319175de94795827e07e103cfae51" prot="public" virt="pure-virtual"><scope>TCurveChain2</scope><name>PdT2</name></member>
+      <member refid="de/d57/classTCurve2_1a9ebea2161dd647f6c15dbf3623e52ddd" prot="public" virt="pure-virtual"><scope>TCurveChain2</scope><name>PdT3</name></member>
+      <member refid="de/d57/classTCurve2_1ae3e679c60f8a189afc9c6efe3b2db7d7" prot="public" virt="non-virtual"><scope>TCurveChain2</scope><name>Position</name></member>
+      <member refid="de/d57/classTCurve2_1a8a1f9ee1b484dba5bc73c90ef753a393" prot="public" virt="non-virtual"><scope>TCurveChain2</scope><name>SetIntervalT</name></member>
+      <member refid="d1/d84/classTCurveChain2_1a82b916dea472331ae5d44a9504a60481" prot="public" virt="non-virtual"><scope>TCurveChain2</scope><name>SetPatch</name></member>
+      <member refid="de/d57/classTCurve2_1a76cdda297dd49acc0e33ce1de0096d08" prot="public" virt="non-virtual"><scope>TCurveChain2</scope><name>Speed</name></member>
+      <member refid="de/d57/classTCurve2_1a6a0138b6d642d85bfec9aeaac35d5283" prot="public" virt="non-virtual"><scope>TCurveChain2</scope><name>SubDivideByLength</name></member>
+      <member refid="de/d57/classTCurve2_1a7ec387b9730213f310bad0a330100148" prot="public" virt="non-virtual"><scope>TCurveChain2</scope><name>SubDivideByParameter</name></member>
+      <member refid="de/d57/classTCurve2_1a220c35e463c99118b0c317fd1eeb1f4e" prot="public" virt="non-virtual"><scope>TCurveChain2</scope><name>Tangent</name></member>
+      <member refid="de/d57/classTCurve2_1aca68fe81bfb3103a4a3d04bd13f80888" prot="public" virt="non-virtual"><scope>TCurveChain2</scope><name>TCurve2</name></member>
+      <member refid="d1/d84/classTCurveChain2_1a7ebeb95b1c972f1d8b2c01b02d5ded25" prot="public" virt="non-virtual"><scope>TCurveChain2</scope><name>TCurveChain2</name></member>
+      <member refid="de/d57/classTCurve2_1a08cae0f3b2dfe126f9474a937f7d0ba7" prot="public" virt="non-virtual"><scope>TCurveChain2</scope><name>Velocity</name></member>
+      <member refid="de/d57/classTCurve2_1aac8d25b81af70465795c0ef38a0a6f0d" prot="public" virt="virtual"><scope>TCurveChain2</scope><name>~TCurve2</name></member>
+      <member refid="d1/d84/classTCurveChain2_1a19c3b6d51e9df6f5b42fd300f1595fba" prot="public" virt="virtual"><scope>TCurveChain2</scope><name>~TCurveChain2</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1054 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d0/d2d/classShaderProgram" kind="class" prot="public">
+    <compoundname>ShaderProgram</compoundname>
+    <derivedcompoundref refid="d1/dc0/classPixelShaderProgram" prot="public" virt="non-virtual">PixelShaderProgram</derivedcompoundref>
+    <derivedcompoundref refid="dc/dfc/classVertexShaderProgram" prot="public" virt="non-virtual">VertexShaderProgram</derivedcompoundref>
+    <includes refid="dd/d99/ShaderProgram_8h" local="no">ShaderProgram.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="d0/d2d/classShaderProgram_1aa58700e31708b48fe788eec60be11bd9" prot="protected" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref></type>
+        <definition>GChar m_strProgramName[SHADERPROG_MAX_NAMES_LENGTH]</definition>
+        <argsstring>[SHADERPROG_MAX_NAMES_LENGTH]</argsstring>
+        <name>m_strProgramName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="254" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" bodystart="254" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d2d/classShaderProgram_1a341c068ba27c529139a293337be99e8c" prot="protected" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iInputCount</definition>
+        <argsstring></argsstring>
+        <name>m_iInputCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="256" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" bodystart="256" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d2d/classShaderProgram_1a59300c30cd7b84b5bc22ac19ead0fac5" prot="protected" static="no" mutable="no">
+        <type><ref refid="d9/dbd/structShaderProgramInputVar" kindref="compound">ShaderProgramInputVar</ref></type>
+        <definition>ShaderProgramInputVar m_arrInputs[SHADERPROG_MAX_INPUTS]</definition>
+        <argsstring>[SHADERPROG_MAX_INPUTS]</argsstring>
+        <name>m_arrInputs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="257" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" bodystart="257" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d2d/classShaderProgram_1abf20a9edd05b6e7e990ebed6cabed545" prot="protected" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iOutputCount</definition>
+        <argsstring></argsstring>
+        <name>m_iOutputCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="259" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" bodystart="259" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d2d/classShaderProgram_1ad03aecb7b9e81661c506d80db9fc0615" prot="protected" static="no" mutable="no">
+        <type><ref refid="df/df0/structShaderProgramOutputVar" kindref="compound">ShaderProgramOutputVar</ref></type>
+        <definition>ShaderProgramOutputVar m_arrOutputs[SHADERPROG_MAX_OUTPUTS]</definition>
+        <argsstring>[SHADERPROG_MAX_OUTPUTS]</argsstring>
+        <name>m_arrOutputs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="260" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" bodystart="260" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d2d/classShaderProgram_1ac80b1927f8154305928fbbd392e78591" prot="protected" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iConstantCount</definition>
+        <argsstring></argsstring>
+        <name>m_iConstantCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="262" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" bodystart="262" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d2d/classShaderProgram_1a7959e2c9a815669537b72814c0cd6e4a" prot="protected" static="no" mutable="no">
+        <type><ref refid="d2/d9e/structShaderProgramConstant" kindref="compound">ShaderProgramConstant</ref></type>
+        <definition>ShaderProgramConstant m_arrConstants[SHADERPROG_MAX_CONSTANTS]</definition>
+        <argsstring>[SHADERPROG_MAX_CONSTANTS]</argsstring>
+        <name>m_arrConstants</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="263" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" bodystart="263" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d2d/classShaderProgram_1af0ab0d89b93e705587b0aba751ca4b18" prot="protected" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iSamplerCount</definition>
+        <argsstring></argsstring>
+        <name>m_iSamplerCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="265" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" bodystart="265" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d2d/classShaderProgram_1a47c4dbb9067b54403bf3c8fcb2cbe941" prot="protected" static="no" mutable="no">
+        <type><ref refid="d5/d69/structShaderProgramSampler" kindref="compound">ShaderProgramSampler</ref></type>
+        <definition>ShaderProgramSampler m_arrSamplers[SHADERPROG_MAX_SAMPLERS]</definition>
+        <argsstring>[SHADERPROG_MAX_SAMPLERS]</argsstring>
+        <name>m_arrSamplers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="266" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" bodystart="266" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d2d/classShaderProgram_1a7979b815b17ba7bf0ba6081d6425e057" prot="protected" static="no" mutable="no">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a92009681dba35a2a92297d218d095fab" kindref="member">AChar</ref> *</type>
+        <definition>const AChar* m_arrProgramTexts[SHADER_MAX_PROFILES]</definition>
+        <argsstring>[SHADER_MAX_PROFILES]</argsstring>
+        <name>m_arrProgramTexts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="268" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" bodystart="268" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d0/d2d/classShaderProgram_1a41aec7b1f376573338d99f75fff3d956" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShaderProgram</definition>
+        <argsstring>(const GChar *strProgramName, UInt iInputCount, UInt iOutputCount, UInt iConstantCount, UInt iSamplerCount)</argsstring>
+        <name>ShaderProgram</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strProgramName</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iInputCount</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iOutputCount</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iConstantCount</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iSamplerCount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="203"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d2d/classShaderProgram_1afd638be5c36a62fe9310baa04e8ca464" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~ShaderProgram</definition>
+        <argsstring>()</argsstring>
+        <name>~ShaderProgram</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="204"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d2d/classShaderProgram_1a2aa91ec158f3a1b3bbec34fcd4aed03d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetInput</definition>
+        <argsstring>(UInt iIndex, const GChar *strName, ShaderVarType iType, ShaderVarSemantic iSemantic)</argsstring>
+        <name>SetInput</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iIndex</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strName</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d99/ShaderProgram_8h_1a594961042adbb3b086eb538765c48a56" kindref="member">ShaderVarType</ref></type>
+          <declname>iType</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d99/ShaderProgram_8h_1ab5d7667f025a13e54fc37adedd231794" kindref="member">ShaderVarSemantic</ref></type>
+          <declname>iSemantic</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="207"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d2d/classShaderProgram_1a575956760ffe5d4e360a5ba265589e27" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetOutput</definition>
+        <argsstring>(UInt iIndex, const GChar *strName, ShaderVarType iType, ShaderVarSemantic iSemantic)</argsstring>
+        <name>SetOutput</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iIndex</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strName</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d99/ShaderProgram_8h_1a594961042adbb3b086eb538765c48a56" kindref="member">ShaderVarType</ref></type>
+          <declname>iType</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d99/ShaderProgram_8h_1ab5d7667f025a13e54fc37adedd231794" kindref="member">ShaderVarSemantic</ref></type>
+          <declname>iSemantic</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="209"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d2d/classShaderProgram_1a3352333dee152946a3f87a3c610d45b2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetConstant</definition>
+        <argsstring>(UInt iIndex, const GChar *strName, UInt iRegCount)</argsstring>
+        <name>SetConstant</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iIndex</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strName</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iRegCount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="211"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d2d/classShaderProgram_1a21e8803a2a26eb2cb153529954d5c479" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetConstantBaseReg</definition>
+        <argsstring>(UInt iIndex, UInt iProfile, UInt iBaseRegister)</argsstring>
+        <name>SetConstantBaseReg</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iProfile</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iBaseRegister</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="212"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d2d/classShaderProgram_1ac9770536bc1bcd67a4c5eb9417436da7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetSampler</definition>
+        <argsstring>(UInt iIndex, const GChar *strName, ShaderSamplingType iType)</argsstring>
+        <name>SetSampler</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iIndex</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strName</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d99/ShaderProgram_8h_1a5f98c29ac15de3b2713c200368c482d1" kindref="member">ShaderSamplingType</ref></type>
+          <declname>iType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="214"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d2d/classShaderProgram_1ad2e03b947bba6c9ce81cd1e1cd163017" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetSamplerWrapMode</definition>
+        <argsstring>(UInt iIndex, UInt iDim, ShaderSamplingWrapMode iWrapMode)</argsstring>
+        <name>SetSamplerWrapMode</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDim</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d99/ShaderProgram_8h_1a4e4fcef9f4cc9a41331b7710e486d042" kindref="member">ShaderSamplingWrapMode</ref></type>
+          <declname>iWrapMode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="215"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d2d/classShaderProgram_1aa6ca650c19a838c92cac126ed510be4c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetSamplerFilter</definition>
+        <argsstring>(UInt iIndex, ShaderSamplingFilter iFilter)</argsstring>
+        <name>SetSamplerFilter</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d99/ShaderProgram_8h_1a59ad6a111bbb8781c6eed45613a2c36b" kindref="member">ShaderSamplingFilter</ref></type>
+          <declname>iFilter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="216"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d2d/classShaderProgram_1a5f425908a3d7025cd726955e7b662dd4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetSamplerLODBias</definition>
+        <argsstring>(UInt iIndex, Float fLODBias)</argsstring>
+        <name>SetSamplerLODBias</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref></type>
+          <declname>fLODBias</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="217"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d2d/classShaderProgram_1aca61dabbb85b30954bd6273c05531b16" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetSamplerAnisotropy</definition>
+        <argsstring>(UInt iIndex, Float fAnisotropy)</argsstring>
+        <name>SetSamplerAnisotropy</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref></type>
+          <declname>fAnisotropy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="218"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d2d/classShaderProgram_1ad915cffb28ded8fd36969d7c267088bc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetSamplerBorderColor</definition>
+        <argsstring>(UInt iIndex, DWord dwBorderColor)</argsstring>
+        <name>SetSamplerBorderColor</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+          <declname>dwBorderColor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="219"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d2d/classShaderProgram_1add8c97a28c702f831925e93770426ea7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetSamplerTextureUnit</definition>
+        <argsstring>(UInt iIndex, UInt iProfile, UInt iTextureUnit)</argsstring>
+        <name>SetSamplerTextureUnit</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iProfile</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iTextureUnit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="220"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d2d/classShaderProgram_1a7fe540560c8cdec422c161713f72f03e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetProgramText</definition>
+        <argsstring>(UInt iProfile, const AChar *strProgramText)</argsstring>
+        <name>SetProgramText</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iProfile</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a92009681dba35a2a92297d218d095fab" kindref="member">AChar</ref> *</type>
+          <declname>strProgramText</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="222"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d2d/classShaderProgram_1ac588fbca3cfb1aa8a0e82e07f8911e1b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetInputCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetInputCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="225"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d2d/classShaderProgram_1a41c5744a4b32a4bd40a22e1d38c9e103" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+        <definition>const GChar* GetInputName</definition>
+        <argsstring>(UInt iIndex) const </argsstring>
+        <name>GetInputName</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="226"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d2d/classShaderProgram_1ae003d9fb1a864d73d0d8adecdb11c021" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="dd/d99/ShaderProgram_8h_1a594961042adbb3b086eb538765c48a56" kindref="member">ShaderVarType</ref></type>
+        <definition>ShaderVarType GetInputType</definition>
+        <argsstring>(UInt iIndex) const </argsstring>
+        <name>GetInputType</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="227"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d2d/classShaderProgram_1abd3274ac09c0e984ba3666a7967cfedf" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="dd/d99/ShaderProgram_8h_1ab5d7667f025a13e54fc37adedd231794" kindref="member">ShaderVarSemantic</ref></type>
+        <definition>ShaderVarSemantic GetInputSemantic</definition>
+        <argsstring>(UInt iIndex) const </argsstring>
+        <name>GetInputSemantic</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="228"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d2d/classShaderProgram_1ad95db115b10bceb3b6e3a7ee61fa566c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetOutputCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetOutputCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="230"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d2d/classShaderProgram_1abcfa4b899e9b8d0b6cb82c457ddefeb7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+        <definition>const GChar* GetOutputName</definition>
+        <argsstring>(UInt iIndex) const </argsstring>
+        <name>GetOutputName</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="231"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d2d/classShaderProgram_1a249ca530d9528b7210e9fd6c17ed8592" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="dd/d99/ShaderProgram_8h_1a594961042adbb3b086eb538765c48a56" kindref="member">ShaderVarType</ref></type>
+        <definition>ShaderVarType GetOutputType</definition>
+        <argsstring>(UInt iIndex) const </argsstring>
+        <name>GetOutputType</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="232"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d2d/classShaderProgram_1ac1ad89f6a94f6ea2c8710941f03a24b1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="dd/d99/ShaderProgram_8h_1ab5d7667f025a13e54fc37adedd231794" kindref="member">ShaderVarSemantic</ref></type>
+        <definition>ShaderVarSemantic GetOutputSemantic</definition>
+        <argsstring>(UInt iIndex) const </argsstring>
+        <name>GetOutputSemantic</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="233"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d2d/classShaderProgram_1a74638d02f19da1c627e3edefd59c0642" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetConstantCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetConstantCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="235"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d2d/classShaderProgram_1af6ea668505b75b7949a77474c831b2bd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+        <definition>const GChar* GetConstantName</definition>
+        <argsstring>(UInt iIndex) const </argsstring>
+        <name>GetConstantName</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="236"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d2d/classShaderProgram_1a424c02f5808a060a9d716388e4353ae7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetConstantBaseReg</definition>
+        <argsstring>(UInt iIndex, UInt iProfile) const </argsstring>
+        <name>GetConstantBaseReg</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iProfile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="237"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d2d/classShaderProgram_1afb61bac12d0139fa14125b4c50efe3bd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetConstantRegCount</definition>
+        <argsstring>(UInt iIndex) const </argsstring>
+        <name>GetConstantRegCount</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="238"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d2d/classShaderProgram_1aeee33ef1dc45125ec690126037b159f6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetSamplerCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetSamplerCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="240"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d2d/classShaderProgram_1abc2e2dec809cbbf57f7fc08cd5f7e304" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+        <definition>const GChar* GetSamplerName</definition>
+        <argsstring>(UInt iIndex) const </argsstring>
+        <name>GetSamplerName</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="241"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d2d/classShaderProgram_1a8033c79d4e93c704b76e5b5e57217745" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="dd/d99/ShaderProgram_8h_1a5f98c29ac15de3b2713c200368c482d1" kindref="member">ShaderSamplingType</ref></type>
+        <definition>ShaderSamplingType GetSamplerType</definition>
+        <argsstring>(UInt iIndex) const </argsstring>
+        <name>GetSamplerType</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="242"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d2d/classShaderProgram_1a5357a9bc7f61dba18f32f4c32e33fac5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="dd/d99/ShaderProgram_8h_1a4e4fcef9f4cc9a41331b7710e486d042" kindref="member">ShaderSamplingWrapMode</ref> *</type>
+        <definition>const ShaderSamplingWrapMode* GetSamplerWrapMode</definition>
+        <argsstring>(UInt iIndex) const </argsstring>
+        <name>GetSamplerWrapMode</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="243"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d2d/classShaderProgram_1a53c8065ca4a71d95de2ce3affe2158c6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="dd/d99/ShaderProgram_8h_1a4e4fcef9f4cc9a41331b7710e486d042" kindref="member">ShaderSamplingWrapMode</ref></type>
+        <definition>ShaderSamplingWrapMode GetSamplerWrapMode</definition>
+        <argsstring>(UInt iIndex, UInt iDim) const </argsstring>
+        <name>GetSamplerWrapMode</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iDim</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="244"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d2d/classShaderProgram_1a50e4061035934ff68f3b26c3a846d5be" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="dd/d99/ShaderProgram_8h_1a59ad6a111bbb8781c6eed45613a2c36b" kindref="member">ShaderSamplingFilter</ref></type>
+        <definition>ShaderSamplingFilter GetSamplerFilter</definition>
+        <argsstring>(UInt iIndex) const </argsstring>
+        <name>GetSamplerFilter</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="245"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d2d/classShaderProgram_1ad53db81a9651f43a25420f3507792d27" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref></type>
+        <definition>Float GetSamplerLODBias</definition>
+        <argsstring>(UInt iIndex) const </argsstring>
+        <name>GetSamplerLODBias</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="246"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d2d/classShaderProgram_1a1f8369a5a5f07a80014a51c4ff71e669" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref></type>
+        <definition>Float GetSamplerAnisotropy</definition>
+        <argsstring>(UInt iIndex) const </argsstring>
+        <name>GetSamplerAnisotropy</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="247"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d2d/classShaderProgram_1a2566c070976de50fd54cdbcfeb373330" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord GetSamplerBorderColor</definition>
+        <argsstring>(UInt iIndex) const </argsstring>
+        <name>GetSamplerBorderColor</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="248"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d2d/classShaderProgram_1a3f236ba6daaced3ff2ee01476574e5f7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetSamplerTextureUnit</definition>
+        <argsstring>(UInt iIndex, UInt iProfile) const </argsstring>
+        <name>GetSamplerTextureUnit</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iProfile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="249"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d2d/classShaderProgram_1ae4688b20ca217b4b38b69882727ce57b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a92009681dba35a2a92297d218d095fab" kindref="member">AChar</ref> *</type>
+        <definition>const AChar* GetProgramText</definition>
+        <argsstring>(UInt iProfile) const </argsstring>
+        <name>GetProgramText</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iProfile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="251"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="11124">
+        <label>VertexShaderProgram</label>
+        <link refid="dc/dfc/classVertexShaderProgram"/>
+        <childnode refid="11122" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11123">
+        <label>PixelShaderProgram</label>
+        <link refid="d1/dc0/classPixelShaderProgram"/>
+        <childnode refid="11122" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11122">
+        <label>ShaderProgram</label>
+        <link refid="d0/d2d/classShaderProgram"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="11138">
+        <label>ShaderProgramConstant</label>
+        <link refid="d2/d9e/structShaderProgramConstant"/>
+        <childnode refid="11127" relation="usage">
+          <edgelabel>strName</edgelabel>
+        </childnode>
+        <childnode refid="11131" relation="usage">
+          <edgelabel>iRegisterCount</edgelabel>
+          <edgelabel>iBaseRegister</edgelabel>
+        </childnode>
+      </node>
+      <node id="11135">
+        <label>float</label>
+      </node>
+      <node id="11137">
+        <label>ULong</label>
+      </node>
+      <node id="11129">
+        <label>ShaderVarType</label>
+      </node>
+      <node id="11132">
+        <label>ShaderProgramSampler</label>
+        <link refid="d5/d69/structShaderProgramSampler"/>
+        <childnode refid="11133" relation="usage">
+          <edgelabel>iType</edgelabel>
+        </childnode>
+        <childnode refid="11134" relation="usage">
+          <edgelabel>iWrapMode</edgelabel>
+        </childnode>
+        <childnode refid="11135" relation="usage">
+          <edgelabel>fLODBias</edgelabel>
+          <edgelabel>fAnisotropy</edgelabel>
+        </childnode>
+        <childnode refid="11127" relation="usage">
+          <edgelabel>strName</edgelabel>
+        </childnode>
+        <childnode refid="11136" relation="usage">
+          <edgelabel>iFilter</edgelabel>
+        </childnode>
+        <childnode refid="11131" relation="usage">
+          <edgelabel>iTextureUnit</edgelabel>
+        </childnode>
+        <childnode refid="11137" relation="usage">
+          <edgelabel>dwBorderColor</edgelabel>
+        </childnode>
+      </node>
+      <node id="11131">
+        <label>int</label>
+      </node>
+      <node id="11133">
+        <label>ShaderSamplingType</label>
+      </node>
+      <node id="11128">
+        <label>ShaderVarSemantic</label>
+      </node>
+      <node id="11130">
+        <label>ShaderProgramOutputVar</label>
+        <link refid="df/df0/structShaderProgramOutputVar"/>
+        <childnode refid="11127" relation="usage">
+          <edgelabel>strName</edgelabel>
+        </childnode>
+        <childnode refid="11128" relation="usage">
+          <edgelabel>iSemantic</edgelabel>
+        </childnode>
+        <childnode refid="11129" relation="usage">
+          <edgelabel>iType</edgelabel>
+        </childnode>
+      </node>
+      <node id="11136">
+        <label>ShaderSamplingFilter</label>
+      </node>
+      <node id="11125">
+        <label>ShaderProgram</label>
+        <link refid="d0/d2d/classShaderProgram"/>
+        <childnode refid="11126" relation="usage">
+          <edgelabel>m_arrInputs</edgelabel>
+        </childnode>
+        <childnode refid="11127" relation="usage">
+          <edgelabel>m_arrProgramTexts</edgelabel>
+          <edgelabel>m_strProgramName</edgelabel>
+        </childnode>
+        <childnode refid="11130" relation="usage">
+          <edgelabel>m_arrOutputs</edgelabel>
+        </childnode>
+        <childnode refid="11131" relation="usage">
+          <edgelabel>m_iSamplerCount</edgelabel>
+          <edgelabel>m_iInputCount</edgelabel>
+          <edgelabel>m_iOutputCount</edgelabel>
+          <edgelabel>m_iConstantCount</edgelabel>
+        </childnode>
+        <childnode refid="11132" relation="usage">
+          <edgelabel>m_arrSamplers</edgelabel>
+        </childnode>
+        <childnode refid="11138" relation="usage">
+          <edgelabel>m_arrConstants</edgelabel>
+        </childnode>
+      </node>
+      <node id="11127">
+        <label>char</label>
+      </node>
+      <node id="11126">
+        <label>ShaderProgramInputVar</label>
+        <link refid="d9/dbd/structShaderProgramInputVar"/>
+        <childnode refid="11127" relation="usage">
+          <edgelabel>strName</edgelabel>
+        </childnode>
+        <childnode refid="11128" relation="usage">
+          <edgelabel>iSemantic</edgelabel>
+        </childnode>
+        <childnode refid="11129" relation="usage">
+          <edgelabel>iType</edgelabel>
+        </childnode>
+      </node>
+      <node id="11134">
+        <label>ShaderSamplingWrapMode</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" line="200" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Shaders/ShaderProgram.h" bodystart="199" bodyend="269"/>
+    <listofallmembers>
+      <member refid="d0/d2d/classShaderProgram_1a424c02f5808a060a9d716388e4353ae7" prot="public" virt="non-virtual"><scope>ShaderProgram</scope><name>GetConstantBaseReg</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a74638d02f19da1c627e3edefd59c0642" prot="public" virt="non-virtual"><scope>ShaderProgram</scope><name>GetConstantCount</name></member>
+      <member refid="d0/d2d/classShaderProgram_1af6ea668505b75b7949a77474c831b2bd" prot="public" virt="non-virtual"><scope>ShaderProgram</scope><name>GetConstantName</name></member>
+      <member refid="d0/d2d/classShaderProgram_1afb61bac12d0139fa14125b4c50efe3bd" prot="public" virt="non-virtual"><scope>ShaderProgram</scope><name>GetConstantRegCount</name></member>
+      <member refid="d0/d2d/classShaderProgram_1ac588fbca3cfb1aa8a0e82e07f8911e1b" prot="public" virt="non-virtual"><scope>ShaderProgram</scope><name>GetInputCount</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a41c5744a4b32a4bd40a22e1d38c9e103" prot="public" virt="non-virtual"><scope>ShaderProgram</scope><name>GetInputName</name></member>
+      <member refid="d0/d2d/classShaderProgram_1abd3274ac09c0e984ba3666a7967cfedf" prot="public" virt="non-virtual"><scope>ShaderProgram</scope><name>GetInputSemantic</name></member>
+      <member refid="d0/d2d/classShaderProgram_1ae003d9fb1a864d73d0d8adecdb11c021" prot="public" virt="non-virtual"><scope>ShaderProgram</scope><name>GetInputType</name></member>
+      <member refid="d0/d2d/classShaderProgram_1ad95db115b10bceb3b6e3a7ee61fa566c" prot="public" virt="non-virtual"><scope>ShaderProgram</scope><name>GetOutputCount</name></member>
+      <member refid="d0/d2d/classShaderProgram_1abcfa4b899e9b8d0b6cb82c457ddefeb7" prot="public" virt="non-virtual"><scope>ShaderProgram</scope><name>GetOutputName</name></member>
+      <member refid="d0/d2d/classShaderProgram_1ac1ad89f6a94f6ea2c8710941f03a24b1" prot="public" virt="non-virtual"><scope>ShaderProgram</scope><name>GetOutputSemantic</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a249ca530d9528b7210e9fd6c17ed8592" prot="public" virt="non-virtual"><scope>ShaderProgram</scope><name>GetOutputType</name></member>
+      <member refid="d0/d2d/classShaderProgram_1ae4688b20ca217b4b38b69882727ce57b" prot="public" virt="non-virtual"><scope>ShaderProgram</scope><name>GetProgramText</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a1f8369a5a5f07a80014a51c4ff71e669" prot="public" virt="non-virtual"><scope>ShaderProgram</scope><name>GetSamplerAnisotropy</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a2566c070976de50fd54cdbcfeb373330" prot="public" virt="non-virtual"><scope>ShaderProgram</scope><name>GetSamplerBorderColor</name></member>
+      <member refid="d0/d2d/classShaderProgram_1aeee33ef1dc45125ec690126037b159f6" prot="public" virt="non-virtual"><scope>ShaderProgram</scope><name>GetSamplerCount</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a50e4061035934ff68f3b26c3a846d5be" prot="public" virt="non-virtual"><scope>ShaderProgram</scope><name>GetSamplerFilter</name></member>
+      <member refid="d0/d2d/classShaderProgram_1ad53db81a9651f43a25420f3507792d27" prot="public" virt="non-virtual"><scope>ShaderProgram</scope><name>GetSamplerLODBias</name></member>
+      <member refid="d0/d2d/classShaderProgram_1abc2e2dec809cbbf57f7fc08cd5f7e304" prot="public" virt="non-virtual"><scope>ShaderProgram</scope><name>GetSamplerName</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a3f236ba6daaced3ff2ee01476574e5f7" prot="public" virt="non-virtual"><scope>ShaderProgram</scope><name>GetSamplerTextureUnit</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a8033c79d4e93c704b76e5b5e57217745" prot="public" virt="non-virtual"><scope>ShaderProgram</scope><name>GetSamplerType</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a5357a9bc7f61dba18f32f4c32e33fac5" prot="public" virt="non-virtual"><scope>ShaderProgram</scope><name>GetSamplerWrapMode</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a53c8065ca4a71d95de2ce3affe2158c6" prot="public" virt="non-virtual"><scope>ShaderProgram</scope><name>GetSamplerWrapMode</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a7959e2c9a815669537b72814c0cd6e4a" prot="protected" virt="non-virtual"><scope>ShaderProgram</scope><name>m_arrConstants</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a59300c30cd7b84b5bc22ac19ead0fac5" prot="protected" virt="non-virtual"><scope>ShaderProgram</scope><name>m_arrInputs</name></member>
+      <member refid="d0/d2d/classShaderProgram_1ad03aecb7b9e81661c506d80db9fc0615" prot="protected" virt="non-virtual"><scope>ShaderProgram</scope><name>m_arrOutputs</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a7979b815b17ba7bf0ba6081d6425e057" prot="protected" virt="non-virtual"><scope>ShaderProgram</scope><name>m_arrProgramTexts</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a47c4dbb9067b54403bf3c8fcb2cbe941" prot="protected" virt="non-virtual"><scope>ShaderProgram</scope><name>m_arrSamplers</name></member>
+      <member refid="d0/d2d/classShaderProgram_1ac80b1927f8154305928fbbd392e78591" prot="protected" virt="non-virtual"><scope>ShaderProgram</scope><name>m_iConstantCount</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a341c068ba27c529139a293337be99e8c" prot="protected" virt="non-virtual"><scope>ShaderProgram</scope><name>m_iInputCount</name></member>
+      <member refid="d0/d2d/classShaderProgram_1abf20a9edd05b6e7e990ebed6cabed545" prot="protected" virt="non-virtual"><scope>ShaderProgram</scope><name>m_iOutputCount</name></member>
+      <member refid="d0/d2d/classShaderProgram_1af0ab0d89b93e705587b0aba751ca4b18" prot="protected" virt="non-virtual"><scope>ShaderProgram</scope><name>m_iSamplerCount</name></member>
+      <member refid="d0/d2d/classShaderProgram_1aa58700e31708b48fe788eec60be11bd9" prot="protected" virt="non-virtual"><scope>ShaderProgram</scope><name>m_strProgramName</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a3352333dee152946a3f87a3c610d45b2" prot="public" virt="non-virtual"><scope>ShaderProgram</scope><name>SetConstant</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a21e8803a2a26eb2cb153529954d5c479" prot="public" virt="non-virtual"><scope>ShaderProgram</scope><name>SetConstantBaseReg</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a2aa91ec158f3a1b3bbec34fcd4aed03d" prot="public" virt="non-virtual"><scope>ShaderProgram</scope><name>SetInput</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a575956760ffe5d4e360a5ba265589e27" prot="public" virt="non-virtual"><scope>ShaderProgram</scope><name>SetOutput</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a7fe540560c8cdec422c161713f72f03e" prot="public" virt="non-virtual"><scope>ShaderProgram</scope><name>SetProgramText</name></member>
+      <member refid="d0/d2d/classShaderProgram_1ac9770536bc1bcd67a4c5eb9417436da7" prot="public" virt="non-virtual"><scope>ShaderProgram</scope><name>SetSampler</name></member>
+      <member refid="d0/d2d/classShaderProgram_1aca61dabbb85b30954bd6273c05531b16" prot="public" virt="non-virtual"><scope>ShaderProgram</scope><name>SetSamplerAnisotropy</name></member>
+      <member refid="d0/d2d/classShaderProgram_1ad915cffb28ded8fd36969d7c267088bc" prot="public" virt="non-virtual"><scope>ShaderProgram</scope><name>SetSamplerBorderColor</name></member>
+      <member refid="d0/d2d/classShaderProgram_1aa6ca650c19a838c92cac126ed510be4c" prot="public" virt="non-virtual"><scope>ShaderProgram</scope><name>SetSamplerFilter</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a5f425908a3d7025cd726955e7b662dd4" prot="public" virt="non-virtual"><scope>ShaderProgram</scope><name>SetSamplerLODBias</name></member>
+      <member refid="d0/d2d/classShaderProgram_1add8c97a28c702f831925e93770426ea7" prot="public" virt="non-virtual"><scope>ShaderProgram</scope><name>SetSamplerTextureUnit</name></member>
+      <member refid="d0/d2d/classShaderProgram_1ad2e03b947bba6c9ce81cd1e1cd163017" prot="public" virt="non-virtual"><scope>ShaderProgram</scope><name>SetSamplerWrapMode</name></member>
+      <member refid="d0/d2d/classShaderProgram_1a41aec7b1f376573338d99f75fff3d956" prot="public" virt="non-virtual"><scope>ShaderProgram</scope><name>ShaderProgram</name></member>
+      <member refid="d0/d2d/classShaderProgram_1afd638be5c36a62fe9310baa04e8ca464" prot="public" virt="virtual"><scope>ShaderProgram</scope><name>~ShaderProgram</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

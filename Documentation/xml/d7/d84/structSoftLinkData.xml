@@ -1,0 +1,225 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d7/d84/structSoftLinkData" kind="struct" prot="public">
+    <compoundname>SoftLinkData</compoundname>
+    <includes refid="d1/d3a/SoftConstraintSolver_8h" local="no">SoftConstraintSolver.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d7/d84/structSoftLinkData_1ad9c9b80fc1eea226c0934207d9096ede" prot="public" static="no" mutable="no">
+        <type><ref refid="d2/db4/classSoftBody_1_1Link" kindref="compound">SoftBody::Link</ref> *</type>
+        <definition>SoftBody::Link* pLink</definition>
+        <argsstring></argsstring>
+        <name>pLink</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/ConstraintSolver/SoftConstraintSolver.h" line="60" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/ConstraintSolver/SoftConstraintSolver.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d84/structSoftLinkData_1a2a50b8e981049e4a9fddd5c3830f0bab" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d8c/Vector3_8h_1ae41a346113f53aca343378c1c0ff4137" kindref="member">Vector3</ref></type>
+        <definition>Vector3 vGradient</definition>
+        <argsstring></argsstring>
+        <name>vGradient</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/ConstraintSolver/SoftConstraintSolver.h" line="62" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/ConstraintSolver/SoftConstraintSolver.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d84/structSoftLinkData_1abc2a8148ee05848fe63a015df6a69c43" prot="public" static="no" mutable="no">
+        <type><ref refid="d0/d10/Scalar_8h_1abee0aca51a3a3e16c628155aa4ac6f12" kindref="member">Scalar</ref></type>
+        <definition>Scalar fGradientFactor</definition>
+        <argsstring></argsstring>
+        <name>fGradientFactor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/ConstraintSolver/SoftConstraintSolver.h" line="63" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/ConstraintSolver/SoftConstraintSolver.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="11955">
+        <label>@1</label>
+      </node>
+      <node id="11952">
+        <label>MeshFeature</label>
+        <link refid="dc/dcb/classMeshFeature"/>
+      </node>
+      <node id="11954">
+        <label>MeshFeatureKey</label>
+        <link refid="dc/d22/classMeshFeatureKey"/>
+      </node>
+      <node id="11949">
+        <label>MeshEdgeManifold2_V</label>
+        <link refid="d6/d87/classMeshEdgeManifold2__V"/>
+        <childnode refid="11950" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11957">
+        <label>Material</label>
+        <link refid="d2/d10/structMaterial"/>
+        <childnode refid="11958" relation="usage">
+          <edgelabel>Specular</edgelabel>
+          <edgelabel>Ambient</edgelabel>
+          <edgelabel>Emissive</edgelabel>
+          <edgelabel>Diffuse</edgelabel>
+        </childnode>
+        <childnode refid="11945" relation="usage">
+          <edgelabel>fAreaStiffness</edgelabel>
+          <edgelabel>fAngularStiffness</edgelabel>
+          <edgelabel>fLinearStiffness</edgelabel>
+          <edgelabel>fVolumeStiffness</edgelabel>
+        </childnode>
+        <childnode refid="11959" relation="usage">
+          <edgelabel>dwFlags</edgelabel>
+        </childnode>
+      </node>
+      <node id="11945">
+        <label>float</label>
+      </node>
+      <node id="11953">
+        <label>MeshEdgeKey</label>
+        <link refid="db/dab/classMeshEdgeKey"/>
+        <childnode refid="11954" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11955" relation="usage">
+          <edgelabel>@2</edgelabel>
+        </childnode>
+        <childnode refid="11953" relation="usage">
+          <edgelabel>Null</edgelabel>
+        </childnode>
+        <childnode refid="11956" relation="usage">
+          <edgelabel>V</edgelabel>
+          <edgelabel>A</edgelabel>
+          <edgelabel>B</edgelabel>
+        </childnode>
+      </node>
+      <node id="11958">
+        <label>TColor4&lt; Scalar &gt;</label>
+        <link refid="d1/d1a/classTColor4"/>
+        <childnode refid="11958" relation="usage">
+          <edgelabel>Yellow</edgelabel>
+          <edgelabel>DarkGray</edgelabel>
+          <edgelabel>Magenta</edgelabel>
+          <edgelabel>White</edgelabel>
+          <edgelabel>LightGray</edgelabel>
+          <edgelabel>Blue</edgelabel>
+          <edgelabel>Black</edgelabel>
+          <edgelabel>Red</edgelabel>
+          <edgelabel>Cyan</edgelabel>
+          <edgelabel>Green</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="11945" relation="usage">
+          <edgelabel>ONE</edgelabel>
+          <edgelabel>G</edgelabel>
+          <edgelabel>ZERO</edgelabel>
+          <edgelabel>A</edgelabel>
+          <edgelabel>R</edgelabel>
+          <edgelabel>B</edgelabel>
+        </childnode>
+      </node>
+      <node id="11959">
+        <label>ULong</label>
+      </node>
+      <node id="11948">
+        <label>Edge</label>
+        <link refid="dc/d0b/classTMeshDeformableGraph_1_1Edge"/>
+        <childnode refid="11949" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11956">
+        <label>int</label>
+      </node>
+      <node id="11944">
+        <label>Scalar</label>
+      </node>
+      <node id="11943">
+        <label>TVector3&lt; Scalar &gt;</label>
+        <link refid="de/d40/classTVector3"/>
+        <childnode refid="11943" relation="usage">
+          <edgelabel>Null</edgelabel>
+          <edgelabel>eI</edgelabel>
+          <edgelabel>eJ</edgelabel>
+          <edgelabel>eK</edgelabel>
+        </childnode>
+        <childnode refid="11944" relation="usage">
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+          <edgelabel>Z</edgelabel>
+        </childnode>
+      </node>
+      <node id="11947">
+        <label>Link</label>
+        <link refid="de/d0b/classShapeDeformable_1_1Link"/>
+        <childnode refid="11948" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11946">
+        <label>Link</label>
+        <link refid="d2/db4/classSoftBody_1_1Link"/>
+        <childnode refid="11947" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11957" relation="usage">
+          <edgelabel>pMaterial</edgelabel>
+        </childnode>
+        <childnode refid="11945" relation="usage">
+          <edgelabel>RestLength</edgelabel>
+          <edgelabel>LinearFactor</edgelabel>
+          <edgelabel>SqrRestLength</edgelabel>
+        </childnode>
+        <childnode refid="11960" relation="usage">
+          <edgelabel>IsBridge</edgelabel>
+        </childnode>
+      </node>
+      <node id="11942">
+        <label>SoftLinkData</label>
+        <link refid="d7/d84/structSoftLinkData"/>
+        <childnode refid="11943" relation="usage">
+          <edgelabel>vGradient</edgelabel>
+        </childnode>
+        <childnode refid="11945" relation="usage">
+          <edgelabel>fGradientFactor</edgelabel>
+        </childnode>
+        <childnode refid="11946" relation="usage">
+          <edgelabel>pLink</edgelabel>
+        </childnode>
+      </node>
+      <node id="11950">
+        <label>MeshEdgeManifold2</label>
+        <link refid="d1/dda/classMeshEdgeManifold2"/>
+        <childnode refid="11951" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11960">
+        <label>bool</label>
+      </node>
+      <node id="11951">
+        <label>MeshEdge</label>
+        <link refid="d7/da3/classMeshEdge"/>
+        <childnode refid="11952" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11953" relation="usage">
+          <edgelabel>Key</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/ConstraintSolver/SoftConstraintSolver.h" line="59" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/ConstraintSolver/SoftConstraintSolver.h" bodystart="58" bodyend="64"/>
+    <listofallmembers>
+      <member refid="d7/d84/structSoftLinkData_1abc2a8148ee05848fe63a015df6a69c43" prot="public" virt="non-virtual"><scope>SoftLinkData</scope><name>fGradientFactor</name></member>
+      <member refid="d7/d84/structSoftLinkData_1ad9c9b80fc1eea226c0934207d9096ede" prot="public" virt="non-virtual"><scope>SoftLinkData</scope><name>pLink</name></member>
+      <member refid="d7/d84/structSoftLinkData_1a2a50b8e981049e4a9fddd5c3830f0bab" prot="public" virt="non-virtual"><scope>SoftLinkData</scope><name>vGradient</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

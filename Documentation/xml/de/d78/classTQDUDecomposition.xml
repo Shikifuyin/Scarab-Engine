@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="de/d78/classTQDUDecomposition" kind="class" prot="public">
+    <compoundname>TQDUDecomposition</compoundname>
+    <includes refid="d8/d66/QDUDecomposition_8h" local="no">QDUDecomposition.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename Real</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="de/d78/classTQDUDecomposition_1a861ab6a3627bfe53ae2453e2a5e1fca8" prot="private" static="yes" mutable="no">
+        <type>const Real</type>
+        <definition>const Real ZERO</definition>
+        <argsstring></argsstring>
+        <name>ZERO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/QDUDecomposition.h" line="51" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/QDUDecomposition.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d78/classTQDUDecomposition_1acac09fd02521e2a1297f6dde618fb5ca" prot="private" static="yes" mutable="no">
+        <type>const Real</type>
+        <definition>const Real ONE</definition>
+        <argsstring></argsstring>
+        <name>ONE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/QDUDecomposition.h" line="52" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/QDUDecomposition.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="de/d78/classTQDUDecomposition_1a3af13867714243b0bfa096d0a592a5ee" prot="private" static="no" mutable="no">
+        <type><ref refid="d7/dee/classTMatrix3" kindref="compound">TMatrix3</ref>&lt; Real &gt;</type>
+        <definition>TMatrix3&lt;Real&gt; m_matRotation</definition>
+        <argsstring></argsstring>
+        <name>m_matRotation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/QDUDecomposition.h" line="54" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/QDUDecomposition.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="de/d78/classTQDUDecomposition_1a68e34f674c9f228e340bbddc91bb3708" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TQDUDecomposition</definition>
+        <argsstring>(const TMatrix3&lt; Real &gt; &amp;matRotation)</argsstring>
+        <name>TQDUDecomposition</name>
+        <param>
+          <type>const <ref refid="d7/dee/classTMatrix3" kindref="compound">TMatrix3</ref>&lt; Real &gt; &amp;</type>
+          <declname>matRotation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/QDUDecomposition.h" line="41"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d78/classTQDUDecomposition_1a7388dd14383c71e546b40e660d26dadc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~TQDUDecomposition</definition>
+        <argsstring>()</argsstring>
+        <name>~TQDUDecomposition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/QDUDecomposition.h" line="42"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d78/classTQDUDecomposition_1a8bfd9378d94407dc8832e2821ce38819" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Compute</definition>
+        <argsstring>(TMatrix3&lt; Real &gt; &amp;outQ, TMatrix3&lt; Real &gt; &amp;outD, TMatrix3&lt; Real &gt; &amp;outU) const </argsstring>
+        <name>Compute</name>
+        <param>
+          <type><ref refid="d7/dee/classTMatrix3" kindref="compound">TMatrix3</ref>&lt; Real &gt; &amp;</type>
+          <declname>outQ</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/dee/classTMatrix3" kindref="compound">TMatrix3</ref>&lt; Real &gt; &amp;</type>
+          <declname>outD</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/dee/classTMatrix3" kindref="compound">TMatrix3</ref>&lt; Real &gt; &amp;</type>
+          <declname>outU</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/QDUDecomposition.h" line="48"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="12907">
+        <label>Real</label>
+      </node>
+      <node id="12905">
+        <label>TQDUDecomposition&lt; Real &gt;</label>
+        <link refid="de/d78/classTQDUDecomposition"/>
+        <childnode refid="12906" relation="usage">
+          <edgelabel>m_matRotation</edgelabel>
+        </childnode>
+        <childnode refid="12907" relation="usage">
+          <edgelabel>ONE</edgelabel>
+          <edgelabel>ZERO</edgelabel>
+        </childnode>
+      </node>
+      <node id="12906">
+        <label>TMatrix3&lt; Real &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/QDUDecomposition.h" line="39" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/QDUDecomposition.h" bodystart="38" bodyend="55"/>
+    <listofallmembers>
+      <member refid="de/d78/classTQDUDecomposition_1a8bfd9378d94407dc8832e2821ce38819" prot="public" virt="non-virtual"><scope>TQDUDecomposition</scope><name>Compute</name></member>
+      <member refid="de/d78/classTQDUDecomposition_1a3af13867714243b0bfa096d0a592a5ee" prot="private" virt="non-virtual"><scope>TQDUDecomposition</scope><name>m_matRotation</name></member>
+      <member refid="de/d78/classTQDUDecomposition_1acac09fd02521e2a1297f6dde618fb5ca" prot="private" virt="non-virtual"><scope>TQDUDecomposition</scope><name>ONE</name></member>
+      <member refid="de/d78/classTQDUDecomposition_1a68e34f674c9f228e340bbddc91bb3708" prot="public" virt="non-virtual"><scope>TQDUDecomposition</scope><name>TQDUDecomposition</name></member>
+      <member refid="de/d78/classTQDUDecomposition_1a861ab6a3627bfe53ae2453e2a5e1fca8" prot="private" virt="non-virtual"><scope>TQDUDecomposition</scope><name>ZERO</name></member>
+      <member refid="de/d78/classTQDUDecomposition_1a7388dd14383c71e546b40e660d26dadc" prot="public" virt="non-virtual"><scope>TQDUDecomposition</scope><name>~TQDUDecomposition</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,458 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="df/d0a/Macros_8h" kind="file">
+    <compoundname>Macros.h</compoundname>
+    <includedby refid="d6/d2f/Reflect_8h" local="yes">Reflect.h</includedby>
+    <invincdepgraph>
+      <node id="21297">
+        <label>Object.h</label>
+        <link refid="db/dbf/Object_8h"/>
+      </node>
+      <node id="21296">
+        <label>Reflect.h</label>
+        <link refid="d6/d2f/Reflect_8h"/>
+        <childnode refid="21297" relation="include">
+        </childnode>
+      </node>
+      <node id="21295">
+        <label>Macros.h</label>
+        <link refid="Macros.h"/>
+        <childnode refid="21296" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="df/d0a/Macros_8h_1ad13c70af73d4c1bbd5b7fbd1e3f62936" prot="public" static="no">
+        <name>ReflectDeclareClass</name>
+        <initializer>public: \
+        virtual <ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * _Reflect_VirtualCast(const <ref refid="dc/d74/class__Reflection_1_1ClassDescriptor" kindref="compound">_Reflection::ClassDescriptor</ref> *); \
+        inline static  <ref refid="dc/d74/class__Reflection_1_1ClassDescriptor" kindref="compound">_Reflection::ClassDescriptor</ref> * _Reflect_StaticGet() { return &amp;_Reflect_Class; } \
+		inline virtual <ref refid="dc/d74/class__Reflection_1_1ClassDescriptor" kindref="compound">_Reflection::ClassDescriptor</ref> * _Reflect_VirtualGet() const { return &amp;_Reflect_Class; } \
+    protected: \
+        static <ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * _Reflect_StaticCast(<ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref>*, <ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref>); \
+        static <ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * _Reflect_Construct(); \
+        static <ref refid="dc/d74/class__Reflection_1_1ClassDescriptor" kindref="compound">_Reflection::ClassDescriptor</ref> _Reflect_Class;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Macros.h" line="38" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Macros.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d0a/Macros_8h_1a3acdc63ea52f255589e9bdb7ff33f85c" prot="public" static="no">
+        <name>ReflectDefineClass_0</name>
+        <param><defname>_class</defname></param>
+        <param><defname>_typemod</defname></param>
+        <param><defname>_classmod</defname></param>
+        <param><defname>_alloc_method</defname></param>
+        <initializer><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * _class::_Reflect_VirtualCast(const <ref refid="dc/d74/class__Reflection_1_1ClassDescriptor" kindref="compound">_Reflection::ClassDescriptor</ref> * pType) { \
+		if (pType == &amp;_Reflect_Class) return this; \
+		return <ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>; \
+	} \
+    <ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * _class::_Reflect_StaticCast(<ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * pInstance, <ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref>) { \
+		_class * pCasted = (_class*)pInstance; \
+        return pCasted; \
+	} \
+    <ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * _class::_Reflect_Construct() { \
+        return _alloc_method _class; \
+    } \
+    static <ref refid="dc/d74/class__Reflection_1_1ClassDescriptor" kindref="compound">_Reflection::ClassDescriptor</ref> * _Reflect_Class_arrParents_ ## _class [] = { \
+        <ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref> \
+    }; \
+    <ref refid="dc/d74/class__Reflection_1_1ClassDescriptor" kindref="compound">_Reflection::ClassDescriptor</ref> _class::_Reflect_Class ( \
+        <ref refid="da/d27/namespace__Reflection_1ad95ef2146574f5542e30c0a41d7c74d7" kindref="member">_Reflection::_Builder_Type</ref> ( \
+            <ref refid="d9/dd0/Platform_8h_1a73bc5d2c175e0e221460a8b524c0412b" kindref="member">TEXT</ref>(#_class), <ref refid="df/d3d/Definitions_8h_1ad040ec87d9909535c5ef0a88665988cd" kindref="member">SPECIFIER_TYPE_CLASS</ref>, _typemod, <ref refid="df/d3d/Definitions_8h_1ac7b0587c28c4cad1a5fdcfa93b200c22" kindref="member">SPECIFIER_SCOPE_GLOBAL</ref>, <ref refid="df/d3d/Definitions_8h_1aaf1aa7ab685587e350dae3fcf94cbd18" kindref="member">SPECIFIER_ACCESS_DEFAULT</ref>, \
+            sizeof(_class), _class::_Reflect_StaticCast, _class::_Reflect_Construct, \
+            <ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref> \
+        ), \
+        _classmod, _Reflect_Class_arrParents_ ## _class \
+    );</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Macros.h" line="64" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Macros.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d0a/Macros_8h_1aced90077cea0fc8bb639c0490be310df" prot="public" static="no">
+        <name>ReflectDefineClass_1</name>
+        <param><defname>_class</defname></param>
+        <param><defname>_typemod</defname></param>
+        <param><defname>_classmod</defname></param>
+        <param><defname>_alloc_method</defname></param>
+        <param><defname>_parent0</defname></param>
+        <initializer><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * _class::_Reflect_VirtualCast(const <ref refid="dc/d74/class__Reflection_1_1ClassDescriptor" kindref="compound">_Reflection::ClassDescriptor</ref> * pType) { \
+		if (pType == &amp;_Reflect_Class) return this; \
+        <ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * pPtr = _parent0::_Reflect_VirtualCast(pType); \
+		if (pPtr != <ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>) return pPtr; \
+		return <ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>; \
+	} \
+    <ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * _class::_Reflect_StaticCast(<ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * pInstance, <ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref> iParent) { \
+		_class * pCasted = (_class*)pInstance; \
+        if (iParent == 0) return (_parent0*)pCasted; \
+        return pCasted; \
+	} \
+    <ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * _class::_Reflect_Construct() { \
+        return _alloc_method _class; \
+    } \
+    static <ref refid="dc/d74/class__Reflection_1_1ClassDescriptor" kindref="compound">_Reflection::ClassDescriptor</ref> * _Reflect_Class_arrParents_ ## _class [] = { \
+        _parent0::_Reflect_StaticGet(), <ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref> \
+    }; \
+    <ref refid="dc/d74/class__Reflection_1_1ClassDescriptor" kindref="compound">_Reflection::ClassDescriptor</ref> _class::_Reflect_Class ( \
+        <ref refid="da/d27/namespace__Reflection_1ad95ef2146574f5542e30c0a41d7c74d7" kindref="member">_Reflection::_Builder_Type</ref> ( \
+            <ref refid="d9/dd0/Platform_8h_1a73bc5d2c175e0e221460a8b524c0412b" kindref="member">TEXT</ref>(#_class), <ref refid="df/d3d/Definitions_8h_1ad040ec87d9909535c5ef0a88665988cd" kindref="member">SPECIFIER_TYPE_CLASS</ref>, _typemod, <ref refid="df/d3d/Definitions_8h_1ac7b0587c28c4cad1a5fdcfa93b200c22" kindref="member">SPECIFIER_SCOPE_GLOBAL</ref>, <ref refid="df/d3d/Definitions_8h_1aaf1aa7ab685587e350dae3fcf94cbd18" kindref="member">SPECIFIER_ACCESS_DEFAULT</ref>, \
+            sizeof(_class), _class::_Reflect_StaticCast, _class::_Reflect_Construct, \
+            <ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref> \
+        ), \
+        _classmod, _Reflect_Class_arrParents_ ## _class \
+    );</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Macros.h" line="91" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Macros.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d0a/Macros_8h_1a8a077845b8fd8a6435951e37e1306e45" prot="public" static="no">
+        <name>ReflectDefineNestedClass_0</name>
+        <param><defname>_nestclass</defname></param>
+        <param><defname>_class</defname></param>
+        <param><defname>_typemod</defname></param>
+        <param><defname>_access</defname></param>
+        <param><defname>_classmod</defname></param>
+        <param><defname>_alloc_method</defname></param>
+        <initializer><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * _nestclass::_class::_Reflect_VirtualCast(const <ref refid="dc/d74/class__Reflection_1_1ClassDescriptor" kindref="compound">_Reflection::ClassDescriptor</ref> * pType) { \
+		if (pType == &amp;_Reflect_Class) return this; \
+		return <ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>; \
+	} \
+    <ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * _nestclass::_class::_Reflect_StaticCast(<ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * pInstance, <ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref>) { \
+		_class * pCasted = (_class*)pInstance; \
+        return pCasted; \
+	} \
+    <ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * _nestclass::_class::_Reflect_Construct() { \
+        return _alloc_method _class; \
+    } \
+    static <ref refid="dc/d74/class__Reflection_1_1ClassDescriptor" kindref="compound">_Reflection::ClassDescriptor</ref> * _Reflect_Class_arrParents_ ## _class [] = { <ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref> }; \
+    <ref refid="dc/d74/class__Reflection_1_1ClassDescriptor" kindref="compound">_Reflection::ClassDescriptor</ref> _nestclass::_class::_Reflect_Class ( \
+        <ref refid="da/d27/namespace__Reflection_1ad95ef2146574f5542e30c0a41d7c74d7" kindref="member">_Reflection::_Builder_Type</ref> ( \
+            <ref refid="d9/dd0/Platform_8h_1a73bc5d2c175e0e221460a8b524c0412b" kindref="member">TEXT</ref>(#_class), <ref refid="df/d3d/Definitions_8h_1ad040ec87d9909535c5ef0a88665988cd" kindref="member">SPECIFIER_TYPE_CLASS</ref>, _typemod, <ref refid="df/d3d/Definitions_8h_1a191f469cdb90c696b0763c8ebc97ae18" kindref="member">SPECIFIER_SCOPE_NESTED</ref>, _access, \
+            sizeof(_class), _nestclass::_class::_Reflect_StaticCast, _nestclass::_class::_Reflect_Construct, \
+            _nestclass::_Reflect_StaticGet() \
+        ), \
+        _classmod, _Reflect_Class_arrParents_ ## _class \
+    );</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Macros.h" line="115" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Macros.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d0a/Macros_8h_1aa94aed1860ee08adcf7d3f265b0e92be" prot="public" static="no">
+        <name>ReflectDefineNestedClass_1</name>
+        <param><defname>_nestclass</defname></param>
+        <param><defname>_class</defname></param>
+        <param><defname>_typemod</defname></param>
+        <param><defname>_access</defname></param>
+        <param><defname>_classmod</defname></param>
+        <param><defname>_alloc_method</defname></param>
+        <param><defname>_parent0</defname></param>
+        <initializer><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * _nestclass::_class::_Reflect_VirtualCast(const <ref refid="dc/d74/class__Reflection_1_1ClassDescriptor" kindref="compound">_Reflection::ClassDescriptor</ref> * pType) { \
+		if (pType == &amp;_Reflect_Class) return this; \
+        <ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * pPtr = _parent0::_Reflect_VirtualCast(pType); \
+		if (pPtr != <ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>) return pPtr; \
+		return <ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>; \
+	} \
+    <ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * _nestclass::_class::_Reflect_StaticCast(<ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * pInstance, <ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref> iParent) { \
+		_class * pCasted = (_class*)pInstance; \
+        if (iParent == 0) return (_parent0*)pCasted; \
+        return pCasted; \
+	} \
+    <ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * _nestclass::_class::_Reflect_Construct() { \
+        return _alloc_method _class; \
+    } \
+    static <ref refid="dc/d74/class__Reflection_1_1ClassDescriptor" kindref="compound">_Reflection::ClassDescriptor</ref> * _Reflect_Class_arrParents_ ## _class [] = { \
+        _parent0::_Reflect_StaticGet(), <ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref> \
+    }; \
+    <ref refid="dc/d74/class__Reflection_1_1ClassDescriptor" kindref="compound">_Reflection::ClassDescriptor</ref> _nestclass::_class::_Reflect_Class ( \
+        <ref refid="da/d27/namespace__Reflection_1ad95ef2146574f5542e30c0a41d7c74d7" kindref="member">_Reflection::_Builder_Type</ref> ( \
+            <ref refid="d9/dd0/Platform_8h_1a73bc5d2c175e0e221460a8b524c0412b" kindref="member">TEXT</ref>(#_class), <ref refid="df/d3d/Definitions_8h_1ad040ec87d9909535c5ef0a88665988cd" kindref="member">SPECIFIER_TYPE_CLASS</ref>, _typemod, <ref refid="df/d3d/Definitions_8h_1a191f469cdb90c696b0763c8ebc97ae18" kindref="member">SPECIFIER_SCOPE_NESTED</ref>, _access, \
+            sizeof(_class), _nestclass::_class::_Reflect_StaticCast, _nestclass::_class::_Reflect_Construct, \
+            _nestclass::_Reflect_StaticGet() \
+        ), \
+        _classmod, _Reflect_Class_arrParents_ ## _class \
+    );</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Macros.h" line="142" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Macros.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d0a/Macros_8h_1a2fa9e87494bb900e02baf9c77b806dab" prot="public" static="no">
+        <name>ReflectDeclareMember</name>
+        <param><defname>_member</defname></param>
+        <initializer>protected: \
+        static <ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * _Reflect_Member_Getter_ ## _member( <ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * pInstance ); \
+        static <ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> _Reflect_Member_Setter_ ## _member( <ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * pInstance, <ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * pValue ); \
+        static <ref refid="da/db4/class__Reflection_1_1MemberDescriptor" kindref="compound">_Reflection::MemberDescriptor</ref> _Reflect_Member_ ## _member;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Macros.h" line="150" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Macros.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d0a/Macros_8h_1a9dcfb9a8d418a0d97313d0d9331633f7" prot="public" static="no">
+        <name>ReflectDefineMember</name>
+        <param><defname>_class</defname></param>
+        <param><defname>_member</defname></param>
+        <param><defname>_type</defname></param>
+        <param><defname>_access</defname></param>
+        <initializer><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * _class::_Reflect_Member_Getter_ ## _member( <ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * pInstance ) { \
+        static <ref refid="d8/d89/class__Reflection_1_1Holder" kindref="compound">_Reflection::Holder</ref>&lt;_type&gt; s_hRetVal; \
+	    s_hRetVal = ((_class*)pInstance)-&gt;_member; \
+        return &amp;s_hRetVal; \
+    } \
+    <ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> _class::_Reflect_Member_Setter_ ## _member( <ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * pInstance, <ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * pValue ) { \
+        <ref refid="d8/d89/class__Reflection_1_1Holder" kindref="compound">_Reflection::Holder</ref>&lt;_type&gt; * pArg = (<ref refid="d8/d89/class__Reflection_1_1Holder" kindref="compound">_Reflection::Holder</ref>&lt;_type&gt;*)pValue; \
+	    ((_class*)pInstance)-&gt;_member = *pArg; \
+    } \
+    <ref refid="da/db4/class__Reflection_1_1MemberDescriptor" kindref="compound">_Reflection::MemberDescriptor</ref> _class::_Reflect_Member_ ## _member ( \
+        <ref refid="da/d27/namespace__Reflection_1aff3119d651c38545f218137bc3fcd7ee" kindref="member">_Reflection::_Builder_Member</ref> ( \
+            <ref refid="d9/dd0/Platform_8h_1a73bc5d2c175e0e221460a8b524c0412b" kindref="member">TEXT</ref>(#_member), <ref refid="df/d3d/Definitions_8h_1a191f469cdb90c696b0763c8ebc97ae18" kindref="member">SPECIFIER_SCOPE_NESTED</ref>, _access, <ref refid="df/d3d/Definitions_8h_1a6577170120b2b73d561c94fbe996a173" kindref="member">SPECIFIER_STORAGE_DEFAULT</ref>, \
+            sizeof(_type), _class::_Reflect_Member_Getter_ ## _member, _class::_Reflect_Member_Setter_ ## _member, \
+            _class::_Reflect_StaticGet(), <ref refid="d9/dd0/Platform_8h_1a73bc5d2c175e0e221460a8b524c0412b" kindref="member">TEXT</ref>(#_type) \
+        ) \
+    );</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Macros.h" line="168" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Macros.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d0a/Macros_8h_1a38eba5c5db63901ab7513d5a75682ec8" prot="public" static="no">
+        <name>ReflectDefineMemberStatic</name>
+        <param><defname>_class</defname></param>
+        <param><defname>_member</defname></param>
+        <param><defname>_type</defname></param>
+        <param><defname>_access</defname></param>
+        <initializer><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * _class::_Reflect_Member_Getter_ ## _member( <ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * pInstance ) { \
+        static <ref refid="d8/d89/class__Reflection_1_1Holder" kindref="compound">_Reflection::Holder</ref>&lt;_type&gt; s_hRetVal; \
+        s_hRetVal = _class::_member; \
+        return &amp;s_hRetVal; \
+    } \
+    <ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> _class::_Reflect_Member_Setter_ ## _member( <ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * pInstance, <ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * pValue ) { \
+        <ref refid="d8/d89/class__Reflection_1_1Holder" kindref="compound">_Reflection::Holder</ref>&lt;_type&gt; * pArg = (<ref refid="d8/d89/class__Reflection_1_1Holder" kindref="compound">_Reflection::Holder</ref>&lt;_type&gt;*)pValue; \
+	    _class::_member = *pArg; \
+    } \
+    <ref refid="da/db4/class__Reflection_1_1MemberDescriptor" kindref="compound">_Reflection::MemberDescriptor</ref> _class::_Reflect_Member_ ## _member ( \
+        <ref refid="da/d27/namespace__Reflection_1aff3119d651c38545f218137bc3fcd7ee" kindref="member">_Reflection::_Builder_Member</ref> ( \
+            <ref refid="d9/dd0/Platform_8h_1a73bc5d2c175e0e221460a8b524c0412b" kindref="member">TEXT</ref>(#_member), <ref refid="df/d3d/Definitions_8h_1a191f469cdb90c696b0763c8ebc97ae18" kindref="member">SPECIFIER_SCOPE_NESTED</ref>, _access, <ref refid="df/d3d/Definitions_8h_1a1f01ed2248891713dc651097d74ea182" kindref="member">SPECIFIER_STORAGE_STATIC</ref>, \
+            sizeof(_type), _class::_Reflect_Member_Getter_ ## _member, _class::_Reflect_Member_Setter_ ## _member, \
+            _class::_Reflect_StaticGet(), <ref refid="d9/dd0/Platform_8h_1a73bc5d2c175e0e221460a8b524c0412b" kindref="member">TEXT</ref>(#_type) \
+        ) \
+    );</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Macros.h" line="186" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Macros.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d0a/Macros_8h_1a3a433824c011155fac1f93add5b80f9b" prot="public" static="no">
+        <name>ReflectDeclareMethod</name>
+        <param><defname>_method</defname></param>
+        <initializer>protected: \
+        static <ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * _Reflect_Method_Invoke_ ## _method( <ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * pInstance, <ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> ** arrArgV, <ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref> iArgC ); \
+        static <ref refid="dd/de2/class__Reflection_1_1FunctionDescriptor" kindref="compound">_Reflection::FunctionDescriptor</ref> _Reflect_Function_ ## _method; \
+        static <ref refid="da/d02/class__Reflection_1_1MethodDescriptor" kindref="compound">_Reflection::MethodDescriptor</ref> _Reflect_Method_ ## _method;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Macros.h" line="194" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Macros.h" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d0a/Macros_8h_1a6c1ed00f6771682d6390a79ea1db95ee" prot="public" static="no">
+        <name>ReflectDefineMethod_0</name>
+        <param><defname>_class</defname></param>
+        <param><defname>_method</defname></param>
+        <param><defname>_funcmod</defname></param>
+        <param><defname>_methodtype</defname></param>
+        <param><defname>_methodtypemod</defname></param>
+        <param><defname>_access</defname></param>
+        <param><defname>_storage</defname></param>
+        <initializer><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * _class::_Reflect_Method_Invoke_ ## _method( <ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * pInstance, <ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> **, <ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref> ) { \
+        ((_class*)pInstance)-&gt;_method(); \
+        return <ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>; \
+	} \
+    static <ref refid="d8/dd5/class__Reflection_1_1ModTypeDescriptor" kindref="compound">_Reflection::ModTypeDescriptor</ref> _Reflect_Method_arrReturnArguments_ ## _class ## _ ## _method [] = { \
+        <ref refid="d8/dd5/class__Reflection_1_1ModTypeDescriptor" kindref="compound">_Reflection::ModTypeDescriptor</ref>(), \
+        <ref refid="d8/dd5/class__Reflection_1_1ModTypeDescriptor" kindref="compound">_Reflection::ModTypeDescriptor</ref>() \
+    }; \
+    <ref refid="dd/de2/class__Reflection_1_1FunctionDescriptor" kindref="compound">_Reflection::FunctionDescriptor</ref> _class::_Reflect_Function_ ## _method ( \
+        <ref refid="da/d27/namespace__Reflection_1ad95ef2146574f5542e30c0a41d7c74d7" kindref="member">_Reflection::_Builder_Type</ref> ( \
+            <ref refid="d9/dd0/Platform_8h_1a73bc5d2c175e0e221460a8b524c0412b" kindref="member">TEXT</ref>(#_method), <ref refid="df/d3d/Definitions_8h_1a0a867004e3edcd1ccd4b3a0e3c8ef1fe" kindref="member">SPECIFIER_TYPE_FUNCTION</ref>, <ref refid="df/d3d/Definitions_8h_1a407b45978d9ea18e290c2ce9effa5ce0" kindref="member">SPECIFIER_TYPEMOD_NONE</ref>, <ref refid="df/d3d/Definitions_8h_1a191f469cdb90c696b0763c8ebc97ae18" kindref="member">SPECIFIER_SCOPE_NESTED</ref>, \
+            <ref refid="df/d3d/Definitions_8h_1a0f1c31a569b30dfa0587b668ffe06d2d" kindref="member">SPECIFIER_ACCESS_PROTECTED</ref>, 4, <ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>, <ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>, _class::_Reflect_StaticGet() \
+        ), _funcmod, \
+        _Reflect_Method_arrReturnArguments_ ## _class ## _ ## _method \
+    ); \
+    <ref refid="da/d02/class__Reflection_1_1MethodDescriptor" kindref="compound">_Reflection::MethodDescriptor</ref> _class::_Reflect_Method_ ## _method ( \
+        <ref refid="da/d27/namespace__Reflection_1a400806d8fdc69fb2a9bae7b801d8527a" kindref="member">_Reflection::_Builder_Method</ref> ( \
+            <ref refid="d9/dd0/Platform_8h_1a73bc5d2c175e0e221460a8b524c0412b" kindref="member">TEXT</ref>(#_method), _methodtype, _methodtypemod, <ref refid="df/d3d/Definitions_8h_1a191f469cdb90c696b0763c8ebc97ae18" kindref="member">SPECIFIER_SCOPE_NESTED</ref>, _access, _storage, \
+            _class::_Reflect_Method_Invoke_ ## _method, \
+            _class::_Reflect_StaticGet(), &amp;(_class::_Reflect_Function_ ## _method) \
+        ) \
+    );</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Macros.h" line="218" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Macros.h" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d0a/Macros_8h_1aa9688bdd73bf16537fd460e6af276f7d" prot="public" static="no">
+        <name>ReflectDefineMethod_1</name>
+        <param><defname>_class</defname></param>
+        <param><defname>_method</defname></param>
+        <param><defname>_funcmod</defname></param>
+        <param><defname>_methodtype</defname></param>
+        <param><defname>_methodtypemod</defname></param>
+        <param><defname>_access</defname></param>
+        <param><defname>_storage</defname></param>
+        <param><defname>_arg0</defname></param>
+        <initializer><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * _class::_Reflect_Method_Invoke_ ## _method( <ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * pInstance, <ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> ** arrArgV, <ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref> ) { \
+        <ref refid="d8/d89/class__Reflection_1_1Holder" kindref="compound">_Reflection::Holder</ref>&lt;_arg0&gt; * pArg0 = (<ref refid="d8/d89/class__Reflection_1_1Holder" kindref="compound">_Reflection::Holder</ref>&lt;_arg0&gt;*)(arrArgV[0]); \
+        ((_class*)pInstance)-&gt;_method( *pArg0 ); \
+        return <ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>; \
+	} \
+    static <ref refid="d8/dd5/class__Reflection_1_1ModTypeDescriptor" kindref="compound">_Reflection::ModTypeDescriptor</ref> _Reflect_Method_arrReturnArguments_ ## _class ## _ ## _method [] = { \
+        <ref refid="d8/dd5/class__Reflection_1_1ModTypeDescriptor" kindref="compound">_Reflection::ModTypeDescriptor</ref>(), <ref refid="d8/dd5/class__Reflection_1_1ModTypeDescriptor" kindref="compound">_Reflection::ModTypeDescriptor</ref>(<ref refid="d9/dd0/Platform_8h_1a73bc5d2c175e0e221460a8b524c0412b" kindref="member">TEXT</ref>(#_arg0)), \
+        <ref refid="d8/dd5/class__Reflection_1_1ModTypeDescriptor" kindref="compound">_Reflection::ModTypeDescriptor</ref>() \
+    }; \
+    <ref refid="dd/de2/class__Reflection_1_1FunctionDescriptor" kindref="compound">_Reflection::FunctionDescriptor</ref> _class::_Reflect_Function_ ## _method ( \
+        <ref refid="da/d27/namespace__Reflection_1ad95ef2146574f5542e30c0a41d7c74d7" kindref="member">_Reflection::_Builder_Type</ref> ( \
+            <ref refid="d9/dd0/Platform_8h_1a73bc5d2c175e0e221460a8b524c0412b" kindref="member">TEXT</ref>(#_method), <ref refid="df/d3d/Definitions_8h_1a0a867004e3edcd1ccd4b3a0e3c8ef1fe" kindref="member">SPECIFIER_TYPE_FUNCTION</ref>, <ref refid="df/d3d/Definitions_8h_1a407b45978d9ea18e290c2ce9effa5ce0" kindref="member">SPECIFIER_TYPEMOD_NONE</ref>, <ref refid="df/d3d/Definitions_8h_1a191f469cdb90c696b0763c8ebc97ae18" kindref="member">SPECIFIER_SCOPE_NESTED</ref>, \
+            <ref refid="df/d3d/Definitions_8h_1a0f1c31a569b30dfa0587b668ffe06d2d" kindref="member">SPECIFIER_ACCESS_PROTECTED</ref>, 4, <ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>, <ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>, _class::_Reflect_StaticGet() \
+        ), _funcmod, \
+        _Reflect_Method_arrReturnArguments_ ## _class ## _ ## _method \
+    ); \
+    <ref refid="da/d02/class__Reflection_1_1MethodDescriptor" kindref="compound">_Reflection::MethodDescriptor</ref> _class::_Reflect_Method_ ## _method ( \
+        <ref refid="da/d27/namespace__Reflection_1a400806d8fdc69fb2a9bae7b801d8527a" kindref="member">_Reflection::_Builder_Method</ref> ( \
+            <ref refid="d9/dd0/Platform_8h_1a73bc5d2c175e0e221460a8b524c0412b" kindref="member">TEXT</ref>(#_method), _methodtype, _methodtypemod, <ref refid="df/d3d/Definitions_8h_1a191f469cdb90c696b0763c8ebc97ae18" kindref="member">SPECIFIER_SCOPE_NESTED</ref>, _access, _storage, \
+            _class::_Reflect_Method_Invoke_ ## _method, \
+            _class::_Reflect_StaticGet(), &amp;(_class::_Reflect_Function_ ## _method) \
+        ) \
+    );</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Macros.h" line="244" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Macros.h" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d0a/Macros_8h_1ae0a758fe17d38d4d2f1581459698a361" prot="public" static="no">
+        <name>ReflectDefineMethod_Ret_0</name>
+        <param><defname>_class</defname></param>
+        <param><defname>_method</defname></param>
+        <param><defname>_funcmod</defname></param>
+        <param><defname>_methodtype</defname></param>
+        <param><defname>_methodtypemod</defname></param>
+        <param><defname>_access</defname></param>
+        <param><defname>_storage</defname></param>
+        <param><defname>_return</defname></param>
+        <initializer><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * _class::_Reflect_Method_Invoke_ ## _method( <ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * pInstance, <ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> **, <ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref> ) { \
+        static <ref refid="d8/d89/class__Reflection_1_1Holder" kindref="compound">_Reflection::Holder</ref>&lt;_return&gt; s_hRetVal; \
+        s_hRetVal = ((_class*)pInstance)-&gt;_method(); \
+        return &amp;s_hRetVal; \
+	} \
+    static <ref refid="d8/dd5/class__Reflection_1_1ModTypeDescriptor" kindref="compound">_Reflection::ModTypeDescriptor</ref> _Reflect_Method_arrReturnArguments_ ## _class ## _ ## _method [] = { \
+        <ref refid="d8/dd5/class__Reflection_1_1ModTypeDescriptor" kindref="compound">_Reflection::ModTypeDescriptor</ref>(<ref refid="d9/dd0/Platform_8h_1a73bc5d2c175e0e221460a8b524c0412b" kindref="member">TEXT</ref>(#_return)), \
+        <ref refid="d8/dd5/class__Reflection_1_1ModTypeDescriptor" kindref="compound">_Reflection::ModTypeDescriptor</ref>() \
+    }; \
+    <ref refid="dd/de2/class__Reflection_1_1FunctionDescriptor" kindref="compound">_Reflection::FunctionDescriptor</ref> _class::_Reflect_Function_ ## _method ( \
+        <ref refid="da/d27/namespace__Reflection_1ad95ef2146574f5542e30c0a41d7c74d7" kindref="member">_Reflection::_Builder_Type</ref> ( \
+            <ref refid="d9/dd0/Platform_8h_1a73bc5d2c175e0e221460a8b524c0412b" kindref="member">TEXT</ref>(#_method), <ref refid="df/d3d/Definitions_8h_1a0a867004e3edcd1ccd4b3a0e3c8ef1fe" kindref="member">SPECIFIER_TYPE_FUNCTION</ref>, <ref refid="df/d3d/Definitions_8h_1a407b45978d9ea18e290c2ce9effa5ce0" kindref="member">SPECIFIER_TYPEMOD_NONE</ref>, <ref refid="df/d3d/Definitions_8h_1a191f469cdb90c696b0763c8ebc97ae18" kindref="member">SPECIFIER_SCOPE_NESTED</ref>, \
+            <ref refid="df/d3d/Definitions_8h_1a0f1c31a569b30dfa0587b668ffe06d2d" kindref="member">SPECIFIER_ACCESS_PROTECTED</ref>, 4, <ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>, <ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>, _class::_Reflect_StaticGet() \
+        ), _funcmod, \
+        _Reflect_Method_arrReturnArguments_ ## _class ## _ ## _method \
+    ); \
+    <ref refid="da/d02/class__Reflection_1_1MethodDescriptor" kindref="compound">_Reflection::MethodDescriptor</ref> _class::_Reflect_Method_ ## _method ( \
+        <ref refid="da/d27/namespace__Reflection_1a400806d8fdc69fb2a9bae7b801d8527a" kindref="member">_Reflection::_Builder_Method</ref> ( \
+            <ref refid="d9/dd0/Platform_8h_1a73bc5d2c175e0e221460a8b524c0412b" kindref="member">TEXT</ref>(#_method), _methodtype, _methodtypemod, <ref refid="df/d3d/Definitions_8h_1a191f469cdb90c696b0763c8ebc97ae18" kindref="member">SPECIFIER_SCOPE_NESTED</ref>, _access, _storage, \
+            _class::_Reflect_Method_Invoke_ ## _method, \
+            _class::_Reflect_StaticGet(), &amp;(_class::_Reflect_Function_ ## _method) \
+        ) \
+    );</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Macros.h" line="272" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Macros.h" bodystart="248" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="df/d0a/Macros_8h_1a9e427cca2100a37692ae998463a7648c" prot="public" static="no">
+        <name>ReflectDefineMethod_Ret_1</name>
+        <param><defname>_class</defname></param>
+        <param><defname>_method</defname></param>
+        <param><defname>_funcmod</defname></param>
+        <param><defname>_methodtype</defname></param>
+        <param><defname>_methodtypemod</defname></param>
+        <param><defname>_access</defname></param>
+        <param><defname>_storage</defname></param>
+        <param><defname>_return</defname></param>
+        <param><defname>_arg0</defname></param>
+        <initializer><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * _class::_Reflect_Method_Invoke_ ## _method( <ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> * pInstance, <ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> ** arrArgV, <ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref> ) { \
+        static <ref refid="d8/d89/class__Reflection_1_1Holder" kindref="compound">_Reflection::Holder</ref>&lt;_return&gt; s_hRetVal; \
+        <ref refid="d8/d89/class__Reflection_1_1Holder" kindref="compound">_Reflection::Holder</ref>&lt;_arg0&gt; * pArg0 = (<ref refid="d8/d89/class__Reflection_1_1Holder" kindref="compound">_Reflection::Holder</ref>&lt;_arg0&gt;*)(arrArgV[0]); \
+        s_hRetVal = ((_class*)pInstance)-&gt;_method( *pArg0 ); \
+        return &amp;s_hRetVal; \
+	} \
+    static <ref refid="d8/dd5/class__Reflection_1_1ModTypeDescriptor" kindref="compound">_Reflection::ModTypeDescriptor</ref> _Reflect_Method_arrReturnArguments_ ## _class ## _ ## _method [] = { \
+        <ref refid="d8/dd5/class__Reflection_1_1ModTypeDescriptor" kindref="compound">_Reflection::ModTypeDescriptor</ref>(<ref refid="d9/dd0/Platform_8h_1a73bc5d2c175e0e221460a8b524c0412b" kindref="member">TEXT</ref>(#_return)), <ref refid="d8/dd5/class__Reflection_1_1ModTypeDescriptor" kindref="compound">_Reflection::ModTypeDescriptor</ref>(<ref refid="d9/dd0/Platform_8h_1a73bc5d2c175e0e221460a8b524c0412b" kindref="member">TEXT</ref>(#_arg0)), \
+        <ref refid="d8/dd5/class__Reflection_1_1ModTypeDescriptor" kindref="compound">_Reflection::ModTypeDescriptor</ref>() \
+    }; \
+    <ref refid="dd/de2/class__Reflection_1_1FunctionDescriptor" kindref="compound">_Reflection::FunctionDescriptor</ref> _class::_Reflect_Function_ ## _method ( \
+        <ref refid="da/d27/namespace__Reflection_1ad95ef2146574f5542e30c0a41d7c74d7" kindref="member">_Reflection::_Builder_Type</ref> ( \
+            <ref refid="d9/dd0/Platform_8h_1a73bc5d2c175e0e221460a8b524c0412b" kindref="member">TEXT</ref>(#_method), <ref refid="df/d3d/Definitions_8h_1a0a867004e3edcd1ccd4b3a0e3c8ef1fe" kindref="member">SPECIFIER_TYPE_FUNCTION</ref>, <ref refid="df/d3d/Definitions_8h_1a407b45978d9ea18e290c2ce9effa5ce0" kindref="member">SPECIFIER_TYPEMOD_NONE</ref>, <ref refid="df/d3d/Definitions_8h_1a191f469cdb90c696b0763c8ebc97ae18" kindref="member">SPECIFIER_SCOPE_NESTED</ref>, \
+            <ref refid="df/d3d/Definitions_8h_1a0f1c31a569b30dfa0587b668ffe06d2d" kindref="member">SPECIFIER_ACCESS_PROTECTED</ref>, 4, <ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>, <ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>, _class::_Reflect_StaticGet() \
+        ), _funcmod, \
+        _Reflect_Method_arrReturnArguments_ ## _class ## _ ## _method \
+    ); \
+    <ref refid="da/d02/class__Reflection_1_1MethodDescriptor" kindref="compound">_Reflection::MethodDescriptor</ref> _class::_Reflect_Method_ ## _method ( \
+        <ref refid="da/d27/namespace__Reflection_1a400806d8fdc69fb2a9bae7b801d8527a" kindref="member">_Reflection::_Builder_Method</ref> ( \
+            <ref refid="d9/dd0/Platform_8h_1a73bc5d2c175e0e221460a8b524c0412b" kindref="member">TEXT</ref>(#_method), _methodtype, _methodtypemod, <ref refid="df/d3d/Definitions_8h_1a191f469cdb90c696b0763c8ebc97ae18" kindref="member">SPECIFIER_SCOPE_NESTED</ref>, _access, _storage, \
+            _class::_Reflect_Method_Invoke_ ## _method, \
+            _class::_Reflect_StaticGet(), &amp;(_class::_Reflect_Function_ ## _method) \
+        ) \
+    );</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Macros.h" line="299" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Macros.h" bodystart="274" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Reflection/Macros.h"/>
+  </compounddef>
+</doxygen>

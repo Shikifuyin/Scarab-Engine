@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d6/dca/structNodeLeaf" kind="struct" prot="public">
+    <compoundname>NodeLeaf</compoundname>
+    <includes refid="de/d8f/Shape_8h" local="no">Shape.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d6/dca/structNodeLeaf_1aebbadf64dfe323240d936c367297229e" prot="public" static="no" mutable="no">
+        <type><ref refid="d3/dca/Sphere_8h_1aaf6a53559a39684dc6075bb09fef483f" kindref="member">Sphere</ref></type>
+        <definition>Sphere vNode</definition>
+        <argsstring></argsstring>
+        <name>vNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Shape.h" line="132" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Shape.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/dca/structNodeLeaf_1a4a23249b49c74e0a7b3def049771bcb3" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>DWord dwNodeID</definition>
+        <argsstring></argsstring>
+        <name>dwNodeID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Shape.h" line="133" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Shape.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/dca/structNodeLeaf_1ac3192b773d679e4faa5639881d7fba30" prot="public" static="no" mutable="no">
+        <type><ref refid="d3/db4/AABoxTree_8h_1a6849c78f63b49a35e1dd7b5f2db97e95" kindref="member">AABoxNode</ref> *</type>
+        <definition>AABoxNode* pLeaf</definition>
+        <argsstring></argsstring>
+        <name>pLeaf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Shape.h" line="134" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Shape.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="9503">
+        <label>@13</label>
+      </node>
+      <node id="9499">
+        <label>float</label>
+      </node>
+      <node id="9497">
+        <label>NodeLeaf</label>
+        <link refid="d6/dca/structNodeLeaf"/>
+        <childnode refid="9498" relation="usage">
+          <edgelabel>vNode</edgelabel>
+        </childnode>
+        <childnode refid="9502" relation="usage">
+          <edgelabel>pLeaf</edgelabel>
+        </childnode>
+        <childnode refid="9507" relation="usage">
+          <edgelabel>dwNodeID</edgelabel>
+        </childnode>
+      </node>
+      <node id="9507">
+        <label>ULong</label>
+      </node>
+      <node id="9501">
+        <label>Scalar</label>
+      </node>
+      <node id="9502">
+        <label>TAABoxNode&lt; Real &gt;</label>
+        <link refid="d2/dc6/classTAABoxNode"/>
+        <childnode refid="9503" relation="usage">
+          <edgelabel>@14</edgelabel>
+        </childnode>
+        <childnode refid="9504" relation="usage">
+          <edgelabel>pParent</edgelabel>
+          <edgelabel>pChild</edgelabel>
+        </childnode>
+        <childnode refid="9505" relation="usage">
+          <edgelabel>bvAABox</edgelabel>
+        </childnode>
+        <childnode refid="9506" relation="usage">
+          <edgelabel>pLeafData</edgelabel>
+        </childnode>
+      </node>
+      <node id="9500">
+        <label>TVertex3&lt; Scalar &gt;</label>
+        <link refid="dc/d75/classTVertex3"/>
+        <childnode refid="9501" relation="usage">
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+          <edgelabel>Z</edgelabel>
+        </childnode>
+        <childnode refid="9500" relation="usage">
+          <edgelabel>Null</edgelabel>
+        </childnode>
+      </node>
+      <node id="9498">
+        <label>TSphere&lt; Scalar &gt;</label>
+        <link refid="d5/dd5/classTSphere"/>
+        <childnode refid="9499" relation="usage">
+          <edgelabel>Radius</edgelabel>
+        </childnode>
+        <childnode refid="9500" relation="usage">
+          <edgelabel>Center</edgelabel>
+        </childnode>
+      </node>
+      <node id="9505">
+        <label>TBVAABox&lt; Real &gt;</label>
+      </node>
+      <node id="9504">
+        <label>TAABoxNode&lt; Real &gt; *</label>
+      </node>
+      <node id="9506">
+        <label>Void *</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Shape.h" line="131" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/Shape.h" bodystart="130" bodyend="135"/>
+    <listofallmembers>
+      <member refid="d6/dca/structNodeLeaf_1a4a23249b49c74e0a7b3def049771bcb3" prot="public" virt="non-virtual"><scope>NodeLeaf</scope><name>dwNodeID</name></member>
+      <member refid="d6/dca/structNodeLeaf_1ac3192b773d679e4faa5639881d7fba30" prot="public" virt="non-virtual"><scope>NodeLeaf</scope><name>pLeaf</name></member>
+      <member refid="d6/dca/structNodeLeaf_1aebbadf64dfe323240d936c367297229e" prot="public" virt="non-virtual"><scope>NodeLeaf</scope><name>vNode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

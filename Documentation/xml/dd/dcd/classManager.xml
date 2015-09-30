@@ -1,0 +1,299 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="dd/dcd/classManager" kind="class" prot="public">
+    <compoundname>Manager</compoundname>
+    <includes refid="d1/da0/Manager_8h" local="no">Manager.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="dd/dcd/classManager_1ae02c3021719e10a68165e0bcab051c7a" prot="private" static="yes" mutable="no">
+        <type>T *</type>
+        <definition>T* sm_pInstance</definition>
+        <argsstring></argsstring>
+        <name>sm_pInstance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Patterns/Manager.h" line="69" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Patterns/Manager.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/dcd/classManager_1a0acf98c7744f08501607d5099e235614" prot="private" static="yes" mutable="no">
+        <type><ref refid="d7/d7b/MemoryManager_8h_1af31b42dd6507009f3d5e5f71b991260b" kindref="member">MemoryContextID</ref></type>
+        <definition>MemoryContextID sm_idMemoryContext</definition>
+        <argsstring></argsstring>
+        <name>sm_idMemoryContext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Patterns/Manager.h" line="71" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Patterns/Manager.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="dd/dcd/classManager_1a3657aebde702513c5e5021fcf67cdd36" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iAllocatorCount</definition>
+        <argsstring></argsstring>
+        <name>m_iAllocatorCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Patterns/Manager.h" line="78" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Patterns/Manager.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/dcd/classManager_1a246f4ea10ab82840f391a41cf78076be" prot="private" static="no" mutable="no">
+        <type><ref refid="d7/d7b/MemoryManager_8h_1aec941861fea8dd1ae50294f05724a436" kindref="member">MemoryAllocatorID</ref></type>
+        <definition>MemoryAllocatorID m_arrAllocators[MANAGER_MAX_ALLOCATORS]</definition>
+        <argsstring>[MANAGER_MAX_ALLOCATORS]</argsstring>
+        <name>m_arrAllocators</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Patterns/Manager.h" line="79" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Patterns/Manager.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="dd/dcd/classManager_1a2ed8631063d066931e92495cbc2187ab" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>static Void Create</definition>
+        <argsstring>()</argsstring>
+        <name>Create</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Patterns/Manager.h" line="53"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/dcd/classManager_1a2eb513c4973295259cfbac797e1a0aaf" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>static Void Destroy</definition>
+        <argsstring>()</argsstring>
+        <name>Destroy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Patterns/Manager.h" line="54"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/dcd/classManager_1a0866aab4257483326c469dcef942f0e1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T &amp;</type>
+        <definition>static T&amp; GetInstance</definition>
+        <argsstring>()</argsstring>
+        <name>GetInstance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Patterns/Manager.h" line="56"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/dcd/classManager_1a7fa7098f43df61eb754bbf4c91938d74" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T *</type>
+        <definition>static T* GetInstancePtr</definition>
+        <argsstring>()</argsstring>
+        <name>GetInstancePtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Patterns/Manager.h" line="57"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/dcd/classManager_1ab84032e21b26e35b61e49be16d029022" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d7/d7b/MemoryManager_8h_1af31b42dd6507009f3d5e5f71b991260b" kindref="member">MemoryContextID</ref></type>
+        <definition>static MemoryContextID GetMemoryContext</definition>
+        <argsstring>()</argsstring>
+        <name>GetMemoryContext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Patterns/Manager.h" line="62"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="dd/dcd/classManager_1ad899b83bbcb86bdbf12fff4a8c78bb55" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SelectMemory</definition>
+        <argsstring>(const GChar *strName) const </argsstring>
+        <name>SelectMemory</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Patterns/Manager.h" line="59"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/dcd/classManager_1a6cd6602ec8b7f9839b959e63fb60e874" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void UnSelectMemory</definition>
+        <argsstring>() const </argsstring>
+        <name>UnSelectMemory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Patterns/Manager.h" line="60"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="dd/dcd/classManager_1a8fae1352a98517c1ecb0a6e7396e3f06" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Manager</definition>
+        <argsstring>()</argsstring>
+        <name>Manager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Patterns/Manager.h" line="65"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/dcd/classManager_1a2d267823748603d5577dc7809c0a2056" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~Manager</definition>
+        <argsstring>()</argsstring>
+        <name>~Manager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Patterns/Manager.h" line="66"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="dd/dcd/classManager_1a60c6a203622682bce7c6dd1d91375351" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _CreateMemoryBudget</definition>
+        <argsstring>(const GChar *strMemoryBudget)</argsstring>
+        <name>_CreateMemoryBudget</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strMemoryBudget</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Patterns/Manager.h" line="74"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/dcd/classManager_1a8b50fece5b14386ddd7396120482882d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _ParseBudgetDeclaration</definition>
+        <argsstring>(const GChar *strDecl)</argsstring>
+        <name>_ParseBudgetDeclaration</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strDecl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Patterns/Manager.h" line="75"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/dcd/classManager_1af46e068a9d20ce094f56f9029a33c3f7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _DestroyMemoryBudget</definition>
+        <argsstring>()</argsstring>
+        <name>_DestroyMemoryBudget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Patterns/Manager.h" line="76"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="6029">
+        <label>T</label>
+      </node>
+      <node id="6026">
+        <label>static MemoryContextID</label>
+      </node>
+      <node id="6028">
+        <label>unsigned int</label>
+      </node>
+      <node id="6027">
+        <label>int</label>
+      </node>
+      <node id="6025">
+        <label>Manager&lt; T &gt;</label>
+        <link refid="dd/dcd/classManager"/>
+        <childnode refid="6026" relation="usage">
+          <edgelabel>sm_idMemoryContext</edgelabel>
+        </childnode>
+        <childnode refid="6027" relation="usage">
+          <edgelabel>m_iAllocatorCount</edgelabel>
+        </childnode>
+        <childnode refid="6028" relation="usage">
+          <edgelabel>m_arrAllocators</edgelabel>
+        </childnode>
+        <childnode refid="6029" relation="usage">
+          <edgelabel>sm_pInstance</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Patterns/Manager.h" line="51" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Object/Patterns/Manager.h" bodystart="50" bodyend="80"/>
+    <listofallmembers>
+      <member refid="dd/dcd/classManager_1a60c6a203622682bce7c6dd1d91375351" prot="private" virt="non-virtual"><scope>Manager</scope><name>_CreateMemoryBudget</name></member>
+      <member refid="dd/dcd/classManager_1af46e068a9d20ce094f56f9029a33c3f7" prot="private" virt="non-virtual"><scope>Manager</scope><name>_DestroyMemoryBudget</name></member>
+      <member refid="dd/dcd/classManager_1a8b50fece5b14386ddd7396120482882d" prot="private" virt="non-virtual"><scope>Manager</scope><name>_ParseBudgetDeclaration</name></member>
+      <member refid="dd/dcd/classManager_1a2ed8631063d066931e92495cbc2187ab" prot="public" virt="non-virtual"><scope>Manager</scope><name>Create</name></member>
+      <member refid="dd/dcd/classManager_1a2eb513c4973295259cfbac797e1a0aaf" prot="public" virt="non-virtual"><scope>Manager</scope><name>Destroy</name></member>
+      <member refid="dd/dcd/classManager_1a0866aab4257483326c469dcef942f0e1" prot="public" virt="non-virtual"><scope>Manager</scope><name>GetInstance</name></member>
+      <member refid="dd/dcd/classManager_1a7fa7098f43df61eb754bbf4c91938d74" prot="public" virt="non-virtual"><scope>Manager</scope><name>GetInstancePtr</name></member>
+      <member refid="dd/dcd/classManager_1ab84032e21b26e35b61e49be16d029022" prot="public" virt="non-virtual"><scope>Manager</scope><name>GetMemoryContext</name></member>
+      <member refid="dd/dcd/classManager_1a246f4ea10ab82840f391a41cf78076be" prot="private" virt="non-virtual"><scope>Manager</scope><name>m_arrAllocators</name></member>
+      <member refid="dd/dcd/classManager_1a3657aebde702513c5e5021fcf67cdd36" prot="private" virt="non-virtual"><scope>Manager</scope><name>m_iAllocatorCount</name></member>
+      <member refid="dd/dcd/classManager_1a8fae1352a98517c1ecb0a6e7396e3f06" prot="protected" virt="non-virtual"><scope>Manager</scope><name>Manager</name></member>
+      <member refid="dd/dcd/classManager_1ad899b83bbcb86bdbf12fff4a8c78bb55" prot="public" virt="non-virtual"><scope>Manager</scope><name>SelectMemory</name></member>
+      <member refid="dd/dcd/classManager_1a0acf98c7744f08501607d5099e235614" prot="private" virt="non-virtual"><scope>Manager</scope><name>sm_idMemoryContext</name></member>
+      <member refid="dd/dcd/classManager_1ae02c3021719e10a68165e0bcab051c7a" prot="private" virt="non-virtual"><scope>Manager</scope><name>sm_pInstance</name></member>
+      <member refid="dd/dcd/classManager_1a6cd6602ec8b7f9839b959e63fb60e874" prot="public" virt="non-virtual"><scope>Manager</scope><name>UnSelectMemory</name></member>
+      <member refid="dd/dcd/classManager_1a2d267823748603d5577dc7809c0a2056" prot="protected" virt="virtual"><scope>Manager</scope><name>~Manager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

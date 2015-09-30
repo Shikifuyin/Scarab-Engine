@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d0/d56/classMeshEdgeManifold3__E" kind="class" prot="public">
+    <compoundname>MeshEdgeManifold3_E</compoundname>
+    <basecompoundref refid="d0/db6/classMeshEdgeManifold3" prot="public" virt="non-virtual">MeshEdgeManifold3</basecompoundref>
+    <includes refid="da/da9/MeshEdgeManifold3_8h" local="no">MeshEdgeManifold3.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d0/d56/classMeshEdgeManifold3__E_1ac2f1ba701ad11f2dbb9d739f05394ec9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MeshEdgeManifold3_E</definition>
+        <argsstring>(const MeshEdgeKey &amp;edgeKey)</argsstring>
+        <name>MeshEdgeManifold3_E</name>
+        <param>
+          <type>const <ref refid="db/dab/classMeshEdgeKey" kindref="compound">MeshEdgeKey</ref> &amp;</type>
+          <declname>edgeKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/MeshGraphs/Features/Edges/MeshEdgeManifold3.h" line="53"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d56/classMeshEdgeManifold3__E_1a95e42ee56a6257421f770810f4838782" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~MeshEdgeManifold3_E</definition>
+        <argsstring>()</argsstring>
+        <name>~MeshEdgeManifold3_E</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/MeshGraphs/Features/Edges/MeshEdgeManifold3.h" line="54"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d56/classMeshEdgeManifold3__E_1abd7daf70bb5f86b8ed500987d3ebf056" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="d8/da5/MeshFeatureKey_8h_1a57985124c1bbd7380713f71ae726a808" kindref="member">MeshLinkageType</ref></type>
+        <definition>virtual MeshLinkageType GetLinkageType</definition>
+        <argsstring>() const </argsstring>
+        <name>GetLinkageType</name>
+        <reimplements refid="dc/dcb/classMeshFeature_1abd7daf70bb5f86b8ed500987d3ebf056">GetLinkageType</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/MeshGraphs/Features/Edges/MeshEdgeManifold3.h" line="57"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="6407">
+        <label>MeshFeature</label>
+        <link refid="dc/dcb/classMeshFeature"/>
+      </node>
+      <node id="6405">
+        <label>MeshEdgeManifold3</label>
+        <link refid="d0/db6/classMeshEdgeManifold3"/>
+        <childnode refid="6406" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6406">
+        <label>MeshEdge</label>
+        <link refid="d7/da3/classMeshEdge"/>
+        <childnode refid="6407" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6404">
+        <label>MeshEdgeManifold3_E</label>
+        <link refid="d0/d56/classMeshEdgeManifold3__E"/>
+        <childnode refid="6405" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6414">
+        <label>@1</label>
+      </node>
+      <node id="6411">
+        <label>MeshFeature</label>
+        <link refid="dc/dcb/classMeshFeature"/>
+      </node>
+      <node id="6413">
+        <label>MeshFeatureKey</label>
+        <link refid="dc/d22/classMeshFeatureKey"/>
+      </node>
+      <node id="6412">
+        <label>MeshEdgeKey</label>
+        <link refid="db/dab/classMeshEdgeKey"/>
+        <childnode refid="6413" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6414" relation="usage">
+          <edgelabel>@2</edgelabel>
+        </childnode>
+        <childnode refid="6412" relation="usage">
+          <edgelabel>Null</edgelabel>
+        </childnode>
+        <childnode refid="6415" relation="usage">
+          <edgelabel>V</edgelabel>
+          <edgelabel>A</edgelabel>
+          <edgelabel>B</edgelabel>
+        </childnode>
+      </node>
+      <node id="6415">
+        <label>int</label>
+      </node>
+      <node id="6409">
+        <label>MeshEdgeManifold3</label>
+        <link refid="d0/db6/classMeshEdgeManifold3"/>
+        <childnode refid="6410" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6410">
+        <label>MeshEdge</label>
+        <link refid="d7/da3/classMeshEdge"/>
+        <childnode refid="6411" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6412" relation="usage">
+          <edgelabel>Key</edgelabel>
+        </childnode>
+      </node>
+      <node id="6408">
+        <label>MeshEdgeManifold3_E</label>
+        <link refid="d0/d56/classMeshEdgeManifold3__E"/>
+        <childnode refid="6409" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/MeshGraphs/Features/Edges/MeshEdgeManifold3.h" line="51" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/MeshGraphs/Features/Edges/MeshEdgeManifold3.h" bodystart="50" bodyend="61"/>
+    <listofallmembers>
+      <member refid="dc/dcb/classMeshFeature_1a641c448e5b73c7d278366679b7ee7134" prot="public" virt="virtual"><scope>MeshEdgeManifold3_E</scope><name>ConnectEdge</name></member>
+      <member refid="dc/dcb/classMeshFeature_1a95a6135f8c0256b1ab1fcb5a74bd4352" prot="public" virt="virtual"><scope>MeshEdgeManifold3_E</scope><name>ConnectFacet</name></member>
+      <member refid="dc/dcb/classMeshFeature_1ac07973df52d7522b4734e1132824126a" prot="public" virt="virtual"><scope>MeshEdgeManifold3_E</scope><name>ConnectVertex</name></member>
+      <member refid="dc/dcb/classMeshFeature_1a94aeacdb744adabe94874bb32b9e24db" prot="public" virt="virtual"><scope>MeshEdgeManifold3_E</scope><name>DisconnectAll</name></member>
+      <member refid="dc/dcb/classMeshFeature_1a275c8fd1a3bc04cee2400e8d6066a8be" prot="public" virt="virtual"><scope>MeshEdgeManifold3_E</scope><name>DisconnectEdge</name></member>
+      <member refid="dc/dcb/classMeshFeature_1a8ea959f66b040b10c0f8060c4f44914e" prot="public" virt="virtual"><scope>MeshEdgeManifold3_E</scope><name>DisconnectEdges</name></member>
+      <member refid="dc/dcb/classMeshFeature_1acc27561d5ec8cd87e6b2dc1e2e90010c" prot="public" virt="virtual"><scope>MeshEdgeManifold3_E</scope><name>DisconnectFacet</name></member>
+      <member refid="dc/dcb/classMeshFeature_1a15efa6072e2c9bba198f707edeae838f" prot="public" virt="virtual"><scope>MeshEdgeManifold3_E</scope><name>DisconnectFacets</name></member>
+      <member refid="dc/dcb/classMeshFeature_1a5e7be4f04dc5555facb725a1483907be" prot="public" virt="virtual"><scope>MeshEdgeManifold3_E</scope><name>DisconnectVertex</name></member>
+      <member refid="dc/dcb/classMeshFeature_1a73acffc2dead04b813fb7579e786782a" prot="public" virt="virtual"><scope>MeshEdgeManifold3_E</scope><name>DisconnectVertices</name></member>
+      <member refid="dc/dcb/classMeshFeature_1a4ca7fefb26f7da1d5bbbb49e85834fe2" prot="public" virt="virtual"><scope>MeshEdgeManifold3_E</scope><name>FindEdge</name></member>
+      <member refid="dc/dcb/classMeshFeature_1ae5777fd1d6c37de7c5c85440da5b71bf" prot="public" virt="virtual"><scope>MeshEdgeManifold3_E</scope><name>FindFacet</name></member>
+      <member refid="dc/dcb/classMeshFeature_1a1088229b4dee48e66043eb212b72bfea" prot="public" virt="virtual"><scope>MeshEdgeManifold3_E</scope><name>FindVertex</name></member>
+      <member refid="dc/dcb/classMeshFeature_1a22be52992b188bc56349237fa250aff3" prot="public" virt="virtual"><scope>MeshEdgeManifold3_E</scope><name>GetEdge</name></member>
+      <member refid="dc/dcb/classMeshFeature_1a1045b22a35f648878c3d2f2efe6045c9" prot="public" virt="virtual"><scope>MeshEdgeManifold3_E</scope><name>GetEdgeCapacity</name></member>
+      <member refid="dc/dcb/classMeshFeature_1afe5e975242269ba4cf15f0245186a8ae" prot="public" virt="virtual"><scope>MeshEdgeManifold3_E</scope><name>GetEdgeCount</name></member>
+      <member refid="d0/db6/classMeshEdgeManifold3_1adb6ffe173e3efcaba002e53f82d7f41e" prot="public" virt="virtual"><scope>MeshEdgeManifold3_E</scope><name>GetEdgeType</name></member>
+      <member refid="dc/dcb/classMeshFeature_1a6365c86708dff91883c1d161f05e2349" prot="public" virt="virtual"><scope>MeshEdgeManifold3_E</scope><name>GetFacet</name></member>
+      <member refid="dc/dcb/classMeshFeature_1a528ef3648c58c6f3707b73bc0d82176f" prot="public" virt="virtual"><scope>MeshEdgeManifold3_E</scope><name>GetFacetCapacity</name></member>
+      <member refid="dc/dcb/classMeshFeature_1a0bc5184e02ad548dfc6d938c8615bd14" prot="public" virt="virtual"><scope>MeshEdgeManifold3_E</scope><name>GetFacetCount</name></member>
+      <member refid="d0/d56/classMeshEdgeManifold3__E_1abd7daf70bb5f86b8ed500987d3ebf056" prot="public" virt="virtual"><scope>MeshEdgeManifold3_E</scope><name>GetLinkageType</name></member>
+      <member refid="d7/da3/classMeshEdge_1aac3d91ea964343cf5d94136d2aba251e" prot="public" virt="virtual"><scope>MeshEdgeManifold3_E</scope><name>GetType</name></member>
+      <member refid="dc/dcb/classMeshFeature_1a99d085cfa6c2f7fc85b65a96ad1e6d1c" prot="public" virt="virtual"><scope>MeshEdgeManifold3_E</scope><name>GetVertex</name></member>
+      <member refid="dc/dcb/classMeshFeature_1a3d7c9a0d9d4cc15ad20b51254e075e61" prot="public" virt="virtual"><scope>MeshEdgeManifold3_E</scope><name>GetVertexCapacity</name></member>
+      <member refid="dc/dcb/classMeshFeature_1aa44381d27765884f16013e4d4d81c1fe" prot="public" virt="virtual"><scope>MeshEdgeManifold3_E</scope><name>GetVertexCount</name></member>
+      <member refid="d7/da3/classMeshEdge_1a2b47ad2be017878ef84b4cab581b674d" prot="public" virt="non-virtual"><scope>MeshEdgeManifold3_E</scope><name>Key</name></member>
+      <member refid="d7/da3/classMeshEdge_1a8db3add171652eb98dce3ba1f13582a7" prot="public" virt="non-virtual"><scope>MeshEdgeManifold3_E</scope><name>MeshEdge</name></member>
+      <member refid="d0/db6/classMeshEdgeManifold3_1a2b1534f09e2100da550bca6a82be80e3" prot="public" virt="non-virtual"><scope>MeshEdgeManifold3_E</scope><name>MeshEdgeManifold3</name></member>
+      <member refid="d0/d56/classMeshEdgeManifold3__E_1ac2f1ba701ad11f2dbb9d739f05394ec9" prot="public" virt="non-virtual"><scope>MeshEdgeManifold3_E</scope><name>MeshEdgeManifold3_E</name></member>
+      <member refid="dc/dcb/classMeshFeature_1a360979e0daf90efeb41ed808f70ce936" prot="public" virt="non-virtual"><scope>MeshEdgeManifold3_E</scope><name>MeshFeature</name></member>
+      <member refid="dc/dcb/classMeshFeature_1aeecad41440a72b80623f823998526ef7" prot="public" virt="virtual"><scope>MeshEdgeManifold3_E</scope><name>ReplaceEdge</name></member>
+      <member refid="dc/dcb/classMeshFeature_1a5322fcbf7f8ae97dee576794bc012686" prot="public" virt="virtual"><scope>MeshEdgeManifold3_E</scope><name>ReplaceFacet</name></member>
+      <member refid="dc/dcb/classMeshFeature_1a92f55613a5f83edfe7641feb2c7b2ab4" prot="public" virt="virtual"><scope>MeshEdgeManifold3_E</scope><name>ReplaceVertex</name></member>
+      <member refid="d7/da3/classMeshEdge_1ac580a5eb5ac465fb3ad32c4950b13218" prot="public" virt="virtual"><scope>MeshEdgeManifold3_E</scope><name>~MeshEdge</name></member>
+      <member refid="d0/db6/classMeshEdgeManifold3_1a659fa9aa3985546c10d7d9d591f831b3" prot="public" virt="virtual"><scope>MeshEdgeManifold3_E</scope><name>~MeshEdgeManifold3</name></member>
+      <member refid="d0/d56/classMeshEdgeManifold3__E_1a95e42ee56a6257421f770810f4838782" prot="public" virt="virtual"><scope>MeshEdgeManifold3_E</scope><name>~MeshEdgeManifold3_E</name></member>
+      <member refid="dc/dcb/classMeshFeature_1a04bd4d4f73192580b088a5dc0b17dd2a" prot="public" virt="virtual"><scope>MeshEdgeManifold3_E</scope><name>~MeshFeature</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

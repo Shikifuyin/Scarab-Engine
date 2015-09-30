@@ -1,0 +1,424 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="df/d43/classTIntersector1" kind="class" prot="public">
+    <compoundname>TIntersector1</compoundname>
+    <includes refid="d3/d22/Intersector1_8h" local="no">Intersector1.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename Real</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="df/d43/classTIntersector1_1a15588eea940c254c383433246cc901ac" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real ZeroTolerance</definition>
+        <argsstring></argsstring>
+        <name>ZeroTolerance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector1.h" line="52" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector1.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="df/d43/classTIntersector1_1a014d476b2ddd7fa0affa19f60f6dc838" prot="private" static="no" mutable="no">
+        <type><ref refid="da/d58/classTVector2" kindref="compound">TVector2</ref>&lt; Real &gt;</type>
+        <definition>TVector2&lt;Real&gt; m_intU</definition>
+        <argsstring></argsstring>
+        <name>m_intU</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector1.h" line="74" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector1.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d43/classTIntersector1_1a327216a387d3231dca76f337b89e6328" prot="private" static="no" mutable="no">
+        <type><ref refid="da/d58/classTVector2" kindref="compound">TVector2</ref>&lt; Real &gt;</type>
+        <definition>TVector2&lt;Real&gt; m_intV</definition>
+        <argsstring></argsstring>
+        <name>m_intV</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector1.h" line="74" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector1.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d43/classTIntersector1_1a9deba103f03480c2088ed90f89294f12" prot="private" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real m_fFirstTOI</definition>
+        <argsstring></argsstring>
+        <name>m_fFirstTOI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector1.h" line="76" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector1.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d43/classTIntersector1_1a1e9649b7e8bd773779c36552f633802f" prot="private" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real m_fLastTOI</definition>
+        <argsstring></argsstring>
+        <name>m_fLastTOI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector1.h" line="76" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector1.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d43/classTIntersector1_1ad03de214150cc193e0da0839f0d650e3" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iContactCount</definition>
+        <argsstring></argsstring>
+        <name>m_iContactCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector1.h" line="78" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector1.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d43/classTIntersector1_1a429454fc5d8b21380812ace708a14b7d" prot="private" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real m_arrContacts[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>m_arrContacts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector1.h" line="79" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector1.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="df/d43/classTIntersector1_1acf20a31f5009c809937903cac9235315" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TIntersector1</definition>
+        <argsstring>(Real fU0, Real fU1, Real fV0, Real fV1, Real fZeroTolerance=(Real) SCALAR_ERROR)</argsstring>
+        <name>TIntersector1</name>
+        <param>
+          <type>Real</type>
+          <declname>fU0</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fU1</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fV0</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fV1</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fZeroTolerance</declname>
+          <defval>(Real) <ref refid="d0/d10/Scalar_8h_1ab84e60710e7c3a93246b807ac524d38b" kindref="member">SCALAR_ERROR</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector1.h" line="44"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d43/classTIntersector1_1adcf4539cbc75c14e232e0996049b2aee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TIntersector1</definition>
+        <argsstring>(const Real vU[2], const Real vV[2], Real fZeroTolerance=(Real) SCALAR_ERROR)</argsstring>
+        <name>TIntersector1</name>
+        <param>
+          <type>const Real</type>
+          <declname>vU</declname>
+          <array>[2]</array>
+        </param>
+        <param>
+          <type>const Real</type>
+          <declname>vV</declname>
+          <array>[2]</array>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fZeroTolerance</declname>
+          <defval>(Real) <ref refid="d0/d10/Scalar_8h_1ab84e60710e7c3a93246b807ac524d38b" kindref="member">SCALAR_ERROR</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector1.h" line="46"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d43/classTIntersector1_1a9394671b4435550b7b83f69c5fa611d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TIntersector1</definition>
+        <argsstring>(const TVector2&lt; Real &gt; &amp;vU, const TVector2&lt; Real &gt; &amp;vV, Real fZeroTolerance=(Real) SCALAR_ERROR)</argsstring>
+        <name>TIntersector1</name>
+        <param>
+          <type>const <ref refid="da/d58/classTVector2" kindref="compound">TVector2</ref>&lt; Real &gt; &amp;</type>
+          <declname>vU</declname>
+        </param>
+        <param>
+          <type>const <ref refid="da/d58/classTVector2" kindref="compound">TVector2</ref>&lt; Real &gt; &amp;</type>
+          <declname>vV</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fZeroTolerance</declname>
+          <defval>(Real) <ref refid="d0/d10/Scalar_8h_1ab84e60710e7c3a93246b807ac524d38b" kindref="member">SCALAR_ERROR</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector1.h" line="48"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d43/classTIntersector1_1af39757773e3e7f202f94e4a5bc577fc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~TIntersector1</definition>
+        <argsstring>()</argsstring>
+        <name>~TIntersector1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector1.h" line="49"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d43/classTIntersector1_1ab2e98ac60159b162aec64dfc9af7b6c6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="da/d58/classTVector2" kindref="compound">TVector2</ref>&lt; Real &gt; &amp;</type>
+        <definition>const TVector2&lt;Real&gt;&amp; GetU</definition>
+        <argsstring>() const </argsstring>
+        <name>GetU</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector1.h" line="55"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d43/classTIntersector1_1aa968fe341550a3ee38c7c86235bba66d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="da/d58/classTVector2" kindref="compound">TVector2</ref>&lt; Real &gt; &amp;</type>
+        <definition>const TVector2&lt;Real&gt;&amp; GetV</definition>
+        <argsstring>() const </argsstring>
+        <name>GetV</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector1.h" line="56"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d43/classTIntersector1_1a9438bbdadf8434c718a640fd3535177c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetContactCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetContactCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector1.h" line="59"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d43/classTIntersector1_1ad0d558a1a88370aafb8b2bea8c407ca3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real GetContact</definition>
+        <argsstring>(UInt iContact) const </argsstring>
+        <name>GetContact</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iContact</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector1.h" line="60"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d43/classTIntersector1_1adba6d01e34d0c65f5fb457b71db07d2e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real GetFirstTOI</definition>
+        <argsstring>() const </argsstring>
+        <name>GetFirstTOI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector1.h" line="62"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d43/classTIntersector1_1aea08b26e313048003b5ed27cbbebb603" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>Real GetLastTOI</definition>
+        <argsstring>() const </argsstring>
+        <name>GetLastTOI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector1.h" line="63"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d43/classTIntersector1_1a65db63e9d5d2b6b4ed946bdd540b66fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool Test</definition>
+        <argsstring>()</argsstring>
+        <name>Test</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector1.h" line="66"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d43/classTIntersector1_1a341b9b92a04970a472aa836fb2a2fb23" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool Compute</definition>
+        <argsstring>()</argsstring>
+        <name>Compute</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector1.h" line="67"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d43/classTIntersector1_1af5e54571fc0cc817209d0284b10ee423" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool Test</definition>
+        <argsstring>(Real fSpeedU, Real fSpeedV, Real fMaxTime)</argsstring>
+        <name>Test</name>
+        <param>
+          <type>Real</type>
+          <declname>fSpeedU</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fSpeedV</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fMaxTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector1.h" line="70"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d43/classTIntersector1_1a4bfa14b9b3455dc713c1a92f0a4faf5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool Compute</definition>
+        <argsstring>(Real fSpeedU, Real fSpeedV, Real fMaxTime)</argsstring>
+        <name>Compute</name>
+        <param>
+          <type>Real</type>
+          <declname>fSpeedU</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fSpeedV</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fMaxTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector1.h" line="71"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="12571">
+        <label>TIntersector1&lt; Real &gt;</label>
+        <link refid="df/d43/classTIntersector1"/>
+        <childnode refid="12572" relation="usage">
+          <edgelabel>m_intU</edgelabel>
+          <edgelabel>m_intV</edgelabel>
+        </childnode>
+        <childnode refid="12573" relation="usage">
+          <edgelabel>m_iContactCount</edgelabel>
+        </childnode>
+        <childnode refid="12574" relation="usage">
+          <edgelabel>m_arrContacts</edgelabel>
+          <edgelabel>ZeroTolerance</edgelabel>
+          <edgelabel>m_fLastTOI</edgelabel>
+          <edgelabel>m_fFirstTOI</edgelabel>
+        </childnode>
+      </node>
+      <node id="12574">
+        <label>Real</label>
+      </node>
+      <node id="12572">
+        <label>TVector2&lt; Real &gt;</label>
+      </node>
+      <node id="12573">
+        <label>int</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector1.h" line="38" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Intersection/Intersector1.h" bodystart="37" bodyend="80"/>
+    <listofallmembers>
+      <member refid="df/d43/classTIntersector1_1a341b9b92a04970a472aa836fb2a2fb23" prot="public" virt="non-virtual"><scope>TIntersector1</scope><name>Compute</name></member>
+      <member refid="df/d43/classTIntersector1_1a4bfa14b9b3455dc713c1a92f0a4faf5b" prot="public" virt="non-virtual"><scope>TIntersector1</scope><name>Compute</name></member>
+      <member refid="df/d43/classTIntersector1_1ad0d558a1a88370aafb8b2bea8c407ca3" prot="public" virt="non-virtual"><scope>TIntersector1</scope><name>GetContact</name></member>
+      <member refid="df/d43/classTIntersector1_1a9438bbdadf8434c718a640fd3535177c" prot="public" virt="non-virtual"><scope>TIntersector1</scope><name>GetContactCount</name></member>
+      <member refid="df/d43/classTIntersector1_1adba6d01e34d0c65f5fb457b71db07d2e" prot="public" virt="non-virtual"><scope>TIntersector1</scope><name>GetFirstTOI</name></member>
+      <member refid="df/d43/classTIntersector1_1aea08b26e313048003b5ed27cbbebb603" prot="public" virt="non-virtual"><scope>TIntersector1</scope><name>GetLastTOI</name></member>
+      <member refid="df/d43/classTIntersector1_1ab2e98ac60159b162aec64dfc9af7b6c6" prot="public" virt="non-virtual"><scope>TIntersector1</scope><name>GetU</name></member>
+      <member refid="df/d43/classTIntersector1_1aa968fe341550a3ee38c7c86235bba66d" prot="public" virt="non-virtual"><scope>TIntersector1</scope><name>GetV</name></member>
+      <member refid="df/d43/classTIntersector1_1a429454fc5d8b21380812ace708a14b7d" prot="private" virt="non-virtual"><scope>TIntersector1</scope><name>m_arrContacts</name></member>
+      <member refid="df/d43/classTIntersector1_1a9deba103f03480c2088ed90f89294f12" prot="private" virt="non-virtual"><scope>TIntersector1</scope><name>m_fFirstTOI</name></member>
+      <member refid="df/d43/classTIntersector1_1a1e9649b7e8bd773779c36552f633802f" prot="private" virt="non-virtual"><scope>TIntersector1</scope><name>m_fLastTOI</name></member>
+      <member refid="df/d43/classTIntersector1_1ad03de214150cc193e0da0839f0d650e3" prot="private" virt="non-virtual"><scope>TIntersector1</scope><name>m_iContactCount</name></member>
+      <member refid="df/d43/classTIntersector1_1a014d476b2ddd7fa0affa19f60f6dc838" prot="private" virt="non-virtual"><scope>TIntersector1</scope><name>m_intU</name></member>
+      <member refid="df/d43/classTIntersector1_1a327216a387d3231dca76f337b89e6328" prot="private" virt="non-virtual"><scope>TIntersector1</scope><name>m_intV</name></member>
+      <member refid="df/d43/classTIntersector1_1a65db63e9d5d2b6b4ed946bdd540b66fc" prot="public" virt="non-virtual"><scope>TIntersector1</scope><name>Test</name></member>
+      <member refid="df/d43/classTIntersector1_1af5e54571fc0cc817209d0284b10ee423" prot="public" virt="non-virtual"><scope>TIntersector1</scope><name>Test</name></member>
+      <member refid="df/d43/classTIntersector1_1acf20a31f5009c809937903cac9235315" prot="public" virt="non-virtual"><scope>TIntersector1</scope><name>TIntersector1</name></member>
+      <member refid="df/d43/classTIntersector1_1adcf4539cbc75c14e232e0996049b2aee" prot="public" virt="non-virtual"><scope>TIntersector1</scope><name>TIntersector1</name></member>
+      <member refid="df/d43/classTIntersector1_1a9394671b4435550b7b83f69c5fa611d1" prot="public" virt="non-virtual"><scope>TIntersector1</scope><name>TIntersector1</name></member>
+      <member refid="df/d43/classTIntersector1_1a15588eea940c254c383433246cc901ac" prot="public" virt="non-virtual"><scope>TIntersector1</scope><name>ZeroTolerance</name></member>
+      <member refid="df/d43/classTIntersector1_1af39757773e3e7f202f94e4a5bc577fc3" prot="public" virt="non-virtual"><scope>TIntersector1</scope><name>~TIntersector1</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

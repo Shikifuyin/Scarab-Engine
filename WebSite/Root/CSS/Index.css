@@ -1,0 +1,384 @@
+/*///////////////////////////////////////////////////////////////////////////////
+// File : <Root>/CSS/Index.css
+/////////////////////////////////////////////////////////////////////////////////
+// Version : 1.0
+// Began Code : 05/06/2012
+// Status : Alpha
+// Portability : Any
+/////////////////////////////////////////////////////////////////////////////////
+// Description : Index integration
+/////////////////////////////////////////////////////////////////////////////////
+// Part of Scarab-Engine, licensed under the
+// Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License
+//   http://creativecommons.org/licenses/by-nc-nd/3.0/
+/////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////////
+// Known Bugs : None.
+///////////////////////////////////////////////////////////////////////////////*/
+
+/*///////////////////////////////////////////////////////////////////////////////
+// Index Integration : Hierarchic containment classes */
+.HeaderContainer_Level0 {
+    /* Dimensions */
+    width:auto;
+    height:190px;
+}
+/*.SearchBoxContainer_Level0 {
+    /* Dimensions *
+    width:120px;
+    height:auto;
+
+    /* Positioning *
+    position:relative;
+
+    margin-left:4px;
+    margin-top:4px;
+    margin-bottom:4px;
+}*/
+.MenuContainer_Level0 {
+    /* Dimensions */
+    width:19%;
+    height:30px;
+
+    /* Positioning */
+    position:relative;
+    float:left;
+
+    margin-left:0%;
+    margin-top:0px;
+    z-index:2;
+}
+.LoginBoxContainer_Level0 {
+    /* Dimensions */
+    width:120px;
+    height:auto;
+    
+    /* Positioning */
+    position:relative;
+
+    margin-left:4px;
+    margin-top:4px;
+    margin-bottom:4px;
+}
+
+.FooterContainer_Level0 {
+    /* Dimensions */
+    width:32%;
+    height:40px;
+
+	/* Positioning */
+    position:relative;
+    float:left;
+
+    margin-left:1%;
+    margin-top:4px;
+    margin-bottom:4px;
+}
+.SocialNetworkContainer_Level0 {
+     /* Dimensions */
+    width:auto;
+    height:20px;
+    
+    /* Positioning */
+	position:relative;
+    float:left;
+
+    margin-left:1%;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.LinkContainer_Level0 {    
+    /* Positioning */
+    position:relative;
+    float:right;
+    
+    margin-right:0%;
+}
+
+/*///////////////////////////////////////////////////////////////////////////////
+// Index Integration : Property affectation classes */
+.HeaderProperties_LeftContainer {
+    /* Dimensions */
+    width:20%;
+
+    /* Positioning */
+    position:relative;
+    float:left;
+
+    margin-left:0px;
+}
+.HeaderProperties_CenterContainer {
+    /* Dimensions */
+    width:60%;
+    /*min-width:800px;*/
+
+    /* Positioning */
+    position:relative;
+    float:left;
+
+    margin-left:auto;
+    margin-right:auto;
+
+    /* Skinning */
+    background-image:url("../Medias/Images/Header_Background.jpg");
+    background-size:800px 190px;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+.HeaderProperties_RightContainer {
+    /* Dimensions */
+    width:20%;
+    /*min-width:160px;*/
+
+    /* Positioning */
+    position:relative;
+    float:right;
+
+    margin-right:0px;
+}
+
+/*.SearchBoxProperties_InputText {
+}
+.SearchBoxProperties_SearchButton {
+    /* Dimensions *
+    width:96px;
+}*/
+
+.MenuProperties_Button {
+    /* Skinning */
+    text-align:center;
+    line-height:30px;
+    font-size:16px;
+    font-weight:bold;
+    color:#ffffff;
+    
+    cursor:pointer;
+    
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+}
+.MenuProperties_Separator {
+    /* Dimensions */
+    width:1%;
+    height:22px;
+    
+    /* Positioning */
+    margin-top:4px;
+    
+    /* Skinning */
+    background-image:url("../Medias/Images/Header_Menu_Separator.png");
+    background-size:3px 22px;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+.MenuProperties_Selector {
+    /* Positioning */
+    position:absolute;
+
+    left:0%; /* Dynamic, Linear animation */
+    top:0px;
+    z-index:1;
+    
+    /* Skinning */
+    background-color:#1c1f2d;
+
+    border-radius:4px;
+}
+
+.LoginBoxProperties_Button {
+    /* Skinning */
+    text-align:right;
+}
+.LoginBoxProperties_HelloText {
+    /* Skinning */
+    line-height:22px;
+    /*font:;*/
+    font-size:14px;
+    color:#ffffff;
+}
+
+.SocialNetworkProperties_Facebook {
+    /* Dimensions */
+    width:72px;
+}
+.SocialNetworkProperties_Twitter {
+    /* Dimensions */
+    width:78px;
+}
+
+.LinkProperties_Link {
+    /* Dimensions */
+    width:auto;
+    height:30px;
+
+    /* Positioning */
+    position:relative;
+    
+    margin-top:5px;
+    margin-bottom:5px;
+    
+    /* Skinning */
+	text-align:center;
+    line-height:30px;
+    font-size:14px;
+    color:#ffffff;
+
+	cursor:pointer;
+    
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+}
+.LinkProperties_Separator {
+    /* Dimensions */
+    width:11px;
+    height:22px;
+
+    /* Positioning */
+    position:relative;
+
+    margin-top:9px;
+    margin-bottom:9px;
+    
+    /* Skinning */
+    background-image:url("../Medias/Images/Header_Menu_Separator.png");
+    background-size:3px 22px;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+/*///////////////////////////////////////////////////////////////////////////////
+// Index Integration : Specific styling */
+
+/* Root ************************************************************************/
+#Header {
+    /* Dimensions */
+    width:100%;
+    height:190px;
+
+	/* Positioning */
+    position:relative;
+    
+    margin-left:0%;
+    margin-top:0px;
+
+    /* Skinning */
+    background-color:#383e52;
+}
+
+#Content {
+    /* Dimensions */
+    width:100%;
+	height:auto; /* Content-dependent */
+
+	/* Positioning */
+    position:relative;
+
+    margin-left:0%;
+    margin-top:0px;
+
+	/* Skinning */    
+    opacity:1.0; /* Dynamic, Linear animation */
+}
+
+#Footer {
+    /* Dimensions */
+    width:100%;
+    height:48px;
+
+	/* Positioning */
+    position:absolute;
+
+    left:0%;
+    top:0px; /* Dynamic, Linear animation */
+
+    /* Skinning */
+    background-color:#383e52;
+}
+
+/* Header **********************************************************************/
+/*#Header_SearchBox {
+    /* Dimensions *
+    width:128px;
+    height:auto;
+
+    /* Positioning *
+    position:relative;
+    float:left;
+
+    margin-left:8px;
+    margin-top:96px;
+}*/
+
+#Header_Menu {
+    /* Dimensions */
+    width:98%;
+    height:30px;
+
+    /* Positioning */
+    position:relative;
+
+    margin-left:1%;
+    margin-top:150px;
+}
+
+#Header_LoginBox {
+    /* Dimensions */
+    width:128px;
+    height:auto;
+
+    /* Positioning */
+    position:relative;
+    float:right;
+
+    margin-right:16px;
+    margin-top:64px;
+}
+
+#LoginBox_Login {
+    /* Dimensions */
+    width:112px;
+}
+#LoginBox_Password {
+    /* Dimensions */
+    width:112px;
+}
+
+/* Footer : License ************************************************************/
+#Footer_License_Icon {
+    /* Dimensions */
+    width:88px;
+    height:31px;
+
+    /* Positioning */
+    position:absolute;
+
+    left:4px;
+    top:4px;
+}
+
+#Footer_License_Text {
+    /* Dimensions */
+    width:100%;
+    height:32px;
+
+    /* Positioning */
+    position:absolute;
+
+    left:96px;
+    top:4px;
+
+	/* Skinning */
+    line-height:16px;
+    font-size:11px;
+    color:#ffffff;
+    
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+
+

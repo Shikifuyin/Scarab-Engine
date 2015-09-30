@@ -1,0 +1,318 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d2/d3e/classGUITitleBarModel" kind="class" prot="public">
+    <compoundname>GUITitleBarModel</compoundname>
+    <basecompoundref refid="d0/d61/classGUIWidgetModel" prot="public" virt="non-virtual">GUIWidgetModel</basecompoundref>
+    <includes refid="dd/d52/GUITitleBar_8h" local="no">GUITitleBar.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="d2/d3e/classGUITitleBarModel_1a80056db9ca1e369c36b7db88c64aa0ab" prot="protected" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref></type>
+        <definition>GChar m_strTitle[GUI_NAME_LENGTH]</definition>
+        <argsstring>[GUI_NAME_LENGTH]</argsstring>
+        <name>m_strTitle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Window/GUITitleBar.h" line="62" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Window/GUITitleBar.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d2/d3e/classGUITitleBarModel_1a00057c7f3a776d9d9e88e03bf72131c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GUITitleBarModel</definition>
+        <argsstring>(const GChar *strTitle)</argsstring>
+        <name>GUITitleBarModel</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strTitle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Window/GUITitleBar.h" line="40"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/d3e/classGUITitleBarModel_1aed89450ea425119370f09a36e9ea9354" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~GUITitleBarModel</definition>
+        <argsstring>()</argsstring>
+        <name>~GUITitleBarModel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Window/GUITitleBar.h" line="41"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/d3e/classGUITitleBarModel_1afb15aa991c4c3f4cae2f30852a924359" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+        <definition>const GChar* GetTitle</definition>
+        <argsstring>() const </argsstring>
+        <name>GetTitle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Window/GUITitleBar.h" line="44"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/d3e/classGUITitleBarModel_1a275bb9ed09e3dec27c79da3b9af85da9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetTitle</definition>
+        <argsstring>(const GChar *strTitle)</argsstring>
+        <name>SetTitle</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strTitle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Window/GUITitleBar.h" line="45"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/d3e/classGUITitleBarModel_1ad41fa7e90b05e9abb22d88e3328e0144" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void OnStartDrag</definition>
+        <argsstring>(const Point2 &amp;ptLocalPos, KeyCode iKey, GUIEventFlag iFlags)</argsstring>
+        <name>OnStartDrag</name>
+        <reimplements refid="dd/d40/classGUIEventProcessorModel_1ad41fa7e90b05e9abb22d88e3328e0144">OnStartDrag</reimplements>
+        <param>
+          <type>const <ref refid="dd/d98/classPoint2" kindref="compound">Point2</ref> &amp;</type>
+          <declname>ptLocalPos</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a414bae0861cbf75db6ba1081cee1e663" kindref="member">KeyCode</ref></type>
+          <declname>iKey</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/df0/GUIEvent_8h_1a1fb329d664687b0a665d348b7b1ed134" kindref="member">GUIEventFlag</ref></type>
+          <declname>iFlags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Window/GUITitleBar.h" line="59"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4517">
+        <label>GUITitleBarModel</label>
+        <link refid="d2/d3e/classGUITitleBarModel"/>
+        <childnode refid="4518" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4518">
+        <label>GUIWidgetModel</label>
+        <link refid="d0/d61/classGUIWidgetModel"/>
+        <childnode refid="4519" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4519">
+        <label>GUIEventProcessorModel</label>
+        <link refid="dd/d40/classGUIEventProcessorModel"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4520">
+        <label>GUITitleBarModel</label>
+        <link refid="d2/d3e/classGUITitleBarModel"/>
+        <childnode refid="4521" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4537" relation="usage">
+          <edgelabel>m_strTitle</edgelabel>
+        </childnode>
+      </node>
+      <node id="4525">
+        <label>RingBuffer&lt; GUIEvent &gt;</label>
+        <link refid="d8/d2d/classRingBuffer"/>
+        <childnode refid="4526" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4528" relation="usage">
+          <edgelabel>m_arrBuffer</edgelabel>
+        </childnode>
+        <childnode refid="4531" relation="usage">
+          <edgelabel>m_iRead</edgelabel>
+          <edgelabel>m_iBufferSize</edgelabel>
+          <edgelabel>m_iCount</edgelabel>
+          <edgelabel>m_iWrite</edgelabel>
+        </childnode>
+      </node>
+      <node id="4528">
+        <label>GUIEvent</label>
+        <link refid="d9/d68/classGUIEvent"/>
+        <childnode refid="4529" relation="usage">
+          <edgelabel>m_arrParameters</edgelabel>
+        </childnode>
+        <childnode refid="4530" relation="usage">
+          <edgelabel>m_iType</edgelabel>
+        </childnode>
+        <childnode refid="4531" relation="usage">
+          <edgelabel>m_arrParamOffsets</edgelabel>
+          <edgelabel>m_iParamCount</edgelabel>
+          <edgelabel>m_iParamTotalSize</edgelabel>
+        </childnode>
+        <childnode refid="4527" relation="usage">
+          <edgelabel>m_iFlags</edgelabel>
+        </childnode>
+      </node>
+      <node id="4533">
+        <label>GUIMenuModel</label>
+        <link refid="da/dfd/classGUIMenuModel"/>
+        <childnode refid="4534" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4535" relation="usage">
+          <edgelabel>m_arrItems</edgelabel>
+        </childnode>
+        <childnode refid="4531" relation="usage">
+          <edgelabel>m_iItemCount</edgelabel>
+          <edgelabel>m_iItemHeight</edgelabel>
+          <edgelabel>m_iSelectedItem</edgelabel>
+        </childnode>
+      </node>
+      <node id="4535">
+        <label>GUIMenuItem</label>
+        <link refid="d0/db3/classGUIMenuItem"/>
+        <childnode refid="4524" relation="usage">
+          <edgelabel>m_strName</edgelabel>
+        </childnode>
+        <childnode refid="4533" relation="usage">
+          <edgelabel>m_pSubMenu</edgelabel>
+        </childnode>
+        <childnode refid="4532" relation="usage">
+          <edgelabel>m_bActive</edgelabel>
+        </childnode>
+        <childnode refid="4536" relation="usage">
+          <edgelabel>m_idIcon</edgelabel>
+        </childnode>
+      </node>
+      <node id="4527">
+        <label>unsigned int</label>
+      </node>
+      <node id="4529">
+        <label>unsigned char</label>
+      </node>
+      <node id="4521">
+        <label>GUIWidgetModel</label>
+        <link refid="d0/d61/classGUIWidgetModel"/>
+        <childnode refid="4522" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4533" relation="usage">
+          <edgelabel>m_pContextMenuModel</edgelabel>
+        </childnode>
+      </node>
+      <node id="4531">
+        <label>int</label>
+      </node>
+      <node id="4530">
+        <label>GUIEventType</label>
+      </node>
+      <node id="4522">
+        <label>GUIEventProcessorModel</label>
+        <link refid="dd/d40/classGUIEventProcessorModel"/>
+        <childnode refid="4523" relation="usage">
+          <edgelabel>m_pEventProcessor</edgelabel>
+        </childnode>
+      </node>
+      <node id="4532">
+        <label>bool</label>
+      </node>
+      <node id="4536">
+        <label>GUISkinImage</label>
+      </node>
+      <node id="4534">
+        <label>GUIOverlayModel</label>
+        <link refid="d5/db8/classGUIOverlayModel"/>
+        <childnode refid="4522" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4524">
+        <label>char</label>
+      </node>
+      <node id="4523">
+        <label>GUIEventProcessor</label>
+        <link refid="d2/de5/classGUIEventProcessor"/>
+        <childnode refid="4524" relation="usage">
+          <edgelabel>m_strName</edgelabel>
+        </childnode>
+        <childnode refid="4525" relation="usage">
+          <edgelabel>m_bufEventQueue</edgelabel>
+        </childnode>
+        <childnode refid="4532" relation="usage">
+          <edgelabel>m_bHasFocus</edgelabel>
+          <edgelabel>m_bHasMouseOver</edgelabel>
+        </childnode>
+        <childnode refid="4522" relation="usage">
+          <edgelabel>m_pModel</edgelabel>
+        </childnode>
+      </node>
+      <node id="4537">
+        <label>MBChar</label>
+      </node>
+      <node id="4526">
+        <label>Datastruct</label>
+        <link refid="dc/d51/classDatastruct"/>
+        <childnode refid="4524" relation="usage">
+          <edgelabel>m_strAllocatorName</edgelabel>
+        </childnode>
+        <childnode refid="4527" relation="usage">
+          <edgelabel>m_idMemoryContext</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Window/GUITitleBar.h" line="38" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/Widgets/Window/GUITitleBar.h" bodystart="37" bodyend="63"/>
+    <listofallmembers>
+      <member refid="d0/d61/classGUIWidgetModel_1a0cfcd212c5dbd89df05440fcfc8b3259" prot="protected" virt="non-virtual"><scope>GUITitleBarModel</scope><name>_GetWidget</name></member>
+      <member refid="d0/d61/classGUIWidgetModel_1ada3476b951856b88db0a4fdddebfc41b" prot="public" virt="non-virtual"><scope>GUITitleBarModel</scope><name>GetContextMenu</name></member>
+      <member refid="d2/d3e/classGUITitleBarModel_1afb15aa991c4c3f4cae2f30852a924359" prot="public" virt="non-virtual"><scope>GUITitleBarModel</scope><name>GetTitle</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a8fbad42b0ba391346a20d145a1f1aaff" prot="public" virt="non-virtual"><scope>GUITitleBarModel</scope><name>GUIEventProcessorModel</name></member>
+      <member refid="d2/d3e/classGUITitleBarModel_1a00057c7f3a776d9d9e88e03bf72131c1" prot="public" virt="non-virtual"><scope>GUITitleBarModel</scope><name>GUITitleBarModel</name></member>
+      <member refid="d0/d61/classGUIWidgetModel_1acce77924f3db1ced0014096279f42047" prot="public" virt="non-virtual"><scope>GUITitleBarModel</scope><name>GUIWidgetModel</name></member>
+      <member refid="d0/d61/classGUIWidgetModel_1a4487fdc4888d33d45357ad1bd13b6719" prot="public" virt="non-virtual"><scope>GUITitleBarModel</scope><name>HasContextMenu</name></member>
+      <member refid="d0/d61/classGUIWidgetModel_1a883d1ee59fad61a6177438b18bb3b9ac" prot="protected" virt="non-virtual"><scope>GUITitleBarModel</scope><name>m_pContextMenuModel</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1ad88dbcc21870be5c934a7ed0492ab408" prot="protected" virt="non-virtual"><scope>GUITitleBarModel</scope><name>m_pEventProcessor</name></member>
+      <member refid="d2/d3e/classGUITitleBarModel_1a80056db9ca1e369c36b7db88c64aa0ab" prot="protected" virt="non-virtual"><scope>GUITitleBarModel</scope><name>m_strTitle</name></member>
+      <member refid="d0/d61/classGUIWidgetModel_1aef6289d8ef69e714dabad61f7c46797d" prot="public" virt="virtual"><scope>GUITitleBarModel</scope><name>OnClick</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1aa3e35f6c52afce88f987f7b3b812f3a0" prot="public" virt="virtual"><scope>GUITitleBarModel</scope><name>OnDblClick</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1aa636c946eeaa7b724fdde67f1ca97fca" prot="public" virt="virtual"><scope>GUITitleBarModel</scope><name>OnDragBoth</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a17ce7ae06efbafb91cc5caa6a4df3769" prot="public" virt="virtual"><scope>GUITitleBarModel</scope><name>OnDragLeft</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a7c836a58d5d3e22ce14266d8a34abca6" prot="public" virt="virtual"><scope>GUITitleBarModel</scope><name>OnDragRight</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1afab7f7032d2bdef0e41ebfac22a78ac3" prot="public" virt="virtual"><scope>GUITitleBarModel</scope><name>OnExit</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a2016e258f2f1da5dde1355ec22551d06" prot="public" virt="virtual"><scope>GUITitleBarModel</scope><name>OnFocusGain</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1aa13f09676e6e63fe2a1d111810eb6188" prot="public" virt="virtual"><scope>GUITitleBarModel</scope><name>OnFocusLoss</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1ac03d9dd79678d679ecc8eaf2868be2e7" prot="public" virt="virtual"><scope>GUITitleBarModel</scope><name>OnKeyPress</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a9e381a03ac30f24336437ea469463e7d" prot="public" virt="virtual"><scope>GUITitleBarModel</scope><name>OnKeyRelease</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1ad7821750126b444a522a57f8e56a4015" prot="public" virt="virtual"><scope>GUITitleBarModel</scope><name>OnMousePress</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a0d16663cc3afe04b2fb14462cc20aded" prot="public" virt="virtual"><scope>GUITitleBarModel</scope><name>OnMouseRelease</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a96979342e0e260ea683f2e279c17f08b" prot="public" virt="virtual"><scope>GUITitleBarModel</scope><name>OnResize</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a76f49c66bd121837ceb5e8044d1e7d43" prot="public" virt="virtual"><scope>GUITitleBarModel</scope><name>OnRollIn</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a1349de895d5bfe49c31c84803e390e69" prot="public" virt="virtual"><scope>GUITitleBarModel</scope><name>OnRollOut</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a0acd59231d41981eb8903f53b9da820d" prot="public" virt="virtual"><scope>GUITitleBarModel</scope><name>OnRollOver</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a84a8c413e7f1bdff0e95e486c4b4c701" prot="public" virt="virtual"><scope>GUITitleBarModel</scope><name>OnScroll</name></member>
+      <member refid="d2/d3e/classGUITitleBarModel_1ad41fa7e90b05e9abb22d88e3328e0144" prot="public" virt="virtual"><scope>GUITitleBarModel</scope><name>OnStartDrag</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a5ab23add485081eabc565545b600fa0e" prot="public" virt="virtual"><scope>GUITitleBarModel</scope><name>OnStopDrag</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1ae55129b32f59b72142aabfb4bbba3978" prot="public" virt="virtual"><scope>GUITitleBarModel</scope><name>OnTick</name></member>
+      <member refid="d0/d61/classGUIWidgetModel_1ab4f51346fc92a0441fd9e1a622b4916c" prot="public" virt="non-virtual"><scope>GUITitleBarModel</scope><name>SetContextMenu</name></member>
+      <member refid="d2/d3e/classGUITitleBarModel_1a275bb9ed09e3dec27c79da3b9af85da9" prot="public" virt="non-virtual"><scope>GUITitleBarModel</scope><name>SetTitle</name></member>
+      <member refid="dd/d40/classGUIEventProcessorModel_1a9c07c36b72b8ae06d38a2e6de5afe226" prot="public" virt="virtual"><scope>GUITitleBarModel</scope><name>~GUIEventProcessorModel</name></member>
+      <member refid="d2/d3e/classGUITitleBarModel_1aed89450ea425119370f09a36e9ea9354" prot="public" virt="virtual"><scope>GUITitleBarModel</scope><name>~GUITitleBarModel</name></member>
+      <member refid="d0/d61/classGUIWidgetModel_1ab68e97ff84b087fd0eaab0fc88f8ebea" prot="public" virt="virtual"><scope>GUITitleBarModel</scope><name>~GUIWidgetModel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

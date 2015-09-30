@@ -1,0 +1,832 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="db/d40/EffectTexture2D_8h" kind="file">
+    <compoundname>EffectTexture2D.h</compoundname>
+    <includes refid="d9/dbf/Texture_8h" local="yes">../../../Resources/Texture.h</includes>
+    <includes refid="d9/d31/ShaderConstMatrices_8h" local="yes">../../../Shaders/ShaderConstant/ShaderConstMatrices.h</includes>
+    <includes refid="d3/d24/Effect_8h" local="yes">../../Effect.h</includes>
+    <includes refid="dc/d13/EffectInstance_8h" local="yes">../../EffectInstance.h</includes>
+    <includes local="yes">EffectTexture2D.inl</includes>
+    <incdepgraph>
+      <node id="11314">
+        <label>Texture.inl</label>
+      </node>
+      <node id="11329">
+        <label>../Vector/Vector4.h</label>
+        <link refid="d7/d36/Vector4_8h"/>
+        <childnode refid="11253" relation="include">
+        </childnode>
+        <childnode refid="11330" relation="include">
+        </childnode>
+      </node>
+      <node id="11316">
+        <label>../ShaderConst.h</label>
+        <link refid="dc/d51/ShaderConst_8h"/>
+        <childnode refid="11317" relation="include">
+        </childnode>
+        <childnode refid="11335" relation="include">
+        </childnode>
+        <childnode refid="11339" relation="include">
+        </childnode>
+      </node>
+      <node id="11346">
+        <label>../States/CullingState.h</label>
+        <link refid="d9/db7/CullingState_8h"/>
+        <childnode refid="11247" relation="include">
+        </childnode>
+        <childnode refid="11347" relation="include">
+        </childnode>
+      </node>
+      <node id="11333">
+        <label>Matrix4.inl</label>
+      </node>
+      <node id="11357">
+        <label>ShaderProgram.inl</label>
+      </node>
+      <node id="11305">
+        <label>../../../Lib/Math/Hash/SHA1.h</label>
+        <link refid="d1/de3/SHA1_8h"/>
+        <childnode refid="11247" relation="include">
+        </childnode>
+        <childnode refid="11306" relation="include">
+        </childnode>
+      </node>
+      <node id="11301">
+        <label>RedBlackTree.inl</label>
+      </node>
+      <node id="11311">
+        <label>RDBTreeOperator.inl</label>
+      </node>
+      <node id="11263">
+        <label>SSE.inl</label>
+      </node>
+      <node id="11267">
+        <label>Threading.h</label>
+        <link refid="dd/d0e/Threading_8h"/>
+        <childnode refid="11245" relation="include">
+        </childnode>
+        <childnode refid="11247" relation="include">
+        </childnode>
+        <childnode refid="11268" relation="include">
+        </childnode>
+      </node>
+      <node id="11341">
+        <label>../../Effect.h</label>
+        <link refid="d3/d24/Effect_8h"/>
+        <childnode refid="11342" relation="include">
+        </childnode>
+        <childnode refid="11360" relation="include">
+        </childnode>
+      </node>
+      <node id="11279">
+        <label>Allocators/BreakAllocator.h</label>
+        <link refid="d4/dac/BreakAllocator_8h"/>
+        <childnode refid="11274" relation="include">
+        </childnode>
+        <childnode refid="11280" relation="include">
+        </childnode>
+      </node>
+      <node id="11242">
+        <label>../../../Lib/Memory/MemoryManager.h</label>
+        <link refid="d7/d7b/MemoryManager_8h"/>
+        <childnode refid="11243" relation="include">
+        </childnode>
+        <childnode refid="11253" relation="include">
+        </childnode>
+        <childnode refid="11259" relation="include">
+        </childnode>
+        <childnode refid="11273" relation="include">
+        </childnode>
+        <childnode refid="11277" relation="include">
+        </childnode>
+        <childnode refid="11279" relation="include">
+        </childnode>
+        <childnode refid="11281" relation="include">
+        </childnode>
+        <childnode refid="11283" relation="include">
+        </childnode>
+      </node>
+      <node id="11260">
+        <label>../../ThirdParty/System/System.h</label>
+        <link refid="db/d39/System_8h"/>
+        <childnode refid="11245" relation="include">
+        </childnode>
+        <childnode refid="11247" relation="include">
+        </childnode>
+        <childnode refid="11261" relation="include">
+        </childnode>
+        <childnode refid="11244" relation="include">
+        </childnode>
+        <childnode refid="11265" relation="include">
+        </childnode>
+        <childnode refid="11267" relation="include">
+        </childnode>
+        <childnode refid="11269" relation="include">
+        </childnode>
+        <childnode refid="11271" relation="include">
+        </childnode>
+      </node>
+      <node id="11287">
+        <label>Color4.h</label>
+        <link refid="d7/d4d/Color4_8h"/>
+        <childnode refid="11253" relation="include">
+        </childnode>
+        <childnode refid="11288" relation="include">
+        </childnode>
+      </node>
+      <node id="11268">
+        <label>Threading.inl</label>
+      </node>
+      <node id="11294">
+        <label>RDBPersistentStorage.h</label>
+        <link refid="d2/d3d/RDBPersistentStorage_8h"/>
+        <childnode refid="11295" relation="include">
+        </childnode>
+        <childnode refid="11299" relation="include">
+        </childnode>
+        <childnode refid="11303" relation="include">
+        </childnode>
+        <childnode refid="11305" relation="include">
+        </childnode>
+        <childnode refid="11307" relation="include">
+        </childnode>
+        <childnode refid="11309" relation="include">
+        </childnode>
+      </node>
+      <node id="11280">
+        <label>BreakAllocator.inl</label>
+      </node>
+      <node id="11345">
+        <label>ClippingState.inl</label>
+      </node>
+      <node id="11338">
+        <label>Camera.inl</label>
+      </node>
+      <node id="11296">
+        <label>../Datastruct.h</label>
+        <link refid="d5/db1/Datastruct_8h"/>
+        <childnode refid="11242" relation="include">
+        </childnode>
+        <childnode refid="11297" relation="include">
+        </childnode>
+      </node>
+      <node id="11293">
+        <label>PatternMatching.inl</label>
+      </node>
+      <node id="11359">
+        <label>EffectTechnique.inl</label>
+      </node>
+      <node id="11297">
+        <label>Datastruct.inl</label>
+      </node>
+      <node id="11350">
+        <label>../States/StencilState.h</label>
+        <link refid="d1/db8/StencilState_8h"/>
+        <childnode refid="11247" relation="include">
+        </childnode>
+        <childnode refid="11351" relation="include">
+        </childnode>
+      </node>
+      <node id="11300">
+        <label>../Tree/RedBlackTree.h</label>
+        <link refid="d6/dff/RedBlackTree_8h"/>
+        <childnode refid="11296" relation="include">
+        </childnode>
+        <childnode refid="11301" relation="include">
+        </childnode>
+      </node>
+      <node id="11247">
+        <label>Platform.h</label>
+        <link refid="d9/dd0/Platform_8h"/>
+        <childnode refid="11248" relation="include">
+        </childnode>
+      </node>
+      <node id="11331">
+        <label>../Vertex/Vertex4.h</label>
+        <link refid="d1/dca/Vertex4_8h"/>
+        <childnode refid="11329" relation="include">
+        </childnode>
+        <childnode refid="11332" relation="include">
+        </childnode>
+      </node>
+      <node id="11303">
+        <label>../../../Lib/Datastruct/Tree/SplayTree.h</label>
+        <link refid="d7/d5f/SplayTree_8h"/>
+        <childnode refid="11296" relation="include">
+        </childnode>
+        <childnode refid="11304" relation="include">
+        </childnode>
+      </node>
+      <node id="11362">
+        <label>../Shaders/ShaderParameters.h</label>
+        <link refid="d5/d63/ShaderParameters_8h"/>
+        <childnode refid="11241" relation="include">
+        </childnode>
+        <childnode refid="11316" relation="include">
+        </childnode>
+        <childnode refid="11356" relation="include">
+        </childnode>
+        <childnode refid="11363" relation="include">
+        </childnode>
+      </node>
+      <node id="11353">
+        <label>BlendingState.inl</label>
+      </node>
+      <node id="11277">
+        <label>Allocators/PoolAllocator.h</label>
+        <link refid="d3/d03/PoolAllocator_8h"/>
+        <childnode refid="11274" relation="include">
+        </childnode>
+        <childnode refid="11278" relation="include">
+        </childnode>
+      </node>
+      <node id="11321">
+        <label>../Vector/Vector3.h</label>
+        <link refid="dd/d8c/Vector3_8h"/>
+        <childnode refid="11253" relation="include">
+        </childnode>
+        <childnode refid="11322" relation="include">
+        </childnode>
+      </node>
+      <node id="11250">
+        <label>FPU.inl</label>
+      </node>
+      <node id="11252">
+        <label>Hashing.inl</label>
+      </node>
+      <node id="11258">
+        <label>MathFunction.inl</label>
+      </node>
+      <node id="11302">
+        <label>TreeMap.inl</label>
+      </node>
+      <node id="11342">
+        <label>EffectTechnique.h</label>
+        <link refid="d3/d77/EffectTechnique_8h"/>
+        <childnode refid="11343" relation="include">
+        </childnode>
+        <childnode refid="11359" relation="include">
+        </childnode>
+      </node>
+      <node id="11310">
+        <label>RDBTreeOperator.h</label>
+        <link refid="d3/dd8/RDBTreeOperator_8h"/>
+        <childnode refid="11294" relation="include">
+        </childnode>
+        <childnode refid="11311" relation="include">
+        </childnode>
+      </node>
+      <node id="11254">
+        <label>../Formats/Scalar.h</label>
+        <link refid="d0/d10/Scalar_8h"/>
+        <childnode refid="11247" relation="include">
+        </childnode>
+        <childnode refid="11255" relation="include">
+        </childnode>
+      </node>
+      <node id="11356">
+        <label>../Shaders/ShaderProgram.h</label>
+        <link refid="dd/d99/ShaderProgram_8h"/>
+        <childnode refid="11259" relation="include">
+        </childnode>
+        <childnode refid="11357" relation="include">
+        </childnode>
+      </node>
+      <node id="11360">
+        <label>Effect.inl</label>
+      </node>
+      <node id="11275">
+        <label>MemoryAllocator.inl</label>
+      </node>
+      <node id="11240">
+        <label>EffectTexture2D.h</label>
+        <link refid="EffectTexture2D.h"/>
+        <childnode refid="11241" relation="include">
+        </childnode>
+        <childnode refid="11315" relation="include">
+        </childnode>
+        <childnode refid="11341" relation="include">
+        </childnode>
+        <childnode refid="11361" relation="include">
+        </childnode>
+        <childnode refid="11365" relation="include">
+        </childnode>
+      </node>
+      <node id="11354">
+        <label>../States/PolygonState.h</label>
+        <link refid="df/d5d/PolygonState_8h"/>
+        <childnode refid="11254" relation="include">
+        </childnode>
+        <childnode refid="11355" relation="include">
+        </childnode>
+      </node>
+      <node id="11307">
+        <label>RDBFileStructure.h</label>
+        <link refid="d5/dae/RDBFileStructure_8h"/>
+        <childnode refid="11259" relation="include">
+        </childnode>
+        <childnode refid="11308" relation="include">
+        </childnode>
+      </node>
+      <node id="11309">
+        <label>RDBPersistentStorage.inl</label>
+      </node>
+      <node id="11243">
+        <label>../Math/Hash/Hashing.h</label>
+        <link refid="d0/d4e/Hashing_8h"/>
+        <childnode refid="11244" relation="include">
+        </childnode>
+        <childnode refid="11252" relation="include">
+        </childnode>
+      </node>
+      <node id="11274">
+        <label>MemoryAllocator.h</label>
+        <link refid="d2/d75/MemoryAllocator_8h"/>
+        <childnode refid="11259" relation="include">
+        </childnode>
+        <childnode refid="11275" relation="include">
+        </childnode>
+      </node>
+      <node id="11312">
+        <label>ResourceDB.inl</label>
+      </node>
+      <node id="11328">
+        <label>../Matrix/Matrix4.h</label>
+        <link refid="d6/d64/Matrix4_8h"/>
+        <childnode refid="11321" relation="include">
+        </childnode>
+        <childnode refid="11329" relation="include">
+        </childnode>
+        <childnode refid="11325" relation="include">
+        </childnode>
+        <childnode refid="11331" relation="include">
+        </childnode>
+        <childnode refid="11333" relation="include">
+        </childnode>
+      </node>
+      <node id="11336">
+        <label>../../../Lib/Math/Geometry/Primitives/3D/Planar/Plane.h</label>
+        <link refid="d8/d2f/Plane_8h"/>
+        <childnode refid="11321" relation="include">
+        </childnode>
+        <childnode refid="11325" relation="include">
+        </childnode>
+        <childnode refid="11337" relation="include">
+        </childnode>
+      </node>
+      <node id="11266">
+        <label>File.inl</label>
+      </node>
+      <node id="11337">
+        <label>Plane.inl</label>
+      </node>
+      <node id="11261">
+        <label>Hardware/Hardware.h</label>
+        <link refid="da/dec/Hardware_8h"/>
+        <childnode refid="11247" relation="include">
+        </childnode>
+        <childnode refid="11249" relation="include">
+        </childnode>
+        <childnode refid="11262" relation="include">
+        </childnode>
+        <childnode refid="11264" relation="include">
+        </childnode>
+      </node>
+      <node id="11273">
+        <label>Allocators/StackAllocator.h</label>
+        <link refid="db/d84/StackAllocator_8h"/>
+        <childnode refid="11274" relation="include">
+        </childnode>
+        <childnode refid="11276" relation="include">
+        </childnode>
+      </node>
+      <node id="11264">
+        <label>Hardware.inl</label>
+      </node>
+      <node id="11319">
+        <label>../Vector/Vector2.h</label>
+        <link refid="d0/df7/Vector2_8h"/>
+        <childnode refid="11253" relation="include">
+        </childnode>
+        <childnode refid="11320" relation="include">
+        </childnode>
+      </node>
+      <node id="11313">
+        <label>Resource.inl</label>
+      </node>
+      <node id="11330">
+        <label>Vector4.inl</label>
+      </node>
+      <node id="11278">
+        <label>PoolAllocator.inl</label>
+      </node>
+      <node id="11290">
+        <label>../../Resource/Resource.h</label>
+        <link refid="da/d1f/Resource_8h"/>
+        <childnode refid="11291" relation="include">
+        </childnode>
+        <childnode refid="11313" relation="include">
+        </childnode>
+      </node>
+      <node id="11255">
+        <label>Scalar.inl</label>
+      </node>
+      <node id="11317">
+        <label>../../../Lib/Math/Types/Transform/Transform3.h</label>
+        <link refid="d2/d67/Transform3_8h"/>
+        <childnode refid="11259" relation="include">
+        </childnode>
+        <childnode refid="11318" relation="include">
+        </childnode>
+        <childnode refid="11328" relation="include">
+        </childnode>
+        <childnode refid="11334" relation="include">
+        </childnode>
+      </node>
+      <node id="11251">
+        <label>String.inl</label>
+      </node>
+      <node id="11308">
+        <label>RDBFileStructure.inl</label>
+      </node>
+      <node id="11364">
+        <label>EffectInstance.inl</label>
+      </node>
+      <node id="11322">
+        <label>Vector3.inl</label>
+      </node>
+      <node id="11306">
+        <label>SHA1.inl</label>
+      </node>
+      <node id="11349">
+        <label>DepthState.inl</label>
+      </node>
+      <node id="11295">
+        <label>../../../Lib/Datastruct/Array/Array.h</label>
+        <link refid="df/dd0/Array_8h"/>
+        <childnode refid="11296" relation="include">
+        </childnode>
+        <childnode refid="11298" relation="include">
+        </childnode>
+      </node>
+      <node id="11363">
+        <label>ShaderParameters.inl</label>
+      </node>
+      <node id="11358">
+        <label>EffectPass.inl</label>
+      </node>
+      <node id="11320">
+        <label>Vector2.inl</label>
+      </node>
+      <node id="11344">
+        <label>../States/ClippingState.h</label>
+        <link refid="d7/dde/ClippingState_8h"/>
+        <childnode refid="11247" relation="include">
+        </childnode>
+        <childnode refid="11345" relation="include">
+        </childnode>
+      </node>
+      <node id="11241">
+        <label>../../../Resources/Texture.h</label>
+        <link refid="d9/dbf/Texture_8h"/>
+        <childnode refid="11242" relation="include">
+        </childnode>
+        <childnode refid="11253" relation="include">
+        </childnode>
+        <childnode refid="11284" relation="include">
+        </childnode>
+        <childnode refid="11290" relation="include">
+        </childnode>
+        <childnode refid="11314" relation="include">
+        </childnode>
+      </node>
+      <node id="11249">
+        <label>Hardware/FPU.h</label>
+        <link refid="dd/d2f/FPU_8h"/>
+        <childnode refid="11247" relation="include">
+        </childnode>
+        <childnode refid="11250" relation="include">
+        </childnode>
+      </node>
+      <node id="11291">
+        <label>Database/ResourceDB.h</label>
+        <link refid="de/dd9/ResourceDB_8h"/>
+        <childnode refid="11244" relation="include">
+        </childnode>
+        <childnode refid="11292" relation="include">
+        </childnode>
+        <childnode refid="11294" relation="include">
+        </childnode>
+        <childnode refid="11310" relation="include">
+        </childnode>
+        <childnode refid="11312" relation="include">
+        </childnode>
+      </node>
+      <node id="11289">
+        <label>ColorFunction.inl</label>
+      </node>
+      <node id="11323">
+        <label>../Vertex/Vertex2.h</label>
+        <link refid="dc/d05/Vertex2_8h"/>
+        <childnode refid="11319" relation="include">
+        </childnode>
+        <childnode refid="11324" relation="include">
+        </childnode>
+      </node>
+      <node id="11292">
+        <label>../../../Lib/String/PatternMatching.h</label>
+        <link refid="d8/d12/PatternMatching_8h"/>
+        <childnode refid="11244" relation="include">
+        </childnode>
+        <childnode refid="11293" relation="include">
+        </childnode>
+      </node>
+      <node id="11318">
+        <label>../Matrix/Matrix3.h</label>
+        <link refid="d1/d41/Matrix3_8h"/>
+        <childnode refid="11319" relation="include">
+        </childnode>
+        <childnode refid="11321" relation="include">
+        </childnode>
+        <childnode refid="11323" relation="include">
+        </childnode>
+        <childnode refid="11325" relation="include">
+        </childnode>
+        <childnode refid="11327" relation="include">
+        </childnode>
+      </node>
+      <node id="11281">
+        <label>Allocators/HeapAllocator.h</label>
+        <link refid="d3/d89/HeapAllocator_8h"/>
+        <childnode refid="11274" relation="include">
+        </childnode>
+        <childnode refid="11282" relation="include">
+        </childnode>
+      </node>
+      <node id="11244">
+        <label>../../../ThirdParty/System/String.h</label>
+        <link refid="d9/dba/String_8h"/>
+        <childnode refid="11245" relation="include">
+        </childnode>
+        <childnode refid="11247" relation="include">
+        </childnode>
+        <childnode refid="11249" relation="include">
+        </childnode>
+        <childnode refid="11251" relation="include">
+        </childnode>
+      </node>
+      <node id="11340">
+        <label>ShaderConstMatrices.inl</label>
+      </node>
+      <node id="11334">
+        <label>Transform3.inl</label>
+      </node>
+      <node id="11284">
+        <label>../../../Lib/Math/Types/Color/ColorFunction.h</label>
+        <link refid="dc/d75/ColorFunction_8h"/>
+        <childnode refid="11285" relation="include">
+        </childnode>
+        <childnode refid="11287" relation="include">
+        </childnode>
+        <childnode refid="11289" relation="include">
+        </childnode>
+      </node>
+      <node id="11248">
+        <label>Platform.inl</label>
+      </node>
+      <node id="11355">
+        <label>PolygonState.inl</label>
+      </node>
+      <node id="11283">
+        <label>MemoryManager.inl</label>
+      </node>
+      <node id="11315">
+        <label>../../../Shaders/ShaderConstant/ShaderConstMatrices.h</label>
+        <link refid="d9/d31/ShaderConstMatrices_8h"/>
+        <childnode refid="11316" relation="include">
+        </childnode>
+        <childnode refid="11340" relation="include">
+        </childnode>
+      </node>
+      <node id="11271">
+        <label>System.inl</label>
+      </node>
+      <node id="11269">
+        <label>Networking.h</label>
+        <link refid="df/dfb/Networking_8h"/>
+        <childnode refid="11245" relation="include">
+        </childnode>
+        <childnode refid="11247" relation="include">
+        </childnode>
+        <childnode refid="11270" relation="include">
+        </childnode>
+      </node>
+      <node id="11265">
+        <label>File.h</label>
+        <link refid="d6/db7/File_8h"/>
+        <childnode refid="11245" relation="include">
+        </childnode>
+        <childnode refid="11247" relation="include">
+        </childnode>
+        <childnode refid="11244" relation="include">
+        </childnode>
+        <childnode refid="11266" relation="include">
+        </childnode>
+      </node>
+      <node id="11276">
+        <label>StackAllocator.inl</label>
+      </node>
+      <node id="11335">
+        <label>../Resources/Camera.h</label>
+        <link refid="dd/de4/Camera_8h"/>
+        <childnode refid="11259" relation="include">
+        </childnode>
+        <childnode refid="11325" relation="include">
+        </childnode>
+        <childnode refid="11331" relation="include">
+        </childnode>
+        <childnode refid="11321" relation="include">
+        </childnode>
+        <childnode refid="11329" relation="include">
+        </childnode>
+        <childnode refid="11328" relation="include">
+        </childnode>
+        <childnode refid="11336" relation="include">
+        </childnode>
+        <childnode refid="11338" relation="include">
+        </childnode>
+      </node>
+      <node id="11343">
+        <label>EffectPass.h</label>
+        <link refid="dc/d95/EffectPass_8h"/>
+        <childnode refid="11344" relation="include">
+        </childnode>
+        <childnode refid="11346" relation="include">
+        </childnode>
+        <childnode refid="11348" relation="include">
+        </childnode>
+        <childnode refid="11350" relation="include">
+        </childnode>
+        <childnode refid="11352" relation="include">
+        </childnode>
+        <childnode refid="11354" relation="include">
+        </childnode>
+        <childnode refid="11356" relation="include">
+        </childnode>
+        <childnode refid="11358" relation="include">
+        </childnode>
+      </node>
+      <node id="11246">
+        <label>ForwardWin32.inl</label>
+      </node>
+      <node id="11361">
+        <label>../../EffectInstance.h</label>
+        <link refid="dc/d13/EffectInstance_8h"/>
+        <childnode refid="11242" relation="include">
+        </childnode>
+        <childnode refid="11362" relation="include">
+        </childnode>
+        <childnode refid="11341" relation="include">
+        </childnode>
+        <childnode refid="11364" relation="include">
+        </childnode>
+      </node>
+      <node id="11348">
+        <label>../States/DepthState.h</label>
+        <link refid="d8/d4b/DepthState_8h"/>
+        <childnode refid="11247" relation="include">
+        </childnode>
+        <childnode refid="11349" relation="include">
+        </childnode>
+      </node>
+      <node id="11351">
+        <label>StencilState.inl</label>
+      </node>
+      <node id="11262">
+        <label>SSE.h</label>
+        <link refid="d0/d02/SSE_8h"/>
+        <childnode refid="11247" relation="include">
+        </childnode>
+        <childnode refid="11263" relation="include">
+        </childnode>
+      </node>
+      <node id="11288">
+        <label>Color4.inl</label>
+      </node>
+      <node id="11299">
+        <label>../../../Lib/Datastruct/Table/TreeMap.h</label>
+        <link refid="da/d29/TreeMap_8h"/>
+        <childnode refid="11300" relation="include">
+        </childnode>
+        <childnode refid="11302" relation="include">
+        </childnode>
+      </node>
+      <node id="11270">
+        <label>Networking.inl</label>
+      </node>
+      <node id="11285">
+        <label>Color3.h</label>
+        <link refid="d1/d32/Color3_8h"/>
+        <childnode refid="11253" relation="include">
+        </childnode>
+        <childnode refid="11286" relation="include">
+        </childnode>
+      </node>
+      <node id="11332">
+        <label>Vertex4.inl</label>
+      </node>
+      <node id="11352">
+        <label>../States/BlendingState.h</label>
+        <link refid="d0/d5e/BlendingState_8h"/>
+        <childnode refid="11287" relation="include">
+        </childnode>
+        <childnode refid="11353" relation="include">
+        </childnode>
+      </node>
+      <node id="11257">
+        <label>Fixed.inl</label>
+      </node>
+      <node id="11253">
+        <label>../Math/Functions/MathFunction.h</label>
+        <link refid="d1/d98/MathFunction_8h"/>
+        <childnode refid="11249" relation="include">
+        </childnode>
+        <childnode refid="11254" relation="include">
+        </childnode>
+        <childnode refid="11256" relation="include">
+        </childnode>
+        <childnode refid="11258" relation="include">
+        </childnode>
+      </node>
+      <node id="11304">
+        <label>SplayTree.inl</label>
+      </node>
+      <node id="11256">
+        <label>../Formats/Fixed.h</label>
+        <link refid="d4/d76/Fixed_8h"/>
+        <childnode refid="11254" relation="include">
+        </childnode>
+        <childnode refid="11257" relation="include">
+        </childnode>
+      </node>
+      <node id="11272">
+        <label>ErrorManager.inl</label>
+      </node>
+      <node id="11286">
+        <label>Color3.inl</label>
+      </node>
+      <node id="11326">
+        <label>Vertex3.inl</label>
+      </node>
+      <node id="11365">
+        <label>EffectTexture2D.inl</label>
+      </node>
+      <node id="11347">
+        <label>CullingState.inl</label>
+      </node>
+      <node id="11339">
+        <label>ShaderConst.inl</label>
+      </node>
+      <node id="11325">
+        <label>../Vertex/Vertex3.h</label>
+        <link refid="d0/df3/Vertex3_8h"/>
+        <childnode refid="11321" relation="include">
+        </childnode>
+        <childnode refid="11326" relation="include">
+        </childnode>
+      </node>
+      <node id="11282">
+        <label>HeapAllocator.inl</label>
+      </node>
+      <node id="11327">
+        <label>Matrix3.inl</label>
+      </node>
+      <node id="11245">
+        <label>../Forwards/ForwardWin32.h</label>
+        <link refid="d5/dea/ForwardWin32_8h"/>
+        <childnode refid="11246" relation="include">
+        </childnode>
+      </node>
+      <node id="11324">
+        <label>Vertex2.inl</label>
+      </node>
+      <node id="11259">
+        <label>../Error/ErrorManager.h</label>
+        <link refid="d1/db6/ErrorManager_8h"/>
+        <childnode refid="11260" relation="include">
+        </childnode>
+        <childnode refid="11272" relation="include">
+        </childnode>
+      </node>
+      <node id="11298">
+        <label>Array.inl</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="d0/dbc/classEffectTexture2D" prot="public">EffectTexture2D</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Effects/EffectLibrary/Texturing/EffectTexture2D.h"/>
+  </compounddef>
+</doxygen>

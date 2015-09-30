@@ -1,0 +1,729 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="dc/dd3/classTMeshDeformableGraph" kind="class" prot="public">
+    <compoundname>TMeshDeformableGraph</compoundname>
+    <basecompoundref refid="d9/dd4/classMeshManifold3" prot="public" virt="non-virtual">MeshManifold3</basecompoundref>
+    <includes refid="df/dc5/MeshDeformableGraph_8h" local="no">MeshDeformableGraph.h</includes>
+    <innerclass refid="dc/d0b/classTMeshDeformableGraph_1_1Edge" prot="public">TMeshDeformableGraph::Edge</innerclass>
+    <innerclass refid="d9/d91/classTMeshDeformableGraph_1_1Triangle" prot="public">TMeshDeformableGraph::Triangle</innerclass>
+    <innerclass refid="d9/d33/classTMeshDeformableGraph_1_1Vertex" prot="public">TMeshDeformableGraph::Vertex</innerclass>
+    <templateparamlist>
+      <param>
+        <type>typename Real</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="dc/dd3/classTMeshDeformableGraph_1ac954bff5e4fa772ecc870b5ab3aa33d8" prot="private" static="no" mutable="no">
+        <type><ref refid="d5/d8c/classTAABoxTree" kindref="compound">TAABoxTree</ref>&lt; Real &gt;</type>
+        <definition>TAABoxTree&lt;Real&gt; m_hVertexTree</definition>
+        <argsstring></argsstring>
+        <name>m_hVertexTree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/MeshGraphs/Graphs/MeshDeformableGraph.h" line="102" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/MeshGraphs/Graphs/MeshDeformableGraph.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/dd3/classTMeshDeformableGraph_1a6b06a20a9828560e926d68d45227f7d1" prot="private" static="no" mutable="no">
+        <type><ref refid="d5/d8c/classTAABoxTree" kindref="compound">TAABoxTree</ref>&lt; Real &gt;</type>
+        <definition>TAABoxTree&lt;Real&gt; m_hTriangleTree</definition>
+        <argsstring></argsstring>
+        <name>m_hTriangleTree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/MeshGraphs/Graphs/MeshDeformableGraph.h" line="103" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/MeshGraphs/Graphs/MeshDeformableGraph.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="dc/dd3/classTMeshDeformableGraph_1a8e2f50340b53e9e2469fab072c815fa6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d6/d37/classMeshVertex" kindref="compound">MeshVertex</ref> *</type>
+        <definition>static MeshVertex* DeformableVertexBuilder</definition>
+        <argsstring>(const MeshVertexKey &amp;vertexKey)</argsstring>
+        <name>DeformableVertexBuilder</name>
+        <param>
+          <type>const <ref refid="d2/d6b/classMeshVertexKey" kindref="compound">MeshVertexKey</ref> &amp;</type>
+          <declname>vertexKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/MeshGraphs/Graphs/MeshDeformableGraph.h" line="65"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/dd3/classTMeshDeformableGraph_1ab7f11611e9edaaf3e2b0f004b2818f42" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d7/da3/classMeshEdge" kindref="compound">MeshEdge</ref> *</type>
+        <definition>static MeshEdge* DeformableEdgeBuilder</definition>
+        <argsstring>(const MeshEdgeKey &amp;edgeKey)</argsstring>
+        <name>DeformableEdgeBuilder</name>
+        <param>
+          <type>const <ref refid="db/dab/classMeshEdgeKey" kindref="compound">MeshEdgeKey</ref> &amp;</type>
+          <declname>edgeKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/MeshGraphs/Graphs/MeshDeformableGraph.h" line="66"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/dd3/classTMeshDeformableGraph_1a454fbc64edfd190fcb25a2302f49c8b8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d5/da2/classMeshFacet" kindref="compound">MeshFacet</ref> *</type>
+        <definition>static MeshFacet* DeformableFacetBuilder</definition>
+        <argsstring>(const MeshFacetKey &amp;facetKey)</argsstring>
+        <name>DeformableFacetBuilder</name>
+        <param>
+          <type>const <ref refid="dc/d28/classMeshFacetKey" kindref="compound">MeshFacetKey</ref> &amp;</type>
+          <declname>facetKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/MeshGraphs/Graphs/MeshDeformableGraph.h" line="67"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="dc/dd3/classTMeshDeformableGraph_1ac740531e1e924c5d75f54edebcd44ce5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TMeshDeformableGraph</definition>
+        <argsstring>(VertexBuilder pfVertexBuilder=DeformableVertexBuilder, EdgeBuilder pfEdgeBuilder=DeformableEdgeBuilder, FacetBuilder pfFacetBuilder=DeformableFacetBuilder)</argsstring>
+        <name>TMeshDeformableGraph</name>
+        <param>
+          <type><ref refid="d9/dd4/classMeshManifold3_1a1b6f7934ca6ca46b153492f7abfef1eb" kindref="member">VertexBuilder</ref></type>
+          <declname>pfVertexBuilder</declname>
+          <defval><ref refid="dc/dd3/classTMeshDeformableGraph_1a8e2f50340b53e9e2469fab072c815fa6" kindref="member">DeformableVertexBuilder</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="d9/dd4/classMeshManifold3_1a41a270d706178371f261898ce5a0145e" kindref="member">EdgeBuilder</ref></type>
+          <declname>pfEdgeBuilder</declname>
+          <defval><ref refid="dc/dd3/classTMeshDeformableGraph_1ab7f11611e9edaaf3e2b0f004b2818f42" kindref="member">DeformableEdgeBuilder</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="d9/dd4/classMeshManifold3_1a9691ed7d09051ce3102c6a739230890e" kindref="member">FacetBuilder</ref></type>
+          <declname>pfFacetBuilder</declname>
+          <defval><ref refid="dc/dd3/classTMeshDeformableGraph_1a454fbc64edfd190fcb25a2302f49c8b8" kindref="member">DeformableFacetBuilder</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/MeshGraphs/Graphs/MeshDeformableGraph.h" line="72"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/dd3/classTMeshDeformableGraph_1af750410e2f8dca55c32e3328aae24cda" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~TMeshDeformableGraph</definition>
+        <argsstring>()</argsstring>
+        <name>~TMeshDeformableGraph</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/MeshGraphs/Graphs/MeshDeformableGraph.h" line="73"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/dd3/classTMeshDeformableGraph_1a605325d1c1fc3f3c761365595701f9c4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void UseMemoryContext</definition>
+        <argsstring>(MemoryContextID idMemoryContext, const GChar *strAllocatorName)</argsstring>
+        <name>UseMemoryContext</name>
+        <reimplements refid="d9/dd4/classMeshManifold3_1a605325d1c1fc3f3c761365595701f9c4">UseMemoryContext</reimplements>
+        <param>
+          <type><ref refid="d7/d7b/MemoryManager_8h_1af31b42dd6507009f3d5e5f71b991260b" kindref="member">MemoryContextID</ref></type>
+          <declname>idMemoryContext</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strAllocatorName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/MeshGraphs/Graphs/MeshDeformableGraph.h" line="76"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/dd3/classTMeshDeformableGraph_1aab77352722e193be864ad3e317f0a967" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void Create</definition>
+        <argsstring>()</argsstring>
+        <name>Create</name>
+        <reimplements refid="d9/dd4/classMeshManifold3_1aab77352722e193be864ad3e317f0a967">Create</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/MeshGraphs/Graphs/MeshDeformableGraph.h" line="79"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/dd3/classTMeshDeformableGraph_1a04b98e1741147ccd8731588392091ac0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void Destroy</definition>
+        <argsstring>()</argsstring>
+        <name>Destroy</name>
+        <reimplements refid="d9/dd4/classMeshManifold3_1a04b98e1741147ccd8731588392091ac0">Destroy</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/MeshGraphs/Graphs/MeshDeformableGraph.h" line="80"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/dd3/classTMeshDeformableGraph_1abe6db4496cfdd90f917f4ca76d4bdcb1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>virtual UInt MemorySize</definition>
+        <argsstring>() const </argsstring>
+        <name>MemorySize</name>
+        <reimplements refid="d9/dd4/classMeshManifold3_1abe6db4496cfdd90f917f4ca76d4bdcb1">MemorySize</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/MeshGraphs/Graphs/MeshDeformableGraph.h" line="82"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/dd3/classTMeshDeformableGraph_1a0956cac53fbbd2baead454e29106a8cd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>virtual UInt Count</definition>
+        <argsstring>() const </argsstring>
+        <name>Count</name>
+        <reimplements refid="d9/dd4/classMeshManifold3_1a0956cac53fbbd2baead454e29106a8cd">Count</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/MeshGraphs/Graphs/MeshDeformableGraph.h" line="83"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/dd3/classTMeshDeformableGraph_1aa31f188be923c718868036f9486390ea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void Clear</definition>
+        <argsstring>()</argsstring>
+        <name>Clear</name>
+        <reimplements refid="d9/dd4/classMeshManifold3_1aa31f188be923c718868036f9486390ea">Clear</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/MeshGraphs/Graphs/MeshDeformableGraph.h" line="85"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/dd3/classTMeshDeformableGraph_1ad4511a2e890159faabd4c8969ec7887a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void ComputeFeatureData</definition>
+        <argsstring>(const TVertex3&lt; Real &gt; *arrVertices, Real fVertexRadius, Real fTriangleThickness)</argsstring>
+        <name>ComputeFeatureData</name>
+        <param>
+          <type>const <ref refid="dc/d75/classTVertex3" kindref="compound">TVertex3</ref>&lt; Real &gt; *</type>
+          <declname>arrVertices</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fVertexRadius</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fTriangleThickness</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/MeshGraphs/Graphs/MeshDeformableGraph.h" line="88"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/dd3/classTMeshDeformableGraph_1ad8dbbbd570f26a92673d2339dc1cfb40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void ComputeFeatureData</definition>
+        <argsstring>(const Byte *arrVertices, UInt iStride, Real fVertexRadius, Real fTriangleThickness)</argsstring>
+        <name>ComputeFeatureData</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+          <declname>arrVertices</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iStride</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fVertexRadius</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fTriangleThickness</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/MeshGraphs/Graphs/MeshDeformableGraph.h" line="89"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/dd3/classTMeshDeformableGraph_1a39da41031af1596170ff4226ff1bc3e5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d5/d8c/classTAABoxTree" kindref="compound">TAABoxTree</ref>&lt; Real &gt; *</type>
+        <definition>const TAABoxTree&lt;Real&gt;* GetVertexTree</definition>
+        <argsstring>() const </argsstring>
+        <name>GetVertexTree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/MeshGraphs/Graphs/MeshDeformableGraph.h" line="92"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/dd3/classTMeshDeformableGraph_1a39b46d3a2a557c1007b122f836d39adf" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d5/d8c/classTAABoxTree" kindref="compound">TAABoxTree</ref>&lt; Real &gt; *</type>
+        <definition>const TAABoxTree&lt;Real&gt;* GetTriangleTree</definition>
+        <argsstring>() const </argsstring>
+        <name>GetTriangleTree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/MeshGraphs/Graphs/MeshDeformableGraph.h" line="93"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/dd3/classTMeshDeformableGraph_1a445bcf722a59f9c1d2a831178de6538f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void UpdateTrees</definition>
+        <argsstring>(Real fVertexRadius, Real fTriangleThickness)</argsstring>
+        <name>UpdateTrees</name>
+        <param>
+          <type>Real</type>
+          <declname>fVertexRadius</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fTriangleThickness</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/MeshGraphs/Graphs/MeshDeformableGraph.h" line="95"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="dc/dd3/classTMeshDeformableGraph_1aeec25697b12a613dbefd8e8982d4ac53" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="dc/d75/classTVertex3" kindref="compound">TVertex3</ref>&lt; Real &gt; &amp;</type>
+        <definition>static const TVertex3&lt;Real&gt;&amp; _GetPosition</definition>
+        <argsstring>(UInt iVertex, const Byte *arrVertices, UInt iStride)</argsstring>
+        <name>_GetPosition</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iVertex</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+          <declname>arrVertices</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iStride</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/MeshGraphs/Graphs/MeshDeformableGraph.h" line="99"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="12716">
+        <label>MeshManifold3</label>
+        <link refid="d9/dd4/classMeshManifold3"/>
+        <childnode refid="12717" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12715">
+        <label>TMeshDeformableGraph&lt; Real &gt;</label>
+        <link refid="dc/dd3/classTMeshDeformableGraph"/>
+        <childnode refid="12716" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12717">
+        <label>MeshGraph</label>
+        <link refid="d6/df9/classMeshGraph"/>
+        <childnode refid="12718" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12718">
+        <label>Datastruct</label>
+        <link refid="dc/d51/classDatastruct"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="12745">
+        <label>@1</label>
+      </node>
+      <node id="12747">
+        <label>TAABoxTree&lt; Real &gt;</label>
+      </node>
+      <node id="12732">
+        <label>T</label>
+      </node>
+      <node id="12731">
+        <label>RBTreeColor</label>
+      </node>
+      <node id="12729">
+        <label>RedBlackNode&lt; T &gt;</label>
+        <link refid="da/d9d/structRedBlackNode"/>
+        <childnode refid="12730" relation="usage">
+          <edgelabel>pPrev</edgelabel>
+          <edgelabel>pNext</edgelabel>
+          <edgelabel>pParent</edgelabel>
+          <edgelabel>pChild</edgelabel>
+        </childnode>
+        <childnode refid="12731" relation="usage">
+          <edgelabel>iColor</edgelabel>
+        </childnode>
+        <childnode refid="12732" relation="usage">
+          <edgelabel>Item</edgelabel>
+        </childnode>
+      </node>
+      <node id="12728">
+        <label>RedBlackTree&lt; TreeMapNode &gt;</label>
+        <link refid="d9/d5d/classRedBlackTree"/>
+        <childnode refid="12722" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12729" relation="usage">
+          <edgelabel>m_pEnd</edgelabel>
+          <edgelabel>m_pHead</edgelabel>
+          <edgelabel>m_pRoot</edgelabel>
+          <edgelabel>sm_SentinelNode</edgelabel>
+          <edgelabel>RBTREE_LEAF</edgelabel>
+        </childnode>
+        <childnode refid="12724" relation="usage">
+          <edgelabel>m_iNodeCount</edgelabel>
+        </childnode>
+        <childnode refid="12733" relation="usage">
+          <edgelabel>m_pfCompare</edgelabel>
+        </childnode>
+        <childnode refid="12735" relation="usage">
+          <edgelabel>m_pUserData</edgelabel>
+        </childnode>
+      </node>
+      <node id="12739">
+        <label>MeshFeature</label>
+        <link refid="dc/dcb/classMeshFeature"/>
+      </node>
+      <node id="12742">
+        <label>MeshFeatureKey</label>
+        <link refid="dc/d22/classMeshFeatureKey"/>
+      </node>
+      <node id="12720">
+        <label>MeshManifold3</label>
+        <link refid="d9/dd4/classMeshManifold3"/>
+        <childnode refid="12721" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12726" relation="usage">
+          <edgelabel>m_itVertex</edgelabel>
+        </childnode>
+        <childnode refid="12726" relation="usage">
+          <edgelabel>m_itFacet</edgelabel>
+        </childnode>
+        <childnode refid="12727" relation="usage">
+          <edgelabel>m_mapEdges</edgelabel>
+        </childnode>
+        <childnode refid="12737" relation="usage">
+          <edgelabel>m_mapVertices</edgelabel>
+        </childnode>
+        <childnode refid="12738" relation="usage">
+          <edgelabel>m_pfFacetBuilder</edgelabel>
+        </childnode>
+        <childnode refid="12740" relation="usage">
+          <edgelabel>m_pfVertexBuilder</edgelabel>
+        </childnode>
+        <childnode refid="12743" relation="usage">
+          <edgelabel>m_pfEdgeBuilder</edgelabel>
+        </childnode>
+        <childnode refid="12746" relation="usage">
+          <edgelabel>m_mapFacets</edgelabel>
+        </childnode>
+        <childnode refid="12726" relation="usage">
+          <edgelabel>m_itEdge</edgelabel>
+        </childnode>
+      </node>
+      <node id="12741">
+        <label>MeshVertexKey</label>
+        <link refid="d2/d6b/classMeshVertexKey"/>
+        <childnode refid="12742" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12741" relation="usage">
+          <edgelabel>Null</edgelabel>
+        </childnode>
+        <childnode refid="12736" relation="usage">
+          <edgelabel>V</edgelabel>
+        </childnode>
+      </node>
+      <node id="12744">
+        <label>MeshEdgeKey</label>
+        <link refid="db/dab/classMeshEdgeKey"/>
+        <childnode refid="12742" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12745" relation="usage">
+          <edgelabel>@2</edgelabel>
+        </childnode>
+        <childnode refid="12744" relation="usage">
+          <edgelabel>Null</edgelabel>
+        </childnode>
+        <childnode refid="12736" relation="usage">
+          <edgelabel>V</edgelabel>
+          <edgelabel>A</edgelabel>
+          <edgelabel>B</edgelabel>
+        </childnode>
+      </node>
+      <node id="12746">
+        <label>TreeMap&lt; const MeshFacetKey *, MeshFacet * &gt;</label>
+        <link refid="d0/da4/classTreeMap"/>
+        <childnode refid="12722" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12728" relation="usage">
+          <edgelabel>m_rbTreeMap</edgelabel>
+        </childnode>
+        <childnode refid="12736" relation="usage">
+          <edgelabel>m_pfCompare</edgelabel>
+        </childnode>
+        <childnode refid="12735" relation="usage">
+          <edgelabel>m_pUserData</edgelabel>
+        </childnode>
+      </node>
+      <node id="12724">
+        <label>unsigned int</label>
+      </node>
+      <node id="12730">
+        <label>struct _red_black_node *</label>
+      </node>
+      <node id="12736">
+        <label>int</label>
+      </node>
+      <node id="12725">
+        <label>static const _LinkageResult</label>
+      </node>
+      <node id="12737">
+        <label>TreeMap&lt; const MeshVertexKey *, MeshVertex * &gt;</label>
+        <link refid="d0/da4/classTreeMap"/>
+        <childnode refid="12722" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12728" relation="usage">
+          <edgelabel>m_rbTreeMap</edgelabel>
+        </childnode>
+        <childnode refid="12736" relation="usage">
+          <edgelabel>m_pfCompare</edgelabel>
+        </childnode>
+        <childnode refid="12735" relation="usage">
+          <edgelabel>m_pUserData</edgelabel>
+        </childnode>
+      </node>
+      <node id="12726">
+        <label>Iterator</label>
+      </node>
+      <node id="12733">
+        <label>TreeMapNode&lt; Key, T &gt;</label>
+        <link refid="db/dd2/structTreeMapNode"/>
+        <childnode refid="12734" relation="usage">
+          <edgelabel>nodeKey</edgelabel>
+        </childnode>
+        <childnode refid="12732" relation="usage">
+          <edgelabel>nodeItem</edgelabel>
+        </childnode>
+      </node>
+      <node id="12719">
+        <label>TMeshDeformableGraph&lt; Real &gt;</label>
+        <link refid="dc/dd3/classTMeshDeformableGraph"/>
+        <childnode refid="12720" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12747" relation="usage">
+          <edgelabel>m_hVertexTree</edgelabel>
+          <edgelabel>m_hTriangleTree</edgelabel>
+        </childnode>
+      </node>
+      <node id="12734">
+        <label>Key</label>
+      </node>
+      <node id="12727">
+        <label>TreeMap&lt; const MeshEdgeKey *, MeshEdge * &gt;</label>
+        <link refid="d0/da4/classTreeMap"/>
+        <childnode refid="12722" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12728" relation="usage">
+          <edgelabel>m_rbTreeMap</edgelabel>
+        </childnode>
+        <childnode refid="12736" relation="usage">
+          <edgelabel>m_pfCompare</edgelabel>
+        </childnode>
+        <childnode refid="12735" relation="usage">
+          <edgelabel>m_pUserData</edgelabel>
+        </childnode>
+      </node>
+      <node id="12740">
+        <label>MeshVertex</label>
+        <link refid="d6/d37/classMeshVertex"/>
+        <childnode refid="12739" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12741" relation="usage">
+          <edgelabel>Key</edgelabel>
+        </childnode>
+      </node>
+      <node id="12721">
+        <label>MeshGraph</label>
+        <link refid="d6/df9/classMeshGraph"/>
+        <childnode refid="12722" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12725" relation="usage">
+          <edgelabel>_LINKAGE_FACETSIZE_A</edgelabel>
+          <edgelabel>_LINKAGE_DONE</edgelabel>
+          <edgelabel>_LINKAGE_FULLEDGE</edgelabel>
+          <edgelabel>_LINKAGE_GRADE_A</edgelabel>
+          <edgelabel>_LINKAGE_NOLINK</edgelabel>
+          <edgelabel>_LINKAGE_GRADE_B</edgelabel>
+        </childnode>
+      </node>
+      <node id="12738">
+        <label>MeshFacet</label>
+        <link refid="d5/da2/classMeshFacet"/>
+        <childnode refid="12739" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12723">
+        <label>char</label>
+      </node>
+      <node id="12743">
+        <label>MeshEdge</label>
+        <link refid="d7/da3/classMeshEdge"/>
+        <childnode refid="12739" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12744" relation="usage">
+          <edgelabel>Key</edgelabel>
+        </childnode>
+      </node>
+      <node id="12735">
+        <label>Void *</label>
+      </node>
+      <node id="12722">
+        <label>Datastruct</label>
+        <link refid="dc/d51/classDatastruct"/>
+        <childnode refid="12723" relation="usage">
+          <edgelabel>m_strAllocatorName</edgelabel>
+        </childnode>
+        <childnode refid="12724" relation="usage">
+          <edgelabel>m_idMemoryContext</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/MeshGraphs/Graphs/MeshDeformableGraph.h" line="38" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/MeshGraphs/Graphs/MeshDeformableGraph.h" bodystart="37" bodyend="104"/>
+    <listofallmembers>
+      <member refid="d6/df9/classMeshGraph_1a235dc52f786e7c1850595d6ba1dcd610" prot="protected" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>_Connect</name></member>
+      <member refid="d6/df9/classMeshGraph_1a75d839f2fbf223e6713a1294361b97d2" prot="protected" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>_Connect</name></member>
+      <member refid="d6/df9/classMeshGraph_1a585fc43e53640f019a76014a95289d3a" prot="protected" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>_Connect</name></member>
+      <member refid="d6/df9/classMeshGraph_1a050547da266380648dbf39775025ad74" prot="protected" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>_Connect</name></member>
+      <member refid="d6/df9/classMeshGraph_1a34a81ff6c6908f841fb7fa0458686fc9" prot="protected" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>_Connect</name></member>
+      <member refid="d6/df9/classMeshGraph_1ad9f33203263608bcf8f1e55cbbfc8da3" prot="protected" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>_Connect</name></member>
+      <member refid="d6/df9/classMeshGraph_1a01d7dbdd081df6ce68e07b3059a8920c" prot="protected" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>_Disconnect</name></member>
+      <member refid="d6/df9/classMeshGraph_1a0a374d6bb73d37d5717aef51ba732e19" prot="protected" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>_Disconnect</name></member>
+      <member refid="d6/df9/classMeshGraph_1a0f3687c1a4151b3b84f295091f4f1b4e" prot="protected" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>_Disconnect</name></member>
+      <member refid="d6/df9/classMeshGraph_1a7ab82835a30ea0bd85e08021406d6a8c" prot="protected" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>_Disconnect</name></member>
+      <member refid="d6/df9/classMeshGraph_1a6a3a66c5fec3a903b64fbdd8fe9fced1" prot="protected" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>_Disconnect</name></member>
+      <member refid="d6/df9/classMeshGraph_1a82231ad6ff6fd4b1b495a64fe00771cf" prot="protected" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>_Disconnect</name></member>
+      <member refid="dc/dd3/classTMeshDeformableGraph_1aeec25697b12a613dbefd8e8982d4ac53" prot="private" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>_GetPosition</name></member>
+      <member refid="d6/df9/classMeshGraph_1af156bcef2cc70b755795e4e661ef83cf" prot="protected" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>_LINKAGE_DONE</name></member>
+      <member refid="d6/df9/classMeshGraph_1aa228ca9e07121c330c51055c974de9ff" prot="protected" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>_LINKAGE_FACETSIZE_A</name></member>
+      <member refid="d6/df9/classMeshGraph_1a6cd2875f36f9169644de571a4c1dfed4" prot="protected" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>_LINKAGE_FULLEDGE</name></member>
+      <member refid="d6/df9/classMeshGraph_1aa1bae20d019d9b464767a9852698a6d7" prot="protected" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>_LINKAGE_GRADE_A</name></member>
+      <member refid="d6/df9/classMeshGraph_1aa0db9fb1194dc08e27534ba0b0151bb7" prot="protected" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>_LINKAGE_GRADE_B</name></member>
+      <member refid="d6/df9/classMeshGraph_1aec29105181823a24b89963b7228f8a51" prot="protected" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>_LINKAGE_NOLINK</name></member>
+      <member refid="d6/df9/classMeshGraph_1a2d18c5d6bc1349ca9f30ffa533bd99be" prot="protected" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>_LinkageResult</name></member>
+      <member refid="dc/d51/classDatastruct_1a4208dfdad6dc1178ee1f80481598500c" prot="protected" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>_SelectMemory</name></member>
+      <member refid="dc/d51/classDatastruct_1ae0aad9bef0dc76ed43f8c4fc59a10d78" prot="protected" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>_UnSelectMemory</name></member>
+      <member refid="dc/dd3/classTMeshDeformableGraph_1aa31f188be923c718868036f9486390ea" prot="public" virt="virtual"><scope>TMeshDeformableGraph</scope><name>Clear</name></member>
+      <member refid="dc/dd3/classTMeshDeformableGraph_1ad4511a2e890159faabd4c8969ec7887a" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>ComputeFeatureData</name></member>
+      <member refid="dc/dd3/classTMeshDeformableGraph_1ad8dbbbd570f26a92673d2339dc1cfb40" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>ComputeFeatureData</name></member>
+      <member refid="dc/dd3/classTMeshDeformableGraph_1a0956cac53fbbd2baead454e29106a8cd" prot="public" virt="virtual"><scope>TMeshDeformableGraph</scope><name>Count</name></member>
+      <member refid="dc/dd3/classTMeshDeformableGraph_1aab77352722e193be864ad3e317f0a967" prot="public" virt="virtual"><scope>TMeshDeformableGraph</scope><name>Create</name></member>
+      <member refid="d9/dd4/classMeshManifold3_1a40582e4b5f0f3e506c34663bf0d49ae2" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>CreateFacet</name></member>
+      <member refid="dc/d51/classDatastruct_1aebb55795e668a005cf660ce216962a2f" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>Datastruct</name></member>
+      <member refid="d9/dd4/classMeshManifold3_1a04df310744639accf2798d3fa7958301" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>DefaultEdge</name></member>
+      <member refid="d9/dd4/classMeshManifold3_1a376ba17c0c9c251acff74a24abc9175d" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>DefaultEdgeBuilder</name></member>
+      <member refid="d9/dd4/classMeshManifold3_1a5b8b85b28fe353110b0a11d91cbe64e8" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>DefaultFacetBuilder</name></member>
+      <member refid="d9/dd4/classMeshManifold3_1a244934a245e2a741548c86766a771701" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>DefaultPolygon</name></member>
+      <member refid="d9/dd4/classMeshManifold3_1aa74caa65eb4e40acda52f17b573a9740" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>DefaultQuad</name></member>
+      <member refid="d9/dd4/classMeshManifold3_1ae75f2ab2ad128a702f7bc0c76041a44a" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>DefaultTriangle</name></member>
+      <member refid="d9/dd4/classMeshManifold3_1a7e7235ba67fa9df9c8b794d756d93d7b" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>DefaultVertex</name></member>
+      <member refid="d9/dd4/classMeshManifold3_1aba52630dbdc1540ddc0f10ff9f01c884" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>DefaultVertexBuilder</name></member>
+      <member refid="dc/dd3/classTMeshDeformableGraph_1ab7f11611e9edaaf3e2b0f004b2818f42" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>DeformableEdgeBuilder</name></member>
+      <member refid="dc/dd3/classTMeshDeformableGraph_1a454fbc64edfd190fcb25a2302f49c8b8" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>DeformableFacetBuilder</name></member>
+      <member refid="dc/dd3/classTMeshDeformableGraph_1a8e2f50340b53e9e2469fab072c815fa6" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>DeformableVertexBuilder</name></member>
+      <member refid="dc/dd3/classTMeshDeformableGraph_1a04b98e1741147ccd8731588392091ac0" prot="public" virt="virtual"><scope>TMeshDeformableGraph</scope><name>Destroy</name></member>
+      <member refid="d9/dd4/classMeshManifold3_1a310b28d3c58fc551bdae214feaabe4e5" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>DestroyFacet</name></member>
+      <member refid="d9/dd4/classMeshManifold3_1a41a270d706178371f261898ce5a0145e" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>EdgeBuilder</name></member>
+      <member refid="d9/dd4/classMeshManifold3_1a6e80eb57ac78acff78b3d8c734ebf750" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>EnumEdges</name></member>
+      <member refid="d9/dd4/classMeshManifold3_1ad91cb53fccee3dddd63a52a73dbb252d" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>EnumFacets</name></member>
+      <member refid="d9/dd4/classMeshManifold3_1a3a97e0b36f7e1f9a439151736e65dbcd" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>EnumNextEdge</name></member>
+      <member refid="d9/dd4/classMeshManifold3_1ab6bd7134af2a6cf002e16213d19dd523" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>EnumNextFacet</name></member>
+      <member refid="d9/dd4/classMeshManifold3_1a54830ae8357a4fdf5d15301a41897078" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>EnumNextVertex</name></member>
+      <member refid="d9/dd4/classMeshManifold3_1a488da82af49ccb4362fb82bb140d59fe" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>EnumVertices</name></member>
+      <member refid="d9/dd4/classMeshManifold3_1a9691ed7d09051ce3102c6a739230890e" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>FacetBuilder</name></member>
+      <member refid="d9/dd4/classMeshManifold3_1a55f8a338892e8ce71091f5c98a128577" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>GetEdge</name></member>
+      <member refid="d9/dd4/classMeshManifold3_1af0d0d26e0190a545f2ebd05cdca8ec87" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>GetEdgeCount</name></member>
+      <member refid="d9/dd4/classMeshManifold3_1afeef74b214fe1ffadee98495df5684ca" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>GetFacet</name></member>
+      <member refid="d9/dd4/classMeshManifold3_1ae6f007fb61011daa8a89b681323784f6" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>GetFacetCount</name></member>
+      <member refid="dc/dd3/classTMeshDeformableGraph_1a39b46d3a2a557c1007b122f836d39adf" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>GetTriangleTree</name></member>
+      <member refid="d9/dd4/classMeshManifold3_1a283eaf8f536aa7352201bf12dcb36754" prot="public" virt="virtual"><scope>TMeshDeformableGraph</scope><name>GetType</name></member>
+      <member refid="d9/dd4/classMeshManifold3_1a830803f72d1e6eb8f058def6e541c146" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>GetVertex</name></member>
+      <member refid="d9/dd4/classMeshManifold3_1a444d4284631769c7ca012f65c3b4d447" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>GetVertexCount</name></member>
+      <member refid="dc/dd3/classTMeshDeformableGraph_1a39da41031af1596170ff4226ff1bc3e5" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>GetVertexTree</name></member>
+      <member refid="d9/dd4/classMeshManifold3_1a94451872fe0c7cd0acf8f01b9aa9de1a" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>HasEdge</name></member>
+      <member refid="d9/dd4/classMeshManifold3_1aee1b3bb007b6f66daaf2d434ddcc4f42" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>HasFacet</name></member>
+      <member refid="d9/dd4/classMeshManifold3_1a362d4054545b887725fd4ab9a2e5fb43" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>HasVertex</name></member>
+      <member refid="d9/dd4/classMeshManifold3_1a8fdf3b88248b8b4f545c94d632ae61d2" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>IsClosed</name></member>
+      <member refid="dc/d51/classDatastruct_1a4e2abc9751fdc8571b9d9a1d02639ebe" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>IsEmpty</name></member>
+      <member refid="dc/dd3/classTMeshDeformableGraph_1a6b06a20a9828560e926d68d45227f7d1" prot="private" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>m_hTriangleTree</name></member>
+      <member refid="dc/dd3/classTMeshDeformableGraph_1ac954bff5e4fa772ecc870b5ab3aa33d8" prot="private" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>m_hVertexTree</name></member>
+      <member refid="dc/dd3/classTMeshDeformableGraph_1abe6db4496cfdd90f917f4ca76d4bdcb1" prot="public" virt="virtual"><scope>TMeshDeformableGraph</scope><name>MemorySize</name></member>
+      <member refid="d6/df9/classMeshGraph_1ae1adea04fe2c502f387b520740b6fac8" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>MeshGraph</name></member>
+      <member refid="d9/dd4/classMeshManifold3_1a7a685ce268c348b1a49ac17e3cf243f1" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>MeshManifold3</name></member>
+      <member refid="d9/dd4/classMeshManifold3_1ab7a5c980939547b2cf597e4d5a007b02" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>SortEdgeLinkage</name></member>
+      <member refid="d9/dd4/classMeshManifold3_1a84fe0b6ac3ce8c74c88f940874f8e4fe" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>SortVertexLinkage</name></member>
+      <member refid="dc/dd3/classTMeshDeformableGraph_1ac740531e1e924c5d75f54edebcd44ce5" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>TMeshDeformableGraph</name></member>
+      <member refid="dc/dd3/classTMeshDeformableGraph_1a445bcf722a59f9c1d2a831178de6538f" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>UpdateTrees</name></member>
+      <member refid="dc/dd3/classTMeshDeformableGraph_1a605325d1c1fc3f3c761365595701f9c4" prot="public" virt="virtual"><scope>TMeshDeformableGraph</scope><name>UseMemoryContext</name></member>
+      <member refid="d9/dd4/classMeshManifold3_1a1b6f7934ca6ca46b153492f7abfef1eb" prot="public" virt="non-virtual"><scope>TMeshDeformableGraph</scope><name>VertexBuilder</name></member>
+      <member refid="dc/d51/classDatastruct_1a59e1e9769598d5606e0a335692f89c15" prot="public" virt="virtual"><scope>TMeshDeformableGraph</scope><name>~Datastruct</name></member>
+      <member refid="d6/df9/classMeshGraph_1aeb7c41a1883fee1048b97841f97b4f79" prot="public" virt="virtual"><scope>TMeshDeformableGraph</scope><name>~MeshGraph</name></member>
+      <member refid="d9/dd4/classMeshManifold3_1a9fb894dd025cb04e412150e29d1b2227" prot="public" virt="virtual"><scope>TMeshDeformableGraph</scope><name>~MeshManifold3</name></member>
+      <member refid="dc/dd3/classTMeshDeformableGraph_1af750410e2f8dca55c32e3328aae24cda" prot="public" virt="virtual"><scope>TMeshDeformableGraph</scope><name>~TMeshDeformableGraph</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

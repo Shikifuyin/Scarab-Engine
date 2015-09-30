@@ -1,0 +1,499 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d3/d3a/PairManager_8h" kind="file">
+    <compoundname>PairManager.h</compoundname>
+    <includes refid="df/dd0/Array_8h" local="yes">../../../../Lib/Datastruct/Array/Array.h</includes>
+    <includes refid="d6/dff/RedBlackTree_8h" local="yes">../../../../Lib/Datastruct/Tree/RedBlackTree.h</includes>
+    <includes refid="d7/dcb/IslandNode_8h" local="yes">../../IslandSolver/IslandNode.h</includes>
+    <includes refid="d7/dff/PairListener_8h" local="yes">PairListener.h</includes>
+    <includes local="yes">PairManager.inl</includes>
+    <includedby refid="da/d8f/BroadPhase_8h" local="yes">BroadPhase.h</includedby>
+    <incdepgraph>
+      <node id="30815">
+        <label>RedBlackTree.inl</label>
+      </node>
+      <node id="30791">
+        <label>SSE.inl</label>
+      </node>
+      <node id="30795">
+        <label>Threading.h</label>
+        <link refid="dd/d0e/Threading_8h"/>
+        <childnode refid="30773" relation="include">
+        </childnode>
+        <childnode refid="30775" relation="include">
+        </childnode>
+        <childnode refid="30796" relation="include">
+        </childnode>
+      </node>
+      <node id="30819">
+        <label>IslandNode.inl</label>
+      </node>
+      <node id="30807">
+        <label>Allocators/BreakAllocator.h</label>
+        <link refid="d4/dac/BreakAllocator_8h"/>
+        <childnode refid="30802" relation="include">
+        </childnode>
+        <childnode refid="30808" relation="include">
+        </childnode>
+      </node>
+      <node id="30770">
+        <label>../Memory/MemoryManager.h</label>
+        <link refid="d7/d7b/MemoryManager_8h"/>
+        <childnode refid="30771" relation="include">
+        </childnode>
+        <childnode refid="30781" relation="include">
+        </childnode>
+        <childnode refid="30787" relation="include">
+        </childnode>
+        <childnode refid="30801" relation="include">
+        </childnode>
+        <childnode refid="30805" relation="include">
+        </childnode>
+        <childnode refid="30807" relation="include">
+        </childnode>
+        <childnode refid="30809" relation="include">
+        </childnode>
+        <childnode refid="30811" relation="include">
+        </childnode>
+      </node>
+      <node id="30788">
+        <label>../../ThirdParty/System/System.h</label>
+        <link refid="db/d39/System_8h"/>
+        <childnode refid="30773" relation="include">
+        </childnode>
+        <childnode refid="30775" relation="include">
+        </childnode>
+        <childnode refid="30789" relation="include">
+        </childnode>
+        <childnode refid="30772" relation="include">
+        </childnode>
+        <childnode refid="30793" relation="include">
+        </childnode>
+        <childnode refid="30795" relation="include">
+        </childnode>
+        <childnode refid="30797" relation="include">
+        </childnode>
+        <childnode refid="30799" relation="include">
+        </childnode>
+      </node>
+      <node id="30821">
+        <label>PairListener.inl</label>
+      </node>
+      <node id="30796">
+        <label>Threading.inl</label>
+      </node>
+      <node id="30808">
+        <label>BreakAllocator.inl</label>
+      </node>
+      <node id="30769">
+        <label>../Datastruct.h</label>
+        <link refid="d5/db1/Datastruct_8h"/>
+        <childnode refid="30770" relation="include">
+        </childnode>
+        <childnode refid="30812" relation="include">
+        </childnode>
+      </node>
+      <node id="30812">
+        <label>Datastruct.inl</label>
+      </node>
+      <node id="30814">
+        <label>../../../../Lib/Datastruct/Tree/RedBlackTree.h</label>
+        <link refid="d6/dff/RedBlackTree_8h"/>
+        <childnode refid="30769" relation="include">
+        </childnode>
+        <childnode refid="30815" relation="include">
+        </childnode>
+      </node>
+      <node id="30775">
+        <label>Platform.h</label>
+        <link refid="d9/dd0/Platform_8h"/>
+        <childnode refid="30776" relation="include">
+        </childnode>
+      </node>
+      <node id="30805">
+        <label>Allocators/PoolAllocator.h</label>
+        <link refid="d3/d03/PoolAllocator_8h"/>
+        <childnode refid="30802" relation="include">
+        </childnode>
+        <childnode refid="30806" relation="include">
+        </childnode>
+      </node>
+      <node id="30817">
+        <label>IslandEdge.h</label>
+        <link refid="df/dbc/IslandEdge_8h"/>
+        <childnode refid="30787" relation="include">
+        </childnode>
+        <childnode refid="30818" relation="include">
+        </childnode>
+      </node>
+      <node id="30778">
+        <label>FPU.inl</label>
+      </node>
+      <node id="30780">
+        <label>Hashing.inl</label>
+      </node>
+      <node id="30786">
+        <label>MathFunction.inl</label>
+      </node>
+      <node id="30820">
+        <label>PairListener.h</label>
+        <link refid="d7/dff/PairListener_8h"/>
+        <childnode refid="30816" relation="include">
+        </childnode>
+        <childnode refid="30821" relation="include">
+        </childnode>
+      </node>
+      <node id="30782">
+        <label>../Formats/Scalar.h</label>
+        <link refid="d0/d10/Scalar_8h"/>
+        <childnode refid="30775" relation="include">
+        </childnode>
+        <childnode refid="30783" relation="include">
+        </childnode>
+      </node>
+      <node id="30803">
+        <label>MemoryAllocator.inl</label>
+      </node>
+      <node id="30816">
+        <label>../../IslandSolver/IslandNode.h</label>
+        <link refid="d7/dcb/IslandNode_8h"/>
+        <childnode refid="30817" relation="include">
+        </childnode>
+        <childnode refid="30819" relation="include">
+        </childnode>
+      </node>
+      <node id="30771">
+        <label>../Math/Hash/Hashing.h</label>
+        <link refid="d0/d4e/Hashing_8h"/>
+        <childnode refid="30772" relation="include">
+        </childnode>
+        <childnode refid="30780" relation="include">
+        </childnode>
+      </node>
+      <node id="30802">
+        <label>MemoryAllocator.h</label>
+        <link refid="d2/d75/MemoryAllocator_8h"/>
+        <childnode refid="30787" relation="include">
+        </childnode>
+        <childnode refid="30803" relation="include">
+        </childnode>
+      </node>
+      <node id="30767">
+        <label>PairManager.h</label>
+        <link refid="PairManager.h"/>
+        <childnode refid="30768" relation="include">
+        </childnode>
+        <childnode refid="30814" relation="include">
+        </childnode>
+        <childnode refid="30816" relation="include">
+        </childnode>
+        <childnode refid="30820" relation="include">
+        </childnode>
+        <childnode refid="30822" relation="include">
+        </childnode>
+      </node>
+      <node id="30794">
+        <label>File.inl</label>
+      </node>
+      <node id="30789">
+        <label>Hardware/Hardware.h</label>
+        <link refid="da/dec/Hardware_8h"/>
+        <childnode refid="30775" relation="include">
+        </childnode>
+        <childnode refid="30777" relation="include">
+        </childnode>
+        <childnode refid="30790" relation="include">
+        </childnode>
+        <childnode refid="30792" relation="include">
+        </childnode>
+      </node>
+      <node id="30801">
+        <label>Allocators/StackAllocator.h</label>
+        <link refid="db/d84/StackAllocator_8h"/>
+        <childnode refid="30802" relation="include">
+        </childnode>
+        <childnode refid="30804" relation="include">
+        </childnode>
+      </node>
+      <node id="30792">
+        <label>Hardware.inl</label>
+      </node>
+      <node id="30806">
+        <label>PoolAllocator.inl</label>
+      </node>
+      <node id="30783">
+        <label>Scalar.inl</label>
+      </node>
+      <node id="30818">
+        <label>IslandEdge.inl</label>
+      </node>
+      <node id="30779">
+        <label>String.inl</label>
+      </node>
+      <node id="30822">
+        <label>PairManager.inl</label>
+      </node>
+      <node id="30768">
+        <label>../../../../Lib/Datastruct/Array/Array.h</label>
+        <link refid="df/dd0/Array_8h"/>
+        <childnode refid="30769" relation="include">
+        </childnode>
+        <childnode refid="30813" relation="include">
+        </childnode>
+      </node>
+      <node id="30777">
+        <label>Hardware/FPU.h</label>
+        <link refid="dd/d2f/FPU_8h"/>
+        <childnode refid="30775" relation="include">
+        </childnode>
+        <childnode refid="30778" relation="include">
+        </childnode>
+      </node>
+      <node id="30809">
+        <label>Allocators/HeapAllocator.h</label>
+        <link refid="d3/d89/HeapAllocator_8h"/>
+        <childnode refid="30802" relation="include">
+        </childnode>
+        <childnode refid="30810" relation="include">
+        </childnode>
+      </node>
+      <node id="30772">
+        <label>../../../ThirdParty/System/String.h</label>
+        <link refid="d9/dba/String_8h"/>
+        <childnode refid="30773" relation="include">
+        </childnode>
+        <childnode refid="30775" relation="include">
+        </childnode>
+        <childnode refid="30777" relation="include">
+        </childnode>
+        <childnode refid="30779" relation="include">
+        </childnode>
+      </node>
+      <node id="30776">
+        <label>Platform.inl</label>
+      </node>
+      <node id="30811">
+        <label>MemoryManager.inl</label>
+      </node>
+      <node id="30799">
+        <label>System.inl</label>
+      </node>
+      <node id="30797">
+        <label>Networking.h</label>
+        <link refid="df/dfb/Networking_8h"/>
+        <childnode refid="30773" relation="include">
+        </childnode>
+        <childnode refid="30775" relation="include">
+        </childnode>
+        <childnode refid="30798" relation="include">
+        </childnode>
+      </node>
+      <node id="30793">
+        <label>File.h</label>
+        <link refid="d6/db7/File_8h"/>
+        <childnode refid="30773" relation="include">
+        </childnode>
+        <childnode refid="30775" relation="include">
+        </childnode>
+        <childnode refid="30772" relation="include">
+        </childnode>
+        <childnode refid="30794" relation="include">
+        </childnode>
+      </node>
+      <node id="30804">
+        <label>StackAllocator.inl</label>
+      </node>
+      <node id="30774">
+        <label>ForwardWin32.inl</label>
+      </node>
+      <node id="30790">
+        <label>SSE.h</label>
+        <link refid="d0/d02/SSE_8h"/>
+        <childnode refid="30775" relation="include">
+        </childnode>
+        <childnode refid="30791" relation="include">
+        </childnode>
+      </node>
+      <node id="30798">
+        <label>Networking.inl</label>
+      </node>
+      <node id="30785">
+        <label>Fixed.inl</label>
+      </node>
+      <node id="30781">
+        <label>../Math/Functions/MathFunction.h</label>
+        <link refid="d1/d98/MathFunction_8h"/>
+        <childnode refid="30777" relation="include">
+        </childnode>
+        <childnode refid="30782" relation="include">
+        </childnode>
+        <childnode refid="30784" relation="include">
+        </childnode>
+        <childnode refid="30786" relation="include">
+        </childnode>
+      </node>
+      <node id="30784">
+        <label>../Formats/Fixed.h</label>
+        <link refid="d4/d76/Fixed_8h"/>
+        <childnode refid="30782" relation="include">
+        </childnode>
+        <childnode refid="30785" relation="include">
+        </childnode>
+      </node>
+      <node id="30800">
+        <label>ErrorManager.inl</label>
+      </node>
+      <node id="30810">
+        <label>HeapAllocator.inl</label>
+      </node>
+      <node id="30773">
+        <label>../Forwards/ForwardWin32.h</label>
+        <link refid="d5/dea/ForwardWin32_8h"/>
+        <childnode refid="30774" relation="include">
+        </childnode>
+      </node>
+      <node id="30787">
+        <label>../Error/ErrorManager.h</label>
+        <link refid="d1/db6/ErrorManager_8h"/>
+        <childnode refid="30788" relation="include">
+        </childnode>
+        <childnode refid="30800" relation="include">
+        </childnode>
+      </node>
+      <node id="30813">
+        <label>Array.inl</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="30833">
+        <label>WorldManager.h</label>
+        <link refid="db/d98/WorldManager_8h"/>
+        <childnode refid="30827" relation="include">
+        </childnode>
+      </node>
+      <node id="30832">
+        <label>MyDungeon.h</label>
+        <link refid="d0/de7/MyDungeon_8h"/>
+        <childnode refid="30830" relation="include">
+        </childnode>
+      </node>
+      <node id="30826">
+        <label>PhysicsManager.h</label>
+        <link refid="d2/d6b/PhysicsManager_8h"/>
+        <childnode refid="30827" relation="include">
+        </childnode>
+        <childnode refid="30833" relation="include">
+        </childnode>
+      </node>
+      <node id="30830">
+        <label>Main.h</label>
+        <link refid="da/d94/Main_8h"/>
+      </node>
+      <node id="30824">
+        <label>BroadPhase.h</label>
+        <link refid="da/d8f/BroadPhase_8h"/>
+        <childnode refid="30825" relation="include">
+        </childnode>
+      </node>
+      <node id="30831">
+        <label>MyLandscape.h</label>
+        <link refid="d7/d2b/MyLandscape_8h"/>
+        <childnode refid="30830" relation="include">
+        </childnode>
+      </node>
+      <node id="30828">
+        <label>ApplicationManager.h</label>
+        <link refid="d2/d9d/ApplicationManager_8h"/>
+        <childnode refid="30829" relation="include">
+        </childnode>
+        <childnode refid="30830" relation="include">
+        </childnode>
+        <childnode refid="30831" relation="include">
+        </childnode>
+        <childnode refid="30832" relation="include">
+        </childnode>
+      </node>
+      <node id="30827">
+        <label>WindowApplication.h</label>
+        <link refid="d4/d72/WindowApplication_8h"/>
+        <childnode refid="30828" relation="include">
+        </childnode>
+      </node>
+      <node id="30823">
+        <label>PairManager.h</label>
+        <link refid="PairManager.h"/>
+        <childnode refid="30824" relation="include">
+        </childnode>
+      </node>
+      <node id="30829">
+        <label>Entities.h</label>
+        <link refid="d7/d5d/Entities_8h"/>
+        <childnode refid="30830" relation="include">
+        </childnode>
+      </node>
+      <node id="30825">
+        <label>SweepAndPrune.h</label>
+        <link refid="dc/dba/SweepAndPrune_8h"/>
+        <childnode refid="30826" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="da/d5a/structBatchedNodePair" prot="public">BatchedNodePair</innerclass>
+    <innerclass refid="dd/d9d/classPairManager" prot="public">PairManager</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="d3/d3a/PairManager_8h_1af5d45f4c2364c09f56022e90970d2592" prot="public" static="no">
+        <name>NODEPAIR_BATCHED</name>
+        <initializer>0x00000001</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/BroadPhase/PairManager.h" line="39" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/BroadPhase/PairManager.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d3a/PairManager_8h_1aaa703280b4fcb459d95806559e12834b" prot="public" static="no">
+        <name>NODEPAIR_REMOVED</name>
+        <initializer>0x00000002</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/BroadPhase/PairManager.h" line="40" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/BroadPhase/PairManager.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d3a/PairManager_8h_1a002c538074f6f08efdb266ae6e3bd487" prot="public" static="no">
+        <name>NODEPAIR_PERSISTENT</name>
+        <initializer>0x80000000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/BroadPhase/PairManager.h" line="41" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/BroadPhase/PairManager.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="d3/d3a/PairManager_8h_1a999e373065de7c6b245829dd90752949" prot="public" static="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af76d45792ece002e4437192e25760677" kindref="member">DWord</ref></type>
+        <definition>typedef DWord NodePairBatchFlag</definition>
+        <argsstring></argsstring>
+        <name>NodePairBatchFlag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/BroadPhase/PairManager.h" line="38" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/BroadPhase/PairManager.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/BroadPhase/PairManager.h"/>
+  </compounddef>
+</doxygen>

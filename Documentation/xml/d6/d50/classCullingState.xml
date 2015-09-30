@@ -1,0 +1,187 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d6/d50/classCullingState" kind="class" prot="public">
+    <compoundname>CullingState</compoundname>
+    <includes refid="d9/db7/CullingState_8h" local="no">CullingState.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d6/d50/classCullingState_1ab29ca6a5fefa89982ff184ed460ef804" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool CullEnabled</definition>
+        <argsstring></argsstring>
+        <name>CullEnabled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/States/CullingState.h" line="57" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/States/CullingState.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d50/classCullingState_1a5ef79cb5db40361c6b91553586ac8067" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/db7/CullingState_8h_1a49b7b52088391a0002f7390b7dfbbea2" kindref="member">CullingTest</ref></type>
+        <definition>CullingTest CullTest</definition>
+        <argsstring></argsstring>
+        <name>CullTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/States/CullingState.h" line="58" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/States/CullingState.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d50/classCullingState_1ac28ff028755cfa57b005a40adb81e912" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/db7/CullingState_8h_1a8397e02482f7bca8858dfcdbc9b6a232" kindref="member">CullingConvention</ref></type>
+        <definition>CullingConvention CullConv</definition>
+        <argsstring></argsstring>
+        <name>CullConv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/States/CullingState.h" line="59" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/States/CullingState.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="d6/d50/classCullingState_1a5dd8f86258dccaae6fc71a2bac226cdc" prot="private" static="yes" mutable="no">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+        <definition>const GChar* sm_arrCullTestNames[CULLING_COUNT]</definition>
+        <argsstring>[CULLING_COUNT]</argsstring>
+        <name>sm_arrCullTestNames</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/States/CullingState.h" line="62" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/States/CullingState.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d50/classCullingState_1a5b89dd67cb2f2a26e73db9b1b9141f5a" prot="private" static="yes" mutable="no">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+        <definition>const GChar* sm_arrCullConvNames[CULLING_CONV_COUNT]</definition>
+        <argsstring>[CULLING_CONV_COUNT]</argsstring>
+        <name>sm_arrCullConvNames</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/States/CullingState.h" line="63" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/States/CullingState.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="d6/d50/classCullingState_1a6fc79e06abbe857bcc6f3a57ebdcecc8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+        <definition>static const GChar* GetCullTestName</definition>
+        <argsstring>(CullingTest iTest)</argsstring>
+        <name>GetCullTestName</name>
+        <param>
+          <type><ref refid="d9/db7/CullingState_8h_1a49b7b52088391a0002f7390b7dfbbea2" kindref="member">CullingTest</ref></type>
+          <declname>iTest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/States/CullingState.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d50/classCullingState_1a60bdf6640bcb1de57a4aa95940335160" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+        <definition>static const GChar* GetCullConvName</definition>
+        <argsstring>(CullingConvention iConv)</argsstring>
+        <name>GetCullConvName</name>
+        <param>
+          <type><ref refid="d9/db7/CullingState_8h_1a8397e02482f7bca8858dfcdbc9b6a232" kindref="member">CullingConvention</ref></type>
+          <declname>iConv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/States/CullingState.h" line="52"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d6/d50/classCullingState_1a20a5873f2be062cfff41f8926fbcb4e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CullingState</definition>
+        <argsstring>()</argsstring>
+        <name>CullingState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/States/CullingState.h" line="54"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d50/classCullingState_1acdd66e6038b5d6f29f23ba2da8137e95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~CullingState</definition>
+        <argsstring>()</argsstring>
+        <name>~CullingState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/States/CullingState.h" line="55"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1823">
+        <label>CullingTest</label>
+      </node>
+      <node id="1825">
+        <label>CullingConvention</label>
+      </node>
+      <node id="1821">
+        <label>CullingState</label>
+        <link refid="d6/d50/classCullingState"/>
+        <childnode refid="1822" relation="usage">
+          <edgelabel>sm_arrCullTestNames</edgelabel>
+          <edgelabel>sm_arrCullConvNames</edgelabel>
+        </childnode>
+        <childnode refid="1823" relation="usage">
+          <edgelabel>CullTest</edgelabel>
+        </childnode>
+        <childnode refid="1824" relation="usage">
+          <edgelabel>CullEnabled</edgelabel>
+        </childnode>
+        <childnode refid="1825" relation="usage">
+          <edgelabel>CullConv</edgelabel>
+        </childnode>
+      </node>
+      <node id="1824">
+        <label>bool</label>
+      </node>
+      <node id="1822">
+        <label>char</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/States/CullingState.h" line="49" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/States/CullingState.h" bodystart="48" bodyend="64"/>
+    <listofallmembers>
+      <member refid="d6/d50/classCullingState_1ac28ff028755cfa57b005a40adb81e912" prot="public" virt="non-virtual"><scope>CullingState</scope><name>CullConv</name></member>
+      <member refid="d6/d50/classCullingState_1ab29ca6a5fefa89982ff184ed460ef804" prot="public" virt="non-virtual"><scope>CullingState</scope><name>CullEnabled</name></member>
+      <member refid="d6/d50/classCullingState_1a20a5873f2be062cfff41f8926fbcb4e6" prot="public" virt="non-virtual"><scope>CullingState</scope><name>CullingState</name></member>
+      <member refid="d6/d50/classCullingState_1a5ef79cb5db40361c6b91553586ac8067" prot="public" virt="non-virtual"><scope>CullingState</scope><name>CullTest</name></member>
+      <member refid="d6/d50/classCullingState_1a60bdf6640bcb1de57a4aa95940335160" prot="public" virt="non-virtual"><scope>CullingState</scope><name>GetCullConvName</name></member>
+      <member refid="d6/d50/classCullingState_1a6fc79e06abbe857bcc6f3a57ebdcecc8" prot="public" virt="non-virtual"><scope>CullingState</scope><name>GetCullTestName</name></member>
+      <member refid="d6/d50/classCullingState_1a5b89dd67cb2f2a26e73db9b1b9141f5a" prot="private" virt="non-virtual"><scope>CullingState</scope><name>sm_arrCullConvNames</name></member>
+      <member refid="d6/d50/classCullingState_1a5dd8f86258dccaae6fc71a2bac226cdc" prot="private" virt="non-virtual"><scope>CullingState</scope><name>sm_arrCullTestNames</name></member>
+      <member refid="d6/d50/classCullingState_1acdd66e6038b5d6f29f23ba2da8137e95" prot="public" virt="non-virtual"><scope>CullingState</scope><name>~CullingState</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

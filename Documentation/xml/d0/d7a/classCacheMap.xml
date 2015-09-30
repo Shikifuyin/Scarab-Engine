@@ -1,0 +1,584 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d0/d7a/classCacheMap" kind="class" prot="public">
+    <compoundname>CacheMap</compoundname>
+    <basecompoundref refid="dc/d51/classDatastruct" prot="public" virt="non-virtual">Datastruct</basecompoundref>
+    <includes refid="dd/da6/CacheMap_8h" local="no">CacheMap.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename Key</type>
+      </param>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="d0/d7a/classCacheMap_1a5bd72d4c4004ad5a7bd1fd59fdb91d7b" prot="public" static="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a7cc214a236ad3bb6ad435bdcf5262a3f" kindref="member">Int</ref>(*</type>
+        <definition>typedef Int(* Comparator)(const Key &amp;rLeft, const Key &amp;rRight, Void *pUserData)</definition>
+        <argsstring>)(const Key &amp;rLeft, const Key &amp;rRight, Void *pUserData)</argsstring>
+        <name>Comparator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Cache/CacheMap.h" line="49" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Cache/CacheMap.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d0/d7a/classCacheMap_1a419ed383df03834df32c32d34c79527d" prot="public" static="no">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref>(*</type>
+        <definition>typedef Void(* Loader)(T *outItem, const Key &amp;rKey, Void *pUserData)</definition>
+        <argsstring>)(T *outItem, const Key &amp;rKey, Void *pUserData)</argsstring>
+        <name>Loader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Cache/CacheMap.h" line="52" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Cache/CacheMap.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d0/d7a/classCacheMap_1a4662a7b8c96f534f588827ab5d415d30" prot="public" static="no">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref>(*</type>
+        <definition>typedef Void(* Unloader)(const Key &amp;rKey, const T &amp;rItem, Void *pUserData)</definition>
+        <argsstring>)(const Key &amp;rKey, const T &amp;rItem, Void *pUserData)</argsstring>
+        <name>Unloader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Cache/CacheMap.h" line="55" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Cache/CacheMap.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d0/d7a/classCacheMap_1ab4fb02e91dd87943094984e6a228eb24" prot="private" static="no" mutable="no">
+        <type><ref refid="d0/d7a/classCacheMap_1a419ed383df03834df32c32d34c79527d" kindref="member">Loader</ref></type>
+        <definition>Loader m_pfLoad</definition>
+        <argsstring></argsstring>
+        <name>m_pfLoad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Cache/CacheMap.h" line="91" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Cache/CacheMap.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d7a/classCacheMap_1ac90bb187c6ceb9e3e3f89d78bd246bda" prot="private" static="no" mutable="no">
+        <type><ref refid="d0/d7a/classCacheMap_1a4662a7b8c96f534f588827ab5d415d30" kindref="member">Unloader</ref></type>
+        <definition>Unloader m_pfUnload</definition>
+        <argsstring></argsstring>
+        <name>m_pfUnload</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Cache/CacheMap.h" line="92" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Cache/CacheMap.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d7a/classCacheMap_1a91f0e9a4012edb773b7a59705e4e90a0" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> *</type>
+        <definition>Void* m_pUserData</definition>
+        <argsstring></argsstring>
+        <name>m_pUserData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Cache/CacheMap.h" line="93" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Cache/CacheMap.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d7a/classCacheMap_1a981f10d1750a2285be4a44180c46cc95" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iCacheSize</definition>
+        <argsstring></argsstring>
+        <name>m_iCacheSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Cache/CacheMap.h" line="95" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Cache/CacheMap.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d7a/classCacheMap_1a34bd4461c77336384993cd04028f67ca" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iMostRecentAccess</definition>
+        <argsstring></argsstring>
+        <name>m_iMostRecentAccess</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Cache/CacheMap.h" line="95" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Cache/CacheMap.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d7a/classCacheMap_1a537bda200425e743aeea279854356b83" prot="private" static="no" mutable="no">
+        <type><ref refid="d0/da4/classTreeMap" kindref="compound">TreeMap</ref>&lt; Key, <ref refid="d1/dd5/structCacheMapNode" kindref="compound">CacheMapNode</ref> &gt;</type>
+        <definition>TreeMap&lt;Key,CacheMapNode&gt; m_mapCache</definition>
+        <argsstring></argsstring>
+        <name>m_mapCache</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Cache/CacheMap.h" line="96" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Cache/CacheMap.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d0/d7a/classCacheMap_1a1d2a39458a0aad78f24fc5725886454e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CacheMap</definition>
+        <argsstring>(UInt iCacheSize=CACHEMAP_DEFAULT_SIZE)</argsstring>
+        <name>CacheMap</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iCacheSize</declname>
+          <defval><ref refid="dd/da6/CacheMap_8h_1ab99ebfa7ce4f74c85f39163a283d5093" kindref="member">CACHEMAP_DEFAULT_SIZE</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Cache/CacheMap.h" line="59"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d7a/classCacheMap_1a01571cc5a482b4f57471577571f5e317" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~CacheMap</definition>
+        <argsstring>()</argsstring>
+        <name>~CacheMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Cache/CacheMap.h" line="60"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d7a/classCacheMap_1a605325d1c1fc3f3c761365595701f9c4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void UseMemoryContext</definition>
+        <argsstring>(MemoryContextID idMemoryContext, const GChar *strAllocatorName)</argsstring>
+        <name>UseMemoryContext</name>
+        <reimplements refid="dc/d51/classDatastruct_1a605325d1c1fc3f3c761365595701f9c4">UseMemoryContext</reimplements>
+        <param>
+          <type><ref refid="d7/d7b/MemoryManager_8h_1af31b42dd6507009f3d5e5f71b991260b" kindref="member">MemoryContextID</ref></type>
+          <declname>idMemoryContext</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strAllocatorName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Cache/CacheMap.h" line="63"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d7a/classCacheMap_1af0882680fadfbb5788e66f0107535ee2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetComparator</definition>
+        <argsstring>(Comparator pfCompare, Void *pUserData=NULL)</argsstring>
+        <name>SetComparator</name>
+        <param>
+          <type><ref refid="d0/d7a/classCacheMap_1a5bd72d4c4004ad5a7bd1fd59fdb91d7b" kindref="member">Comparator</ref></type>
+          <declname>pfCompare</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> *</type>
+          <declname>pUserData</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Cache/CacheMap.h" line="65"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d7a/classCacheMap_1acf22b2d9726bf7a5798f6292e12564eb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetLoader</definition>
+        <argsstring>(Loader pfLoad, Void *pUserData=NULL)</argsstring>
+        <name>SetLoader</name>
+        <param>
+          <type><ref refid="d0/d7a/classCacheMap_1a419ed383df03834df32c32d34c79527d" kindref="member">Loader</ref></type>
+          <declname>pfLoad</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> *</type>
+          <declname>pUserData</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Cache/CacheMap.h" line="66"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d7a/classCacheMap_1a0d3174a10ad93cbe63fb091f3b418274" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetUnloader</definition>
+        <argsstring>(Unloader pfUnload)</argsstring>
+        <name>SetUnloader</name>
+        <param>
+          <type><ref refid="d0/d7a/classCacheMap_1a4662a7b8c96f534f588827ab5d415d30" kindref="member">Unloader</ref></type>
+          <declname>pfUnload</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Cache/CacheMap.h" line="67"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d7a/classCacheMap_1aab77352722e193be864ad3e317f0a967" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void Create</definition>
+        <argsstring>()</argsstring>
+        <name>Create</name>
+        <reimplements refid="dc/d51/classDatastruct_1a0609a196f6f3d0c6b77f63eb850c0ac7">Create</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Cache/CacheMap.h" line="70"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d7a/classCacheMap_1a04b98e1741147ccd8731588392091ac0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void Destroy</definition>
+        <argsstring>()</argsstring>
+        <name>Destroy</name>
+        <reimplements refid="dc/d51/classDatastruct_1a5f87413a244467d525a1e593ff2c1c27">Destroy</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Cache/CacheMap.h" line="71"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d7a/classCacheMap_1abe6db4496cfdd90f917f4ca76d4bdcb1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>virtual UInt MemorySize</definition>
+        <argsstring>() const </argsstring>
+        <name>MemorySize</name>
+        <reimplements refid="dc/d51/classDatastruct_1a9797d1e194be5ac1f59da06f4017ab52">MemorySize</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Cache/CacheMap.h" line="73"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d7a/classCacheMap_1a0956cac53fbbd2baead454e29106a8cd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>virtual UInt Count</definition>
+        <argsstring>() const </argsstring>
+        <name>Count</name>
+        <reimplements refid="dc/d51/classDatastruct_1a64d0429c6ea513aff9aed72a84ac5e07">Count</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Cache/CacheMap.h" line="74"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d7a/classCacheMap_1aa31f188be923c718868036f9486390ea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void Clear</definition>
+        <argsstring>()</argsstring>
+        <name>Clear</name>
+        <reimplements refid="dc/d51/classDatastruct_1a12a20256ada86a94610094792cbc6e2b">Clear</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Cache/CacheMap.h" line="76"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d7a/classCacheMap_1a3a88ac88281c745dccd62a7d4c7064fa" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool IsFull</definition>
+        <argsstring>() const </argsstring>
+        <name>IsFull</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Cache/CacheMap.h" line="79"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d7a/classCacheMap_1a477ba2249bb2fafc7b2f332f9541abeb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>Bool Contains</definition>
+        <argsstring>(const Key &amp;rKey) const </argsstring>
+        <name>Contains</name>
+        <param>
+          <type>const Key &amp;</type>
+          <declname>rKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Cache/CacheMap.h" line="82"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d7a/classCacheMap_1af3fe5a9c21ea058e23c5aa032f4d9d19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const T &amp;</type>
+        <definition>const T&amp; Query</definition>
+        <argsstring>(const Key &amp;rKey)</argsstring>
+        <name>Query</name>
+        <param>
+          <type>const Key &amp;</type>
+          <declname>rKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Cache/CacheMap.h" line="84"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d7a/classCacheMap_1a2c7138447e74f2e75ce688a6b2337621" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const T &amp;</type>
+        <definition>const T&amp; Load</definition>
+        <argsstring>(const Key &amp;rKey)</argsstring>
+        <name>Load</name>
+        <param>
+          <type>const Key &amp;</type>
+          <declname>rKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Cache/CacheMap.h" line="85"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d7a/classCacheMap_1a74e367d0670e4f781a21fc5ab4198f27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Cache/CacheMap.h" line="87"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d7a/classCacheMap_1a625c265887f9604eb76fc7b3f8c48b09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Release</definition>
+        <argsstring>()</argsstring>
+        <name>Release</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Cache/CacheMap.h" line="88"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="515">
+        <label>CacheMap&lt; Key, T &gt;</label>
+        <link refid="d0/d7a/classCacheMap"/>
+        <childnode refid="516" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="516">
+        <label>Datastruct</label>
+        <link refid="dc/d51/classDatastruct"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="527">
+        <label>T</label>
+      </node>
+      <node id="526">
+        <label>RBTreeColor</label>
+      </node>
+      <node id="524">
+        <label>RedBlackNode&lt; T &gt;</label>
+        <link refid="da/d9d/structRedBlackNode"/>
+        <childnode refid="525" relation="usage">
+          <edgelabel>pPrev</edgelabel>
+          <edgelabel>pNext</edgelabel>
+          <edgelabel>pParent</edgelabel>
+          <edgelabel>pChild</edgelabel>
+        </childnode>
+        <childnode refid="526" relation="usage">
+          <edgelabel>iColor</edgelabel>
+        </childnode>
+        <childnode refid="527" relation="usage">
+          <edgelabel>Item</edgelabel>
+        </childnode>
+      </node>
+      <node id="523">
+        <label>RedBlackTree&lt; TreeMapNode &gt;</label>
+        <link refid="d9/d5d/classRedBlackTree"/>
+        <childnode refid="518" relation="public-inheritance">
+        </childnode>
+        <childnode refid="524" relation="usage">
+          <edgelabel>m_pEnd</edgelabel>
+          <edgelabel>m_pHead</edgelabel>
+          <edgelabel>m_pRoot</edgelabel>
+          <edgelabel>sm_SentinelNode</edgelabel>
+          <edgelabel>RBTREE_LEAF</edgelabel>
+        </childnode>
+        <childnode refid="520" relation="usage">
+          <edgelabel>m_iNodeCount</edgelabel>
+        </childnode>
+        <childnode refid="528" relation="usage">
+          <edgelabel>m_pfCompare</edgelabel>
+        </childnode>
+        <childnode refid="530" relation="usage">
+          <edgelabel>m_pUserData</edgelabel>
+        </childnode>
+      </node>
+      <node id="520">
+        <label>unsigned int</label>
+      </node>
+      <node id="525">
+        <label>struct _red_black_node *</label>
+      </node>
+      <node id="521">
+        <label>int</label>
+      </node>
+      <node id="517">
+        <label>CacheMap&lt; Key, T &gt;</label>
+        <link refid="d0/d7a/classCacheMap"/>
+        <childnode refid="518" relation="public-inheritance">
+        </childnode>
+        <childnode refid="521" relation="usage">
+          <edgelabel>m_iCacheSize</edgelabel>
+          <edgelabel>m_iMostRecentAccess</edgelabel>
+        </childnode>
+        <childnode refid="522" relation="usage">
+          <edgelabel>m_mapCache</edgelabel>
+        </childnode>
+        <childnode refid="529" relation="usage">
+          <edgelabel>m_pfUnload</edgelabel>
+        </childnode>
+        <childnode refid="530" relation="usage">
+          <edgelabel>m_pUserData</edgelabel>
+        </childnode>
+        <childnode refid="527" relation="usage">
+          <edgelabel>m_pfLoad</edgelabel>
+        </childnode>
+      </node>
+      <node id="522">
+        <label>TreeMap&lt; Key, CacheMapNode &gt;</label>
+        <link refid="d0/da4/classTreeMap"/>
+        <childnode refid="518" relation="public-inheritance">
+        </childnode>
+        <childnode refid="523" relation="usage">
+          <edgelabel>m_rbTreeMap</edgelabel>
+        </childnode>
+        <childnode refid="521" relation="usage">
+          <edgelabel>m_pfCompare</edgelabel>
+        </childnode>
+        <childnode refid="530" relation="usage">
+          <edgelabel>m_pUserData</edgelabel>
+        </childnode>
+      </node>
+      <node id="528">
+        <label>TreeMapNode&lt; Key, T &gt;</label>
+        <link refid="db/dd2/structTreeMapNode"/>
+        <childnode refid="529" relation="usage">
+          <edgelabel>nodeKey</edgelabel>
+        </childnode>
+        <childnode refid="527" relation="usage">
+          <edgelabel>nodeItem</edgelabel>
+        </childnode>
+      </node>
+      <node id="529">
+        <label>Key</label>
+      </node>
+      <node id="519">
+        <label>char</label>
+      </node>
+      <node id="530">
+        <label>Void *</label>
+      </node>
+      <node id="518">
+        <label>Datastruct</label>
+        <link refid="dc/d51/classDatastruct"/>
+        <childnode refid="519" relation="usage">
+          <edgelabel>m_strAllocatorName</edgelabel>
+        </childnode>
+        <childnode refid="520" relation="usage">
+          <edgelabel>m_idMemoryContext</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Cache/CacheMap.h" line="37" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/Cache/CacheMap.h" bodystart="36" bodyend="97"/>
+    <listofallmembers>
+      <member refid="dc/d51/classDatastruct_1a4208dfdad6dc1178ee1f80481598500c" prot="protected" virt="non-virtual"><scope>CacheMap</scope><name>_SelectMemory</name></member>
+      <member refid="dc/d51/classDatastruct_1ae0aad9bef0dc76ed43f8c4fc59a10d78" prot="protected" virt="non-virtual"><scope>CacheMap</scope><name>_UnSelectMemory</name></member>
+      <member refid="d0/d7a/classCacheMap_1a1d2a39458a0aad78f24fc5725886454e" prot="public" virt="non-virtual"><scope>CacheMap</scope><name>CacheMap</name></member>
+      <member refid="d0/d7a/classCacheMap_1aa31f188be923c718868036f9486390ea" prot="public" virt="virtual"><scope>CacheMap</scope><name>Clear</name></member>
+      <member refid="d0/d7a/classCacheMap_1a5bd72d4c4004ad5a7bd1fd59fdb91d7b" prot="public" virt="non-virtual"><scope>CacheMap</scope><name>Comparator</name></member>
+      <member refid="d0/d7a/classCacheMap_1a477ba2249bb2fafc7b2f332f9541abeb" prot="public" virt="non-virtual"><scope>CacheMap</scope><name>Contains</name></member>
+      <member refid="d0/d7a/classCacheMap_1a0956cac53fbbd2baead454e29106a8cd" prot="public" virt="virtual"><scope>CacheMap</scope><name>Count</name></member>
+      <member refid="d0/d7a/classCacheMap_1aab77352722e193be864ad3e317f0a967" prot="public" virt="virtual"><scope>CacheMap</scope><name>Create</name></member>
+      <member refid="dc/d51/classDatastruct_1aebb55795e668a005cf660ce216962a2f" prot="public" virt="non-virtual"><scope>CacheMap</scope><name>Datastruct</name></member>
+      <member refid="d0/d7a/classCacheMap_1a04b98e1741147ccd8731588392091ac0" prot="public" virt="virtual"><scope>CacheMap</scope><name>Destroy</name></member>
+      <member refid="dc/d51/classDatastruct_1a4e2abc9751fdc8571b9d9a1d02639ebe" prot="public" virt="non-virtual"><scope>CacheMap</scope><name>IsEmpty</name></member>
+      <member refid="d0/d7a/classCacheMap_1a3a88ac88281c745dccd62a7d4c7064fa" prot="public" virt="non-virtual"><scope>CacheMap</scope><name>IsFull</name></member>
+      <member refid="d0/d7a/classCacheMap_1a2c7138447e74f2e75ce688a6b2337621" prot="public" virt="non-virtual"><scope>CacheMap</scope><name>Load</name></member>
+      <member refid="d0/d7a/classCacheMap_1a419ed383df03834df32c32d34c79527d" prot="public" virt="non-virtual"><scope>CacheMap</scope><name>Loader</name></member>
+      <member refid="d0/d7a/classCacheMap_1a981f10d1750a2285be4a44180c46cc95" prot="private" virt="non-virtual"><scope>CacheMap</scope><name>m_iCacheSize</name></member>
+      <member refid="d0/d7a/classCacheMap_1a34bd4461c77336384993cd04028f67ca" prot="private" virt="non-virtual"><scope>CacheMap</scope><name>m_iMostRecentAccess</name></member>
+      <member refid="d0/d7a/classCacheMap_1a537bda200425e743aeea279854356b83" prot="private" virt="non-virtual"><scope>CacheMap</scope><name>m_mapCache</name></member>
+      <member refid="d0/d7a/classCacheMap_1ab4fb02e91dd87943094984e6a228eb24" prot="private" virt="non-virtual"><scope>CacheMap</scope><name>m_pfLoad</name></member>
+      <member refid="d0/d7a/classCacheMap_1ac90bb187c6ceb9e3e3f89d78bd246bda" prot="private" virt="non-virtual"><scope>CacheMap</scope><name>m_pfUnload</name></member>
+      <member refid="d0/d7a/classCacheMap_1a91f0e9a4012edb773b7a59705e4e90a0" prot="private" virt="non-virtual"><scope>CacheMap</scope><name>m_pUserData</name></member>
+      <member refid="d0/d7a/classCacheMap_1abe6db4496cfdd90f917f4ca76d4bdcb1" prot="public" virt="virtual"><scope>CacheMap</scope><name>MemorySize</name></member>
+      <member refid="d0/d7a/classCacheMap_1af3fe5a9c21ea058e23c5aa032f4d9d19" prot="public" virt="non-virtual"><scope>CacheMap</scope><name>Query</name></member>
+      <member refid="d0/d7a/classCacheMap_1a625c265887f9604eb76fc7b3f8c48b09" prot="public" virt="non-virtual"><scope>CacheMap</scope><name>Release</name></member>
+      <member refid="d0/d7a/classCacheMap_1af0882680fadfbb5788e66f0107535ee2" prot="public" virt="non-virtual"><scope>CacheMap</scope><name>SetComparator</name></member>
+      <member refid="d0/d7a/classCacheMap_1acf22b2d9726bf7a5798f6292e12564eb" prot="public" virt="non-virtual"><scope>CacheMap</scope><name>SetLoader</name></member>
+      <member refid="d0/d7a/classCacheMap_1a0d3174a10ad93cbe63fb091f3b418274" prot="public" virt="non-virtual"><scope>CacheMap</scope><name>SetUnloader</name></member>
+      <member refid="d0/d7a/classCacheMap_1a4662a7b8c96f534f588827ab5d415d30" prot="public" virt="non-virtual"><scope>CacheMap</scope><name>Unloader</name></member>
+      <member refid="d0/d7a/classCacheMap_1a74e367d0670e4f781a21fc5ab4198f27" prot="public" virt="non-virtual"><scope>CacheMap</scope><name>Update</name></member>
+      <member refid="d0/d7a/classCacheMap_1a605325d1c1fc3f3c761365595701f9c4" prot="public" virt="virtual"><scope>CacheMap</scope><name>UseMemoryContext</name></member>
+      <member refid="d0/d7a/classCacheMap_1a01571cc5a482b4f57471577571f5e317" prot="public" virt="virtual"><scope>CacheMap</scope><name>~CacheMap</name></member>
+      <member refid="dc/d51/classDatastruct_1a59e1e9769598d5606e0a335692f89c15" prot="public" virt="virtual"><scope>CacheMap</scope><name>~Datastruct</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

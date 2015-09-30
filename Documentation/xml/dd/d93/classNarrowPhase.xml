@@ -1,0 +1,584 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="dd/d93/classNarrowPhase" kind="class" prot="public" abstract="yes">
+    <compoundname>NarrowPhase</compoundname>
+    <derivedcompoundref refid="d2/dd2/classConcaveBoxCollision" prot="public" virt="non-virtual">ConcaveBoxCollision</derivedcompoundref>
+    <derivedcompoundref refid="dc/d64/classConcaveConcaveCollision" prot="public" virt="non-virtual">ConcaveConcaveCollision</derivedcompoundref>
+    <derivedcompoundref refid="d1/d7d/classConcaveConvexCollision" prot="public" virt="non-virtual">ConcaveConvexCollision</derivedcompoundref>
+    <derivedcompoundref refid="de/d85/classConcaveSphereCollision" prot="public" virt="non-virtual">ConcaveSphereCollision</derivedcompoundref>
+    <derivedcompoundref refid="d4/d72/classSingleSideVClip" prot="public" virt="non-virtual">SingleSideVClip</derivedcompoundref>
+    <derivedcompoundref refid="d1/d53/classSphereBoxCollision" prot="public" virt="non-virtual">SphereBoxCollision</derivedcompoundref>
+    <derivedcompoundref refid="d9/d91/classSphereSphereCollision" prot="public" virt="non-virtual">SphereSphereCollision</derivedcompoundref>
+    <derivedcompoundref refid="de/db3/classTriangleSphereCollision" prot="public" virt="non-virtual">TriangleSphereCollision</derivedcompoundref>
+    <derivedcompoundref refid="d9/ddc/classVoronoiClip" prot="public" virt="non-virtual">VoronoiClip</derivedcompoundref>
+    <includes refid="d0/d14/NarrowPhase_8h" local="no">NarrowPhase.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="dd/d93/classNarrowPhase_1a2d47bbceffd2cea232b0a4746ed29ff6" prot="public" static="no" mutable="no">
+        <type><ref refid="d0/d10/Scalar_8h_1abee0aca51a3a3e16c628155aa4ac6f12" kindref="member">Scalar</ref></type>
+        <definition>Scalar ZeroTolerance</definition>
+        <argsstring></argsstring>
+        <name>ZeroTolerance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/NarrowPhase.h" line="44" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/NarrowPhase.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="dd/d93/classNarrowPhase_1ad3b1f9ddd11f4305af588f493601fcdd" prot="protected" static="no" mutable="no">
+        <type><ref refid="d2/d1b/classTransformedShape" kindref="compound">TransformedShape</ref> *</type>
+        <definition>TransformedShape* m_pShapeA</definition>
+        <argsstring></argsstring>
+        <name>m_pShapeA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/NarrowPhase.h" line="58" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/NarrowPhase.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d93/classNarrowPhase_1acd16f875b1d782b34a8b495def982084" prot="protected" static="no" mutable="no">
+        <type><ref refid="d2/d1b/classTransformedShape" kindref="compound">TransformedShape</ref> *</type>
+        <definition>TransformedShape* m_pShapeB</definition>
+        <argsstring></argsstring>
+        <name>m_pShapeB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/NarrowPhase.h" line="59" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/NarrowPhase.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d93/classNarrowPhase_1a1e56bfb17b637586d3e50a53900096bd" prot="protected" static="no" mutable="no">
+        <type><ref refid="d2/d6f/classContactManifold" kindref="compound">ContactManifold</ref> *</type>
+        <definition>ContactManifold* m_pCollisionManifold</definition>
+        <argsstring></argsstring>
+        <name>m_pCollisionManifold</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/NarrowPhase.h" line="61" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/NarrowPhase.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="dd/d93/classNarrowPhase_1a9b481554f0543f5ba3f2bbfb6cda72d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>NarrowPhase</definition>
+        <argsstring>(TransformedShape *pShapeA, TransformedShape *pShapeB)</argsstring>
+        <name>NarrowPhase</name>
+        <param>
+          <type><ref refid="d2/d1b/classTransformedShape" kindref="compound">TransformedShape</ref> *</type>
+          <declname>pShapeA</declname>
+        </param>
+        <param>
+          <type><ref refid="d2/d1b/classTransformedShape" kindref="compound">TransformedShape</ref> *</type>
+          <declname>pShapeB</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/NarrowPhase.h" line="40"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d93/classNarrowPhase_1a281c7cadd2f5f7c248f689d28e25635d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~NarrowPhase</definition>
+        <argsstring>()</argsstring>
+        <name>~NarrowPhase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/NarrowPhase.h" line="41"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d93/classNarrowPhase_1abc1a34b5130538ff93d61d62380b4fda" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d2/d1b/classTransformedShape" kindref="compound">TransformedShape</ref> *</type>
+        <definition>TransformedShape* GetShapeA</definition>
+        <argsstring>() const </argsstring>
+        <name>GetShapeA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/NarrowPhase.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d93/classNarrowPhase_1a2e29939a57f222eff8ae14cf6da51154" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d2/d1b/classTransformedShape" kindref="compound">TransformedShape</ref> *</type>
+        <definition>TransformedShape* GetShapeB</definition>
+        <argsstring>() const </argsstring>
+        <name>GetShapeB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/NarrowPhase.h" line="48"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d93/classNarrowPhase_1a15f94c85d5e8da0c5fb29586ec708895" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void Initialize</definition>
+        <argsstring>()=0</argsstring>
+        <name>Initialize</name>
+        <reimplementedby refid="d9/d91/classSphereSphereCollision_1a8cc82ad908e5eb178e948965349b55b4">Initialize</reimplementedby>
+        <reimplementedby refid="d1/d53/classSphereBoxCollision_1a8cc82ad908e5eb178e948965349b55b4">Initialize</reimplementedby>
+        <reimplementedby refid="dc/d64/classConcaveConcaveCollision_1a8cc82ad908e5eb178e948965349b55b4">Initialize</reimplementedby>
+        <reimplementedby refid="de/db3/classTriangleSphereCollision_1a8cc82ad908e5eb178e948965349b55b4">Initialize</reimplementedby>
+        <reimplementedby refid="de/d85/classConcaveSphereCollision_1a8cc82ad908e5eb178e948965349b55b4">Initialize</reimplementedby>
+        <reimplementedby refid="d1/d7d/classConcaveConvexCollision_1a8cc82ad908e5eb178e948965349b55b4">Initialize</reimplementedby>
+        <reimplementedby refid="d2/dd2/classConcaveBoxCollision_1a8cc82ad908e5eb178e948965349b55b4">Initialize</reimplementedby>
+        <reimplementedby refid="d4/d72/classSingleSideVClip_1a8cc82ad908e5eb178e948965349b55b4">Initialize</reimplementedby>
+        <reimplementedby refid="d9/ddc/classVoronoiClip_1a8cc82ad908e5eb178e948965349b55b4">Initialize</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/NarrowPhase.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d93/classNarrowPhase_1a64a3e36b0ff981158fa8d464e806071d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>virtual Bool DetectCollision</definition>
+        <argsstring>(Bool bGenerateContactPoints)=0</argsstring>
+        <name>DetectCollision</name>
+        <reimplementedby refid="d9/d91/classSphereSphereCollision_1aa1006524ebb0fcd1803715afd55265c7">DetectCollision</reimplementedby>
+        <reimplementedby refid="d1/d53/classSphereBoxCollision_1aa1006524ebb0fcd1803715afd55265c7">DetectCollision</reimplementedby>
+        <reimplementedby refid="dc/d64/classConcaveConcaveCollision_1aa1006524ebb0fcd1803715afd55265c7">DetectCollision</reimplementedby>
+        <reimplementedby refid="de/db3/classTriangleSphereCollision_1aa1006524ebb0fcd1803715afd55265c7">DetectCollision</reimplementedby>
+        <reimplementedby refid="de/d85/classConcaveSphereCollision_1aa1006524ebb0fcd1803715afd55265c7">DetectCollision</reimplementedby>
+        <reimplementedby refid="d1/d7d/classConcaveConvexCollision_1aa1006524ebb0fcd1803715afd55265c7">DetectCollision</reimplementedby>
+        <reimplementedby refid="d2/dd2/classConcaveBoxCollision_1aa1006524ebb0fcd1803715afd55265c7">DetectCollision</reimplementedby>
+        <reimplementedby refid="d4/d72/classSingleSideVClip_1aa1006524ebb0fcd1803715afd55265c7">DetectCollision</reimplementedby>
+        <reimplementedby refid="d9/ddc/classVoronoiClip_1aa1006524ebb0fcd1803715afd55265c7">DetectCollision</reimplementedby>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+          <declname>bGenerateContactPoints</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/NarrowPhase.h" line="52"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d93/classNarrowPhase_1abce7f163b35f9433ab6e35da57ae91a6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d2/d6f/classContactManifold" kindref="compound">ContactManifold</ref> *</type>
+        <definition>const ContactManifold* GetManifold</definition>
+        <argsstring>() const </argsstring>
+        <name>GetManifold</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/NarrowPhase.h" line="55"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="9404">
+        <label>ConvexTriangleCollision</label>
+        <link refid="d7/df8/classConvexTriangleCollision"/>
+        <childnode refid="9400" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9405">
+        <label>TriangleBoxCollision</label>
+        <link refid="d9/d65/classTriangleBoxCollision"/>
+        <childnode refid="9400" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9396">
+        <label>ConvexSphereCollision</label>
+        <link refid="d0/d6b/classConvexSphereCollision"/>
+        <childnode refid="9395" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9406">
+        <label>TriangleTriangleCollision</label>
+        <link refid="db/dff/classTriangleTriangleCollision"/>
+        <childnode refid="9400" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9397">
+        <label>SphereBoxCollision</label>
+        <link refid="d1/d53/classSphereBoxCollision"/>
+        <childnode refid="9390" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9402">
+        <label>ConvexBoxCollision</label>
+        <link refid="dc/d73/classConvexBoxCollision"/>
+        <childnode refid="9400" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9391">
+        <label>ConcaveBoxCollision</label>
+        <link refid="d2/dd2/classConcaveBoxCollision"/>
+        <childnode refid="9390" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9395">
+        <label>SingleSideVClip</label>
+        <link refid="d4/d72/classSingleSideVClip"/>
+        <childnode refid="9390" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9393">
+        <label>ConcaveConvexCollision</label>
+        <link refid="d1/d7d/classConcaveConvexCollision"/>
+        <childnode refid="9390" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9394">
+        <label>ConcaveSphereCollision</label>
+        <link refid="de/d85/classConcaveSphereCollision"/>
+        <childnode refid="9390" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9392">
+        <label>ConcaveConcaveCollision</label>
+        <link refid="dc/d64/classConcaveConcaveCollision"/>
+        <childnode refid="9390" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9403">
+        <label>ConvexConvexCollision</label>
+        <link refid="d3/dc1/classConvexConvexCollision"/>
+        <childnode refid="9400" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9401">
+        <label>BoxBoxCollision</label>
+        <link refid="de/dce/classBoxBoxCollision"/>
+        <childnode refid="9400" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9398">
+        <label>SphereSphereCollision</label>
+        <link refid="d9/d91/classSphereSphereCollision"/>
+        <childnode refid="9390" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9399">
+        <label>TriangleSphereCollision</label>
+        <link refid="de/db3/classTriangleSphereCollision"/>
+        <childnode refid="9390" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9400">
+        <label>VoronoiClip</label>
+        <link refid="d9/ddc/classVoronoiClip"/>
+        <childnode refid="9390" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9390">
+        <label>NarrowPhase</label>
+        <link refid="dd/d93/classNarrowPhase"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="9421">
+        <label>Mesh</label>
+        <link refid="d9/d5e/classMesh"/>
+        <childnode refid="9422" relation="usage">
+          <edgelabel>m_pVF</edgelabel>
+        </childnode>
+        <childnode refid="9425" relation="usage">
+          <edgelabel>m_iIndexOffset</edgelabel>
+          <edgelabel>m_iVertexOffset</edgelabel>
+        </childnode>
+        <childnode refid="9419" relation="usage">
+          <edgelabel>m_bDynamicUpdate</edgelabel>
+        </childnode>
+        <childnode refid="9428" relation="usage">
+          <edgelabel>m_pIB</edgelabel>
+        </childnode>
+        <childnode refid="9431" relation="usage">
+          <edgelabel>m_pVB</edgelabel>
+        </childnode>
+      </node>
+      <node id="9432">
+        <label>VertexBufferUsage</label>
+      </node>
+      <node id="9418">
+        <label>TMatrix3&lt; Scalar &gt;</label>
+        <link refid="d7/dee/classTMatrix3"/>
+        <childnode refid="9418" relation="usage">
+          <edgelabel>Identity</edgelabel>
+          <edgelabel>Null</edgelabel>
+        </childnode>
+        <childnode refid="9408" relation="usage">
+          <edgelabel>ONE</edgelabel>
+          <edgelabel>m20</edgelabel>
+          <edgelabel>m21</edgelabel>
+          <edgelabel>m10</edgelabel>
+          <edgelabel>m22</edgelabel>
+          <edgelabel>m11</edgelabel>
+          <edgelabel>m00</edgelabel>
+          <edgelabel>TWO</edgelabel>
+          <edgelabel>m12</edgelabel>
+          <edgelabel>m01</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="9408">
+        <label>float</label>
+      </node>
+      <node id="9417">
+        <label>TMatrix4&lt; Scalar &gt;</label>
+        <link refid="d5/d09/classTMatrix4"/>
+        <childnode refid="9417" relation="usage">
+          <edgelabel>Identity</edgelabel>
+          <edgelabel>Null</edgelabel>
+        </childnode>
+        <childnode refid="9408" relation="usage">
+          <edgelabel>ONE</edgelabel>
+          <edgelabel>m30</edgelabel>
+          <edgelabel>m31</edgelabel>
+          <edgelabel>m20</edgelabel>
+          <edgelabel>m32</edgelabel>
+          <edgelabel>m21</edgelabel>
+          <edgelabel>m10</edgelabel>
+          <edgelabel>m33</edgelabel>
+          <edgelabel>m22</edgelabel>
+          <edgelabel>m11</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="9422">
+        <label>VertexFormat</label>
+        <link refid="da/dc2/classVertexFormat"/>
+        <childnode refid="9423" relation="usage">
+          <edgelabel>m_arrFields</edgelabel>
+        </childnode>
+        <childnode refid="9425" relation="usage">
+          <edgelabel>m_iSize</edgelabel>
+          <edgelabel>m_iFieldCount</edgelabel>
+          <edgelabel>m_arrUsageLUT</edgelabel>
+        </childnode>
+        <childnode refid="9419" relation="usage">
+          <edgelabel>m_bFinalized</edgelabel>
+        </childnode>
+        <childnode refid="9427" relation="usage">
+          <edgelabel>sm_arrComponentCount</edgelabel>
+          <edgelabel>sm_arrTypeSize</edgelabel>
+          <edgelabel>sm_arrComponentSize</edgelabel>
+        </childnode>
+      </node>
+      <node id="9423">
+        <label>VFField</label>
+        <link refid="de/d92/structVFField"/>
+        <childnode refid="9424" relation="usage">
+          <edgelabel>iUsage</edgelabel>
+        </childnode>
+        <childnode refid="9425" relation="usage">
+          <edgelabel>iSize</edgelabel>
+          <edgelabel>iUsageIndex</edgelabel>
+          <edgelabel>iOffset</edgelabel>
+        </childnode>
+        <childnode refid="9426" relation="usage">
+          <edgelabel>iType</edgelabel>
+        </childnode>
+      </node>
+      <node id="9427">
+        <label>unsigned int</label>
+      </node>
+      <node id="9429">
+        <label>unsigned char</label>
+      </node>
+      <node id="9410">
+        <label>TransformedShape</label>
+        <link refid="d2/d1b/classTransformedShape"/>
+        <childnode refid="9411" relation="usage">
+          <edgelabel>m_bvWorldAAB</edgelabel>
+        </childnode>
+        <childnode refid="9416" relation="usage">
+          <edgelabel>m_vTransform</edgelabel>
+        </childnode>
+        <childnode refid="9420" relation="usage">
+          <edgelabel>m_pShape</edgelabel>
+        </childnode>
+      </node>
+      <node id="9425">
+        <label>int</label>
+      </node>
+      <node id="9411">
+        <label>TBVAABox&lt; Scalar &gt;</label>
+        <link refid="d9/d90/classTBVAABox"/>
+        <childnode refid="9412" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9413" relation="usage">
+          <edgelabel>m_vExtents</edgelabel>
+        </childnode>
+        <childnode refid="9415" relation="usage">
+          <edgelabel>m_vCenter</edgelabel>
+        </childnode>
+      </node>
+      <node id="9409">
+        <label>ContactManifold</label>
+        <link refid="d2/d6f/classContactManifold"/>
+      </node>
+      <node id="9414">
+        <label>Scalar</label>
+      </node>
+      <node id="9426">
+        <label>VFFieldType</label>
+      </node>
+      <node id="9430">
+        <label>IndexBufferUsage</label>
+      </node>
+      <node id="9416">
+        <label>TTransform3&lt; Scalar &gt;</label>
+        <link refid="d0/d75/classTTransform3"/>
+        <childnode refid="9413" relation="usage">
+          <edgelabel>m_vScale</edgelabel>
+          <edgelabel>m_vInvScale</edgelabel>
+          <edgelabel>m_vInvTranslate</edgelabel>
+          <edgelabel>m_vTranslate</edgelabel>
+        </childnode>
+        <childnode refid="9417" relation="usage">
+          <edgelabel>m_matHMatrix</edgelabel>
+        </childnode>
+        <childnode refid="9418" relation="usage">
+          <edgelabel>m_matInvTransform</edgelabel>
+          <edgelabel>m_matTransform</edgelabel>
+        </childnode>
+        <childnode refid="9419" relation="usage">
+          <edgelabel>m_bIsUniformScale</edgelabel>
+          <edgelabel>m_bIsIdentity</edgelabel>
+          <edgelabel>m_bUpdateInverse</edgelabel>
+          <edgelabel>m_bIsRotScale</edgelabel>
+        </childnode>
+        <childnode refid="9416" relation="usage">
+          <edgelabel>Identity</edgelabel>
+        </childnode>
+      </node>
+      <node id="9413">
+        <label>TVector3&lt; Scalar &gt;</label>
+        <link refid="de/d40/classTVector3"/>
+        <childnode refid="9413" relation="usage">
+          <edgelabel>Null</edgelabel>
+          <edgelabel>eI</edgelabel>
+          <edgelabel>eJ</edgelabel>
+          <edgelabel>eK</edgelabel>
+        </childnode>
+        <childnode refid="9414" relation="usage">
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+          <edgelabel>Z</edgelabel>
+        </childnode>
+      </node>
+      <node id="9415">
+        <label>TVertex3&lt; Scalar &gt;</label>
+        <link refid="dc/d75/classTVertex3"/>
+        <childnode refid="9414" relation="usage">
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+          <edgelabel>Z</edgelabel>
+        </childnode>
+        <childnode refid="9415" relation="usage">
+          <edgelabel>Null</edgelabel>
+        </childnode>
+      </node>
+      <node id="9420">
+        <label>Shape</label>
+        <link refid="de/d0a/classShape"/>
+        <childnode refid="9411" relation="usage">
+          <edgelabel>m_bvLocalAAB</edgelabel>
+        </childnode>
+        <childnode refid="9421" relation="usage">
+          <edgelabel>m_pMesh</edgelabel>
+        </childnode>
+      </node>
+      <node id="9424">
+        <label>VFFieldUsage</label>
+      </node>
+      <node id="9431">
+        <label>VertexBuffer</label>
+        <link refid="d7/d72/classVertexBuffer"/>
+        <childnode refid="9429" relation="usage">
+          <edgelabel>m_arrVertices</edgelabel>
+        </childnode>
+        <childnode refid="9425" relation="usage">
+          <edgelabel>m_iSize</edgelabel>
+          <edgelabel>m_iVertexCount</edgelabel>
+          <edgelabel>m_iVertexSize</edgelabel>
+        </childnode>
+        <childnode refid="9432" relation="usage">
+          <edgelabel>m_iUsage</edgelabel>
+        </childnode>
+      </node>
+      <node id="9419">
+        <label>bool</label>
+      </node>
+      <node id="9412">
+        <label>TBoundingVolume&lt; Scalar &gt;</label>
+        <link refid="d6/d19/classTBoundingVolume"/>
+      </node>
+      <node id="9407">
+        <label>NarrowPhase</label>
+        <link refid="dd/d93/classNarrowPhase"/>
+        <childnode refid="9408" relation="usage">
+          <edgelabel>ZeroTolerance</edgelabel>
+        </childnode>
+        <childnode refid="9409" relation="usage">
+          <edgelabel>m_pCollisionManifold</edgelabel>
+        </childnode>
+        <childnode refid="9410" relation="usage">
+          <edgelabel>m_pShapeA</edgelabel>
+          <edgelabel>m_pShapeB</edgelabel>
+        </childnode>
+      </node>
+      <node id="9428">
+        <label>IndexBuffer</label>
+        <link refid="dd/df7/classIndexBuffer"/>
+        <childnode refid="9429" relation="usage">
+          <edgelabel>m_arrIndices</edgelabel>
+        </childnode>
+        <childnode refid="9425" relation="usage">
+          <edgelabel>m_iIndexSize</edgelabel>
+          <edgelabel>m_iSize</edgelabel>
+          <edgelabel>m_iIndexCount</edgelabel>
+        </childnode>
+        <childnode refid="9430" relation="usage">
+          <edgelabel>m_iUsage</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/NarrowPhase.h" line="38" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/CollisionDetection/NarrowPhase/NarrowPhase.h" bodystart="37" bodyend="62"/>
+    <listofallmembers>
+      <member refid="dd/d93/classNarrowPhase_1a64a3e36b0ff981158fa8d464e806071d" prot="public" virt="pure-virtual"><scope>NarrowPhase</scope><name>DetectCollision</name></member>
+      <member refid="dd/d93/classNarrowPhase_1abce7f163b35f9433ab6e35da57ae91a6" prot="public" virt="non-virtual"><scope>NarrowPhase</scope><name>GetManifold</name></member>
+      <member refid="dd/d93/classNarrowPhase_1abc1a34b5130538ff93d61d62380b4fda" prot="public" virt="non-virtual"><scope>NarrowPhase</scope><name>GetShapeA</name></member>
+      <member refid="dd/d93/classNarrowPhase_1a2e29939a57f222eff8ae14cf6da51154" prot="public" virt="non-virtual"><scope>NarrowPhase</scope><name>GetShapeB</name></member>
+      <member refid="dd/d93/classNarrowPhase_1a15f94c85d5e8da0c5fb29586ec708895" prot="public" virt="pure-virtual"><scope>NarrowPhase</scope><name>Initialize</name></member>
+      <member refid="dd/d93/classNarrowPhase_1a1e56bfb17b637586d3e50a53900096bd" prot="protected" virt="non-virtual"><scope>NarrowPhase</scope><name>m_pCollisionManifold</name></member>
+      <member refid="dd/d93/classNarrowPhase_1ad3b1f9ddd11f4305af588f493601fcdd" prot="protected" virt="non-virtual"><scope>NarrowPhase</scope><name>m_pShapeA</name></member>
+      <member refid="dd/d93/classNarrowPhase_1acd16f875b1d782b34a8b495def982084" prot="protected" virt="non-virtual"><scope>NarrowPhase</scope><name>m_pShapeB</name></member>
+      <member refid="dd/d93/classNarrowPhase_1a9b481554f0543f5ba3f2bbfb6cda72d1" prot="public" virt="non-virtual"><scope>NarrowPhase</scope><name>NarrowPhase</name></member>
+      <member refid="dd/d93/classNarrowPhase_1a2d47bbceffd2cea232b0a4746ed29ff6" prot="public" virt="non-virtual"><scope>NarrowPhase</scope><name>ZeroTolerance</name></member>
+      <member refid="dd/d93/classNarrowPhase_1a281c7cadd2f5f7c248f689d28e25635d" prot="public" virt="virtual"><scope>NarrowPhase</scope><name>~NarrowPhase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

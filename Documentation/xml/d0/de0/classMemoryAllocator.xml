@@ -1,0 +1,356 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d0/de0/classMemoryAllocator" kind="class" prot="public" abstract="yes">
+    <compoundname>MemoryAllocator</compoundname>
+    <derivedcompoundref refid="d4/ddd/classBreakAllocator" prot="public" virt="non-virtual">BreakAllocator</derivedcompoundref>
+    <derivedcompoundref refid="dc/d98/classHeapAllocator" prot="public" virt="non-virtual">HeapAllocator</derivedcompoundref>
+    <derivedcompoundref refid="d1/d54/classPoolAllocator" prot="public" virt="non-virtual">PoolAllocator</derivedcompoundref>
+    <derivedcompoundref refid="df/d34/classStackAllocator" prot="public" virt="non-virtual">StackAllocator</derivedcompoundref>
+    <includes refid="d2/d75/MemoryAllocator_8h" local="no">MemoryAllocator.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="d0/de0/classMemoryAllocator_1a87ea78b2e3fd0afd4d06401ad0fbb24f" prot="protected" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_idContext</definition>
+        <argsstring></argsstring>
+        <name>m_idContext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/Allocators/MemoryAllocator.h" line="78" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/Allocators/MemoryAllocator.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/de0/classMemoryAllocator_1aa8a29a254562924314a9f60eeb44ac21" prot="protected" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref></type>
+        <definition>GChar m_strContextName[MEMORY_MAX_NAMELENGTH]</definition>
+        <argsstring>[MEMORY_MAX_NAMELENGTH]</argsstring>
+        <name>m_strContextName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/Allocators/MemoryAllocator.h" line="79" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/Allocators/MemoryAllocator.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/de0/classMemoryAllocator_1a56dee949e5f1271dbff9056eef635add" prot="protected" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_idAllocator</definition>
+        <argsstring></argsstring>
+        <name>m_idAllocator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/Allocators/MemoryAllocator.h" line="80" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/Allocators/MemoryAllocator.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/de0/classMemoryAllocator_1a4b8f5bbd3ee6e1e306411c11ae9df545" prot="protected" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref></type>
+        <definition>GChar m_strAllocatorName[MEMORY_MAX_NAMELENGTH]</definition>
+        <argsstring>[MEMORY_MAX_NAMELENGTH]</argsstring>
+        <name>m_strAllocatorName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/Allocators/MemoryAllocator.h" line="81" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/Allocators/MemoryAllocator.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d0/de0/classMemoryAllocator_1ac8c9cbd1486e53440b3d23b91615a485" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MemoryAllocator</definition>
+        <argsstring>(UInt iContextID, const GChar *strContextName, UInt iAllocatorID, const GChar *strAllocatorName)</argsstring>
+        <name>MemoryAllocator</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iContextID</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strContextName</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iAllocatorID</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strAllocatorName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/Allocators/MemoryAllocator.h" line="57"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/de0/classMemoryAllocator_1adbe8d631e8845e26240ca27ab5827449" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~MemoryAllocator</definition>
+        <argsstring>()</argsstring>
+        <name>~MemoryAllocator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/Allocators/MemoryAllocator.h" line="58"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/de0/classMemoryAllocator_1a21d6aed8c4cc7efdd2676a2434c816a1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetContextID</definition>
+        <argsstring>() const </argsstring>
+        <name>GetContextID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/Allocators/MemoryAllocator.h" line="61"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/de0/classMemoryAllocator_1a59b82e46c834e0eb2fd84eecbb9c4206" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+        <definition>const GChar* GetContextName</definition>
+        <argsstring>() const </argsstring>
+        <name>GetContextName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/Allocators/MemoryAllocator.h" line="62"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/de0/classMemoryAllocator_1a72c3ca31f668ffb597b92e1e47c19b96" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetAllocatorID</definition>
+        <argsstring>() const </argsstring>
+        <name>GetAllocatorID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/Allocators/MemoryAllocator.h" line="63"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/de0/classMemoryAllocator_1a17b30098af9a03e19cbe092885cd2b85" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+        <definition>const GChar* GetAllocatorName</definition>
+        <argsstring>() const </argsstring>
+        <name>GetAllocatorName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/Allocators/MemoryAllocator.h" line="64"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/de0/classMemoryAllocator_1aa898f3777d49b54133f6be825ce71458" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d2/d75/MemoryAllocator_8h_1a8c1de3b94793fa437260f531a032ef32" kindref="member">AllocatorType</ref></type>
+        <definition>virtual AllocatorType GetType</definition>
+        <argsstring>() const =0</argsstring>
+        <name>GetType</name>
+        <reimplementedby refid="df/d34/classStackAllocator_1ac0f1c763c7ae5fde3db72291619e9abe">GetType</reimplementedby>
+        <reimplementedby refid="d1/d54/classPoolAllocator_1ac0f1c763c7ae5fde3db72291619e9abe">GetType</reimplementedby>
+        <reimplementedby refid="d4/ddd/classBreakAllocator_1ac0f1c763c7ae5fde3db72291619e9abe">GetType</reimplementedby>
+        <reimplementedby refid="dc/d98/classHeapAllocator_1ac0f1c763c7ae5fde3db72291619e9abe">GetType</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/Allocators/MemoryAllocator.h" line="66"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/de0/classMemoryAllocator_1a886ccf8df5290f43505beef069832964" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>virtual UInt GetBlockSize</definition>
+        <argsstring>(Byte *pMemory) const =0</argsstring>
+        <name>GetBlockSize</name>
+        <reimplementedby refid="df/d34/classStackAllocator_1a84cfa3bae08cc9b8449c10349456682f">GetBlockSize</reimplementedby>
+        <reimplementedby refid="d1/d54/classPoolAllocator_1a84cfa3bae08cc9b8449c10349456682f">GetBlockSize</reimplementedby>
+        <reimplementedby refid="d4/ddd/classBreakAllocator_1a84cfa3bae08cc9b8449c10349456682f">GetBlockSize</reimplementedby>
+        <reimplementedby refid="dc/d98/classHeapAllocator_1a84cfa3bae08cc9b8449c10349456682f">GetBlockSize</reimplementedby>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+          <declname>pMemory</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/Allocators/MemoryAllocator.h" line="67"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/de0/classMemoryAllocator_1a2a31b6b73e37acbc1b1df8db2fe6c07b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+        <definition>virtual Byte* Allocate</definition>
+        <argsstring>(UInt iSize)=0</argsstring>
+        <name>Allocate</name>
+        <reimplementedby refid="df/d34/classStackAllocator_1a0fa11730017188b530a886464cf78325">Allocate</reimplementedby>
+        <reimplementedby refid="d4/ddd/classBreakAllocator_1a0fa11730017188b530a886464cf78325">Allocate</reimplementedby>
+        <reimplementedby refid="d1/d54/classPoolAllocator_1a0fa11730017188b530a886464cf78325">Allocate</reimplementedby>
+        <reimplementedby refid="dc/d98/classHeapAllocator_1a0fa11730017188b530a886464cf78325">Allocate</reimplementedby>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/Allocators/MemoryAllocator.h" line="70"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/de0/classMemoryAllocator_1afc49be48dd4c19d74dac0b2e1f776340" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void Free</definition>
+        <argsstring>(Byte *pMemory)=0</argsstring>
+        <name>Free</name>
+        <reimplementedby refid="df/d34/classStackAllocator_1a9a23ba98c3d5619cd67c1a0f850c4afa">Free</reimplementedby>
+        <reimplementedby refid="d4/ddd/classBreakAllocator_1a9a23ba98c3d5619cd67c1a0f850c4afa">Free</reimplementedby>
+        <reimplementedby refid="d1/d54/classPoolAllocator_1a9a23ba98c3d5619cd67c1a0f850c4afa">Free</reimplementedby>
+        <reimplementedby refid="dc/d98/classHeapAllocator_1a9a23ba98c3d5619cd67c1a0f850c4afa">Free</reimplementedby>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+          <declname>pMemory</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/Allocators/MemoryAllocator.h" line="71"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/de0/classMemoryAllocator_1ab1fa7e6d5d502b79f9596b13a96f9458" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void GenerateReport</definition>
+        <argsstring>(AllocatorReport *outReport) const =0</argsstring>
+        <name>GenerateReport</name>
+        <reimplementedby refid="d1/d54/classPoolAllocator_1a8a600139a1bfe4d516eaaec2139c6ecc">GenerateReport</reimplementedby>
+        <reimplementedby refid="df/d34/classStackAllocator_1a8a600139a1bfe4d516eaaec2139c6ecc">GenerateReport</reimplementedby>
+        <reimplementedby refid="d4/ddd/classBreakAllocator_1a8a600139a1bfe4d516eaaec2139c6ecc">GenerateReport</reimplementedby>
+        <reimplementedby refid="dc/d98/classHeapAllocator_1a8a600139a1bfe4d516eaaec2139c6ecc">GenerateReport</reimplementedby>
+        <param>
+          <type><ref refid="d9/d02/structAllocatorReport" kindref="compound">AllocatorReport</ref> *</type>
+          <declname>outReport</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/Allocators/MemoryAllocator.h" line="74"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/de0/classMemoryAllocator_1a9b1b8eca0d487fa8e949c06c09c069ef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void LogReport</definition>
+        <argsstring>(const AllocatorReport *pReport) const =0</argsstring>
+        <name>LogReport</name>
+        <reimplementedby refid="d1/d54/classPoolAllocator_1a31095b1ee639d8a3a398ced3231f348a">LogReport</reimplementedby>
+        <reimplementedby refid="df/d34/classStackAllocator_1a31095b1ee639d8a3a398ced3231f348a">LogReport</reimplementedby>
+        <reimplementedby refid="d4/ddd/classBreakAllocator_1a31095b1ee639d8a3a398ced3231f348a">LogReport</reimplementedby>
+        <reimplementedby refid="dc/d98/classHeapAllocator_1a31095b1ee639d8a3a398ced3231f348a">LogReport</reimplementedby>
+        <param>
+          <type>const <ref refid="d9/d02/structAllocatorReport" kindref="compound">AllocatorReport</ref> *</type>
+          <declname>pReport</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/Allocators/MemoryAllocator.h" line="75"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="6135">
+        <label>BreakAllocator</label>
+        <link refid="d4/ddd/classBreakAllocator"/>
+        <childnode refid="6134" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6138">
+        <label>StackAllocator</label>
+        <link refid="df/d34/classStackAllocator"/>
+        <childnode refid="6134" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6137">
+        <label>PoolAllocator</label>
+        <link refid="d1/d54/classPoolAllocator"/>
+        <childnode refid="6134" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6134">
+        <label>MemoryAllocator</label>
+        <link refid="d0/de0/classMemoryAllocator"/>
+      </node>
+      <node id="6136">
+        <label>HeapAllocator</label>
+        <link refid="dc/d98/classHeapAllocator"/>
+        <childnode refid="6134" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6141">
+        <label>int</label>
+      </node>
+      <node id="6139">
+        <label>MemoryAllocator</label>
+        <link refid="d0/de0/classMemoryAllocator"/>
+        <childnode refid="6140" relation="usage">
+          <edgelabel>m_strContextName</edgelabel>
+          <edgelabel>m_strAllocatorName</edgelabel>
+        </childnode>
+        <childnode refid="6141" relation="usage">
+          <edgelabel>m_idAllocator</edgelabel>
+          <edgelabel>m_idContext</edgelabel>
+        </childnode>
+      </node>
+      <node id="6140">
+        <label>char</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/Allocators/MemoryAllocator.h" line="54" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/Allocators/MemoryAllocator.h" bodystart="53" bodyend="82"/>
+    <listofallmembers>
+      <member refid="d0/de0/classMemoryAllocator_1a2a31b6b73e37acbc1b1df8db2fe6c07b" prot="public" virt="pure-virtual"><scope>MemoryAllocator</scope><name>Allocate</name></member>
+      <member refid="d0/de0/classMemoryAllocator_1afc49be48dd4c19d74dac0b2e1f776340" prot="public" virt="pure-virtual"><scope>MemoryAllocator</scope><name>Free</name></member>
+      <member refid="d0/de0/classMemoryAllocator_1ab1fa7e6d5d502b79f9596b13a96f9458" prot="public" virt="pure-virtual"><scope>MemoryAllocator</scope><name>GenerateReport</name></member>
+      <member refid="d0/de0/classMemoryAllocator_1a72c3ca31f668ffb597b92e1e47c19b96" prot="public" virt="non-virtual"><scope>MemoryAllocator</scope><name>GetAllocatorID</name></member>
+      <member refid="d0/de0/classMemoryAllocator_1a17b30098af9a03e19cbe092885cd2b85" prot="public" virt="non-virtual"><scope>MemoryAllocator</scope><name>GetAllocatorName</name></member>
+      <member refid="d0/de0/classMemoryAllocator_1a886ccf8df5290f43505beef069832964" prot="public" virt="pure-virtual"><scope>MemoryAllocator</scope><name>GetBlockSize</name></member>
+      <member refid="d0/de0/classMemoryAllocator_1a21d6aed8c4cc7efdd2676a2434c816a1" prot="public" virt="non-virtual"><scope>MemoryAllocator</scope><name>GetContextID</name></member>
+      <member refid="d0/de0/classMemoryAllocator_1a59b82e46c834e0eb2fd84eecbb9c4206" prot="public" virt="non-virtual"><scope>MemoryAllocator</scope><name>GetContextName</name></member>
+      <member refid="d0/de0/classMemoryAllocator_1aa898f3777d49b54133f6be825ce71458" prot="public" virt="pure-virtual"><scope>MemoryAllocator</scope><name>GetType</name></member>
+      <member refid="d0/de0/classMemoryAllocator_1a9b1b8eca0d487fa8e949c06c09c069ef" prot="public" virt="pure-virtual"><scope>MemoryAllocator</scope><name>LogReport</name></member>
+      <member refid="d0/de0/classMemoryAllocator_1a56dee949e5f1271dbff9056eef635add" prot="protected" virt="non-virtual"><scope>MemoryAllocator</scope><name>m_idAllocator</name></member>
+      <member refid="d0/de0/classMemoryAllocator_1a87ea78b2e3fd0afd4d06401ad0fbb24f" prot="protected" virt="non-virtual"><scope>MemoryAllocator</scope><name>m_idContext</name></member>
+      <member refid="d0/de0/classMemoryAllocator_1a4b8f5bbd3ee6e1e306411c11ae9df545" prot="protected" virt="non-virtual"><scope>MemoryAllocator</scope><name>m_strAllocatorName</name></member>
+      <member refid="d0/de0/classMemoryAllocator_1aa8a29a254562924314a9f60eeb44ac21" prot="protected" virt="non-virtual"><scope>MemoryAllocator</scope><name>m_strContextName</name></member>
+      <member refid="d0/de0/classMemoryAllocator_1ac8c9cbd1486e53440b3d23b91615a485" prot="public" virt="non-virtual"><scope>MemoryAllocator</scope><name>MemoryAllocator</name></member>
+      <member refid="d0/de0/classMemoryAllocator_1adbe8d631e8845e26240ca27ab5827449" prot="public" virt="non-virtual"><scope>MemoryAllocator</scope><name>~MemoryAllocator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

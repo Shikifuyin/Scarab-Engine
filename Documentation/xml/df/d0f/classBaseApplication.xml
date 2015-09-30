@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="df/d0f/classBaseApplication" kind="class" prot="public">
+    <compoundname>BaseApplication</compoundname>
+    <derivedcompoundref refid="de/d2e/classConsoleApplication" prot="public" virt="non-virtual">ConsoleApplication</derivedcompoundref>
+    <derivedcompoundref refid="db/db0/classWindowApplication" prot="public" virt="non-virtual">WindowApplication</derivedcompoundref>
+    <includes refid="d8/d1a/BaseApplication_8h" local="no">BaseApplication.h</includes>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="df/d0f/classBaseApplication_1a18272e3d2e4e7ab5a53a3ad8b0dd6566" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BaseApplication</definition>
+        <argsstring>()</argsstring>
+        <name>BaseApplication</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Instance/BaseApplication.h" line="89"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d0f/classBaseApplication_1a4402b1787cf4e3a1955d7ef6630257ff" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~BaseApplication</definition>
+        <argsstring>()</argsstring>
+        <name>~BaseApplication</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Instance/BaseApplication.h" line="90"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-func">
+      <memberdef kind="function" id="df/d0f/classBaseApplication_1ab8e80d4c19d278acdec369b75abd64dd" prot="protected" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>static Void _SetCreateDestroy</definition>
+        <argsstring>(CreateAppCallback pfCreate, DestroyAppCallback pfDestroy)</argsstring>
+        <name>_SetCreateDestroy</name>
+        <param>
+          <type><ref refid="d8/d1a/BaseApplication_8h_1aee4cf3813ed65e9773e05fd70489bcce" kindref="member">CreateAppCallback</ref></type>
+          <declname>pfCreate</declname>
+        </param>
+        <param>
+          <type><ref refid="d8/d1a/BaseApplication_8h_1afbad8778c3a69ed11816f363e875f000" kindref="member">DestroyAppCallback</ref></type>
+          <declname>pfDestroy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Instance/BaseApplication.h" line="93"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d0f/classBaseApplication_1adf1b3787eb527b93180ae9f5c4209cc0" prot="protected" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>static Void _SetRunCallback</definition>
+        <argsstring>(RunCallback pfRun)</argsstring>
+        <name>_SetRunCallback</name>
+        <param>
+          <type><ref refid="d8/d1a/BaseApplication_8h_1a17b1caa10cc9715432761d2c7d53de73" kindref="member">RunCallback</ref></type>
+          <declname>pfRun</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Instance/BaseApplication.h" line="95"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d0f/classBaseApplication_1a50d2f84c438132f48c893645a1da1b9c" prot="protected" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>static Void _SetAppInstance</definition>
+        <argsstring>(BaseApplication *pAppInstance)</argsstring>
+        <name>_SetAppInstance</name>
+        <param>
+          <type><ref refid="df/d0f/classBaseApplication" kindref="compound">BaseApplication</ref> *</type>
+          <declname>pAppInstance</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Instance/BaseApplication.h" line="96"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d0f/classBaseApplication_1a9a23fc95d91d40625d0bcd87ca51d407" prot="protected" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>static Void _DeleteAppInstance</definition>
+        <argsstring>()</argsstring>
+        <name>_DeleteAppInstance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Instance/BaseApplication.h" line="98"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="254">
+        <label>WindowApplication</label>
+        <link refid="db/db0/classWindowApplication"/>
+        <childnode refid="252" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="253">
+        <label>ConsoleApplication</label>
+        <link refid="de/d2e/classConsoleApplication"/>
+        <childnode refid="252" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="252">
+        <label>BaseApplication</label>
+        <link refid="df/d0f/classBaseApplication"/>
+      </node>
+      <node id="255">
+        <label>MyGame</label>
+        <link refid="d4/d30/classMyGame"/>
+        <childnode refid="254" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Instance/BaseApplication.h" line="87" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Application/Instance/BaseApplication.h" bodystart="86" bodyend="99"/>
+    <listofallmembers>
+      <member refid="df/d0f/classBaseApplication_1a9a23fc95d91d40625d0bcd87ca51d407" prot="protected" virt="non-virtual"><scope>BaseApplication</scope><name>_DeleteAppInstance</name></member>
+      <member refid="df/d0f/classBaseApplication_1a50d2f84c438132f48c893645a1da1b9c" prot="protected" virt="non-virtual"><scope>BaseApplication</scope><name>_SetAppInstance</name></member>
+      <member refid="df/d0f/classBaseApplication_1ab8e80d4c19d278acdec369b75abd64dd" prot="protected" virt="non-virtual"><scope>BaseApplication</scope><name>_SetCreateDestroy</name></member>
+      <member refid="df/d0f/classBaseApplication_1adf1b3787eb527b93180ae9f5c4209cc0" prot="protected" virt="non-virtual"><scope>BaseApplication</scope><name>_SetRunCallback</name></member>
+      <member refid="df/d0f/classBaseApplication_1a18272e3d2e4e7ab5a53a3ad8b0dd6566" prot="protected" virt="non-virtual"><scope>BaseApplication</scope><name>BaseApplication</name></member>
+      <member refid="df/d0f/classBaseApplication_1a4402b1787cf4e3a1955d7ef6630257ff" prot="protected" virt="virtual"><scope>BaseApplication</scope><name>~BaseApplication</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

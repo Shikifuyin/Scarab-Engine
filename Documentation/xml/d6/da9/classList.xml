@@ -1,0 +1,408 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d6/da9/classList" kind="class" prot="public">
+    <compoundname>List</compoundname>
+    <basecompoundref refid="dc/d51/classDatastruct" prot="public" virt="non-virtual">Datastruct</basecompoundref>
+    <includes refid="de/d88/List_8h" local="no">List.h</includes>
+    <innerclass refid="d9/d08/classList_1_1Iterator" prot="public">List::Iterator</innerclass>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d6/da9/classList_1a9a900bc35ae5c73b12e744379cd35145" prot="private" static="no" mutable="no">
+        <type><ref refid="dd/d2d/structListNode" kindref="compound">ListNode</ref> *</type>
+        <definition>ListNode* m_pHead</definition>
+        <argsstring></argsstring>
+        <name>m_pHead</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/List/List.h" line="119" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/List/List.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/da9/classList_1a895cc072d5ef613c340eb6a4d7acd260" prot="private" static="no" mutable="no">
+        <type><ref refid="dd/d2d/structListNode" kindref="compound">ListNode</ref> *</type>
+        <definition>ListNode* m_pEnd</definition>
+        <argsstring></argsstring>
+        <name>m_pEnd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/List/List.h" line="120" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/List/List.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/da9/classList_1a4780f18798403e53a9593ffdd3d2d805" prot="private" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iLength</definition>
+        <argsstring></argsstring>
+        <name>m_iLength</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/List/List.h" line="121" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/List/List.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d6/da9/classList_1a17e6c90f14225bdac5c65ed915b0a2f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>List</definition>
+        <argsstring>()</argsstring>
+        <name>List</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/List/List.h" line="86"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/da9/classList_1a5bcc2f367a33d13b9cff77e81ab5bb40" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~List</definition>
+        <argsstring>()</argsstring>
+        <name>~List</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/List/List.h" line="87"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/da9/classList_1aab77352722e193be864ad3e317f0a967" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void Create</definition>
+        <argsstring>()</argsstring>
+        <name>Create</name>
+        <reimplements refid="dc/d51/classDatastruct_1a0609a196f6f3d0c6b77f63eb850c0ac7">Create</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/List/List.h" line="90"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/da9/classList_1a04b98e1741147ccd8731588392091ac0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void Destroy</definition>
+        <argsstring>()</argsstring>
+        <name>Destroy</name>
+        <reimplements refid="dc/d51/classDatastruct_1a5f87413a244467d525a1e593ff2c1c27">Destroy</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/List/List.h" line="91"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/da9/classList_1abe6db4496cfdd90f917f4ca76d4bdcb1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>virtual UInt MemorySize</definition>
+        <argsstring>() const </argsstring>
+        <name>MemorySize</name>
+        <reimplements refid="dc/d51/classDatastruct_1a9797d1e194be5ac1f59da06f4017ab52">MemorySize</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/List/List.h" line="93"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/da9/classList_1a0956cac53fbbd2baead454e29106a8cd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>virtual UInt Count</definition>
+        <argsstring>() const </argsstring>
+        <name>Count</name>
+        <reimplements refid="dc/d51/classDatastruct_1a64d0429c6ea513aff9aed72a84ac5e07">Count</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/List/List.h" line="94"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/da9/classList_1aa31f188be923c718868036f9486390ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>virtual Void Clear</definition>
+        <argsstring>()</argsstring>
+        <name>Clear</name>
+        <reimplements refid="dc/d51/classDatastruct_1a12a20256ada86a94610094792cbc6e2b">Clear</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/List/List.h" line="96"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/da9/classList_1ab893ae3f0a02bb26ea0120e6c7d09a2b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/d08/classList_1_1Iterator" kindref="compound">Iterator</ref></type>
+        <definition>Iterator Begin</definition>
+        <argsstring>() const </argsstring>
+        <name>Begin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/List/List.h" line="99"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/da9/classList_1ae0f83c629acc7673b972d04d32c4b23d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/d08/classList_1_1Iterator" kindref="compound">Iterator</ref></type>
+        <definition>Iterator End</definition>
+        <argsstring>() const </argsstring>
+        <name>End</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/List/List.h" line="100"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/da9/classList_1a5a681362c1eebfe940cd560f48996f7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Push</definition>
+        <argsstring>(const T &amp;rItem)</argsstring>
+        <name>Push</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>rItem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/List/List.h" line="102"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/da9/classList_1a63a23b3c7208e969d191682dc06747d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Pop</definition>
+        <argsstring>(T &amp;outItem)</argsstring>
+        <name>Pop</name>
+        <param>
+          <type>T &amp;</type>
+          <declname>outItem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/List/List.h" line="103"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/da9/classList_1a11340a12e54446ae94227b25fa29b9df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Unshift</definition>
+        <argsstring>(const T &amp;rItem)</argsstring>
+        <name>Unshift</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>rItem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/List/List.h" line="104"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/da9/classList_1aba440910e9f5162e6ebfa03c0e9cd035" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Shift</definition>
+        <argsstring>(T &amp;outItem)</argsstring>
+        <name>Shift</name>
+        <param>
+          <type>T &amp;</type>
+          <declname>outItem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/List/List.h" line="105"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/da9/classList_1ac931722cb0185f31aae0577aa9d9bcfa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Insert</definition>
+        <argsstring>(Iterator &amp;iAt, const T &amp;rItem)</argsstring>
+        <name>Insert</name>
+        <param>
+          <type><ref refid="d9/d08/classList_1_1Iterator" kindref="compound">Iterator</ref> &amp;</type>
+          <declname>iAt</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>rItem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/List/List.h" line="106"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/da9/classList_1ad05021737609a61ada90f7005db14c7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void Remove</definition>
+        <argsstring>(Iterator &amp;iAt, T &amp;outItem)</argsstring>
+        <name>Remove</name>
+        <param>
+          <type><ref refid="d9/d08/classList_1_1Iterator" kindref="compound">Iterator</ref> &amp;</type>
+          <declname>iAt</declname>
+        </param>
+        <param>
+          <type>T &amp;</type>
+          <declname>outItem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/List/List.h" line="107"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/da9/classList_1a70962a10c4168fd5ca9c20a8d33e631f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/d08/classList_1_1Iterator" kindref="compound">Iterator</ref></type>
+        <definition>Iterator Search</definition>
+        <argsstring>(const T &amp;rItem, const Iterator &amp;iAt=Iterator::Null) const </argsstring>
+        <name>Search</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>rItem</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d9/d08/classList_1_1Iterator" kindref="compound">Iterator</ref> &amp;</type>
+          <declname>iAt</declname>
+          <defval><ref refid="d9/d08/classList_1_1Iterator_1a2d5428acf0936f1ff876d0b2f3bf2cb6" kindref="member">Iterator::Null</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/List/List.h" line="116"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="5983">
+        <label>List&lt; T &gt;</label>
+        <link refid="d6/da9/classList"/>
+        <childnode refid="5984" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5984">
+        <label>Datastruct</label>
+        <link refid="dc/d51/classDatastruct"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5991">
+        <label>T</label>
+      </node>
+      <node id="5989">
+        <label>ListNode&lt; T &gt;</label>
+        <link refid="dd/d2d/structListNode"/>
+        <childnode refid="5990" relation="usage">
+          <edgelabel>pPrev</edgelabel>
+          <edgelabel>pNext</edgelabel>
+        </childnode>
+        <childnode refid="5991" relation="usage">
+          <edgelabel>Item</edgelabel>
+        </childnode>
+      </node>
+      <node id="5988">
+        <label>unsigned int</label>
+      </node>
+      <node id="5992">
+        <label>int</label>
+      </node>
+      <node id="5990">
+        <label>struct _list_node *</label>
+      </node>
+      <node id="5985">
+        <label>List&lt; T &gt;</label>
+        <link refid="d6/da9/classList"/>
+        <childnode refid="5986" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5989" relation="usage">
+          <edgelabel>m_pEnd</edgelabel>
+          <edgelabel>m_pHead</edgelabel>
+        </childnode>
+        <childnode refid="5992" relation="usage">
+          <edgelabel>m_iLength</edgelabel>
+        </childnode>
+      </node>
+      <node id="5987">
+        <label>char</label>
+      </node>
+      <node id="5986">
+        <label>Datastruct</label>
+        <link refid="dc/d51/classDatastruct"/>
+        <childnode refid="5987" relation="usage">
+          <edgelabel>m_strAllocatorName</edgelabel>
+        </childnode>
+        <childnode refid="5988" relation="usage">
+          <edgelabel>m_idMemoryContext</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/List/List.h" line="37" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Datastruct/List/List.h" bodystart="36" bodyend="122"/>
+    <listofallmembers>
+      <member refid="dc/d51/classDatastruct_1a4208dfdad6dc1178ee1f80481598500c" prot="protected" virt="non-virtual"><scope>List</scope><name>_SelectMemory</name></member>
+      <member refid="dc/d51/classDatastruct_1ae0aad9bef0dc76ed43f8c4fc59a10d78" prot="protected" virt="non-virtual"><scope>List</scope><name>_UnSelectMemory</name></member>
+      <member refid="d6/da9/classList_1ab893ae3f0a02bb26ea0120e6c7d09a2b" prot="public" virt="non-virtual"><scope>List</scope><name>Begin</name></member>
+      <member refid="d6/da9/classList_1aa31f188be923c718868036f9486390ea" prot="public" virt="virtual"><scope>List</scope><name>Clear</name></member>
+      <member refid="d6/da9/classList_1a0956cac53fbbd2baead454e29106a8cd" prot="public" virt="virtual"><scope>List</scope><name>Count</name></member>
+      <member refid="d6/da9/classList_1aab77352722e193be864ad3e317f0a967" prot="public" virt="virtual"><scope>List</scope><name>Create</name></member>
+      <member refid="dc/d51/classDatastruct_1aebb55795e668a005cf660ce216962a2f" prot="public" virt="non-virtual"><scope>List</scope><name>Datastruct</name></member>
+      <member refid="d6/da9/classList_1a04b98e1741147ccd8731588392091ac0" prot="public" virt="virtual"><scope>List</scope><name>Destroy</name></member>
+      <member refid="d6/da9/classList_1ae0f83c629acc7673b972d04d32c4b23d" prot="public" virt="non-virtual"><scope>List</scope><name>End</name></member>
+      <member refid="d6/da9/classList_1ac931722cb0185f31aae0577aa9d9bcfa" prot="public" virt="non-virtual"><scope>List</scope><name>Insert</name></member>
+      <member refid="dc/d51/classDatastruct_1a4e2abc9751fdc8571b9d9a1d02639ebe" prot="public" virt="non-virtual"><scope>List</scope><name>IsEmpty</name></member>
+      <member refid="d6/da9/classList_1a17e6c90f14225bdac5c65ed915b0a2f6" prot="public" virt="non-virtual"><scope>List</scope><name>List</name></member>
+      <member refid="d6/da9/classList_1a4780f18798403e53a9593ffdd3d2d805" prot="private" virt="non-virtual"><scope>List</scope><name>m_iLength</name></member>
+      <member refid="d6/da9/classList_1a895cc072d5ef613c340eb6a4d7acd260" prot="private" virt="non-virtual"><scope>List</scope><name>m_pEnd</name></member>
+      <member refid="d6/da9/classList_1a9a900bc35ae5c73b12e744379cd35145" prot="private" virt="non-virtual"><scope>List</scope><name>m_pHead</name></member>
+      <member refid="d6/da9/classList_1abe6db4496cfdd90f917f4ca76d4bdcb1" prot="public" virt="virtual"><scope>List</scope><name>MemorySize</name></member>
+      <member refid="d6/da9/classList_1a63a23b3c7208e969d191682dc06747d1" prot="public" virt="non-virtual"><scope>List</scope><name>Pop</name></member>
+      <member refid="d6/da9/classList_1a5a681362c1eebfe940cd560f48996f7f" prot="public" virt="non-virtual"><scope>List</scope><name>Push</name></member>
+      <member refid="d6/da9/classList_1ad05021737609a61ada90f7005db14c7f" prot="public" virt="non-virtual"><scope>List</scope><name>Remove</name></member>
+      <member refid="d6/da9/classList_1a70962a10c4168fd5ca9c20a8d33e631f" prot="public" virt="non-virtual"><scope>List</scope><name>Search</name></member>
+      <member refid="d6/da9/classList_1aba440910e9f5162e6ebfa03c0e9cd035" prot="public" virt="non-virtual"><scope>List</scope><name>Shift</name></member>
+      <member refid="d6/da9/classList_1a11340a12e54446ae94227b25fa29b9df" prot="public" virt="non-virtual"><scope>List</scope><name>Unshift</name></member>
+      <member refid="dc/d51/classDatastruct_1a605325d1c1fc3f3c761365595701f9c4" prot="public" virt="virtual"><scope>List</scope><name>UseMemoryContext</name></member>
+      <member refid="dc/d51/classDatastruct_1a59e1e9769598d5606e0a335692f89c15" prot="public" virt="virtual"><scope>List</scope><name>~Datastruct</name></member>
+      <member refid="d6/da9/classList_1a5bcc2f367a33d13b9cff77e81ab5bb40" prot="public" virt="virtual"><scope>List</scope><name>~List</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

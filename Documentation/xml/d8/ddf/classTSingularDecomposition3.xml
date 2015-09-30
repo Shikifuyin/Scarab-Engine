@@ -1,0 +1,370 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d8/ddf/classTSingularDecomposition3" kind="class" prot="public">
+    <compoundname>TSingularDecomposition3</compoundname>
+    <includes refid="db/de4/SingularDecomposition3_8h" local="no">SingularDecomposition3.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename Real</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d8/ddf/classTSingularDecomposition3_1a0a3debaf4902fd0df3fcf5ef6a3e09b8" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt MaxIterations</definition>
+        <argsstring></argsstring>
+        <name>MaxIterations</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecomposition3.h" line="43" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecomposition3.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/ddf/classTSingularDecomposition3_1a15588eea940c254c383433246cc901ac" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real ZeroTolerance</definition>
+        <argsstring></argsstring>
+        <name>ZeroTolerance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecomposition3.h" line="44" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecomposition3.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="d8/ddf/classTSingularDecomposition3_1a861ab6a3627bfe53ae2453e2a5e1fca8" prot="private" static="yes" mutable="no">
+        <type>const Real</type>
+        <definition>const Real ZERO</definition>
+        <argsstring></argsstring>
+        <name>ZERO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecomposition3.h" line="60" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecomposition3.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/ddf/classTSingularDecomposition3_1acac09fd02521e2a1297f6dde618fb5ca" prot="private" static="yes" mutable="no">
+        <type>const Real</type>
+        <definition>const Real ONE</definition>
+        <argsstring></argsstring>
+        <name>ONE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecomposition3.h" line="61" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecomposition3.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/ddf/classTSingularDecomposition3_1aa2f4f55be7ca7ebf9a4cdd3f2c84cc36" prot="private" static="yes" mutable="no">
+        <type>const Real</type>
+        <definition>const Real TWO</definition>
+        <argsstring></argsstring>
+        <name>TWO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecomposition3.h" line="62" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecomposition3.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/ddf/classTSingularDecomposition3_1a68c0d58de491c8a9c960a96d9b5ed52e" prot="private" static="yes" mutable="no">
+        <type>const Real</type>
+        <definition>const Real HALF</definition>
+        <argsstring></argsstring>
+        <name>HALF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecomposition3.h" line="63" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecomposition3.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d8/ddf/classTSingularDecomposition3_1ad52cf8c877a8978f17a5750801c740bd" prot="private" static="no" mutable="no">
+        <type><ref refid="d7/dee/classTMatrix3" kindref="compound">TMatrix3</ref>&lt; Real &gt;</type>
+        <definition>TMatrix3&lt;Real&gt; m_matSystem</definition>
+        <argsstring></argsstring>
+        <name>m_matSystem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecomposition3.h" line="73" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecomposition3.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/ddf/classTSingularDecomposition3_1a412a5a836c70c18a858a92a633f40378" prot="private" static="no" mutable="no">
+        <type><ref refid="d7/dee/classTMatrix3" kindref="compound">TMatrix3</ref>&lt; Real &gt;</type>
+        <definition>TMatrix3&lt;Real&gt; m_matLeft</definition>
+        <argsstring></argsstring>
+        <name>m_matLeft</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecomposition3.h" line="74" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecomposition3.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/ddf/classTSingularDecomposition3_1a7b2d6acd0c5d5e0e674b4e1a3f15bdd1" prot="private" static="no" mutable="no">
+        <type><ref refid="d7/dee/classTMatrix3" kindref="compound">TMatrix3</ref>&lt; Real &gt;</type>
+        <definition>TMatrix3&lt;Real&gt; m_matDiagonal</definition>
+        <argsstring></argsstring>
+        <name>m_matDiagonal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecomposition3.h" line="75" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecomposition3.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/ddf/classTSingularDecomposition3_1a2d8f03cb3cd674b1852b3d7e3fbd6ea7" prot="private" static="no" mutable="no">
+        <type><ref refid="d7/dee/classTMatrix3" kindref="compound">TMatrix3</ref>&lt; Real &gt;</type>
+        <definition>TMatrix3&lt;Real&gt; m_matTransposedR</definition>
+        <argsstring></argsstring>
+        <name>m_matTransposedR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecomposition3.h" line="76" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecomposition3.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d8/ddf/classTSingularDecomposition3_1af58113341b84565869ce4b04e908e5f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TSingularDecomposition3</definition>
+        <argsstring>(const TMatrix3&lt; Real &gt; &amp;matNonSymmetric, UInt iMaxIterations=32, Real fZeroTolerance=(Real) SCALAR_ERROR)</argsstring>
+        <name>TSingularDecomposition3</name>
+        <param>
+          <type>const <ref refid="d7/dee/classTMatrix3" kindref="compound">TMatrix3</ref>&lt; Real &gt; &amp;</type>
+          <declname>matNonSymmetric</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iMaxIterations</declname>
+          <defval>32</defval>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fZeroTolerance</declname>
+          <defval>(Real) <ref refid="d0/d10/Scalar_8h_1ab84e60710e7c3a93246b807ac524d38b" kindref="member">SCALAR_ERROR</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecomposition3.h" line="39"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/ddf/classTSingularDecomposition3_1a2e15e5eef8df39589578a8a1866f006d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~TSingularDecomposition3</definition>
+        <argsstring>()</argsstring>
+        <name>~TSingularDecomposition3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecomposition3.h" line="40"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/ddf/classTSingularDecomposition3_1ac2d8dedcbd9e79df544993842f4ac417" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d7/dee/classTMatrix3" kindref="compound">TMatrix3</ref>&lt; Real &gt; &amp;</type>
+        <definition>TMatrix3&lt;Real&gt;&amp; GetSystem</definition>
+        <argsstring>()</argsstring>
+        <name>GetSystem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecomposition3.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/ddf/classTSingularDecomposition3_1aa9db70802e63be7e88d4badff42a619e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SolveSystem</definition>
+        <argsstring>()</argsstring>
+        <name>SolveSystem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecomposition3.h" line="50"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/ddf/classTSingularDecomposition3_1a85bc4ba41a422c7d2a314d5c3f5978ab" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d7/dee/classTMatrix3" kindref="compound">TMatrix3</ref>&lt; Real &gt; &amp;</type>
+        <definition>const TMatrix3&lt;Real&gt;&amp; GetL</definition>
+        <argsstring>() const </argsstring>
+        <name>GetL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecomposition3.h" line="53"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/ddf/classTSingularDecomposition3_1a37a7b2ef68d60131705bf7f30600e228" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d7/dee/classTMatrix3" kindref="compound">TMatrix3</ref>&lt; Real &gt; &amp;</type>
+        <definition>const TMatrix3&lt;Real&gt;&amp; GetD</definition>
+        <argsstring>() const </argsstring>
+        <name>GetD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecomposition3.h" line="54"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/ddf/classTSingularDecomposition3_1a7675b8642cb4dc1d0dd82f67a0a72ef2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d7/dee/classTMatrix3" kindref="compound">TMatrix3</ref>&lt; Real &gt; &amp;</type>
+        <definition>const TMatrix3&lt;Real&gt;&amp; GetTrR</definition>
+        <argsstring>() const </argsstring>
+        <name>GetTrR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecomposition3.h" line="55"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/ddf/classTSingularDecomposition3_1ac2c5857912eb1eea847eed7e4974d178" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void GetPolarDecomposition</definition>
+        <argsstring>(TMatrix3&lt; Real &gt; &amp;outQ, TMatrix3&lt; Real &gt; &amp;outS) const </argsstring>
+        <name>GetPolarDecomposition</name>
+        <param>
+          <type><ref refid="d7/dee/classTMatrix3" kindref="compound">TMatrix3</ref>&lt; Real &gt; &amp;</type>
+          <declname>outQ</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/dee/classTMatrix3" kindref="compound">TMatrix3</ref>&lt; Real &gt; &amp;</type>
+          <declname>outS</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecomposition3.h" line="57"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d8/ddf/classTSingularDecomposition3_1a82a136b30e43e9720475175ba1e8ea8d" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _HouseHolder_PreMultiply</definition>
+        <argsstring>(TMatrix3&lt; Real &gt; &amp;matA, const TVector3&lt; Real &gt; &amp;vFactor) const </argsstring>
+        <name>_HouseHolder_PreMultiply</name>
+        <param>
+          <type><ref refid="d7/dee/classTMatrix3" kindref="compound">TMatrix3</ref>&lt; Real &gt; &amp;</type>
+          <declname>matA</declname>
+        </param>
+        <param>
+          <type>const <ref refid="de/d40/classTVector3" kindref="compound">TVector3</ref>&lt; Real &gt; &amp;</type>
+          <declname>vFactor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecomposition3.h" line="66"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/ddf/classTSingularDecomposition3_1acbe4e93440098f2882ba113473a4e8b0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _QRAlgorithm</definition>
+        <argsstring>()</argsstring>
+        <name>_QRAlgorithm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecomposition3.h" line="71"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="13296">
+        <label>TSingularDecomposition3&lt; Real &gt;</label>
+        <link refid="d8/ddf/classTSingularDecomposition3"/>
+        <childnode refid="13297" relation="usage">
+          <edgelabel>m_matLeft</edgelabel>
+          <edgelabel>m_matSystem</edgelabel>
+          <edgelabel>m_matTransposedR</edgelabel>
+          <edgelabel>m_matDiagonal</edgelabel>
+        </childnode>
+        <childnode refid="13298" relation="usage">
+          <edgelabel>MaxIterations</edgelabel>
+        </childnode>
+        <childnode refid="13299" relation="usage">
+          <edgelabel>ONE</edgelabel>
+          <edgelabel>HALF</edgelabel>
+          <edgelabel>ZeroTolerance</edgelabel>
+          <edgelabel>TWO</edgelabel>
+          <edgelabel>ZERO</edgelabel>
+        </childnode>
+      </node>
+      <node id="13299">
+        <label>Real</label>
+      </node>
+      <node id="13298">
+        <label>int</label>
+      </node>
+      <node id="13297">
+        <label>TMatrix3&lt; Real &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecomposition3.h" line="36" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Algebra/Matrix/SingularDecomposition3.h" bodystart="35" bodyend="77"/>
+    <listofallmembers>
+      <member refid="d8/ddf/classTSingularDecomposition3_1a82a136b30e43e9720475175ba1e8ea8d" prot="private" virt="non-virtual"><scope>TSingularDecomposition3</scope><name>_HouseHolder_PreMultiply</name></member>
+      <member refid="d8/ddf/classTSingularDecomposition3_1acbe4e93440098f2882ba113473a4e8b0" prot="private" virt="non-virtual"><scope>TSingularDecomposition3</scope><name>_QRAlgorithm</name></member>
+      <member refid="d8/ddf/classTSingularDecomposition3_1a37a7b2ef68d60131705bf7f30600e228" prot="public" virt="non-virtual"><scope>TSingularDecomposition3</scope><name>GetD</name></member>
+      <member refid="d8/ddf/classTSingularDecomposition3_1a85bc4ba41a422c7d2a314d5c3f5978ab" prot="public" virt="non-virtual"><scope>TSingularDecomposition3</scope><name>GetL</name></member>
+      <member refid="d8/ddf/classTSingularDecomposition3_1ac2c5857912eb1eea847eed7e4974d178" prot="public" virt="non-virtual"><scope>TSingularDecomposition3</scope><name>GetPolarDecomposition</name></member>
+      <member refid="d8/ddf/classTSingularDecomposition3_1ac2d8dedcbd9e79df544993842f4ac417" prot="public" virt="non-virtual"><scope>TSingularDecomposition3</scope><name>GetSystem</name></member>
+      <member refid="d8/ddf/classTSingularDecomposition3_1a7675b8642cb4dc1d0dd82f67a0a72ef2" prot="public" virt="non-virtual"><scope>TSingularDecomposition3</scope><name>GetTrR</name></member>
+      <member refid="d8/ddf/classTSingularDecomposition3_1a68c0d58de491c8a9c960a96d9b5ed52e" prot="private" virt="non-virtual"><scope>TSingularDecomposition3</scope><name>HALF</name></member>
+      <member refid="d8/ddf/classTSingularDecomposition3_1a7b2d6acd0c5d5e0e674b4e1a3f15bdd1" prot="private" virt="non-virtual"><scope>TSingularDecomposition3</scope><name>m_matDiagonal</name></member>
+      <member refid="d8/ddf/classTSingularDecomposition3_1a412a5a836c70c18a858a92a633f40378" prot="private" virt="non-virtual"><scope>TSingularDecomposition3</scope><name>m_matLeft</name></member>
+      <member refid="d8/ddf/classTSingularDecomposition3_1ad52cf8c877a8978f17a5750801c740bd" prot="private" virt="non-virtual"><scope>TSingularDecomposition3</scope><name>m_matSystem</name></member>
+      <member refid="d8/ddf/classTSingularDecomposition3_1a2d8f03cb3cd674b1852b3d7e3fbd6ea7" prot="private" virt="non-virtual"><scope>TSingularDecomposition3</scope><name>m_matTransposedR</name></member>
+      <member refid="d8/ddf/classTSingularDecomposition3_1a0a3debaf4902fd0df3fcf5ef6a3e09b8" prot="public" virt="non-virtual"><scope>TSingularDecomposition3</scope><name>MaxIterations</name></member>
+      <member refid="d8/ddf/classTSingularDecomposition3_1acac09fd02521e2a1297f6dde618fb5ca" prot="private" virt="non-virtual"><scope>TSingularDecomposition3</scope><name>ONE</name></member>
+      <member refid="d8/ddf/classTSingularDecomposition3_1aa9db70802e63be7e88d4badff42a619e" prot="public" virt="non-virtual"><scope>TSingularDecomposition3</scope><name>SolveSystem</name></member>
+      <member refid="d8/ddf/classTSingularDecomposition3_1af58113341b84565869ce4b04e908e5f8" prot="public" virt="non-virtual"><scope>TSingularDecomposition3</scope><name>TSingularDecomposition3</name></member>
+      <member refid="d8/ddf/classTSingularDecomposition3_1aa2f4f55be7ca7ebf9a4cdd3f2c84cc36" prot="private" virt="non-virtual"><scope>TSingularDecomposition3</scope><name>TWO</name></member>
+      <member refid="d8/ddf/classTSingularDecomposition3_1a861ab6a3627bfe53ae2453e2a5e1fca8" prot="private" virt="non-virtual"><scope>TSingularDecomposition3</scope><name>ZERO</name></member>
+      <member refid="d8/ddf/classTSingularDecomposition3_1a15588eea940c254c383433246cc901ac" prot="public" virt="non-virtual"><scope>TSingularDecomposition3</scope><name>ZeroTolerance</name></member>
+      <member refid="d8/ddf/classTSingularDecomposition3_1a2e15e5eef8df39589578a8a1866f006d" prot="public" virt="non-virtual"><scope>TSingularDecomposition3</scope><name>~TSingularDecomposition3</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

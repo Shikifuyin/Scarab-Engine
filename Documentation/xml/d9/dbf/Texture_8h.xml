@@ -1,0 +1,1806 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d9/dbf/Texture_8h" kind="file">
+    <compoundname>Texture.h</compoundname>
+    <includes refid="d7/d7b/MemoryManager_8h" local="yes">../../../Lib/Memory/MemoryManager.h</includes>
+    <includes refid="d1/d98/MathFunction_8h" local="yes">../../../Lib/Math/Functions/MathFunction.h</includes>
+    <includes refid="dc/d75/ColorFunction_8h" local="yes">../../../Lib/Math/Types/Color/ColorFunction.h</includes>
+    <includes refid="da/d1f/Resource_8h" local="yes">../../Resource/Resource.h</includes>
+    <includes local="yes">Texture.inl</includes>
+    <includedby refid="de/d07/RenderingManager_8h" local="yes">RenderingManager.h</includedby>
+    <includedby refid="d7/d4f/RenderTarget_8h" local="yes">RenderTarget.h</includedby>
+    <includedby refid="d5/d63/ShaderParameters_8h" local="yes">ShaderParameters.h</includedby>
+    <includedby refid="d4/deb/GUISkin_8h" local="yes">GUISkin.h</includedby>
+    <includedby refid="d1/d26/EffectMaterialTexture_8h" local="yes">EffectMaterialTexture.h</includedby>
+    <includedby refid="db/df9/EffectTexture1D_8h" local="yes">EffectTexture1D.h</includedby>
+    <includedby refid="db/d40/EffectTexture2D_8h" local="yes">EffectTexture2D.h</includedby>
+    <includedby refid="d7/d48/EffectTexture3D_8h" local="yes">EffectTexture3D.h</includedby>
+    <incdepgraph>
+      <node id="40530">
+        <label>Texture.inl</label>
+      </node>
+      <node id="40521">
+        <label>../../../Lib/Math/Hash/SHA1.h</label>
+        <link refid="d1/de3/SHA1_8h"/>
+        <childnode refid="40463" relation="include">
+        </childnode>
+        <childnode refid="40522" relation="include">
+        </childnode>
+      </node>
+      <node id="40517">
+        <label>RedBlackTree.inl</label>
+      </node>
+      <node id="40527">
+        <label>RDBTreeOperator.inl</label>
+      </node>
+      <node id="40479">
+        <label>SSE.inl</label>
+      </node>
+      <node id="40483">
+        <label>Threading.h</label>
+        <link refid="dd/d0e/Threading_8h"/>
+        <childnode refid="40461" relation="include">
+        </childnode>
+        <childnode refid="40463" relation="include">
+        </childnode>
+        <childnode refid="40484" relation="include">
+        </childnode>
+      </node>
+      <node id="40495">
+        <label>Allocators/BreakAllocator.h</label>
+        <link refid="d4/dac/BreakAllocator_8h"/>
+        <childnode refid="40490" relation="include">
+        </childnode>
+        <childnode refid="40496" relation="include">
+        </childnode>
+      </node>
+      <node id="40458">
+        <label>../../../Lib/Memory/MemoryManager.h</label>
+        <link refid="d7/d7b/MemoryManager_8h"/>
+        <childnode refid="40459" relation="include">
+        </childnode>
+        <childnode refid="40469" relation="include">
+        </childnode>
+        <childnode refid="40475" relation="include">
+        </childnode>
+        <childnode refid="40489" relation="include">
+        </childnode>
+        <childnode refid="40493" relation="include">
+        </childnode>
+        <childnode refid="40495" relation="include">
+        </childnode>
+        <childnode refid="40497" relation="include">
+        </childnode>
+        <childnode refid="40499" relation="include">
+        </childnode>
+      </node>
+      <node id="40476">
+        <label>../../ThirdParty/System/System.h</label>
+        <link refid="db/d39/System_8h"/>
+        <childnode refid="40461" relation="include">
+        </childnode>
+        <childnode refid="40463" relation="include">
+        </childnode>
+        <childnode refid="40477" relation="include">
+        </childnode>
+        <childnode refid="40460" relation="include">
+        </childnode>
+        <childnode refid="40481" relation="include">
+        </childnode>
+        <childnode refid="40483" relation="include">
+        </childnode>
+        <childnode refid="40485" relation="include">
+        </childnode>
+        <childnode refid="40487" relation="include">
+        </childnode>
+      </node>
+      <node id="40503">
+        <label>Color4.h</label>
+        <link refid="d7/d4d/Color4_8h"/>
+        <childnode refid="40469" relation="include">
+        </childnode>
+        <childnode refid="40504" relation="include">
+        </childnode>
+      </node>
+      <node id="40484">
+        <label>Threading.inl</label>
+      </node>
+      <node id="40510">
+        <label>RDBPersistentStorage.h</label>
+        <link refid="d2/d3d/RDBPersistentStorage_8h"/>
+        <childnode refid="40511" relation="include">
+        </childnode>
+        <childnode refid="40515" relation="include">
+        </childnode>
+        <childnode refid="40519" relation="include">
+        </childnode>
+        <childnode refid="40521" relation="include">
+        </childnode>
+        <childnode refid="40523" relation="include">
+        </childnode>
+        <childnode refid="40525" relation="include">
+        </childnode>
+      </node>
+      <node id="40496">
+        <label>BreakAllocator.inl</label>
+      </node>
+      <node id="40512">
+        <label>../Datastruct.h</label>
+        <link refid="d5/db1/Datastruct_8h"/>
+        <childnode refid="40458" relation="include">
+        </childnode>
+        <childnode refid="40513" relation="include">
+        </childnode>
+      </node>
+      <node id="40509">
+        <label>PatternMatching.inl</label>
+      </node>
+      <node id="40513">
+        <label>Datastruct.inl</label>
+      </node>
+      <node id="40516">
+        <label>../Tree/RedBlackTree.h</label>
+        <link refid="d6/dff/RedBlackTree_8h"/>
+        <childnode refid="40512" relation="include">
+        </childnode>
+        <childnode refid="40517" relation="include">
+        </childnode>
+      </node>
+      <node id="40463">
+        <label>Platform.h</label>
+        <link refid="d9/dd0/Platform_8h"/>
+        <childnode refid="40464" relation="include">
+        </childnode>
+      </node>
+      <node id="40519">
+        <label>../../../Lib/Datastruct/Tree/SplayTree.h</label>
+        <link refid="d7/d5f/SplayTree_8h"/>
+        <childnode refid="40512" relation="include">
+        </childnode>
+        <childnode refid="40520" relation="include">
+        </childnode>
+      </node>
+      <node id="40493">
+        <label>Allocators/PoolAllocator.h</label>
+        <link refid="d3/d03/PoolAllocator_8h"/>
+        <childnode refid="40490" relation="include">
+        </childnode>
+        <childnode refid="40494" relation="include">
+        </childnode>
+      </node>
+      <node id="40466">
+        <label>FPU.inl</label>
+      </node>
+      <node id="40468">
+        <label>Hashing.inl</label>
+      </node>
+      <node id="40474">
+        <label>MathFunction.inl</label>
+      </node>
+      <node id="40518">
+        <label>TreeMap.inl</label>
+      </node>
+      <node id="40526">
+        <label>RDBTreeOperator.h</label>
+        <link refid="d3/dd8/RDBTreeOperator_8h"/>
+        <childnode refid="40510" relation="include">
+        </childnode>
+        <childnode refid="40527" relation="include">
+        </childnode>
+      </node>
+      <node id="40470">
+        <label>../Formats/Scalar.h</label>
+        <link refid="d0/d10/Scalar_8h"/>
+        <childnode refid="40463" relation="include">
+        </childnode>
+        <childnode refid="40471" relation="include">
+        </childnode>
+      </node>
+      <node id="40491">
+        <label>MemoryAllocator.inl</label>
+      </node>
+      <node id="40523">
+        <label>RDBFileStructure.h</label>
+        <link refid="d5/dae/RDBFileStructure_8h"/>
+        <childnode refid="40475" relation="include">
+        </childnode>
+        <childnode refid="40524" relation="include">
+        </childnode>
+      </node>
+      <node id="40525">
+        <label>RDBPersistentStorage.inl</label>
+      </node>
+      <node id="40459">
+        <label>../Math/Hash/Hashing.h</label>
+        <link refid="d0/d4e/Hashing_8h"/>
+        <childnode refid="40460" relation="include">
+        </childnode>
+        <childnode refid="40468" relation="include">
+        </childnode>
+      </node>
+      <node id="40490">
+        <label>MemoryAllocator.h</label>
+        <link refid="d2/d75/MemoryAllocator_8h"/>
+        <childnode refid="40475" relation="include">
+        </childnode>
+        <childnode refid="40491" relation="include">
+        </childnode>
+      </node>
+      <node id="40528">
+        <label>ResourceDB.inl</label>
+      </node>
+      <node id="40482">
+        <label>File.inl</label>
+      </node>
+      <node id="40477">
+        <label>Hardware/Hardware.h</label>
+        <link refid="da/dec/Hardware_8h"/>
+        <childnode refid="40463" relation="include">
+        </childnode>
+        <childnode refid="40465" relation="include">
+        </childnode>
+        <childnode refid="40478" relation="include">
+        </childnode>
+        <childnode refid="40480" relation="include">
+        </childnode>
+      </node>
+      <node id="40489">
+        <label>Allocators/StackAllocator.h</label>
+        <link refid="db/d84/StackAllocator_8h"/>
+        <childnode refid="40490" relation="include">
+        </childnode>
+        <childnode refid="40492" relation="include">
+        </childnode>
+      </node>
+      <node id="40480">
+        <label>Hardware.inl</label>
+      </node>
+      <node id="40529">
+        <label>Resource.inl</label>
+      </node>
+      <node id="40494">
+        <label>PoolAllocator.inl</label>
+      </node>
+      <node id="40506">
+        <label>../../Resource/Resource.h</label>
+        <link refid="da/d1f/Resource_8h"/>
+        <childnode refid="40507" relation="include">
+        </childnode>
+        <childnode refid="40529" relation="include">
+        </childnode>
+      </node>
+      <node id="40471">
+        <label>Scalar.inl</label>
+      </node>
+      <node id="40467">
+        <label>String.inl</label>
+      </node>
+      <node id="40524">
+        <label>RDBFileStructure.inl</label>
+      </node>
+      <node id="40522">
+        <label>SHA1.inl</label>
+      </node>
+      <node id="40511">
+        <label>../../../Lib/Datastruct/Array/Array.h</label>
+        <link refid="df/dd0/Array_8h"/>
+        <childnode refid="40512" relation="include">
+        </childnode>
+        <childnode refid="40514" relation="include">
+        </childnode>
+      </node>
+      <node id="40457">
+        <label>Texture.h</label>
+        <link refid="Texture.h"/>
+        <childnode refid="40458" relation="include">
+        </childnode>
+        <childnode refid="40469" relation="include">
+        </childnode>
+        <childnode refid="40500" relation="include">
+        </childnode>
+        <childnode refid="40506" relation="include">
+        </childnode>
+        <childnode refid="40530" relation="include">
+        </childnode>
+      </node>
+      <node id="40465">
+        <label>Hardware/FPU.h</label>
+        <link refid="dd/d2f/FPU_8h"/>
+        <childnode refid="40463" relation="include">
+        </childnode>
+        <childnode refid="40466" relation="include">
+        </childnode>
+      </node>
+      <node id="40507">
+        <label>Database/ResourceDB.h</label>
+        <link refid="de/dd9/ResourceDB_8h"/>
+        <childnode refid="40460" relation="include">
+        </childnode>
+        <childnode refid="40508" relation="include">
+        </childnode>
+        <childnode refid="40510" relation="include">
+        </childnode>
+        <childnode refid="40526" relation="include">
+        </childnode>
+        <childnode refid="40528" relation="include">
+        </childnode>
+      </node>
+      <node id="40505">
+        <label>ColorFunction.inl</label>
+      </node>
+      <node id="40508">
+        <label>../../../Lib/String/PatternMatching.h</label>
+        <link refid="d8/d12/PatternMatching_8h"/>
+        <childnode refid="40460" relation="include">
+        </childnode>
+        <childnode refid="40509" relation="include">
+        </childnode>
+      </node>
+      <node id="40497">
+        <label>Allocators/HeapAllocator.h</label>
+        <link refid="d3/d89/HeapAllocator_8h"/>
+        <childnode refid="40490" relation="include">
+        </childnode>
+        <childnode refid="40498" relation="include">
+        </childnode>
+      </node>
+      <node id="40460">
+        <label>../../../ThirdParty/System/String.h</label>
+        <link refid="d9/dba/String_8h"/>
+        <childnode refid="40461" relation="include">
+        </childnode>
+        <childnode refid="40463" relation="include">
+        </childnode>
+        <childnode refid="40465" relation="include">
+        </childnode>
+        <childnode refid="40467" relation="include">
+        </childnode>
+      </node>
+      <node id="40500">
+        <label>../../../Lib/Math/Types/Color/ColorFunction.h</label>
+        <link refid="dc/d75/ColorFunction_8h"/>
+        <childnode refid="40501" relation="include">
+        </childnode>
+        <childnode refid="40503" relation="include">
+        </childnode>
+        <childnode refid="40505" relation="include">
+        </childnode>
+      </node>
+      <node id="40464">
+        <label>Platform.inl</label>
+      </node>
+      <node id="40499">
+        <label>MemoryManager.inl</label>
+      </node>
+      <node id="40487">
+        <label>System.inl</label>
+      </node>
+      <node id="40485">
+        <label>Networking.h</label>
+        <link refid="df/dfb/Networking_8h"/>
+        <childnode refid="40461" relation="include">
+        </childnode>
+        <childnode refid="40463" relation="include">
+        </childnode>
+        <childnode refid="40486" relation="include">
+        </childnode>
+      </node>
+      <node id="40481">
+        <label>File.h</label>
+        <link refid="d6/db7/File_8h"/>
+        <childnode refid="40461" relation="include">
+        </childnode>
+        <childnode refid="40463" relation="include">
+        </childnode>
+        <childnode refid="40460" relation="include">
+        </childnode>
+        <childnode refid="40482" relation="include">
+        </childnode>
+      </node>
+      <node id="40492">
+        <label>StackAllocator.inl</label>
+      </node>
+      <node id="40462">
+        <label>ForwardWin32.inl</label>
+      </node>
+      <node id="40478">
+        <label>SSE.h</label>
+        <link refid="d0/d02/SSE_8h"/>
+        <childnode refid="40463" relation="include">
+        </childnode>
+        <childnode refid="40479" relation="include">
+        </childnode>
+      </node>
+      <node id="40504">
+        <label>Color4.inl</label>
+      </node>
+      <node id="40515">
+        <label>../../../Lib/Datastruct/Table/TreeMap.h</label>
+        <link refid="da/d29/TreeMap_8h"/>
+        <childnode refid="40516" relation="include">
+        </childnode>
+        <childnode refid="40518" relation="include">
+        </childnode>
+      </node>
+      <node id="40486">
+        <label>Networking.inl</label>
+      </node>
+      <node id="40501">
+        <label>Color3.h</label>
+        <link refid="d1/d32/Color3_8h"/>
+        <childnode refid="40469" relation="include">
+        </childnode>
+        <childnode refid="40502" relation="include">
+        </childnode>
+      </node>
+      <node id="40473">
+        <label>Fixed.inl</label>
+      </node>
+      <node id="40469">
+        <label>../Math/Functions/MathFunction.h</label>
+        <link refid="d1/d98/MathFunction_8h"/>
+        <childnode refid="40465" relation="include">
+        </childnode>
+        <childnode refid="40470" relation="include">
+        </childnode>
+        <childnode refid="40472" relation="include">
+        </childnode>
+        <childnode refid="40474" relation="include">
+        </childnode>
+      </node>
+      <node id="40520">
+        <label>SplayTree.inl</label>
+      </node>
+      <node id="40472">
+        <label>../Formats/Fixed.h</label>
+        <link refid="d4/d76/Fixed_8h"/>
+        <childnode refid="40470" relation="include">
+        </childnode>
+        <childnode refid="40473" relation="include">
+        </childnode>
+      </node>
+      <node id="40488">
+        <label>ErrorManager.inl</label>
+      </node>
+      <node id="40502">
+        <label>Color3.inl</label>
+      </node>
+      <node id="40498">
+        <label>HeapAllocator.inl</label>
+      </node>
+      <node id="40461">
+        <label>../Forwards/ForwardWin32.h</label>
+        <link refid="d5/dea/ForwardWin32_8h"/>
+        <childnode refid="40462" relation="include">
+        </childnode>
+      </node>
+      <node id="40475">
+        <label>../Error/ErrorManager.h</label>
+        <link refid="d1/db6/ErrorManager_8h"/>
+        <childnode refid="40476" relation="include">
+        </childnode>
+        <childnode refid="40488" relation="include">
+        </childnode>
+      </node>
+      <node id="40514">
+        <label>Array.inl</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="40540">
+        <label>WorldManager.h</label>
+        <link refid="db/d98/WorldManager_8h"/>
+        <childnode refid="40533" relation="include">
+        </childnode>
+      </node>
+      <node id="40563">
+        <label>EffectPlanarReflection.h</label>
+        <link refid="d1/d6b/EffectPlanarReflection_8h"/>
+      </node>
+      <node id="40538">
+        <label>MyDungeon.h</label>
+        <link refid="d0/de7/MyDungeon_8h"/>
+        <childnode refid="40536" relation="include">
+        </childnode>
+      </node>
+      <node id="40564">
+        <label>WorldDLODNode.h</label>
+        <link refid="df/d7d/WorldDLODNode_8h"/>
+      </node>
+      <node id="40560">
+        <label>WorldConvexRoom.h</label>
+        <link refid="d0/d27/WorldConvexRoom_8h"/>
+        <childnode refid="40558" relation="include">
+        </childnode>
+      </node>
+      <node id="40552">
+        <label>WorldLight.h</label>
+        <link refid="d3/d85/WorldLight_8h"/>
+        <childnode refid="40540" relation="include">
+        </childnode>
+        <childnode refid="40553" relation="include">
+        </childnode>
+      </node>
+      <node id="40565">
+        <label>WorldCaster.h</label>
+        <link refid="d9/d6f/WorldCaster_8h"/>
+        <childnode refid="40540" relation="include">
+        </childnode>
+      </node>
+      <node id="40532">
+        <label>RenderingManager.h</label>
+        <link refid="de/d07/RenderingManager_8h"/>
+        <childnode refid="40533" relation="include">
+        </childnode>
+        <childnode refid="40539" relation="include">
+        </childnode>
+        <childnode refid="40540" relation="include">
+        </childnode>
+        <childnode refid="40541" relation="include">
+        </childnode>
+      </node>
+      <node id="40550">
+        <label>EffectColor.h</label>
+        <link refid="db/d7c/EffectColor_8h"/>
+        <childnode refid="40532" relation="include">
+        </childnode>
+      </node>
+      <node id="40536">
+        <label>Main.h</label>
+        <link refid="da/d94/Main_8h"/>
+      </node>
+      <node id="40545">
+        <label>ShaderParameters.h</label>
+        <link refid="d5/d63/ShaderParameters_8h"/>
+        <childnode refid="40532" relation="include">
+        </childnode>
+        <childnode refid="40546" relation="include">
+        </childnode>
+      </node>
+      <node id="40557">
+        <label>WorldPortalCuller.h</label>
+        <link refid="d1/d27/WorldPortalCuller_8h"/>
+        <childnode refid="40558" relation="include">
+        </childnode>
+        <childnode refid="40559" relation="include">
+        </childnode>
+        <childnode refid="40560" relation="include">
+        </childnode>
+      </node>
+      <node id="40543">
+        <label>CommandShowTree.h</label>
+        <link refid="d8/d84/CommandShowTree_8h"/>
+        <childnode refid="40542" relation="include">
+        </childnode>
+      </node>
+      <node id="40571">
+        <label>EffectTexture1D.h</label>
+        <link refid="db/df9/EffectTexture1D_8h"/>
+      </node>
+      <node id="40537">
+        <label>MyLandscape.h</label>
+        <link refid="d7/d2b/MyLandscape_8h"/>
+        <childnode refid="40536" relation="include">
+        </childnode>
+      </node>
+      <node id="40575">
+        <label>GUIMenu.h</label>
+        <link refid="d1/d51/GUIMenu_8h"/>
+        <childnode refid="40541" relation="include">
+        </childnode>
+      </node>
+      <node id="40534">
+        <label>ApplicationManager.h</label>
+        <link refid="d2/d9d/ApplicationManager_8h"/>
+        <childnode refid="40535" relation="include">
+        </childnode>
+        <childnode refid="40536" relation="include">
+        </childnode>
+        <childnode refid="40537" relation="include">
+        </childnode>
+        <childnode refid="40538" relation="include">
+        </childnode>
+      </node>
+      <node id="40556">
+        <label>WorldCuller.h</label>
+        <link refid="da/daf/WorldCuller_8h"/>
+        <childnode refid="40557" relation="include">
+        </childnode>
+        <childnode refid="40561" relation="include">
+        </childnode>
+        <childnode refid="40540" relation="include">
+        </childnode>
+        <childnode refid="40564" relation="include">
+        </childnode>
+      </node>
+      <node id="40572">
+        <label>EffectTexture2D.h</label>
+        <link refid="db/d40/EffectTexture2D_8h"/>
+      </node>
+      <node id="40544">
+        <label>RenderTarget.h</label>
+        <link refid="d7/d4f/RenderTarget_8h"/>
+        <childnode refid="40532" relation="include">
+        </childnode>
+      </node>
+      <node id="40574">
+        <label>GUISkin.h</label>
+        <link refid="d4/deb/GUISkin_8h"/>
+        <childnode refid="40541" relation="include">
+        </childnode>
+        <childnode refid="40575" relation="include">
+        </childnode>
+        <childnode refid="40576" relation="include">
+        </childnode>
+        <childnode refid="40577" relation="include">
+        </childnode>
+      </node>
+      <node id="40573">
+        <label>EffectTexture3D.h</label>
+        <link refid="d7/d48/EffectTexture3D_8h"/>
+      </node>
+      <node id="40533">
+        <label>WindowApplication.h</label>
+        <link refid="d4/d72/WindowApplication_8h"/>
+        <childnode refid="40534" relation="include">
+        </childnode>
+      </node>
+      <node id="40547">
+        <label>EffectDefault.h</label>
+        <link refid="da/d69/EffectDefault_8h"/>
+        <childnode refid="40532" relation="include">
+        </childnode>
+      </node>
+      <node id="40577">
+        <label>GUITree.h</label>
+        <link refid="d1/d0d/GUITree_8h"/>
+        <childnode refid="40541" relation="include">
+        </childnode>
+      </node>
+      <node id="40569">
+        <label>EffectLightPointGouraud.h</label>
+        <link refid="de/da9/EffectLightPointGouraud_8h"/>
+      </node>
+      <node id="40554">
+        <label>WorldOutdoorRegion.h</label>
+        <link refid="d0/d1d/WorldOutdoorRegion_8h"/>
+        <childnode refid="40555" relation="include">
+        </childnode>
+      </node>
+      <node id="40549">
+        <label>EffectText.h</label>
+        <link refid="d8/d5f/EffectText_8h"/>
+        <childnode refid="40532" relation="include">
+        </childnode>
+      </node>
+      <node id="40553">
+        <label>WorldDebugDraw.h</label>
+        <link refid="d1/df3/WorldDebugDraw_8h"/>
+        <childnode refid="40540" relation="include">
+        </childnode>
+      </node>
+      <node id="40531">
+        <label>Texture.h</label>
+        <link refid="Texture.h"/>
+        <childnode refid="40532" relation="include">
+        </childnode>
+        <childnode refid="40544" relation="include">
+        </childnode>
+        <childnode refid="40545" relation="include">
+        </childnode>
+        <childnode refid="40574" relation="include">
+        </childnode>
+        <childnode refid="40567" relation="include">
+        </childnode>
+        <childnode refid="40571" relation="include">
+        </childnode>
+        <childnode refid="40572" relation="include">
+        </childnode>
+        <childnode refid="40573" relation="include">
+        </childnode>
+      </node>
+      <node id="40555">
+        <label>WorldOutdoorArea.h</label>
+        <link refid="dd/d4f/WorldOutdoorArea_8h"/>
+        <childnode refid="40540" relation="include">
+        </childnode>
+        <childnode refid="40553" relation="include">
+        </childnode>
+      </node>
+      <node id="40535">
+        <label>Entities.h</label>
+        <link refid="d7/d5d/Entities_8h"/>
+        <childnode refid="40536" relation="include">
+        </childnode>
+      </node>
+      <node id="40561">
+        <label>GlobalEffect.h</label>
+        <link refid="d2/d5d/GlobalEffect_8h"/>
+        <childnode refid="40562" relation="include">
+        </childnode>
+        <childnode refid="40563" relation="include">
+        </childnode>
+      </node>
+      <node id="40558">
+        <label>WorldIndoorArea.h</label>
+        <link refid="d2/d61/WorldIndoorArea_8h"/>
+        <childnode refid="40540" relation="include">
+        </childnode>
+        <childnode refid="40553" relation="include">
+        </childnode>
+      </node>
+      <node id="40576">
+        <label>GUIList.h</label>
+        <link refid="d3/dae/GUIList_8h"/>
+        <childnode refid="40541" relation="include">
+        </childnode>
+      </node>
+      <node id="40548">
+        <label>Effect2D.h</label>
+        <link refid="db/d27/Effect2D_8h"/>
+        <childnode refid="40532" relation="include">
+        </childnode>
+      </node>
+      <node id="40562">
+        <label>EffectPlanarShadows.h</label>
+        <link refid="d6/d73/EffectPlanarShadows_8h"/>
+        <childnode refid="40540" relation="include">
+        </childnode>
+      </node>
+      <node id="40539">
+        <label>ModelingManager.h</label>
+        <link refid="dc/ddb/ModelingManager_8h"/>
+        <childnode refid="40533" relation="include">
+        </childnode>
+        <childnode refid="40540" relation="include">
+        </childnode>
+      </node>
+      <node id="40542">
+        <label>ConsoleManager.h</label>
+        <link refid="d3/d63/ConsoleManager_8h"/>
+        <childnode refid="40533" relation="include">
+        </childnode>
+      </node>
+      <node id="40541">
+        <label>GUIManager.h</label>
+        <link refid="d6/db3/GUIManager_8h"/>
+        <childnode refid="40533" relation="include">
+        </childnode>
+        <childnode refid="40542" relation="include">
+        </childnode>
+        <childnode refid="40543" relation="include">
+        </childnode>
+      </node>
+      <node id="40566">
+        <label>EffectMaterial.h</label>
+        <link refid="d6/d58/EffectMaterial_8h"/>
+        <childnode refid="40562" relation="include">
+        </childnode>
+        <childnode refid="40536" relation="include">
+        </childnode>
+      </node>
+      <node id="40559">
+        <label>WorldPortal.h</label>
+        <link refid="df/d65/WorldPortal_8h"/>
+        <childnode refid="40558" relation="include">
+        </childnode>
+        <childnode refid="40560" relation="include">
+        </childnode>
+      </node>
+      <node id="40546">
+        <label>EffectInstance.h</label>
+        <link refid="dc/d13/EffectInstance_8h"/>
+        <childnode refid="40532" relation="include">
+        </childnode>
+        <childnode refid="40547" relation="include">
+        </childnode>
+        <childnode refid="40548" relation="include">
+        </childnode>
+        <childnode refid="40549" relation="include">
+        </childnode>
+        <childnode refid="40550" relation="include">
+        </childnode>
+        <childnode refid="40551" relation="include">
+        </childnode>
+        <childnode refid="40554" relation="include">
+        </childnode>
+        <childnode refid="40566" relation="include">
+        </childnode>
+        <childnode refid="40567" relation="include">
+        </childnode>
+        <childnode refid="40568" relation="include">
+        </childnode>
+        <childnode refid="40569" relation="include">
+        </childnode>
+        <childnode refid="40570" relation="include">
+        </childnode>
+        <childnode refid="40571" relation="include">
+        </childnode>
+        <childnode refid="40572" relation="include">
+        </childnode>
+        <childnode refid="40573" relation="include">
+        </childnode>
+      </node>
+      <node id="40570">
+        <label>EffectLightPointPhong.h</label>
+        <link refid="dc/d62/EffectLightPointPhong_8h"/>
+        <childnode refid="40538" relation="include">
+        </childnode>
+        <childnode refid="40536" relation="include">
+        </childnode>
+      </node>
+      <node id="40568">
+        <label>EffectLightAmbient.h</label>
+        <link refid="da/d0a/EffectLightAmbient_8h"/>
+      </node>
+      <node id="40567">
+        <label>EffectMaterialTexture.h</label>
+        <link refid="d1/d26/EffectMaterialTexture_8h"/>
+      </node>
+      <node id="40551">
+        <label>WorldLeaf.h</label>
+        <link refid="de/d75/WorldLeaf_8h"/>
+        <childnode refid="40540" relation="include">
+        </childnode>
+        <childnode refid="40552" relation="include">
+        </childnode>
+        <childnode refid="40554" relation="include">
+        </childnode>
+        <childnode refid="40556" relation="include">
+        </childnode>
+        <childnode refid="40562" relation="include">
+        </childnode>
+        <childnode refid="40565" relation="include">
+        </childnode>
+        <childnode refid="40553" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d6/d97/classTexture" prot="public">Texture</innerclass>
+    <innerclass refid="d3/dc1/classTexture1D" prot="public">Texture1D</innerclass>
+    <innerclass refid="d3/d79/classTexture2D" prot="public">Texture2D</innerclass>
+    <innerclass refid="d2/d3d/classTexture3D" prot="public">Texture3D</innerclass>
+    <innerclass refid="d6/da4/classTextureCube" prot="public">TextureCube</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="d9/dbf/Texture_8h_1aa5452cfe208055f5375e5ff04aa544fc" prot="public" static="no">
+        <name>TEXTURE_MAX_DIMENSIONS</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="36" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d9/dbf/Texture_8h_1a16a57a3673d79d369970404a6a7bedb5" prot="public" static="no">
+        <name>TEXTURE_MAX_MIPMAP_LEVELS</name>
+        <initializer>16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="37" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d9/dbf/Texture_8h_1a28fb88ac3fe3a54853ee78022ac0c47f" prot="public" static="no">
+        <name>TEXTURE_MAX_USERFIELDS</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="38" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="d9/dbf/Texture_8h_1a65468556d79304b3a4bfc464cc12e549" prot="public" static="no">
+        <name>TextureType</name>
+        <enumvalue id="d9/dbf/Texture_8h_1a65468556d79304b3a4bfc464cc12e549af957be7896fc7dd1c090a83938f1a3a6" prot="public">
+          <name>TEXTURE_UNDEFINED</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1a65468556d79304b3a4bfc464cc12e549a4f0e9b2b99e86486d92c7b5f5a92ab76" prot="public">
+          <name>TEXTURE_1D</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1a65468556d79304b3a4bfc464cc12e549a3e47363105c3d592ed1667da0b97ad55" prot="public">
+          <name>TEXTURE_2D</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1a65468556d79304b3a4bfc464cc12e549a85164b8505d0d5edf7f21c4a182d057b" prot="public">
+          <name>TEXTURE_3D</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1a65468556d79304b3a4bfc464cc12e549ab0c1e1cca95a7ae1be5934dd65f0147a" prot="public">
+          <name>TEXTURE_CUBE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1a65468556d79304b3a4bfc464cc12e549a3d4ee001cc330a330093c5a705ef5d56" prot="public">
+          <name>TEXTURE_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="41" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" bodystart="40" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="enum" id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0f" prot="public" static="no">
+        <name>TextureFormat</name>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa3bb1fcdde8db1d4222ca4c23ab90c923" prot="public">
+          <name>TEXTURE_FMT_UNDEFINED</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa8a24db401db7451921ff7be680e5e795" prot="public">
+          <name>TEXTURE_FMT_R3G3B2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa80d11e1011fa4dc8a918d8e82b757420" prot="public">
+          <name>TEXTURE_FMT_A8R3G3B2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa8b5f770b101adcb2ec16cc8e8c5f55b2" prot="public">
+          <name>TEXTURE_FMT_R5G6B5</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fab5e6f21a4ce94a8c9815b8b1391ee3a4" prot="public">
+          <name>TEXTURE_FMT_A1R5G5B5</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0faec7a16c72ced6d2a43a2040af96d9a84" prot="public">
+          <name>TEXTURE_FMT_A2R10G10B10</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa14017f50b2686db0083747cf6e10e09b" prot="public">
+          <name>TEXTURE_FMT_A2B10G10R10</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fad9ceb79c75861b1daa4306e4c172d0bb" prot="public">
+          <name>TEXTURE_FMT_AL4I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa3b6ceb7dd42ff4fc6049cc7408fdd117" prot="public">
+          <name>TEXTURE_FMT_ARGB4I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa9d1ac81f80c6d94867730ef31720811e" prot="public">
+          <name>TEXTURE_FMT_A8I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa826a438fd06f614ea1f9003e44a0af42" prot="public">
+          <name>TEXTURE_FMT_L8I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fac76b1e4e6f395569c853bdf50b4ed6d2" prot="public">
+          <name>TEXTURE_FMT_AL8I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa6ce2bae50fe6e418e6612d56623d5d37" prot="public">
+          <name>TEXTURE_FMT_VU8I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fad656166d581762556eacfe4b1e8799fe" prot="public">
+          <name>TEXTURE_FMT_QWVU8I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa4e0e209af8e25727e687c82b0aba66a6" prot="public">
+          <name>TEXTURE_FMT_RGB8I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa7afbee686b51fc3333143cfb91d87bb2" prot="public">
+          <name>TEXTURE_FMT_ARGB8I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa2b5c7a5b3b5961d9050e2cabe9fc411c" prot="public">
+          <name>TEXTURE_FMT_ABGR8I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa4d376834e6df2384be86dabaaa2d4968" prot="public">
+          <name>TEXTURE_FMT_RGBG8I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fad6b71f3764c2b4e4f53d514be3b8541f" prot="public">
+          <name>TEXTURE_FMT_GRGB8I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa65faba797ffe36761cc15bf2c287b650" prot="public">
+          <name>TEXTURE_FMT_L16I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa1cf10670e14bc131788bfd7acc8168a3" prot="public">
+          <name>TEXTURE_FMT_VU16I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fadce0f65d1801a411ff847e93b1af297c" prot="public">
+          <name>TEXTURE_FMT_QWVU16I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa1cf99b4d88cec8d89339c04358a1cdbb" prot="public">
+          <name>TEXTURE_FMT_GR16I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa3ccedae21fc080a933b8736b2d20991b" prot="public">
+          <name>TEXTURE_FMT_ABGR16I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa9a7b8c2573ef66e6441e5fdf873f3295" prot="public">
+          <name>TEXTURE_FMT_R16F</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa5588708a305cf096af38d64133a37d77" prot="public">
+          <name>TEXTURE_FMT_GR16F</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0faa896e1ba2be4159438de731047a9dd10" prot="public">
+          <name>TEXTURE_FMT_ABGR16F</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa18cca3e1bda40b811f4ada71290db614" prot="public">
+          <name>TEXTURE_FMT_R32F</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0faeaad7306bdfcb4bdc3ce1caa5854434b" prot="public">
+          <name>TEXTURE_FMT_GR32F</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa658883383bc92da2efe1efffa2fc19fc" prot="public">
+          <name>TEXTURE_FMT_ABGR32F</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fac781d8d57066215277fd993b575d017d" prot="public">
+          <name>TEXTURE_FMT_D16</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0faf1fcb23777c1d7bc40b4653a5456e2da" prot="public">
+          <name>TEXTURE_FMT_D32</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa85c5d8a6c2d901825d7cb49be0688b87" prot="public">
+          <name>TEXTURE_FMT_D15S1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa25b1104ca7e19008bf5222d95b045426" prot="public">
+          <name>TEXTURE_FMT_D24S8</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa528b132cebe960484e955289daa5d4c6" prot="public">
+          <name>TEXTURE_FMT_D24FS8</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa889ab39cc45c634f3c4a523a7be56688" prot="public">
+          <name>TEXTURE_FMT_DXT1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa6df6b952eff0df81989da35886fa6e02" prot="public">
+          <name>TEXTURE_FMT_DXT2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa716bf658213b1b1e4c936e4e5218861a" prot="public">
+          <name>TEXTURE_FMT_DXT3</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fae3e7e76d16edab135e787fc98803d374" prot="public">
+          <name>TEXTURE_FMT_DXT4</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0faeb00659f8a3aee5d308752eaf36753ca" prot="public">
+          <name>TEXTURE_FMT_DXT5</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa9805a3616884844db70c3cdb439f7cef" prot="public">
+          <name>TEXTURE_FMT_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa3bb1fcdde8db1d4222ca4c23ab90c923" prot="public">
+          <name>TEXTURE_FMT_UNDEFINED</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa8a24db401db7451921ff7be680e5e795" prot="public">
+          <name>TEXTURE_FMT_R3G3B2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa80d11e1011fa4dc8a918d8e82b757420" prot="public">
+          <name>TEXTURE_FMT_A8R3G3B2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa8b5f770b101adcb2ec16cc8e8c5f55b2" prot="public">
+          <name>TEXTURE_FMT_R5G6B5</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fab5e6f21a4ce94a8c9815b8b1391ee3a4" prot="public">
+          <name>TEXTURE_FMT_A1R5G5B5</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0faec7a16c72ced6d2a43a2040af96d9a84" prot="public">
+          <name>TEXTURE_FMT_A2R10G10B10</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa14017f50b2686db0083747cf6e10e09b" prot="public">
+          <name>TEXTURE_FMT_A2B10G10R10</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fad9ceb79c75861b1daa4306e4c172d0bb" prot="public">
+          <name>TEXTURE_FMT_AL4I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa3b6ceb7dd42ff4fc6049cc7408fdd117" prot="public">
+          <name>TEXTURE_FMT_ARGB4I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa9d1ac81f80c6d94867730ef31720811e" prot="public">
+          <name>TEXTURE_FMT_A8I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa826a438fd06f614ea1f9003e44a0af42" prot="public">
+          <name>TEXTURE_FMT_L8I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fac76b1e4e6f395569c853bdf50b4ed6d2" prot="public">
+          <name>TEXTURE_FMT_AL8I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa6ce2bae50fe6e418e6612d56623d5d37" prot="public">
+          <name>TEXTURE_FMT_VU8I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fad656166d581762556eacfe4b1e8799fe" prot="public">
+          <name>TEXTURE_FMT_QWVU8I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa4e0e209af8e25727e687c82b0aba66a6" prot="public">
+          <name>TEXTURE_FMT_RGB8I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa7afbee686b51fc3333143cfb91d87bb2" prot="public">
+          <name>TEXTURE_FMT_ARGB8I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa2b5c7a5b3b5961d9050e2cabe9fc411c" prot="public">
+          <name>TEXTURE_FMT_ABGR8I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa4d376834e6df2384be86dabaaa2d4968" prot="public">
+          <name>TEXTURE_FMT_RGBG8I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fad6b71f3764c2b4e4f53d514be3b8541f" prot="public">
+          <name>TEXTURE_FMT_GRGB8I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa65faba797ffe36761cc15bf2c287b650" prot="public">
+          <name>TEXTURE_FMT_L16I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa1cf10670e14bc131788bfd7acc8168a3" prot="public">
+          <name>TEXTURE_FMT_VU16I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fadce0f65d1801a411ff847e93b1af297c" prot="public">
+          <name>TEXTURE_FMT_QWVU16I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa1cf99b4d88cec8d89339c04358a1cdbb" prot="public">
+          <name>TEXTURE_FMT_GR16I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa3ccedae21fc080a933b8736b2d20991b" prot="public">
+          <name>TEXTURE_FMT_ABGR16I</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa9a7b8c2573ef66e6441e5fdf873f3295" prot="public">
+          <name>TEXTURE_FMT_R16F</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa5588708a305cf096af38d64133a37d77" prot="public">
+          <name>TEXTURE_FMT_GR16F</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0faa896e1ba2be4159438de731047a9dd10" prot="public">
+          <name>TEXTURE_FMT_ABGR16F</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa18cca3e1bda40b811f4ada71290db614" prot="public">
+          <name>TEXTURE_FMT_R32F</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0faeaad7306bdfcb4bdc3ce1caa5854434b" prot="public">
+          <name>TEXTURE_FMT_GR32F</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa658883383bc92da2efe1efffa2fc19fc" prot="public">
+          <name>TEXTURE_FMT_ABGR32F</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fac781d8d57066215277fd993b575d017d" prot="public">
+          <name>TEXTURE_FMT_D16</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0faf1fcb23777c1d7bc40b4653a5456e2da" prot="public">
+          <name>TEXTURE_FMT_D32</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa85c5d8a6c2d901825d7cb49be0688b87" prot="public">
+          <name>TEXTURE_FMT_D15S1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa25b1104ca7e19008bf5222d95b045426" prot="public">
+          <name>TEXTURE_FMT_D24S8</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa528b132cebe960484e955289daa5d4c6" prot="public">
+          <name>TEXTURE_FMT_D24FS8</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa889ab39cc45c634f3c4a523a7be56688" prot="public">
+          <name>TEXTURE_FMT_DXT1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa6df6b952eff0df81989da35886fa6e02" prot="public">
+          <name>TEXTURE_FMT_DXT2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa716bf658213b1b1e4c936e4e5218861a" prot="public">
+          <name>TEXTURE_FMT_DXT3</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fae3e7e76d16edab135e787fc98803d374" prot="public">
+          <name>TEXTURE_FMT_DXT4</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0faeb00659f8a3aee5d308752eaf36753ca" prot="public">
+          <name>TEXTURE_FMT_DXT5</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1acbce0af680bcfc0a5b989bcfc6583e0fa9805a3616884844db70c3cdb439f7cef" prot="public">
+          <name>TEXTURE_FMT_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="53" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" bodystart="52" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="enum" id="d9/dbf/Texture_8h_1ac78ff90c8cbce819a61e65d1bb3d29f9" prot="public" static="no">
+        <name>TextureUsage</name>
+        <enumvalue id="d9/dbf/Texture_8h_1ac78ff90c8cbce819a61e65d1bb3d29f9acf71c9fa4c82436d386cc5d538b85502" prot="public">
+          <name>TEXTURE_USAGE_STATIC</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1ac78ff90c8cbce819a61e65d1bb3d29f9a6582c2c6b95124130182b05f767c7090" prot="public">
+          <name>TEXTURE_USAGE_DYNAMIC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1ac78ff90c8cbce819a61e65d1bb3d29f9afeefea68578b8b514de0fb20b7d63ad2" prot="public">
+          <name>TEXTURE_USAGE_RENDERTARGET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1ac78ff90c8cbce819a61e65d1bb3d29f9a173ef46901e1c3b6aaa962367dcc23e3" prot="public">
+          <name>TEXTURE_USAGE_DEPTHSTENCIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1ac78ff90c8cbce819a61e65d1bb3d29f9a99ba2f715a051cb47d826b661499a1eb" prot="public">
+          <name>TEXTURE_USAGE_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ac78ff90c8cbce819a61e65d1bb3d29f9acf71c9fa4c82436d386cc5d538b85502" prot="public">
+          <name>TEXTURE_USAGE_STATIC</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ac78ff90c8cbce819a61e65d1bb3d29f9a6582c2c6b95124130182b05f767c7090" prot="public">
+          <name>TEXTURE_USAGE_DYNAMIC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ac78ff90c8cbce819a61e65d1bb3d29f9afeefea68578b8b514de0fb20b7d63ad2" prot="public">
+          <name>TEXTURE_USAGE_RENDERTARGET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ac78ff90c8cbce819a61e65d1bb3d29f9a173ef46901e1c3b6aaa962367dcc23e3" prot="public">
+          <name>TEXTURE_USAGE_DEPTHSTENCIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1ac78ff90c8cbce819a61e65d1bb3d29f9a99ba2f715a051cb47d826b661499a1eb" prot="public">
+          <name>TEXTURE_USAGE_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="114" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" bodystart="113" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="enum" id="d9/dbf/Texture_8h_1a32b9e01c96d7e6f1040ee8dfe4df3ea5" prot="public" static="no">
+        <name>TextureLock</name>
+        <enumvalue id="d9/dbf/Texture_8h_1a32b9e01c96d7e6f1040ee8dfe4df3ea5a4d6b1cb88b1416a65f940abf8eb5e97e" prot="public">
+          <name>TEXTURE_LOCK_UPDATE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1a32b9e01c96d7e6f1040ee8dfe4df3ea5a876e540fdae5a95e8982ca79eb6256d1" prot="public">
+          <name>TEXTURE_LOCK_OVERWRITE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1a32b9e01c96d7e6f1040ee8dfe4df3ea5a9b2e9963b3fef6af13f2b8a5c6e9bfaa" prot="public">
+          <name>TEXTURE_LOCK_APPEND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1a32b9e01c96d7e6f1040ee8dfe4df3ea5a31cd3bd974ffe5068220f7aefc94a05d" prot="public">
+          <name>TEXTURE_LOCK_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a32b9e01c96d7e6f1040ee8dfe4df3ea5a4d6b1cb88b1416a65f940abf8eb5e97e" prot="public">
+          <name>TEXTURE_LOCK_UPDATE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a32b9e01c96d7e6f1040ee8dfe4df3ea5a876e540fdae5a95e8982ca79eb6256d1" prot="public">
+          <name>TEXTURE_LOCK_OVERWRITE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a32b9e01c96d7e6f1040ee8dfe4df3ea5a9b2e9963b3fef6af13f2b8a5c6e9bfaa" prot="public">
+          <name>TEXTURE_LOCK_APPEND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1a32b9e01c96d7e6f1040ee8dfe4df3ea5a31cd3bd974ffe5068220f7aefc94a05d" prot="public">
+          <name>TEXTURE_LOCK_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="122" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" bodystart="121" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="enum" id="d9/dbf/Texture_8h_1adb0d0a8fe451e77a9b40b8c3e1011757" prot="public" static="no">
+        <name>TextureCubeFace</name>
+        <enumvalue id="d9/dbf/Texture_8h_1adb0d0a8fe451e77a9b40b8c3e1011757a0b02607f2440cc20773cd6705eb2a316" prot="public">
+          <name>TEXTURECUBE_FACE_XPOS</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1adb0d0a8fe451e77a9b40b8c3e1011757a5d585f4ee94c6f8b2a72dd4bde4ae550" prot="public">
+          <name>TEXTURECUBE_FACE_XNEG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1adb0d0a8fe451e77a9b40b8c3e1011757abe7f7d0c4437487fd384366885f3e136" prot="public">
+          <name>TEXTURECUBE_FACE_YPOS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1adb0d0a8fe451e77a9b40b8c3e1011757a01eb4ec032d7b97473ecbd5f297169fd" prot="public">
+          <name>TEXTURECUBE_FACE_YNEG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1adb0d0a8fe451e77a9b40b8c3e1011757ad877ea2862df5cb7fb1600ea539ba4d4" prot="public">
+          <name>TEXTURECUBE_FACE_ZPOS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1adb0d0a8fe451e77a9b40b8c3e1011757abcd6e476b9c902fc25e92c1f60b7ddb8" prot="public">
+          <name>TEXTURECUBE_FACE_ZNEG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d9/dbf/Texture_8h_1adb0d0a8fe451e77a9b40b8c3e1011757aed97f80d892b3ec8acd2a55e08b43985" prot="public">
+          <name>TEXTURECUBE_FACE_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1adb0d0a8fe451e77a9b40b8c3e1011757a0b02607f2440cc20773cd6705eb2a316" prot="public">
+          <name>TEXTURECUBE_FACE_XPOS</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1adb0d0a8fe451e77a9b40b8c3e1011757a5d585f4ee94c6f8b2a72dd4bde4ae550" prot="public">
+          <name>TEXTURECUBE_FACE_XNEG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1adb0d0a8fe451e77a9b40b8c3e1011757abe7f7d0c4437487fd384366885f3e136" prot="public">
+          <name>TEXTURECUBE_FACE_YPOS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1adb0d0a8fe451e77a9b40b8c3e1011757a01eb4ec032d7b97473ecbd5f297169fd" prot="public">
+          <name>TEXTURECUBE_FACE_YNEG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1adb0d0a8fe451e77a9b40b8c3e1011757ad877ea2862df5cb7fb1600ea539ba4d4" prot="public">
+          <name>TEXTURECUBE_FACE_ZPOS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1adb0d0a8fe451e77a9b40b8c3e1011757abcd6e476b9c902fc25e92c1f60b7ddb8" prot="public">
+          <name>TEXTURECUBE_FACE_ZNEG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/dbe/Mappings_8h_1adb0d0a8fe451e77a9b40b8c3e1011757aed97f80d892b3ec8acd2a55e08b43985" prot="public">
+          <name>TEXTURECUBE_FACE_COUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" line="130" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h" bodystart="129" bodyend="138"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Resources/Texture.h"/>
+  </compounddef>
+</doxygen>

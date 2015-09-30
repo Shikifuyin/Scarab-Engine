@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="de/d50/structMemoryContext" kind="struct" prot="public">
+    <compoundname>MemoryContext</compoundname>
+    <includes refid="d7/d7b/MemoryManager_8h" local="no">MemoryManager.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="de/d50/structMemoryContext_1a9fd24bd9870ff4edbb395331fa82cf5b" prot="public" static="no" mutable="no">
+        <type><ref refid="d7/d7b/MemoryManager_8h_1af31b42dd6507009f3d5e5f71b991260b" kindref="member">MemoryContextID</ref></type>
+        <definition>MemoryContextID idContext</definition>
+        <argsstring></argsstring>
+        <name>idContext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="117" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d50/structMemoryContext_1a661b06ac80b4256ae1499ab3207411f6" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref></type>
+        <definition>GChar strName[MEMORY_MAX_NAMELENGTH]</definition>
+        <argsstring>[MEMORY_MAX_NAMELENGTH]</argsstring>
+        <name>strName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="118" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d50/structMemoryContext_1a33df3a89cd323be362f3f8a11072a84c" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1a59e8652d68cb08192b3c64a744c061de" kindref="member">Byte</ref> *</type>
+        <definition>Byte* pResidentMemory</definition>
+        <argsstring></argsstring>
+        <name>pResidentMemory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="120" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d50/structMemoryContext_1a66dc1612c5346bbae2bcf6b74e17828e" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt iResidentSize</definition>
+        <argsstring></argsstring>
+        <name>iResidentSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="121" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d50/structMemoryContext_1ae94f73aad3016320f82669a187a3f109" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt iAllocatorCount</definition>
+        <argsstring></argsstring>
+        <name>iAllocatorCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="123" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d50/structMemoryContext_1ad92e769029184be690e750b2ff39aa6a" prot="public" static="no" mutable="no">
+        <type><ref refid="d4/df1/structAllocatorData" kindref="compound">AllocatorData</ref></type>
+        <definition>AllocatorData arrAllocators[MEMORY_CONTEXT_TABLE_SIZE]</definition>
+        <argsstring>[MEMORY_CONTEXT_TABLE_SIZE]</argsstring>
+        <name>arrAllocators</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="124" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d50/structMemoryContext_1aa32a3e4252c5130d12b756cbcfa9d669" prot="public" static="no" mutable="no">
+        <type><ref refid="d7/d7b/MemoryManager_8h_1aec941861fea8dd1ae50294f05724a436" kindref="member">MemoryAllocatorID</ref></type>
+        <definition>MemoryAllocatorID idSelected</definition>
+        <argsstring></argsstring>
+        <name>idSelected</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="126" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="6146">
+        <label>unsigned int</label>
+      </node>
+      <node id="6149">
+        <label>unsigned char</label>
+      </node>
+      <node id="6148">
+        <label>int</label>
+      </node>
+      <node id="6143">
+        <label>MemoryContext</label>
+        <link refid="de/d50/structMemoryContext"/>
+        <childnode refid="6144" relation="usage">
+          <edgelabel>arrAllocators</edgelabel>
+        </childnode>
+        <childnode refid="6149" relation="usage">
+          <edgelabel>pResidentMemory</edgelabel>
+        </childnode>
+        <childnode refid="6145" relation="usage">
+          <edgelabel>strName</edgelabel>
+        </childnode>
+        <childnode refid="6148" relation="usage">
+          <edgelabel>iAllocatorCount</edgelabel>
+          <edgelabel>iResidentSize</edgelabel>
+        </childnode>
+        <childnode refid="6146" relation="usage">
+          <edgelabel>idSelected</edgelabel>
+          <edgelabel>idContext</edgelabel>
+        </childnode>
+      </node>
+      <node id="6144">
+        <label>AllocatorData</label>
+        <link refid="d4/df1/structAllocatorData"/>
+        <childnode refid="6145" relation="usage">
+          <edgelabel>strName</edgelabel>
+        </childnode>
+        <childnode refid="6146" relation="usage">
+          <edgelabel>idAlloc</edgelabel>
+        </childnode>
+        <childnode refid="6147" relation="usage">
+          <edgelabel>pAllocator</edgelabel>
+        </childnode>
+      </node>
+      <node id="6147">
+        <label>MemoryAllocator</label>
+        <link refid="d0/de0/classMemoryAllocator"/>
+        <childnode refid="6145" relation="usage">
+          <edgelabel>m_strContextName</edgelabel>
+          <edgelabel>m_strAllocatorName</edgelabel>
+        </childnode>
+        <childnode refid="6148" relation="usage">
+          <edgelabel>m_idAllocator</edgelabel>
+          <edgelabel>m_idContext</edgelabel>
+        </childnode>
+      </node>
+      <node id="6145">
+        <label>char</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" line="116" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Memory/MemoryManager.h" bodystart="115" bodyend="127"/>
+    <listofallmembers>
+      <member refid="de/d50/structMemoryContext_1ad92e769029184be690e750b2ff39aa6a" prot="public" virt="non-virtual"><scope>MemoryContext</scope><name>arrAllocators</name></member>
+      <member refid="de/d50/structMemoryContext_1ae94f73aad3016320f82669a187a3f109" prot="public" virt="non-virtual"><scope>MemoryContext</scope><name>iAllocatorCount</name></member>
+      <member refid="de/d50/structMemoryContext_1a9fd24bd9870ff4edbb395331fa82cf5b" prot="public" virt="non-virtual"><scope>MemoryContext</scope><name>idContext</name></member>
+      <member refid="de/d50/structMemoryContext_1aa32a3e4252c5130d12b756cbcfa9d669" prot="public" virt="non-virtual"><scope>MemoryContext</scope><name>idSelected</name></member>
+      <member refid="de/d50/structMemoryContext_1a66dc1612c5346bbae2bcf6b74e17828e" prot="public" virt="non-virtual"><scope>MemoryContext</scope><name>iResidentSize</name></member>
+      <member refid="de/d50/structMemoryContext_1a33df3a89cd323be362f3f8a11072a84c" prot="public" virt="non-virtual"><scope>MemoryContext</scope><name>pResidentMemory</name></member>
+      <member refid="de/d50/structMemoryContext_1a661b06ac80b4256ae1499ab3207411f6" prot="public" virt="non-virtual"><scope>MemoryContext</scope><name>strName</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

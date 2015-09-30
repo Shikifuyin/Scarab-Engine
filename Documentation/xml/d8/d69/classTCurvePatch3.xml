@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d8/d69/classTCurvePatch3" kind="class" prot="public">
+    <compoundname>TCurvePatch3</compoundname>
+    <basecompoundref refid="d7/d44/classTCurve3" prot="public" virt="non-virtual">TCurve3&lt; Real &gt;</basecompoundref>
+    <derivedcompoundref refid="dc/de5/classTBezierPatch3" prot="public" virt="non-virtual">TBezierPatch3&lt; Real &gt;</derivedcompoundref>
+    <derivedcompoundref refid="d6/d4a/classTBSplinePatch3" prot="public" virt="non-virtual">TBSplinePatch3&lt; Real &gt;</derivedcompoundref>
+    <derivedcompoundref refid="d1/de0/classTNURBSPatch3" prot="public" virt="non-virtual">TNURBSPatch3&lt; Real &gt;</derivedcompoundref>
+    <derivedcompoundref refid="dc/d4d/classTPolynomialPatch3" prot="public" virt="non-virtual">TPolynomialPatch3&lt; Real &gt;</derivedcompoundref>
+    <includes refid="d1/d11/CurvePatch3_8h" local="no">CurvePatch3.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename Real</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d8/d69/classTCurvePatch3_1a9da70b95aba6a236a75f838cfa6530a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TCurvePatch3</definition>
+        <argsstring>(Real fMinT, Real fMaxT)</argsstring>
+        <name>TCurvePatch3</name>
+        <param>
+          <type>Real</type>
+          <declname>fMinT</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fMaxT</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurvePatch3.h" line="40"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d69/classTCurvePatch3_1a597774ddce01deae53669fe894401a06" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~TCurvePatch3</definition>
+        <argsstring>()</argsstring>
+        <name>~TCurvePatch3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurvePatch3.h" line="41"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d69/classTCurvePatch3_1adbecc7a9419b8db515196177304db946" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>Real</type>
+        <definition>virtual Real Length</definition>
+        <argsstring>(Real fT0, Real fT1) const </argsstring>
+        <name>Length</name>
+        <reimplements refid="d7/d44/classTCurve3_1a1e1e157eadc4befdec43589e7ae6f3b6">Length</reimplements>
+        <param>
+          <type>Real</type>
+          <declname>fT0</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fT1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurvePatch3.h" line="44"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d69/classTCurvePatch3_1a88b2bd67587d5bf1700021b56b14bff4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>Real</type>
+        <definition>virtual Real Parameter</definition>
+        <argsstring>(Real fLength, UInt iMaxIterations=32, Real fTolerance=(Real) SCALAR_ERROR) const </argsstring>
+        <name>Parameter</name>
+        <reimplements refid="d7/d44/classTCurve3_1a00ef98b0143d3fe57ec19b279b19c110">Parameter</reimplements>
+        <param>
+          <type>Real</type>
+          <declname>fLength</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iMaxIterations</declname>
+          <defval>32</defval>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>fTolerance</declname>
+          <defval>(Real) <ref refid="d0/d10/Scalar_8h_1ab84e60710e7c3a93246b807ac524d38b" kindref="member">SCALAR_ERROR</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurvePatch3.h" line="45"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="d8/d69/classTCurvePatch3_1a087a3b427608b9a6dcec02fdf61819cd" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Real</type>
+        <definition>static Real _SpeedFunction</definition>
+        <argsstring>(Real fT, Void *pInstance)</argsstring>
+        <name>_SpeedFunction</name>
+        <param>
+          <type>Real</type>
+          <declname>fT</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref> *</type>
+          <declname>pInstance</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurvePatch3.h" line="48"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="12367">
+        <label>TCurvePatch3&lt; Real &gt;</label>
+        <link refid="d8/d69/classTCurvePatch3"/>
+        <childnode refid="12368" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12371">
+        <label>TNURBSPatch3&lt; Real &gt;</label>
+        <link refid="d1/de0/classTNURBSPatch3"/>
+        <childnode refid="12367" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12370">
+        <label>TBSplinePatch3&lt; Real &gt;</label>
+        <link refid="d6/d4a/classTBSplinePatch3"/>
+        <childnode refid="12367" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12368">
+        <label>TCurve3&lt; Real &gt;</label>
+        <link refid="d7/d44/classTCurve3"/>
+      </node>
+      <node id="12372">
+        <label>TPolynomialPatch3&lt; Real &gt;</label>
+        <link refid="dc/d4d/classTPolynomialPatch3"/>
+        <childnode refid="12367" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12373">
+        <label>TCubicPolynomialPatch3&lt; Real &gt;</label>
+        <link refid="dd/d9f/classTCubicPolynomialPatch3"/>
+        <childnode refid="12372" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12369">
+        <label>TBezierPatch3&lt; Real &gt;</label>
+        <link refid="dc/de5/classTBezierPatch3"/>
+        <childnode refid="12367" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="12376">
+        <label>Real</label>
+      </node>
+      <node id="12374">
+        <label>TCurvePatch3&lt; Real &gt;</label>
+        <link refid="d8/d69/classTCurvePatch3"/>
+        <childnode refid="12375" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12375">
+        <label>TCurve3&lt; Real &gt;</label>
+        <link refid="d7/d44/classTCurve3"/>
+        <childnode refid="12376" relation="usage">
+          <edgelabel>m_fMinT</edgelabel>
+          <edgelabel>m_fMaxT</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurvePatch3.h" line="38" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Geometry/Curves/3D/CurvePatch3.h" bodystart="37" bodyend="49"/>
+    <listofallmembers>
+      <member refid="d8/d69/classTCurvePatch3_1a087a3b427608b9a6dcec02fdf61819cd" prot="private" virt="non-virtual"><scope>TCurvePatch3</scope><name>_SpeedFunction</name></member>
+      <member refid="d7/d44/classTCurve3_1a0e17782121bbafbd94520f83795637eb" prot="public" virt="non-virtual"><scope>TCurvePatch3</scope><name>BiNormal</name></member>
+      <member refid="d7/d44/classTCurve3_1a4cd922dcf079e1ee21634e5640493508" prot="public" virt="non-virtual"><scope>TCurvePatch3</scope><name>Curvature</name></member>
+      <member refid="d7/d44/classTCurve3_1a779367191813076badc1827de2c973cd" prot="public" virt="non-virtual"><scope>TCurvePatch3</scope><name>Frame</name></member>
+      <member refid="d7/d44/classTCurve3_1aa4080b9170a97ff3b0a9af376d5f7d81" prot="public" virt="non-virtual"><scope>TCurvePatch3</scope><name>GetMaxT</name></member>
+      <member refid="d7/d44/classTCurve3_1aafc97dcc199fefb4bba21ff59f43cdbb" prot="public" virt="non-virtual"><scope>TCurvePatch3</scope><name>GetMinT</name></member>
+      <member refid="d8/d69/classTCurvePatch3_1adbecc7a9419b8db515196177304db946" prot="public" virt="virtual"><scope>TCurvePatch3</scope><name>Length</name></member>
+      <member refid="d7/d44/classTCurve3_1a8f0e1fd4ef91850a26bbd5975708d371" prot="public" virt="non-virtual" ambiguityscope="TCurve3::"><scope>TCurvePatch3</scope><name>Length</name></member>
+      <member refid="d7/d44/classTCurve3_1aeb65f01f1950df1be56159acada0f137" prot="protected" virt="non-virtual"><scope>TCurvePatch3</scope><name>m_fMaxT</name></member>
+      <member refid="d7/d44/classTCurve3_1a908d8e638688977192614addf140fe47" prot="protected" virt="non-virtual"><scope>TCurvePatch3</scope><name>m_fMinT</name></member>
+      <member refid="d7/d44/classTCurve3_1a71d0c6f1911fa67a99f80fb55ec7990a" prot="public" virt="non-virtual"><scope>TCurvePatch3</scope><name>Normal</name></member>
+      <member refid="d7/d44/classTCurve3_1ae60e3c8e857142c000a4e8b0045f471a" prot="public" virt="pure-virtual"><scope>TCurvePatch3</scope><name>P</name></member>
+      <member refid="d8/d69/classTCurvePatch3_1a88b2bd67587d5bf1700021b56b14bff4" prot="public" virt="virtual"><scope>TCurvePatch3</scope><name>Parameter</name></member>
+      <member refid="d7/d44/classTCurve3_1ae8d5b471e4a3942ced691be25e639f29" prot="public" virt="pure-virtual"><scope>TCurvePatch3</scope><name>PdT</name></member>
+      <member refid="d7/d44/classTCurve3_1afe9b76fb621d8d4485ca19f1f531f8c6" prot="public" virt="pure-virtual"><scope>TCurvePatch3</scope><name>PdT2</name></member>
+      <member refid="d7/d44/classTCurve3_1ae736addda24094d218947db26cc0703b" prot="public" virt="pure-virtual"><scope>TCurvePatch3</scope><name>PdT3</name></member>
+      <member refid="d7/d44/classTCurve3_1a3a82d7e08c87636b16ba9d447e0d38c7" prot="public" virt="non-virtual"><scope>TCurvePatch3</scope><name>Position</name></member>
+      <member refid="d7/d44/classTCurve3_1a8a1f9ee1b484dba5bc73c90ef753a393" prot="public" virt="non-virtual"><scope>TCurvePatch3</scope><name>SetIntervalT</name></member>
+      <member refid="d7/d44/classTCurve3_1a76cdda297dd49acc0e33ce1de0096d08" prot="public" virt="non-virtual"><scope>TCurvePatch3</scope><name>Speed</name></member>
+      <member refid="d7/d44/classTCurve3_1a6a0138b6d642d85bfec9aeaac35d5283" prot="public" virt="non-virtual"><scope>TCurvePatch3</scope><name>SubDivideByLength</name></member>
+      <member refid="d7/d44/classTCurve3_1a7ec387b9730213f310bad0a330100148" prot="public" virt="non-virtual"><scope>TCurvePatch3</scope><name>SubDivideByParameter</name></member>
+      <member refid="d7/d44/classTCurve3_1a7ac1d2f0d770069db4eceec61b22e063" prot="public" virt="non-virtual"><scope>TCurvePatch3</scope><name>Tangent</name></member>
+      <member refid="d7/d44/classTCurve3_1a0f4c46a88ae85956f2664556b4475bc3" prot="public" virt="non-virtual"><scope>TCurvePatch3</scope><name>TCurve3</name></member>
+      <member refid="d8/d69/classTCurvePatch3_1a9da70b95aba6a236a75f838cfa6530a2" prot="public" virt="non-virtual"><scope>TCurvePatch3</scope><name>TCurvePatch3</name></member>
+      <member refid="d7/d44/classTCurve3_1a0a4c7d825e57a5ca54b75126e10011c4" prot="public" virt="non-virtual"><scope>TCurvePatch3</scope><name>Torsion</name></member>
+      <member refid="d7/d44/classTCurve3_1af8febaa4811d92c3c96c30eb8c46ae18" prot="public" virt="non-virtual"><scope>TCurvePatch3</scope><name>Velocity</name></member>
+      <member refid="d7/d44/classTCurve3_1a0ab441bd89b56aaead25c7595155b585" prot="public" virt="virtual"><scope>TCurvePatch3</scope><name>~TCurve3</name></member>
+      <member refid="d8/d69/classTCurvePatch3_1a597774ddce01deae53669fe894401a06" prot="public" virt="virtual"><scope>TCurvePatch3</scope><name>~TCurvePatch3</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

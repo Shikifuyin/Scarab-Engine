@@ -1,0 +1,963 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d5/d15/classPathController" kind="class" prot="public">
+    <compoundname>PathController</compoundname>
+    <basecompoundref refid="d9/d58/classMotionController" prot="public" virt="non-virtual">MotionController</basecompoundref>
+    <includes refid="d9/db3/PathController_8h" local="no">PathController.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="d5/d15/classPathController_1ab008e0c82dd7c9eef41e9c7b88af205e" prot="protected" static="no" mutable="no">
+        <type><ref refid="de/d54/Curve3_8h_1a87466430abb111a5cc4df0aa340d83fd" kindref="member">Curve3</ref> *</type>
+        <definition>Curve3* m_pLinearPath</definition>
+        <argsstring></argsstring>
+        <name>m_pLinearPath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Controllers/Motion/PathController.h" line="74" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Controllers/Motion/PathController.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d5/d15/classPathController_1a42fc984f1316f988b20c5b5de9c62ac5" prot="protected" static="no" mutable="no">
+        <type><ref refid="dd/d3a/Curve2_8h_1a13a0ab3262a00ddd4afa5b046577a106" kindref="member">Curve2</ref> *</type>
+        <definition>Curve2* m_pLinearTravel</definition>
+        <argsstring></argsstring>
+        <name>m_pLinearTravel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Controllers/Motion/PathController.h" line="75" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Controllers/Motion/PathController.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d5/d15/classPathController_1a202c2875a89e2ea6eaacf51259b43617" prot="protected" static="no" mutable="no">
+        <type><ref refid="de/d54/Curve3_8h_1a87466430abb111a5cc4df0aa340d83fd" kindref="member">Curve3</ref> *</type>
+        <definition>Curve3* m_pAngularPath</definition>
+        <argsstring></argsstring>
+        <name>m_pAngularPath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Controllers/Motion/PathController.h" line="78" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Controllers/Motion/PathController.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d5/d15/classPathController_1aef07d83248d817404819a4b061520f6a" prot="protected" static="no" mutable="no">
+        <type><ref refid="dd/d3a/Curve2_8h_1a13a0ab3262a00ddd4afa5b046577a106" kindref="member">Curve2</ref> *</type>
+        <definition>Curve2* m_pAngularTravel</definition>
+        <argsstring></argsstring>
+        <name>m_pAngularTravel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Controllers/Motion/PathController.h" line="79" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Controllers/Motion/PathController.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d5/d15/classPathController_1ac8efb1a8a0c7472fe69b8e289bf71320" prot="protected" static="no" mutable="no">
+        <type><ref refid="dc/d1a/Matrix2_8h_1ad8640b7ae1228956729500803a03d20b" kindref="member">EulerAngles</ref></type>
+        <definition>EulerAngles m_iEulerAnglesMode</definition>
+        <argsstring></argsstring>
+        <name>m_iEulerAnglesMode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Controllers/Motion/PathController.h" line="82" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Controllers/Motion/PathController.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d5/d15/classPathController_1a7f4fdb90782d4ca0f5d60585529e3322" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PathController</definition>
+        <argsstring>(const GChar *strName, Curve3 *pLinearPath, Curve2 *pLinearTravel, Curve3 *pAngularPath, Curve2 *pAngularTravel, EulerAngles iEulerAnglesMode=EULER_ANGLES_ZYX)</argsstring>
+        <name>PathController</name>
+        <param>
+          <type>const <ref refid="d9/dd0/Platform_8h_1a178c928e74b49565d9ce41c8d9bb85f6" kindref="member">GChar</ref> *</type>
+          <declname>strName</declname>
+        </param>
+        <param>
+          <type><ref refid="de/d54/Curve3_8h_1a87466430abb111a5cc4df0aa340d83fd" kindref="member">Curve3</ref> *</type>
+          <declname>pLinearPath</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d3a/Curve2_8h_1a13a0ab3262a00ddd4afa5b046577a106" kindref="member">Curve2</ref> *</type>
+          <declname>pLinearTravel</declname>
+        </param>
+        <param>
+          <type><ref refid="de/d54/Curve3_8h_1a87466430abb111a5cc4df0aa340d83fd" kindref="member">Curve3</ref> *</type>
+          <declname>pAngularPath</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d3a/Curve2_8h_1a13a0ab3262a00ddd4afa5b046577a106" kindref="member">Curve2</ref> *</type>
+          <declname>pAngularTravel</declname>
+        </param>
+        <param>
+          <type><ref refid="dc/d1a/Matrix2_8h_1ad8640b7ae1228956729500803a03d20b" kindref="member">EulerAngles</ref></type>
+          <declname>iEulerAnglesMode</declname>
+          <defval><ref refid="d6/d64/Matrix4_8h_1ad8640b7ae1228956729500803a03d20ba6bde411ae2034eb680459efa52f86111" kindref="member">EULER_ANGLES_ZYX</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Controllers/Motion/PathController.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d15/classPathController_1a72d813161c2f2c5ba53e059516c6f2a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~PathController</definition>
+        <argsstring>()</argsstring>
+        <name>~PathController</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Controllers/Motion/PathController.h" line="48"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d15/classPathController_1aa278709e93a4e28dc031b8654598c8e2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="df/d01/KinematicController_8h_1a81059b4122c9dd4608d347eb117ae8c9" kindref="member">ControllerType</ref></type>
+        <definition>virtual ControllerType GetType</definition>
+        <argsstring>() const </argsstring>
+        <name>GetType</name>
+        <reimplements refid="d5/df4/classKinematicController_1a7fd6d052b60b94c145638666d3de8960">GetType</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Controllers/Motion/PathController.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d15/classPathController_1a8e532f76064e85449d454e3000ce9633" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="de/d54/Curve3_8h_1a87466430abb111a5cc4df0aa340d83fd" kindref="member">Curve3</ref> *</type>
+        <definition>Curve3* GetLinearPath</definition>
+        <argsstring>() const </argsstring>
+        <name>GetLinearPath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Controllers/Motion/PathController.h" line="54"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d15/classPathController_1ae09dfde63619c16a061dd8dd015fe9c5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="dd/d3a/Curve2_8h_1a13a0ab3262a00ddd4afa5b046577a106" kindref="member">Curve2</ref> *</type>
+        <definition>Curve2* GetLinearTravel</definition>
+        <argsstring>() const </argsstring>
+        <name>GetLinearTravel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Controllers/Motion/PathController.h" line="55"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d15/classPathController_1a50d5e44b003953a5d6f84fca228f4149" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="de/d54/Curve3_8h_1a87466430abb111a5cc4df0aa340d83fd" kindref="member">Curve3</ref> *</type>
+        <definition>Curve3* GetAngularPath</definition>
+        <argsstring>() const </argsstring>
+        <name>GetAngularPath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Controllers/Motion/PathController.h" line="58"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d15/classPathController_1a3be20e86ea33a5aa965b28eab1dc2469" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="dd/d3a/Curve2_8h_1a13a0ab3262a00ddd4afa5b046577a106" kindref="member">Curve2</ref> *</type>
+        <definition>Curve2* GetAngularTravel</definition>
+        <argsstring>() const </argsstring>
+        <name>GetAngularTravel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Controllers/Motion/PathController.h" line="59"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d15/classPathController_1a04985a6e1049da688c55175d3f8315df" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="dc/d1a/Matrix2_8h_1ad8640b7ae1228956729500803a03d20b" kindref="member">EulerAngles</ref></type>
+        <definition>EulerAngles GetEulerAnglesMode</definition>
+        <argsstring>() const </argsstring>
+        <name>GetEulerAnglesMode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Controllers/Motion/PathController.h" line="62"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d15/classPathController_1a2346e9f2b2e36e7efc98215d2556c573" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void SetEulerAnglesMode</definition>
+        <argsstring>(EulerAngles iEulerAnglesMode)</argsstring>
+        <name>SetEulerAnglesMode</name>
+        <param>
+          <type><ref refid="dc/d1a/Matrix2_8h_1ad8640b7ae1228956729500803a03d20b" kindref="member">EulerAngles</ref></type>
+          <declname>iEulerAnglesMode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Controllers/Motion/PathController.h" line="63"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="d5/d15/classPathController_1a8e30af3b693b3d6158ff0af14beb97d3" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void _RootFindTravelParameters</definition>
+        <argsstring>(Scalar fControlTime, Scalar *outLinearTravelParameter, Scalar *outAngularTravelParameter) const </argsstring>
+        <name>_RootFindTravelParameters</name>
+        <param>
+          <type><ref refid="d0/d10/Scalar_8h_1abee0aca51a3a3e16c628155aa4ac6f12" kindref="member">Scalar</ref></type>
+          <declname>fControlTime</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/d10/Scalar_8h_1abee0aca51a3a3e16c628155aa4ac6f12" kindref="member">Scalar</ref> *</type>
+          <declname>outLinearTravelParameter</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/d10/Scalar_8h_1abee0aca51a3a3e16c628155aa4ac6f12" kindref="member">Scalar</ref> *</type>
+          <declname>outAngularTravelParameter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Controllers/Motion/PathController.h" line="68"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d15/classPathController_1a229d82a99052174d7f17113982b5995a" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">Bool</ref></type>
+        <definition>virtual Bool _UpdateControllerState</definition>
+        <argsstring>(Scalar fTimeStep)</argsstring>
+        <name>_UpdateControllerState</name>
+        <reimplements refid="d5/df4/classKinematicController_1a3b7bdf4ce9302b68f3fa2d5ff5e64318">_UpdateControllerState</reimplements>
+        <param>
+          <type><ref refid="d0/d10/Scalar_8h_1abee0aca51a3a3e16c628155aa4ac6f12" kindref="member">Scalar</ref></type>
+          <declname>fTimeStep</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Controllers/Motion/PathController.h" line="71"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="9682">
+        <label>PathController</label>
+        <link refid="d5/d15/classPathController"/>
+        <childnode refid="9683" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9683">
+        <label>MotionController</label>
+        <link refid="d9/d58/classMotionController"/>
+        <childnode refid="9684" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9684">
+        <label>KinematicController</label>
+        <link refid="d5/df4/classKinematicController"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="9735">
+        <label>EulerAngles</label>
+      </node>
+      <node id="9731">
+        <label>ControllerRepeat</label>
+      </node>
+      <node id="9696">
+        <label>IslandEdgeID</label>
+        <link refid="dd/d41/classIslandEdgeID"/>
+        <childnode refid="9690" relation="usage">
+          <edgelabel>pNodeA</edgelabel>
+          <edgelabel>pNodeB</edgelabel>
+        </childnode>
+      </node>
+      <node id="9716">
+        <label>Mesh</label>
+        <link refid="d9/d5e/classMesh"/>
+        <childnode refid="9717" relation="usage">
+          <edgelabel>m_pVF</edgelabel>
+        </childnode>
+        <childnode refid="9693" relation="usage">
+          <edgelabel>m_iIndexOffset</edgelabel>
+          <edgelabel>m_iVertexOffset</edgelabel>
+        </childnode>
+        <childnode refid="9714" relation="usage">
+          <edgelabel>m_bDynamicUpdate</edgelabel>
+        </childnode>
+        <childnode refid="9722" relation="usage">
+          <edgelabel>m_pIB</edgelabel>
+        </childnode>
+        <childnode refid="9724" relation="usage">
+          <edgelabel>m_pVB</edgelabel>
+        </childnode>
+      </node>
+      <node id="9733">
+        <label>Real</label>
+      </node>
+      <node id="9699">
+        <label>JacobianConstraint</label>
+        <link refid="d2/d61/classJacobianConstraint"/>
+        <childnode refid="9700" relation="usage">
+          <edgelabel>vJAngularA</edgelabel>
+          <edgelabel>vJLinearAxis</edgelabel>
+          <edgelabel>vJAngularB</edgelabel>
+          <edgelabel>vInvIBxJtAngB</edgelabel>
+          <edgelabel>vInvIAxJtAngA</edgelabel>
+        </childnode>
+        <childnode refid="9702" relation="usage">
+          <edgelabel>fInvDiagJWJtAB</edgelabel>
+        </childnode>
+      </node>
+      <node id="9727">
+        <label>static const Scalar</label>
+      </node>
+      <node id="9725">
+        <label>VertexBufferUsage</label>
+      </node>
+      <node id="9689">
+        <label>BodyNode</label>
+        <link refid="de/df0/classBodyNode"/>
+        <childnode refid="9690" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9700" relation="usage">
+          <edgelabel>m_vTorqueBuffer</edgelabel>
+          <edgelabel>m_vLinearCorrectionBuffer</edgelabel>
+          <edgelabel>m_vForceBuffer</edgelabel>
+          <edgelabel>m_vAngularCorrectionBuffer</edgelabel>
+          <edgelabel>m_vLinearImpulseBuffer</edgelabel>
+          <edgelabel>m_vAngularSpeed</edgelabel>
+          <edgelabel>m_vLinearSpeed</edgelabel>
+          <edgelabel>m_vAngularImpulseBuffer</edgelabel>
+        </childnode>
+        <childnode refid="9713" relation="usage">
+          <edgelabel>m_matInvInertiaTensor</edgelabel>
+          <edgelabel>m_matInertiaTensor</edgelabel>
+          <edgelabel>sm_matInfinity</edgelabel>
+        </childnode>
+        <childnode refid="9702" relation="usage">
+          <edgelabel>m_fDensity</edgelabel>
+          <edgelabel>m_fMass</edgelabel>
+          <edgelabel>m_fAngularDamping</edgelabel>
+          <edgelabel>m_fRestitution</edgelabel>
+          <edgelabel>m_fFriction</edgelabel>
+          <edgelabel>m_fInvMass</edgelabel>
+          <edgelabel>m_fLinearDamping</edgelabel>
+        </childnode>
+        <childnode refid="9726" relation="usage">
+          <edgelabel>m_qOrientation</edgelabel>
+        </childnode>
+        <childnode refid="9693" relation="usage">
+          <edgelabel>m_iSleepTime</edgelabel>
+        </childnode>
+        <childnode refid="9728" relation="usage">
+          <edgelabel>m_iCollisionMask</edgelabel>
+          <edgelabel>m_iCollisionGroup</edgelabel>
+        </childnode>
+        <childnode refid="9714" relation="usage">
+          <edgelabel>m_bSensor</edgelabel>
+          <edgelabel>m_bSleeping</edgelabel>
+          <edgelabel>m_bStatic</edgelabel>
+        </childnode>
+        <childnode refid="9711" relation="usage">
+          <edgelabel>m_vTransform</edgelabel>
+        </childnode>
+        <childnode refid="9710" relation="usage">
+          <edgelabel>m_vCenterOfMass</edgelabel>
+          <edgelabel>m_vPosition</edgelabel>
+        </childnode>
+        <childnode refid="9715" relation="usage">
+          <edgelabel>m_pLocalShape</edgelabel>
+        </childnode>
+        <childnode refid="9707" relation="usage">
+          <edgelabel>m_pWorldShape</edgelabel>
+        </childnode>
+      </node>
+      <node id="9713">
+        <label>TMatrix3&lt; Scalar &gt;</label>
+        <link refid="d7/dee/classTMatrix3"/>
+        <childnode refid="9713" relation="usage">
+          <edgelabel>Identity</edgelabel>
+          <edgelabel>Null</edgelabel>
+        </childnode>
+        <childnode refid="9702" relation="usage">
+          <edgelabel>ONE</edgelabel>
+          <edgelabel>m20</edgelabel>
+          <edgelabel>m21</edgelabel>
+          <edgelabel>m10</edgelabel>
+          <edgelabel>m22</edgelabel>
+          <edgelabel>m11</edgelabel>
+          <edgelabel>m00</edgelabel>
+          <edgelabel>TWO</edgelabel>
+          <edgelabel>m12</edgelabel>
+          <edgelabel>m01</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="9702">
+        <label>float</label>
+      </node>
+      <node id="9729">
+        <label>ShapeController</label>
+        <link refid="df/da8/classShapeController"/>
+        <childnode refid="9687" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9728">
+        <label>UInt64</label>
+      </node>
+      <node id="9712">
+        <label>TMatrix4&lt; Scalar &gt;</label>
+        <link refid="d5/d09/classTMatrix4"/>
+        <childnode refid="9712" relation="usage">
+          <edgelabel>Identity</edgelabel>
+          <edgelabel>Null</edgelabel>
+        </childnode>
+        <childnode refid="9702" relation="usage">
+          <edgelabel>ONE</edgelabel>
+          <edgelabel>m30</edgelabel>
+          <edgelabel>m31</edgelabel>
+          <edgelabel>m20</edgelabel>
+          <edgelabel>m32</edgelabel>
+          <edgelabel>m21</edgelabel>
+          <edgelabel>m10</edgelabel>
+          <edgelabel>m33</edgelabel>
+          <edgelabel>m22</edgelabel>
+          <edgelabel>m11</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="9717">
+        <label>VertexFormat</label>
+        <link refid="da/dc2/classVertexFormat"/>
+        <childnode refid="9718" relation="usage">
+          <edgelabel>m_arrFields</edgelabel>
+        </childnode>
+        <childnode refid="9693" relation="usage">
+          <edgelabel>m_iSize</edgelabel>
+          <edgelabel>m_iFieldCount</edgelabel>
+          <edgelabel>m_arrUsageLUT</edgelabel>
+        </childnode>
+        <childnode refid="9714" relation="usage">
+          <edgelabel>m_bFinalized</edgelabel>
+        </childnode>
+        <childnode refid="9721" relation="usage">
+          <edgelabel>sm_arrComponentCount</edgelabel>
+          <edgelabel>sm_arrTypeSize</edgelabel>
+          <edgelabel>sm_arrComponentSize</edgelabel>
+        </childnode>
+      </node>
+      <node id="9726">
+        <label>TQuaternion&lt; Scalar &gt;</label>
+        <link refid="d5/dad/classTQuaternion"/>
+        <childnode refid="9726" relation="usage">
+          <edgelabel>Identity</edgelabel>
+          <edgelabel>Null</edgelabel>
+        </childnode>
+        <childnode refid="9727" relation="usage">
+          <edgelabel>ONE</edgelabel>
+          <edgelabel>TWO</edgelabel>
+          <edgelabel>ZERO</edgelabel>
+        </childnode>
+        <childnode refid="9701" relation="usage">
+          <edgelabel>W</edgelabel>
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+          <edgelabel>Z</edgelabel>
+        </childnode>
+      </node>
+      <node id="9718">
+        <label>VFField</label>
+        <link refid="de/d92/structVFField"/>
+        <childnode refid="9719" relation="usage">
+          <edgelabel>iUsage</edgelabel>
+        </childnode>
+        <childnode refid="9693" relation="usage">
+          <edgelabel>iSize</edgelabel>
+          <edgelabel>iUsageIndex</edgelabel>
+          <edgelabel>iOffset</edgelabel>
+        </childnode>
+        <childnode refid="9720" relation="usage">
+          <edgelabel>iType</edgelabel>
+        </childnode>
+      </node>
+      <node id="9685">
+        <label>PathController</label>
+        <link refid="d5/d15/classPathController"/>
+        <childnode refid="9686" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9732" relation="usage">
+          <edgelabel>m_pLinearTravel</edgelabel>
+          <edgelabel>m_pAngularTravel</edgelabel>
+        </childnode>
+        <childnode refid="9734" relation="usage">
+          <edgelabel>m_pAngularPath</edgelabel>
+          <edgelabel>m_pLinearPath</edgelabel>
+        </childnode>
+        <childnode refid="9735" relation="usage">
+          <edgelabel>m_iEulerAnglesMode</edgelabel>
+        </childnode>
+      </node>
+      <node id="9721">
+        <label>unsigned int</label>
+      </node>
+      <node id="9692">
+        <label>unsigned char</label>
+      </node>
+      <node id="9732">
+        <label>TCurve2&lt; Real &gt;</label>
+        <link refid="de/d57/classTCurve2"/>
+        <childnode refid="9733" relation="usage">
+          <edgelabel>m_fMinT</edgelabel>
+          <edgelabel>m_fMaxT</edgelabel>
+        </childnode>
+      </node>
+      <node id="9707">
+        <label>TransformedShape</label>
+        <link refid="d2/d1b/classTransformedShape"/>
+        <childnode refid="9708" relation="usage">
+          <edgelabel>m_bvWorldAAB</edgelabel>
+        </childnode>
+        <childnode refid="9711" relation="usage">
+          <edgelabel>m_vTransform</edgelabel>
+        </childnode>
+        <childnode refid="9715" relation="usage">
+          <edgelabel>m_pShape</edgelabel>
+        </childnode>
+      </node>
+      <node id="9693">
+        <label>int</label>
+      </node>
+      <node id="9708">
+        <label>TBVAABox&lt; Scalar &gt;</label>
+        <link refid="d9/d90/classTBVAABox"/>
+        <childnode refid="9709" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9700" relation="usage">
+          <edgelabel>m_vExtents</edgelabel>
+        </childnode>
+        <childnode refid="9710" relation="usage">
+          <edgelabel>m_vCenter</edgelabel>
+        </childnode>
+      </node>
+      <node id="9705">
+        <label>ContactManifold</label>
+        <link refid="d2/d6f/classContactManifold"/>
+      </node>
+      <node id="9701">
+        <label>Scalar</label>
+      </node>
+      <node id="9694">
+        <label>JointEdge</label>
+        <link refid="df/d01/classJointEdge"/>
+        <childnode refid="9695" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9697" relation="usage">
+          <edgelabel>m_pConstraint</edgelabel>
+        </childnode>
+      </node>
+      <node id="9720">
+        <label>VFFieldType</label>
+      </node>
+      <node id="9703">
+        <label>RigidBody</label>
+        <link refid="d6/d88/classRigidBody"/>
+        <childnode refid="9689" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9723">
+        <label>IndexBufferUsage</label>
+      </node>
+      <node id="9711">
+        <label>TTransform3&lt; Scalar &gt;</label>
+        <link refid="d0/d75/classTTransform3"/>
+        <childnode refid="9700" relation="usage">
+          <edgelabel>m_vScale</edgelabel>
+          <edgelabel>m_vInvScale</edgelabel>
+          <edgelabel>m_vInvTranslate</edgelabel>
+          <edgelabel>m_vTranslate</edgelabel>
+        </childnode>
+        <childnode refid="9712" relation="usage">
+          <edgelabel>m_matHMatrix</edgelabel>
+        </childnode>
+        <childnode refid="9713" relation="usage">
+          <edgelabel>m_matInvTransform</edgelabel>
+          <edgelabel>m_matTransform</edgelabel>
+        </childnode>
+        <childnode refid="9714" relation="usage">
+          <edgelabel>m_bIsUniformScale</edgelabel>
+          <edgelabel>m_bIsIdentity</edgelabel>
+          <edgelabel>m_bUpdateInverse</edgelabel>
+          <edgelabel>m_bIsRotScale</edgelabel>
+        </childnode>
+        <childnode refid="9711" relation="usage">
+          <edgelabel>Identity</edgelabel>
+        </childnode>
+      </node>
+      <node id="9700">
+        <label>TVector3&lt; Scalar &gt;</label>
+        <link refid="de/d40/classTVector3"/>
+        <childnode refid="9700" relation="usage">
+          <edgelabel>Null</edgelabel>
+          <edgelabel>eI</edgelabel>
+          <edgelabel>eJ</edgelabel>
+          <edgelabel>eK</edgelabel>
+        </childnode>
+        <childnode refid="9701" relation="usage">
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+          <edgelabel>Z</edgelabel>
+        </childnode>
+      </node>
+      <node id="9691">
+        <label>Island</label>
+        <link refid="d0/dd6/classIsland"/>
+        <childnode refid="9691" relation="usage">
+          <edgelabel>m_pNextInWorld</edgelabel>
+          <edgelabel>m_pPrevInWorld</edgelabel>
+        </childnode>
+        <childnode refid="9692" relation="usage">
+          <edgelabel>m_iColor</edgelabel>
+        </childnode>
+        <childnode refid="9689" relation="usage">
+          <edgelabel>m_pListBodies</edgelabel>
+        </childnode>
+        <childnode refid="9693" relation="usage">
+          <edgelabel>m_iContactCount</edgelabel>
+          <edgelabel>m_iJointCount</edgelabel>
+          <edgelabel>m_iBodyCount</edgelabel>
+          <edgelabel>m_iStackLayerCount</edgelabel>
+        </childnode>
+        <childnode refid="9694" relation="usage">
+          <edgelabel>m_pListJoints</edgelabel>
+        </childnode>
+        <childnode refid="9704" relation="usage">
+          <edgelabel>m_pListContacts</edgelabel>
+        </childnode>
+      </node>
+      <node id="9710">
+        <label>TVertex3&lt; Scalar &gt;</label>
+        <link refid="dc/d75/classTVertex3"/>
+        <childnode refid="9701" relation="usage">
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+          <edgelabel>Z</edgelabel>
+        </childnode>
+        <childnode refid="9710" relation="usage">
+          <edgelabel>Null</edgelabel>
+        </childnode>
+      </node>
+      <node id="9715">
+        <label>Shape</label>
+        <link refid="de/d0a/classShape"/>
+        <childnode refid="9708" relation="usage">
+          <edgelabel>m_bvLocalAAB</edgelabel>
+        </childnode>
+        <childnode refid="9716" relation="usage">
+          <edgelabel>m_pMesh</edgelabel>
+        </childnode>
+      </node>
+      <node id="9688">
+        <label>KinematicBody</label>
+        <link refid="dc/dd4/classKinematicBody"/>
+        <childnode refid="9689" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9686" relation="usage">
+          <edgelabel>m_arrMotionControllers</edgelabel>
+        </childnode>
+        <childnode refid="9693" relation="usage">
+          <edgelabel>m_iMotionControllerCount</edgelabel>
+          <edgelabel>m_iShapeControllerCount</edgelabel>
+        </childnode>
+        <childnode refid="9714" relation="usage">
+          <edgelabel>m_bControllerMotionUpdate</edgelabel>
+          <edgelabel>m_bControllerShapeUpdate</edgelabel>
+        </childnode>
+        <childnode refid="9729" relation="usage">
+          <edgelabel>m_arrShapeControllers</edgelabel>
+        </childnode>
+      </node>
+      <node id="9704">
+        <label>ContactEdge</label>
+        <link refid="dc/d79/classContactEdge"/>
+        <childnode refid="9695" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9705" relation="usage">
+          <edgelabel>m_pContactManifold</edgelabel>
+        </childnode>
+        <childnode refid="9706" relation="usage">
+          <edgelabel>m_pNarrowPhase</edgelabel>
+        </childnode>
+      </node>
+      <node id="9719">
+        <label>VFFieldUsage</label>
+      </node>
+      <node id="9695">
+        <label>IslandEdge</label>
+        <link refid="da/d63/classIslandEdge"/>
+        <childnode refid="9696" relation="usage">
+          <edgelabel>m_idEdge</edgelabel>
+        </childnode>
+        <childnode refid="9691" relation="usage">
+          <edgelabel>m_pIsland</edgelabel>
+        </childnode>
+        <childnode refid="9692" relation="usage">
+          <edgelabel>m_iColor</edgelabel>
+        </childnode>
+        <childnode refid="9690" relation="usage">
+          <edgelabel>m_pNodeA</edgelabel>
+          <edgelabel>m_pNodeB</edgelabel>
+        </childnode>
+        <childnode refid="9693" relation="usage">
+          <edgelabel>m_iStackLayer</edgelabel>
+        </childnode>
+        <childnode refid="9695" relation="usage">
+          <edgelabel>m_pNextInWorld</edgelabel>
+          <edgelabel>m_pNextInIsland</edgelabel>
+          <edgelabel>m_pPrevInNodeA</edgelabel>
+          <edgelabel>m_pNextInNodeA</edgelabel>
+          <edgelabel>m_pPrevInNodeB</edgelabel>
+          <edgelabel>m_pNextInNodeB</edgelabel>
+          <edgelabel>m_pPrevInWorld</edgelabel>
+          <edgelabel>m_pPrevInIsland</edgelabel>
+        </childnode>
+      </node>
+      <node id="9724">
+        <label>VertexBuffer</label>
+        <link refid="d7/d72/classVertexBuffer"/>
+        <childnode refid="9692" relation="usage">
+          <edgelabel>m_arrVertices</edgelabel>
+        </childnode>
+        <childnode refid="9693" relation="usage">
+          <edgelabel>m_iSize</edgelabel>
+          <edgelabel>m_iVertexCount</edgelabel>
+          <edgelabel>m_iVertexSize</edgelabel>
+        </childnode>
+        <childnode refid="9725" relation="usage">
+          <edgelabel>m_iUsage</edgelabel>
+        </childnode>
+      </node>
+      <node id="9734">
+        <label>TCurve3&lt; Real &gt;</label>
+        <link refid="d7/d44/classTCurve3"/>
+        <childnode refid="9733" relation="usage">
+          <edgelabel>m_fMinT</edgelabel>
+          <edgelabel>m_fMaxT</edgelabel>
+        </childnode>
+      </node>
+      <node id="9686">
+        <label>MotionController</label>
+        <link refid="d9/d58/classMotionController"/>
+        <childnode refid="9687" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9700" relation="usage">
+          <edgelabel>m_vAngularSpeed</edgelabel>
+          <edgelabel>m_vLinearSpeed</edgelabel>
+        </childnode>
+        <childnode refid="9726" relation="usage">
+          <edgelabel>m_qOrientation</edgelabel>
+        </childnode>
+        <childnode refid="9710" relation="usage">
+          <edgelabel>m_vPosition</edgelabel>
+        </childnode>
+      </node>
+      <node id="9687">
+        <label>KinematicController</label>
+        <link refid="d5/df4/classKinematicController"/>
+        <childnode refid="9688" relation="usage">
+          <edgelabel>m_pTarget</edgelabel>
+        </childnode>
+        <childnode refid="9730" relation="usage">
+          <edgelabel>m_strName</edgelabel>
+        </childnode>
+        <childnode refid="9702" relation="usage">
+          <edgelabel>m_fLocalTime</edgelabel>
+          <edgelabel>Phase</edgelabel>
+          <edgelabel>MinTime</edgelabel>
+          <edgelabel>MaxTime</edgelabel>
+          <edgelabel>Frequency</edgelabel>
+        </childnode>
+        <childnode refid="9714" relation="usage">
+          <edgelabel>Enabled</edgelabel>
+        </childnode>
+        <childnode refid="9731" relation="usage">
+          <edgelabel>Repeat</edgelabel>
+        </childnode>
+      </node>
+      <node id="9714">
+        <label>bool</label>
+      </node>
+      <node id="9697">
+        <label>Constraint</label>
+        <link refid="d8/dcd/classConstraint"/>
+        <childnode refid="9698" relation="usage">
+          <edgelabel>m_arrRows</edgelabel>
+        </childnode>
+        <childnode refid="9693" relation="usage">
+          <edgelabel>m_iRowCount</edgelabel>
+        </childnode>
+        <childnode refid="9703" relation="usage">
+          <edgelabel>m_pRigidBodyA</edgelabel>
+          <edgelabel>m_pRigidBodyB</edgelabel>
+        </childnode>
+      </node>
+      <node id="9709">
+        <label>TBoundingVolume&lt; Scalar &gt;</label>
+        <link refid="d6/d19/classTBoundingVolume"/>
+      </node>
+      <node id="9730">
+        <label>char</label>
+      </node>
+      <node id="9706">
+        <label>NarrowPhase</label>
+        <link refid="dd/d93/classNarrowPhase"/>
+        <childnode refid="9702" relation="usage">
+          <edgelabel>ZeroTolerance</edgelabel>
+        </childnode>
+        <childnode refid="9705" relation="usage">
+          <edgelabel>m_pCollisionManifold</edgelabel>
+        </childnode>
+        <childnode refid="9707" relation="usage">
+          <edgelabel>m_pShapeA</edgelabel>
+          <edgelabel>m_pShapeB</edgelabel>
+        </childnode>
+      </node>
+      <node id="9722">
+        <label>IndexBuffer</label>
+        <link refid="dd/df7/classIndexBuffer"/>
+        <childnode refid="9692" relation="usage">
+          <edgelabel>m_arrIndices</edgelabel>
+        </childnode>
+        <childnode refid="9693" relation="usage">
+          <edgelabel>m_iIndexSize</edgelabel>
+          <edgelabel>m_iSize</edgelabel>
+          <edgelabel>m_iIndexCount</edgelabel>
+        </childnode>
+        <childnode refid="9723" relation="usage">
+          <edgelabel>m_iUsage</edgelabel>
+        </childnode>
+      </node>
+      <node id="9698">
+        <label>ConstraintRow</label>
+        <link refid="dd/d74/structConstraintRow"/>
+        <childnode refid="9699" relation="usage">
+          <edgelabel>constrJacobian</edgelabel>
+        </childnode>
+        <childnode refid="9702" relation="usage">
+          <edgelabel>fUpperLimit</edgelabel>
+          <edgelabel>fLowerLimit</edgelabel>
+          <edgelabel>fError</edgelabel>
+          <edgelabel>fCFM</edgelabel>
+          <edgelabel>fImpulse</edgelabel>
+        </childnode>
+      </node>
+      <node id="9690">
+        <label>IslandNode</label>
+        <link refid="d4/d8c/classIslandNode"/>
+        <childnode refid="9691" relation="usage">
+          <edgelabel>m_pIsland</edgelabel>
+        </childnode>
+        <childnode refid="9690" relation="usage">
+          <edgelabel>m_pNextInWorld</edgelabel>
+          <edgelabel>m_pNextInIsland</edgelabel>
+          <edgelabel>m_pPrevInWorld</edgelabel>
+          <edgelabel>m_pPrevInIsland</edgelabel>
+        </childnode>
+        <childnode refid="9693" relation="usage">
+          <edgelabel>m_iContactCount</edgelabel>
+          <edgelabel>m_iJointCount</edgelabel>
+          <edgelabel>m_iStackLayer</edgelabel>
+          <edgelabel>m_iIslandRefCount</edgelabel>
+        </childnode>
+        <childnode refid="9714" relation="usage">
+          <edgelabel>m_bFixed</edgelabel>
+        </childnode>
+        <childnode refid="9694" relation="usage">
+          <edgelabel>m_pListJoints</edgelabel>
+        </childnode>
+        <childnode refid="9704" relation="usage">
+          <edgelabel>m_pListContacts</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Controllers/Motion/PathController.h" line="38" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Controllers/Motion/PathController.h" bodystart="37" bodyend="83"/>
+    <listofallmembers>
+      <member refid="d5/df4/classKinematicController_1aff9a34dd7e4916679856842f3bfd8386" prot="protected" virt="non-virtual"><scope>PathController</scope><name>_ComputeControlTime</name></member>
+      <member refid="d5/d15/classPathController_1a8e30af3b693b3d6158ff0af14beb97d3" prot="protected" virt="non-virtual"><scope>PathController</scope><name>_RootFindTravelParameters</name></member>
+      <member refid="d5/d15/classPathController_1a229d82a99052174d7f17113982b5995a" prot="protected" virt="virtual"><scope>PathController</scope><name>_UpdateControllerState</name></member>
+      <member refid="d5/df4/classKinematicController_1ac378c0bd137253b1003eba332042841c" prot="public" virt="non-virtual"><scope>PathController</scope><name>Enabled</name></member>
+      <member refid="d5/df4/classKinematicController_1ab971fff77c43c5de899bcd24d81268ca" prot="public" virt="non-virtual"><scope>PathController</scope><name>Frequency</name></member>
+      <member refid="d5/d15/classPathController_1a50d5e44b003953a5d6f84fca228f4149" prot="public" virt="non-virtual"><scope>PathController</scope><name>GetAngularPath</name></member>
+      <member refid="d9/d58/classMotionController_1a5a1e0cd0103d5eb717016540c1069ae2" prot="public" virt="non-virtual"><scope>PathController</scope><name>GetAngularSpeed</name></member>
+      <member refid="d5/d15/classPathController_1a3be20e86ea33a5aa965b28eab1dc2469" prot="public" virt="non-virtual"><scope>PathController</scope><name>GetAngularTravel</name></member>
+      <member refid="d5/d15/classPathController_1a04985a6e1049da688c55175d3f8315df" prot="public" virt="non-virtual"><scope>PathController</scope><name>GetEulerAnglesMode</name></member>
+      <member refid="d5/d15/classPathController_1a8e532f76064e85449d454e3000ce9633" prot="public" virt="non-virtual"><scope>PathController</scope><name>GetLinearPath</name></member>
+      <member refid="d9/d58/classMotionController_1a9b800557e375acd50c61550c5a12fb7d" prot="public" virt="non-virtual"><scope>PathController</scope><name>GetLinearSpeed</name></member>
+      <member refid="d5/d15/classPathController_1ae09dfde63619c16a061dd8dd015fe9c5" prot="public" virt="non-virtual"><scope>PathController</scope><name>GetLinearTravel</name></member>
+      <member refid="d5/df4/classKinematicController_1a8f1afe24b493300df977323591949d76" prot="public" virt="non-virtual"><scope>PathController</scope><name>GetLocalTime</name></member>
+      <member refid="d5/df4/classKinematicController_1acb24949ad36a8ed7b0008515d78ac5ae" prot="public" virt="non-virtual"><scope>PathController</scope><name>GetName</name></member>
+      <member refid="d9/d58/classMotionController_1ab710a5e49d2b1406b86d521b3155f2c9" prot="public" virt="non-virtual"><scope>PathController</scope><name>GetOrientation</name></member>
+      <member refid="d9/d58/classMotionController_1a8b34c5f045b2fc7958c379155618bc71" prot="public" virt="non-virtual"><scope>PathController</scope><name>GetPosition</name></member>
+      <member refid="d5/df4/classKinematicController_1a5b4e4343648629210ff33e366c8c4327" prot="public" virt="non-virtual"><scope>PathController</scope><name>GetTarget</name></member>
+      <member refid="d5/d15/classPathController_1aa278709e93a4e28dc031b8654598c8e2" prot="public" virt="virtual"><scope>PathController</scope><name>GetType</name></member>
+      <member refid="d5/df4/classKinematicController_1ac443936bd977e94a5236643f7316cfa5" prot="public" virt="non-virtual"><scope>PathController</scope><name>IsMotionController</name></member>
+      <member refid="d5/df4/classKinematicController_1a00aadd6e7582c0b7622f64487b8561cc" prot="public" virt="non-virtual"><scope>PathController</scope><name>IsShapeController</name></member>
+      <member refid="d5/df4/classKinematicController_1af97aac41e560205a344c135e26df962a" prot="public" virt="non-virtual"><scope>PathController</scope><name>KinematicController</name></member>
+      <member refid="d5/df4/classKinematicController_1a9ee85b58e2f28e58df1af23b2ab65c7b" prot="protected" virt="non-virtual"><scope>PathController</scope><name>m_fLocalTime</name></member>
+      <member refid="d5/d15/classPathController_1ac8efb1a8a0c7472fe69b8e289bf71320" prot="protected" virt="non-virtual"><scope>PathController</scope><name>m_iEulerAnglesMode</name></member>
+      <member refid="d5/d15/classPathController_1a202c2875a89e2ea6eaacf51259b43617" prot="protected" virt="non-virtual"><scope>PathController</scope><name>m_pAngularPath</name></member>
+      <member refid="d5/d15/classPathController_1aef07d83248d817404819a4b061520f6a" prot="protected" virt="non-virtual"><scope>PathController</scope><name>m_pAngularTravel</name></member>
+      <member refid="d5/d15/classPathController_1ab008e0c82dd7c9eef41e9c7b88af205e" prot="protected" virt="non-virtual"><scope>PathController</scope><name>m_pLinearPath</name></member>
+      <member refid="d5/d15/classPathController_1a42fc984f1316f988b20c5b5de9c62ac5" prot="protected" virt="non-virtual"><scope>PathController</scope><name>m_pLinearTravel</name></member>
+      <member refid="d5/df4/classKinematicController_1ab0f8d7e7b0b40be6118aefa1836fa83f" prot="protected" virt="non-virtual"><scope>PathController</scope><name>m_pTarget</name></member>
+      <member refid="d9/d58/classMotionController_1ac7891bb4259b7333f6d70cd15d76885a" prot="protected" virt="non-virtual"><scope>PathController</scope><name>m_qOrientation</name></member>
+      <member refid="d5/df4/classKinematicController_1a11c32e919d94c6e3f596b42155ee0667" prot="protected" virt="non-virtual"><scope>PathController</scope><name>m_strName</name></member>
+      <member refid="d9/d58/classMotionController_1aa7fc03bd205986cafaf7f43c09cd6f5b" prot="protected" virt="non-virtual"><scope>PathController</scope><name>m_vAngularSpeed</name></member>
+      <member refid="d9/d58/classMotionController_1a13b9336b289f3e5f84d4452e1ac6f21e" prot="protected" virt="non-virtual"><scope>PathController</scope><name>m_vLinearSpeed</name></member>
+      <member refid="d9/d58/classMotionController_1ac029f332c4539d3a173636e09a93fa3e" prot="protected" virt="non-virtual"><scope>PathController</scope><name>m_vPosition</name></member>
+      <member refid="d5/df4/classKinematicController_1ac46c40c4926c8a680d4e3b51a71751a7" prot="public" virt="non-virtual"><scope>PathController</scope><name>MaxTime</name></member>
+      <member refid="d5/df4/classKinematicController_1a329f095e70f15e83a0dda6a3198c0742" prot="public" virt="non-virtual"><scope>PathController</scope><name>MinTime</name></member>
+      <member refid="d9/d58/classMotionController_1a466d44997fc43440eba7f02a0c59412e" prot="public" virt="non-virtual"><scope>PathController</scope><name>MotionController</name></member>
+      <member refid="d5/d15/classPathController_1a7f4fdb90782d4ca0f5d60585529e3322" prot="public" virt="non-virtual"><scope>PathController</scope><name>PathController</name></member>
+      <member refid="d5/df4/classKinematicController_1a85abe69a258db5a00d4654828228e6c3" prot="public" virt="non-virtual"><scope>PathController</scope><name>Phase</name></member>
+      <member refid="d5/df4/classKinematicController_1a43b1586bf39bca1b505c5300fd4dee38" prot="public" virt="non-virtual"><scope>PathController</scope><name>Repeat</name></member>
+      <member refid="d5/d15/classPathController_1a2346e9f2b2e36e7efc98215d2556c573" prot="public" virt="non-virtual"><scope>PathController</scope><name>SetEulerAnglesMode</name></member>
+      <member refid="d5/df4/classKinematicController_1aa3e49dba0a8a9c61983975b0e6c4c2f5" prot="public" virt="non-virtual"><scope>PathController</scope><name>SetLocalTime</name></member>
+      <member refid="d5/df4/classKinematicController_1a197240ca47f89e9a3a0be6459e4436c7" prot="public" virt="virtual"><scope>PathController</scope><name>SetTarget</name></member>
+      <member refid="d5/df4/classKinematicController_1a2adb9c9dce9d73a7cd4735c81c041132" prot="public" virt="non-virtual"><scope>PathController</scope><name>Update</name></member>
+      <member refid="d5/df4/classKinematicController_1af7a48c232cd5a9f06d4ccfb1582bf026" prot="public" virt="virtual"><scope>PathController</scope><name>~KinematicController</name></member>
+      <member refid="d9/d58/classMotionController_1aeafde922916c4a1da609f1c46261d249" prot="public" virt="virtual"><scope>PathController</scope><name>~MotionController</name></member>
+      <member refid="d5/d15/classPathController_1a72d813161c2f2c5ba53e059516c6f2a8" prot="public" virt="virtual"><scope>PathController</scope><name>~PathController</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

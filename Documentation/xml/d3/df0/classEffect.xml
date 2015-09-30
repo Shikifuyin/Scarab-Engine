@@ -1,0 +1,755 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d3/df0/classEffect" kind="class" prot="public">
+    <compoundname>Effect</compoundname>
+    <derivedcompoundref refid="db/de3/classEffect2D" prot="public" virt="non-virtual">Effect2D</derivedcompoundref>
+    <derivedcompoundref refid="d7/d33/classEffectColor" prot="public" virt="non-virtual">EffectColor</derivedcompoundref>
+    <derivedcompoundref refid="d8/de9/classEffectDefault" prot="public" virt="non-virtual">EffectDefault</derivedcompoundref>
+    <derivedcompoundref refid="dc/d98/classEffectLightAmbient" prot="public" virt="non-virtual">EffectLightAmbient</derivedcompoundref>
+    <derivedcompoundref refid="d7/da5/classEffectLightPointGouraud" prot="public" virt="non-virtual">EffectLightPointGouraud</derivedcompoundref>
+    <derivedcompoundref refid="d8/d48/classEffectLightPointPhong" prot="public" virt="non-virtual">EffectLightPointPhong</derivedcompoundref>
+    <derivedcompoundref refid="d5/d3f/classEffectMaterial" prot="public" virt="non-virtual">EffectMaterial</derivedcompoundref>
+    <derivedcompoundref refid="db/dbd/classEffectMaterialTexture" prot="public" virt="non-virtual">EffectMaterialTexture</derivedcompoundref>
+    <derivedcompoundref refid="d3/d18/classEffectText" prot="public" virt="non-virtual">EffectText</derivedcompoundref>
+    <derivedcompoundref refid="d4/d1c/classEffectTexture1D" prot="public" virt="non-virtual">EffectTexture1D</derivedcompoundref>
+    <derivedcompoundref refid="d0/dbc/classEffectTexture2D" prot="public" virt="non-virtual">EffectTexture2D</derivedcompoundref>
+    <derivedcompoundref refid="d0/d56/classEffectTexture3D" prot="public" virt="non-virtual">EffectTexture3D</derivedcompoundref>
+    <includes refid="d3/d24/Effect_8h" local="no">Effect.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="d3/df0/classEffect_1a78fdde6d2999253ff283897395706605" prot="protected" static="no" mutable="no">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt m_iTechniqueCount</definition>
+        <argsstring></argsstring>
+        <name>m_iTechniqueCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Effects/Effect.h" line="62" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Effects/Effect.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/df0/classEffect_1a06f0fbefb9e9dc9dc2a9d8adc32e5ffb" prot="protected" static="no" mutable="no">
+        <type><ref refid="db/df6/classEffectTechnique" kindref="compound">EffectTechnique</ref> *</type>
+        <definition>EffectTechnique* m_arrTechniques[EFFECT_MAX_TECHNIQUES]</definition>
+        <argsstring>[EFFECT_MAX_TECHNIQUES]</argsstring>
+        <name>m_arrTechniques</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Effects/Effect.h" line="63" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Effects/Effect.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d3/df0/classEffect_1af502b922b791b4f2b41ff86e68e64382" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Effect</definition>
+        <argsstring>()</argsstring>
+        <name>Effect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Effects/Effect.h" line="38"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/df0/classEffect_1ace126c2483e698f58e7668bcf1b9bc13" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~Effect</definition>
+        <argsstring>()</argsstring>
+        <name>~Effect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Effects/Effect.h" line="39"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/df0/classEffect_1a2fe2bb0ab673f8bcabe4f7c8c813cae2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void AddTechnique</definition>
+        <argsstring>(EffectTechnique *pTechnique)</argsstring>
+        <name>AddTechnique</name>
+        <param>
+          <type><ref refid="db/df6/classEffectTechnique" kindref="compound">EffectTechnique</ref> *</type>
+          <declname>pTechnique</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Effects/Effect.h" line="42"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/df0/classEffect_1aa815526b7a71ba3c5fc6080924f31861" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetTechniqueCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetTechniqueCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Effects/Effect.h" line="45"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/df0/classEffect_1a90685b11c3a4840217abb47df62c9e13" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="db/df6/classEffectTechnique" kindref="compound">EffectTechnique</ref> *</type>
+        <definition>EffectTechnique* GetTechnique</definition>
+        <argsstring>(UInt iIndex) const </argsstring>
+        <name>GetTechnique</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Effects/Effect.h" line="46"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/df0/classEffect_1a86e68f6982daa8744f9a009c3e88f5cd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetPassCount</definition>
+        <argsstring>(UInt iTechnique) const </argsstring>
+        <name>GetPassCount</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iTechnique</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Effects/Effect.h" line="48"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/df0/classEffect_1acbb06f32207e4bd32d119c7e66722554" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="dc/dfd/classEffectPass" kindref="compound">EffectPass</ref> *</type>
+        <definition>EffectPass* GetPass</definition>
+        <argsstring>(UInt iTechnique, UInt iPass) const </argsstring>
+        <name>GetPass</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iTechnique</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iPass</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Effects/Effect.h" line="49"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/df0/classEffect_1a400580bb02e9c852252feb36670b7dbc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d1/de0/classClippingState" kindref="compound">ClippingState</ref> *</type>
+        <definition>ClippingState* GetClippingState</definition>
+        <argsstring>(UInt iTechnique, UInt iPass) const </argsstring>
+        <name>GetClippingState</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iTechnique</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iPass</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Effects/Effect.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/df0/classEffect_1ac2f07a86be08d4504799da009abf2d5a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d6/d50/classCullingState" kindref="compound">CullingState</ref> *</type>
+        <definition>CullingState* GetCullingState</definition>
+        <argsstring>(UInt iTechnique, UInt iPass) const </argsstring>
+        <name>GetCullingState</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iTechnique</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iPass</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Effects/Effect.h" line="52"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/df0/classEffect_1a81e4b8b96090f9375abc1b7dab19f9b6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="df/df8/classDepthState" kindref="compound">DepthState</ref> *</type>
+        <definition>DepthState* GetDepthState</definition>
+        <argsstring>(UInt iTechnique, UInt iPass) const </argsstring>
+        <name>GetDepthState</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iTechnique</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iPass</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Effects/Effect.h" line="53"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/df0/classEffect_1aaa6eab1c8e8c9c1c103fc3fe246b07db" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d3/dc0/classStencilState" kindref="compound">StencilState</ref> *</type>
+        <definition>StencilState* GetStencilState</definition>
+        <argsstring>(UInt iTechnique, UInt iPass) const </argsstring>
+        <name>GetStencilState</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iTechnique</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iPass</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Effects/Effect.h" line="54"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/df0/classEffect_1aea123aead9a4921fa4f9d6a2c8d9eb66" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="de/d89/classBlendingState" kindref="compound">BlendingState</ref> *</type>
+        <definition>BlendingState* GetBlendingState</definition>
+        <argsstring>(UInt iTechnique, UInt iPass) const </argsstring>
+        <name>GetBlendingState</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iTechnique</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iPass</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Effects/Effect.h" line="55"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/df0/classEffect_1ac9c0367ad47a7b5520660d20aab0ce9d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d5/de7/classPolygonState" kindref="compound">PolygonState</ref> *</type>
+        <definition>PolygonState* GetPolygonState</definition>
+        <argsstring>(UInt iTechnique, UInt iPass) const </argsstring>
+        <name>GetPolygonState</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iTechnique</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iPass</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Effects/Effect.h" line="56"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/df0/classEffect_1a871281bb62aea0d2a1909b5d91a56e6f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="dc/dfc/classVertexShaderProgram" kindref="compound">VertexShaderProgram</ref> *</type>
+        <definition>VertexShaderProgram* GetVertexShader</definition>
+        <argsstring>(UInt iTechnique, UInt iPass) const </argsstring>
+        <name>GetVertexShader</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iTechnique</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iPass</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Effects/Effect.h" line="58"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/df0/classEffect_1a5035e8c2f0626862d1f3214c0fd796a4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d1/dc0/classPixelShaderProgram" kindref="compound">PixelShaderProgram</ref> *</type>
+        <definition>PixelShaderProgram* GetPixelShader</definition>
+        <argsstring>(UInt iTechnique, UInt iPass) const </argsstring>
+        <name>GetPixelShader</name>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iTechnique</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iPass</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Effects/Effect.h" line="59"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2233">
+        <label>EffectDefault</label>
+        <link refid="d8/de9/classEffectDefault"/>
+        <childnode refid="2230" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2240">
+        <label>EffectTexture1D</label>
+        <link refid="d4/d1c/classEffectTexture1D"/>
+        <childnode refid="2230" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2241">
+        <label>EffectTexture2D</label>
+        <link refid="d0/dbc/classEffectTexture2D"/>
+        <childnode refid="2230" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2242">
+        <label>EffectTexture3D</label>
+        <link refid="d0/d56/classEffectTexture3D"/>
+        <childnode refid="2230" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2237">
+        <label>EffectMaterial</label>
+        <link refid="d5/d3f/classEffectMaterial"/>
+        <childnode refid="2230" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2235">
+        <label>EffectLightPointGouraud</label>
+        <link refid="d7/da5/classEffectLightPointGouraud"/>
+        <childnode refid="2230" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2238">
+        <label>EffectMaterialTexture</label>
+        <link refid="db/dbd/classEffectMaterialTexture"/>
+        <childnode refid="2230" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2231">
+        <label>Effect2D</label>
+        <link refid="db/de3/classEffect2D"/>
+        <childnode refid="2230" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2236">
+        <label>EffectLightPointPhong</label>
+        <link refid="d8/d48/classEffectLightPointPhong"/>
+        <childnode refid="2230" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2230">
+        <label>Effect</label>
+        <link refid="d3/df0/classEffect"/>
+      </node>
+      <node id="2232">
+        <label>EffectColor</label>
+        <link refid="d7/d33/classEffectColor"/>
+        <childnode refid="2230" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2234">
+        <label>EffectLightAmbient</label>
+        <link refid="dc/d98/classEffectLightAmbient"/>
+        <childnode refid="2230" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2239">
+        <label>EffectText</label>
+        <link refid="d3/d18/classEffectText"/>
+        <childnode refid="2230" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2261">
+        <label>static VertexShaderProfile</label>
+      </node>
+      <node id="2278">
+        <label>CullingTest</label>
+      </node>
+      <node id="2246">
+        <label>VertexShaderProgram</label>
+        <link refid="dc/dfc/classVertexShaderProgram"/>
+        <childnode refid="2247" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2261" relation="usage">
+          <edgelabel>sm_iVSProfile</edgelabel>
+        </childnode>
+      </node>
+      <node id="2264">
+        <label>DepthState</label>
+        <link refid="df/df8/classDepthState"/>
+        <childnode refid="2265" relation="usage">
+          <edgelabel>DepthEnabled</edgelabel>
+          <edgelabel>DepthWritable</edgelabel>
+        </childnode>
+        <childnode refid="2266" relation="usage">
+          <edgelabel>sm_arrDepthTestNames</edgelabel>
+        </childnode>
+        <childnode refid="2267" relation="usage">
+          <edgelabel>DepthTest</edgelabel>
+        </childnode>
+      </node>
+      <node id="2269">
+        <label>StencilState</label>
+        <link refid="d3/dc0/classStencilState"/>
+        <childnode refid="2249" relation="usage">
+          <edgelabel>sm_arrStencilOpNames</edgelabel>
+          <edgelabel>sm_arrStencilTestNames</edgelabel>
+        </childnode>
+        <childnode refid="2270" relation="usage">
+          <edgelabel>StencilTest</edgelabel>
+        </childnode>
+        <childnode refid="2265" relation="usage">
+          <edgelabel>StencilEnabled</edgelabel>
+        </childnode>
+        <childnode refid="2259" relation="usage">
+          <edgelabel>Reference</edgelabel>
+          <edgelabel>WriteMask</edgelabel>
+          <edgelabel>Mask</edgelabel>
+        </childnode>
+        <childnode refid="2271" relation="usage">
+          <edgelabel>OnDepthSuccess</edgelabel>
+          <edgelabel>OnDepthFail</edgelabel>
+          <edgelabel>OnStencilFail</edgelabel>
+        </childnode>
+      </node>
+      <node id="2274">
+        <label>BlendingTestMode</label>
+      </node>
+      <node id="2276">
+        <label>ClippingState</label>
+        <link refid="d1/de0/classClippingState"/>
+        <childnode refid="2265" relation="usage">
+          <edgelabel>ClipFrustrumReject</edgelabel>
+          <edgelabel>ClipRaster</edgelabel>
+          <edgelabel>ClipFrustrum</edgelabel>
+          <edgelabel>ClipCubeSpace</edgelabel>
+        </childnode>
+      </node>
+      <node id="2260">
+        <label>ShaderProgramConstant</label>
+        <link refid="d2/d9e/structShaderProgramConstant"/>
+        <childnode refid="2249" relation="usage">
+          <edgelabel>strName</edgelabel>
+        </childnode>
+        <childnode refid="2253" relation="usage">
+          <edgelabel>iRegisterCount</edgelabel>
+          <edgelabel>iBaseRegister</edgelabel>
+        </childnode>
+      </node>
+      <node id="2262">
+        <label>PixelShaderProgram</label>
+        <link refid="d1/dc0/classPixelShaderProgram"/>
+        <childnode refid="2247" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2263" relation="usage">
+          <edgelabel>sm_iPSProfile</edgelabel>
+        </childnode>
+      </node>
+      <node id="2268">
+        <label>PolygonState</label>
+        <link refid="d5/de7/classPolygonState"/>
+        <childnode refid="2257" relation="usage">
+          <edgelabel>DepthBias</edgelabel>
+          <edgelabel>SlopeScale</edgelabel>
+        </childnode>
+        <childnode refid="2265" relation="usage">
+          <edgelabel>OffsetPoints</edgelabel>
+          <edgelabel>OffsetLines</edgelabel>
+          <edgelabel>WireframeEnabled</edgelabel>
+          <edgelabel>OffsetFills</edgelabel>
+        </childnode>
+      </node>
+      <node id="2270">
+        <label>StencilTestMode</label>
+      </node>
+      <node id="2257">
+        <label>float</label>
+      </node>
+      <node id="2279">
+        <label>CullingConvention</label>
+      </node>
+      <node id="2259">
+        <label>ULong</label>
+      </node>
+      <node id="2251">
+        <label>ShaderVarType</label>
+      </node>
+      <node id="2273">
+        <label>BlendingSrcMode</label>
+      </node>
+      <node id="2254">
+        <label>ShaderProgramSampler</label>
+        <link refid="d5/d69/structShaderProgramSampler"/>
+        <childnode refid="2255" relation="usage">
+          <edgelabel>iType</edgelabel>
+        </childnode>
+        <childnode refid="2256" relation="usage">
+          <edgelabel>iWrapMode</edgelabel>
+        </childnode>
+        <childnode refid="2257" relation="usage">
+          <edgelabel>fLODBias</edgelabel>
+          <edgelabel>fAnisotropy</edgelabel>
+        </childnode>
+        <childnode refid="2249" relation="usage">
+          <edgelabel>strName</edgelabel>
+        </childnode>
+        <childnode refid="2258" relation="usage">
+          <edgelabel>iFilter</edgelabel>
+        </childnode>
+        <childnode refid="2253" relation="usage">
+          <edgelabel>iTextureUnit</edgelabel>
+        </childnode>
+        <childnode refid="2259" relation="usage">
+          <edgelabel>dwBorderColor</edgelabel>
+        </childnode>
+      </node>
+      <node id="2253">
+        <label>int</label>
+      </node>
+      <node id="2255">
+        <label>ShaderSamplingType</label>
+      </node>
+      <node id="2250">
+        <label>ShaderVarSemantic</label>
+      </node>
+      <node id="2277">
+        <label>CullingState</label>
+        <link refid="d6/d50/classCullingState"/>
+        <childnode refid="2249" relation="usage">
+          <edgelabel>sm_arrCullTestNames</edgelabel>
+          <edgelabel>sm_arrCullConvNames</edgelabel>
+        </childnode>
+        <childnode refid="2278" relation="usage">
+          <edgelabel>CullTest</edgelabel>
+        </childnode>
+        <childnode refid="2265" relation="usage">
+          <edgelabel>CullEnabled</edgelabel>
+        </childnode>
+        <childnode refid="2279" relation="usage">
+          <edgelabel>CullConv</edgelabel>
+        </childnode>
+      </node>
+      <node id="2252">
+        <label>ShaderProgramOutputVar</label>
+        <link refid="df/df0/structShaderProgramOutputVar"/>
+        <childnode refid="2249" relation="usage">
+          <edgelabel>strName</edgelabel>
+        </childnode>
+        <childnode refid="2250" relation="usage">
+          <edgelabel>iSemantic</edgelabel>
+        </childnode>
+        <childnode refid="2251" relation="usage">
+          <edgelabel>iType</edgelabel>
+        </childnode>
+      </node>
+      <node id="2272">
+        <label>BlendingState</label>
+        <link refid="de/d89/classBlendingState"/>
+        <childnode refid="2273" relation="usage">
+          <edgelabel>BlendSrc</edgelabel>
+        </childnode>
+        <childnode refid="2274" relation="usage">
+          <edgelabel>BlendTest</edgelabel>
+        </childnode>
+        <childnode refid="2249" relation="usage">
+          <edgelabel>sm_arrBlendSrcNames</edgelabel>
+          <edgelabel>sm_arrBlendTestNames</edgelabel>
+          <edgelabel>sm_arrBlendDstNames</edgelabel>
+        </childnode>
+        <childnode refid="2275" relation="usage">
+          <edgelabel>BlendDst</edgelabel>
+        </childnode>
+        <childnode refid="2265" relation="usage">
+          <edgelabel>BlendEnabled</edgelabel>
+          <edgelabel>BlendTestEnabled</edgelabel>
+        </childnode>
+        <childnode refid="2259" relation="usage">
+          <edgelabel>ConstantColor</edgelabel>
+          <edgelabel>Reference</edgelabel>
+        </childnode>
+      </node>
+      <node id="2267">
+        <label>DepthTestMode</label>
+      </node>
+      <node id="2258">
+        <label>ShaderSamplingFilter</label>
+      </node>
+      <node id="2244">
+        <label>EffectTechnique</label>
+        <link refid="db/df6/classEffectTechnique"/>
+        <childnode refid="2245" relation="usage">
+          <edgelabel>m_arrPasses</edgelabel>
+        </childnode>
+        <childnode refid="2253" relation="usage">
+          <edgelabel>m_iPassCount</edgelabel>
+        </childnode>
+      </node>
+      <node id="2245">
+        <label>EffectPass</label>
+        <link refid="dc/dfd/classEffectPass"/>
+        <childnode refid="2246" relation="usage">
+          <edgelabel>m_pVSProgram</edgelabel>
+        </childnode>
+        <childnode refid="2262" relation="usage">
+          <edgelabel>m_pPSProgram</edgelabel>
+        </childnode>
+        <childnode refid="2264" relation="usage">
+          <edgelabel>m_pDepthState</edgelabel>
+        </childnode>
+        <childnode refid="2268" relation="usage">
+          <edgelabel>m_pPolygonState</edgelabel>
+        </childnode>
+        <childnode refid="2269" relation="usage">
+          <edgelabel>m_pStencilState</edgelabel>
+        </childnode>
+        <childnode refid="2272" relation="usage">
+          <edgelabel>m_pBlendingState</edgelabel>
+        </childnode>
+        <childnode refid="2276" relation="usage">
+          <edgelabel>m_pClippingState</edgelabel>
+        </childnode>
+        <childnode refid="2277" relation="usage">
+          <edgelabel>m_pCullingState</edgelabel>
+        </childnode>
+      </node>
+      <node id="2263">
+        <label>static PixelShaderProfile</label>
+      </node>
+      <node id="2247">
+        <label>ShaderProgram</label>
+        <link refid="d0/d2d/classShaderProgram"/>
+        <childnode refid="2248" relation="usage">
+          <edgelabel>m_arrInputs</edgelabel>
+        </childnode>
+        <childnode refid="2249" relation="usage">
+          <edgelabel>m_arrProgramTexts</edgelabel>
+          <edgelabel>m_strProgramName</edgelabel>
+        </childnode>
+        <childnode refid="2252" relation="usage">
+          <edgelabel>m_arrOutputs</edgelabel>
+        </childnode>
+        <childnode refid="2253" relation="usage">
+          <edgelabel>m_iSamplerCount</edgelabel>
+          <edgelabel>m_iInputCount</edgelabel>
+          <edgelabel>m_iOutputCount</edgelabel>
+          <edgelabel>m_iConstantCount</edgelabel>
+        </childnode>
+        <childnode refid="2254" relation="usage">
+          <edgelabel>m_arrSamplers</edgelabel>
+        </childnode>
+        <childnode refid="2260" relation="usage">
+          <edgelabel>m_arrConstants</edgelabel>
+        </childnode>
+      </node>
+      <node id="2243">
+        <label>Effect</label>
+        <link refid="d3/df0/classEffect"/>
+        <childnode refid="2244" relation="usage">
+          <edgelabel>m_arrTechniques</edgelabel>
+        </childnode>
+        <childnode refid="2253" relation="usage">
+          <edgelabel>m_iTechniqueCount</edgelabel>
+        </childnode>
+      </node>
+      <node id="2265">
+        <label>bool</label>
+      </node>
+      <node id="2249">
+        <label>char</label>
+      </node>
+      <node id="2248">
+        <label>ShaderProgramInputVar</label>
+        <link refid="d9/dbd/structShaderProgramInputVar"/>
+        <childnode refid="2249" relation="usage">
+          <edgelabel>strName</edgelabel>
+        </childnode>
+        <childnode refid="2250" relation="usage">
+          <edgelabel>iSemantic</edgelabel>
+        </childnode>
+        <childnode refid="2251" relation="usage">
+          <edgelabel>iType</edgelabel>
+        </childnode>
+      </node>
+      <node id="2271">
+        <label>StencilOperation</label>
+      </node>
+      <node id="2266">
+        <label>static const GChar *</label>
+      </node>
+      <node id="2275">
+        <label>BlendingDstMode</label>
+      </node>
+      <node id="2256">
+        <label>ShaderSamplingWrapMode</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Effects/Effect.h" line="36" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Rendering/Effects/Effect.h" bodystart="35" bodyend="64"/>
+    <listofallmembers>
+      <member refid="d3/df0/classEffect_1a2fe2bb0ab673f8bcabe4f7c8c813cae2" prot="public" virt="non-virtual"><scope>Effect</scope><name>AddTechnique</name></member>
+      <member refid="d3/df0/classEffect_1af502b922b791b4f2b41ff86e68e64382" prot="public" virt="non-virtual"><scope>Effect</scope><name>Effect</name></member>
+      <member refid="d3/df0/classEffect_1aea123aead9a4921fa4f9d6a2c8d9eb66" prot="public" virt="non-virtual"><scope>Effect</scope><name>GetBlendingState</name></member>
+      <member refid="d3/df0/classEffect_1a400580bb02e9c852252feb36670b7dbc" prot="public" virt="non-virtual"><scope>Effect</scope><name>GetClippingState</name></member>
+      <member refid="d3/df0/classEffect_1ac2f07a86be08d4504799da009abf2d5a" prot="public" virt="non-virtual"><scope>Effect</scope><name>GetCullingState</name></member>
+      <member refid="d3/df0/classEffect_1a81e4b8b96090f9375abc1b7dab19f9b6" prot="public" virt="non-virtual"><scope>Effect</scope><name>GetDepthState</name></member>
+      <member refid="d3/df0/classEffect_1acbb06f32207e4bd32d119c7e66722554" prot="public" virt="non-virtual"><scope>Effect</scope><name>GetPass</name></member>
+      <member refid="d3/df0/classEffect_1a86e68f6982daa8744f9a009c3e88f5cd" prot="public" virt="non-virtual"><scope>Effect</scope><name>GetPassCount</name></member>
+      <member refid="d3/df0/classEffect_1a5035e8c2f0626862d1f3214c0fd796a4" prot="public" virt="non-virtual"><scope>Effect</scope><name>GetPixelShader</name></member>
+      <member refid="d3/df0/classEffect_1ac9c0367ad47a7b5520660d20aab0ce9d" prot="public" virt="non-virtual"><scope>Effect</scope><name>GetPolygonState</name></member>
+      <member refid="d3/df0/classEffect_1aaa6eab1c8e8c9c1c103fc3fe246b07db" prot="public" virt="non-virtual"><scope>Effect</scope><name>GetStencilState</name></member>
+      <member refid="d3/df0/classEffect_1a90685b11c3a4840217abb47df62c9e13" prot="public" virt="non-virtual"><scope>Effect</scope><name>GetTechnique</name></member>
+      <member refid="d3/df0/classEffect_1aa815526b7a71ba3c5fc6080924f31861" prot="public" virt="non-virtual"><scope>Effect</scope><name>GetTechniqueCount</name></member>
+      <member refid="d3/df0/classEffect_1a871281bb62aea0d2a1909b5d91a56e6f" prot="public" virt="non-virtual"><scope>Effect</scope><name>GetVertexShader</name></member>
+      <member refid="d3/df0/classEffect_1a06f0fbefb9e9dc9dc2a9d8adc32e5ffb" prot="protected" virt="non-virtual"><scope>Effect</scope><name>m_arrTechniques</name></member>
+      <member refid="d3/df0/classEffect_1a78fdde6d2999253ff283897395706605" prot="protected" virt="non-virtual"><scope>Effect</scope><name>m_iTechniqueCount</name></member>
+      <member refid="d3/df0/classEffect_1ace126c2483e698f58e7668bcf1b9bc13" prot="public" virt="virtual"><scope>Effect</scope><name>~Effect</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

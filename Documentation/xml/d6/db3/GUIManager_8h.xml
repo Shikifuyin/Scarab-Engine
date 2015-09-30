@@ -1,0 +1,1892 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d6/db3/GUIManager_8h" kind="file">
+    <compoundname>GUIManager.h</compoundname>
+    <includes refid="d1/da0/Manager_8h" local="yes">../../Lib/Object/Patterns/Manager.h</includes>
+    <includes refid="df/d10/InputManager_8h" local="yes">../Input/InputManager.h</includes>
+    <includes refid="de/d51/ResourceManager_8h" local="yes">../Resource/ResourceManager.h</includes>
+    <includes refid="de/d07/RenderingManager_8h" local="yes">../Rendering/RenderingManager.h</includes>
+    <includes refid="da/daa/GUIWidget_8h" local="yes">GUIWidget.h</includes>
+    <includes refid="d4/dd5/GUIWindow_8h" local="yes">GUIWindow.h</includes>
+    <includes refid="d3/d36/GUIBackboard_8h" local="yes">GUIBackboard.h</includes>
+    <includes refid="da/db5/GUIOverlay_8h" local="yes">GUIOverlay.h</includes>
+    <includes refid="d8/d15/GUIDragNDrop_8h" local="yes">Tools/GUIDragNDrop.h</includes>
+    <includes refid="d4/d6d/GUIMoveResize_8h" local="yes">Tools/GUIMoveResize.h</includes>
+    <includes refid="d7/dae/GUIMenuLoop_8h" local="yes">Tools/GUIMenuLoop.h</includes>
+    <includes refid="d0/d66/GUITimerEvents_8h" local="yes">Tools/GUITimerEvents.h</includes>
+    <includes refid="d4/deb/GUISkin_8h" local="yes">Tools/GUISkin.h</includes>
+    <includes refid="dc/d89/GUIMessageBox_8h" local="yes">Tools/GUIMessageBox.h</includes>
+    <includes refid="d1/d51/GUIMenu_8h" local="yes">Overlays/GUIMenu.h</includes>
+    <includes refid="dc/ddb/GUIContainer_8h" local="yes">Widgets/Common/GUIContainer.h</includes>
+    <includes refid="d3/d84/GUISection_8h" local="yes">Widgets/Common/GUISection.h</includes>
+    <includes refid="d0/de3/GUILabel_8h" local="yes">Widgets/Common/GUILabel.h</includes>
+    <includes refid="dc/d97/GUIText_8h" local="yes">Widgets/Common/GUIText.h</includes>
+    <includes refid="d3/df9/GUIButton_8h" local="yes">Widgets/Common/GUIButton.h</includes>
+    <includes refid="d4/df2/GUICheckBox_8h" local="yes">Widgets/Common/GUICheckBox.h</includes>
+    <includes refid="d9/da2/GUIRadioButton_8h" local="yes">Widgets/Common/GUIRadioButton.h</includes>
+    <includes refid="dd/d0b/GUITextInput_8h" local="yes">Widgets/Common/GUITextInput.h</includes>
+    <includes refid="da/d04/GUISwitchTabs_8h" local="yes">Widgets/Extended/GUISwitchTabs.h</includes>
+    <includes refid="d1/ddc/GUITextLog_8h" local="yes">Widgets/Extended/GUITextLog.h</includes>
+    <includes refid="d3/dae/GUIList_8h" local="yes">Widgets/Extended/GUIList.h</includes>
+    <includes refid="d1/d0d/GUITree_8h" local="yes">Widgets/Extended/GUITree.h</includes>
+    <includes local="yes">GUIManager.inl</includes>
+    <includedby refid="d4/d72/WindowApplication_8h" local="yes">WindowApplication.h</includedby>
+    <includedby refid="d3/d63/ConsoleManager_8h" local="yes">ConsoleManager.h</includedby>
+    <includedby refid="d8/d84/CommandShowTree_8h" local="yes">CommandShowTree.h</includedby>
+    <incdepgraph>
+      <node id="15374">
+        <label>../../ThirdParty/DirectX9/Direct3D/Direct3D9.h</label>
+        <link refid="d9/d47/Direct3D9_8h"/>
+        <childnode refid="15375" relation="include">
+        </childnode>
+        <childnode refid="15377" relation="include">
+        </childnode>
+        <childnode refid="15379" relation="include">
+        </childnode>
+        <childnode refid="15381" relation="include">
+        </childnode>
+        <childnode refid="15383" relation="include">
+        </childnode>
+        <childnode refid="15385" relation="include">
+        </childnode>
+        <childnode refid="15387" relation="include">
+        </childnode>
+        <childnode refid="15389" relation="include">
+        </childnode>
+        <childnode refid="15391" relation="include">
+        </childnode>
+        <childnode refid="15393" relation="include">
+        </childnode>
+      </node>
+      <node id="15427">
+        <label>../Widgets/Common/GUISection.h</label>
+        <link refid="d3/d84/GUISection_8h"/>
+        <childnode refid="15396" relation="include">
+        </childnode>
+        <childnode refid="15428" relation="include">
+        </childnode>
+      </node>
+      <node id="15346">
+        <label>Texture.inl</label>
+      </node>
+      <node id="15282">
+        <label>TextureBMP.inl</label>
+      </node>
+      <node id="15352">
+        <label>ShaderConst.h</label>
+        <link refid="dc/d51/ShaderConst_8h"/>
+        <childnode refid="15310" relation="include">
+        </childnode>
+        <childnode refid="15337" relation="include">
+        </childnode>
+        <childnode refid="15353" relation="include">
+        </childnode>
+      </node>
+      <node id="15318">
+        <label>../Vector/Vector4.h</label>
+        <link refid="d7/d36/Vector4_8h"/>
+        <childnode refid="15209" relation="include">
+        </childnode>
+        <childnode refid="15319" relation="include">
+        </childnode>
+      </node>
+      <node id="15293">
+        <label>States/CullingState.h</label>
+        <link refid="d9/db7/CullingState_8h"/>
+        <childnode refid="15203" relation="include">
+        </childnode>
+        <childnode refid="15294" relation="include">
+        </childnode>
+      </node>
+      <node id="15322">
+        <label>Matrix4.inl</label>
+      </node>
+      <node id="15350">
+        <label>ShaderProgram.inl</label>
+      </node>
+      <node id="15259">
+        <label>../../../Lib/Math/Hash/SHA1.h</label>
+        <link refid="d1/de3/SHA1_8h"/>
+        <childnode refid="15203" relation="include">
+        </childnode>
+        <childnode refid="15260" relation="include">
+        </childnode>
+      </node>
+      <node id="15246">
+        <label>RedBlackTree.inl</label>
+      </node>
+      <node id="15265">
+        <label>RDBTreeOperator.inl</label>
+      </node>
+      <node id="15219">
+        <label>SSE.inl</label>
+      </node>
+      <node id="15388">
+        <label>D3D9Textures.inl</label>
+      </node>
+      <node id="15368">
+        <label>Effect2D.inl</label>
+      </node>
+      <node id="15223">
+        <label>Threading.h</label>
+        <link refid="dd/d0e/Threading_8h"/>
+        <childnode refid="15201" relation="include">
+        </childnode>
+        <childnode refid="15203" relation="include">
+        </childnode>
+        <childnode refid="15224" relation="include">
+        </childnode>
+      </node>
+      <node id="15355">
+        <label>Effects/Effect.h</label>
+        <link refid="d3/d24/Effect_8h"/>
+        <childnode refid="15356" relation="include">
+        </childnode>
+        <childnode refid="15360" relation="include">
+        </childnode>
+      </node>
+      <node id="15197">
+        <label>../../Lib/Object/Patterns/Manager.h</label>
+        <link refid="d1/da0/Manager_8h"/>
+        <childnode refid="15198" relation="include">
+        </childnode>
+        <childnode refid="15240" relation="include">
+        </childnode>
+      </node>
+      <node id="15235">
+        <label>Allocators/BreakAllocator.h</label>
+        <link refid="d4/dac/BreakAllocator_8h"/>
+        <childnode refid="15230" relation="include">
+        </childnode>
+        <childnode refid="15236" relation="include">
+        </childnode>
+      </node>
+      <node id="15198">
+        <label>../../Memory/MemoryManager.h</label>
+        <link refid="d7/d7b/MemoryManager_8h"/>
+        <childnode refid="15199" relation="include">
+        </childnode>
+        <childnode refid="15209" relation="include">
+        </childnode>
+        <childnode refid="15215" relation="include">
+        </childnode>
+        <childnode refid="15229" relation="include">
+        </childnode>
+        <childnode refid="15233" relation="include">
+        </childnode>
+        <childnode refid="15235" relation="include">
+        </childnode>
+        <childnode refid="15237" relation="include">
+        </childnode>
+        <childnode refid="15239" relation="include">
+        </childnode>
+      </node>
+      <node id="15410">
+        <label>GUITitleBar.inl</label>
+      </node>
+      <node id="15406">
+        <label>GUIWindow.h</label>
+        <link refid="d4/dd5/GUIWindow_8h"/>
+        <childnode refid="15396" relation="include">
+        </childnode>
+        <childnode refid="15407" relation="include">
+        </childnode>
+        <childnode refid="15409" relation="include">
+        </childnode>
+        <childnode refid="15411" relation="include">
+        </childnode>
+      </node>
+      <node id="15328">
+        <label>Geometry/VertexFormat.h</label>
+        <link refid="da/df2/VertexFormat_8h"/>
+        <childnode refid="15215" relation="include">
+        </childnode>
+        <childnode refid="15329" relation="include">
+        </childnode>
+      </node>
+      <node id="15289">
+        <label>Point2.inl</label>
+      </node>
+      <node id="15331">
+        <label>VertexBuffer.inl</label>
+      </node>
+      <node id="15396">
+        <label>GUIWidget.h</label>
+        <link refid="da/daa/GUIWidget_8h"/>
+        <childnode refid="15242" relation="include">
+        </childnode>
+        <childnode refid="15397" relation="include">
+        </childnode>
+        <childnode refid="15403" relation="include">
+        </childnode>
+        <childnode refid="15405" relation="include">
+        </childnode>
+      </node>
+      <node id="15267">
+        <label>ResourceFile.h</label>
+        <link refid="de/d4a/ResourceFile_8h"/>
+        <childnode refid="15251" relation="include">
+        </childnode>
+        <childnode refid="15268" relation="include">
+        </childnode>
+      </node>
+      <node id="15216">
+        <label>../../ThirdParty/System/System.h</label>
+        <link refid="db/d39/System_8h"/>
+        <childnode refid="15201" relation="include">
+        </childnode>
+        <childnode refid="15203" relation="include">
+        </childnode>
+        <childnode refid="15217" relation="include">
+        </childnode>
+        <childnode refid="15200" relation="include">
+        </childnode>
+        <childnode refid="15221" relation="include">
+        </childnode>
+        <childnode refid="15223" relation="include">
+        </childnode>
+        <childnode refid="15225" relation="include">
+        </childnode>
+        <childnode refid="15227" relation="include">
+        </childnode>
+      </node>
+      <node id="15402">
+        <label>GUIEventProcessor.inl</label>
+      </node>
+      <node id="15443">
+        <label>GUIRadioButton.inl</label>
+      </node>
+      <node id="15279">
+        <label>Color4.h</label>
+        <link refid="d7/d4d/Color4_8h"/>
+        <childnode refid="15209" relation="include">
+        </childnode>
+        <childnode refid="15280" relation="include">
+        </childnode>
+      </node>
+      <node id="15224">
+        <label>Threading.inl</label>
+      </node>
+      <node id="15425">
+        <label>GUISkin.inl</label>
+      </node>
+      <node id="15254">
+        <label>RDBPersistentStorage.h</label>
+        <link refid="d2/d3d/RDBPersistentStorage_8h"/>
+        <childnode refid="15255" relation="include">
+        </childnode>
+        <childnode refid="15242" relation="include">
+        </childnode>
+        <childnode refid="15257" relation="include">
+        </childnode>
+        <childnode refid="15259" relation="include">
+        </childnode>
+        <childnode refid="15261" relation="include">
+        </childnode>
+        <childnode refid="15263" relation="include">
+        </childnode>
+      </node>
+      <node id="15399">
+        <label>RingBuffer.inl</label>
+      </node>
+      <node id="15248">
+        <label>InputManager.inl</label>
+      </node>
+      <node id="15376">
+        <label>ForwardDirect3D9.inl</label>
+      </node>
+      <node id="15236">
+        <label>BreakAllocator.inl</label>
+      </node>
+      <node id="15292">
+        <label>ClippingState.inl</label>
+      </node>
+      <node id="15340">
+        <label>Camera.inl</label>
+      </node>
+      <node id="15284">
+        <label>../Rendering/RenderingManager.h</label>
+        <link refid="de/d07/RenderingManager_8h"/>
+        <childnode refid="15197" relation="include">
+        </childnode>
+        <childnode refid="15285" relation="include">
+        </childnode>
+        <childnode refid="15242" relation="include">
+        </childnode>
+        <childnode refid="15249" relation="include">
+        </childnode>
+        <childnode refid="15291" relation="include">
+        </childnode>
+        <childnode refid="15293" relation="include">
+        </childnode>
+        <childnode refid="15295" relation="include">
+        </childnode>
+        <childnode refid="15297" relation="include">
+        </childnode>
+        <childnode refid="15299" relation="include">
+        </childnode>
+        <childnode refid="15301" relation="include">
+        </childnode>
+        <childnode refid="15303" relation="include">
+        </childnode>
+        <childnode refid="15337" relation="include">
+        </childnode>
+        <childnode refid="15341" relation="include">
+        </childnode>
+        <childnode refid="15343" relation="include">
+        </childnode>
+        <childnode refid="15345" relation="include">
+        </childnode>
+        <childnode refid="15347" relation="include">
+        </childnode>
+        <childnode refid="15349" relation="include">
+        </childnode>
+        <childnode refid="15351" relation="include">
+        </childnode>
+        <childnode refid="15355" relation="include">
+        </childnode>
+        <childnode refid="15361" relation="include">
+        </childnode>
+        <childnode refid="15363" relation="include">
+        </childnode>
+        <childnode refid="15367" relation="include">
+        </childnode>
+        <childnode refid="15369" relation="include">
+        </childnode>
+        <childnode refid="15371" relation="include">
+        </childnode>
+        <childnode refid="15373" relation="include">
+        </childnode>
+        <childnode refid="15395" relation="include">
+        </childnode>
+      </node>
+      <node id="15329">
+        <label>VertexFormat.inl</label>
+      </node>
+      <node id="15244">
+        <label>../Datastruct.h</label>
+        <link refid="d5/db1/Datastruct_8h"/>
+        <childnode refid="15198" relation="include">
+        </childnode>
+        <childnode refid="15245" relation="include">
+        </childnode>
+      </node>
+      <node id="15253">
+        <label>PatternMatching.inl</label>
+      </node>
+      <node id="15371">
+        <label>Effects/EffectLibrary/Basic/EffectColor.h</label>
+        <link refid="db/d7c/EffectColor_8h"/>
+        <childnode refid="15364" relation="include">
+        </childnode>
+        <childnode refid="15355" relation="include">
+        </childnode>
+        <childnode refid="15361" relation="include">
+        </childnode>
+        <childnode refid="15372" relation="include">
+        </childnode>
+      </node>
+      <node id="15434">
+        <label>GUIButton.inl</label>
+      </node>
+      <node id="15359">
+        <label>EffectTechnique.inl</label>
+      </node>
+      <node id="15442">
+        <label>Widgets/Common/GUIRadioButton.h</label>
+        <link refid="d9/da2/GUIRadioButton_8h"/>
+        <childnode refid="15255" relation="include">
+        </childnode>
+        <childnode refid="15396" relation="include">
+        </childnode>
+        <childnode refid="15443" relation="include">
+        </childnode>
+      </node>
+      <node id="15421">
+        <label>GUIMenuLoop.inl</label>
+      </node>
+      <node id="15245">
+        <label>Datastruct.inl</label>
+      </node>
+      <node id="15342">
+        <label>Light.inl</label>
+      </node>
+      <node id="15383">
+        <label>Resources/D3D9VertexFormat.h</label>
+        <link refid="da/dbe/D3D9VertexFormat_8h"/>
+        <childnode refid="15379" relation="include">
+        </childnode>
+        <childnode refid="15384" relation="include">
+        </childnode>
+      </node>
+      <node id="15297">
+        <label>States/StencilState.h</label>
+        <link refid="d1/db8/StencilState_8h"/>
+        <childnode refid="15203" relation="include">
+        </childnode>
+        <childnode refid="15298" relation="include">
+        </childnode>
+      </node>
+      <node id="15243">
+        <label>../Tree/RedBlackTree.h</label>
+        <link refid="d6/dff/RedBlackTree_8h"/>
+        <childnode refid="15244" relation="include">
+        </childnode>
+        <childnode refid="15246" relation="include">
+        </childnode>
+      </node>
+      <node id="15430">
+        <label>GUILabel.inl</label>
+      </node>
+      <node id="15413">
+        <label>GUIBackboard.inl</label>
+      </node>
+      <node id="15405">
+        <label>GUIWidget.inl</label>
+      </node>
+      <node id="15407">
+        <label>Widgets/Window/GUIBorders.h</label>
+        <link refid="d1/d55/GUIBorders_8h"/>
+        <childnode refid="15396" relation="include">
+        </childnode>
+        <childnode refid="15408" relation="include">
+        </childnode>
+      </node>
+      <node id="15392">
+        <label>D3D9Shaders.inl</label>
+      </node>
+      <node id="15203">
+        <label>Platform.h</label>
+        <link refid="d9/dd0/Platform_8h"/>
+        <childnode refid="15204" relation="include">
+        </childnode>
+      </node>
+      <node id="15416">
+        <label>Tools/GUIDragNDrop.h</label>
+        <link refid="d8/d15/GUIDragNDrop_8h"/>
+        <childnode refid="15215" relation="include">
+        </childnode>
+        <childnode refid="15286" relation="include">
+        </childnode>
+        <childnode refid="15417" relation="include">
+        </childnode>
+      </node>
+      <node id="15320">
+        <label>../Vertex/Vertex4.h</label>
+        <link refid="d1/dca/Vertex4_8h"/>
+        <childnode refid="15318" relation="include">
+        </childnode>
+        <childnode refid="15321" relation="include">
+        </childnode>
+      </node>
+      <node id="15445">
+        <label>GUITextInput.inl</label>
+      </node>
+      <node id="15257">
+        <label>../../../Lib/Datastruct/Tree/SplayTree.h</label>
+        <link refid="d7/d5f/SplayTree_8h"/>
+        <childnode refid="15244" relation="include">
+        </childnode>
+        <childnode refid="15258" relation="include">
+        </childnode>
+      </node>
+      <node id="15400">
+        <label>Tools/GUIEvent.h</label>
+        <link refid="d0/df0/GUIEvent_8h"/>
+        <childnode refid="15215" relation="include">
+        </childnode>
+        <childnode refid="15401" relation="include">
+        </childnode>
+      </node>
+      <node id="15384">
+        <label>D3D9VertexFormat.inl</label>
+      </node>
+      <node id="15351">
+        <label>Shaders/ShaderParameters.h</label>
+        <link refid="d5/d63/ShaderParameters_8h"/>
+        <childnode refid="15345" relation="include">
+        </childnode>
+        <childnode refid="15352" relation="include">
+        </childnode>
+        <childnode refid="15349" relation="include">
+        </childnode>
+        <childnode refid="15354" relation="include">
+        </childnode>
+      </node>
+      <node id="15300">
+        <label>BlendingState.inl</label>
+      </node>
+      <node id="15432">
+        <label>GUIText.inl</label>
+      </node>
+      <node id="15233">
+        <label>Allocators/PoolAllocator.h</label>
+        <link refid="d3/d03/PoolAllocator_8h"/>
+        <childnode refid="15230" relation="include">
+        </childnode>
+        <childnode refid="15234" relation="include">
+        </childnode>
+      </node>
+      <node id="15272">
+        <label>TextureFile.h</label>
+        <link refid="db/dd1/TextureFile_8h"/>
+        <childnode refid="15267" relation="include">
+        </childnode>
+        <childnode refid="15273" relation="include">
+        </childnode>
+      </node>
+      <node id="15348">
+        <label>RenderTarget.inl</label>
+      </node>
+      <node id="15312">
+        <label>../Vector/Vector3.h</label>
+        <link refid="dd/d8c/Vector3_8h"/>
+        <childnode refid="15209" relation="include">
+        </childnode>
+        <childnode refid="15313" relation="include">
+        </childnode>
+      </node>
+      <node id="15409">
+        <label>Widgets/Window/GUITitleBar.h</label>
+        <link refid="dd/d52/GUITitleBar_8h"/>
+        <childnode refid="15396" relation="include">
+        </childnode>
+        <childnode refid="15410" relation="include">
+        </childnode>
+      </node>
+      <node id="15408">
+        <label>GUIBorders.inl</label>
+      </node>
+      <node id="15344">
+        <label>Material.inl</label>
+      </node>
+      <node id="15206">
+        <label>FPU.inl</label>
+      </node>
+      <node id="15208">
+        <label>Hashing.inl</label>
+      </node>
+      <node id="15412">
+        <label>GUIBackboard.h</label>
+        <link refid="d3/d36/GUIBackboard_8h"/>
+        <childnode refid="15397" relation="include">
+        </childnode>
+        <childnode refid="15413" relation="include">
+        </childnode>
+      </node>
+      <node id="15214">
+        <label>MathFunction.inl</label>
+      </node>
+      <node id="15417">
+        <label>GUIDragNDrop.inl</label>
+      </node>
+      <node id="15380">
+        <label>Mappings.inl</label>
+      </node>
+      <node id="15247">
+        <label>TreeMap.inl</label>
+      </node>
+      <node id="15356">
+        <label>EffectTechnique.h</label>
+        <link refid="d3/d77/EffectTechnique_8h"/>
+        <childnode refid="15357" relation="include">
+        </childnode>
+        <childnode refid="15359" relation="include">
+        </childnode>
+      </node>
+      <node id="15436">
+        <label>Overlays/GUIMenu.h</label>
+        <link refid="d1/d51/GUIMenu_8h"/>
+        <childnode refid="15424" relation="include">
+        </childnode>
+        <childnode refid="15414" relation="include">
+        </childnode>
+        <childnode refid="15437" relation="include">
+        </childnode>
+      </node>
+      <node id="15454">
+        <label>GUIManager.inl</label>
+      </node>
+      <node id="15264">
+        <label>RDBTreeOperator.h</label>
+        <link refid="d3/dd8/RDBTreeOperator_8h"/>
+        <childnode refid="15254" relation="include">
+        </childnode>
+        <childnode refid="15265" relation="include">
+        </childnode>
+      </node>
+      <node id="15210">
+        <label>../Formats/Scalar.h</label>
+        <link refid="d0/d10/Scalar_8h"/>
+        <childnode refid="15203" relation="include">
+        </childnode>
+        <childnode refid="15211" relation="include">
+        </childnode>
+      </node>
+      <node id="15349">
+        <label>Shaders/ShaderProgram.h</label>
+        <link refid="dd/d99/ShaderProgram_8h"/>
+        <childnode refid="15215" relation="include">
+        </childnode>
+        <childnode refid="15350" relation="include">
+        </childnode>
+      </node>
+      <node id="15375">
+        <label>../../Forwards/ForwardDirect3D9.h</label>
+        <link refid="d5/d30/ForwardDirect3D9_8h"/>
+        <childnode refid="15201" relation="include">
+        </childnode>
+        <childnode refid="15376" relation="include">
+        </childnode>
+      </node>
+      <node id="15360">
+        <label>Effect.inl</label>
+      </node>
+      <node id="15231">
+        <label>MemoryAllocator.inl</label>
+      </node>
+      <node id="15446">
+        <label>Widgets/Extended/GUISwitchTabs.h</label>
+        <link refid="da/d04/GUISwitchTabs_8h"/>
+        <childnode refid="15427" relation="include">
+        </childnode>
+        <childnode refid="15433" relation="include">
+        </childnode>
+        <childnode refid="15447" relation="include">
+        </childnode>
+      </node>
+      <node id="15387">
+        <label>Resources/D3D9Textures.h</label>
+        <link refid="dd/d1f/D3D9Textures_8h"/>
+        <childnode refid="15379" relation="include">
+        </childnode>
+        <childnode refid="15388" relation="include">
+        </childnode>
+      </node>
+      <node id="15290">
+        <label>Rectangle2.inl</label>
+      </node>
+      <node id="15301">
+        <label>States/PolygonState.h</label>
+        <link refid="df/d5d/PolygonState_8h"/>
+        <childnode refid="15210" relation="include">
+        </childnode>
+        <childnode refid="15302" relation="include">
+        </childnode>
+      </node>
+      <node id="15268">
+        <label>ResourceFile.inl</label>
+      </node>
+      <node id="15332">
+        <label>Geometry/IndexBuffer.h</label>
+        <link refid="da/d3a/IndexBuffer_8h"/>
+        <childnode refid="15198" relation="include">
+        </childnode>
+        <childnode refid="15333" relation="include">
+        </childnode>
+      </node>
+      <node id="15373">
+        <label>DeviceRenderer.h</label>
+        <link refid="d6/d05/DeviceRenderer_8h"/>
+        <childnode refid="15374" relation="include">
+        </childnode>
+        <childnode refid="15394" relation="include">
+        </childnode>
+      </node>
+      <node id="15347">
+        <label>Resources/RenderTarget.h</label>
+        <link refid="d7/d4f/RenderTarget_8h"/>
+        <childnode refid="15198" relation="include">
+        </childnode>
+        <childnode refid="15345" relation="include">
+        </childnode>
+        <childnode refid="15348" relation="include">
+        </childnode>
+      </node>
+      <node id="15261">
+        <label>RDBFileStructure.h</label>
+        <link refid="d5/dae/RDBFileStructure_8h"/>
+        <childnode refid="15215" relation="include">
+        </childnode>
+        <childnode refid="15262" relation="include">
+        </childnode>
+      </node>
+      <node id="15424">
+        <label>Tools/GUISkin.h</label>
+        <link refid="d4/deb/GUISkin_8h"/>
+        <childnode refid="15285" relation="include">
+        </childnode>
+        <childnode refid="15345" relation="include">
+        </childnode>
+        <childnode refid="15397" relation="include">
+        </childnode>
+        <childnode refid="15425" relation="include">
+        </childnode>
+      </node>
+      <node id="15447">
+        <label>GUISwitchTabs.inl</label>
+      </node>
+      <node id="15426">
+        <label>Tools/GUIMessageBox.h</label>
+        <link refid="dc/d89/GUIMessageBox_8h"/>
+        <childnode refid="15406" relation="include">
+        </childnode>
+        <childnode refid="15427" relation="include">
+        </childnode>
+        <childnode refid="15429" relation="include">
+        </childnode>
+        <childnode refid="15431" relation="include">
+        </childnode>
+        <childnode refid="15433" relation="include">
+        </childnode>
+        <childnode refid="15435" relation="include">
+        </childnode>
+      </node>
+      <node id="15394">
+        <label>DeviceRenderer.inl</label>
+      </node>
+      <node id="15263">
+        <label>RDBPersistentStorage.inl</label>
+      </node>
+      <node id="15385">
+        <label>Resources/D3D9Buffers.h</label>
+        <link refid="d4/dab/D3D9Buffers_8h"/>
+        <childnode refid="15379" relation="include">
+        </childnode>
+        <childnode refid="15386" relation="include">
+        </childnode>
+      </node>
+      <node id="15415">
+        <label>GUIOverlay.inl</label>
+      </node>
+      <node id="15336">
+        <label>Mesh.inl</label>
+      </node>
+      <node id="15199">
+        <label>../Math/Hash/Hashing.h</label>
+        <link refid="d0/d4e/Hashing_8h"/>
+        <childnode refid="15200" relation="include">
+        </childnode>
+        <childnode refid="15208" relation="include">
+        </childnode>
+      </node>
+      <node id="15334">
+        <label>Geometry/VertexBufferAccessor.h</label>
+        <link refid="d8/d41/VertexBufferAccessor_8h"/>
+        <childnode refid="15328" relation="include">
+        </childnode>
+        <childnode refid="15330" relation="include">
+        </childnode>
+        <childnode refid="15335" relation="include">
+        </childnode>
+      </node>
+      <node id="15230">
+        <label>MemoryAllocator.h</label>
+        <link refid="d2/d75/MemoryAllocator_8h"/>
+        <childnode refid="15215" relation="include">
+        </childnode>
+        <childnode refid="15231" relation="include">
+        </childnode>
+      </node>
+      <node id="15366">
+        <label>EffectDefault.inl</label>
+      </node>
+      <node id="15438">
+        <label>Widgets/Common/GUIContainer.h</label>
+        <link refid="dc/ddb/GUIContainer_8h"/>
+        <childnode refid="15396" relation="include">
+        </childnode>
+        <childnode refid="15439" relation="include">
+        </childnode>
+      </node>
+      <node id="15249">
+        <label>../Resource/ResourceManager.h</label>
+        <link refid="de/d51/ResourceManager_8h"/>
+        <childnode refid="15250" relation="include">
+        </childnode>
+        <childnode refid="15251" relation="include">
+        </childnode>
+        <childnode refid="15267" relation="include">
+        </childnode>
+        <childnode refid="15269" relation="include">
+        </childnode>
+        <childnode refid="15271" relation="include">
+        </childnode>
+        <childnode refid="15275" relation="include">
+        </childnode>
+        <childnode refid="15283" relation="include">
+        </childnode>
+      </node>
+      <node id="15266">
+        <label>ResourceDB.inl</label>
+      </node>
+      <node id="15241">
+        <label>../Input/InputManager.h</label>
+        <link refid="df/d10/InputManager_8h"/>
+        <childnode refid="15197" relation="include">
+        </childnode>
+        <childnode refid="15242" relation="include">
+        </childnode>
+        <childnode refid="15248" relation="include">
+        </childnode>
+      </node>
+      <node id="15275">
+        <label>FileFormats/Textures/TextureBMP.h</label>
+        <link refid="d6/d80/TextureBMP_8h"/>
+        <childnode refid="15276" relation="include">
+        </childnode>
+        <childnode refid="15272" relation="include">
+        </childnode>
+        <childnode refid="15282" relation="include">
+        </childnode>
+      </node>
+      <node id="15390">
+        <label>D3D9RenderTarget.inl</label>
+      </node>
+      <node id="15317">
+        <label>../Matrix/Matrix4.h</label>
+        <link refid="d6/d64/Matrix4_8h"/>
+        <childnode refid="15312" relation="include">
+        </childnode>
+        <childnode refid="15318" relation="include">
+        </childnode>
+        <childnode refid="15314" relation="include">
+        </childnode>
+        <childnode refid="15320" relation="include">
+        </childnode>
+        <childnode refid="15322" relation="include">
+        </childnode>
+      </node>
+      <node id="15338">
+        <label>../../../Lib/Math/Geometry/Primitives/3D/Planar/Plane.h</label>
+        <link refid="d8/d2f/Plane_8h"/>
+        <childnode refid="15312" relation="include">
+        </childnode>
+        <childnode refid="15314" relation="include">
+        </childnode>
+        <childnode refid="15339" relation="include">
+        </childnode>
+      </node>
+      <node id="15222">
+        <label>File.inl</label>
+      </node>
+      <node id="15339">
+        <label>Plane.inl</label>
+      </node>
+      <node id="15363">
+        <label>Effects/EffectLibrary/EffectDefault.h</label>
+        <link refid="da/d69/EffectDefault_8h"/>
+        <childnode refid="15364" relation="include">
+        </childnode>
+        <childnode refid="15355" relation="include">
+        </childnode>
+        <childnode refid="15361" relation="include">
+        </childnode>
+        <childnode refid="15366" relation="include">
+        </childnode>
+      </node>
+      <node id="15217">
+        <label>Hardware/Hardware.h</label>
+        <link refid="da/dec/Hardware_8h"/>
+        <childnode refid="15203" relation="include">
+        </childnode>
+        <childnode refid="15205" relation="include">
+        </childnode>
+        <childnode refid="15218" relation="include">
+        </childnode>
+        <childnode refid="15220" relation="include">
+        </childnode>
+      </node>
+      <node id="15229">
+        <label>Allocators/StackAllocator.h</label>
+        <link refid="db/d84/StackAllocator_8h"/>
+        <childnode refid="15230" relation="include">
+        </childnode>
+        <childnode refid="15232" relation="include">
+        </childnode>
+      </node>
+      <node id="15220">
+        <label>Hardware.inl</label>
+      </node>
+      <node id="15381">
+        <label>D3D9Enumeration.h</label>
+        <link refid="de/d4a/D3D9Enumeration_8h"/>
+        <childnode refid="15375" relation="include">
+        </childnode>
+        <childnode refid="15203" relation="include">
+        </childnode>
+        <childnode refid="15382" relation="include">
+        </childnode>
+      </node>
+      <node id="15418">
+        <label>Tools/GUIMoveResize.h</label>
+        <link refid="d4/d6d/GUIMoveResize_8h"/>
+        <childnode refid="15215" relation="include">
+        </childnode>
+        <childnode refid="15285" relation="include">
+        </childnode>
+        <childnode refid="15419" relation="include">
+        </childnode>
+      </node>
+      <node id="15420">
+        <label>Tools/GUIMenuLoop.h</label>
+        <link refid="d7/dae/GUIMenuLoop_8h"/>
+        <childnode refid="15215" relation="include">
+        </childnode>
+        <childnode refid="15286" relation="include">
+        </childnode>
+        <childnode refid="15421" relation="include">
+        </childnode>
+      </node>
+      <node id="15398">
+        <label>../../Lib/Datastruct/Array/RingBuffer.h</label>
+        <link refid="d1/dc6/RingBuffer_8h"/>
+        <childnode refid="15244" relation="include">
+        </childnode>
+        <childnode refid="15399" relation="include">
+        </childnode>
+      </node>
+      <node id="15305">
+        <label>../Vector/Vector2.h</label>
+        <link refid="d0/df7/Vector2_8h"/>
+        <childnode refid="15209" relation="include">
+        </childnode>
+        <childnode refid="15306" relation="include">
+        </childnode>
+      </node>
+      <node id="15270">
+        <label>Resource.inl</label>
+      </node>
+      <node id="15319">
+        <label>Vector4.inl</label>
+      </node>
+      <node id="15234">
+        <label>PoolAllocator.inl</label>
+      </node>
+      <node id="15269">
+        <label>Resource.h</label>
+        <link refid="da/d1f/Resource_8h"/>
+        <childnode refid="15251" relation="include">
+        </childnode>
+        <childnode refid="15270" relation="include">
+        </childnode>
+      </node>
+      <node id="15335">
+        <label>VertexBufferAccessor.inl</label>
+      </node>
+      <node id="15211">
+        <label>Scalar.inl</label>
+      </node>
+      <node id="15310">
+        <label>../../../Lib/Math/Types/Transform/Transform3.h</label>
+        <link refid="d2/d67/Transform3_8h"/>
+        <childnode refid="15215" relation="include">
+        </childnode>
+        <childnode refid="15311" relation="include">
+        </childnode>
+        <childnode refid="15317" relation="include">
+        </childnode>
+        <childnode refid="15323" relation="include">
+        </childnode>
+      </node>
+      <node id="15207">
+        <label>String.inl</label>
+      </node>
+      <node id="15262">
+        <label>RDBFileStructure.inl</label>
+      </node>
+      <node id="15362">
+        <label>EffectInstance.inl</label>
+      </node>
+      <node id="15313">
+        <label>Vector3.inl</label>
+      </node>
+      <node id="15452">
+        <label>Widgets/Extended/GUITree.h</label>
+        <link refid="d1/d0d/GUITree_8h"/>
+        <childnode refid="15255" relation="include">
+        </childnode>
+        <childnode refid="15424" relation="include">
+        </childnode>
+        <childnode refid="15396" relation="include">
+        </childnode>
+        <childnode refid="15453" relation="include">
+        </childnode>
+      </node>
+      <node id="15414">
+        <label>GUIOverlay.h</label>
+        <link refid="da/db5/GUIOverlay_8h"/>
+        <childnode refid="15397" relation="include">
+        </childnode>
+        <childnode refid="15415" relation="include">
+        </childnode>
+      </node>
+      <node id="15378">
+        <label>GDIWindow.inl</label>
+      </node>
+      <node id="15260">
+        <label>SHA1.inl</label>
+      </node>
+      <node id="15274">
+        <label>TextureTEX.inl</label>
+      </node>
+      <node id="15428">
+        <label>GUISection.inl</label>
+      </node>
+      <node id="15296">
+        <label>DepthState.inl</label>
+      </node>
+      <node id="15288">
+        <label>Offset2.inl</label>
+      </node>
+      <node id="15255">
+        <label>../../../Lib/Datastruct/Array/Array.h</label>
+        <link refid="df/dd0/Array_8h"/>
+        <childnode refid="15244" relation="include">
+        </childnode>
+        <childnode refid="15256" relation="include">
+        </childnode>
+      </node>
+      <node id="15369">
+        <label>Effects/EffectLibrary/Basic/EffectText.h</label>
+        <link refid="d8/d5f/EffectText_8h"/>
+        <childnode refid="15355" relation="include">
+        </childnode>
+        <childnode refid="15361" relation="include">
+        </childnode>
+        <childnode refid="15370" relation="include">
+        </childnode>
+      </node>
+      <node id="15354">
+        <label>ShaderParameters.inl</label>
+      </node>
+      <node id="15358">
+        <label>EffectPass.inl</label>
+      </node>
+      <node id="15431">
+        <label>../Widgets/Common/GUIText.h</label>
+        <link refid="dc/d97/GUIText_8h"/>
+        <childnode refid="15396" relation="include">
+        </childnode>
+        <childnode refid="15432" relation="include">
+        </childnode>
+      </node>
+      <node id="15379">
+        <label>Mappings.h</label>
+        <link refid="da/dbe/Mappings_8h"/>
+        <childnode refid="15375" relation="include">
+        </childnode>
+        <childnode refid="15203" relation="include">
+        </childnode>
+        <childnode refid="15380" relation="include">
+        </childnode>
+      </node>
+      <node id="15377">
+        <label>../../GDI+/GDIWindow.h</label>
+        <link refid="d7/d03/GDIWindow_8h"/>
+        <childnode refid="15201" relation="include">
+        </childnode>
+        <childnode refid="15203" relation="include">
+        </childnode>
+        <childnode refid="15378" relation="include">
+        </childnode>
+      </node>
+      <node id="15306">
+        <label>Vector2.inl</label>
+      </node>
+      <node id="15439">
+        <label>GUIContainer.inl</label>
+      </node>
+      <node id="15291">
+        <label>States/ClippingState.h</label>
+        <link refid="d7/dde/ClippingState_8h"/>
+        <childnode refid="15203" relation="include">
+        </childnode>
+        <childnode refid="15292" relation="include">
+        </childnode>
+      </node>
+      <node id="15327">
+        <label>TextureCoord2.inl</label>
+      </node>
+      <node id="15411">
+        <label>GUIWindow.inl</label>
+      </node>
+      <node id="15324">
+        <label>../../../Lib/Math/Types/TextureCoord/TextureCoord1.h</label>
+        <link refid="db/dd0/TextureCoord1_8h"/>
+        <childnode refid="15305" relation="include">
+        </childnode>
+        <childnode refid="15312" relation="include">
+        </childnode>
+        <childnode refid="15318" relation="include">
+        </childnode>
+        <childnode refid="15325" relation="include">
+        </childnode>
+      </node>
+      <node id="15370">
+        <label>EffectText.inl</label>
+      </node>
+      <node id="15345">
+        <label>Resources/Texture.h</label>
+        <link refid="d9/dbf/Texture_8h"/>
+        <childnode refid="15198" relation="include">
+        </childnode>
+        <childnode refid="15209" relation="include">
+        </childnode>
+        <childnode refid="15276" relation="include">
+        </childnode>
+        <childnode refid="15269" relation="include">
+        </childnode>
+        <childnode refid="15346" relation="include">
+        </childnode>
+      </node>
+      <node id="15205">
+        <label>Hardware/FPU.h</label>
+        <link refid="dd/d2f/FPU_8h"/>
+        <childnode refid="15203" relation="include">
+        </childnode>
+        <childnode refid="15206" relation="include">
+        </childnode>
+      </node>
+      <node id="15386">
+        <label>D3D9Buffers.inl</label>
+      </node>
+      <node id="15419">
+        <label>GUIMoveResize.inl</label>
+      </node>
+      <node id="15251">
+        <label>Database/ResourceDB.h</label>
+        <link refid="de/dd9/ResourceDB_8h"/>
+        <childnode refid="15200" relation="include">
+        </childnode>
+        <childnode refid="15252" relation="include">
+        </childnode>
+        <childnode refid="15254" relation="include">
+        </childnode>
+        <childnode refid="15264" relation="include">
+        </childnode>
+        <childnode refid="15266" relation="include">
+        </childnode>
+      </node>
+      <node id="15372">
+        <label>EffectColor.inl</label>
+      </node>
+      <node id="15422">
+        <label>Tools/GUITimerEvents.h</label>
+        <link refid="d0/d66/GUITimerEvents_8h"/>
+        <childnode refid="15215" relation="include">
+        </childnode>
+        <childnode refid="15423" relation="include">
+        </childnode>
+      </node>
+      <node id="15281">
+        <label>ColorFunction.inl</label>
+      </node>
+      <node id="15395">
+        <label>RenderingManager.inl</label>
+      </node>
+      <node id="15393">
+        <label>Direct3D9.inl</label>
+      </node>
+      <node id="15450">
+        <label>Widgets/Extended/GUIList.h</label>
+        <link refid="d3/dae/GUIList_8h"/>
+        <childnode refid="15255" relation="include">
+        </childnode>
+        <childnode refid="15424" relation="include">
+        </childnode>
+        <childnode refid="15396" relation="include">
+        </childnode>
+        <childnode refid="15451" relation="include">
+        </childnode>
+      </node>
+      <node id="15307">
+        <label>../Vertex/Vertex2.h</label>
+        <link refid="dc/d05/Vertex2_8h"/>
+        <childnode refid="15305" relation="include">
+        </childnode>
+        <childnode refid="15308" relation="include">
+        </childnode>
+      </node>
+      <node id="15252">
+        <label>../../../Lib/String/PatternMatching.h</label>
+        <link refid="d8/d12/PatternMatching_8h"/>
+        <childnode refid="15200" relation="include">
+        </childnode>
+        <childnode refid="15253" relation="include">
+        </childnode>
+      </node>
+      <node id="15311">
+        <label>../Matrix/Matrix3.h</label>
+        <link refid="d1/d41/Matrix3_8h"/>
+        <childnode refid="15305" relation="include">
+        </childnode>
+        <childnode refid="15312" relation="include">
+        </childnode>
+        <childnode refid="15307" relation="include">
+        </childnode>
+        <childnode refid="15314" relation="include">
+        </childnode>
+        <childnode refid="15316" relation="include">
+        </childnode>
+      </node>
+      <node id="15367">
+        <label>Effects/EffectLibrary/Basic/Effect2D.h</label>
+        <link refid="db/d27/Effect2D_8h"/>
+        <childnode refid="15355" relation="include">
+        </childnode>
+        <childnode refid="15361" relation="include">
+        </childnode>
+        <childnode refid="15368" relation="include">
+        </childnode>
+      </node>
+      <node id="15237">
+        <label>Allocators/HeapAllocator.h</label>
+        <link refid="d3/d89/HeapAllocator_8h"/>
+        <childnode refid="15230" relation="include">
+        </childnode>
+        <childnode refid="15238" relation="include">
+        </childnode>
+      </node>
+      <node id="15200">
+        <label>../../../ThirdParty/System/String.h</label>
+        <link refid="d9/dba/String_8h"/>
+        <childnode refid="15201" relation="include">
+        </childnode>
+        <childnode refid="15203" relation="include">
+        </childnode>
+        <childnode refid="15205" relation="include">
+        </childnode>
+        <childnode refid="15207" relation="include">
+        </childnode>
+      </node>
+      <node id="15365">
+        <label>ShaderConstMatrices.inl</label>
+      </node>
+      <node id="15323">
+        <label>Transform3.inl</label>
+      </node>
+      <node id="15276">
+        <label>../../../../Lib/Math/Types/Color/ColorFunction.h</label>
+        <link refid="dc/d75/ColorFunction_8h"/>
+        <childnode refid="15277" relation="include">
+        </childnode>
+        <childnode refid="15279" relation="include">
+        </childnode>
+        <childnode refid="15281" relation="include">
+        </childnode>
+      </node>
+      <node id="15204">
+        <label>Platform.inl</label>
+      </node>
+      <node id="15302">
+        <label>PolygonState.inl</label>
+      </node>
+      <node id="15239">
+        <label>MemoryManager.inl</label>
+      </node>
+      <node id="15397">
+        <label>GUIEventProcessor.h</label>
+        <link refid="d4/dd6/GUIEventProcessor_8h"/>
+        <childnode refid="15285" relation="include">
+        </childnode>
+        <childnode refid="15398" relation="include">
+        </childnode>
+        <childnode refid="15400" relation="include">
+        </childnode>
+        <childnode refid="15402" relation="include">
+        </childnode>
+      </node>
+      <node id="15287">
+        <label>Offset2.h</label>
+        <link refid="de/d80/Offset2_8h"/>
+        <childnode refid="15209" relation="include">
+        </childnode>
+        <childnode refid="15288" relation="include">
+        </childnode>
+      </node>
+      <node id="15403">
+        <label>Tools/GUILayout.h</label>
+        <link refid="d6/dde/GUILayout_8h"/>
+        <childnode refid="15215" relation="include">
+        </childnode>
+        <childnode refid="15285" relation="include">
+        </childnode>
+        <childnode refid="15307" relation="include">
+        </childnode>
+        <childnode refid="15404" relation="include">
+        </childnode>
+      </node>
+      <node id="15364">
+        <label>../../Shaders/ShaderConstant/ShaderConstMatrices.h</label>
+        <link refid="d9/d31/ShaderConstMatrices_8h"/>
+        <childnode refid="15352" relation="include">
+        </childnode>
+        <childnode refid="15365" relation="include">
+        </childnode>
+      </node>
+      <node id="15227">
+        <label>System.inl</label>
+      </node>
+      <node id="15196">
+        <label>GUIManager.h</label>
+        <link refid="GUIManager.h"/>
+        <childnode refid="15197" relation="include">
+        </childnode>
+        <childnode refid="15241" relation="include">
+        </childnode>
+        <childnode refid="15249" relation="include">
+        </childnode>
+        <childnode refid="15284" relation="include">
+        </childnode>
+        <childnode refid="15396" relation="include">
+        </childnode>
+        <childnode refid="15406" relation="include">
+        </childnode>
+        <childnode refid="15412" relation="include">
+        </childnode>
+        <childnode refid="15414" relation="include">
+        </childnode>
+        <childnode refid="15416" relation="include">
+        </childnode>
+        <childnode refid="15418" relation="include">
+        </childnode>
+        <childnode refid="15420" relation="include">
+        </childnode>
+        <childnode refid="15422" relation="include">
+        </childnode>
+        <childnode refid="15424" relation="include">
+        </childnode>
+        <childnode refid="15426" relation="include">
+        </childnode>
+        <childnode refid="15436" relation="include">
+        </childnode>
+        <childnode refid="15438" relation="include">
+        </childnode>
+        <childnode refid="15427" relation="include">
+        </childnode>
+        <childnode refid="15429" relation="include">
+        </childnode>
+        <childnode refid="15431" relation="include">
+        </childnode>
+        <childnode refid="15433" relation="include">
+        </childnode>
+        <childnode refid="15440" relation="include">
+        </childnode>
+        <childnode refid="15442" relation="include">
+        </childnode>
+        <childnode refid="15444" relation="include">
+        </childnode>
+        <childnode refid="15446" relation="include">
+        </childnode>
+        <childnode refid="15448" relation="include">
+        </childnode>
+        <childnode refid="15450" relation="include">
+        </childnode>
+        <childnode refid="15452" relation="include">
+        </childnode>
+        <childnode refid="15454" relation="include">
+        </childnode>
+      </node>
+      <node id="15225">
+        <label>Networking.h</label>
+        <link refid="df/dfb/Networking_8h"/>
+        <childnode refid="15201" relation="include">
+        </childnode>
+        <childnode refid="15203" relation="include">
+        </childnode>
+        <childnode refid="15226" relation="include">
+        </childnode>
+      </node>
+      <node id="15389">
+        <label>Resources/D3D9RenderTarget.h</label>
+        <link refid="db/d6b/D3D9RenderTarget_8h"/>
+        <childnode refid="15379" relation="include">
+        </childnode>
+        <childnode refid="15390" relation="include">
+        </childnode>
+      </node>
+      <node id="15221">
+        <label>File.h</label>
+        <link refid="d6/db7/File_8h"/>
+        <childnode refid="15201" relation="include">
+        </childnode>
+        <childnode refid="15203" relation="include">
+        </childnode>
+        <childnode refid="15200" relation="include">
+        </childnode>
+        <childnode refid="15222" relation="include">
+        </childnode>
+      </node>
+      <node id="15240">
+        <label>Manager.inl</label>
+      </node>
+      <node id="15232">
+        <label>StackAllocator.inl</label>
+      </node>
+      <node id="15250">
+        <label>../Lib/Object/Patterns/Manager.h</label>
+      </node>
+      <node id="15337">
+        <label>Resources/Camera.h</label>
+        <link refid="dd/de4/Camera_8h"/>
+        <childnode refid="15215" relation="include">
+        </childnode>
+        <childnode refid="15314" relation="include">
+        </childnode>
+        <childnode refid="15320" relation="include">
+        </childnode>
+        <childnode refid="15312" relation="include">
+        </childnode>
+        <childnode refid="15318" relation="include">
+        </childnode>
+        <childnode refid="15317" relation="include">
+        </childnode>
+        <childnode refid="15338" relation="include">
+        </childnode>
+        <childnode refid="15340" relation="include">
+        </childnode>
+      </node>
+      <node id="15357">
+        <label>EffectPass.h</label>
+        <link refid="dc/d95/EffectPass_8h"/>
+        <childnode refid="15291" relation="include">
+        </childnode>
+        <childnode refid="15293" relation="include">
+        </childnode>
+        <childnode refid="15295" relation="include">
+        </childnode>
+        <childnode refid="15297" relation="include">
+        </childnode>
+        <childnode refid="15299" relation="include">
+        </childnode>
+        <childnode refid="15301" relation="include">
+        </childnode>
+        <childnode refid="15349" relation="include">
+        </childnode>
+        <childnode refid="15358" relation="include">
+        </childnode>
+      </node>
+      <node id="15202">
+        <label>ForwardWin32.inl</label>
+      </node>
+      <node id="15448">
+        <label>Widgets/Extended/GUITextLog.h</label>
+        <link refid="d1/ddc/GUITextLog_8h"/>
+        <childnode refid="15255" relation="include">
+        </childnode>
+        <childnode refid="15396" relation="include">
+        </childnode>
+        <childnode refid="15449" relation="include">
+        </childnode>
+      </node>
+      <node id="15423">
+        <label>GUITimerEvents.inl</label>
+      </node>
+      <node id="15453">
+        <label>GUITree.inl</label>
+      </node>
+      <node id="15391">
+        <label>Resources/D3D9Shaders.h</label>
+        <link refid="df/d76/D3D9Shaders_8h"/>
+        <childnode refid="15379" relation="include">
+        </childnode>
+        <childnode refid="15200" relation="include">
+        </childnode>
+        <childnode refid="15392" relation="include">
+        </childnode>
+      </node>
+      <node id="15361">
+        <label>Effects/EffectInstance.h</label>
+        <link refid="dc/d13/EffectInstance_8h"/>
+        <childnode refid="15198" relation="include">
+        </childnode>
+        <childnode refid="15351" relation="include">
+        </childnode>
+        <childnode refid="15355" relation="include">
+        </childnode>
+        <childnode refid="15362" relation="include">
+        </childnode>
+      </node>
+      <node id="15295">
+        <label>States/DepthState.h</label>
+        <link refid="d8/d4b/DepthState_8h"/>
+        <childnode refid="15203" relation="include">
+        </childnode>
+        <childnode refid="15296" relation="include">
+        </childnode>
+      </node>
+      <node id="15449">
+        <label>GUITextLog.inl</label>
+      </node>
+      <node id="15298">
+        <label>StencilState.inl</label>
+      </node>
+      <node id="15218">
+        <label>SSE.h</label>
+        <link refid="d0/d02/SSE_8h"/>
+        <childnode refid="15203" relation="include">
+        </childnode>
+        <childnode refid="15219" relation="include">
+        </childnode>
+      </node>
+      <node id="15286">
+        <label>Point2.h</label>
+        <link refid="d3/d91/Point2_8h"/>
+        <childnode refid="15287" relation="include">
+        </childnode>
+        <childnode refid="15289" relation="include">
+        </childnode>
+      </node>
+      <node id="15429">
+        <label>../Widgets/Common/GUILabel.h</label>
+        <link refid="d0/de3/GUILabel_8h"/>
+        <childnode refid="15396" relation="include">
+        </childnode>
+        <childnode refid="15430" relation="include">
+        </childnode>
+      </node>
+      <node id="15437">
+        <label>GUIMenu.inl</label>
+      </node>
+      <node id="15330">
+        <label>Geometry/VertexBuffer.h</label>
+        <link refid="d9/d38/VertexBuffer_8h"/>
+        <childnode refid="15198" relation="include">
+        </childnode>
+        <childnode refid="15331" relation="include">
+        </childnode>
+      </node>
+      <node id="15280">
+        <label>Color4.inl</label>
+      </node>
+      <node id="15303">
+        <label>Resources/Mesh.h</label>
+        <link refid="d9/d31/Mesh_8h"/>
+        <childnode refid="15304" relation="include">
+        </childnode>
+        <childnode refid="15310" relation="include">
+        </childnode>
+        <childnode refid="15324" relation="include">
+        </childnode>
+        <childnode refid="15326" relation="include">
+        </childnode>
+        <childnode refid="15328" relation="include">
+        </childnode>
+        <childnode refid="15330" relation="include">
+        </childnode>
+        <childnode refid="15332" relation="include">
+        </childnode>
+        <childnode refid="15334" relation="include">
+        </childnode>
+        <childnode refid="15336" relation="include">
+        </childnode>
+      </node>
+      <node id="15242">
+        <label>../../Lib/Datastruct/Table/TreeMap.h</label>
+        <link refid="da/d29/TreeMap_8h"/>
+        <childnode refid="15243" relation="include">
+        </childnode>
+        <childnode refid="15247" relation="include">
+        </childnode>
+      </node>
+      <node id="15404">
+        <label>GUILayout.inl</label>
+      </node>
+      <node id="15226">
+        <label>Networking.inl</label>
+      </node>
+      <node id="15277">
+        <label>Color3.h</label>
+        <link refid="d1/d32/Color3_8h"/>
+        <childnode refid="15209" relation="include">
+        </childnode>
+        <childnode refid="15278" relation="include">
+        </childnode>
+      </node>
+      <node id="15321">
+        <label>Vertex4.inl</label>
+      </node>
+      <node id="15440">
+        <label>Widgets/Common/GUICheckBox.h</label>
+        <link refid="d4/df2/GUICheckBox_8h"/>
+        <childnode refid="15396" relation="include">
+        </childnode>
+        <childnode refid="15441" relation="include">
+        </childnode>
+      </node>
+      <node id="15299">
+        <label>States/BlendingState.h</label>
+        <link refid="d0/d5e/BlendingState_8h"/>
+        <childnode refid="15279" relation="include">
+        </childnode>
+        <childnode refid="15300" relation="include">
+        </childnode>
+      </node>
+      <node id="15285">
+        <label>../../Lib/Math/Types/Discrete/Rectangle2.h</label>
+        <link refid="dd/d50/Rectangle2_8h"/>
+        <childnode refid="15286" relation="include">
+        </childnode>
+        <childnode refid="15290" relation="include">
+        </childnode>
+      </node>
+      <node id="15213">
+        <label>Fixed.inl</label>
+      </node>
+      <node id="15273">
+        <label>TextureFile.inl</label>
+      </node>
+      <node id="15341">
+        <label>Resources/Light.h</label>
+        <link refid="d4/d73/Light_8h"/>
+        <childnode refid="15215" relation="include">
+        </childnode>
+        <childnode refid="15314" relation="include">
+        </childnode>
+        <childnode refid="15312" relation="include">
+        </childnode>
+        <childnode refid="15279" relation="include">
+        </childnode>
+        <childnode refid="15342" relation="include">
+        </childnode>
+      </node>
+      <node id="15326">
+        <label>../../../Lib/Math/Types/TextureCoord/TextureCoord2.h</label>
+        <link refid="d6/d21/TextureCoord2_8h"/>
+        <childnode refid="15305" relation="include">
+        </childnode>
+        <childnode refid="15312" relation="include">
+        </childnode>
+        <childnode refid="15318" relation="include">
+        </childnode>
+        <childnode refid="15327" relation="include">
+        </childnode>
+      </node>
+      <node id="15209">
+        <label>../Math/Functions/MathFunction.h</label>
+        <link refid="d1/d98/MathFunction_8h"/>
+        <childnode refid="15205" relation="include">
+        </childnode>
+        <childnode refid="15210" relation="include">
+        </childnode>
+        <childnode refid="15212" relation="include">
+        </childnode>
+        <childnode refid="15214" relation="include">
+        </childnode>
+      </node>
+      <node id="15258">
+        <label>SplayTree.inl</label>
+      </node>
+      <node id="15212">
+        <label>../Formats/Fixed.h</label>
+        <link refid="d4/d76/Fixed_8h"/>
+        <childnode refid="15210" relation="include">
+        </childnode>
+        <childnode refid="15213" relation="include">
+        </childnode>
+      </node>
+      <node id="15228">
+        <label>ErrorManager.inl</label>
+      </node>
+      <node id="15333">
+        <label>IndexBuffer.inl</label>
+      </node>
+      <node id="15278">
+        <label>Color3.inl</label>
+      </node>
+      <node id="15382">
+        <label>D3D9Enumeration.inl</label>
+      </node>
+      <node id="15309">
+        <label>Matrix2.inl</label>
+      </node>
+      <node id="15401">
+        <label>GUIEvent.inl</label>
+      </node>
+      <node id="15315">
+        <label>Vertex3.inl</label>
+      </node>
+      <node id="15343">
+        <label>Resources/Material.h</label>
+        <link refid="df/d12/Material_8h"/>
+        <childnode refid="15279" relation="include">
+        </childnode>
+        <childnode refid="15344" relation="include">
+        </childnode>
+      </node>
+      <node id="15353">
+        <label>ShaderConst.inl</label>
+      </node>
+      <node id="15294">
+        <label>CullingState.inl</label>
+      </node>
+      <node id="15433">
+        <label>../Widgets/Common/GUIButton.h</label>
+        <link refid="d3/df9/GUIButton_8h"/>
+        <childnode refid="15396" relation="include">
+        </childnode>
+        <childnode refid="15434" relation="include">
+        </childnode>
+      </node>
+      <node id="15435">
+        <label>GUIMessageBox.inl</label>
+      </node>
+      <node id="15314">
+        <label>../Vertex/Vertex3.h</label>
+        <link refid="d0/df3/Vertex3_8h"/>
+        <childnode refid="15312" relation="include">
+        </childnode>
+        <childnode refid="15315" relation="include">
+        </childnode>
+      </node>
+      <node id="15238">
+        <label>HeapAllocator.inl</label>
+      </node>
+      <node id="15316">
+        <label>Matrix3.inl</label>
+      </node>
+      <node id="15444">
+        <label>Widgets/Common/GUITextInput.h</label>
+        <link refid="dd/d0b/GUITextInput_8h"/>
+        <childnode refid="15396" relation="include">
+        </childnode>
+        <childnode refid="15445" relation="include">
+        </childnode>
+      </node>
+      <node id="15201">
+        <label>../Forwards/ForwardWin32.h</label>
+        <link refid="d5/dea/ForwardWin32_8h"/>
+        <childnode refid="15202" relation="include">
+        </childnode>
+      </node>
+      <node id="15308">
+        <label>Vertex2.inl</label>
+      </node>
+      <node id="15283">
+        <label>ResourceManager.inl</label>
+      </node>
+      <node id="15215">
+        <label>../Error/ErrorManager.h</label>
+        <link refid="d1/db6/ErrorManager_8h"/>
+        <childnode refid="15216" relation="include">
+        </childnode>
+        <childnode refid="15228" relation="include">
+        </childnode>
+      </node>
+      <node id="15304">
+        <label>../../../Lib/Math/Types/Matrix/Matrix2.h</label>
+        <link refid="dc/d1a/Matrix2_8h"/>
+        <childnode refid="15305" relation="include">
+        </childnode>
+        <childnode refid="15307" relation="include">
+        </childnode>
+        <childnode refid="15309" relation="include">
+        </childnode>
+      </node>
+      <node id="15271">
+        <label>FileFormats/Textures/TextureTEX.h</label>
+        <link refid="df/d99/TextureTEX_8h"/>
+        <childnode refid="15272" relation="include">
+        </childnode>
+        <childnode refid="15274" relation="include">
+        </childnode>
+      </node>
+      <node id="15451">
+        <label>GUIList.inl</label>
+      </node>
+      <node id="15256">
+        <label>Array.inl</label>
+      </node>
+      <node id="15325">
+        <label>TextureCoord1.inl</label>
+      </node>
+      <node id="15441">
+        <label>GUICheckBox.inl</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="15461">
+        <label>MyDungeon.h</label>
+        <link refid="d0/de7/MyDungeon_8h"/>
+        <childnode refid="15459" relation="include">
+        </childnode>
+      </node>
+      <node id="15459">
+        <label>Main.h</label>
+        <link refid="da/d94/Main_8h"/>
+      </node>
+      <node id="15463">
+        <label>CommandShowTree.h</label>
+        <link refid="d8/d84/CommandShowTree_8h"/>
+        <childnode refid="15462" relation="include">
+        </childnode>
+      </node>
+      <node id="15460">
+        <label>MyLandscape.h</label>
+        <link refid="d7/d2b/MyLandscape_8h"/>
+        <childnode refid="15459" relation="include">
+        </childnode>
+      </node>
+      <node id="15457">
+        <label>ApplicationManager.h</label>
+        <link refid="d2/d9d/ApplicationManager_8h"/>
+        <childnode refid="15458" relation="include">
+        </childnode>
+        <childnode refid="15459" relation="include">
+        </childnode>
+        <childnode refid="15460" relation="include">
+        </childnode>
+        <childnode refid="15461" relation="include">
+        </childnode>
+      </node>
+      <node id="15456">
+        <label>WindowApplication.h</label>
+        <link refid="d4/d72/WindowApplication_8h"/>
+        <childnode refid="15457" relation="include">
+        </childnode>
+      </node>
+      <node id="15458">
+        <label>Entities.h</label>
+        <link refid="d7/d5d/Entities_8h"/>
+        <childnode refid="15459" relation="include">
+        </childnode>
+      </node>
+      <node id="15462">
+        <label>ConsoleManager.h</label>
+        <link refid="d3/d63/ConsoleManager_8h"/>
+        <childnode refid="15456" relation="include">
+        </childnode>
+      </node>
+      <node id="15455">
+        <label>GUIManager.h</label>
+        <link refid="GUIManager.h"/>
+        <childnode refid="15456" relation="include">
+        </childnode>
+        <childnode refid="15462" relation="include">
+        </childnode>
+        <childnode refid="15463" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d7/de4/classGUIManager" prot="public">GUIManager</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="d6/db3/GUIManager_8h_1a3432441e4438ec9b639244aad68f4136" prot="public" static="no">
+        <name>GUIFn</name>
+        <initializer><ref refid="dd/dcd/classManager_1a7fa7098f43df61eb754bbf4c91938d74" kindref="member">GUIManager::GetInstancePtr</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIManager.h" line="65" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIManager.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/GUI/GUIManager.h"/>
+  </compounddef>
+</doxygen>

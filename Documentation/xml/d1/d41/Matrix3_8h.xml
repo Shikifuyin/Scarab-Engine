@@ -1,0 +1,1811 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d1/d41/Matrix3_8h" kind="file">
+    <compoundname>Matrix3.h</compoundname>
+    <includes refid="d0/df7/Vector2_8h" local="yes">../Vector/Vector2.h</includes>
+    <includes refid="dd/d8c/Vector3_8h" local="yes">../Vector/Vector3.h</includes>
+    <includes refid="dc/d05/Vertex2_8h" local="yes">../Vertex/Vertex2.h</includes>
+    <includes refid="d0/df3/Vertex3_8h" local="yes">../Vertex/Vertex3.h</includes>
+    <includes local="yes">Matrix3.inl</includes>
+    <includedby refid="d2/d67/Transform3_8h" local="yes">Transform3.h</includedby>
+    <includedby refid="d1/d4a/Quaternion_8h" local="yes">Quaternion.h</includedby>
+    <includedby refid="d2/d32/EulerDecomposition_8h" local="yes">EulerDecomposition.h</includedby>
+    <includedby refid="dc/d40/JacobianConstraint_8h" local="yes">JacobianConstraint.h</includedby>
+    <includedby refid="d2/d49/LinearSystem3_8h" local="yes">LinearSystem3.h</includedby>
+    <includedby refid="da/d04/EigenDecomposition3_8h" local="yes">EigenDecomposition3.h</includedby>
+    <includedby refid="d8/d66/QDUDecomposition_8h" local="yes">QDUDecomposition.h</includedby>
+    <includedby refid="d0/da4/ImplicitSurface_8h" local="yes">ImplicitSurface.h</includedby>
+    <includedby refid="d3/de8/Transform2_8h" local="yes">Transform2.h</includedby>
+    <incdepgraph>
+      <node id="22678">
+        <label>../Platform.h</label>
+        <link refid="d9/dd0/Platform_8h"/>
+        <childnode refid="22679" relation="include">
+        </childnode>
+      </node>
+      <node id="22687">
+        <label>../Vector/Vector3.h</label>
+        <link refid="dd/d8c/Vector3_8h"/>
+        <childnode refid="22676" relation="include">
+        </childnode>
+        <childnode refid="22688" relation="include">
+        </childnode>
+      </node>
+      <node id="22680">
+        <label>FPU.inl</label>
+      </node>
+      <node id="22685">
+        <label>MathFunction.inl</label>
+      </node>
+      <node id="22681">
+        <label>../Formats/Scalar.h</label>
+        <link refid="d0/d10/Scalar_8h"/>
+        <childnode refid="22678" relation="include">
+        </childnode>
+        <childnode refid="22682" relation="include">
+        </childnode>
+      </node>
+      <node id="22675">
+        <label>../Vector/Vector2.h</label>
+        <link refid="d0/df7/Vector2_8h"/>
+        <childnode refid="22676" relation="include">
+        </childnode>
+        <childnode refid="22686" relation="include">
+        </childnode>
+      </node>
+      <node id="22682">
+        <label>Scalar.inl</label>
+      </node>
+      <node id="22688">
+        <label>Vector3.inl</label>
+      </node>
+      <node id="22686">
+        <label>Vector2.inl</label>
+      </node>
+      <node id="22677">
+        <label>../../../ThirdParty/System/Hardware/FPU.h</label>
+        <link refid="dd/d2f/FPU_8h"/>
+        <childnode refid="22678" relation="include">
+        </childnode>
+        <childnode refid="22680" relation="include">
+        </childnode>
+      </node>
+      <node id="22689">
+        <label>../Vertex/Vertex2.h</label>
+        <link refid="dc/d05/Vertex2_8h"/>
+        <childnode refid="22675" relation="include">
+        </childnode>
+        <childnode refid="22690" relation="include">
+        </childnode>
+      </node>
+      <node id="22674">
+        <label>Matrix3.h</label>
+        <link refid="Matrix3.h"/>
+        <childnode refid="22675" relation="include">
+        </childnode>
+        <childnode refid="22687" relation="include">
+        </childnode>
+        <childnode refid="22689" relation="include">
+        </childnode>
+        <childnode refid="22691" relation="include">
+        </childnode>
+        <childnode refid="22693" relation="include">
+        </childnode>
+      </node>
+      <node id="22679">
+        <label>Platform.inl</label>
+      </node>
+      <node id="22684">
+        <label>Fixed.inl</label>
+      </node>
+      <node id="22676">
+        <label>../../Functions/MathFunction.h</label>
+        <link refid="d1/d98/MathFunction_8h"/>
+        <childnode refid="22677" relation="include">
+        </childnode>
+        <childnode refid="22681" relation="include">
+        </childnode>
+        <childnode refid="22683" relation="include">
+        </childnode>
+        <childnode refid="22685" relation="include">
+        </childnode>
+      </node>
+      <node id="22683">
+        <label>../Formats/Fixed.h</label>
+        <link refid="d4/d76/Fixed_8h"/>
+        <childnode refid="22681" relation="include">
+        </childnode>
+        <childnode refid="22684" relation="include">
+        </childnode>
+      </node>
+      <node id="22692">
+        <label>Vertex3.inl</label>
+      </node>
+      <node id="22691">
+        <label>../Vertex/Vertex3.h</label>
+        <link refid="d0/df3/Vertex3_8h"/>
+        <childnode refid="22687" relation="include">
+        </childnode>
+        <childnode refid="22692" relation="include">
+        </childnode>
+      </node>
+      <node id="22693">
+        <label>Matrix3.inl</label>
+      </node>
+      <node id="22690">
+        <label>Vertex2.inl</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="22747">
+        <label>JointSlider.h</label>
+        <link refid="d7/dd4/JointSlider_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+      </node>
+      <node id="22794">
+        <label>ShaderConst.h</label>
+        <link refid="dc/d51/ShaderConst_8h"/>
+        <childnode refid="22795" relation="include">
+        </childnode>
+        <childnode refid="22809" relation="include">
+        </childnode>
+        <childnode refid="22810" relation="include">
+        </childnode>
+        <childnode refid="22811" relation="include">
+        </childnode>
+        <childnode refid="22812" relation="include">
+        </childnode>
+      </node>
+      <node id="22772">
+        <label>TriangleTriangleCollision.h</label>
+        <link refid="d7/db6/TriangleTriangleCollision_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+        <childnode refid="22717" relation="include">
+        </childnode>
+      </node>
+      <node id="22705">
+        <label>WorldManager.h</label>
+        <link refid="db/d98/WorldManager_8h"/>
+        <childnode refid="22698" relation="include">
+        </childnode>
+      </node>
+      <node id="22832">
+        <label>SingularDecomposition3.h</label>
+        <link refid="db/de4/SingularDecomposition3_8h"/>
+      </node>
+      <node id="22768">
+        <label>EffectPlanarReflection.h</label>
+        <link refid="d1/d6b/EffectPlanarReflection_8h"/>
+      </node>
+      <node id="22703">
+        <label>MyDungeon.h</label>
+        <link refid="d0/de7/MyDungeon_8h"/>
+        <childnode refid="22701" relation="include">
+        </childnode>
+      </node>
+      <node id="22752">
+        <label>IslandSolver.h</label>
+        <link refid="dc/d13/IslandSolver_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+      </node>
+      <node id="22769">
+        <label>WorldDLODNode.h</label>
+        <link refid="df/d7d/WorldDLODNode_8h"/>
+      </node>
+      <node id="22720">
+        <label>MeshGridPlane.h</label>
+        <link refid="d1/d9a/MeshGridPlane_8h"/>
+        <childnode refid="22704" relation="include">
+        </childnode>
+      </node>
+      <node id="22734">
+        <label>MeshSurface.h</label>
+        <link refid="d1/de1/MeshSurface_8h"/>
+        <childnode refid="22704" relation="include">
+        </childnode>
+      </node>
+      <node id="22749">
+        <label>JointUniversal.h</label>
+        <link refid="df/d75/JointUniversal_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+      </node>
+      <node id="22833">
+        <label>QDUDecomposition.h</label>
+        <link refid="d8/d66/QDUDecomposition_8h"/>
+      </node>
+      <node id="22777">
+        <label>ConvexConvexCollision.h</label>
+        <link refid="dd/ded/ConvexConvexCollision_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+      </node>
+      <node id="22816">
+        <label>MeshDeformableGraph.h</label>
+        <link refid="df/dc5/MeshDeformableGraph_8h"/>
+        <childnode refid="22740" relation="include">
+        </childnode>
+        <childnode refid="22781" relation="include">
+        </childnode>
+      </node>
+      <node id="22766">
+        <label>WorldConvexRoom.h</label>
+        <link refid="d0/d27/WorldConvexRoom_8h"/>
+        <childnode refid="22764" relation="include">
+        </childnode>
+      </node>
+      <node id="22761">
+        <label>WorldLight.h</label>
+        <link refid="d3/d85/WorldLight_8h"/>
+        <childnode refid="22705" relation="include">
+        </childnode>
+        <childnode refid="22739" relation="include">
+        </childnode>
+      </node>
+      <node id="22790">
+        <label>MorphController.h</label>
+        <link refid="d7/da6/MorphController_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+      </node>
+      <node id="22770">
+        <label>WorldCaster.h</label>
+        <link refid="d9/d6f/WorldCaster_8h"/>
+        <childnode refid="22705" relation="include">
+        </childnode>
+      </node>
+      <node id="22715">
+        <label>ConcaveBoxCollision.h</label>
+        <link refid="de/ddd/ConcaveBoxCollision_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+      </node>
+      <node id="22697">
+        <label>RenderingManager.h</label>
+        <link refid="de/d07/RenderingManager_8h"/>
+        <childnode refid="22698" relation="include">
+        </childnode>
+        <childnode refid="22704" relation="include">
+        </childnode>
+        <childnode refid="22705" relation="include">
+        </childnode>
+        <childnode refid="22706" relation="include">
+        </childnode>
+      </node>
+      <node id="22712">
+        <label>PhysicsManager.h</label>
+        <link refid="d2/d6b/PhysicsManager_8h"/>
+        <childnode refid="22698" relation="include">
+        </childnode>
+        <childnode refid="22705" relation="include">
+        </childnode>
+      </node>
+      <node id="22736">
+        <label>ShapeHeightField.h</label>
+        <link refid="d5/df3/ShapeHeightField_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+        <childnode refid="22737" relation="include">
+        </childnode>
+      </node>
+      <node id="22779">
+        <label>ShapeConvexMesh.h</label>
+        <link refid="d1/dfc/ShapeConvexMesh_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+      </node>
+      <node id="22800">
+        <label>EffectColor.h</label>
+        <link refid="db/d7c/EffectColor_8h"/>
+        <childnode refid="22697" relation="include">
+        </childnode>
+      </node>
+      <node id="22826">
+        <label>ConstrainedQuaternion.h</label>
+        <link refid="d2/df1/ConstrainedQuaternion_8h"/>
+      </node>
+      <node id="22748">
+        <label>JointHinge.h</label>
+        <link refid="db/de4/JointHinge_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+      </node>
+      <node id="22701">
+        <label>Main.h</label>
+        <link refid="da/d94/Main_8h"/>
+      </node>
+      <node id="22789">
+        <label>IKJointController.h</label>
+        <link refid="d7/d6c/IKJointController_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+        <childnode refid="22755" relation="include">
+        </childnode>
+      </node>
+      <node id="22771">
+        <label>VoronoiClip.h</label>
+        <link refid="d6/de7/VoronoiClip_8h"/>
+        <childnode refid="22772" relation="include">
+        </childnode>
+        <childnode refid="22773" relation="include">
+        </childnode>
+        <childnode refid="22774" relation="include">
+        </childnode>
+        <childnode refid="22775" relation="include">
+        </childnode>
+        <childnode refid="22776" relation="include">
+        </childnode>
+        <childnode refid="22777" relation="include">
+        </childnode>
+      </node>
+      <node id="22724">
+        <label>SphereBoxCollision.h</label>
+        <link refid="d2/dec/SphereBoxCollision_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+      </node>
+      <node id="22755">
+        <label>Skeleton.h</label>
+        <link refid="d1/ded/Skeleton_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+      </node>
+      <node id="22787">
+        <label>BlendController.h</label>
+        <link refid="d9/d6d/BlendController_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+      </node>
+      <node id="22717">
+        <label>ConcaveConcaveCollision.h</label>
+        <link refid="d8/d93/ConcaveConcaveCollision_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+      </node>
+      <node id="22795">
+        <label>ShaderParameters.h</label>
+        <link refid="d5/d63/ShaderParameters_8h"/>
+        <childnode refid="22697" relation="include">
+        </childnode>
+        <childnode refid="22796" relation="include">
+        </childnode>
+      </node>
+      <node id="22817">
+        <label>BroadPhase.h</label>
+        <link refid="da/d8f/BroadPhase_8h"/>
+        <childnode refid="22818" relation="include">
+        </childnode>
+      </node>
+      <node id="22740">
+        <label>Shape.h</label>
+        <link refid="de/d8f/Shape_8h"/>
+        <childnode refid="22741" relation="include">
+        </childnode>
+        <childnode refid="22711" relation="include">
+        </childnode>
+        <childnode refid="22726" relation="include">
+        </childnode>
+        <childnode refid="22723" relation="include">
+        </childnode>
+        <childnode refid="22779" relation="include">
+        </childnode>
+        <childnode refid="22780" relation="include">
+        </childnode>
+        <childnode refid="22736" relation="include">
+        </childnode>
+        <childnode refid="22742" relation="include">
+        </childnode>
+        <childnode refid="22781" relation="include">
+        </childnode>
+        <childnode refid="22782" relation="include">
+        </childnode>
+      </node>
+      <node id="22780">
+        <label>ShapeConcaveMesh.h</label>
+        <link refid="d7/dc2/ShapeConcaveMesh_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+      </node>
+      <node id="22763">
+        <label>WorldPortalCuller.h</label>
+        <link refid="d1/d27/WorldPortalCuller_8h"/>
+        <childnode refid="22764" relation="include">
+        </childnode>
+        <childnode refid="22765" relation="include">
+        </childnode>
+        <childnode refid="22766" relation="include">
+        </childnode>
+      </node>
+      <node id="22709">
+        <label>MeshSegment.h</label>
+        <link refid="d2/db6/MeshSegment_8h"/>
+        <childnode refid="22704" relation="include">
+        </childnode>
+      </node>
+      <node id="22708">
+        <label>CommandShowTree.h</label>
+        <link refid="d8/d84/CommandShowTree_8h"/>
+        <childnode refid="22707" relation="include">
+        </childnode>
+      </node>
+      <node id="22714">
+        <label>ConcaveSphereCollision.h</label>
+        <link refid="dc/d17/ConcaveSphereCollision_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+      </node>
+      <node id="22806">
+        <label>EffectTexture1D.h</label>
+        <link refid="db/df9/EffectTexture1D_8h"/>
+      </node>
+      <node id="22702">
+        <label>MyLandscape.h</label>
+        <link refid="d7/d2b/MyLandscape_8h"/>
+        <childnode refid="22701" relation="include">
+        </childnode>
+      </node>
+      <node id="22750">
+        <label>RagDoll.h</label>
+        <link refid="d4/d6e/RagDoll_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+      </node>
+      <node id="22718">
+        <label>MeshQuad.h</label>
+        <link refid="da/d06/MeshQuad_8h"/>
+        <childnode refid="22704" relation="include">
+        </childnode>
+        <childnode refid="22719" relation="include">
+        </childnode>
+      </node>
+      <node id="22699">
+        <label>ApplicationManager.h</label>
+        <link refid="d2/d9d/ApplicationManager_8h"/>
+        <childnode refid="22700" relation="include">
+        </childnode>
+        <childnode refid="22701" relation="include">
+        </childnode>
+        <childnode refid="22702" relation="include">
+        </childnode>
+        <childnode refid="22703" relation="include">
+        </childnode>
+      </node>
+      <node id="22732">
+        <label>MeshTorus.h</label>
+        <link refid="d6/dee/MeshTorus_8h"/>
+        <childnode refid="22704" relation="include">
+        </childnode>
+      </node>
+      <node id="22762">
+        <label>WorldCuller.h</label>
+        <link refid="da/daf/WorldCuller_8h"/>
+        <childnode refid="22763" relation="include">
+        </childnode>
+        <childnode refid="22767" relation="include">
+        </childnode>
+        <childnode refid="22705" relation="include">
+        </childnode>
+        <childnode refid="22769" relation="include">
+        </childnode>
+      </node>
+      <node id="22807">
+        <label>EffectTexture2D.h</label>
+        <link refid="db/d40/EffectTexture2D_8h"/>
+      </node>
+      <node id="22834">
+        <label>ImplicitSurface.h</label>
+        <link refid="d0/da4/ImplicitSurface_8h"/>
+        <childnode refid="22835" relation="include">
+        </childnode>
+      </node>
+      <node id="22716">
+        <label>ConcaveConvexCollision.h</label>
+        <link refid="d2/d5a/ConcaveConvexCollision_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+      </node>
+      <node id="22741">
+        <label>TransformedShape.h</label>
+        <link refid="d1/da1/TransformedShape_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+        <childnode refid="22742" relation="include">
+        </childnode>
+        <childnode refid="22771" relation="include">
+        </childnode>
+        <childnode refid="22778" relation="include">
+        </childnode>
+        <childnode refid="22713" relation="include">
+        </childnode>
+        <childnode refid="22728" relation="include">
+        </childnode>
+        <childnode refid="22724" relation="include">
+        </childnode>
+        <childnode refid="22729" relation="include">
+        </childnode>
+        <childnode refid="22714" relation="include">
+        </childnode>
+        <childnode refid="22715" relation="include">
+        </childnode>
+        <childnode refid="22716" relation="include">
+        </childnode>
+        <childnode refid="22717" relation="include">
+        </childnode>
+      </node>
+      <node id="22725">
+        <label>MeshSphere.h</label>
+        <link refid="db/db2/MeshSphere_8h"/>
+        <childnode refid="22704" relation="include">
+        </childnode>
+        <childnode refid="22726" relation="include">
+        </childnode>
+      </node>
+      <node id="22827">
+        <label>UnConstrainedQuaternion.h</label>
+        <link refid="da/d13/UnConstrainedQuaternion_8h"/>
+      </node>
+      <node id="22729">
+        <label>SingleSideVClip.h</label>
+        <link refid="dd/d7f/SingleSideVClip_8h"/>
+        <childnode refid="22730" relation="include">
+        </childnode>
+      </node>
+      <node id="22808">
+        <label>EffectTexture3D.h</label>
+        <link refid="d7/d48/EffectTexture3D_8h"/>
+      </node>
+      <node id="22824">
+        <label>BVSphere.h</label>
+        <link refid="d7/d9f/BVSphere_8h"/>
+      </node>
+      <node id="22733">
+        <label>MeshCurve.h</label>
+        <link refid="d6/d2c/MeshCurve_8h"/>
+        <childnode refid="22704" relation="include">
+        </childnode>
+      </node>
+      <node id="22776">
+        <label>ConvexBoxCollision.h</label>
+        <link refid="d0/d98/ConvexBoxCollision_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+      </node>
+      <node id="22820">
+        <label>WorldNode.h</label>
+        <link refid="df/d61/WorldNode_8h"/>
+        <childnode refid="22705" relation="include">
+        </childnode>
+        <childnode refid="22821" relation="include">
+        </childnode>
+        <childnode refid="22822" relation="include">
+        </childnode>
+        <childnode refid="22737" relation="include">
+        </childnode>
+        <childnode refid="22766" relation="include">
+        </childnode>
+        <childnode refid="22739" relation="include">
+        </childnode>
+      </node>
+      <node id="22698">
+        <label>WindowApplication.h</label>
+        <link refid="d4/d72/WindowApplication_8h"/>
+        <childnode refid="22699" relation="include">
+        </childnode>
+      </node>
+      <node id="22759">
+        <label>ContactEdge.h</label>
+        <link refid="d0/d81/ContactEdge_8h"/>
+        <childnode refid="22752" relation="include">
+        </childnode>
+        <childnode refid="22753" relation="include">
+        </childnode>
+      </node>
+      <node id="22835">
+        <label>QuadricSurface.h</label>
+        <link refid="df/dc4/QuadricSurface_8h"/>
+      </node>
+      <node id="22721">
+        <label>MeshDisk.h</label>
+        <link refid="d0/d33/MeshDisk_8h"/>
+        <childnode refid="22704" relation="include">
+        </childnode>
+      </node>
+      <node id="22757">
+        <label>SoftConstraintSolver.h</label>
+        <link refid="d1/d3a/SoftConstraintSolver_8h"/>
+        <childnode refid="22753" relation="include">
+        </childnode>
+      </node>
+      <node id="22797">
+        <label>EffectDefault.h</label>
+        <link refid="da/d69/EffectDefault_8h"/>
+        <childnode refid="22697" relation="include">
+        </childnode>
+      </node>
+      <node id="22792">
+        <label>RevolutionSurfaceMesh.h</label>
+        <link refid="d9/d4c/RevolutionSurfaceMesh_8h"/>
+      </node>
+      <node id="22821">
+        <label>WorldBSPNode.h</label>
+        <link refid="d9/dd8/WorldBSPNode_8h"/>
+        <childnode refid="22705" relation="include">
+        </childnode>
+        <childnode refid="22764" relation="include">
+        </childnode>
+        <childnode refid="22739" relation="include">
+        </childnode>
+      </node>
+      <node id="22711">
+        <label>ShapeTriangle.h</label>
+        <link refid="da/d39/ShapeTriangle_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+        <childnode refid="22713" relation="include">
+        </childnode>
+        <childnode refid="22714" relation="include">
+        </childnode>
+        <childnode refid="22715" relation="include">
+        </childnode>
+        <childnode refid="22716" relation="include">
+        </childnode>
+        <childnode refid="22717" relation="include">
+        </childnode>
+      </node>
+      <node id="22773">
+        <label>TriangleBoxCollision.h</label>
+        <link refid="d6/d4e/TriangleBoxCollision_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+        <childnode refid="22715" relation="include">
+        </childnode>
+      </node>
+      <node id="22812">
+        <label>ShaderConstCamera.h</label>
+        <link refid="d2/dc2/ShaderConstCamera_8h"/>
+        <childnode refid="22804" relation="include">
+        </childnode>
+        <childnode refid="22805" relation="include">
+        </childnode>
+      </node>
+      <node id="22778">
+        <label>NarrowPhase.h</label>
+        <link refid="d0/d14/NarrowPhase_8h"/>
+        <childnode refid="22771" relation="include">
+        </childnode>
+        <childnode refid="22713" relation="include">
+        </childnode>
+        <childnode refid="22728" relation="include">
+        </childnode>
+        <childnode refid="22724" relation="include">
+        </childnode>
+        <childnode refid="22729" relation="include">
+        </childnode>
+        <childnode refid="22714" relation="include">
+        </childnode>
+        <childnode refid="22715" relation="include">
+        </childnode>
+        <childnode refid="22716" relation="include">
+        </childnode>
+        <childnode refid="22717" relation="include">
+        </childnode>
+        <childnode refid="22759" relation="include">
+        </childnode>
+      </node>
+      <node id="22774">
+        <label>BoxBoxCollision.h</label>
+        <link refid="d9/d30/BoxBoxCollision_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+      </node>
+      <node id="22695">
+        <label>Transform3.h</label>
+        <link refid="d2/d67/Transform3_8h"/>
+        <childnode refid="22696" relation="include">
+        </childnode>
+        <childnode refid="22794" relation="include">
+        </childnode>
+        <childnode refid="22740" relation="include">
+        </childnode>
+        <childnode refid="22813" relation="include">
+        </childnode>
+      </node>
+      <node id="22727">
+        <label>ParticleSystem.h</label>
+        <link refid="d7/d33/ParticleSystem_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+      </node>
+      <node id="22731">
+        <label>MeshCylinder.h</label>
+        <link refid="d7/dad/MeshCylinder_8h"/>
+        <childnode refid="22704" relation="include">
+        </childnode>
+      </node>
+      <node id="22804">
+        <label>EffectLightPointGouraud.h</label>
+        <link refid="de/da9/EffectLightPointGouraud_8h"/>
+      </node>
+      <node id="22710">
+        <label>MeshTriangle.h</label>
+        <link refid="db/d3f/MeshTriangle_8h"/>
+        <childnode refid="22704" relation="include">
+        </childnode>
+        <childnode refid="22711" relation="include">
+        </childnode>
+      </node>
+      <node id="22756">
+        <label>SoftBody.h</label>
+        <link refid="dc/d93/SoftBody_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+        <childnode refid="22757" relation="include">
+        </childnode>
+      </node>
+      <node id="22737">
+        <label>WorldOutdoorRegion.h</label>
+        <link refid="d0/d1d/WorldOutdoorRegion_8h"/>
+        <childnode refid="22738" relation="include">
+        </childnode>
+      </node>
+      <node id="22799">
+        <label>EffectText.h</label>
+        <link refid="d8/d5f/EffectText_8h"/>
+        <childnode refid="22697" relation="include">
+        </childnode>
+      </node>
+      <node id="22743">
+        <label>RigidBody.h</label>
+        <link refid="dc/da0/RigidBody_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+        <childnode refid="22744" relation="include">
+        </childnode>
+        <childnode refid="22745" relation="include">
+        </childnode>
+        <childnode refid="22746" relation="include">
+        </childnode>
+        <childnode refid="22747" relation="include">
+        </childnode>
+        <childnode refid="22748" relation="include">
+        </childnode>
+        <childnode refid="22749" relation="include">
+        </childnode>
+        <childnode refid="22754" relation="include">
+        </childnode>
+        <childnode refid="22737" relation="include">
+        </childnode>
+      </node>
+      <node id="22754">
+        <label>SystemBody.h</label>
+        <link refid="d3/d0b/SystemBody_8h"/>
+        <childnode refid="22727" relation="include">
+        </childnode>
+        <childnode refid="22755" relation="include">
+        </childnode>
+        <childnode refid="22750" relation="include">
+        </childnode>
+      </node>
+      <node id="22784">
+        <label>WorldCamera.h</label>
+        <link refid="d2/d2e/WorldCamera_8h"/>
+        <childnode refid="22705" relation="include">
+        </childnode>
+      </node>
+      <node id="22739">
+        <label>WorldDebugDraw.h</label>
+        <link refid="d1/df3/WorldDebugDraw_8h"/>
+        <childnode refid="22705" relation="include">
+        </childnode>
+      </node>
+      <node id="22793">
+        <label>TubeSurfaceMesh.h</label>
+        <link refid="d8/ddd/TubeSurfaceMesh_8h"/>
+      </node>
+      <node id="22830">
+        <label>LinearSystem3.h</label>
+        <link refid="d2/d49/LinearSystem3_8h"/>
+      </node>
+      <node id="22738">
+        <label>WorldOutdoorArea.h</label>
+        <link refid="dd/d4f/WorldOutdoorArea_8h"/>
+        <childnode refid="22705" relation="include">
+        </childnode>
+        <childnode refid="22739" relation="include">
+        </childnode>
+      </node>
+      <node id="22730">
+        <label>ConvexSphereCollision.h</label>
+        <link refid="df/d23/ConvexSphereCollision_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+      </node>
+      <node id="22700">
+        <label>Entities.h</label>
+        <link refid="d7/d5d/Entities_8h"/>
+        <childnode refid="22701" relation="include">
+        </childnode>
+      </node>
+      <node id="22815">
+        <label>AABoxTree.h</label>
+        <link refid="d3/db4/AABoxTree_8h"/>
+        <childnode refid="22816" relation="include">
+        </childnode>
+        <childnode refid="22740" relation="include">
+        </childnode>
+        <childnode refid="22780" relation="include">
+        </childnode>
+      </node>
+      <node id="22728">
+        <label>SphereSphereCollision.h</label>
+        <link refid="da/df6/SphereSphereCollision_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+      </node>
+      <node id="22767">
+        <label>GlobalEffect.h</label>
+        <link refid="d2/d5d/GlobalEffect_8h"/>
+        <childnode refid="22719" relation="include">
+        </childnode>
+        <childnode refid="22768" relation="include">
+        </childnode>
+      </node>
+      <node id="22764">
+        <label>WorldIndoorArea.h</label>
+        <link refid="d2/d61/WorldIndoorArea_8h"/>
+        <childnode refid="22705" relation="include">
+        </childnode>
+        <childnode refid="22739" relation="include">
+        </childnode>
+      </node>
+      <node id="22814">
+        <label>BVAABox.h</label>
+        <link refid="dc/d7d/BVAABox_8h"/>
+        <childnode refid="22740" relation="include">
+        </childnode>
+        <childnode refid="22815" relation="include">
+        </childnode>
+        <childnode refid="22817" relation="include">
+        </childnode>
+        <childnode refid="22819" relation="include">
+        </childnode>
+        <childnode refid="22823" relation="include">
+        </childnode>
+      </node>
+      <node id="22745">
+        <label>Constraint.h</label>
+        <link refid="d3/dcf/Constraint_8h"/>
+        <childnode refid="22744" relation="include">
+        </childnode>
+        <childnode refid="22746" relation="include">
+        </childnode>
+        <childnode refid="22747" relation="include">
+        </childnode>
+        <childnode refid="22748" relation="include">
+        </childnode>
+        <childnode refid="22749" relation="include">
+        </childnode>
+        <childnode refid="22750" relation="include">
+        </childnode>
+        <childnode refid="22751" relation="include">
+        </childnode>
+        <childnode refid="22753" relation="include">
+        </childnode>
+      </node>
+      <node id="22694">
+        <label>Matrix3.h</label>
+        <link refid="Matrix3.h"/>
+        <childnode refid="22695" relation="include">
+        </childnode>
+        <childnode refid="22825" relation="include">
+        </childnode>
+        <childnode refid="22828" relation="include">
+        </childnode>
+        <childnode refid="22829" relation="include">
+        </childnode>
+        <childnode refid="22830" relation="include">
+        </childnode>
+        <childnode refid="22831" relation="include">
+        </childnode>
+        <childnode refid="22833" relation="include">
+        </childnode>
+        <childnode refid="22834" relation="include">
+        </childnode>
+        <childnode refid="22836" relation="include">
+        </childnode>
+      </node>
+      <node id="22744">
+        <label>JointFixed.h</label>
+        <link refid="da/df1/JointFixed_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+      </node>
+      <node id="22798">
+        <label>Effect2D.h</label>
+        <link refid="db/d27/Effect2D_8h"/>
+        <childnode refid="22697" relation="include">
+        </childnode>
+      </node>
+      <node id="22823">
+        <label>Octree.h</label>
+        <link refid="d2/dc3/Octree_8h"/>
+      </node>
+      <node id="22719">
+        <label>EffectPlanarShadows.h</label>
+        <link refid="d6/d73/EffectPlanarShadows_8h"/>
+        <childnode refid="22705" relation="include">
+        </childnode>
+      </node>
+      <node id="22791">
+        <label>BoneController.h</label>
+        <link refid="df/dbb/BoneController_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+      </node>
+      <node id="22704">
+        <label>ModelingManager.h</label>
+        <link refid="dc/ddb/ModelingManager_8h"/>
+        <childnode refid="22698" relation="include">
+        </childnode>
+        <childnode refid="22705" relation="include">
+        </childnode>
+      </node>
+      <node id="22810">
+        <label>ShaderConstMaterial.h</label>
+        <link refid="d3/dea/ShaderConstMaterial_8h"/>
+        <childnode refid="22801" relation="include">
+        </childnode>
+        <childnode refid="22802" relation="include">
+        </childnode>
+        <childnode refid="22803" relation="include">
+        </childnode>
+        <childnode refid="22804" relation="include">
+        </childnode>
+        <childnode refid="22805" relation="include">
+        </childnode>
+      </node>
+      <node id="22707">
+        <label>ConsoleManager.h</label>
+        <link refid="d3/d63/ConsoleManager_8h"/>
+        <childnode refid="22698" relation="include">
+        </childnode>
+      </node>
+      <node id="22811">
+        <label>ShaderConstLight.h</label>
+        <link refid="df/d63/ShaderConstLight_8h"/>
+        <childnode refid="22803" relation="include">
+        </childnode>
+        <childnode refid="22804" relation="include">
+        </childnode>
+        <childnode refid="22805" relation="include">
+        </childnode>
+      </node>
+      <node id="22809">
+        <label>ShaderConstMatrices.h</label>
+        <link refid="d9/d31/ShaderConstMatrices_8h"/>
+        <childnode refid="22797" relation="include">
+        </childnode>
+        <childnode refid="22800" relation="include">
+        </childnode>
+        <childnode refid="22801" relation="include">
+        </childnode>
+        <childnode refid="22802" relation="include">
+        </childnode>
+        <childnode refid="22803" relation="include">
+        </childnode>
+        <childnode refid="22804" relation="include">
+        </childnode>
+        <childnode refid="22805" relation="include">
+        </childnode>
+        <childnode refid="22806" relation="include">
+        </childnode>
+        <childnode refid="22807" relation="include">
+        </childnode>
+        <childnode refid="22808" relation="include">
+        </childnode>
+      </node>
+      <node id="22706">
+        <label>GUIManager.h</label>
+        <link refid="d6/db3/GUIManager_8h"/>
+        <childnode refid="22698" relation="include">
+        </childnode>
+        <childnode refid="22707" relation="include">
+        </childnode>
+        <childnode refid="22708" relation="include">
+        </childnode>
+      </node>
+      <node id="22801">
+        <label>EffectMaterial.h</label>
+        <link refid="d6/d58/EffectMaterial_8h"/>
+        <childnode refid="22719" relation="include">
+        </childnode>
+        <childnode refid="22701" relation="include">
+        </childnode>
+      </node>
+      <node id="22788">
+        <label>ParticleController.h</label>
+        <link refid="db/d03/ParticleController_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+        <childnode refid="22727" relation="include">
+        </childnode>
+      </node>
+      <node id="22813">
+        <label>BoundingVolume.h</label>
+        <link refid="dd/d3b/BoundingVolume_8h"/>
+        <childnode refid="22814" relation="include">
+        </childnode>
+        <childnode refid="22824" relation="include">
+        </childnode>
+      </node>
+      <node id="22742">
+        <label>BodyNode.h</label>
+        <link refid="d7/d87/BodyNode_8h"/>
+        <childnode refid="22743" relation="include">
+        </childnode>
+        <childnode refid="22756" relation="include">
+        </childnode>
+        <childnode refid="22758" relation="include">
+        </childnode>
+        <childnode refid="22752" relation="include">
+        </childnode>
+        <childnode refid="22759" relation="include">
+        </childnode>
+        <childnode refid="22751" relation="include">
+        </childnode>
+        <childnode refid="22753" relation="include">
+        </childnode>
+        <childnode refid="22760" relation="include">
+        </childnode>
+      </node>
+      <node id="22819">
+        <label>WorldBaseNode.h</label>
+        <link refid="d6/d3d/WorldBaseNode_8h"/>
+        <childnode refid="22820" relation="include">
+        </childnode>
+        <childnode refid="22760" relation="include">
+        </childnode>
+        <childnode refid="22762" relation="include">
+        </childnode>
+      </node>
+      <node id="22785">
+        <label>KeyFrameController.h</label>
+        <link refid="dd/d57/KeyFrameController_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+      </node>
+      <node id="22836">
+        <label>Transform2.h</label>
+        <link refid="d3/de8/Transform2_8h"/>
+      </node>
+      <node id="22765">
+        <label>WorldPortal.h</label>
+        <link refid="df/d65/WorldPortal_8h"/>
+        <childnode refid="22764" relation="include">
+        </childnode>
+        <childnode refid="22766" relation="include">
+        </childnode>
+      </node>
+      <node id="22735">
+        <label>MeshHeightField.h</label>
+        <link refid="d7/d6d/MeshHeightField_8h"/>
+        <childnode refid="22704" relation="include">
+        </childnode>
+        <childnode refid="22736" relation="include">
+        </childnode>
+        <childnode refid="22737" relation="include">
+        </childnode>
+      </node>
+      <node id="22796">
+        <label>EffectInstance.h</label>
+        <link refid="dc/d13/EffectInstance_8h"/>
+        <childnode refid="22697" relation="include">
+        </childnode>
+        <childnode refid="22797" relation="include">
+        </childnode>
+        <childnode refid="22798" relation="include">
+        </childnode>
+        <childnode refid="22799" relation="include">
+        </childnode>
+        <childnode refid="22800" relation="include">
+        </childnode>
+        <childnode refid="22760" relation="include">
+        </childnode>
+        <childnode refid="22737" relation="include">
+        </childnode>
+        <childnode refid="22801" relation="include">
+        </childnode>
+        <childnode refid="22802" relation="include">
+        </childnode>
+        <childnode refid="22803" relation="include">
+        </childnode>
+        <childnode refid="22804" relation="include">
+        </childnode>
+        <childnode refid="22805" relation="include">
+        </childnode>
+        <childnode refid="22806" relation="include">
+        </childnode>
+        <childnode refid="22807" relation="include">
+        </childnode>
+        <childnode refid="22808" relation="include">
+        </childnode>
+      </node>
+      <node id="22805">
+        <label>EffectLightPointPhong.h</label>
+        <link refid="dc/d62/EffectLightPointPhong_8h"/>
+        <childnode refid="22703" relation="include">
+        </childnode>
+        <childnode refid="22701" relation="include">
+        </childnode>
+      </node>
+      <node id="22782">
+        <label>KinematicController.h</label>
+        <link refid="df/d01/KinematicController_8h"/>
+        <childnode refid="22758" relation="include">
+        </childnode>
+        <childnode refid="22783" relation="include">
+        </childnode>
+        <childnode refid="22785" relation="include">
+        </childnode>
+        <childnode refid="22786" relation="include">
+        </childnode>
+        <childnode refid="22787" relation="include">
+        </childnode>
+        <childnode refid="22788" relation="include">
+        </childnode>
+        <childnode refid="22789" relation="include">
+        </childnode>
+        <childnode refid="22790" relation="include">
+        </childnode>
+        <childnode refid="22791" relation="include">
+        </childnode>
+      </node>
+      <node id="22726">
+        <label>ShapeSphere.h</label>
+        <link refid="dc/d8f/ShapeSphere_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+        <childnode refid="22727" relation="include">
+        </childnode>
+        <childnode refid="22713" relation="include">
+        </childnode>
+        <childnode refid="22728" relation="include">
+        </childnode>
+        <childnode refid="22724" relation="include">
+        </childnode>
+        <childnode refid="22729" relation="include">
+        </childnode>
+      </node>
+      <node id="22775">
+        <label>ConvexTriangleCollision.h</label>
+        <link refid="da/df9/ConvexTriangleCollision_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+        <childnode refid="22716" relation="include">
+        </childnode>
+      </node>
+      <node id="22783">
+        <label>ManualController.h</label>
+        <link refid="dd/d32/ManualController_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+        <childnode refid="22784" relation="include">
+        </childnode>
+      </node>
+      <node id="22751">
+        <label>JointEdge.h</label>
+        <link refid="dd/d75/JointEdge_8h"/>
+        <childnode refid="22752" relation="include">
+        </childnode>
+        <childnode refid="22753" relation="include">
+        </childnode>
+      </node>
+      <node id="22696">
+        <label>Mesh.h</label>
+        <link refid="d9/d31/Mesh_8h"/>
+        <childnode refid="22697" relation="include">
+        </childnode>
+        <childnode refid="22709" relation="include">
+        </childnode>
+        <childnode refid="22710" relation="include">
+        </childnode>
+        <childnode refid="22718" relation="include">
+        </childnode>
+        <childnode refid="22720" relation="include">
+        </childnode>
+        <childnode refid="22721" relation="include">
+        </childnode>
+        <childnode refid="22722" relation="include">
+        </childnode>
+        <childnode refid="22725" relation="include">
+        </childnode>
+        <childnode refid="22731" relation="include">
+        </childnode>
+        <childnode refid="22732" relation="include">
+        </childnode>
+        <childnode refid="22733" relation="include">
+        </childnode>
+        <childnode refid="22734" relation="include">
+        </childnode>
+        <childnode refid="22735" relation="include">
+        </childnode>
+        <childnode refid="22740" relation="include">
+        </childnode>
+        <childnode refid="22760" relation="include">
+        </childnode>
+        <childnode refid="22792" relation="include">
+        </childnode>
+        <childnode refid="22793" relation="include">
+        </childnode>
+      </node>
+      <node id="22829">
+        <label>JacobianConstraint.h</label>
+        <link refid="dc/d40/JacobianConstraint_8h"/>
+        <childnode refid="22745" relation="include">
+        </childnode>
+        <childnode refid="22753" relation="include">
+        </childnode>
+      </node>
+      <node id="22713">
+        <label>TriangleSphereCollision.h</label>
+        <link refid="de/d73/TriangleSphereCollision_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+        <childnode refid="22714" relation="include">
+        </childnode>
+      </node>
+      <node id="22803">
+        <label>EffectLightAmbient.h</label>
+        <link refid="da/d0a/EffectLightAmbient_8h"/>
+      </node>
+      <node id="22746">
+        <label>JointAnchor.h</label>
+        <link refid="d1/d63/JointAnchor_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+      </node>
+      <node id="22723">
+        <label>ShapeBox.h</label>
+        <link refid="d3/dc9/ShapeBox_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+        <childnode refid="22724" relation="include">
+        </childnode>
+      </node>
+      <node id="22802">
+        <label>EffectMaterialTexture.h</label>
+        <link refid="d1/d26/EffectMaterialTexture_8h"/>
+      </node>
+      <node id="22831">
+        <label>EigenDecomposition3.h</label>
+        <link refid="da/d04/EigenDecomposition3_8h"/>
+        <childnode refid="22832" relation="include">
+        </childnode>
+      </node>
+      <node id="22818">
+        <label>SweepAndPrune.h</label>
+        <link refid="dc/dba/SweepAndPrune_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+      </node>
+      <node id="22825">
+        <label>Quaternion.h</label>
+        <link refid="d1/d4a/Quaternion_8h"/>
+        <childnode refid="22740" relation="include">
+        </childnode>
+        <childnode refid="22782" relation="include">
+        </childnode>
+        <childnode refid="22826" relation="include">
+        </childnode>
+        <childnode refid="22827" relation="include">
+        </childnode>
+      </node>
+      <node id="22758">
+        <label>KinematicBody.h</label>
+        <link refid="df/d78/KinematicBody_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+        <childnode refid="22727" relation="include">
+        </childnode>
+        <childnode refid="22755" relation="include">
+        </childnode>
+      </node>
+      <node id="22722">
+        <label>MeshBox.h</label>
+        <link refid="d4/de1/MeshBox_8h"/>
+        <childnode refid="22704" relation="include">
+        </childnode>
+        <childnode refid="22723" relation="include">
+        </childnode>
+      </node>
+      <node id="22781">
+        <label>ShapeDeformable.h</label>
+        <link refid="d7/d66/ShapeDeformable_8h"/>
+        <childnode refid="22756" relation="include">
+        </childnode>
+      </node>
+      <node id="22753">
+        <label>ConstraintSolver.h</label>
+        <link refid="da/db5/ConstraintSolver_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+      </node>
+      <node id="22828">
+        <label>EulerDecomposition.h</label>
+        <link refid="d2/d32/EulerDecomposition_8h"/>
+        <childnode refid="22789" relation="include">
+        </childnode>
+      </node>
+      <node id="22760">
+        <label>WorldLeaf.h</label>
+        <link refid="de/d75/WorldLeaf_8h"/>
+        <childnode refid="22705" relation="include">
+        </childnode>
+        <childnode refid="22761" relation="include">
+        </childnode>
+        <childnode refid="22737" relation="include">
+        </childnode>
+        <childnode refid="22762" relation="include">
+        </childnode>
+        <childnode refid="22719" relation="include">
+        </childnode>
+        <childnode refid="22770" relation="include">
+        </childnode>
+        <childnode refid="22739" relation="include">
+        </childnode>
+      </node>
+      <node id="22822">
+        <label>WorldSwitchNode.h</label>
+        <link refid="de/d82/WorldSwitchNode_8h"/>
+        <childnode refid="22705" relation="include">
+        </childnode>
+        <childnode refid="22770" relation="include">
+        </childnode>
+        <childnode refid="22739" relation="include">
+        </childnode>
+        <childnode refid="22769" relation="include">
+        </childnode>
+      </node>
+      <node id="22786">
+        <label>PathController.h</label>
+        <link refid="d9/db3/PathController_8h"/>
+        <childnode refid="22712" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d5/dac/classTMatrix2" prot="public">TMatrix2</innerclass>
+    <innerclass refid="d5/d09/classTMatrix4" prot="public">TMatrix4</innerclass>
+    <innerclass refid="d7/dee/classTMatrix3" prot="public">TMatrix3</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="d1/d41/Matrix3_8h_1ae3996976d8ffb3e58d88f58227473f8e" prot="public" static="no">
+        <name>Axis</name>
+        <enumvalue id="dc/d1a/Matrix2_8h_1ae3996976d8ffb3e58d88f58227473f8ea96f9d79b61cc5f3a85c3905da30d9214" prot="public">
+          <name>AXIS_X</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d1a/Matrix2_8h_1ae3996976d8ffb3e58d88f58227473f8eabac2b599f684a034e45fbac20013a56b" prot="public">
+          <name>AXIS_Y</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d1a/Matrix2_8h_1ae3996976d8ffb3e58d88f58227473f8eaf30d19a1a44e01420e4e5b86cde3ecd8" prot="public">
+          <name>AXIS_Z</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d1/d41/Matrix3_8h_1ae3996976d8ffb3e58d88f58227473f8ea96f9d79b61cc5f3a85c3905da30d9214" prot="public">
+          <name>AXIS_X</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d1/d41/Matrix3_8h_1ae3996976d8ffb3e58d88f58227473f8eabac2b599f684a034e45fbac20013a56b" prot="public">
+          <name>AXIS_Y</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d1/d41/Matrix3_8h_1ae3996976d8ffb3e58d88f58227473f8eaf30d19a1a44e01420e4e5b86cde3ecd8" prot="public">
+          <name>AXIS_Z</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d6/d64/Matrix4_8h_1ae3996976d8ffb3e58d88f58227473f8ea96f9d79b61cc5f3a85c3905da30d9214" prot="public">
+          <name>AXIS_X</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d6/d64/Matrix4_8h_1ae3996976d8ffb3e58d88f58227473f8eabac2b599f684a034e45fbac20013a56b" prot="public">
+          <name>AXIS_Y</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d6/d64/Matrix4_8h_1ae3996976d8ffb3e58d88f58227473f8eaf30d19a1a44e01420e4e5b86cde3ecd8" prot="public">
+          <name>AXIS_Z</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/Matrix3.h" line="46" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/Matrix3.h" bodystart="45" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="enum" id="d1/d41/Matrix3_8h_1ad8640b7ae1228956729500803a03d20b" prot="public" static="no">
+        <name>EulerAngles</name>
+        <enumvalue id="dc/d1a/Matrix2_8h_1ad8640b7ae1228956729500803a03d20ba64e43ed8017f83939c9196e76ebb15ba" prot="public">
+          <name>EULER_ANGLES_XYZ</name>
+          <initializer>= ( (AXIS_X &lt;&lt; 4) | (AXIS_Y &lt;&lt; 2) | AXIS_Z )</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d1a/Matrix2_8h_1ad8640b7ae1228956729500803a03d20ba66228b015ee6a4c5d235d410b38e113d" prot="public">
+          <name>EULER_ANGLES_XZY</name>
+          <initializer>= ( (AXIS_X &lt;&lt; 4) | (AXIS_Z &lt;&lt; 2) | AXIS_Y )</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d1a/Matrix2_8h_1ad8640b7ae1228956729500803a03d20ba022eafcfe85250dc83aad0647b472384" prot="public">
+          <name>EULER_ANGLES_YXZ</name>
+          <initializer>= ( (AXIS_Y &lt;&lt; 4) | (AXIS_X &lt;&lt; 2) | AXIS_Z )</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d1a/Matrix2_8h_1ad8640b7ae1228956729500803a03d20ba2e3eaa1206d84b399983dece90132191" prot="public">
+          <name>EULER_ANGLES_YZX</name>
+          <initializer>= ( (AXIS_Y &lt;&lt; 4) | (AXIS_Z &lt;&lt; 2) | AXIS_X )</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d1a/Matrix2_8h_1ad8640b7ae1228956729500803a03d20bafae587edb64e3e08118a03d4ee223c11" prot="public">
+          <name>EULER_ANGLES_ZXY</name>
+          <initializer>= ( (AXIS_Z &lt;&lt; 4) | (AXIS_X &lt;&lt; 2) | AXIS_Y )</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d1a/Matrix2_8h_1ad8640b7ae1228956729500803a03d20ba6bde411ae2034eb680459efa52f86111" prot="public">
+          <name>EULER_ANGLES_ZYX</name>
+          <initializer>= ( (AXIS_Z &lt;&lt; 4) | (AXIS_Y &lt;&lt; 2) | AXIS_X )</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d1a/Matrix2_8h_1ad8640b7ae1228956729500803a03d20ba7df1d4a8090b59e29590afdac65d72f4" prot="public">
+          <name>EULER_ANGLES_XYX</name>
+          <initializer>= ( (AXIS_X &lt;&lt; 4) | (AXIS_Y &lt;&lt; 2) | AXIS_X )</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d1a/Matrix2_8h_1ad8640b7ae1228956729500803a03d20ba3b50ce264a30ac047c16ec18bb44e3bc" prot="public">
+          <name>EULER_ANGLES_XZX</name>
+          <initializer>= ( (AXIS_X &lt;&lt; 4) | (AXIS_Z &lt;&lt; 2) | AXIS_X )</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d1a/Matrix2_8h_1ad8640b7ae1228956729500803a03d20ba8bfc864f6041e4905bd6631e34729bfd" prot="public">
+          <name>EULER_ANGLES_YXY</name>
+          <initializer>= ( (AXIS_Y &lt;&lt; 4) | (AXIS_X &lt;&lt; 2) | AXIS_Y )</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d1a/Matrix2_8h_1ad8640b7ae1228956729500803a03d20bad20e15182cb0733b21cdf971ab5c9416" prot="public">
+          <name>EULER_ANGLES_YZY</name>
+          <initializer>= ( (AXIS_Y &lt;&lt; 4) | (AXIS_Z &lt;&lt; 2) | AXIS_Y )</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d1a/Matrix2_8h_1ad8640b7ae1228956729500803a03d20ba9500f339aafe5b5f98bbbd1ddf0db63d" prot="public">
+          <name>EULER_ANGLES_ZXZ</name>
+          <initializer>= ( (AXIS_Z &lt;&lt; 4) | (AXIS_X &lt;&lt; 2) | AXIS_Z )</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/d1a/Matrix2_8h_1ad8640b7ae1228956729500803a03d20ba05dcfed3d93fa33b271a1ab4c0e8abee" prot="public">
+          <name>EULER_ANGLES_ZYZ</name>
+          <initializer>= ( (AXIS_Z &lt;&lt; 4) | (AXIS_Y &lt;&lt; 2) | AXIS_Z )</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d1/d41/Matrix3_8h_1ad8640b7ae1228956729500803a03d20ba64e43ed8017f83939c9196e76ebb15ba" prot="public">
+          <name>EULER_ANGLES_XYZ</name>
+          <initializer>= ( (AXIS_X &lt;&lt; 4) | (AXIS_Y &lt;&lt; 2) | AXIS_Z )</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d1/d41/Matrix3_8h_1ad8640b7ae1228956729500803a03d20ba66228b015ee6a4c5d235d410b38e113d" prot="public">
+          <name>EULER_ANGLES_XZY</name>
+          <initializer>= ( (AXIS_X &lt;&lt; 4) | (AXIS_Z &lt;&lt; 2) | AXIS_Y )</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d1/d41/Matrix3_8h_1ad8640b7ae1228956729500803a03d20ba022eafcfe85250dc83aad0647b472384" prot="public">
+          <name>EULER_ANGLES_YXZ</name>
+          <initializer>= ( (AXIS_Y &lt;&lt; 4) | (AXIS_X &lt;&lt; 2) | AXIS_Z )</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d1/d41/Matrix3_8h_1ad8640b7ae1228956729500803a03d20ba2e3eaa1206d84b399983dece90132191" prot="public">
+          <name>EULER_ANGLES_YZX</name>
+          <initializer>= ( (AXIS_Y &lt;&lt; 4) | (AXIS_Z &lt;&lt; 2) | AXIS_X )</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d1/d41/Matrix3_8h_1ad8640b7ae1228956729500803a03d20bafae587edb64e3e08118a03d4ee223c11" prot="public">
+          <name>EULER_ANGLES_ZXY</name>
+          <initializer>= ( (AXIS_Z &lt;&lt; 4) | (AXIS_X &lt;&lt; 2) | AXIS_Y )</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d1/d41/Matrix3_8h_1ad8640b7ae1228956729500803a03d20ba6bde411ae2034eb680459efa52f86111" prot="public">
+          <name>EULER_ANGLES_ZYX</name>
+          <initializer>= ( (AXIS_Z &lt;&lt; 4) | (AXIS_Y &lt;&lt; 2) | AXIS_X )</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d1/d41/Matrix3_8h_1ad8640b7ae1228956729500803a03d20ba7df1d4a8090b59e29590afdac65d72f4" prot="public">
+          <name>EULER_ANGLES_XYX</name>
+          <initializer>= ( (AXIS_X &lt;&lt; 4) | (AXIS_Y &lt;&lt; 2) | AXIS_X )</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d1/d41/Matrix3_8h_1ad8640b7ae1228956729500803a03d20ba3b50ce264a30ac047c16ec18bb44e3bc" prot="public">
+          <name>EULER_ANGLES_XZX</name>
+          <initializer>= ( (AXIS_X &lt;&lt; 4) | (AXIS_Z &lt;&lt; 2) | AXIS_X )</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d1/d41/Matrix3_8h_1ad8640b7ae1228956729500803a03d20ba8bfc864f6041e4905bd6631e34729bfd" prot="public">
+          <name>EULER_ANGLES_YXY</name>
+          <initializer>= ( (AXIS_Y &lt;&lt; 4) | (AXIS_X &lt;&lt; 2) | AXIS_Y )</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d1/d41/Matrix3_8h_1ad8640b7ae1228956729500803a03d20bad20e15182cb0733b21cdf971ab5c9416" prot="public">
+          <name>EULER_ANGLES_YZY</name>
+          <initializer>= ( (AXIS_Y &lt;&lt; 4) | (AXIS_Z &lt;&lt; 2) | AXIS_Y )</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d1/d41/Matrix3_8h_1ad8640b7ae1228956729500803a03d20ba9500f339aafe5b5f98bbbd1ddf0db63d" prot="public">
+          <name>EULER_ANGLES_ZXZ</name>
+          <initializer>= ( (AXIS_Z &lt;&lt; 4) | (AXIS_X &lt;&lt; 2) | AXIS_Z )</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d1/d41/Matrix3_8h_1ad8640b7ae1228956729500803a03d20ba05dcfed3d93fa33b271a1ab4c0e8abee" prot="public">
+          <name>EULER_ANGLES_ZYZ</name>
+          <initializer>= ( (AXIS_Z &lt;&lt; 4) | (AXIS_Y &lt;&lt; 2) | AXIS_Z )</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d6/d64/Matrix4_8h_1ad8640b7ae1228956729500803a03d20ba64e43ed8017f83939c9196e76ebb15ba" prot="public">
+          <name>EULER_ANGLES_XYZ</name>
+          <initializer>= ( (AXIS_X &lt;&lt; 4) | (AXIS_Y &lt;&lt; 2) | AXIS_Z )</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d6/d64/Matrix4_8h_1ad8640b7ae1228956729500803a03d20ba66228b015ee6a4c5d235d410b38e113d" prot="public">
+          <name>EULER_ANGLES_XZY</name>
+          <initializer>= ( (AXIS_X &lt;&lt; 4) | (AXIS_Z &lt;&lt; 2) | AXIS_Y )</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d6/d64/Matrix4_8h_1ad8640b7ae1228956729500803a03d20ba022eafcfe85250dc83aad0647b472384" prot="public">
+          <name>EULER_ANGLES_YXZ</name>
+          <initializer>= ( (AXIS_Y &lt;&lt; 4) | (AXIS_X &lt;&lt; 2) | AXIS_Z )</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d6/d64/Matrix4_8h_1ad8640b7ae1228956729500803a03d20ba2e3eaa1206d84b399983dece90132191" prot="public">
+          <name>EULER_ANGLES_YZX</name>
+          <initializer>= ( (AXIS_Y &lt;&lt; 4) | (AXIS_Z &lt;&lt; 2) | AXIS_X )</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d6/d64/Matrix4_8h_1ad8640b7ae1228956729500803a03d20bafae587edb64e3e08118a03d4ee223c11" prot="public">
+          <name>EULER_ANGLES_ZXY</name>
+          <initializer>= ( (AXIS_Z &lt;&lt; 4) | (AXIS_X &lt;&lt; 2) | AXIS_Y )</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d6/d64/Matrix4_8h_1ad8640b7ae1228956729500803a03d20ba6bde411ae2034eb680459efa52f86111" prot="public">
+          <name>EULER_ANGLES_ZYX</name>
+          <initializer>= ( (AXIS_Z &lt;&lt; 4) | (AXIS_Y &lt;&lt; 2) | AXIS_X )</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d6/d64/Matrix4_8h_1ad8640b7ae1228956729500803a03d20ba7df1d4a8090b59e29590afdac65d72f4" prot="public">
+          <name>EULER_ANGLES_XYX</name>
+          <initializer>= ( (AXIS_X &lt;&lt; 4) | (AXIS_Y &lt;&lt; 2) | AXIS_X )</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d6/d64/Matrix4_8h_1ad8640b7ae1228956729500803a03d20ba3b50ce264a30ac047c16ec18bb44e3bc" prot="public">
+          <name>EULER_ANGLES_XZX</name>
+          <initializer>= ( (AXIS_X &lt;&lt; 4) | (AXIS_Z &lt;&lt; 2) | AXIS_X )</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d6/d64/Matrix4_8h_1ad8640b7ae1228956729500803a03d20ba8bfc864f6041e4905bd6631e34729bfd" prot="public">
+          <name>EULER_ANGLES_YXY</name>
+          <initializer>= ( (AXIS_Y &lt;&lt; 4) | (AXIS_X &lt;&lt; 2) | AXIS_Y )</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d6/d64/Matrix4_8h_1ad8640b7ae1228956729500803a03d20bad20e15182cb0733b21cdf971ab5c9416" prot="public">
+          <name>EULER_ANGLES_YZY</name>
+          <initializer>= ( (AXIS_Y &lt;&lt; 4) | (AXIS_Z &lt;&lt; 2) | AXIS_Y )</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d6/d64/Matrix4_8h_1ad8640b7ae1228956729500803a03d20ba9500f339aafe5b5f98bbbd1ddf0db63d" prot="public">
+          <name>EULER_ANGLES_ZXZ</name>
+          <initializer>= ( (AXIS_Z &lt;&lt; 4) | (AXIS_X &lt;&lt; 2) | AXIS_Z )</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d6/d64/Matrix4_8h_1ad8640b7ae1228956729500803a03d20ba05dcfed3d93fa33b271a1ab4c0e8abee" prot="public">
+          <name>EULER_ANGLES_ZYZ</name>
+          <initializer>= ( (AXIS_Z &lt;&lt; 4) | (AXIS_Y &lt;&lt; 2) | AXIS_Z )</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/Matrix3.h" line="52" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/Matrix3.h" bodystart="51" bodyend="67"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="d1/d41/Matrix3_8h_1aa862589913d248f7192f1bc8daa15d20" prot="public" static="no">
+        <type><ref refid="d7/dee/classTMatrix3" kindref="compound">TMatrix3</ref>&lt; <ref refid="d9/dd0/Platform_8h_1a07afd7094cb489cbd514c76e6f55d34f" kindref="member">Float</ref> &gt;</type>
+        <definition>typedef TMatrix3&lt;Float&gt; Matrix3f</definition>
+        <argsstring></argsstring>
+        <name>Matrix3f</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/Matrix3.h" line="209" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/Matrix3.h" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d1/d41/Matrix3_8h_1a48d83e1e4bbb98815f585c008b5bab98" prot="public" static="no">
+        <type><ref refid="d7/dee/classTMatrix3" kindref="compound">TMatrix3</ref>&lt; <ref refid="d9/dd0/Platform_8h_1a1f2c5f02159fb28428e23074cc04166d" kindref="member">Double</ref> &gt;</type>
+        <definition>typedef TMatrix3&lt;Double&gt; Matrix3d</definition>
+        <argsstring></argsstring>
+        <name>Matrix3d</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/Matrix3.h" line="210" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/Matrix3.h" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d1/d41/Matrix3_8h_1a210f4e2fb57345f4ab321f3ee0728bff" prot="public" static="no">
+        <type><ref refid="d7/dee/classTMatrix3" kindref="compound">TMatrix3</ref>&lt; <ref refid="d0/d10/Scalar_8h_1abee0aca51a3a3e16c628155aa4ac6f12" kindref="member">Scalar</ref> &gt;</type>
+        <definition>typedef TMatrix3&lt;Scalar&gt; Matrix3</definition>
+        <argsstring></argsstring>
+        <name>Matrix3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/Matrix3.h" line="211" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/Matrix3.h" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Lib/Math/Types/Matrix/Matrix3.h"/>
+  </compounddef>
+</doxygen>

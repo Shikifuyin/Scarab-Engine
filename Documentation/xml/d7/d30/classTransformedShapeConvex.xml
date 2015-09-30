@@ -1,0 +1,516 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="d7/d30/classTransformedShapeConvex" kind="class" prot="public">
+    <compoundname>TransformedShapeConvex</compoundname>
+    <basecompoundref refid="d2/d1b/classTransformedShape" prot="public" virt="non-virtual">TransformedShape</basecompoundref>
+    <includes refid="d1/da1/TransformedShape_8h" local="no">TransformedShape.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d7/d30/classTransformedShapeConvex_1ac30e1a4e1e94a666ade2e74b0a676eae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TransformedShapeConvex</definition>
+        <argsstring>(const ShapeConvex *pShape, const Transform3 &amp;vTransform)</argsstring>
+        <name>TransformedShapeConvex</name>
+        <param>
+          <type>const <ref refid="d4/d9c/classShapeConvex" kindref="compound">ShapeConvex</ref> *</type>
+          <declname>pShape</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d2/d67/Transform3_8h_1a1ae384ec738794e9d688355477f546cd" kindref="member">Transform3</ref> &amp;</type>
+          <declname>vTransform</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/TransformedShape.h" line="70"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d30/classTransformedShapeConvex_1a28c57492004f308fe5bcc378ae5c503a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~TransformedShapeConvex</definition>
+        <argsstring>()</argsstring>
+        <name>~TransformedShapeConvex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/TransformedShape.h" line="71"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d30/classTransformedShapeConvex_1a897736878452cca785292a48e276eee9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="d0/dd3/MeshVoronoiGraph_8h_1ab1451860b5fe01f0ad829a37867cdf51" kindref="member">MeshVoronoiGraph</ref> *</type>
+        <definition>const MeshVoronoiGraph* GetGraph</definition>
+        <argsstring>() const </argsstring>
+        <name>GetGraph</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/TransformedShape.h" line="74"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d30/classTransformedShapeConvex_1a15b9d54b474f0a7b36146b0d6bae44eb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void GetVertexPosition</definition>
+        <argsstring>(Vertex3 *outPosition, const MeshVertex *pVertex) const </argsstring>
+        <name>GetVertexPosition</name>
+        <param>
+          <type><ref refid="d0/df3/Vertex3_8h_1a77dfdbfba4bf6ee1a522233ccef29ff5" kindref="member">Vertex3</ref> *</type>
+          <declname>outPosition</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d6/d37/classMeshVertex" kindref="compound">MeshVertex</ref> *</type>
+          <declname>pVertex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/TransformedShape.h" line="76"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d30/classTransformedShapeConvex_1a25f89af726f014009f3999bd89551158" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void GetFacetNormal</definition>
+        <argsstring>(Vector3 *outNormal, const MeshFacet *pFacet) const </argsstring>
+        <name>GetFacetNormal</name>
+        <param>
+          <type><ref refid="dd/d8c/Vector3_8h_1ae41a346113f53aca343378c1c0ff4137" kindref="member">Vector3</ref> *</type>
+          <declname>outNormal</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d5/da2/classMeshFacet" kindref="compound">MeshFacet</ref> *</type>
+          <declname>pFacet</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/TransformedShape.h" line="78"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d30/classTransformedShapeConvex_1a5d4ca06f8803c50c3332d8ddae4d9913" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void GetFacetPlane</definition>
+        <argsstring>(Plane *outPlane, const MeshFacet *pFacet) const </argsstring>
+        <name>GetFacetPlane</name>
+        <param>
+          <type><ref refid="d8/d2f/Plane_8h_1aa8ac4245a8c2218856e5dbcfbd0af92c" kindref="member">Plane</ref> *</type>
+          <declname>outPlane</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d5/da2/classMeshFacet" kindref="compound">MeshFacet</ref> *</type>
+          <declname>pFacet</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/TransformedShape.h" line="79"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d30/classTransformedShapeConvex_1a004de7e18f8ed2170578d2fa63b7a4dd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+        <definition>UInt GetVoronoiPlaneCount</definition>
+        <argsstring>(const MeshFeature *pFeature) const </argsstring>
+        <name>GetVoronoiPlaneCount</name>
+        <param>
+          <type>const <ref refid="dc/dcb/classMeshFeature" kindref="compound">MeshFeature</ref> *</type>
+          <declname>pFeature</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/TransformedShape.h" line="81"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d30/classTransformedShapeConvex_1aaa0cf4d6f2c2415a716edac104956fcb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void GetVoronoiPlane</definition>
+        <argsstring>(Plane *outPlane, const MeshFeature *pFeature, UInt iPlane) const </argsstring>
+        <name>GetVoronoiPlane</name>
+        <param>
+          <type><ref refid="d8/d2f/Plane_8h_1aa8ac4245a8c2218856e5dbcfbd0af92c" kindref="member">Plane</ref> *</type>
+          <declname>outPlane</declname>
+        </param>
+        <param>
+          <type>const <ref refid="dc/dcb/classMeshFeature" kindref="compound">MeshFeature</ref> *</type>
+          <declname>pFeature</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref></type>
+          <declname>iPlane</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/TransformedShape.h" line="82"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d30/classTransformedShapeConvex_1ae8835d227f3e06bc5287f1dd89b85f4e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void QueryExtremalVertices</definition>
+        <argsstring>(const Vector3 &amp;vDirection, UInt *outMax=NULL, UInt *outMin=NULL) const </argsstring>
+        <name>QueryExtremalVertices</name>
+        <param>
+          <type>const <ref refid="dd/d8c/Vector3_8h_1ae41a346113f53aca343378c1c0ff4137" kindref="member">Vector3</ref> &amp;</type>
+          <declname>vDirection</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref> *</type>
+          <declname>outMax</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="d9/dd0/Platform_8h_1aba0996d26f7be2572973245b51852757" kindref="member">UInt</ref> *</type>
+          <declname>outMin</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/TransformedShape.h" line="85"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d30/classTransformedShapeConvex_1af158246b416b0568738f061f58de50ba" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d9/dd0/Platform_8h_1afdf0f22c576e6ee1b982f64b839c4bea" kindref="member">Void</ref></type>
+        <definition>Void QueryExtremalVertices</definition>
+        <argsstring>(const Vector3 &amp;vDirection, Vertex3 *outMax=NULL, Vertex3 *outMin=NULL) const </argsstring>
+        <name>QueryExtremalVertices</name>
+        <param>
+          <type>const <ref refid="dd/d8c/Vector3_8h_1ae41a346113f53aca343378c1c0ff4137" kindref="member">Vector3</ref> &amp;</type>
+          <declname>vDirection</declname>
+        </param>
+        <param>
+          <type><ref refid="d0/df3/Vertex3_8h_1a77dfdbfba4bf6ee1a522233ccef29ff5" kindref="member">Vertex3</ref> *</type>
+          <declname>outMax</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="d0/df3/Vertex3_8h_1a77dfdbfba4bf6ee1a522233ccef29ff5" kindref="member">Vertex3</ref> *</type>
+          <declname>outMin</declname>
+          <defval><ref refid="d9/dd0/Platform_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/TransformedShape.h" line="86"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="12984">
+        <label>TransformedShape</label>
+        <link refid="d2/d1b/classTransformedShape"/>
+      </node>
+      <node id="12983">
+        <label>TransformedShapeConvex</label>
+        <link refid="d7/d30/classTransformedShapeConvex"/>
+        <childnode refid="12984" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="12998">
+        <label>Mesh</label>
+        <link refid="d9/d5e/classMesh"/>
+        <childnode refid="12999" relation="usage">
+          <edgelabel>m_pVF</edgelabel>
+        </childnode>
+        <childnode refid="13002" relation="usage">
+          <edgelabel>m_iIndexOffset</edgelabel>
+          <edgelabel>m_iVertexOffset</edgelabel>
+        </childnode>
+        <childnode refid="12996" relation="usage">
+          <edgelabel>m_bDynamicUpdate</edgelabel>
+        </childnode>
+        <childnode refid="13005" relation="usage">
+          <edgelabel>m_pIB</edgelabel>
+        </childnode>
+        <childnode refid="13008" relation="usage">
+          <edgelabel>m_pVB</edgelabel>
+        </childnode>
+      </node>
+      <node id="13009">
+        <label>VertexBufferUsage</label>
+      </node>
+      <node id="12995">
+        <label>TMatrix3&lt; Scalar &gt;</label>
+        <link refid="d7/dee/classTMatrix3"/>
+        <childnode refid="12995" relation="usage">
+          <edgelabel>Identity</edgelabel>
+          <edgelabel>Null</edgelabel>
+        </childnode>
+        <childnode refid="12994" relation="usage">
+          <edgelabel>ONE</edgelabel>
+          <edgelabel>m20</edgelabel>
+          <edgelabel>m21</edgelabel>
+          <edgelabel>m10</edgelabel>
+          <edgelabel>m22</edgelabel>
+          <edgelabel>m11</edgelabel>
+          <edgelabel>m00</edgelabel>
+          <edgelabel>TWO</edgelabel>
+          <edgelabel>m12</edgelabel>
+          <edgelabel>m01</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="12994">
+        <label>float</label>
+      </node>
+      <node id="12993">
+        <label>TMatrix4&lt; Scalar &gt;</label>
+        <link refid="d5/d09/classTMatrix4"/>
+        <childnode refid="12993" relation="usage">
+          <edgelabel>Identity</edgelabel>
+          <edgelabel>Null</edgelabel>
+        </childnode>
+        <childnode refid="12994" relation="usage">
+          <edgelabel>ONE</edgelabel>
+          <edgelabel>m30</edgelabel>
+          <edgelabel>m31</edgelabel>
+          <edgelabel>m20</edgelabel>
+          <edgelabel>m32</edgelabel>
+          <edgelabel>m21</edgelabel>
+          <edgelabel>m10</edgelabel>
+          <edgelabel>m33</edgelabel>
+          <edgelabel>m22</edgelabel>
+          <edgelabel>m11</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="12999">
+        <label>VertexFormat</label>
+        <link refid="da/dc2/classVertexFormat"/>
+        <childnode refid="13000" relation="usage">
+          <edgelabel>m_arrFields</edgelabel>
+        </childnode>
+        <childnode refid="13002" relation="usage">
+          <edgelabel>m_iSize</edgelabel>
+          <edgelabel>m_iFieldCount</edgelabel>
+          <edgelabel>m_arrUsageLUT</edgelabel>
+        </childnode>
+        <childnode refid="12996" relation="usage">
+          <edgelabel>m_bFinalized</edgelabel>
+        </childnode>
+        <childnode refid="13004" relation="usage">
+          <edgelabel>sm_arrComponentCount</edgelabel>
+          <edgelabel>sm_arrTypeSize</edgelabel>
+          <edgelabel>sm_arrComponentSize</edgelabel>
+        </childnode>
+      </node>
+      <node id="13000">
+        <label>VFField</label>
+        <link refid="de/d92/structVFField"/>
+        <childnode refid="13001" relation="usage">
+          <edgelabel>iUsage</edgelabel>
+        </childnode>
+        <childnode refid="13002" relation="usage">
+          <edgelabel>iSize</edgelabel>
+          <edgelabel>iUsageIndex</edgelabel>
+          <edgelabel>iOffset</edgelabel>
+        </childnode>
+        <childnode refid="13003" relation="usage">
+          <edgelabel>iType</edgelabel>
+        </childnode>
+      </node>
+      <node id="13004">
+        <label>unsigned int</label>
+      </node>
+      <node id="13006">
+        <label>unsigned char</label>
+      </node>
+      <node id="12986">
+        <label>TransformedShape</label>
+        <link refid="d2/d1b/classTransformedShape"/>
+        <childnode refid="12987" relation="usage">
+          <edgelabel>m_bvWorldAAB</edgelabel>
+        </childnode>
+        <childnode refid="12992" relation="usage">
+          <edgelabel>m_vTransform</edgelabel>
+        </childnode>
+        <childnode refid="12997" relation="usage">
+          <edgelabel>m_pShape</edgelabel>
+        </childnode>
+      </node>
+      <node id="13002">
+        <label>int</label>
+      </node>
+      <node id="12987">
+        <label>TBVAABox&lt; Scalar &gt;</label>
+        <link refid="d9/d90/classTBVAABox"/>
+        <childnode refid="12988" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12989" relation="usage">
+          <edgelabel>m_vExtents</edgelabel>
+        </childnode>
+        <childnode refid="12991" relation="usage">
+          <edgelabel>m_vCenter</edgelabel>
+        </childnode>
+      </node>
+      <node id="12985">
+        <label>TransformedShapeConvex</label>
+        <link refid="d7/d30/classTransformedShapeConvex"/>
+        <childnode refid="12986" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12990">
+        <label>Scalar</label>
+      </node>
+      <node id="13003">
+        <label>VFFieldType</label>
+      </node>
+      <node id="13007">
+        <label>IndexBufferUsage</label>
+      </node>
+      <node id="12992">
+        <label>TTransform3&lt; Scalar &gt;</label>
+        <link refid="d0/d75/classTTransform3"/>
+        <childnode refid="12989" relation="usage">
+          <edgelabel>m_vScale</edgelabel>
+          <edgelabel>m_vInvScale</edgelabel>
+          <edgelabel>m_vInvTranslate</edgelabel>
+          <edgelabel>m_vTranslate</edgelabel>
+        </childnode>
+        <childnode refid="12993" relation="usage">
+          <edgelabel>m_matHMatrix</edgelabel>
+        </childnode>
+        <childnode refid="12995" relation="usage">
+          <edgelabel>m_matInvTransform</edgelabel>
+          <edgelabel>m_matTransform</edgelabel>
+        </childnode>
+        <childnode refid="12996" relation="usage">
+          <edgelabel>m_bIsUniformScale</edgelabel>
+          <edgelabel>m_bIsIdentity</edgelabel>
+          <edgelabel>m_bUpdateInverse</edgelabel>
+          <edgelabel>m_bIsRotScale</edgelabel>
+        </childnode>
+        <childnode refid="12992" relation="usage">
+          <edgelabel>Identity</edgelabel>
+        </childnode>
+      </node>
+      <node id="12989">
+        <label>TVector3&lt; Scalar &gt;</label>
+        <link refid="de/d40/classTVector3"/>
+        <childnode refid="12989" relation="usage">
+          <edgelabel>Null</edgelabel>
+          <edgelabel>eI</edgelabel>
+          <edgelabel>eJ</edgelabel>
+          <edgelabel>eK</edgelabel>
+        </childnode>
+        <childnode refid="12990" relation="usage">
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+          <edgelabel>Z</edgelabel>
+        </childnode>
+      </node>
+      <node id="12991">
+        <label>TVertex3&lt; Scalar &gt;</label>
+        <link refid="dc/d75/classTVertex3"/>
+        <childnode refid="12990" relation="usage">
+          <edgelabel>X</edgelabel>
+          <edgelabel>Y</edgelabel>
+          <edgelabel>Z</edgelabel>
+        </childnode>
+        <childnode refid="12991" relation="usage">
+          <edgelabel>Null</edgelabel>
+        </childnode>
+      </node>
+      <node id="12997">
+        <label>Shape</label>
+        <link refid="de/d0a/classShape"/>
+        <childnode refid="12987" relation="usage">
+          <edgelabel>m_bvLocalAAB</edgelabel>
+        </childnode>
+        <childnode refid="12998" relation="usage">
+          <edgelabel>m_pMesh</edgelabel>
+        </childnode>
+      </node>
+      <node id="13001">
+        <label>VFFieldUsage</label>
+      </node>
+      <node id="13008">
+        <label>VertexBuffer</label>
+        <link refid="d7/d72/classVertexBuffer"/>
+        <childnode refid="13006" relation="usage">
+          <edgelabel>m_arrVertices</edgelabel>
+        </childnode>
+        <childnode refid="13002" relation="usage">
+          <edgelabel>m_iSize</edgelabel>
+          <edgelabel>m_iVertexCount</edgelabel>
+          <edgelabel>m_iVertexSize</edgelabel>
+        </childnode>
+        <childnode refid="13009" relation="usage">
+          <edgelabel>m_iUsage</edgelabel>
+        </childnode>
+      </node>
+      <node id="12996">
+        <label>bool</label>
+      </node>
+      <node id="12988">
+        <label>TBoundingVolume&lt; Scalar &gt;</label>
+        <link refid="d6/d19/classTBoundingVolume"/>
+      </node>
+      <node id="13005">
+        <label>IndexBuffer</label>
+        <link refid="dd/df7/classIndexBuffer"/>
+        <childnode refid="13006" relation="usage">
+          <edgelabel>m_arrIndices</edgelabel>
+        </childnode>
+        <childnode refid="13002" relation="usage">
+          <edgelabel>m_iIndexSize</edgelabel>
+          <edgelabel>m_iSize</edgelabel>
+          <edgelabel>m_iIndexCount</edgelabel>
+        </childnode>
+        <childnode refid="13007" relation="usage">
+          <edgelabel>m_iUsage</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/TransformedShape.h" line="68" bodyfile="D:/Programming/_Projects/Scarab Engine/Source/Engine/Physics/Shape/TransformedShape.h" bodystart="67" bodyend="87"/>
+    <listofallmembers>
+      <member refid="d2/d1b/classTransformedShape_1ae640e9f55c44d61b72729ab9402f28b0" prot="protected" virt="non-virtual"><scope>TransformedShapeConvex</scope><name>_ComputeWorldAAB</name></member>
+      <member refid="d2/d1b/classTransformedShape_1a39e02093801770e75999c765e55a27e5" prot="public" virt="non-virtual"><scope>TransformedShapeConvex</scope><name>GetAAB</name></member>
+      <member refid="d7/d30/classTransformedShapeConvex_1a25f89af726f014009f3999bd89551158" prot="public" virt="non-virtual"><scope>TransformedShapeConvex</scope><name>GetFacetNormal</name></member>
+      <member refid="d7/d30/classTransformedShapeConvex_1a5d4ca06f8803c50c3332d8ddae4d9913" prot="public" virt="non-virtual"><scope>TransformedShapeConvex</scope><name>GetFacetPlane</name></member>
+      <member refid="d7/d30/classTransformedShapeConvex_1a897736878452cca785292a48e276eee9" prot="public" virt="non-virtual"><scope>TransformedShapeConvex</scope><name>GetGraph</name></member>
+      <member refid="d2/d1b/classTransformedShape_1a3555e75ffadf9b6d1d2066976fd80a5b" prot="public" virt="non-virtual"><scope>TransformedShapeConvex</scope><name>GetShape</name></member>
+      <member refid="d2/d1b/classTransformedShape_1a2e3d08f5e89ca05ed355e0937e025590" prot="public" virt="non-virtual"><scope>TransformedShapeConvex</scope><name>GetTransform</name></member>
+      <member refid="d2/d1b/classTransformedShape_1a51ea99a81ecfceb1a83fd2fbb58db0bf" prot="public" virt="non-virtual"><scope>TransformedShapeConvex</scope><name>GetType</name></member>
+      <member refid="d7/d30/classTransformedShapeConvex_1a15b9d54b474f0a7b36146b0d6bae44eb" prot="public" virt="non-virtual"><scope>TransformedShapeConvex</scope><name>GetVertexPosition</name></member>
+      <member refid="d7/d30/classTransformedShapeConvex_1aaa0cf4d6f2c2415a716edac104956fcb" prot="public" virt="non-virtual"><scope>TransformedShapeConvex</scope><name>GetVoronoiPlane</name></member>
+      <member refid="d7/d30/classTransformedShapeConvex_1a004de7e18f8ed2170578d2fa63b7a4dd" prot="public" virt="non-virtual"><scope>TransformedShapeConvex</scope><name>GetVoronoiPlaneCount</name></member>
+      <member refid="d2/d1b/classTransformedShape_1a88278eb8de82740a5624f8d6f9466a8f" prot="public" virt="non-virtual"><scope>TransformedShapeConvex</scope><name>IsConcave</name></member>
+      <member refid="d2/d1b/classTransformedShape_1a2b914288d63c06683ce88f35f6dcfd08" prot="public" virt="non-virtual"><scope>TransformedShapeConvex</scope><name>IsConvex</name></member>
+      <member refid="d2/d1b/classTransformedShape_1a2c6dc7ec98efbcaf9b7ea04127879ed0" prot="protected" virt="non-virtual"><scope>TransformedShapeConvex</scope><name>m_bvWorldAAB</name></member>
+      <member refid="d2/d1b/classTransformedShape_1a106a71df135d45e0eb2963bc03a5b0ea" prot="protected" virt="non-virtual"><scope>TransformedShapeConvex</scope><name>m_pShape</name></member>
+      <member refid="d2/d1b/classTransformedShape_1abf8c8781ea58a161041ee7c627c0d88f" prot="protected" virt="non-virtual"><scope>TransformedShapeConvex</scope><name>m_vTransform</name></member>
+      <member refid="d2/d1b/classTransformedShape_1a8f86d62d2bdcfbab3a94c74b64cb16f5" prot="public" virt="non-virtual"><scope>TransformedShapeConvex</scope><name>OnShapeUpdate</name></member>
+      <member refid="d2/d1b/classTransformedShape_1a4c0673a63d293bc82483ad489524aeb1" prot="public" virt="non-virtual"><scope>TransformedShapeConvex</scope><name>OnTransformUpdate</name></member>
+      <member refid="d7/d30/classTransformedShapeConvex_1ae8835d227f3e06bc5287f1dd89b85f4e" prot="public" virt="non-virtual"><scope>TransformedShapeConvex</scope><name>QueryExtremalVertices</name></member>
+      <member refid="d7/d30/classTransformedShapeConvex_1af158246b416b0568738f061f58de50ba" prot="public" virt="non-virtual"><scope>TransformedShapeConvex</scope><name>QueryExtremalVertices</name></member>
+      <member refid="d2/d1b/classTransformedShape_1a067387736e32649b7a442e4bda379543" prot="public" virt="non-virtual"><scope>TransformedShapeConvex</scope><name>TransformedShape</name></member>
+      <member refid="d7/d30/classTransformedShapeConvex_1ac30e1a4e1e94a666ade2e74b0a676eae" prot="public" virt="non-virtual"><scope>TransformedShapeConvex</scope><name>TransformedShapeConvex</name></member>
+      <member refid="d2/d1b/classTransformedShape_1aa77320d5bae016df30de940a3444a618" prot="public" virt="virtual"><scope>TransformedShapeConvex</scope><name>~TransformedShape</name></member>
+      <member refid="d7/d30/classTransformedShapeConvex_1a28c57492004f308fe5bcc378ae5c503a" prot="public" virt="virtual"><scope>TransformedShapeConvex</scope><name>~TransformedShapeConvex</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
