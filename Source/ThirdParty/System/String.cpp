@@ -132,20 +132,24 @@ CharacterClass String::GetClassMB( MBChar ch ) const
 
 WChar String::ToLowerCaseW( WChar ch ) const
 {
-    return (WChar)CharLowerW( (LPWSTR)ch );
+    CharLowerW( (LPWSTR)&ch );
+    return ch;
 }
 MBChar String::ToLowerCaseMB( MBChar ch ) const
 {
-    return (MBChar)CharLowerA( (LPSTR)ch );
+    CharLowerA( (LPSTR)&ch );
+    return ch;
 }
 
 WChar String::ToUpperCaseW( WChar ch ) const
 {
-    return (WChar)CharUpperW( (LPWSTR)ch );
+    CharUpperW( (LPWSTR)&ch );
+    return ch;
 }
 MBChar String::ToUpperCaseMB( MBChar ch ) const
 {
-    return (MBChar)CharUpperA( (LPSTR)ch );
+    CharUpperA( (LPSTR)&ch );
+    return ch;
 }
 
 UInt String::LengthW( const WChar * inStr ) const
@@ -285,6 +289,237 @@ Void String::ReverseMB( MBChar * pStr, UInt iLength ) const
         *strEnd = ch;
         ++pStr; --strEnd;
     }
+}
+
+UInt String::SplitW( WChar ** outArray, UInt iMaxStrings, UInt iMaxLength, const WChar * pStr, WChar chDelimiter, Bool bRemoveSpaces ) const
+{
+    DebugAssert( outArray != NULL );
+    DebugAssert( iMaxStrings > 0 );
+    DebugAssert( iMaxLength > 0 );
+    DebugAssert( pStr != NULL );
+
+    const WChar * strStart = pStr;
+    const WChar * strEnd;
+    UInt iStringCount = 0;
+
+    // Parse input string
+    while(true) {
+        // Extract element
+        strEnd = strStart;
+        while( *strEnd != WNULLBYTE && *strEnd != chDelimiter ) {
+            ++strEnd;
+        }
+
+        DebugAssert( outArray[iStringCount] != NULL );
+
+        // Get element length
+        UInt iLength = ( strEnd + 1 - strStart );
+        if ( iLength > iMaxLength )
+            iLength = iMaxLength;
+
+        // Remove spaces if needed
+        Bool bUseFakeElement = false;
+        if ( bRemoveSpaces ) {
+            while( IsSpaceW( *strStart ) && strStart < strEnd ) { ++strStart; }
+            while( IsSpaceW( *strEnd ) && strEnd > strStart ) { --strEnd; }
+            if ( strStart >= strEnd ) {
+                iLength = 2; // Empty element, make it a single space
+                bUseFakeElement = true;
+            } else
+                iLength = ( strEnd + 1 - strStart );
+        }
+
+        // Output element
+        if ( bUseFakeElement )
+            outArray[iStringCount][0] = WTEXT(' ');
+        else
+            NCopyW( outArray[iStringCount], strStart, iLength );
+        outArray[iStringCount][iLength - 1] = WNULLBYTE;
+        ++iStringCount;
+
+        // Check for end of string
+        if ( *strEnd == WNULLBYTE )
+            return iStringCount;
+
+        // Check if we reached max output capacity
+        if ( iStringCount >= iMaxStrings )
+            return iStringCount;
+
+        // Next element
+        strStart = strEnd + 1;
+    }
+}
+UInt String::SplitMB( MBChar ** outArray, UInt iMaxStrings, UInt iMaxLength, const MBChar * pStr, MBChar chDelimiter, Bool bRemoveSpaces ) const
+{
+    DebugAssert( outArray != NULL );
+    DebugAssert( iMaxStrings > 0 );
+    DebugAssert( iMaxLength > 0 );
+    DebugAssert( pStr != NULL );
+
+    const MBChar * strStart = pStr;
+    const MBChar * strEnd;
+    UInt iStringCount = 0;
+
+    // Parse input string
+    while ( true ) {
+        // Extract element
+        strEnd = strStart;
+        while ( *strEnd != MBNULLBYTE && *strEnd != chDelimiter ) {
+            ++strEnd;
+        }
+
+        DebugAssert( outArray[iStringCount] != NULL );
+
+        // Get element length
+        UInt iLength = (strEnd + 1 - strStart);
+        if ( iLength > iMaxLength )
+            iLength = iMaxLength;
+
+        // Remove spaces if needed
+        Bool bUseFakeElement = false;
+        if ( bRemoveSpaces ) {
+            while ( IsSpaceMB( *strStart ) && strStart < strEnd ) { ++strStart; }
+            while ( IsSpaceMB( *strEnd ) && strEnd > strStart ) { --strEnd; }
+            if ( strStart >= strEnd ) {
+                iLength = 2; // Empty element, make it a single space
+                bUseFakeElement = true;
+            }
+            else
+                iLength = (strEnd + 1 - strStart);
+        }
+
+        // Output element
+        if ( bUseFakeElement )
+            outArray[iStringCount][0] = MBTEXT(' ');
+        else
+            NCopyMB( outArray[iStringCount], strStart, iLength );
+        outArray[iStringCount][iLength - 1] = MBNULLBYTE;
+        ++iStringCount;
+
+        // Check for end of string
+        if ( *strEnd == MBNULLBYTE )
+            return iStringCount;
+
+        // Check if we reached max output capacity
+        if ( iStringCount >= iMaxStrings )
+            return iStringCount;
+
+        // Next element
+        strStart = strEnd + 1;
+    }
+}
+
+Void String::JoinW( WChar * outStr, UInt iMaxLength, const WChar ** arrStrings, UInt iStringCount, WChar chDelimiter, Bool bRemoveSpaces ) const
+{
+    DebugAssert( outStr != NULL );
+    DebugAssert( iMaxLength > 0 );
+    DebugAssert( arrStrings != NULL );
+    DebugAssert( iStringCount > 0 );
+
+    const WChar * strStart;
+    const WChar * strEnd;
+    UInt iOutputLength = 0;
+
+    // Enumerate all input strings
+    for ( UInt i = 0; i < iStringCount; ++i ) {
+        DebugAssert( arrStrings[i] != NULL );
+        strStart = arrStrings[i];
+
+        // Get element length
+        strEnd = strStart;
+        while( *strEnd != WNULLBYTE ) { ++strEnd; }
+        UInt iLength = ( strEnd + 1 - strStart );
+
+        // Remove spaces if needed
+        Bool bUseFakeElement = false;
+        if ( bRemoveSpaces ) {
+            while( IsSpaceW(*strStart) && strStart < strEnd ) { ++strStart; }
+            while( IsSpaceW(*strEnd) && strEnd > strStart ) { --strEnd; }
+            if ( strStart >= strEnd ) {
+                iLength = 2; // Empty element, make it a single space
+                bUseFakeElement = true;
+            }
+            else
+                iLength = ( strEnd + 1 - strStart );
+        }
+
+        // Check for overflow
+        if ( iOutputLength + iLength + 1 > iMaxLength )
+            return;
+
+        // Append delimiter (skip first element)
+        if ( i > 0 ) {
+            *outStr++ = chDelimiter;
+            ++iOutputLength;
+        }
+
+        // Append element
+        if ( bUseFakeElement ) {
+            *outStr++ = WTEXT(' ');
+            *outStr = WNULLBYTE;
+        } else
+            outStr = NCopyW( outStr, strStart, iLength );
+        iOutputLength += iLength;
+    }
+
+    // Done
+    *outStr = WNULLBYTE;
+}
+Void String::JoinMB( MBChar * outStr, UInt iMaxLength, const MBChar ** arrStrings, UInt iStringCount, MBChar chDelimiter, Bool bRemoveSpaces ) const
+{
+    DebugAssert( outStr != NULL );
+    DebugAssert( iMaxLength > 0 );
+    DebugAssert( arrStrings != NULL );
+    DebugAssert( iStringCount > 0 );
+
+    const MBChar * strStart;
+    const MBChar * strEnd;
+    UInt iOutputLength = 0;
+
+    // Enumerate all input strings
+    for ( UInt i = 0; i < iStringCount; ++i ) {
+        DebugAssert( arrStrings[i] != NULL );
+        strStart = arrStrings[i];
+
+        // Get element length
+        strEnd = strStart;
+        while( *strEnd != MBNULLBYTE ) { ++strEnd; }
+        UInt iLength = ( strEnd + 1 - strStart );
+
+        // Remove spaces if needed
+        Bool bUseFakeElement = false;
+        if ( bRemoveSpaces ) {
+            while( IsSpaceMB(*strStart) && strStart < strEnd ) { ++strStart; }
+            while( IsSpaceMB(*strEnd) && strEnd > strStart ) { --strEnd; }
+            if ( strStart >= strEnd ) {
+                iLength = 2; // Empty element, make it a single space
+                bUseFakeElement = true;
+            }
+            else
+                iLength = ( strEnd + 1 - strStart );
+        }
+
+        // Check for overflow
+        if ( iOutputLength + iLength + 1 > iMaxLength )
+            return;
+
+        // Append delimiter (skip first element)
+        if ( i > 0 ) {
+            *outStr++ = chDelimiter;
+            ++iOutputLength;
+        }
+
+        // Append element
+        if ( bUseFakeElement ) {
+            *outStr++ = MBTEXT(' ');
+            *outStr = MBNULLBYTE;
+        } else
+            outStr = NCopyMB( outStr, strStart, iLength );
+        iOutputLength += iLength;
+    }
+
+    // Done
+    *outStr = MBNULLBYTE;
 }
 
 UInt64 String::ToUIntW( const WChar * inStr, const WChar ** outStr ) const

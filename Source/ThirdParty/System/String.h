@@ -272,6 +272,16 @@ public:
     inline Void ReverseA( AChar * pStr, UInt iLength ) const;
     inline Void Reverse( GChar * pStr, UInt iLength ) const;
 
+    UInt SplitW( WChar ** outArray, UInt iMaxStrings, UInt iMaxLength, const WChar * pStr, WChar chDelimiter, Bool bRemoveSpaces ) const;
+    UInt SplitMB( MBChar ** outArray, UInt iMaxStrings, UInt iMaxLength, const MBChar * pStr, MBChar chDelimiter, Bool bRemoveSpaces ) const;
+    inline UInt SplitA( AChar ** outArray, UInt iMaxStrings, UInt iMaxLength, const AChar * pStr, AChar chDelimiter, Bool bRemoveSpaces ) const;
+    inline UInt Split( GChar ** outArray, UInt iMaxStrings, UInt iMaxLength, const GChar * pStr, GChar chDelimiter, Bool bRemoveSpaces ) const;
+
+    Void JoinW( WChar * outStr, UInt iMaxLength, const WChar ** arrStrings, UInt iStringCount, WChar chDelimiter, Bool bRemoveSpaces ) const;
+    Void JoinMB( MBChar * outStr, UInt iMaxLength, const MBChar ** arrStrings, UInt iStringCount, MBChar chDelimiter, Bool bRemoveSpaces ) const;
+    inline Void JoinA( AChar * outStr, UInt iMaxLength, const AChar ** arrStrings, UInt iStringCount, AChar chDelimiter, Bool bRemoveSpaces ) const;
+    inline Void Join( GChar * outStr, UInt iMaxLength, const GChar ** arrStrings, UInt iStringCount, GChar chDelimiter, Bool bRemoveSpaces ) const;
+
     UInt64 ToUIntW( const WChar * inStr, const WChar ** outStr = NULL ) const;
     UInt64 ToUIntMB( const MBChar * inStr, const MBChar ** outStr = NULL ) const;
     inline UInt64 ToUIntA( const AChar * inStr, const AChar ** outStr = NULL ) const;

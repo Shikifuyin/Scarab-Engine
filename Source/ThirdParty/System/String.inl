@@ -569,6 +569,28 @@ inline Void String::Reverse( GChar * pStr, UInt iLength ) const {
 #endif
 }
 
+inline UInt String::SplitA( AChar ** outArray, UInt iMaxStrings, UInt iMaxLength, const AChar * pStr, AChar chDelimiter, Bool bRemoveSpaces ) const {
+    return SplitMB( outArray, iMaxStrings, iMaxLength, pStr, chDelimiter, bRemoveSpaces );
+}
+inline UInt String::Split( GChar ** outArray, UInt iMaxStrings, UInt iMaxLength, const GChar * pStr, GChar chDelimiter, Bool bRemoveSpaces ) const {
+#if ( defined(UNICODE) || defined(_UNICODE) )
+    return SplitW( outArray, iMaxStrings, iMaxLength, pStr, chDelimiter, bRemoveSpaces );
+#else
+    return SplitMB( outArray, iMaxStrings, iMaxLength, pStr, chDelimiter, bRemoveSpaces );
+#endif
+}
+
+inline Void String::JoinA( AChar * outStr, UInt iMaxLength, const AChar ** arrStrings, UInt iStringCount, AChar chDelimiter, Bool bRemoveSpaces ) const {
+    JoinMB( outStr, iMaxLength, arrStrings, iStringCount, chDelimiter, bRemoveSpaces );
+}
+inline Void String::Join( GChar * outStr, UInt iMaxLength, const GChar ** arrStrings, UInt iStringCount, GChar chDelimiter, Bool bRemoveSpaces ) const {
+#if ( defined(UNICODE) || defined(_UNICODE) )
+    JoinW( outStr, iMaxLength, arrStrings, iStringCount, chDelimiter, bRemoveSpaces );
+#else
+    JoinMB( outStr, iMaxLength, arrStrings, iStringCount, chDelimiter, bRemoveSpaces );
+#endif
+}
+
 inline UInt64 String::ToUIntA( const AChar * inStr, const AChar ** outStr ) const {
     return ToUIntMB( inStr, outStr );
 }
