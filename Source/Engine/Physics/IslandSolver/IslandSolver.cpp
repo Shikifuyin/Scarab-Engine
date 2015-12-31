@@ -1103,8 +1103,8 @@ Void IslandSolver::_DebugPrint_ContactPoints( const ContactManifold * pManifold 
                                               iKeyA |= ( ((const MeshFacetQuad *)pFeatA)->Key.C ) << 8;
                                               iKeyA |= ( ((const MeshFacetQuad *)pFeatA)->Key.D ); break;
                     case MESH_FACET_POLYGON:  iKeyA = 0;
-                                              for( Int i = ((const MeshFacetPolygon *)pFeatA)->Key.SIZE - 1; i >= 0; --i )
-                                                  iKeyA |= ( ((const MeshFacetPolygon *)pFeatA)->Key.V[i] ) << (4*i);
+                                              for( Int j = ((const MeshFacetPolygon *)pFeatA)->Key.SIZE - 1; j >= 0; --j )
+                                                  iKeyA |= ( ((const MeshFacetPolygon *)pFeatA)->Key.V[j] ) << (4*j);
                                               break;
                     default: Assert( false ); break;
                 } break;
@@ -1129,8 +1129,8 @@ Void IslandSolver::_DebugPrint_ContactPoints( const ContactManifold * pManifold 
                                               iKeyB |= ( ((const MeshFacetQuad *)pFeatB)->Key.C ) << 8;
                                               iKeyB |= ( ((const MeshFacetQuad *)pFeatB)->Key.D ); break;
                     case MESH_FACET_POLYGON:  iKeyB = 0;
-                                              for( Int i = ((const MeshFacetPolygon *)pFeatB)->Key.SIZE - 1; i >= 0; --i )
-                                                  iKeyB |= ( ((const MeshFacetPolygon *)pFeatB)->Key.V[i] ) << (4*i);
+                                              for( Int j = ((const MeshFacetPolygon *)pFeatB)->Key.SIZE - 1; j >= 0; --j )
+                                                  iKeyB |= ( ((const MeshFacetPolygon *)pFeatB)->Key.V[j] ) << (4*j);
                                               break;
                     default: Assert( false ); break;
                 } break;

@@ -19,8 +19,8 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // Header prelude
-#ifndef SCARAB_ENTRYPOINT_SIMPLERPG_INTERFACE_INTERFACEMANAGER_H
-#define SCARAB_ENTRYPOINT_SIMPLERPG_INTERFACE_INTERFACEMANAGER_H
+#ifndef SCARAB_ENTRYPOINT_FRAMEWORK_INTERFACE_INTERFACEMANAGER_H
+#define SCARAB_ENTRYPOINT_FRAMEWORK_INTERFACE_INTERFACEMANAGER_H
 
 /////////////////////////////////////////////////////////////////////////////////
 // Includes
@@ -153,18 +153,22 @@ typedef struct _hud_dragndrop_data {
     UInt iIdentifier;
 } HUDDragNDropData;
 
-// User action list
-#define ACTION_CONTROL_EXIT         1
+// User default action list
+#define ACTION_CONTROL_EXIT          0
+#define ACTION_CONTROL_3D_WIREFRAME  1
+#define ACTION_CONTROL_ANIM_PAUSE    2
+#define ACTION_CONTROL_ANIM_STEP     3
 
-#define ACTION_CONSOLE_INVOKE       2
-#define ACTION_CONTROL_3D_WIREFRAME 3
+#define ACTION_CONSOLE_CMDLINE       10
+#define ACTION_CONSOLE_VIDEOSETTINGS 11
+#define ACTION_CONSOLE_RESOURCES     12
 
-#define ACTION_MOVE_RUN_FORWARD     10
-#define ACTION_MOVE_RUN_BACKWARD    11
-#define ACTION_MOVE_RUN_LEFT        12
-#define ACTION_MOVE_RUN_RIGHT       13
-#define ACTION_MOVE_RUN_UP          14
-#define ACTION_MOVE_RUN_DOWN        15
+#define ACTION_MOVE_FORWARD  20
+#define ACTION_MOVE_BACKWARD 21
+#define ACTION_MOVE_LEFT     22
+#define ACTION_MOVE_RIGHT    23
+#define ACTION_MOVE_UP       24
+#define ACTION_MOVE_DOWN     25
 
 /////////////////////////////////////////////////////////////////////////////////
 // The HUDBackboardModel class
@@ -174,6 +178,11 @@ public:
     HUDBackboardModel();
     virtual ~HUDBackboardModel();
 
+    virtual Void OnAction( Action iAction );
+	virtual Void OnStartAction( Action iAction );
+    virtual Void OnStopAction( Action iAction );
+
+protected:
     virtual Void OnKeyPress( KeyCode iKey, GUIEventFlag iFlags );
 	virtual Void OnKeyRelease( KeyCode iKey, GUIEventFlag iFlags );
 
@@ -298,5 +307,5 @@ private:
 
 /////////////////////////////////////////////////////////////////////////////////
 // Header end
-#endif // SCARAB_ENTRYPOINT_SIMPLERPG_INTERFACE_INTERFACEMANAGER_H
+#endif // SCARAB_ENTRYPOINT_FRAMEWORK_INTERFACE_INTERFACEMANAGER_H
 

@@ -205,7 +205,7 @@ Void RandomGenerator::MotherOfAll32Seed( ULong iSeed, UInt iWarmUp )
     Int i;
 
     // init
-    for(Int i = 0; i < 5; ++i) {
+    for(i = 0; i < 5; ++i) {
         iSeed = iSeed * 29943829 - 1;
         m_arrMOA32Table[i] = iSeed;
     }

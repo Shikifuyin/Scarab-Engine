@@ -1,0 +1,83 @@
+/////////////////////////////////////////////////////////////////////////////////
+// File : Engine/Graphics/3D/Raster.h
+/////////////////////////////////////////////////////////////////////////////////
+// Version : 1.0a
+// Began Code : 29/05/2010
+// Status : Alpha
+// Portability : Any
+/////////////////////////////////////////////////////////////////////////////////
+// Description : Delegate of the Renderer, handles rasterization process
+/////////////////////////////////////////////////////////////////////////////////
+// Part of Scarab-Engine, licensed under the
+// Creative Commons Attribution-Noncommercial-NoDerivs 3.0 Unported License
+//   http://creativecommons.org/licenses/by-nc-nd/3.0/
+/////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////////
+// Known Bugs : None
+/////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////////
+// Header prelude
+#ifndef KOALA_ENGINE_GRAPHICS_3D_RASTER_H
+#define KOALA_ENGINE_GRAPHICS_3D_RASTER_H
+
+/////////////////////////////////////////////////////////////////////////////////
+// Includes
+#include "Buffering.h"
+
+/////////////////////////////////////////////////////////////////////////////////
+// Constants definitions
+class Renderer;
+
+typedef struct _raster_scanconversion
+{
+	Int iLeft;
+	Scalar fInvDY[3];
+    Scalar fX[2], fSlopeX[2];
+    CFLPtr pPixels[2], pSlopePixels[2];
+} RasterScanConversion;
+
+typedef struct _raster_scanline
+{
+	Int iY;
+    Scalar fX[2];
+    CFLPtr pPixels[2];
+    CFLPtr pSlope;
+    CFLPtr pCurrent;
+} RasterScanLine;
+
+/////////////////////////////////////////////////////////////////////////////////
+// The Raster class
+class Raster
+{
+public:
+    Raster( Renderer * pRenderer );
+    ~Raster();
+
+    inline CustomFragmentLayout * GetCFL() const;
+    Void SetCFL( CustomFragmentLayout * pCFL );
+
+    Void ScanPoint( CCFLPtr pPixelA );
+    Void ScanSegment( CCFLPtr pPixelA, CCFLPtr pPixelB );
+    Void ScanTriangle( CCFLPtr pPixelA, CCFLPtr pPixelB, CCFLPtr pPixelC );
+
+private:
+    Void _ScanTriangleLine();
+
+    // Data
+    Renderer * m_pRenderer;
+
+    CustomFragmentLayout * m_pCFL;
+
+    RasterScanConversion m_ScanConv;
+    RasterScanLine m_ScanLine;
+};
+
+/////////////////////////////////////////////////////////////////////////////////
+// Backward Includes (Inlines & Templates)
+#include "Raster.inl"
+
+/////////////////////////////////////////////////////////////////////////////////
+// Header end
+#endif // KOALA_ENGINE_GRAPHICS_3D_RASTER_H

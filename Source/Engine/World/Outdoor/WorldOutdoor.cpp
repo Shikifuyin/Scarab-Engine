@@ -543,7 +543,7 @@ Void WorldOutdoor::_PathFindingGraph_UpdateAdjacency_Pass1( UInt iVisibleX, UInt
         }
     } else {
         // Update only perimeter cells
-        for( UInt iX = 0; iX < pArea->GetGridWidth(); ++iX ) {
+        for( iX = 0; iX < pArea->GetGridWidth(); ++iX ) {
             // Quads at Y == 0
             pCell = pArea->GetGridWaypoint( iX, 0 );
             pCell->ClearAdjacency();
@@ -594,7 +594,7 @@ Void WorldOutdoor::_PathFindingGraph_UpdateAdjacency_Pass1( UInt iVisibleX, UInt
                 }
             }
         }
-        for( UInt iY = 0; iY < pArea->GetGridHeight(); ++iY ) {
+        for( iY = 0; iY < pArea->GetGridHeight(); ++iY ) {
             // Quads at X == 0
             pCell = pArea->GetGridWaypoint( 0, iY );
             pCell->ClearAdjacency();

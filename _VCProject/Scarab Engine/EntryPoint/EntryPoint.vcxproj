@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -19,14 +19,14 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -89,18 +89,36 @@
     <ClInclude Include="..\..\..\Source\EntryPoint\Framework\Graphics\GraphicsManager.h" />
     <ClInclude Include="..\..\..\Source\EntryPoint\Framework\Interface\InterfaceManager.h" />
     <ClInclude Include="..\..\..\Source\EntryPoint\MainSelector.h" />
+    <ClInclude Include="..\..\..\Source\EntryPoint\WorldOfMonsters\Battle\Battle.h" />
+    <ClInclude Include="..\..\..\Source\EntryPoint\WorldOfMonsters\Monsters\Monster.h" />
+    <ClInclude Include="..\..\..\Source\EntryPoint\WorldOfMonsters\Monsters\Rune.h" />
+    <ClInclude Include="..\..\..\Source\EntryPoint\WorldOfMonsters\Monsters\Skill.h" />
+    <ClInclude Include="..\..\..\Source\EntryPoint\WorldOfMonsters\Monsters\Statistics.h" />
+    <ClInclude Include="..\..\..\Source\EntryPoint\WorldOfMonsters\Monsters\StatusEffect.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\Source\EntryPoint\Debug\DebugMain.inl" />
     <None Include="..\..\..\Source\EntryPoint\Framework\Graphics\GraphicsManager.inl" />
     <None Include="..\..\..\Source\EntryPoint\Framework\Interface\InterfaceManager.inl" />
     <None Include="..\..\..\Source\EntryPoint\MainSelector.inl" />
+    <None Include="..\..\..\Source\EntryPoint\WorldOfMonsters\Battle\Battle.inl" />
+    <None Include="..\..\..\Source\EntryPoint\WorldOfMonsters\Monsters\Monster.inl" />
+    <None Include="..\..\..\Source\EntryPoint\WorldOfMonsters\Monsters\Rune.inl" />
+    <None Include="..\..\..\Source\EntryPoint\WorldOfMonsters\Monsters\Skill.inl" />
+    <None Include="..\..\..\Source\EntryPoint\WorldOfMonsters\Monsters\Statistics.inl" />
+    <None Include="..\..\..\Source\EntryPoint\WorldOfMonsters\Monsters\StatusEffect.inl" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\Source\EntryPoint\Debug\DebugMain.cpp" />
     <ClCompile Include="..\..\..\Source\EntryPoint\Framework\Graphics\GraphicsManager.cpp" />
     <ClCompile Include="..\..\..\Source\EntryPoint\Framework\Interface\InterfaceManager.cpp" />
     <ClCompile Include="..\..\..\Source\EntryPoint\MainSelector.cpp" />
+    <ClCompile Include="..\..\..\Source\EntryPoint\WorldOfMonsters\Battle\Battle.cpp" />
+    <ClCompile Include="..\..\..\Source\EntryPoint\WorldOfMonsters\Monsters\Monster.cpp" />
+    <ClCompile Include="..\..\..\Source\EntryPoint\WorldOfMonsters\Monsters\Rune.cpp" />
+    <ClCompile Include="..\..\..\Source\EntryPoint\WorldOfMonsters\Monsters\Skill.cpp" />
+    <ClCompile Include="..\..\..\Source\EntryPoint\WorldOfMonsters\Monsters\Statistics.cpp" />
+    <ClCompile Include="..\..\..\Source\EntryPoint\WorldOfMonsters\Monsters\StatusEffect.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Engine\Engine.vcxproj">

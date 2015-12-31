@@ -166,8 +166,8 @@ UInt PatchManager::_ComputeRho( UInt iN, UInt iM, UInt iJ, UInt iP )
 {
     // Count number of couples (x,y) < (n,m) such that x := (y+j) mod P
     UInt iCount = 0;
-    for( Int x = 0; x < iN; ++x ) {
-        for( Int y = 0; y < iM; ++y ) {
+    for( Int x = 0; x < (Int)iN; ++x ) {
+        for( Int y = 0; y < (Int)iM; ++y ) {
             Int iDiff = ( x - y - (Int)iJ );
             if ( (iDiff % (Int)iP) == 0 )
                 ++iCount;

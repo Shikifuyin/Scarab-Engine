@@ -1,0 +1,39 @@
+/////////////////////////////////////////////////////////////////////////////////
+// File : Engine/Graphics/3D/VertexShader.inl
+/////////////////////////////////////////////////////////////////////////////////
+// Version : 1.0a
+// Began Code : 29/05/2010
+// Status : Alpha
+// Portability : Any
+/////////////////////////////////////////////////////////////////////////////////
+// Description : Delegate of the Renderer, handles vertex processing
+/////////////////////////////////////////////////////////////////////////////////
+// Part of Scarab-Engine, licensed under the
+// Creative Commons Attribution-Noncommercial-NoDerivs 3.0 Unported License
+//   http://creativecommons.org/licenses/by-nc-nd/3.0/
+/////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////////
+// Known Bugs : None
+/////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////////
+// VertexShader implementation
+inline CustomFragmentLayout * VertexShader::GetInputCFL() const {
+    return m_pInputCFL;
+}
+inline CustomFragmentLayout * VertexShader::GetOutputCFL() const {
+    return m_pOutputCFL;
+}
+
+inline VertexShaderProgram * VertexShader::GetActiveProgram() const {
+    return m_pActiveProgram;
+}
+inline VertexShaderProgram * VertexShader::GetProgram( UInt iProgID ) const {
+    Assert(iProgID < m_iProgramCount);
+    return m_arrPrograms[iProgID];
+}
+
+inline Void VertexShader::Prepare() {
+    m_pActiveProgram->_Prepare( m_arrRegisters, NULL );
+}

@@ -135,8 +135,8 @@ Bool KeyFrameController::_UpdateControllerState( Scalar /*fTimeStep*/ )
 
             m_vPosition = _Lerp_Position( fNormalTime, iPrevKey, iNextKey );
 
-            Vector3 vPrevSpeed = ( m_vPosition - m_arrPositionKeys[iPrevKey] ) / fPrevDT;
-            Vector3 vNextSpeed = ( m_arrPositionKeys[iNextKey] - m_vPosition ) / fNextDT;
+            vPrevSpeed = ( m_vPosition - m_arrPositionKeys[iPrevKey] ) / fPrevDT;
+            vNextSpeed = ( m_arrPositionKeys[iNextKey] - m_vPosition ) / fNextDT;
             m_vLinearSpeed = ( vPrevSpeed + vNextSpeed ) * 0.5f;
         }
         if ( m_iOrientationKeyCount > 0 ) {

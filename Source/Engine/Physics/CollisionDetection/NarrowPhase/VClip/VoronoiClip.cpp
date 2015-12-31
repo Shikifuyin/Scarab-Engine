@@ -71,7 +71,7 @@ Bool VoronoiClip::DetectCollision( Bool bGenerateContactPoints )
     const MeshFeature *pFeatureA, *pFeatureB;
     MeshFeatureType iTypeA ,iTypeB;
 
-    VClipState iPrevStepState;
+    VClipState iPrevStepState = VCLIP_STATE_SEPARATED;
 
     UInt iIterations = 0;
 
@@ -1344,8 +1344,8 @@ Void VoronoiClip::_DebugPrint_ContactPoints() const
                                               iKeyA |= ( ((const Quad *)pFeatA)->Key.C ) << 8;
                                               iKeyA |= ( ((const Quad *)pFeatA)->Key.D ); break;
                     case MESH_FACET_POLYGON:  iKeyA = 0;
-                                              for( Int i = ((const Polygon *)pFeatA)->Key.SIZE - 1; i >= 0; --i )
-                                                  iKeyA |= ( ((const Polygon *)pFeatA)->Key.V[i] ) << (4*i);
+                                              for( Int j = ((const Polygon *)pFeatA)->Key.SIZE - 1; j >= 0; --j )
+                                                  iKeyA |= ( ((const Polygon *)pFeatA)->Key.V[j] ) << (4*j);
                                               break;
                     default: Assert( false ); break;
                 } break;
@@ -1366,8 +1366,8 @@ Void VoronoiClip::_DebugPrint_ContactPoints() const
                                               iKeyB |= ( ((const Quad *)pFeatB)->Key.C ) << 8;
                                               iKeyB |= ( ((const Quad *)pFeatB)->Key.D ); break;
                     case MESH_FACET_POLYGON:  iKeyB = 0;
-                                              for( Int i = ((const Polygon *)pFeatB)->Key.SIZE - 1; i >= 0; --i )
-                                                  iKeyB |= ( ((const Polygon *)pFeatB)->Key.V[i] ) << (4*i);
+                                              for( Int j = ((const Polygon *)pFeatB)->Key.SIZE - 1; j >= 0; --j )
+                                                  iKeyB |= ( ((const Polygon *)pFeatB)->Key.V[j] ) << (4*j);
                                               break;
                     default: Assert( false ); break;
                 } break;

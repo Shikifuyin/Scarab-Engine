@@ -1277,7 +1277,7 @@ Bool XMLNode::_Parse_AttributeList( XMLToken * pOverflowToken, GChar * pOverflow
     while( ch != TEXT('"') ) {
         // Escape string
         if ( ch == TEXT('\\') ) {
-            Bool bContinue = pfCallback( &ch, pUserData );
+            bContinue = pfCallback( &ch, pUserData );
             if ( !bContinue ) {
                 pValue->Push( NULLBYTE );
                 *pOverflowToken = XMLTOKEN_UNDEFINED;
@@ -1299,7 +1299,7 @@ Bool XMLNode::_Parse_AttributeList( XMLToken * pOverflowToken, GChar * pOverflow
         } else
             pValue->Push( ch );
 
-        Bool bContinue = pfCallback( &ch, pUserData );
+        bContinue = pfCallback( &ch, pUserData );
         if ( !bContinue ) {
             pValue->Push( NULLBYTE );
             *pOverflowToken = XMLTOKEN_UNDEFINED;
@@ -1314,6 +1314,7 @@ Bool XMLNode::_Parse_AttributeList( XMLToken * pOverflowToken, GChar * pOverflow
 Bool XMLNode::_Parse_NodeContent( XMLToken * pOverflowToken, GChar * pOverflowChar, _XMLReadCallback pfCallback, Void * pUserData )
 {
     GChar strTokenData[XML_NAME_SIZE];
+    Bool bContinue;
 
     // Parse next token
     XMLToken iToken;
@@ -1342,7 +1343,7 @@ Bool XMLNode::_Parse_NodeContent( XMLToken * pOverflowToken, GChar * pOverflowCh
         ResourceFn->UnSelectMemory();
 
         // Recurse on child
-        Bool bContinue = pChild->_Parse( pOverflowToken, pOverflowChar, pfCallback, pUserData );
+        bContinue = pChild->_Parse( pOverflowToken, pOverflowChar, pfCallback, pUserData );
         if ( !bContinue )
             return false;
 
@@ -1366,21 +1367,21 @@ Bool XMLNode::_Parse_NodeContent( XMLToken * pOverflowToken, GChar * pOverflowCh
 
         Assert( *pOverflowChar == NULLBYTE );
         GChar ch;
-        Bool bContinue = pfCallback( &ch, pUserData );
+        bContinue = pfCallback( &ch, pUserData );
         if ( !bContinue ) {
             pComment->Push( NULLBYTE );
             return false;
         }
         while( true ) {
             if ( ch == TEXT('-') ) {
-                Bool bContinue = pfCallback( &ch, pUserData );
+                bContinue = pfCallback( &ch, pUserData );
                 if ( !bContinue ) {
                     pComment->Push( NULLBYTE );
                     return false;
                 }
 
                 if ( ch == TEXT('-') ) {
-                    Bool bContinue = pfCallback( &ch, pUserData );
+                    bContinue = pfCallback( &ch, pUserData );
                     if ( !bContinue ) {
                         pComment->Push( NULLBYTE );
                         return false;
@@ -1397,7 +1398,7 @@ Bool XMLNode::_Parse_NodeContent( XMLToken * pOverflowToken, GChar * pOverflowCh
             }
             pComment->Push( ch );
 
-            Bool bContinue = pfCallback( &ch, pUserData );
+            bContinue = pfCallback( &ch, pUserData );
             if ( !bContinue ) {
                 pComment->Push( NULLBYTE );
                 return false;
@@ -1423,7 +1424,6 @@ Bool XMLNode::_Parse_NodeContent( XMLToken * pOverflowToken, GChar * pOverflowCh
     pText->Clear();
     pText->Push( strTokenData, StringFn->Length(strTokenData) );
 
-    Bool bContinue;
     GChar ch;
     if ( *pOverflowChar == NULLBYTE ) {
         bContinue = pfCallback( &ch, pUserData );
@@ -1438,7 +1438,7 @@ Bool XMLNode::_Parse_NodeContent( XMLToken * pOverflowToken, GChar * pOverflowCh
     while( ch != TEXT('<') ) {
         pText->Push( ch );
 
-        Bool bContinue = pfCallback( &ch, pUserData );
+        bContinue = pfCallback( &ch, pUserData );
         if ( !bContinue ) {
             pText->Push( NULLBYTE );
             return false;

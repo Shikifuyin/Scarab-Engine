@@ -1425,7 +1425,8 @@ Void D3D11Window::_Enumerate()
             pOutput = NULL;
             ++iOutput;
         }
-        DebugAssert( m_arrOutputCounts[iAdapterIndex] > 0 );
+		// Allow adapters without output ...
+        //DebugAssert( m_arrOutputCounts[iAdapterIndex] > 0 );
         DebugAssert( m_arrOutputCounts[iAdapterIndex] <= D3D11WINDOW_MAX_OUTPUTS );
 
         // Next adapter

@@ -616,8 +616,6 @@ Void EngineTests::_CreateActions()
     InputFn->BindAction( ACTION_MOVE_RUN_RIGHT,       KEYCODE_D );
     InputFn->BindAction( ACTION_MOVE_RUN_UP,          KEYCODE_E );
     InputFn->BindAction( ACTION_MOVE_RUN_DOWN,        KEYCODE_A );
-    InputFn->BindAction( ACTION_CAMERA_ZOOM_OUT,      KEYCODE_MOUSEWHEELDOWN );
-    InputFn->BindAction( ACTION_CAMERA_ZOOM_IN,       KEYCODE_MOUSEWHEELUP );
 
     InputFn->BindAction( ACTION_CUSTOM_A0,            KEYCODE_UP );
     InputFn->BindAction( ACTION_CUSTOM_A1,            KEYCODE_DOWN );

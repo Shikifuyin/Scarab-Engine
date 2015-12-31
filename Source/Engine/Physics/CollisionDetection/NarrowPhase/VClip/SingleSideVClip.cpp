@@ -69,7 +69,7 @@ Bool SingleSideVClip::DetectCollision( Bool bGenerateContactPoints )
     Scalar fSphereRadius = pSphere->GetSphere().Radius;
 
     // Voronoi-Clip state machine
-    SingleSideVClipState iPrevStepState;
+    SingleSideVClipState iPrevStepState = SSVCLIP_STATE_SEPARATED;
 
     UInt iIterations = 0;
     while( true ) {

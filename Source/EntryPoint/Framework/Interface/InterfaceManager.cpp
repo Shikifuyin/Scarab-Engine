@@ -44,73 +44,89 @@ HUDBackboardModel::~HUDBackboardModel()
 	}
 }
 
+Void HUDBackboardModel::OnAction( Action iAction )
+{
+    // Application data
+    //const Camera * pRenderCamera = RenderingFn->GetCamera();
+
+    // Compute camera frame
+    //Vector3 vAim = pRenderCamera->GetViewDir();
+    //vAim.Z = 0.0f;
+    //vAim.Normalize();
+    //Vector3 vSide = pRenderCamera->GetViewSide();
+    //Vector3 vUp = (vAim ^ vSide);
+    //vUp.Normalize();
+
+	// Default behaviour
+	switch (iAction) {
+		case ACTION_CONTROL_EXIT:
+			GUIFn->MessageBox( GUIMSGBOX_TYPE_WARNING, TEXT("Are you sure you want to exit ?\nThat's what you want ?!\nDo as you wish ... TT"),
+							   GUIMSGBOX_BUTTONS_YES_NO, _MsgBox_ConfirmExit, this );
+			break;
+        case ACTION_CONTROL_3D_WIREFRAME:
+            ///////////////////////////////////////////////////////
+            break;
+		case ACTION_CONTROL_ANIM_PAUSE:
+		    //WorldFn->ToggleAnimation();
+		    break;
+		case ACTION_CONTROL_ANIM_STEP:
+		    //WorldFn->StepAnimation();
+		    break;
+
+		case ACTION_CONSOLE_CMDLINE:
+			ConsoleFn->Toggle();
+			break;
+        case ACTION_CONSOLE_VIDEOSETTINGS:
+            ConsoleFn->ToggleVideoSettings();
+            break;
+        case ACTION_CONSOLE_RESOURCES:
+            ConsoleFn->ToggleResourceView();
+            break;
+
+        case ACTION_MOVE_FORWARD:
+            ///////////////////////////////////////////////////////
+            break;
+        case ACTION_MOVE_BACKWARD:
+            ///////////////////////////////////////////////////////
+            break;
+        case ACTION_MOVE_LEFT:
+            ///////////////////////////////////////////////////////
+            break;
+        case ACTION_MOVE_RIGHT:
+            ///////////////////////////////////////////////////////
+            break;
+        case ACTION_MOVE_UP:
+            ///////////////////////////////////////////////////////
+            break;
+        case ACTION_MOVE_DOWN:
+            ///////////////////////////////////////////////////////
+            break;
+
+		default:
+			// do nothing
+			break;
+	}
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+
 Void HUDBackboardModel::OnKeyPress( KeyCode iKey, GUIEventFlag iFlags )
 {
 	// Action flags
-    ActionFlag iActionFlags = ACTIONFLAG_NONE;
-    if ( iFlags & GUIEVENT_FLAG_CTRL )
-        iActionFlags |= ACTIONFLAG_MOD_CTRL;
-    if ( iFlags & GUIEVENT_FLAG_ALT )
-        iActionFlags |= ACTIONFLAG_MOD_ALT;
-    if ( iFlags & GUIEVENT_FLAG_SHIFT )
-        iActionFlags |= ACTIONFLAG_MOD_SHIFT;
-
-	// Application data
-    //PCharacter * pPlayer = (PCharacter*)( GameplayFn->GetCharacter(TEXT("Shiki")) );
-
-    const Camera * pRenderCamera = RenderingFn->GetCamera();
-
-    // Compute camera frame
-    Vector3 vAim = pRenderCamera->GetViewDir();
-    vAim.Z = 0.0f;
-    vAim.Normalize();
-    Vector3 vSide = pRenderCamera->GetViewSide();
-    Vector3 vUp = ( vAim ^ vSide );
-    vUp.Normalize();
+	ActionFlag iActionFlags = ACTIONFLAG_NONE;
+	if (iFlags & GUIEVENT_FLAG_CTRL)
+		iActionFlags |= ACTIONFLAG_MOD_CTRL;
+	if (iFlags & GUIEVENT_FLAG_ALT)
+		iActionFlags |= ACTIONFLAG_MOD_ALT;
+	if (iFlags & GUIEVENT_FLAG_SHIFT)
+		iActionFlags |= ACTIONFLAG_MOD_SHIFT;
 
 	// Action mapping
-    Action iAction = InputFn->GetAction( iKey, iActionFlags );
-    switch( iAction ) {
-        case ACTION_CONSOLE_INVOKE:
-            ConsoleFn->ToggleVideoSettings();
-            break;
-        case ACTION_CONTROL_EXIT:
-            GUIFn->MessageBox( GUIMSGBOX_TYPE_WARNING, TEXT("Are you sure you want to exit ?\nThat's what you want ?!\nDo as you wish ... TT"),
-                               GUIMSGBOX_BUTTONS_YES_NO, _MsgBox_ConfirmExit, this );
-            break;
-        //case ACTION_CONTROL_ANIM_PAUSE:
-        //    WorldFn->ToggleAnimation();
-        //    break;
-        //case ACTION_CONTROL_ANIM_STEP:
-        //    WorldFn->StepAnimation();
-        //    break;
-        case ACTION_CONTROL_3D_WIREFRAME:
-            ///////////////////////////////////////////////////////
-			break;
+	Action iAction = InputFn->GetAction( iKey, iActionFlags );
 
-        case ACTION_MOVE_RUN_FORWARD:
-            //pPlayer->SetMovingForward( true );
-            break;
-        case ACTION_MOVE_RUN_BACKWARD:
-            //pPlayer->SetMovingBackward( true );
-            break;
-        case ACTION_MOVE_RUN_LEFT:
-            //pPlayer->SetMovingLeft( true );
-            break;
-        case ACTION_MOVE_RUN_RIGHT:
-            //pPlayer->SetMovingRight( true );
-            break;
-        case ACTION_MOVE_RUN_UP:
-            //pPlayer->SetMovingUp( true );
-            break;
-        case ACTION_MOVE_RUN_DOWN:
-            //pPlayer->SetMovingDown( true );
-            break;
+	// Raise user callback
+	OnAction( iAction );
 
-        default:
-            // do nothing
-            break;
-    }
 }
 Void HUDBackboardModel::OnKeyRelease( KeyCode iKey, GUIEventFlag iFlags )
 {
@@ -123,34 +139,11 @@ Void HUDBackboardModel::OnKeyRelease( KeyCode iKey, GUIEventFlag iFlags )
     if ( iFlags & GUIEVENT_FLAG_SHIFT )
         iActionFlags |= ACTIONFLAG_MOD_SHIFT;
 
-	// Application data
-    //PCharacter * pPlayer = (PCharacter*)( GameplayFn->GetCharacter(TEXT("Shiki")) );
-
 	// Action mapping
     Action iAction = InputFn->GetAction( iKey, iActionFlags );
-    switch( iAction ) {
-        case ACTION_MOVE_RUN_FORWARD:
-            //pPlayer->SetMovingForward( false );
-            break;
-        case ACTION_MOVE_RUN_BACKWARD:
-            //pPlayer->SetMovingBackward( false );
-            break;
-        case ACTION_MOVE_RUN_LEFT:
-            //pPlayer->SetMovingLeft( false );
-            break;
-        case ACTION_MOVE_RUN_RIGHT:
-            //pPlayer->SetMovingRight( false );
-            break;
-        case ACTION_MOVE_RUN_UP:
-            //pPlayer->SetMovingUp( false );
-            break;
-        case ACTION_MOVE_RUN_DOWN:
-            //pPlayer->SetMovingDown( false );
-            break;
-        default:
-            // do nothing
-            break;
-    }
+
+    // Raise user callback
+    OnAction( iAction );
 }
 
 Void HUDBackboardModel::OnClick( const Point2 & ptLocalPos, KeyCode iKey, GUIEventFlag iFlags )

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SkyAtlas>
+    <SkyArea index="0" position="0.0,0.0" doors="0,1,-1,-1" ELink="1,W" NLink="2,S">
+        <SkyNode index="0" position="5.0,0.0" type="MIGHT" color="RED" cost="100" prestige="10" proficiency="5" statvalue="10" WLink="3,E"/>
+        
+        <SkyNode index="1" position="0.0,5.0" type="STAMINA" color="GREEN" cost="100" prestige="10" proficiency="5" statvalue="10" SLink="3,N"/>
+        
+        <SkyNode index="2" position="-5.0,0.0" type="GREATNESS" color="BLUE" cost="100" prestige="10" statvalue="100" ELink="3,W"/>
+        
+        <SkyNode index="3" position="0.0,0.0" type="TALENT" color="BLUE" cost="100" prestige="10" statvalue="MARK_OF_DEATH" ELink="0,W" NLink="1,S" WLink="2,E"/>
+    </SkyArea>
+    
+    <SkyArea index="1" position="20.0,0.0" doors="-1,-1,0,-1" WLink="0,E">
+        <SkyNode index="0" position="-5.0,0.0" type="STRENGTH" color="BLUE" cost="100" prestige="10" statvalue="10" ELink="2,W"/>
+        
+        <SkyNode index="1" position="5.0,0.0" type="LUCK" color="BLUE" cost="100" prestige="10" statvalue="10" WLink="2,E"/>
+        
+        <SkyNode index="2" position="0.0,0.0" type="CLASS" color="CLASS" cost="100" statvalue="WITCH" ELink="1,W" WLink="0,E"/>
+    </SkyArea>
+    
+    <SkyArea index="2" position="0.0,20.0" doors="-1,-1,-1,0" SLink="0,N">
+        <SkyNode index="0" position="0.0,-5.0" type="SPIRIT" color="BLUE" cost="100" prestige="10" statvalue="10" NLink="2,S"/>
+        
+        <SkyNode index="1" position="0.0,5.0" type="VALOR" color="BLUE" cost="100" prestige="10" statvalue="10" SLink="2,N"/>
+        
+        <SkyNode index="2" position="0.0,0.0" type="CLASS" color="DIVINEFORM" cost="1" statvalue="DIVINE_FORM" NLink="1,S" SLink="0,N"/>
+    </SkyArea>
+</SkyAtlas>

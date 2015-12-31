@@ -1,0 +1,77 @@
+/////////////////////////////////////////////////////////////////////////////////
+// File : ThirdParty/DirectX9/Direct3D/Resources/D3D9Buffers.h
+/////////////////////////////////////////////////////////////////////////////////
+// Version : 1.0a
+// Began Code : 29/05/2010
+// Status : Alpha
+// Portability : Any
+/////////////////////////////////////////////////////////////////////////////////
+// Description : Platform-dependant resource for Direct3D9, Buffers
+/////////////////////////////////////////////////////////////////////////////////
+// Part of Scarab-Engine, licensed under the
+// Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License
+//   http://creativecommons.org/licenses/by-nc-nd/3.0/
+/////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////////
+// Known Bugs : None.
+/////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////////
+// Header prelude
+#ifndef SCARAB_THIRDPARTY_DIRECTX9_DIRECT3D_RESOURCES_D3D9BUFFERS_H
+#define SCARAB_THIRDPARTY_DIRECTX9_DIRECT3D_RESOURCES_D3D9BUFFERS_H
+
+/////////////////////////////////////////////////////////////////////////////////
+// Includes
+#include "../Mappings.h"
+
+/////////////////////////////////////////////////////////////////////////////////
+// Constants definitions
+
+// Prototypes
+class Direct3D9Renderer;
+
+/////////////////////////////////////////////////////////////////////////////////
+// The D3D9VertexBuffer class
+class D3D9VertexBuffer
+{
+public:
+    D3D9VertexBuffer( Direct3D9Renderer * pRenderer, VertexBufferUsage iUsage, UInt iDataSize, UInt iDataStride );
+    ~D3D9VertexBuffer();
+
+    Void Enable( Direct3D9Renderer * pRenderer, UInt iStream, UInt iOffset );
+    Void Disable( Direct3D9Renderer * pRenderer, UInt iStream );
+    Void * Lock( VertexBufferLock iLockMode );
+    Void Unlock();
+
+private:
+    UInt m_iStride;
+    IDirect3DVertexBuffer9 * m_pVB;
+};
+
+/////////////////////////////////////////////////////////////////////////////////
+// The D3D9IndexBuffer class
+class D3D9IndexBuffer
+{
+public:
+    D3D9IndexBuffer( Direct3D9Renderer * pRenderer, IndexBufferUsage iUsage, UInt iDataSize, UInt iDataStride );
+    ~D3D9IndexBuffer();
+
+    Void Enable( Direct3D9Renderer * pRenderer );
+    Void Disable( Direct3D9Renderer * pRenderer );
+    Void * Lock( IndexBufferLock iLockMode );
+    Void Unlock();
+
+private:
+    IDirect3DIndexBuffer9 * m_pIB;
+};
+
+/////////////////////////////////////////////////////////////////////////////////
+// Backward Includes (Inlines & Templates)
+#include "D3D9Buffers.inl"
+
+/////////////////////////////////////////////////////////////////////////////////
+// Header end
+#endif // SCARAB_THIRDPARTY_DIRECTX9_DIRECT3D_RESOURCES_D3D9BUFFERS_H
+

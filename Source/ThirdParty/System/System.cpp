@@ -778,20 +778,15 @@ Void System::StringToNetAddress( NetAddress * outAddress, const GChar * strDotte
                 StringFn->NCopy( strAddr, strDottedFormat, (strPort - strDottedFormat) );
                 ++strPort;
 
-#if ( defined(UNICODE) || defined(_UNICODE) )
-                AChar strTemp[16];
-                StringFn->WideCharToMultiByte( strTemp, strAddr, 15 );
-                DWord dwAddr = inet_addr( strTemp );
-#else
-                DWord dwAddr = inet_addr( strAddr );
-#endif
-                DebugAssert( dwAddr != INADDR_NONE );
+                in_addr ipAddr;
+                Int iError = InetPton( AF_INET, strAddr, &ipAddr );
+                DebugAssert( iError == 0 );
 
                 Word wPort = (Word)( StringFn->ToUInt(strPort) );
 
                 pAddr->iType = NETADDRESS_IPv4;
                 pAddr->wPort = htons( wPort );
-                pAddr->Addr.Value = dwAddr;
+                pAddr->Addr.Value = ipAddr.S_un.S_addr;
             } break;
         case NETADDRESS_IPv6: {
                 DebugAssert( false );
@@ -806,17 +801,9 @@ Void System::NetAddressToString( GChar * outString, const NetAddress * pAddress 
                 const NetAddressIPv4 * pAddr = (const NetAddressIPv4*)pAddress;
 
                 in_addr ipAddr;
-                ipAddr.s_addr = pAddr->Addr.Value;
-                const AChar * strAddr = inet_ntoa( ipAddr );
-                DebugAssert( strAddr != NULL );
-
-#if ( defined(UNICODE) || defined(_UNICODE) )
-                WChar strTemp[16];
-                StringFn->AsciiToWideChar( strTemp, strAddr, 15 );
-                outString = StringFn->Copy( outString, strTemp );
-#else
-                outString = StringFn->Copy( outString, strAddr );
-#endif
+                ipAddr.S_un.S_addr = pAddr->Addr.Value;
+                const GChar * strOut = InetNtop( AF_INET, &ipAddr, outString, 16 );
+                DebugAssert( strOut != NULL );
 
                 *outString++ = ':';
                 StringFn->FromUInt( outString, (UInt64)( ntohs(pAddr->wPort) ) );

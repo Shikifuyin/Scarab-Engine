@@ -136,7 +136,7 @@ inline Void MonsterInstance::SetRune( UInt iSlot, Rune * pRune ) {
     _UpdateEffectiveStats();
 }
 
-inline Bool MonsterInstance::HasSetBonus( RuneType iType, UInt * outCount = NULL ) const {
+inline Bool MonsterInstance::HasSetBonus( RuneType iType, UInt * outCount ) const {
     return m_hRuneSet.HasSetBonus( iType, outCount );
 }
 
