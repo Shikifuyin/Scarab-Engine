@@ -43,7 +43,7 @@ typedef UInt MonsterID;
 class Monster
 {
 public:
-    Monster( const GChar * strMonsterFile );
+    Monster( XMLNode * pMonsterNode );
     virtual ~Monster();
 
     // Elemental affinities
@@ -61,9 +61,6 @@ public:
     inline const MonsterLevelingStats * GetLevelingStats() const;
 
     inline const SkillSet * GetSkillSet() const;
-
-    // Instanciation
-    virtual MonsterInstance * CreateInstance() const = 0;
 
 protected:
     // Helpers

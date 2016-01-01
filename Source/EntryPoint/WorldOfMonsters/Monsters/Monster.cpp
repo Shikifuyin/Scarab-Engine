@@ -23,32 +23,27 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // Monster implementation
-Monster::Monster( const GChar * strMonsterFile ):
+Monster::Monster( XMLNode * pMonsterNode ):
     m_hLevelingStats(), m_hSkillSet()
 {
-    // Load everything
-    XMLDocument * pMonsterFile = XMLDocument::CreateDocument( strMonsterFile );
-    Assert( pMonsterFile != NULL );
-    Assert( StringFn->Cmp(pMonsterFile->GetTagName(), TEXT("MonsterFile")) == 0 );
+    Assert( pMonsterNode != NULL );
+    Assert( StringFn->Cmp( pMonsterNode->GetTagName(), TEXT( "Monster" ) ) == 0 );
 
+    // Load everything
         // Identifier
-    m_iMonsterID = (MonsterID)( StringFn->ToUInt( pMonsterFile->GetAttribute(TEXT("MonsterID"))->GetValue() ) );
-    StringFn->NCopy( m_strName, pMonsterFile->GetAttribute(TEXT("Name"))->GetValue(), MONSTER_NAME_LENGTH - 1 );
-    StringFn->NCopy( m_strAwakenedName, pMonsterFile->GetAttribute(TEXT("AwakenedName"))->GetValue(), MONSTER_NAME_LENGTH - 1 );
+    m_iMonsterID = (MonsterID)( StringFn->ToUInt( pMonsterNode->GetAttribute(TEXT("MonsterID"))->GetValue() ) );
+    StringFn->NCopy( m_strName, pMonsterNode->GetAttribute(TEXT("Name"))->GetValue(), MONSTER_NAME_LENGTH - 1 );
+    StringFn->NCopy( m_strAwakenedName, pMonsterNode->GetAttribute(TEXT("AwakenedName"))->GetValue(), MONSTER_NAME_LENGTH - 1 );
 
         // Leveling stats
-    XMLNode * pLevelingStatsNode = pMonsterFile->GetChildByTag( TEXT("MonsterLevelingStats"), 0 );
+    XMLNode * pLevelingStatsNode = pMonsterNode->GetChildByTag( TEXT("LevelingStats"), 0 );
     Assert( pLevelingStatsNode != NULL );
     m_hLevelingStats.Load( pLevelingStatsNode );
 
         // Skill set
-    XMLNode * pSkillSetNode = pMonsterFile->GetChildByTag( TEXT("MonsterSkillSet"), 0 );
+    XMLNode * pSkillSetNode = pMonsterNode->GetChildByTag( TEXT("SkillSet"), 0 );
     Assert( pSkillSetNode != NULL );
     m_hSkillSet.Load( pSkillSetNode );
-
-    // Done
-    XMLDocument::DestroyDocument( pMonsterFile );
-    pMonsterFile = NULL;
 }
 Monster::~Monster()
 {

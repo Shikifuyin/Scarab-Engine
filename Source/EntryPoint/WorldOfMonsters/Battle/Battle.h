@@ -91,7 +91,7 @@ public:
     inline UInt GetStatusEffectCount() const;
     inline StatusEffectInstance * GetStatusEffect( UInt iIndex ) const;
 
-    inline Void AddStatusEffect( const StatusEffectInstance & hEffect );
+    inline Void AddStatusEffect( const StatusEffect * pEffect );
     inline Void RemoveStatusEffect( UInt iIndex );
     inline Void RemoveAllStatusEffects();
 
