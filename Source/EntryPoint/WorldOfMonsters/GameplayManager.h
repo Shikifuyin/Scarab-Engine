@@ -25,6 +25,7 @@
 /////////////////////////////////////////////////////////////////////////////////
 // Includes
 #include "../../Lib/Datastruct/Table/TreeMap.h"
+#include "../../Lib/Math/Random/Random.h"
 
 // TODO : migrate those XMLs into a database !
 #include "../../Engine/Resource/ResourceManager.h"
@@ -58,6 +59,13 @@ protected:
 public:
     Void Initialize();
     Void Cleanup();
+
+    // Random number generator
+    inline UInt GetRandomUInt( UInt iRange ) const; // in [0;iRange]
+    inline Int GetRandomInt( Int iRange ) const;    // in [-iRange;iRange]
+    inline Float GetRandomFloat() const;            // in [0;1]
+
+    inline Bool CheckRandomEvent( Float fSuccessRate ) const;
 
     // Skill database
     inline Skill * GetSkill( SkillID iSkillID ) const;

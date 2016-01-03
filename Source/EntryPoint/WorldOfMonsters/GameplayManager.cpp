@@ -36,6 +36,8 @@ GameplayManager::~GameplayManager()
 
 Void GameplayManager::Initialize()
 {
+    RandFn->XorShift128Seed( (ULong)(SystemFn->GetUTCTime(TIMEUNIT_SECONDS) & 0x00000000ffffffffui64), 1000 );
+
     m_mapSkills.UseMemoryContext( GetMemoryContext(), TEXT("Scratch") );
     m_mapSkills.SetComparator( _Compare_SkillIDs );
     m_mapSkills.Create();

@@ -24,7 +24,7 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // Includes
-#include "../../Framework/Graphics/GraphicsManager.h"
+#include "Statistics.h"
 
 /////////////////////////////////////////////////////////////////////////////////
 // Constants definitions
@@ -66,12 +66,16 @@ public:
 
     inline Bool IsBuff() const;
     inline Bool IsDebuff() const;
+    inline Bool IsDisabling() const;
 
-    inline Bool IsRemovable() const;
     inline Bool IsStackable() const;
 
     // Interface
-    virtual Void ApplyEffect( MonsterBattleInstance * pHost ) const = 0;
+    virtual Void OnUpdateBattleStats( MonsterBattleInstance * pHost ) const;
+
+    virtual Void OnTurnStart( MonsterBattleInstance * pHost ) const;
+    //virtual Void OnTurnEnd( MonsterBattleInstance * pHost ) const;
+
 
 protected:
     // Helpers
@@ -86,27 +90,42 @@ protected:
 class StatusBuffStat : public StatusEffect
 {
 public:
-    StatusBuffStat( MonsterStatistic iStat, UInt iAmount );
     StatusBuffStat( MonsterStatistic iStat, Float fAmount );
     virtual ~StatusBuffStat();
 
     // Interface
     inline MonsterStatistic GetStat() const;
-    inline UInt GetAmountI() const;
-    inline Float GetAmountF() const;
+    inline Float GetAmount() const;
 
-    virtual Void ApplyEffect( MonsterBattleInstance * pHost ) const;
+    virtual Void OnUpdateBattleStats( MonsterBattleInstance * pHost ) const;
 
 protected:
     MonsterStatistic m_iStat;
-    union {
-        UInt iValue;
-        Float fValue;
-    } m_hAmount;
+    Float m_fAmount;
 };
 
 
 
+
+
+/////////////////////////////////////////////////////////////////////////////////
+// The StatusDebuffStat class
+class StatusDebuffStat : public StatusEffect
+{
+public:
+    StatusDebuffStat( MonsterStatistic iStat, Float fAmount );
+    virtual ~StatusDebuffStat();
+
+    // Interface
+    inline MonsterStatistic GetStat() const;
+    inline Float GetAmount() const;
+
+    virtual Void OnUpdateBattleStats( MonsterBattleInstance * pHost ) const;
+
+protected:
+    MonsterStatistic m_iStat;
+    Float m_fAmount;
+};
 
 
 
@@ -118,11 +137,37 @@ protected:
 class StatusEffectInstance
 {
 public:
-    StatusEffectInstance( StatusEffect * pStatusEffect, UInt iDuration );
+    StatusEffectInstance( StatusEffect * pStatusEffect, Bool bRemovable, UInt iDuration );
     ~StatusEffectInstance();
+
+    // Getters
+    inline StatusEffectType GetType() const;
+
+    inline StatusEffect * GetStatusEffect() const;
+
+    inline Bool IsBuff() const;
+    inline Bool IsDebuff() const;
+    inline Bool IsDisabling() const;
+
+    inline Bool IsStackable() const;
+
+    inline Bool IsRemovable() const;
+
+    // Interface
+    inline Bool IsExpired() const;
+    inline UInt GetDuration() const;
+
+    inline Void DecreaseDuration();
+
+    inline Void OnUpdateBattleStats( MonsterBattleInstance * pHost ) const;
+
+    inline Void OnTurnStart( MonsterBattleInstance * pHost ) const;
+    //inline Void OnTurnEnd( MonsterBattleInstance * pHost ) const;
 
 protected:
     StatusEffect * m_pStatusEffect;
+    Bool m_bRemovable;
+
     UInt m_iDuration;
 };
 

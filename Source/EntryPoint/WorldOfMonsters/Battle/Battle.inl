@@ -55,37 +55,37 @@ inline Void MonsterBattleInstance::Heal( UInt iAmount ) {
 }
 
 inline Bool MonsterBattleInstance::CheckATB() const {
-    return ( m_iCurrentATB >= BATTLE_ATB_CAPACITY );
+    return ( m_iATB >= BATTLE_ATB_CAPACITY );
 }
-inline UInt MonsterBattleInstance::GetCurrentATB() const {
-    return m_iCurrentATB;
+inline UInt MonsterBattleInstance::GetATB() const {
+    return m_iATB;
 }
 
 inline Void MonsterBattleInstance::IncreaseATB( Float fRatio ) {
     UInt iAmount = (UInt)(MathFn->Floor( fRatio * (Float)BATTLE_ATB_CAPACITY ));
-    m_iCurrentATB += iAmount;
+    m_iATB += iAmount;
 }
 inline Void MonsterBattleInstance::IncreaseATB( UInt iAmount ) {
-    m_iCurrentATB += iAmount;
+    m_iATB += iAmount;
 }
 inline Void MonsterBattleInstance::DecreaseATB( Float fRatio ) {
     UInt iAmount = (UInt)(MathFn->Floor( fRatio * (Float)BATTLE_ATB_CAPACITY ));
-    if ( m_iCurrentATB > iAmount )
-        m_iCurrentATB -= iAmount;
+    if ( m_iATB > iAmount )
+        m_iATB -= iAmount;
     else
-        m_iCurrentATB = 0;
+        m_iATB = 0;
 }
 inline Void MonsterBattleInstance::DecreaseATB( UInt iAmount ) {
-    if ( m_iCurrentATB > iAmount )
-        m_iCurrentATB -= iAmount;
+    if ( m_iATB > iAmount )
+        m_iATB -= iAmount;
     else
-        m_iCurrentATB = 0;
+        m_iATB = 0;
 }
 inline Void MonsterBattleInstance::FillATB() {
-    m_iCurrentATB = BATTLE_ATB_CAPACITY;
+    m_iATB = BATTLE_ATB_CAPACITY;
 }
 inline Void MonsterBattleInstance::ResetATB() {
-    m_iCurrentATB = 0;
+    m_iATB = 0;
 }
 
 inline UInt MonsterBattleInstance::GetSkillCooldown( UInt iSlot ) const {
@@ -125,13 +125,20 @@ inline Void MonsterBattleInstance::AddStatusEffect( const StatusEffectInstance &
     else {
         
     }
+    _UpdateBattleStats();
 }
 inline Void MonsterBattleInstance::RemoveStatusEffect( UInt iIndex ) {
     Assert( iIndex < m_arrActiveEffects.Count() );
     m_arrActiveEffects.Remove( iIndex, NULL, 1 );
+    _UpdateBattleStats();
 }
 inline Void MonsterBattleInstance::RemoveAllStatusEffects() {
     m_arrActiveEffects.Clear();
+    _UpdateBattleStats();
+}
+
+inline Bool MonsterBattleInstance::IsDisabled() const {
+    return m_bDisabled;
 }
 
 inline UInt MonsterBattleInstance::GetHP() const {
@@ -176,9 +183,9 @@ inline BattleType Battle::GetType() const {
     return m_iType;
 }
 
-inline Bool Battle::IsPlayerNextTurn() const {
-    return m_bNextTurnIsPlayer;
+inline Bool Battle::IsPlayerTurn() const {
+    return ( m_bTurnPending && m_bPlayerTurn );
 }
-inline Bool Battle::IsAINextTurn() const {
-    return !m_bNextTurnIsPlayer;
+inline Bool Battle::IsAITurn() const {
+    return ( m_bTurnPending && !m_bPlayerTurn );
 }

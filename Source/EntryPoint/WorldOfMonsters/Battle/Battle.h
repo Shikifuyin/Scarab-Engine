@@ -70,7 +70,7 @@ public:
 
     // ATB access
     inline Bool CheckATB() const;
-    inline UInt GetCurrentATB() const;
+    inline UInt GetATB() const;
 
     inline Void IncreaseATB( Float fRatio );
     inline Void IncreaseATB( UInt iAmount );
@@ -96,6 +96,8 @@ public:
     inline Void RemoveAllStatusEffects();
 
     // Battle stats access
+    inline Bool IsDisabled() const;
+
     inline UInt GetHP() const;
     inline UInt GetATT() const;
     inline UInt GetDEF() const;
@@ -108,6 +110,9 @@ public:
 
 private:
     // Helpers
+    friend class StatusBuffStat;
+    friend class StatusDebuffStat;
+
     Void _UpdateBattleStats();
 
     // Base instance
@@ -115,12 +120,14 @@ private:
 
     // Battle state
     UInt m_iCurrentHP;
-    UInt m_iCurrentATB;
+    UInt m_iATB;
     UInt m_arrSkillCooldowns[SKILL_SLOT_COUNT];
 
     Array<StatusEffectInstance> m_arrActiveEffects;
 
     // Battle stats
+    Bool m_bDisabled; // If any effect prevents this from playing
+
     UInt m_iHealth;
     UInt m_iAttack;
     UInt m_iDefense;
@@ -161,16 +168,30 @@ public:
     // Getters
     inline BattleType GetType() const;
 
+    inline BattleTeam * GetPlayerTeam() const;
+    inline BattleTeam * GetAITeam() const;
+
     // Battle interface
-    inline Bool IsPlayerNextTurn() const;
-    inline Bool IsAINextTurn() const;
+    inline Bool IsTurnPending() const;
+    inline Bool IsTurnInProgress() const;
+    inline Bool IsPlayerTurn() const;
+    inline Bool IsAITurn() const;
+    Bool IsPlayerDead() const;
+    Bool IsAIDead() const;
+
+    inline MonsterBattleInstance * GetTurnMonster() const;
 
     Void Initialize();
 
     Bool TimeStep();
-    Void HandleNextTurn( UInt iChoice, UInt iTarget );
+
+    Bool StartTurn();
+    Void HandleChoice( UInt iSkillChoice, Bool bTargetPlayerTeamElseAI, UInt iTargetMonster );
+    Bool EndTurn();
 
 protected:
+    // Helpers
+
     // Battle type
     BattleType m_iType;
 
@@ -179,9 +200,9 @@ protected:
     BattleTeam * m_pAITeam;
 
     // ATB State
-    Bool m_bTurnHandled;
-    Bool m_bNextTurnIsPlayer; // Else AI
-    MonsterBattleInstance * m_pNextTurnMonster;
+    Bool m_bTurnPending, m_bTurnInProgress, m_bExtraTurn;
+    Bool m_bPlayerTurn; // Else AI
+    MonsterBattleInstance * m_pTurnMonster;
 };
 
 

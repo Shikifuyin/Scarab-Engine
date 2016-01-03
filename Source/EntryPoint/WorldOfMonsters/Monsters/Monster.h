@@ -162,7 +162,7 @@ private:
     // Helpers
     Void _UpdateEffectiveStats();
 
-    // Parent class
+    // Monster model
     const Monster * m_pMonster;
 
     // Statistics

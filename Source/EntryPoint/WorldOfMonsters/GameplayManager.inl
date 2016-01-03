@@ -28,6 +28,20 @@ inline const GChar * GameplayManager::GetMemoryBudget() {
         );
 }
 
+inline UInt GameplayManager::GetRandomUInt( UInt iRange ) const {
+    return (UInt)( RandFn->XorShift128() );
+}
+inline Int GameplayManager::GetRandomInt( Int iRange ) const {
+    return (Int)( RandFn->XorShift128() );
+}
+inline Float GameplayManager::GetRandomFloat() const {
+    static const Float s_fInvMax = ( 1.0f / (Float)(RandFn->XorShiftMax()) );
+    return ( s_fInvMax * (Float)(RandFn->XorShift128()) );
+}
+inline Bool GameplayManager::CheckRandomEvent( Float fSuccessRate ) const {
+    return ( GetRandomFloat() <= fSuccessRate );
+}
+
 inline Skill * GameplayManager::GetSkill( SkillID iSkillID ) const {
     SkillMap::Iterator it = m_mapSkills.Get( iSkillID );
     if ( it.IsNull() )
