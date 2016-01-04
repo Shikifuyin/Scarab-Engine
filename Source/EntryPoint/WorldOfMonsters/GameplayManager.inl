@@ -29,10 +29,10 @@ inline const GChar * GameplayManager::GetMemoryBudget() {
 }
 
 inline UInt GameplayManager::GetRandomUInt( UInt iRange ) const {
-    return (UInt)( RandFn->XorShift128() );
+    return ((UInt)(RandFn->XorShift128())) % iRange;
 }
 inline Int GameplayManager::GetRandomInt( Int iRange ) const {
-    return (Int)( RandFn->XorShift128() );
+    return ((Int)(RandFn->XorShift128())) % iRange;
 }
 inline Float GameplayManager::GetRandomFloat() const {
     static const Float s_fInvMax = ( 1.0f / (Float)(RandFn->XorShiftMax()) );

@@ -110,8 +110,12 @@ public:
 
 private:
     // Helpers
-    friend class StatusBuffStat;
-    friend class StatusDebuffStat;
+    friend class StatusBuffAttack;
+    friend class StatusBuffDefense;
+    friend class StatusBuffSpeed;
+    friend class StatusDebuffAttack;
+    friend class StatusDebuffDefense;
+    friend class StatusDebuffSpeed;
 
     Void _UpdateBattleStats();
 

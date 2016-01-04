@@ -24,10 +24,10 @@ inline StatusEffectType StatusEffect::GetType() const {
 }
 
 inline Bool StatusEffect::IsBuff() const {
-    return ( m_iType < STATUSEFFECT_DEBUFF_STAT );
+    return ( m_iType < STATUSEFFECT_DEBUFF_ATTACK );
 }
 inline Bool StatusEffect::IsDebuff() const {
-    return ( m_iType >= STATUSEFFECT_DEBUFF_STAT );
+    return ( m_iType >= STATUSEFFECT_DEBUFF_ATTACK );
 }
 inline Bool StatusEffect::IsDisabling() const {
     return ( m_iType >= STATUSEFFECT_DEBUFF_STUN );
@@ -38,20 +38,38 @@ inline Bool StatusEffect::IsStackable() const {
 }
 
 /////////////////////////////////////////////////////////////////////////////////
-// StatusBuffStat implementation
-inline MonsterStatistic StatusBuffStat::GetStat() const {
-    return m_iStat;
-}
-inline Float StatusBuffStat::GetAmount() const {
+// StatusBuffAttack implementation
+inline Float StatusBuffAttack::GetAmount() const {
     return m_fAmount;
 }
 
 /////////////////////////////////////////////////////////////////////////////////
-// StatusDebuffStat implementation
-inline MonsterStatistic StatusDebuffStat::GetStat() const {
-    return m_iStat;
+// StatusBuffDefense implementation
+inline Float StatusBuffDefense::GetAmount() const {
+    return m_fAmount;
 }
-inline Float StatusDebuffStat::GetAmount() const {
+
+/////////////////////////////////////////////////////////////////////////////////
+// StatusBuffSpeed implementation
+inline Float StatusBuffSpeed::GetAmount() const {
+    return m_fAmount;
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+// StatusDebuffAttack implementation
+inline Float StatusDebuffAttack::GetAmount() const {
+    return m_fAmount;
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+// StatusDebuffDefense implementation
+inline Float StatusDebuffDefense::GetAmount() const {
+    return m_fAmount;
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+// StatusDebuffSpeed implementation
+inline Float StatusDebuffSpeed::GetAmount() const {
     return m_fAmount;
 }
 
@@ -78,21 +96,37 @@ inline Bool StatusEffectInstance::IsDisabling() const {
 inline Bool StatusEffectInstance::IsStackable() const {
     return m_pStatusEffect->IsStackable();
 }
-
 inline Bool StatusEffectInstance::IsRemovable() const {
     return m_bRemovable;
 }
 
-inline Bool StatusEffectInstance::IsExpired() const {
-    return ( m_iDuration == 0 );
+inline UInt StatusEffectInstance::GetMaxStacks() const {
 }
-inline UInt StatusEffectInstance::GetDuration() const {
-    return m_iDuration;
+inline UInt StatusEffectInstance::GetStackCount() const {
 }
 
-inline Void StatusEffectInstance::DecreaseDuration() {
-    if ( m_iDuration > 0 )
-        --m_iDuration;
+inline Bool StatusEffectInstance::IsExpired( UInt iStack ) const {
+    Assert( iStack < m_iStackCount );
+    return ( m_arrDurations[iStack] == 0 );
+}
+inline UInt StatusEffectInstance::GetDuration( UInt iStack ) const {
+    Assert( iStack < m_iStackCount );
+    return m_arrDurations[iStack];
+}
+
+inline Void StatusEffectInstance::IncreaseDuration( UInt iStack, UInt iAmount ) {
+    Assert( iStack < m_iStackCount );
+    m_arrDurations[iStack] += iAmount;
+}
+inline Void StatusEffectInstance::DecreaseDuration( UInt iStack, UInt iAmount ) {
+    Assert( iStack < m_iStackCount );
+    if ( m_arrDurations[iStack] > iAmount )
+        m_arrDurations[iStack] -= iAmount;
+    else
+        m_arrDurations[iStack] = 0;
+}
+inline Void StatusEffectInstance::SetDuration( UInt iStack, UInt iAmount ) {
+    Assert( iStack < m_iStackCount );
 }
 
 inline Void StatusEffectInstance::OnUpdateBattleStats( MonsterBattleInstance * pHost ) const {
@@ -102,3 +136,20 @@ inline Void StatusEffectInstance::OnUpdateBattleStats( MonsterBattleInstance * p
 inline Void StatusEffectInstance::OnTurnStart( MonsterBattleInstance * pHost ) const {
     m_pStatusEffect->OnTurnStart( pHost );
 }
+inline Void StatusEffectInstance::OnTurnEnd( MonsterBattleInstance * pHost ) const {
+    m_pStatusEffect->OnTurnEnd( pHost );
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+// StatusEffectSet implementation
+inline Bool StatusEffectSet::HasStatusEffect( StatusEffectType iType ) const {
+    Assert( iType < STATUSEFFECT_COUNT );
+    return ( m_arrEffects[iType].GetStackCount() > 0 );
+}
+
+inline StatusEffectInstance * StatusEffectSet::GetStatusEffect( StatusEffectType iType ) {
+    Assert( iType < STATUSEFFECT_COUNT );
+    return ( m_arrEffects + iType );
+}
+
+

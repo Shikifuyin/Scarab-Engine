@@ -25,9 +25,9 @@
 /////////////////////////////////////////////////////////////////////////////////
 // Includes
 #include "Statistics.h"
+#include "StatusEffect.h"
 #include "Skill.h"
 #include "Rune.h"
-#include "StatusEffect.h"
 
 /////////////////////////////////////////////////////////////////////////////////
 // Constants definitions
@@ -35,8 +35,6 @@
 // Identifiers
 #define MONSTER_NAME_LENGTH 64
 typedef UInt MonsterID;
-
-
 
 /////////////////////////////////////////////////////////////////////////////////
 // The Monster class
@@ -53,13 +51,15 @@ public:
     inline static MonsterElement GetElementWeakAgainst( MonsterElement iElement );
     inline static MonsterElement GetElementStrongAgainst( MonsterElement iElement );
 
-    // Getters
+    // Identifier
     inline MonsterID GetID() const;
     inline const GChar * GetName() const;
     inline const GChar * GetAwakenedName() const;
 
+    // Leveling stats
     inline const MonsterLevelingStats * GetLevelingStats() const;
 
+    // Skills
     inline const SkillSet * GetSkillSet() const;
 
 protected:
@@ -72,7 +72,7 @@ protected:
     GChar m_strName[MONSTER_NAME_LENGTH];
     GChar m_strAwakenedName[MONSTER_NAME_LENGTH];
 
-    // Statistics
+    // Leveling stats
     MonsterLevelingStats m_hLevelingStats;
 
     // Skills
@@ -87,7 +87,7 @@ public:
     MonsterInstance( const Monster * pMonster );
     ~MonsterInstance();
 
-    // ID access
+    // Identifier access
     inline MonsterID GetID() const;
     inline const GChar * GetName() const;
     inline const GChar * GetAwakenedName() const;
@@ -134,7 +134,11 @@ public:
     inline Float GetRES() const;
 
     // Skills access
-    ////////////////////////////////
+    inline Bool HasLeaderSkill( UInt * outIndex = NULL ) const;
+    inline Bool HasPassiveSkill( UInt * outIndex = NULL ) const;
+
+    inline UInt GetSkillCount() const;
+    inline SkillInstance * GetSkill( UInt iIndex ) const;
 
     // Runes access
     inline Bool HasRune( UInt iSlot ) const;

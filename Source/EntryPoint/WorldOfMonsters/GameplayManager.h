@@ -36,6 +36,8 @@
 #include "Monsters\Rune.h"
 #include "Monsters\Monster.h"
 
+#include "Battle\Battle.h"
+
 /////////////////////////////////////////////////////////////////////////////////
 // Constants definitions
 #define GameplayFn GameplayManager::GetInstancePtr()
@@ -61,8 +63,8 @@ public:
     Void Cleanup();
 
     // Random number generator
-    inline UInt GetRandomUInt( UInt iRange ) const; // in [0;iRange]
-    inline Int GetRandomInt( Int iRange ) const;    // in [-iRange;iRange]
+    inline UInt GetRandomUInt( UInt iRange ) const; // in [0;iRange-1]
+    inline Int GetRandomInt( Int iRange ) const;    // in [-iRange+1;iRange-1]
     inline Float GetRandomFloat() const;            // in [0;1]
 
     inline Bool CheckRandomEvent( Float fSuccessRate ) const;

@@ -24,7 +24,8 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // Includes
-#include "../../Framework/Graphics/GraphicsManager.h"
+#include "Statistics.h"
+#include "StatusEffect.h"
 
 /////////////////////////////////////////////////////////////////////////////////
 // Constants definitions
@@ -32,6 +33,26 @@
 // Identifiers
 #define SKILL_NAME_LENGTH 64
 typedef UInt SkillID;
+
+// Skill leveling
+#define SKILL_MAX_LEVEL 16
+
+enum SkillStat {
+    SKILL_STAT_DAMAGE = 0,
+    SKILL_STAT_RECOVERY,
+    SKILL_STAT_STATUSEFFECTRATE,
+    SKILL_STAT_COOLDOWN,
+
+    SKILL_STAT_SPECIFIC_1,
+    SKILL_STAT_SPECIFIC_2,
+
+    SKILL_STAT_COUNT
+};
+
+typedef struct _skilllevel_bonus {
+    SkillStat iStat;
+    Float fAmount;
+} SkillLevelBonus;
 
 // Target patterns
 enum SkillTargetPattern {
@@ -59,8 +80,11 @@ enum SkillTargetPattern {
 };
 
 // Skill effects
+#define SKILL_MAX_EFFECTS 16 // should be enough to do insane stuff already
+
 enum SkillEffectType {
-    SKILLEFFECT_HP = 0,
+    SKILLEFFECT_DAMAGE = 0,
+    SKILLEFFECT_HEAL,
     SKILLEFFECT_ATB,
     SKILLEFFECT_STATUS,
 
@@ -68,11 +92,11 @@ enum SkillEffectType {
 };
 
 enum SkillEffectScaling {
-    SKILLEFFECT_SCALING_CONST = 0,
-    SKILLEFFECT_SCALING_SELF_CURRENT,
-    SKILLEFFECT_SCALING_SELF_MAX,
-    SKILLEFFECT_SCALING_TARGET_CURRENT,
-    SKILLEFFECT_SCALING_TARGET_MAX
+    SKILLEFFECT_SCALING_DEFAULT = 0,
+    SKILLEFFECT_SCALING_SELF_HP_CURRENT,
+    SKILLEFFECT_SCALING_SELF_HP_MAX,
+    SKILLEFFECT_SCALING_TARGET_HP_CURRENT,
+    SKILLEFFECT_SCALING_TARGET_HP_MAX
 };
 
 // Skill types
@@ -136,47 +160,74 @@ public:
     virtual SkillEffectType GetType() const = 0;
 
     // Interface
-    virtual Void Apply( BattleTeam * pAllyTeam, UInt iCasterMonster, BattleTeam * pEnnemyTeam,
+    virtual Void Apply( BattleTeam * pCasterTeam, UInt iCaster, BattleTeam * pEnnemyTeam,
                         BattleTeam * pCasterTargetTeam, UInt iCasterTarget ) const = 0;
 
 protected:
     // Helpers
-    static UInt _ResolveEnnemyTargets( MonsterBattleInstance ** outTargets, UInt * outMainTarget, SkillTargetPattern iPattern,
-                                       BattleTeam * pAllyTeam, UInt iAllyTarget, BattleTeam * pEnnemyTeam, UInt iEnnemyTarget );
-    static UInt _ResolveAllyTargets( MonsterBattleInstance ** outTargets, UInt * outMainTarget, SkillTargetPattern iPattern,
-                                     BattleTeam * pAllyTeam, UInt iAllyTarget, BattleTeam * pEnnemyTeam, UInt iEnnemyTarget );
+    static UInt _ResolveEnnemyTargets( MonsterBattleInstance ** outTargets, SkillTargetPattern iPattern,
+                                       BattleTeam * pEnnemyTeam, UInt iEnnemyTarget );
+    static UInt _ResolveAllyTargets( MonsterBattleInstance ** outTargets, SkillTargetPattern iPattern,
+                                     UInt iCaster, BattleTeam * pAllyTeam, UInt iAllyTarget );
 };
 
 /////////////////////////////////////////////////////////////////////////////////
 // The SkillEffectHP class
-class SkillEffectHP : public SkillEffect
+class SkillEffectDamage : public SkillEffect
 {
 public:
-    SkillEffectHP();
-    virtual ~SkillEffectHP();
+    SkillEffectDamage( XMLNode * pNode );
+    virtual ~SkillEffectDamage();
 
     inline virtual SkillEffectType GetType() const;
 
     // Interface
-    inline Bool IsDamage() const;
-    inline Bool IsHeal() const;
-    inline Bool IsMixed() const;
-
-    inline Bool IsSingle() const;
-    inline Bool IsMulti() const;
-    inline Bool IsAOE() const;
-    inline Bool IsRandommized() const;
-
-    virtual Void Apply( BattleTeam * pCasterTeam, UInt iCasterMonster, BattleTeam * pEnnemyTeam,
+    virtual Void Apply( BattleTeam * pCasterTeam, UInt iCaster, BattleTeam * pEnnemyTeam,
                         BattleTeam * pCasterTargetTeam, UInt iCasterTarget ) const;
 
 protected:
+    // Helpers
+    UInt _ComputeDamage( MonsterBattleInstance * pCaster, MonsterBattleInstance * pTarget ) const;
+
+    // Target pattern
+    SkillTargetPattern m_iTargetPattern;
+
+    // Damage scaling
+    SkillEffectScaling m_iScalingType;
+    Float m_fScalingMultiplier;
+
+    // Skill bonuses
+    Float m_fSkillBonusDmg;
+    Float m_fSkillBonusCritRate;
+    Float m_fSkillBonusCritDmg;
+};
+
+/////////////////////////////////////////////////////////////////////////////////
+// The SkillEffectHP class
+class SkillEffectHeal : public SkillEffect
+{
+public:
+    SkillEffectHeal();
+    virtual ~SkillEffectHeal();
+
+    inline virtual SkillEffectType GetType() const;
+
+    // Interface
+    virtual Void Apply( MonsterBattleInstance * pCaster, MonsterBattleInstance * pTarget ) const;
+
+protected:
+    // Helpers
+    UInt _ComputeHeal( MonsterBattleInstance * pCaster, MonsterBattleInstance * pTarget ) const;
+
     // Damage part
     Bool m_bDamage;
     SkillTargetPattern m_iDamageTargetPattern;
 
     SkillEffectScaling m_iDamageScaling;
     Float m_fDamageMultiplier;
+
+    Float m_fSkillBonusCritRate;
+    Float m_fSkillBonusCritDmg;
 
     // Heal part
     Bool m_bHeal;
@@ -186,7 +237,6 @@ protected:
     Float m_fHealMultiplier;
 };
 
-
 /////////////////////////////////////////////////////////////////////////////////
 // The Skill class
 class Skill
@@ -195,9 +245,11 @@ public:
     Skill( XMLNode * pSkillNode );
     virtual ~Skill();
 
-    // Getters
+    // Identifier
     inline SkillID GetID() const;
+    inline const GChar * GetName() const;
 
+    // Type
     inline Bool IsLeader() const;
     inline Bool IsPassive() const;
     inline Bool IsActive() const;
@@ -209,23 +261,39 @@ public:
     inline Bool IsAreaOfEffect() const;
     inline Bool IsRandomTarget() const;
 
-    // Interface
+    inline SkillType GetType() const;
 
-    // Callbacks
+    // Leveling stats
+    inline UInt GetMaxLevel() const;
+    inline const SkillLevelBonus * GetLevelBonus( UInt iLevel ) const;
+
+    // Awakening
+    inline Bool RequiresAwakening() const;
+    inline Bool HasAwakeningUpgrade() const;
+
+    // Skill effects
+    inline UInt GetEffectCount() const;
+    inline SkillEffect * GetEffect( UInt iIndex ) const;
 
 protected:
+    // Identifier
     SkillID m_iSkillID;
-
-    SkillType m_iType;
     GChar m_strName[SKILL_NAME_LENGTH];
 
-    UInt m_iMaxLevel; // 0 = no level (leader, most passives)
+    // Type
+    SkillType m_iType;
 
+    // Leveling stats
+    UInt m_iMaxLevel; // 0 = no level (leader, most passives)
+    SkillLevelBonus m_arrLevelBonus[SKILL_MAX_LEVEL];
+
+    // Awakening
     Bool m_bRequiresAwakening;   // Awakened only
     Bool m_bHasAwakeningUpgrade; // Awakened only
 
     // Skill effects
-
+    UInt m_iEffectCount;
+    SkillEffect * m_arrEffects[SKILL_MAX_EFFECTS];
 };
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -245,14 +313,14 @@ public:
         LEADER_CONSTRAINT_GUILDBATTLE
     };
 public:
-    LeaderSkill();
+    LeaderSkill( XMLNode * pSkillNode );
     virtual ~LeaderSkill();
 
-    // Getters
-    inline MonsterStatistic GetBonusStat() const;
-    inline Float GetBonusAmount() const;
+    // Leader skill
+    inline MonsterStatistic GetLeaderBonusStat() const;
+    inline Float GetLeaderBonusAmount() const;
 
-    inline LeaderConstraint GetConstraint() const;
+    inline LeaderConstraint GetLeaderConstraint() const;
 
     // Interface
 
