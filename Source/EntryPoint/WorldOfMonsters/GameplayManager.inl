@@ -58,7 +58,7 @@ inline Monster * GameplayManager::GetMonster( MonsterID iMonsterID ) const {
 
 /////////////////////////////////////////////////////////////////////////////////
 
-inline Int GameplayManager::_Compare_SkillIDs( const SkillID & rLeft, const SkillID & rRight, Void * pUserData ) {
+inline Int GameplayManager::_Compare_SkillIDs( const SkillID & rLeft, const SkillID & rRight, Void * /*pUserData*/ ) {
     if ( rLeft < rRight )
         return +1;
     if ( rLeft > rRight )
@@ -66,7 +66,7 @@ inline Int GameplayManager::_Compare_SkillIDs( const SkillID & rLeft, const Skil
     return 0;
 }
 
-inline Int GameplayManager::_Compare_MonsterIDs( const MonsterID & rLeft, const SkillID & rRight, Void * pUserData ) {
+inline Int GameplayManager::_Compare_MonsterIDs( const MonsterID & rLeft, const SkillID & rRight, Void * /*pUserData*/ ) {
     if ( rLeft < rRight )
         return +1;
     if ( rLeft > rRight )

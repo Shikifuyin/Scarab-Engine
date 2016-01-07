@@ -116,6 +116,7 @@ public:
     inline SkillType GetType() const;
 
     // Cooldown acces
+    inline Bool HasCooldown() const;
     inline UInt GetCooldown() const;
 
     // Leveling stats
@@ -165,6 +166,8 @@ public:
     inline Bool IsAttack() const;
     inline Bool IsDefense() const;
 
+    inline SkillActiveType GetActiveType() const;
+
     // Effects access
     inline UInt GetEffectCount( SkillActiveType iType );
     inline SkillEffect * GetEffect( SkillActiveType iType, UInt iIndex ) const;
@@ -188,6 +191,9 @@ class PassiveSkill : public Skill
 public:
     PassiveSkill( XMLNode * pSkillNode );
     virtual ~PassiveSkill();
+
+    // Type
+    inline SkillPassiveType GetPassiveType() const;
 
     // Effects access
     inline UInt GetEffectCount( SkillPassiveType iType );
@@ -272,6 +278,7 @@ public:
     inline SkillType GetType() const;
 
     // Cooldown acces
+    inline Bool HasCooldown() const;
     inline UInt GetCooldown() const;
 
     // Awakening access

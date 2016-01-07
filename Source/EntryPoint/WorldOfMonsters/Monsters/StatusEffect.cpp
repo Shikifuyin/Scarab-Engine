@@ -215,5 +215,12 @@ Void StatusEffectSet::RemoveExpiredStatusEffects()
             m_arrEffects[i] = StatusEffect();
     }
 }
-
+Void StatusEffectSet::RemoveAll()
+{
+    for( UInt i = 0; i < STATUSEFFECT_COUNT; ++i ) {
+        if ( m_arrEffects[i].IsNull() )
+            continue;
+        m_arrEffects[i] = StatusEffect();
+    }
+}
 

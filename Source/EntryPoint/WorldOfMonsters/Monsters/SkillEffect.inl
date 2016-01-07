@@ -23,6 +23,12 @@ inline Float SkillEffect::GetProc() const {
     return m_fProc;
 }
 
+inline Bool SkillEffect::IsOffensive() const {
+    return ( m_iTargetPattern >= SKILL_TARGET_ENNEMY_SINGLE );
+}
+inline Bool SkillEffect::IsDefensive() const {
+    return ( m_iTargetPattern < SKILL_TARGET_ENNEMY_SINGLE || m_iTargetPattern == SKILL_TARGET_ALL );
+}
 inline SkillTargetPattern SkillEffect::GetTargetPattern() const {
     return m_iTargetPattern;
 }

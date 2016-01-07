@@ -55,7 +55,7 @@ public:
     ~MonsterBattleInstance();
 
     // Base instance access
-    inline const MonsterInstance * GetBaseInstance() const;
+    inline MonsterInstance * GetBaseInstance();
 
     // HP access
     inline Bool IsAlive() const;
@@ -65,8 +65,11 @@ public:
     inline Void SetCurrentHP( UInt iAmount );
     inline Void ResetCurrentHP();
 
-    inline Void Damage( UInt iAmount );
-    inline Void Heal( UInt iAmount );
+    inline UInt GetShieldHP() const;
+    inline Void SetShieldHP( UInt iAmount );
+
+    UInt Damage( UInt iAmount, Bool bDestroyRunes = false );
+    Void Heal( UInt iAmount );
 
     // ATB access
     inline Bool CheckATB() const;
@@ -79,7 +82,11 @@ public:
     inline Void FillATB();
     inline Void ResetATB();
 
-    // Skill cooldowns access
+    // Skill access
+    inline UInt GetSkillCount() const;
+    inline SkillInstance * GetSkillInstance( UInt iSlot );
+
+    inline Bool HasSkillUp( UInt iSlot ) const;
     inline UInt GetSkillCooldown( UInt iSlot ) const;
     
     inline Void IncreaseSkillCooldown( UInt iSlot );
@@ -92,12 +99,13 @@ public:
 
     inline StatusEffect * GetStatusEffect( StatusEffectType iType );
 
-    inline Void Add( StatusEffectType iType, Bool bRemovable, Float fAmplitude, UInt iMaxStacks, UInt iStackCount, UInt iDuration );
-    inline Void Remove( StatusEffectType iType, UInt iStackCount );
+    Void AddStatusEffect( StatusEffectType iType, Bool bRemovable, Float fAmplitude, UInt iMaxStacks, UInt iStackCount, UInt iDuration );
+    Void RemoveStatusEffect( StatusEffectType iType, UInt iStackCount );
     inline Void RemoveExpiredStatusEffects();
 
     // Battle stats access
     inline Bool IsDisabled() const;
+
 
     inline UInt GetHP() const;
     inline UInt GetATT() const;
@@ -108,6 +116,9 @@ public:
     inline Float GetCritD() const;
     inline Float GetACC() const;
     inline Float GetRES() const;
+
+    // Battle interface
+    Void Initialize();
 
 private:
     // Helpers
@@ -120,6 +131,10 @@ private:
 
     // Battle state
     UInt m_iCurrentHP;
+    UInt m_iShieldHP;
+    UInt m_iHPLostCounter_Nemesis;
+    UInt m_iHPLostCounter_Destroy;
+
     UInt m_iATB;
 
     UInt m_arrSkillCooldowns[SKILL_SLOT_COUNT];
@@ -201,6 +216,38 @@ protected:
     static MonsterElement sm_arrElementWeakAgainst[MONSTER_ELEMENT_COUNT];
     static MonsterElement sm_arrElementStrongAgainst[MONSTER_ELEMENT_COUNT];
 
+    static UInt _ResolveEnnemyTargets( MonsterBattleInstance ** outTargets, SkillTargetPattern iPattern,
+                                       BattleTeam * pCasterTeam, UInt iCaster, BattleTeam * pTargetTeam, UInt iTarget );
+    static UInt _ResolveAllyTargets( MonsterBattleInstance ** outTargets, SkillTargetPattern iPattern,
+                                     BattleTeam * pCasterTeam, UInt iCaster, BattleTeam * pTargetTeam, UInt iTarget );
+
+    static UInt _ComputeDamage( SkillInstance * pSkillInstance, SkillEffectDamage * pDamageEffect, MonsterBattleInstance * pCaster, MonsterBattleInstance * pTarget,
+                                Bool * outIsCrit, Bool * outIsGlancing, Bool * outIsCrushing );
+    static UInt _ComputeHeal( SkillInstance * pSkillInstance, SkillEffectHeal * pHealEffect, MonsterBattleInstance * pCaster, MonsterBattleInstance * pTarget );
+
+    static Void _HandleSkillEffect( BattleTeam * pCasterTeam, UInt iCaster, BattleTeam * pTargetTeam,
+                                    SkillInstance * pSkillInstance, SkillEffect * pSkillEffect, MonsterBattleInstance ** arrTargets, UInt iTargetCount );
+
+    static Void _HandlePassives( SkillPassiveType iPassiveType, BattleTeam * pCasterTeam, UInt iCaster, BattleTeam * pTargetTeam, UInt iTarget );
+
+    //SKILL_PASSIVE_PERSISTENT = 0,
+    //    SKILL_PASSIVE_PERIODIC_SELF,
+    //    SKILL_PASSIVE_PERIODIC_ALLIES,
+    //    SKILL_PASSIVE_PERIODIC_ENNEMIES,
+    //    SKILL_PASSIVE_PERIODIC_ALL,
+    //    SKILL_PASSIVE_ONHIT,
+    //    SKILL_PASSIVE_ONHIT_ALLY,
+    //    SKILL_PASSIVE_ONHIT_ENNEMY,
+    //    SKILL_PASSIVE_ONCRIT,
+    //    SKILL_PASSIVE_ONCRIT_ALLY,
+    //    SKILL_PASSIVE_ONCRIT_ENNEMY,
+    //    SKILL_PASSIVE_ONBEINGHIT,
+    //    SKILL_PASSIVE_ONBEINGHIT_ALLY,
+    //    SKILL_PASSIVE_ONBEINGHIT_ENNEMY,
+    //    SKILL_PASSIVE_ONBEINGCRIT,
+    //    SKILL_PASSIVE_ONBEINGCRIT_ALLY,
+    //    SKILL_PASSIVE_ONBEINGCRIT_ENNEMY,
+
     // Battle type
     BattleType m_iType;
 
@@ -211,6 +258,7 @@ protected:
     // ATB State
     Bool m_bTurnPending, m_bTurnInProgress, m_bExtraTurn;
     Bool m_bPlayerTurn; // Else AI
+    UInt m_iTurnMonster;
     MonsterBattleInstance * m_pTurnMonster;
 };
 

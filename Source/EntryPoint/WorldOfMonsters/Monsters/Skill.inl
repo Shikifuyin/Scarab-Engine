@@ -40,6 +40,9 @@ inline SkillType Skill::GetType() const {
     return m_iType;
 }
 
+inline Bool Skill::HasCooldown() const {
+    return ( m_iCooldown > 0 );
+}
 inline UInt Skill::GetCooldown() const {
     return m_iCooldown;
 }
@@ -140,6 +143,9 @@ inline SkillType SkillInstance::GetType() const {
     return m_pSkill->GetType();
 }
 
+inline Bool SkillInstance::HasCooldown() const {
+    return m_pSkill->HasCooldown();
+}
 inline UInt SkillInstance::GetCooldown() const {
     return m_pSkill->GetCooldown();
 }

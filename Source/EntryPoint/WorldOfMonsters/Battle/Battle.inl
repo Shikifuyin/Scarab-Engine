@@ -19,7 +19,7 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // MonsterBattleInstance implementation
-inline const MonsterInstance * MonsterBattleInstance::GetBaseInstance() const {
+inline MonsterInstance * MonsterBattleInstance::GetBaseInstance() {
     return m_pMonsterInstance;
 }
 
@@ -42,16 +42,13 @@ inline Void MonsterBattleInstance::ResetCurrentHP() {
     m_iCurrentHP = m_iHealth;
 }
 
-inline Void MonsterBattleInstance::Damage( UInt iAmount ) {
-    if ( m_iCurrentHP > iAmount )
-        m_iCurrentHP -= iAmount;
-    else
-        m_iCurrentHP = 0;
+inline UInt MonsterBattleInstance::GetShieldHP() const {
+    Assert( m_hActiveEffects.HasStatusEffect(STATUSEFFECT_BUFF_SHIELD) );
+    return m_iShieldHP;
 }
-inline Void MonsterBattleInstance::Heal( UInt iAmount ) {
-    m_iCurrentHP += iAmount;
-    if ( m_iCurrentHP > m_iHealth )
-        m_iCurrentHP = m_iHealth;
+inline Void MonsterBattleInstance::SetShieldHP( UInt iAmount ) {
+    Assert( m_hActiveEffects.HasStatusEffect(STATUSEFFECT_BUFF_SHIELD) );
+    m_iShieldHP = iAmount;
 }
 
 inline Bool MonsterBattleInstance::CheckATB() const {
@@ -88,6 +85,17 @@ inline Void MonsterBattleInstance::ResetATB() {
     m_iATB = 0;
 }
 
+inline UInt MonsterBattleInstance::GetSkillCount() const {
+    return m_pMonsterInstance->GetSkillCount();
+}
+inline SkillInstance * MonsterBattleInstance::GetSkillInstance( UInt iSlot ) {
+    return m_pMonsterInstance->GetSkillInstance( iSlot );
+}
+
+inline Bool MonsterBattleInstance::HasSkillUp( UInt iSlot ) const {
+    Assert( iSlot < SKILL_SLOT_COUNT );
+    return ( m_arrSkillCooldowns[iSlot] == 0 );
+}
 inline UInt MonsterBattleInstance::GetSkillCooldown( UInt iSlot ) const {
     Assert( iSlot < SKILL_SLOT_COUNT );
     return m_arrSkillCooldowns[iSlot];
@@ -119,14 +127,6 @@ inline StatusEffect * MonsterBattleInstance::GetStatusEffect( StatusEffectType i
     return m_hActiveEffects.GetStatusEffect( iType );
 }
 
-inline Void MonsterBattleInstance::Add( StatusEffectType iType, Bool bRemovable, Float fAmplitude, UInt iMaxStacks, UInt iStackCount, UInt iDuration ) {
-    m_hActiveEffects.Add( iType, bRemovable, fAmplitude, iMaxStacks, iStackCount, iDuration );
-    _UpdateBattleStats();
-}
-inline Void MonsterBattleInstance::Remove( StatusEffectType iType, UInt iStackCount ) {
-    m_hActiveEffects.Remove( iType, iStackCount );
-    _UpdateBattleStats();
-}
 inline Void MonsterBattleInstance::RemoveExpiredStatusEffects() {
     m_hActiveEffects.RemoveExpiredStatusEffects();
     _UpdateBattleStats();
@@ -178,11 +178,28 @@ inline BattleType Battle::GetType() const {
     return m_iType;
 }
 
+inline BattleTeam * Battle::GetPlayerTeam() const {
+    return m_pPlayerTeam;
+}
+inline BattleTeam * Battle::GetAITeam() const {
+    return m_pAITeam;
+}
+
+inline Bool Battle::IsTurnPending() const {
+    return m_bTurnPending;
+}
+inline Bool Battle::IsTurnInProgress() const {
+    return m_bTurnInProgress;
+}
 inline Bool Battle::IsPlayerTurn() const {
     return ( m_bTurnPending && m_bPlayerTurn );
 }
 inline Bool Battle::IsAITurn() const {
     return ( m_bTurnPending && !m_bPlayerTurn );
+}
+
+inline MonsterBattleInstance * Battle::GetTurnMonster() const {
+    return m_pTurnMonster;
 }
 
 /////////////////////////////////////////////////////////////////////////////////

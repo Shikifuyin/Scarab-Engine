@@ -143,7 +143,8 @@ public:
     Void Add( StatusEffectType iType, Bool bRemovable, Float fAmplitude, UInt iMaxStacks, UInt iStackCount, UInt iDuration );
     Void Remove( StatusEffectType iType, UInt iStackCount );
     Void RemoveExpiredStatusEffects();
-
+    Void RemoveAll();
+    
 private:
     // Status effect map
     StatusEffect m_arrEffects[STATUSEFFECT_COUNT];

@@ -106,3 +106,37 @@ private:
 // Header end
 #endif // SCARAB_ENTRYPOINT_WORLDOFMONSTERS_GAMEPLAYMANAGER_H
 
+
+
+//Bool bValid = false;
+//switch( m_pActiveLeaderSkill->GetLeaderConstraint() ) {
+//case LeaderSkill::LEADER_CONSTRAINT_NONE:
+//    bValid = true;
+//    break;
+//case LeaderSkill::LEADER_CONSTRAINT_FIRE:
+//    bValid = ( m_pMonsterInstance->GetElement() == MONSTER_ELEMENT_FIRE );
+//    break;
+//case LeaderSkill::LEADER_CONSTRAINT_WATER:
+//    bValid = ( m_pMonsterInstance->GetElement() == MONSTER_ELEMENT_WATER );
+//    break;
+//case LeaderSkill::LEADER_CONSTRAINT_WIND:
+//    bValid = ( m_pMonsterInstance->GetElement() == MONSTER_ELEMENT_WIND );
+//    break;
+//case LeaderSkill::LEADER_CONSTRAINT_LIGHT:
+//    bValid = ( m_pMonsterInstance->GetElement() == MONSTER_ELEMENT_LIGHT );
+//    break;
+//case LeaderSkill::LEADER_CONSTRAINT_DARK:
+//    bValid = ( m_pMonsterInstance->GetElement() == MONSTER_ELEMENT_DARK );
+//    break;
+//case LeaderSkill::LEADER_CONSTRAINT_DUNGEON:
+//    bValid = ( m_iBattleType == BATTLE_DUNGEON );
+//    break;
+//case LeaderSkill::LEADER_CONSTRAINT_ARENA:
+//    bValid = ( m_iBattleType == BATTLE_ARENA );
+//    break;
+//case LeaderSkill::LEADER_CONSTRAINT_GUILDBATTLE:
+//    bValid = ( m_iBattleType == BATTLE_GUILD );
+//    break;
+//default: Assert(false); break;
+//}
+//
