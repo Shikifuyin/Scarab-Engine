@@ -26,6 +26,7 @@
 // Includes
 #include "Statistics.h"
 #include "StatusEffect.h"
+#include "SkillEffect.h"
 
 /////////////////////////////////////////////////////////////////////////////////
 // Constants definitions
@@ -43,8 +44,7 @@ enum SkillStat {
     SKILL_STAT_STATUSEFFECTRATE,
     SKILL_STAT_COOLDOWN,
 
-    SKILL_STAT_SPECIFIC_1,
-    SKILL_STAT_SPECIFIC_2,
+    SKILL_STAT_SPECIFIC, // Shields, etc ...
 
     SKILL_STAT_COUNT
 };
@@ -54,188 +54,47 @@ typedef struct _skilllevel_bonus {
     Float fAmount;
 } SkillLevelBonus;
 
-// Target patterns
-enum SkillTargetPattern {
-    SKILL_TARGET_SELF = 0,
-
-    SKILL_TARGET_ENNEMY_SINGLE,
-    SKILL_TARGET_ENNEMY_SINGLE_RANDOM,
-    SKILL_TARGET_ENNEMY_DUAL,
-    SKILL_TARGET_ENNEMY_DUAL_RANDOM,
-    SKILL_TARGET_ENNEMY_WIDE,
-    SKILL_TARGET_ENNEMY_WIDE_RANDOM,
-    SKILL_TARGET_ENNEMY_ALL,
-    SKILL_TARGET_ENNEMY_ALL_EXCEPT,
-
-    SKILL_TARGET_ALLY_SINGLE,
-    SKILL_TARGET_ALLY_SINGLE_RANDOM,
-    SKILL_TARGET_ALLY_DUAL,
-    SKILL_TARGET_ALLY_DUAL_RANDOM,
-    SKILL_TARGET_ALLY_WIDE,
-    SKILL_TARGET_ALLY_WIDE_RANDOM,
-    SKILL_TARGET_ALLY_ALL,
-    SKILL_TARGET_ALLY_ALL_EXCEPT,
-
-    SKILL_TARGET_ALL
-};
-
-// Skill effects
-#define SKILL_MAX_EFFECTS 16 // should be enough to do insane stuff already
-
-enum SkillEffectType {
-    SKILLEFFECT_DAMAGE = 0,
-    SKILLEFFECT_HEAL,
-    SKILLEFFECT_ATB,
-    SKILLEFFECT_STATUS,
-
-    SKILLEFFECT_COUNT
-};
-
-enum SkillEffectScaling {
-    SKILLEFFECT_SCALING_DEFAULT = 0,
-    SKILLEFFECT_SCALING_SELF_HP_CURRENT,
-    SKILLEFFECT_SCALING_SELF_HP_MAX,
-    SKILLEFFECT_SCALING_TARGET_HP_CURRENT,
-    SKILLEFFECT_SCALING_TARGET_HP_MAX
-};
-
 // Skill types
 enum SkillType {
-    SKILL_TYPE_LEADER = 0,
+    SKILL_TYPE_ACTIVE = 0,
     SKILL_TYPE_PASSIVE,
-    SKILL_TYPE_ATTACK,
-    SKILL_TYPE_DEFENSE
+    SKILL_TYPE_LEADER,
+
+    SKILL_TYPE_COUNT
+};
+
+enum SkillActiveType {
+    SKILL_ACTIVE_ONHIT = 0,
+    SKILL_ACTIVE_ONCRIT,
+    SKILL_ACTIVE_ONSTATUSEFFECT,
+
+    SKILL_ACTIVE_COUNT
 };
 
 enum SkillPassiveType {
-    SKILL_PASSIVE_BUFF,
-    SKILL_PASSIVE_BUFF_ALL,
-    SKILL_PASSIVE_DEBUFF,
-    SKILL_PASSIVE_DEBUFF_ALL,
-    SKILL_PASSIVE_ONTURNSTART,
-    SKILL_PASSIVE_ONTURNSTART_ALLY,
-    SKILL_PASSIVE_ONTURNSTART_ENNEMY,
-    SKILL_PASSIVE_ONTURNEND,
-    SKILL_PASSIVE_ONTURNEND_ALLY,
-    SKILL_PASSIVE_ONTURNEND_ENNEMY,
+    SKILL_PASSIVE_PERSISTENT = 0,
+    SKILL_PASSIVE_PERIODIC_SELF,
+    SKILL_PASSIVE_PERIODIC_ALLIES,
+    SKILL_PASSIVE_PERIODIC_ENNEMIES,
+    SKILL_PASSIVE_PERIODIC_ALL,
     SKILL_PASSIVE_ONHIT,
     SKILL_PASSIVE_ONHIT_ALLY,
+    SKILL_PASSIVE_ONHIT_ENNEMY,
     SKILL_PASSIVE_ONCRIT,
     SKILL_PASSIVE_ONCRIT_ALLY,
+    SKILL_PASSIVE_ONCRIT_ENNEMY,
     SKILL_PASSIVE_ONBEINGHIT,
     SKILL_PASSIVE_ONBEINGHIT_ALLY,
+    SKILL_PASSIVE_ONBEINGHIT_ENNEMY,
     SKILL_PASSIVE_ONBEINGCRIT,
     SKILL_PASSIVE_ONBEINGCRIT_ALLY,
-};
+    SKILL_PASSIVE_ONBEINGCRIT_ENNEMY,
 
-enum SkillAttackType {
-    SKILL_ATTACK_SINGLE,
-    SKILL_ATTACK_SINGLE_RANDOM,
-    SKILL_ATTACK_AOE,
-    SKILL_ATTACK_AOE_RANDOM,
-};
-
-enum SkillDefenseType {
-    SKILL_DEFENSE_SINGLE,
-    SKILL_DEFENSE_SINGLE_RANDOM,
-    SKILL_DEFENSE_AOE,
-    SKILL_DEFENSE_AOE_RANDOM,
+    SKILL_PASSIVE_COUNT
 };
 
 // Skill sets
 #define SKILL_SLOT_COUNT 4
-
-// Ptototypes
-class MonsterBattleInstance;
-class BattleTeam;
-
-/////////////////////////////////////////////////////////////////////////////////
-// The SkillEffect class
-class SkillEffect
-{
-public:
-    SkillEffect();
-    virtual ~SkillEffect();
-
-    virtual SkillEffectType GetType() const = 0;
-
-    // Interface
-    virtual Void Apply( BattleTeam * pCasterTeam, UInt iCaster, BattleTeam * pEnnemyTeam,
-                        BattleTeam * pCasterTargetTeam, UInt iCasterTarget ) const = 0;
-
-protected:
-    // Helpers
-    static UInt _ResolveEnnemyTargets( MonsterBattleInstance ** outTargets, SkillTargetPattern iPattern,
-                                       BattleTeam * pEnnemyTeam, UInt iEnnemyTarget );
-    static UInt _ResolveAllyTargets( MonsterBattleInstance ** outTargets, SkillTargetPattern iPattern,
-                                     UInt iCaster, BattleTeam * pAllyTeam, UInt iAllyTarget );
-};
-
-/////////////////////////////////////////////////////////////////////////////////
-// The SkillEffectHP class
-class SkillEffectDamage : public SkillEffect
-{
-public:
-    SkillEffectDamage( XMLNode * pNode );
-    virtual ~SkillEffectDamage();
-
-    inline virtual SkillEffectType GetType() const;
-
-    // Interface
-    virtual Void Apply( BattleTeam * pCasterTeam, UInt iCaster, BattleTeam * pEnnemyTeam,
-                        BattleTeam * pCasterTargetTeam, UInt iCasterTarget ) const;
-
-protected:
-    // Helpers
-    UInt _ComputeDamage( MonsterBattleInstance * pCaster, MonsterBattleInstance * pTarget ) const;
-
-    // Target pattern
-    SkillTargetPattern m_iTargetPattern;
-
-    // Damage scaling
-    SkillEffectScaling m_iScalingType;
-    Float m_fScalingMultiplier;
-
-    // Skill bonuses
-    Float m_fSkillBonusDmg;
-    Float m_fSkillBonusCritRate;
-    Float m_fSkillBonusCritDmg;
-};
-
-/////////////////////////////////////////////////////////////////////////////////
-// The SkillEffectHP class
-class SkillEffectHeal : public SkillEffect
-{
-public:
-    SkillEffectHeal();
-    virtual ~SkillEffectHeal();
-
-    inline virtual SkillEffectType GetType() const;
-
-    // Interface
-    virtual Void Apply( MonsterBattleInstance * pCaster, MonsterBattleInstance * pTarget ) const;
-
-protected:
-    // Helpers
-    UInt _ComputeHeal( MonsterBattleInstance * pCaster, MonsterBattleInstance * pTarget ) const;
-
-    // Damage part
-    Bool m_bDamage;
-    SkillTargetPattern m_iDamageTargetPattern;
-
-    SkillEffectScaling m_iDamageScaling;
-    Float m_fDamageMultiplier;
-
-    Float m_fSkillBonusCritRate;
-    Float m_fSkillBonusCritDmg;
-
-    // Heal part
-    Bool m_bHeal;
-    SkillTargetPattern m_iHealTargetPattern;
-
-    SkillEffectScaling m_iHealScaling;
-    Float m_fHealMultiplier;
-};
 
 /////////////////////////////////////////////////////////////////////////////////
 // The Skill class
@@ -250,18 +109,14 @@ public:
     inline const GChar * GetName() const;
 
     // Type
-    inline Bool IsLeader() const;
-    inline Bool IsPassive() const;
     inline Bool IsActive() const;
-
-    inline Bool IsAttack() const;
-    inline Bool IsDefense() const;
-
-    inline Bool IsSingleTarget() const;
-    inline Bool IsAreaOfEffect() const;
-    inline Bool IsRandomTarget() const;
+    inline Bool IsPassive() const;
+    inline Bool IsLeader() const;
 
     inline SkillType GetType() const;
+
+    // Cooldown acces
+    inline UInt GetCooldown() const;
 
     // Leveling stats
     inline UInt GetMaxLevel() const;
@@ -270,12 +125,14 @@ public:
     // Awakening
     inline Bool RequiresAwakening() const;
     inline Bool HasAwakeningUpgrade() const;
-
-    // Skill effects
-    inline UInt GetEffectCount() const;
-    inline SkillEffect * GetEffect( UInt iIndex ) const;
+    inline SkillID GetAwakeningUpgrade() const;
 
 protected:
+    // Helpers
+    static SkillType _SkillType_FromString( const GChar * strValue );
+    static SkillStat _SkillStat_FromString( const GChar * strValue );
+    static SkillEffectType _SkillEffectType_FromString( const GChar * strValue );
+
     // Identifier
     SkillID m_iSkillID;
     GChar m_strName[SKILL_NAME_LENGTH];
@@ -283,17 +140,66 @@ protected:
     // Type
     SkillType m_iType;
 
+    // Cooldown
+    UInt m_iCooldown;
+
     // Leveling stats
     UInt m_iMaxLevel; // 0 = no level (leader, most passives)
     SkillLevelBonus m_arrLevelBonus[SKILL_MAX_LEVEL];
 
     // Awakening
-    Bool m_bRequiresAwakening;   // Awakened only
-    Bool m_bHasAwakeningUpgrade; // Awakened only
+    Bool m_bRequiresAwakening;
+    Bool m_bHasAwakeningUpgrade;
+    SkillID m_iAwakeningUpgradeID; // INVALID_OFFSET = none
+};
 
-    // Skill effects
-    UInt m_iEffectCount;
-    SkillEffect * m_arrEffects[SKILL_MAX_EFFECTS];
+/////////////////////////////////////////////////////////////////////////////////
+// The ActiveSkill class
+class ActiveSkill : public Skill
+{
+public:
+    ActiveSkill( XMLNode * pSkillNode );
+    virtual ~ActiveSkill();
+
+    // Type
+    inline Bool IsAttack() const;
+    inline Bool IsDefense() const;
+
+    // Effects access
+    inline UInt GetEffectCount( SkillActiveType iType );
+    inline SkillEffect * GetEffect( SkillActiveType iType, UInt iIndex ) const;
+
+protected:
+    // Helpers
+    static SkillActiveType _SkillActiveType_FromString( const GChar * strValue );
+
+    // Type
+    Bool m_bIsAttack; // else defense
+
+    // Effects
+    UInt m_arrEffectCounts[SKILL_ACTIVE_COUNT];
+    SkillEffect * m_arrEffects[SKILL_ACTIVE_COUNT][SKILL_MAX_EFFECTS];
+};
+
+/////////////////////////////////////////////////////////////////////////////////
+// The PassiveSkill class
+class PassiveSkill : public Skill
+{
+public:
+    PassiveSkill( XMLNode * pSkillNode );
+    virtual ~PassiveSkill();
+
+    // Effects access
+    inline UInt GetEffectCount( SkillPassiveType iType );
+    inline SkillEffect * GetEffect( SkillPassiveType iType, UInt iIndex ) const;
+
+protected:
+    // Helpers
+    static SkillPassiveType _SkillPassiveType_FromString( const GChar * strValue );
+
+    // Effects
+    UInt m_arrEffectCounts[SKILL_PASSIVE_COUNT];
+    SkillEffect * m_arrEffects[SKILL_PASSIVE_COUNT][SKILL_MAX_EFFECTS];
 };
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -316,17 +222,18 @@ public:
     LeaderSkill( XMLNode * pSkillNode );
     virtual ~LeaderSkill();
 
-    // Leader skill
+    // Effect access
     inline MonsterStatistic GetLeaderBonusStat() const;
     inline Float GetLeaderBonusAmount() const;
 
     inline LeaderConstraint GetLeaderConstraint() const;
 
-    // Interface
-
-    // Callbacks
-
 protected:
+    // Helpers
+    static MonsterStatistic _MonsterStatistic_FromString( const GChar * strValue );
+    static LeaderConstraint _LeaderConstraint_FromString( const GChar * strValue );
+
+    // Effect
     MonsterStatistic m_iBonusStat;
     Float m_fBonusAmount;
 
@@ -334,79 +241,67 @@ protected:
 };
 
 /////////////////////////////////////////////////////////////////////////////////
-// The PassiveSkill class
-class PassiveSkill : public Skill
-{
-public:
-    PassiveSkill();
-    virtual ~PassiveSkill();
-
-    // Interface
-    virtual Bool AppliesEffects() const = 0;
-
-
-
-    // Callbacks
-
-protected:
-};
-
-/////////////////////////////////////////////////////////////////////////////////
-// The ActiveSkill class
-class ActiveSkill : public Skill
-{
-public:
-    ActiveSkill();
-    virtual ~ActiveSkill();
-
-    // Interface
-    virtual Bool AppliesEffects() const = 0;
-
-    // Callbacks
-
-protected:
-};
-
-/////////////////////////////////////////////////////////////////////////////////
-// The AttackSkill class
-class AttackSkill : public ActiveSkill
-{
-public:
-    AttackSkill();
-    virtual ~AttackSkill();
-
-    // Interface
-    virtual Bool InflictsDamage() const = 0;
-
-    // Callbacks
-protected:
-};
-
-/////////////////////////////////////////////////////////////////////////////////
-// The DefenseSkill class
-class DefenseSkill : public ActiveSkill
-{
-public:
-    DefenseSkill();
-    virtual ~DefenseSkill();
-
-    // Interface
-    virtual Bool AppliesHeal() const = 0;
-
-    // Callbacks
-
-protected:
-};
-
-/////////////////////////////////////////////////////////////////////////////////
 // The SkillInstance class
 class SkillInstance
 {
 public:
+    SkillInstance();
     SkillInstance( Skill * pSkill );
+    SkillInstance( const SkillInstance & rhs );
     ~SkillInstance();
 
+    // operators
+    SkillInstance & operator=( const SkillInstance & rhs );
+
+    // Test for validity
+    inline Bool IsNull() const;
+    inline Bool IsPresent() const;
+
+    // Base instance access
+    inline Skill * GetSkill() const;
+
+    // Identifier access
+    inline SkillID GetID() const;
+    inline const GChar * GetName() const;
+
+    // Type access
+    inline Bool IsActive() const;
+    inline Bool IsPassive() const;
+    inline Bool IsLeader() const;
+
+    inline SkillType GetType() const;
+
+    // Cooldown acces
+    inline UInt GetCooldown() const;
+
+    // Awakening access
+    inline Bool RequiresAwakening() const;
+    inline Bool HasAwakeningUpgrade() const;
+    inline SkillID GetAwakeningUpgrade() const;
+
+    // Level access
+    inline UInt GetMaxLevel() const;
+    inline UInt GetLevel() const;
+
+    UInt LevelUp();
+    UInt LevelDown();
+    Void SetLevel( UInt iLevel );
+
+    // Effective stats access
+    inline Bool HasEffectiveBonus( SkillStat iStat ) const;
+    inline Float GetEffectiveBonus( SkillStat iStat ) const;
+
 private:
+    // Helpers
+    Void _UpdateEffectiveStats();
+
+    // Skill model
+    Skill * m_pSkill;
+
+    UInt m_iLevel;
+
+    // Effective stats
+    Float m_fEffectiveBonus[SKILL_STAT_COUNT];
 };
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -417,10 +312,15 @@ public:
     SkillSet();
     ~SkillSet();
 
-    // Deferred loading
-    Void Load( XMLNode * pNode );
+    inline UInt GetSkillCount() const;
+    inline SkillInstance * GetSkillInstance( UInt iSlot );
+
+    Void Add( Skill * pSkill, UInt iLevel );
+    Void RemoveAll();
 
 private:
+    UInt m_iSkillCount;
+    SkillInstance m_arrSkills[SKILL_SLOT_COUNT];
 };
 
 /////////////////////////////////////////////////////////////////////////////////

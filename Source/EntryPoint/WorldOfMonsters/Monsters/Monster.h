@@ -42,14 +42,7 @@ class Monster
 {
 public:
     Monster( XMLNode * pMonsterNode );
-    virtual ~Monster();
-
-    // Elemental affinities
-    inline static Bool IsElementWeakAgainst( MonsterElement iElement, MonsterElement iOpposingElement );
-    inline static Bool IsElementStrongAgainst( MonsterElement iElement, MonsterElement iOpposingElement );
-
-    inline static MonsterElement GetElementWeakAgainst( MonsterElement iElement );
-    inline static MonsterElement GetElementStrongAgainst( MonsterElement iElement );
+    virtual ~Monster();    
 
     // Identifier
     inline MonsterID GetID() const;
@@ -60,13 +53,10 @@ public:
     inline const MonsterLevelingStats * GetLevelingStats() const;
 
     // Skills
-    inline const SkillSet * GetSkillSet() const;
+    inline UInt GetSkillCount() const;
+    inline SkillID GetSkill( UInt iSlot ) const;
 
 protected:
-    // Helpers
-    static MonsterElement sm_arrElementWeakAgainst[MONSTER_ELEMENT_COUNT];
-    static MonsterElement sm_arrElementStrongAgainst[MONSTER_ELEMENT_COUNT];
-
     // Identifier
     MonsterID m_iMonsterID;
     GChar m_strName[MONSTER_NAME_LENGTH];
@@ -76,7 +66,8 @@ protected:
     MonsterLevelingStats m_hLevelingStats;
 
     // Skills
-    SkillSet m_hSkillSet;
+    UInt m_iSkillCount;
+    SkillID m_arrSkills[SKILL_SLOT_COUNT];
 };
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -134,11 +125,12 @@ public:
     inline Float GetRES() const;
 
     // Skills access
-    inline Bool HasLeaderSkill( UInt * outIndex = NULL ) const;
-    inline Bool HasPassiveSkill( UInt * outIndex = NULL ) const;
-
     inline UInt GetSkillCount() const;
-    inline SkillInstance * GetSkill( UInt iIndex ) const;
+    inline SkillInstance * GetSkillInstance( UInt iSlot );
+
+    UInt SkillLevelUp( UInt iSlot );
+    UInt SkillLevelDown( UInt iSlot );
+    Void SetSkillLevel( UInt iSlot, UInt iLevel );
 
     // Runes access
     inline Bool HasRune( UInt iSlot ) const;
@@ -173,7 +165,7 @@ private:
     MonsterStats m_hStats;
 
     // Skills
-    SkillSetInstance m_hSkillSet;
+    SkillSet m_hSkillSet;
 
     // Runes
     RuneSet m_hRuneSet;

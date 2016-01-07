@@ -104,36 +104,31 @@ inline Void MonsterBattleInstance::DecreaseSkillCooldown( UInt iSlot ) {
 }
 inline Void MonsterBattleInstance::TriggerSkillCooldown( UInt iSlot ) {
     Assert( iSlot < SKILL_SLOT_COUNT );
-    m_arrSkillCooldowns[iSlot] = m_pMonsterInstance->GetSkillCooldown( iSlot );
+    m_arrSkillCooldowns[iSlot] = m_pMonsterInstance->GetSkillInstance(iSlot)->GetCooldown();
 }
 inline Void MonsterBattleInstance::ResetSkillCooldown( UInt iSlot ) {
     Assert( iSlot < SKILL_SLOT_COUNT );
     m_arrSkillCooldowns[iSlot] = 0;
 }
 
-inline UInt MonsterBattleInstance::GetStatusEffectCount() const {
-    return m_arrActiveEffects.Count();
-}
-inline StatusEffectInstance * MonsterBattleInstance::GetStatusEffect( UInt iIndex ) const {
-    Assert( iIndex < m_arrActiveEffects.Count() );
-    return &( (StatusEffectInstance&)(m_arrActiveEffects[iIndex]) );
+inline Bool MonsterBattleInstance::HasStatusEffect( StatusEffectType iType ) const {
+    return m_hActiveEffects.HasStatusEffect( iType );
 }
 
-inline Void MonsterBattleInstance::AddStatusEffect( const StatusEffectInstance & hEffect ) {
-    if ( hEffect.IsStackable() )
-        m_arrActiveEffects.Push( hEffect );
-    else {
-        
-    }
+inline StatusEffect * MonsterBattleInstance::GetStatusEffect( StatusEffectType iType ) {
+    return m_hActiveEffects.GetStatusEffect( iType );
+}
+
+inline Void MonsterBattleInstance::Add( StatusEffectType iType, Bool bRemovable, Float fAmplitude, UInt iMaxStacks, UInt iStackCount, UInt iDuration ) {
+    m_hActiveEffects.Add( iType, bRemovable, fAmplitude, iMaxStacks, iStackCount, iDuration );
     _UpdateBattleStats();
 }
-inline Void MonsterBattleInstance::RemoveStatusEffect( UInt iIndex ) {
-    Assert( iIndex < m_arrActiveEffects.Count() );
-    m_arrActiveEffects.Remove( iIndex, NULL, 1 );
+inline Void MonsterBattleInstance::Remove( StatusEffectType iType, UInt iStackCount ) {
+    m_hActiveEffects.Remove( iType, iStackCount );
     _UpdateBattleStats();
 }
-inline Void MonsterBattleInstance::RemoveAllStatusEffects() {
-    m_arrActiveEffects.Clear();
+inline Void MonsterBattleInstance::RemoveExpiredStatusEffects() {
+    m_hActiveEffects.RemoveExpiredStatusEffects();
     _UpdateBattleStats();
 }
 
@@ -188,4 +183,20 @@ inline Bool Battle::IsPlayerTurn() const {
 }
 inline Bool Battle::IsAITurn() const {
     return ( m_bTurnPending && !m_bPlayerTurn );
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+
+inline Bool Battle::_IsElementWeakAgainst( MonsterElement iElement, MonsterElement iOpposingElement ) {
+    return ( sm_arrElementWeakAgainst[iOpposingElement] == iElement );
+}
+inline Bool Battle::_IsElementStrongAgainst( MonsterElement iElement, MonsterElement iOpposingElement ) {
+    return ( sm_arrElementStrongAgainst[iOpposingElement] == iElement );
+}
+
+inline MonsterElement Battle::_GetElementWeakAgainst( MonsterElement iElement ) {
+    return sm_arrElementWeakAgainst[iElement];
+}
+inline MonsterElement Battle::_GetElementStrongAgainst( MonsterElement iElement ) {
+    return sm_arrElementStrongAgainst[iElement];
 }

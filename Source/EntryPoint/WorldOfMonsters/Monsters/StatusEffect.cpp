@@ -21,31 +21,109 @@
 // Includes
 #include "StatusEffect.h"
 
-#include "../GameplayManager.h"
-
 /////////////////////////////////////////////////////////////////////////////////
 // StatusEffect implementation
-StatusEffect::StatusEffect( StatusEffectType iType )
+StatusEffect::StatusEffect()
 {
+    m_iType = STATUSEFFECT_COUNT;
+
+    m_bRemovable = false;
+    m_fAmplitude = 0.0f;
+
+    m_iMaxStacks = 0;
+    m_iStackCount = 0;
+    for( UInt i = 0; i < STATUSEFFECT_MAX_STACKS; ++i )
+        m_arrDurations[i] = 0;
+}
+StatusEffect::StatusEffect( StatusEffectType iType, Bool bRemovable, Float fAmplitude, UInt iMaxStacks, UInt iStackCount, UInt iDuration )
+{
+    Assert( iType < STATUSEFFECT_COUNT );
+    Assert( fAmplitude > 0.0f );
+    Assert( iStackCount > 0 );
+    Assert( iMaxStacks >= iStackCount );
+    Assert( iMaxStacks == 1 || sm_arrIsStackable[iType] );
+    Assert( iDuration > 0 );
+
     m_iType = iType;
+
+    m_bRemovable = bRemovable;
+    m_fAmplitude = fAmplitude;
+
+    m_iMaxStacks = iMaxStacks;
+    m_iStackCount = iStackCount;
+    for( UInt i = 0; i < STATUSEFFECT_MAX_STACKS; ++i )
+        m_arrDurations[i] = (i < m_iStackCount) ? iDuration : 0;
+}
+StatusEffect::StatusEffect( const StatusEffect & rhs )
+{
+    m_iType = rhs.m_iType;
+
+    m_bRemovable = rhs.m_bRemovable;
+    m_fAmplitude = rhs.m_fAmplitude;
+
+    m_iMaxStacks = rhs.m_iMaxStacks;
+    m_iStackCount = rhs.m_iStackCount;
+    for( UInt i = 0; i < STATUSEFFECT_MAX_STACKS; ++i )
+        m_arrDurations[i] = rhs.m_arrDurations[i];
 }
 StatusEffect::~StatusEffect()
 {
     // nothing to do
 }
 
-Void StatusEffect::OnUpdateBattleStats( MonsterBattleInstance * /*pHost*/ ) const
+StatusEffect & StatusEffect::operator=( const StatusEffect & rhs )
 {
-    // Stub method, do nothing
+    m_iType = rhs.m_iType;
+
+    m_bRemovable = rhs.m_bRemovable;
+    m_fAmplitude = rhs.m_fAmplitude;
+
+    m_iMaxStacks = rhs.m_iMaxStacks;
+    m_iStackCount = rhs.m_iStackCount;
+    for( UInt i = 0; i < STATUSEFFECT_MAX_STACKS; ++i )
+        m_arrDurations[i] = rhs.m_arrDurations[i];
+
+    return (*this);
 }
 
-Void StatusEffect::OnTurnStart( MonsterBattleInstance * /*pHost*/ ) const
+Void StatusEffect::AddStacks( UInt iStackCount, UInt iDuration )
 {
-    // Stub method, do nothing
+    Assert( IsStackable() );
+
+    UInt iFreeSlotCount = ( m_iMaxStacks - m_iStackCount );
+    if ( iStackCount > iFreeSlotCount )
+        iStackCount = iFreeSlotCount;
+
+    for( UInt i = 0; i < iStackCount; ++i ) {
+        m_arrDurations[m_iStackCount] = iDuration;
+        ++m_iStackCount;
+    }
 }
-Void StatusEffect::OnTurnEnd( MonsterBattleInstance * /*pHost*/ ) const
+Void StatusEffect::RemoveStacks( UInt iStackCount )
 {
-    // Stub method, do nothing
+    Assert( IsStackable() );
+
+    for ( UInt i = 0; i < iStackCount; ++i ) {
+        if ( m_iStackCount == 0 )
+            return;
+        --m_iStackCount;
+        m_arrDurations[m_iStackCount] = 0;
+    }
+}
+Bool StatusEffect::RemoveExpiredStacks()
+{
+    Bool bAllExpired = true;
+    
+    for( UInt i = 0; i < m_iStackCount; ++i ) {
+        if ( m_arrDurations[i] == 0 ) {
+            m_arrDurations[i] = m_arrDurations[m_iStackCount - 1];
+            --m_iStackCount;
+            --i;
+        } else
+            bAllExpired = false;
+    }
+
+    return bAllExpired;
 }
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -75,165 +153,6 @@ Bool StatusEffect::sm_arrIsStackable[STATUSEFFECT_COUNT] = {
 };
 
 /////////////////////////////////////////////////////////////////////////////////
-// StatusBuffAttack implementation
-StatusBuffAttack::StatusBuffAttack( Float fAmount ):
-    StatusEffect( STATUSEFFECT_BUFF_ATTACK )
-{
-    m_fAmount = fAmount;
-}
-StatusBuffAttack::~StatusBuffAttack()
-{
-    // nothing to do
-}
-
-Void StatusBuffAttack::OnUpdateBattleStats( MonsterBattleInstance * pHost ) const
-{
-    pHost->m_iAttack += (UInt)( MathFn->Floor(m_fAmount * (Float)(pHost->m_iAttack)) );
-}
-
-/////////////////////////////////////////////////////////////////////////////////
-// StatusBuffDefense implementation
-StatusBuffDefense::StatusBuffDefense( Float fAmount ):
-    StatusEffect( STATUSEFFECT_BUFF_DEFENSE )
-{
-    m_fAmount = fAmount;
-}
-StatusBuffDefense::~StatusBuffDefense()
-{
-    // nothing to do
-}
-
-Void StatusBuffDefense::OnUpdateBattleStats( MonsterBattleInstance * pHost ) const
-{
-    pHost->m_iDefense += (UInt)( MathFn->Floor(m_fAmount * (Float)(pHost->m_iDefense)) );
-}
-
-/////////////////////////////////////////////////////////////////////////////////
-// StatusBuffSpeed implementation
-StatusBuffSpeed::StatusBuffSpeed( Float fAmount ):
-    StatusEffect( STATUSEFFECT_BUFF_SPEED )
-{
-    m_fAmount = fAmount;
-}
-StatusBuffSpeed::~StatusBuffSpeed()
-{
-    // nothing to do
-}
-
-Void StatusBuffSpeed::OnUpdateBattleStats( MonsterBattleInstance * pHost ) const
-{
-    pHost->m_iSpeed += (UInt)( MathFn->Floor(m_fAmount * (Float)(pHost->m_iSpeed)) );
-}
-
-/////////////////////////////////////////////////////////////////////////////////
-// StatusDebuffAttack implementation
-StatusDebuffAttack::StatusDebuffAttack( Float fAmount ):
-    StatusEffect( STATUSEFFECT_DEBUFF_ATTACK )
-{
-    m_fAmount = fAmount;
-}
-StatusDebuffAttack::~StatusDebuffAttack()
-{
-    // nothing to do
-}
-
-Void StatusDebuffAttack::OnUpdateBattleStats( MonsterBattleInstance * pHost ) const
-{
-    pHost->m_iAttack -= (UInt)( MathFn->Floor(m_fAmount * (Float)(pHost->m_iAttack)) );
-}
-
-/////////////////////////////////////////////////////////////////////////////////
-// StatusDebuffDefense implementation
-StatusDebuffDefense::StatusDebuffDefense( Float fAmount ):
-    StatusEffect( STATUSEFFECT_DEBUFF_DEFENSE )
-{
-    m_fAmount = fAmount;
-}
-StatusDebuffDefense::~StatusDebuffDefense()
-{
-    // nothing to do
-}
-
-Void StatusDebuffDefense::OnUpdateBattleStats( MonsterBattleInstance * pHost ) const
-{
-    pHost->m_iDefense -= (UInt)( MathFn->Floor(m_fAmount * (Float)(pHost->m_iDefense)) );
-}
-
-/////////////////////////////////////////////////////////////////////////////////
-// StatusDebuffSpeed implementation
-StatusDebuffSpeed::StatusDebuffSpeed( Float fAmount ):
-    StatusEffect( STATUSEFFECT_DEBUFF_SPEED )
-{
-    m_fAmount = fAmount;
-}
-StatusDebuffSpeed::~StatusDebuffSpeed()
-{
-    // nothing to do
-}
-
-Void StatusDebuffSpeed::OnUpdateBattleStats( MonsterBattleInstance * pHost ) const
-{
-    pHost->m_iSpeed -= (UInt)( MathFn->Floor(m_fAmount * (Float)(pHost->m_iSpeed)) );
-}
-
-/////////////////////////////////////////////////////////////////////////////////
-// StatusEffectInstance implementation
-StatusEffectInstance::StatusEffectInstance()
-{
-    m_pStatusEffect = NULL;
-    m_bRemovable = false;
-
-    m_iMaxStacks = 0;
-    m_iStackCount = 0;
-    for( UInt i = 0; i < STATUSEFFECT_MAX_STACKS; ++i )
-        m_arrDurations[i] = 0;
-}
-StatusEffectInstance::StatusEffectInstance( StatusEffect * pStatusEffect, Bool bRemovable, UInt iMaxStacks, UInt iStackCount, UInt iDuration )
-{
-    Assert( pStatusEffect != NULL );
-    Assert( iMaxStacks <= STATUSEFFECT_MAX_STACKS );
-    Assert( iStackCount <= iMaxStacks );
-    Assert( iStackCount > 0 );
-    Assert( iDuration > 0 );
-
-    m_pStatusEffect = pStatusEffect;
-    m_bRemovable = bRemovable;
-
-    m_iMaxStacks = iMaxStacks;
-    m_iStackCount = iStackCount;
-    for( UInt i = 0; i < STATUSEFFECT_MAX_STACKS; ++i )
-        m_arrDurations[i] = (i < m_iStackCount) ? iDuration : 0;
-}
-StatusEffectInstance::~StatusEffectInstance()
-{
-    // nothing to do
-}
-
-Void StatusEffectInstance::AddStacks( UInt iStackCount, UInt iDuration )
-{
-    Assert( IsStackable() );
-    Assert( iDuration > 0 );
-
-    if ( m_iStackCount + iStackCount > m_iMaxStacks )
-        iStackCount = (m_iMaxStacks - m_iStackCount);
-
-    for( UInt i = 0; i < iStackCount; ++i ) {
-        m_arrDurations[m_iStackCount] = iDuration;
-        ++m_iStackCount;
-    }
-}
-Bool StatusEffectInstance::RemoveExpiredStacks()
-{
-    for( UInt i = 0; i < m_iStackCount; ++i ) {
-        if ( m_arrDurations[i] == 0 ) {
-            m_arrDurations[i] = m_arrDurations[m_iStackCount - 1];
-            --m_iStackCount;
-            --i;
-        }
-    }
-}
-
-/////////////////////////////////////////////////////////////////////////////////
 // StatusEffectSet implementation
 StatusEffectSet::StatusEffectSet()
 {
@@ -244,49 +163,57 @@ StatusEffectSet::~StatusEffectSet()
     // nothing to do
 }
 
-Void StatusEffectSet::Add( StatusEffectType iType, Bool bRemovable, UInt iMaxStacks, UInt iStackCount, UInt iDuration )
+Void StatusEffectSet::Add( StatusEffectType iType, Bool bRemovable, Float fAmplitude, UInt iMaxStacks, UInt iStackCount, UInt iDuration )
 {
     Assert( iType < STATUSEFFECT_COUNT );
-    Assert( iMaxStacks <= STATUSEFFECT_MAX_STACKS );
-    Assert( iStackCount <= iMaxStacks );
+    Assert( fAmplitude > 0.0f );
     Assert( iStackCount > 0 );
+    Assert( iMaxStacks >= iStackCount );
     Assert( iDuration > 0 );
 
     // New effect case
-    if ( m_arrEffects[iType] == NULL ) {
-        m_arrEffects[iType] = GameplayFn->CreateStatusEffect( iType, bRemovable, iDuration, iStacks );
+    if ( m_arrEffects[iType].IsNull() ) {
+        m_arrEffects[iType] = StatusEffect( iType, bRemovable, fAmplitude, iMaxStacks, iStackCount, iDuration );
         return;
     }
 
     // Grow stack case
-    if ( m_arrEffects[iType]->IsStackable() ) {
-        m_arrEffects[iType]->AddStacks( iStacks, iDuration );
+    if ( m_arrEffects[iType].IsStackable() ) {
+        Assert( fAmplitude == m_arrEffects[iType].GetAmplitude() );
+        m_arrEffects[iType].AddStacks( iStackCount, iDuration );
         return;
     }
-    
+
     // Replace if better case
-    if ( m_arrEffects[iType]->IsRemovable() && !bRemovable )
-        m_arrEffects[iType]->SetRemovable( false );
-    if ( iDuration > m_arrEffects[iType]->GetDuration() )
-        m_arrEffects[iType]->SetDuration( iDuration );
+    if ( m_arrEffects[iType].IsRemovable() && !bRemovable )
+        m_arrEffects[iType].SetRemovable( false );
+    if ( fAmplitude > m_arrEffects[iType].GetAmplitude() )
+        m_arrEffects[iType].SetAmplitude( fAmplitude );
+    if ( iDuration > m_arrEffects[iType].GetDuration(0) )
+        m_arrEffects[iType].SetDuration( 0, iDuration );
 }
-Void StatusEffectSet::Remove( StatusEffectType iType )
+Void StatusEffectSet::Remove( StatusEffectType iType, UInt iStackCount )
 {
     Assert( iType < STATUSEFFECT_COUNT );
 
     // Nothing to remove or non removable
-    if ( m_arrEffects[iType] == NULL || !(m_arrEffects[iType]->IsRemovable()) )
+    if ( m_arrEffects[iType].IsNull() )
         return;
 
-    if ( m_arrEffects[iType]->IsStackable() ) {
-        m_arrEffects[iType]->RemoveStacks( iStacks );
-        if ( m_arrEffects[iType]->GetStacks() == 0 ) {
-            GameplayFn->DestroyStatusEffect( m_arrEffects[iType] );
-            m_arrEffects[iType] = NULL;
-        }
-    } else {
-        GameplayFn->DestroyStatusEffect( m_arrEffects[iType] );
-        m_arrEffects[iType] = NULL;
+    if ( m_arrEffects[iType].IsStackable() )
+        m_arrEffects[iType].RemoveStacks( iStackCount );
+    else
+        m_arrEffects[iType] = StatusEffect();
+}
+Void StatusEffectSet::RemoveExpiredStatusEffects()
+{
+    for( UInt i = 0; i < STATUSEFFECT_COUNT; ++i ) {
+        if ( m_arrEffects[i].IsNull() )
+            continue;
+        Bool bExpired = m_arrEffects[i].RemoveExpiredStacks();
+        if ( bExpired )
+            m_arrEffects[i] = StatusEffect();
     }
 }
+
 

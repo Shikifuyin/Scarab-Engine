@@ -217,11 +217,12 @@ protected:
     // Helpers
     Void _UpdateSetBonuses();
 
-    UInt m_iSetBonusCount;
-    RuneType m_arrSetBonuses[4];
-
     // Rune slots
     Rune * m_arrRunes[RUNE_SLOT_COUNT];
+
+    // Set bonuses
+    UInt m_iSetBonusCount;
+    RuneType m_arrSetBonuses[4];
 };
 
 /////////////////////////////////////////////////////////////////////////////////

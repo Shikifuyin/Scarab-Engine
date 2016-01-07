@@ -51,7 +51,7 @@ enum BattleType {
 class MonsterBattleInstance
 {
 public:
-    MonsterBattleInstance( MonsterInstance * pMonsterInstance );
+    MonsterBattleInstance( MonsterInstance * pMonsterInstance, LeaderSkill * pActiveLeaderSkill );
     ~MonsterBattleInstance();
 
     // Base instance access
@@ -88,12 +88,13 @@ public:
     inline Void ResetSkillCooldown( UInt iSlot );
 
     // Status effects access
-    inline UInt GetStatusEffectCount() const;
-    inline StatusEffectInstance * GetStatusEffect( UInt iIndex ) const;
+    inline Bool HasStatusEffect( StatusEffectType iType ) const;
 
-    inline Void AddStatusEffect( const StatusEffect * pEffect );
-    inline Void RemoveStatusEffect( UInt iIndex );
-    inline Void RemoveAllStatusEffects();
+    inline StatusEffect * GetStatusEffect( StatusEffectType iType );
+
+    inline Void Add( StatusEffectType iType, Bool bRemovable, Float fAmplitude, UInt iMaxStacks, UInt iStackCount, UInt iDuration );
+    inline Void Remove( StatusEffectType iType, UInt iStackCount );
+    inline Void RemoveExpiredStatusEffects();
 
     // Battle stats access
     inline Bool IsDisabled() const;
@@ -110,27 +111,23 @@ public:
 
 private:
     // Helpers
-    friend class StatusBuffAttack;
-    friend class StatusBuffDefense;
-    friend class StatusBuffSpeed;
-    friend class StatusDebuffAttack;
-    friend class StatusDebuffDefense;
-    friend class StatusDebuffSpeed;
-
     Void _UpdateBattleStats();
 
     // Base instance
     MonsterInstance * m_pMonsterInstance;
 
+    LeaderSkill * m_pActiveLeaderSkill;
+
     // Battle state
     UInt m_iCurrentHP;
     UInt m_iATB;
+
     UInt m_arrSkillCooldowns[SKILL_SLOT_COUNT];
 
-    Array<StatusEffectInstance> m_arrActiveEffects;
+    StatusEffectSet m_hActiveEffects;
 
     // Battle stats
-    Bool m_bDisabled; // If any effect prevents this from playing
+    Bool m_bDisabled;
 
     UInt m_iHealth;
     UInt m_iAttack;
@@ -195,6 +192,14 @@ public:
 
 protected:
     // Helpers
+    inline static Bool _IsElementWeakAgainst( MonsterElement iElement, MonsterElement iOpposingElement );
+    inline static Bool _IsElementStrongAgainst( MonsterElement iElement, MonsterElement iOpposingElement );
+
+    inline static MonsterElement _GetElementWeakAgainst( MonsterElement iElement );
+    inline static MonsterElement _GetElementStrongAgainst( MonsterElement iElement );
+
+    static MonsterElement sm_arrElementWeakAgainst[MONSTER_ELEMENT_COUNT];
+    static MonsterElement sm_arrElementStrongAgainst[MONSTER_ELEMENT_COUNT];
 
     // Battle type
     BattleType m_iType;

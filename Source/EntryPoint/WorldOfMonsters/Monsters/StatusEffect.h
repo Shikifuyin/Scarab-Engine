@@ -43,7 +43,7 @@ enum StatusEffectType {
     STATUSEFFECT_DEBUFF_ATTACK,
     STATUSEFFECT_DEBUFF_DEFENSE,
     STATUSEFFECT_DEBUFF_SPEED,
-    STATUSEFFECT_DEBUFF_MISSRATE,
+    STATUSEFFECT_DEBUFF_CRITRATE,
     STATUSEFFECT_DEBUFF_DESTROY,
     STATUSEFFECT_DEBUFF_DOT,
     STATUSEFFECT_DEBUFF_BOMB,
@@ -60,31 +60,56 @@ enum StatusEffectType {
 // Stacking
 #define STATUSEFFECT_MAX_STACKS 64 // MORE than enough ... (if a player ever overflows this with legit gameplay ... WOW !!!)
 
-// Prototypes
-class MonsterBattleInstance;
-
 /////////////////////////////////////////////////////////////////////////////////
 // The StatusEffect class
 class StatusEffect
 {
 public:
-    StatusEffect( StatusEffectType iType );
-    virtual ~StatusEffect();
+    StatusEffect();
+    StatusEffect( StatusEffectType iType, Bool bRemovable, Float fAmplitude, UInt iMaxStacks, UInt iStackCount, UInt iDuration );
+    StatusEffect( const StatusEffect & rhs );
+    ~StatusEffect();
 
-    // Getters
-    inline StatusEffectType GetType() const;
+    // operators
+    StatusEffect & operator=( const StatusEffect & rhs );
 
+    // Test for validity
+    inline Bool IsNull() const;
+    inline Bool IsPresent() const;
+
+    // Type access
     inline Bool IsBuff() const;
     inline Bool IsDebuff() const;
     inline Bool IsDisabling() const;
 
+    inline StatusEffectType GetType() const;
+
+    // Properties access
+    inline Bool IsRemovable() const;
+    inline Float GetAmplitude() const;
+
+    inline Void SetRemovable( Bool bRemovable );
+    inline Void SetAmplitude( Float fAmplitude );
+
+    // Stacks access
     inline Bool IsStackable() const;
+    inline UInt GetMaxStacks() const;
+    inline UInt GetStackCount() const;
 
-    // Interface
-    virtual Void OnUpdateBattleStats( MonsterBattleInstance * pHost ) const;
+    inline Void SetMaxStacks( UInt iMaxStacks );
 
-    virtual Void OnTurnStart( MonsterBattleInstance * pHost ) const;
-    virtual Void OnTurnEnd( MonsterBattleInstance * pHost ) const;
+    Void AddStacks( UInt iStackCount, UInt iDuration );
+    Void RemoveStacks( UInt iStackCount );
+    Bool RemoveExpiredStacks();
+
+    // Durations access
+    inline Bool IsExpired( UInt iStack ) const;
+    inline UInt GetDuration( UInt iStack ) const;
+
+    inline Void IncreaseDuration( UInt iStack, UInt iAmount );
+    inline Void DecreaseDuration( UInt iStack, UInt iAmount );
+    inline Void SetDuration( UInt iStack, UInt iAmount );
+    inline Void ResetDuration( UInt iStack );
 
 protected:
     // Helpers
@@ -92,161 +117,12 @@ protected:
 
     // Type
     StatusEffectType m_iType;
-};
 
-/////////////////////////////////////////////////////////////////////////////////
-// The StatusBuffAttack class
-class StatusBuffAttack : public StatusEffect
-{
-public:
-    StatusBuffAttack( Float fAmount );
-    virtual ~StatusBuffAttack();
-
-    // Interface
-    inline Float GetAmount() const;
-
-    virtual Void OnUpdateBattleStats( MonsterBattleInstance * pHost ) const;
-
-protected:
-    Float m_fAmount;
-};
-
-/////////////////////////////////////////////////////////////////////////////////
-// The StatusBuffDefense class
-class StatusBuffDefense : public StatusEffect
-{
-public:
-    StatusBuffDefense( Float fAmount );
-    virtual ~StatusBuffDefense();
-
-    // Interface
-    inline Float GetAmount() const;
-
-    virtual Void OnUpdateBattleStats( MonsterBattleInstance * pHost ) const;
-
-protected:
-    Float m_fAmount;
-};
-
-/////////////////////////////////////////////////////////////////////////////////
-// The StatusBuffSpeed class
-class StatusBuffSpeed : public StatusEffect
-{
-public:
-    StatusBuffSpeed( Float fAmount );
-    virtual ~StatusBuffSpeed();
-
-    // Interface
-    inline Float GetAmount() const;
-
-    virtual Void OnUpdateBattleStats( MonsterBattleInstance * pHost ) const;
-
-protected:
-    Float m_fAmount;
-};
-
-
-
-/////////////////////////////////////////////////////////////////////////////////
-// The StatusDebuffAttack class
-class StatusDebuffAttack : public StatusEffect
-{
-public:
-    StatusDebuffAttack( Float fAmount );
-    virtual ~StatusDebuffAttack();
-
-    // Interface
-    inline Float GetAmount() const;
-
-    virtual Void OnUpdateBattleStats( MonsterBattleInstance * pHost ) const;
-
-protected:
-    Float m_fAmount;
-};
-
-/////////////////////////////////////////////////////////////////////////////////
-// The StatusDebuffDefense class
-class StatusDebuffDefense : public StatusEffect
-{
-public:
-    StatusDebuffDefense( Float fAmount );
-    virtual ~StatusDebuffDefense();
-
-    // Interface
-    inline Float GetAmount() const;
-
-    virtual Void OnUpdateBattleStats( MonsterBattleInstance * pHost ) const;
-
-protected:
-    Float m_fAmount;
-};
-
-/////////////////////////////////////////////////////////////////////////////////
-// The StatusDebuffSpeed class
-class StatusDebuffSpeed : public StatusEffect
-{
-public:
-    StatusDebuffSpeed( Float fAmount );
-    virtual ~StatusDebuffSpeed();
-
-    // Interface
-    inline Float GetAmount() const;
-
-    virtual Void OnUpdateBattleStats( MonsterBattleInstance * pHost ) const;
-
-protected:
-    Float m_fAmount;
-};
-
-
-
-
-/////////////////////////////////////////////////////////////////////////////////
-// The StatusEffectInstance class
-class StatusEffectInstance
-{
-public:
-    StatusEffectInstance();
-    StatusEffectInstance( StatusEffect * pStatusEffect, Bool bRemovable, UInt iMaxStacks, UInt iStackCount, UInt iDuration );
-    ~StatusEffectInstance();
-
-    // Base class access
-    inline StatusEffect * GetStatusEffect() const;
-
-    // Getters
-    inline StatusEffectType GetType() const;
-
-    inline Bool IsBuff() const;
-    inline Bool IsDebuff() const;
-    inline Bool IsDisabling() const;
-
-    inline Bool IsStackable() const;
-    inline Bool IsRemovable() const;
-
-    // Stacks access
-    inline UInt GetMaxStacks() const;
-    inline UInt GetStackCount() const;
-
-    inline Bool IsExpired( UInt iStack ) const;
-    inline UInt GetDuration( UInt iStack ) const;
-
-    inline Void IncreaseDuration( UInt iStack, UInt iAmount );
-    inline Void DecreaseDuration( UInt iStack, UInt iAmount );
-    inline Void SetDuration( UInt iStack, UInt iAmount );
-
-    Void AddStacks( UInt iStackCount, UInt iDuration );
-    Bool RemoveExpiredStacks();
-
-    // Interface
-    inline Void OnUpdateBattleStats( MonsterBattleInstance * pHost ) const;
-
-    inline Void OnTurnStart( MonsterBattleInstance * pHost ) const;
-    inline Void OnTurnEnd( MonsterBattleInstance * pHost ) const;
-
-protected:
-    StatusEffect * m_pStatusEffect;
+    // Properties
     Bool m_bRemovable;
+    Float m_fAmplitude;
 
+    // Stacks & durations
     UInt m_iMaxStacks;
     UInt m_iStackCount;
     UInt m_arrDurations[STATUSEFFECT_MAX_STACKS];
@@ -262,14 +138,15 @@ public:
 
     inline Bool HasStatusEffect( StatusEffectType iType ) const;
 
-    inline StatusEffectInstance * GetStatusEffect( StatusEffectType iType );
+    inline StatusEffect * GetStatusEffect( StatusEffectType iType );
 
-    Void Add( StatusEffectType iType, Bool bRemovable, UInt iMaxStacks, UInt iStackCount, UInt iDuration );
-    Void Remove( StatusEffectType iType );
+    Void Add( StatusEffectType iType, Bool bRemovable, Float fAmplitude, UInt iMaxStacks, UInt iStackCount, UInt iDuration );
+    Void Remove( StatusEffectType iType, UInt iStackCount );
+    Void RemoveExpiredStatusEffects();
 
 private:
     // Status effect map
-    StatusEffectInstance m_arrEffects[STATUSEFFECT_COUNT];
+    StatusEffect m_arrEffects[STATUSEFFECT_COUNT];
 };
 
 /////////////////////////////////////////////////////////////////////////////////

@@ -21,354 +21,333 @@
 // Includes
 #include "Skill.h"
 
-#include "../GameplayManager.h"
-
 /////////////////////////////////////////////////////////////////////////////////
-// SkillEffect implementation
-SkillEffect::SkillEffect()
+// Skill implementation
+Skill::Skill( XMLNode * pSkillNode )
 {
-    // nothing to do
-}
-SkillEffect::~SkillEffect()
-{
-    // nothing to do
-}
+    Assert( pSkillNode != NULL );
+    Assert( StringFn->Cmp(pSkillNode->GetTagName(), TEXT("Skill")) == 0 );
 
-/////////////////////////////////////////////////////////////////////////////////
+    m_iSkillID = (SkillID)( StringFn->ToUInt(pSkillNode->GetAttribute(TEXT("ID"))->GetValue()) );
+    StringFn->NCopy( m_strName, pSkillNode->GetAttribute(TEXT("Name"))->GetValue(), SKILL_NAME_LENGTH - 1 );
 
-UInt SkillEffect::_ResolveEnnemyTargets( MonsterBattleInstance ** outTargets, SkillTargetPattern iPattern,
-                                         BattleTeam * pEnnemyTeam, UInt iEnnemyTarget )
-{
-    UInt iTargetCount = 0;
-    UInt iFirstRoll, iSecondRoll, iThirdRoll;
-    
-    switch( iPattern ) {
-        case SKILL_TARGET_SELF:
-            // nothing to do
-            break;
-        case SKILL_TARGET_ENNEMY_SINGLE:
-            outTargets[iTargetCount] = pEnnemyTeam->GetTeamMember( iEnnemyTarget );
-            ++iTargetCount;
-            break;
-        case SKILL_TARGET_ENNEMY_SINGLE_RANDOM:
-            outTargets[iTargetCount] = pEnnemyTeam->GetTeamMember( GameplayFn->GetRandomUInt(pEnnemyTeam->GetTeamSize()) );
-            ++iTargetCount;
-            break;
-        case SKILL_TARGET_ENNEMY_DUAL:
-            if ( iEnnemyTarget == pEnnemyTeam->GetTeamSize() - 1 )
-                --iEnnemyTarget;
+    m_iType = _SkillType_FromString( pSkillNode->GetAttribute(TEXT("Type"))->GetValue() );
 
-            outTargets[iTargetCount] = pEnnemyTeam->GetTeamMember( iEnnemyTarget );
-            ++iTargetCount;
-            outTargets[iTargetCount] = pEnnemyTeam->GetTeamMember( iEnnemyTarget + 1 );
-            ++iTargetCount;
-            break;
-        case SKILL_TARGET_ENNEMY_DUAL_RANDOM:
-            iFirstRoll = GameplayFn->GetRandomUInt(pEnnemyTeam->GetTeamSize());
-            iSecondRoll = GameplayFn->GetRandomUInt(pEnnemyTeam->GetTeamSize());
+    m_iCooldown = (UInt)( StringFn->ToUInt(pSkillNode->GetAttribute(TEXT("Cooldown"))->GetValue()) );
 
-            outTargets[iTargetCount] = pEnnemyTeam->GetTeamMember( iFirstRoll );
-            ++iTargetCount;
-            outTargets[iTargetCount] = pEnnemyTeam->GetTeamMember( iSecondRoll );
-            ++iTargetCount;
-            break;
-        case SKILL_TARGET_ENNEMY_WIDE:
-            if ( iEnnemyTarget == 0 )
-                ++iEnnemyTarget;
-            else if ( iEnnemyTarget == pEnnemyTeam->GetTeamSize() - 1 )
-                --iEnnemyTarget;
+    m_iMaxLevel = (UInt)( StringFn->ToUInt(pSkillNode->GetAttribute(TEXT("MaxLevel"))->GetValue()) );
+    Assert( m_iMaxLevel <= SKILL_MAX_LEVEL );
 
-            outTargets[iTargetCount] = pEnnemyTeam->GetTeamMember( iEnnemyTarget - 1 );
-            ++iTargetCount;
-            outTargets[iTargetCount] = pEnnemyTeam->GetTeamMember( iEnnemyTarget );
-            ++iTargetCount;
-            outTargets[iTargetCount] = pEnnemyTeam->GetTeamMember( iEnnemyTarget + 1 );
-            ++iTargetCount;
-            break;
-        case SKILL_TARGET_ENNEMY_WIDE_RANDOM:
-            iFirstRoll = GameplayFn->GetRandomUInt(pEnnemyTeam->GetTeamSize());
-            iSecondRoll = GameplayFn->GetRandomUInt(pEnnemyTeam->GetTeamSize());
-            iThirdRoll = GameplayFn->GetRandomUInt(pEnnemyTeam->GetTeamSize());
+    XMLNode * pLevelBonusListNode = pSkillNode->GetChildByTag( TEXT("LevelBonusList"), 0 );
+    Assert( pLevelBonusListNode != NULL );
 
-            outTargets[iTargetCount] = pEnnemyTeam->GetTeamMember( iFirstRoll );
-            ++iTargetCount;
-            outTargets[iTargetCount] = pEnnemyTeam->GetTeamMember( iSecondRoll );
-            ++iTargetCount;
-            outTargets[iTargetCount] = pEnnemyTeam->GetTeamMember( iThirdRoll );
-            ++iTargetCount;
-            break;
-        case SKILL_TARGET_ENNEMY_ALL:
-            for ( UInt i = 0; i < pEnnemyTeam->GetTeamSize(); ++i ) {
-                outTargets[iTargetCount] = pEnnemyTeam->GetTeamMember( i );
-                ++iTargetCount;
-            }
-            break;
-        case SKILL_TARGET_ENNEMY_ALL_EXCEPT:
-            for ( UInt i = 0; i < pEnnemyTeam->GetTeamSize(); ++i ) {
-                if ( i != iEnnemyTarget ) {
-                    outTargets[iTargetCount] = pEnnemyTeam->GetTeamMember( i );
-                    ++iTargetCount;
-                }
-            }
-            break;
-        case SKILL_TARGET_ALLY_SINGLE:
-        case SKILL_TARGET_ALLY_SINGLE_RANDOM:
-        case SKILL_TARGET_ALLY_DUAL:
-        case SKILL_TARGET_ALLY_DUAL_RANDOM:
-        case SKILL_TARGET_ALLY_WIDE:
-        case SKILL_TARGET_ALLY_WIDE_RANDOM:
-        case SKILL_TARGET_ALLY_ALL:
-        case SKILL_TARGET_ALLY_ALL_EXCEPT:
-            // nothing to do
-            break;
-        case SKILL_TARGET_ALL:
-            for ( UInt i = 0; i < pEnnemyTeam->GetTeamSize(); ++i ) {
-                outTargets[iTargetCount] = pEnnemyTeam->GetTeamMember( i );
-                ++iTargetCount;
-            }
-            break;
-        default: Assert( false ); break;
+    for( UInt i = 0; i < m_iMaxLevel; ++i ) {
+        XMLNode * pLevelBonusNode = pLevelBonusListNode->GetChildByTag( TEXT("LevelBonus"), i );
+        Assert( pLevelBonusNode != NULL );
+
+        m_arrLevelBonus[i].iStat = _SkillStat_FromString( pLevelBonusNode->GetAttribute(TEXT("Stat"))->GetValue() );
+        m_arrLevelBonus[i].fAmount = StringFn->ToFloat( pLevelBonusNode->GetAttribute(TEXT("Amount"))->GetValue() );
     }
 
-    return iTargetCount;
+    m_bRequiresAwakening = ( StringFn->ToUInt(pSkillNode->GetAttribute(TEXT("RequiresAwakening"))->GetValue()) != 0 );
+    m_bHasAwakeningUpgrade = ( StringFn->ToUInt(pSkillNode->GetAttribute(TEXT("HasAwakeningUpgrade"))->GetValue()) != 0 );
+    m_iAwakeningUpgradeID = (SkillID)( StringFn->ToUInt(pSkillNode->GetAttribute(TEXT("AwakeningUpgradeID"))->GetValue()) );
 }
-UInt SkillEffect::_ResolveAllyTargets( MonsterBattleInstance ** outTargets, SkillTargetPattern iPattern,
-                                       UInt iCaster, BattleTeam * pAllyTeam, UInt iAllyTarget )
-{
-    UInt iTargetCount = 0;
-    UInt iFirstRoll, iSecondRoll, iThirdRoll;
-
-    switch( iPattern ) {
-        case SKILL_TARGET_SELF:
-            outTargets[iTargetCount] = pAllyTeam->GetTeamMember( iCaster );
-            ++iTargetCount;
-            break;
-        case SKILL_TARGET_ENNEMY_SINGLE:
-        case SKILL_TARGET_ENNEMY_SINGLE_RANDOM:
-        case SKILL_TARGET_ENNEMY_DUAL:
-        case SKILL_TARGET_ENNEMY_DUAL_RANDOM:
-        case SKILL_TARGET_ENNEMY_WIDE:
-        case SKILL_TARGET_ENNEMY_WIDE_RANDOM:
-        case SKILL_TARGET_ENNEMY_ALL:
-        case SKILL_TARGET_ENNEMY_ALL_EXCEPT:
-            // nothing to do
-            break;
-        case SKILL_TARGET_ALLY_SINGLE:
-            outTargets[iTargetCount] = pAllyTeam->GetTeamMember( iAllyTarget );
-            ++iTargetCount;
-            break;
-        case SKILL_TARGET_ALLY_SINGLE_RANDOM:
-            outTargets[iTargetCount] = pAllyTeam->GetTeamMember( GameplayFn->GetRandomUInt(pAllyTeam->GetTeamSize()) );
-            ++iTargetCount;
-            break;
-        case SKILL_TARGET_ALLY_DUAL:
-            if ( iAllyTarget == pAllyTeam->GetTeamSize() - 1 )
-                --iAllyTarget;
-
-            outTargets[iTargetCount] = pAllyTeam->GetTeamMember( iAllyTarget );
-            ++iTargetCount;
-            outTargets[iTargetCount] = pAllyTeam->GetTeamMember( iAllyTarget + 1 );
-            ++iTargetCount;
-            break;
-        case SKILL_TARGET_ALLY_DUAL_RANDOM:
-            iFirstRoll = GameplayFn->GetRandomUInt(pAllyTeam->GetTeamSize());
-            iSecondRoll = GameplayFn->GetRandomUInt(pAllyTeam->GetTeamSize());
-
-            outTargets[iTargetCount] = pAllyTeam->GetTeamMember( iFirstRoll );
-            ++iTargetCount;
-            outTargets[iTargetCount] = pAllyTeam->GetTeamMember( iSecondRoll );
-            ++iTargetCount;
-            break;
-        case SKILL_TARGET_ALLY_WIDE:
-            if ( iAllyTarget == 0 )
-                ++iAllyTarget;
-            else if ( iAllyTarget == pAllyTeam->GetTeamSize() - 1 )
-                --iAllyTarget;
-
-            outTargets[iTargetCount] = pAllyTeam->GetTeamMember( iAllyTarget - 1 );
-            ++iTargetCount;
-            outTargets[iTargetCount] = pAllyTeam->GetTeamMember( iAllyTarget );
-            ++iTargetCount;
-            outTargets[iTargetCount] = pAllyTeam->GetTeamMember( iAllyTarget + 1 );
-            ++iTargetCount;
-            break;
-        case SKILL_TARGET_ALLY_WIDE_RANDOM:
-            iFirstRoll = GameplayFn->GetRandomUInt(pAllyTeam->GetTeamSize());
-            iSecondRoll = GameplayFn->GetRandomUInt(pAllyTeam->GetTeamSize());
-            iThirdRoll = GameplayFn->GetRandomUInt(pAllyTeam->GetTeamSize());
-
-            outTargets[iTargetCount] = pAllyTeam->GetTeamMember( iFirstRoll );
-            ++iTargetCount;
-            outTargets[iTargetCount] = pAllyTeam->GetTeamMember( iSecondRoll );
-            ++iTargetCount;
-            outTargets[iTargetCount] = pAllyTeam->GetTeamMember( iThirdRoll );
-            ++iTargetCount;
-            break;
-        case SKILL_TARGET_ALLY_ALL:
-            for ( UInt i = 0; i < pAllyTeam->GetTeamSize(); ++i ) {
-                outTargets[iTargetCount] = pAllyTeam->GetTeamMember( i );
-                ++iTargetCount;
-            }
-            break;
-        case SKILL_TARGET_ALLY_ALL_EXCEPT:
-            for ( UInt i = 0; i < pAllyTeam->GetTeamSize(); ++i ) {
-                if ( i != iAllyTarget ) {
-                    outTargets[iTargetCount] = pAllyTeam->GetTeamMember( i );
-                    ++iTargetCount;
-                }
-            }
-            break;
-        case SKILL_TARGET_ALL:
-            for ( UInt i = 0; i < pAllyTeam->GetTeamSize(); ++i ) {
-                outTargets[iTargetCount] = pAllyTeam->GetTeamMember( i );
-                ++iTargetCount;
-            }
-            break;
-        default: Assert( false ); break;
-    }
-
-    return iTargetCount;
-}
-
-/////////////////////////////////////////////////////////////////////////////////
-// SkillEffectDamage implementation
-SkillEffectDamage::SkillEffectDamage( XMLNode * pNode ):
-    SkillEffect()
-{
-    Assert( StringFn->Cmp(pNode->GetTagName(), TEXT("SkillEffectDamage")) == 0 );
-    Assert( pNode->IsLeaf() );
-
-    m_iTargetPattern = _SkillTargetPattern_FromString( pNode->GetAttribute(TEXT("TargetPattern"))->GetValue() );
-
-    m_iScalingType = _SkillEffectScaling_FromString( pNode->GetAttribute(TEXT("ScalingType"))->GetValue() );
-    m_fScalingMultiplier = StringFn->ToFloat( pNode->GetAttribute(TEXT("ScalingMultiplier"))->GetValue() );
-
-    m_fSkillBonusDmg = StringFn->ToFloat( pNode->GetAttribute(TEXT("BonusDamage"))->GetValue() );
-    m_fSkillBonusCritRate = StringFn->ToFloat( pNode->GetAttribute(TEXT("BonusCritRate"))->GetValue() );
-    m_fSkillBonusCritDmg = StringFn->ToFloat( pNode->GetAttribute(TEXT("BonusCritDmg"))->GetValue() );
-}
-SkillEffectDamage::~SkillEffectDamage()
+Skill::~Skill()
 {
     // nothing to do
 }
 
-Void SkillEffectDamage::Apply( BattleTeam * pCasterTeam, UInt iCaster, BattleTeam * pEnnemyTeam,
-                               BattleTeam * pCasterTargetTeam, UInt iCasterTarget ) const
+/////////////////////////////////////////////////////////////////////////////////
+
+SkillType Skill::_SkillType_FromString( const GChar * strValue )
 {
-    Assert( pCasterTargetTeam == pEnnemyTeam );
+    if ( StringFn->Cmp(strValue, TEXT("")) == 0 ) {
+        return SKILL_TYPE_;
+    }
+    Assert( false );
+    return SKILL_TYPE_COUNT;
+}
+SkillStat Skill::_SkillStat_FromString( const GChar * strValue )
+{
+    if ( StringFn->Cmp(strValue, TEXT("")) == 0 ) {
+        return SKILL_STAT_;
+    }
+    Assert( false );
+    return SKILL_STAT_COUNT;
+}
+SkillEffectType Skill::_SkillEffectType_FromString( const GChar * strValue )
+{
+    if ( StringFn->Cmp(strValue, TEXT("")) == 0 ) {
+        return SKILLEFFECT_;
+    }
+    Assert( false );
+    return SKILLEFFECT_COUNT;
+}
 
-    // Grab caster instance
-    MonsterBattleInstance * pCaster = pCasterTeam->GetTeamMember( iCaster );
+/////////////////////////////////////////////////////////////////////////////////
+// ActiveSkill implementation
+ActiveSkill::ActiveSkill( XMLNode * pSkillNode ):
+    Skill( pSkillNode )
+{
+    for ( UInt i = 0; i < SKILL_ACTIVE_COUNT; ++i )
+        m_arrEffectCounts[i] = 0;
 
-    // Resolve targets
-    MonsterBattleInstance * arrTargets[BATTLE_TEAM_MAX_SIZE];
-    UInt iTargetCount = _ResolveEnnemyTargets( arrTargets, m_iTargetPattern, pCasterTargetTeam, iCasterTarget );
+    XMLNode * pActiveSkillDescriptorNode = pSkillNode->GetChildByTag( TEXT("ActiveSkillDescriptor"), 0 );
+    Assert( pActiveSkillDescriptorNode != NULL );
 
-    // Apply effect to all targets
-    for ( UInt i = 0; i < iTargetCount; ++i ) {
-        MonsterBattleInstance * pTarget = arrTargets[i];
+    m_bIsAttack = ( StringFn->ToUInt(pSkillNode->GetAttribute(TEXT("IsAttack"))->GetValue()) != 0 );
 
-        // Check for invulnerability buff
-        if ( pTarget->HasStatusEffect( STATUSEFFECT_BUFF_INVINCIBILITY ) )
-            continue;
+    UInt iCount = pActiveSkillDescriptorNode->GetChildCount();
+    for( UInt i = 0; i < iCount; ++i ) {
+        XMLNode * pActiveEffectDescriptorNode = pActiveSkillDescriptorNode->GetChildByTag( TEXT("ActiveEffectDescriptor"), i );
+        SkillActiveType iActiveType = _SkillActiveType_FromString( pActiveEffectDescriptorNode->GetAttribute(TEXT("ActiveType"))->GetValue() );
 
-        // Compute effect values
-        UInt iDamageAmount = _ComputeDamage( pCaster, pTarget );
+        XMLNode * pEffectDescriptorNode = pActiveEffectDescriptorNode->GetChildByTag( TEXT("SkillEffectDescriptor"), 0 );
+        SkillEffectType iEffectType = _SkillEffectType_FromString( pEffectDescriptorNode->GetAttribute(TEXT("EffectType"))->GetValue() );
 
-        // Check for mark_dmg debuff
-        if ( pTarget->HasStatusEffect( STATUSEFFECT_DEBUFF_MARK_DMG ) )
-            iDamageAmount = (UInt)(MathFn->Floor( 1.25f * (Float)iDamageAmount ));
-
-        // Check for shield buff
-        UInt iRemainingDamageAmount = iDamageAmount;
-        if ( pTarget->HasStatusEffect( STATUSEFFECT_BUFF_SHIELD ) ) {
-            StatusEffectInstance * pShieldEffect = pTarget->GetStatusEffect( STATUSEFFECT_BUFF_SHIELD );
-            iRemainingDamageAmount = pShieldEffect->Damage( iDamageAmount );
+        SkillEffect * pEffect = NULL;
+        switch( iEffectType ) {
+            case SKILLEFFECT_DAMAGE:
+                pEffect = New SkillEffectDamage( pEffectDescriptorNode );
+                break;
+            case SKILLEFFECT_HEAL:
+                pEffect = New SkillEffectHeal( pEffectDescriptorNode );
+                break;
+            case SKILLEFFECT_ATB:
+                pEffect = New SkillEffectATB( pEffectDescriptorNode );
+                break;
+            case SKILLEFFECT_STATUS:
+                pEffect = New SkillEffectStatus( pEffectDescriptorNode );
+                break;
+            default: Assert(false);  break;
         }
-        arrTargets[i]->Damage( iRemainingDamageAmount );
 
-        // Check for mark_drain debuff
-        if ( pTarget->HasStatusEffect( STATUSEFFECT_DEBUFF_MARK_DRAIN ) ) {
-            UInt iHealAmount = (UInt)(MathFn->Floor( 0.25f * (Float)iDamageAmount ));
-            pCaster->Heal( iHealAmount );
+        m_arrEffects[iActiveType][m_arrEffectCounts[iActiveType]] = pEffect;
+        ++(m_arrEffectCounts[iActiveType]);
+    }
+}
+ActiveSkill::~ActiveSkill()
+{
+    // nothing to do
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+
+SkillActiveType ActiveSkill::_SkillActiveType_FromString( const GChar * strValue )
+{
+    if ( StringFn->Cmp(strValue, TEXT("")) == 0 ) {
+        return SKILL_ACTIVE_;
+    }
+    Assert( false );
+    return SKILL_ACTIVE_COUNT;
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+// PassiveSkill implementation
+PassiveSkill::PassiveSkill( XMLNode * pSkillNode ):
+    Skill( pSkillNode )
+{
+    for ( UInt i = 0; i < SKILL_PASSIVE_COUNT; ++i )
+        m_arrEffectCounts[i] = 0;
+
+    XMLNode * pPassiveSkillDescriptorNode = pSkillNode->GetChildByTag( TEXT("PassiveSkillDescriptor"), 0 );
+    Assert( pPassiveSkillDescriptorNode != NULL );
+
+    UInt iCount = pPassiveSkillDescriptorNode->GetChildCount();
+    for( UInt i = 0; i < iCount; ++i ) {
+        XMLNode * pPassiveEffectDescriptorNode = pPassiveSkillDescriptorNode->GetChildByTag( TEXT("PassiveEffectDescriptor"), i );
+        SkillPassiveType iPassiveType = _SkillPassiveType_FromString( pPassiveEffectDescriptorNode->GetAttribute(TEXT("PassiveType"))->GetValue() );
+
+        XMLNode * pEffectDescriptorNode = pPassiveEffectDescriptorNode->GetChildByTag( TEXT("SkillEffectDescriptor"), 0 );
+        SkillEffectType iEffectType = _SkillEffectType_FromString( pEffectDescriptorNode->GetAttribute(TEXT("EffectType"))->GetValue() );
+
+        SkillEffect * pEffect = NULL;
+        switch( iEffectType ) {
+            case SKILLEFFECT_DAMAGE:
+                pEffect = New SkillEffectDamage( pEffectDescriptorNode );
+                break;
+            case SKILLEFFECT_HEAL:
+                pEffect = New SkillEffectHeal( pEffectDescriptorNode );
+                break;
+            case SKILLEFFECT_ATB:
+                pEffect = New SkillEffectATB( pEffectDescriptorNode );
+                break;
+            case SKILLEFFECT_STATUS:
+                pEffect = New SkillEffectStatus( pEffectDescriptorNode );
+                break;
+            default: Assert(false);  break;
         }
 
-        // Check for vampire runes
-        if ( pCaster->GetBaseInstance()->HasSetBonus( RUNE_VAMPIRE ) ) {
-            UInt iHealAmount = (UInt)(MathFn->Floor( 0.35f * (Float)iDamageAmount ));
-            pCaster->Heal( iHealAmount );
-        }
+        m_arrEffects[iPassiveType][m_arrEffectCounts[iPassiveType]] = pEffect;
+        ++(m_arrEffectCounts[iPassiveType]);
+    }
+}
+PassiveSkill::~PassiveSkill()
+{
+    // nothing to do
+}
 
-        // Check for destroy runes
-        if ( pCaster->GetBaseInstance()->HasSetBonus( RUNE_DESTROY ) ) {
-            StatusEffectInstance * pDestroyEffect = pTarget->GetStatusEffect( STATUSEFFECT_DEBUFF_DESTROY );
-            pDestroyEffect->Increase( iRemainingDamageAmount );
-        }
+/////////////////////////////////////////////////////////////////////////////////
+
+SkillPassiveType PassiveSkill::_SkillPassiveType_FromString( const GChar * strValue )
+{
+    if ( StringFn->Cmp(strValue, TEXT("")) == 0 ) {
+        return SKILL_PASSIVE_;
+    }
+    Assert( false );
+    return SKILL_PASSIVE_COUNT;
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+// LeaderSkill implementation
+LeaderSkill::LeaderSkill( XMLNode * pSkillNode ):
+    Skill( pSkillNode )
+{
+    XMLNode * pLeaderSkillDescriptorNode = pSkillNode->GetChildByTag( TEXT("LeaderSkillDescriptor"), 0 );
+    Assert( pLeaderSkillDescriptorNode != NULL );
+
+    m_iBonusStat = _MonsterStatistic_FromString( pLeaderSkillDescriptorNode->GetAttribute(TEXT("Stat"))->GetValue() );
+    m_fBonusAmount = StringFn->ToFloat( pLeaderSkillDescriptorNode->GetAttribute(TEXT("Amount"))->GetValue() );
+
+    m_iConstraint = _LeaderConstraint_FromString( pLeaderSkillDescriptorNode->GetAttribute(TEXT("Constraint"))->GetValue() );
+}
+LeaderSkill::~LeaderSkill()
+{
+    // nothing to do
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+
+MonsterStatistic LeaderSkill::_MonsterStatistic_FromString( const GChar * strValue )
+{
+    if ( StringFn->Cmp(strValue, TEXT("")) == 0 ) {
+        return MONSTER_STAT_;
+    }
+    Assert( false );
+    return MONSTER_STAT_COUNT;
+}
+LeaderSkill::LeaderConstraint LeaderSkill::_LeaderConstraint_FromString( const GChar * strValue )
+{
+    if ( StringFn->Cmp(strValue, TEXT("")) == 0 ) {
+        return LEADER_CONSTRAINT_;
+    }
+    Assert( false );
+    return LEADER_CONSTRAINT_NONE;
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+// SkillInstance implementation
+SkillInstance::SkillInstance()
+{
+    m_pSkill = NULL;
+
+    m_iLevel = 0;
+
+    for( UInt i = 0; i < SKILL_STAT_COUNT; ++i )
+        m_fEffectiveBonus[i] = 0.0f;
+}
+SkillInstance::SkillInstance( Skill * pSkill )
+{
+    Assert( pSkill != NULL );
+
+    m_pSkill = pSkill;
+
+    m_iLevel = 0;
+
+    for( UInt i = 0; i < SKILL_STAT_COUNT; ++i )
+        m_fEffectiveBonus[i] = 0.0f;
+}
+SkillInstance::SkillInstance( const SkillInstance & rhs )
+{
+    m_pSkill = rhs.m_pSkill;
+
+    m_iLevel = rhs.m_iLevel;
+
+    for( UInt i = 0; i < SKILL_STAT_COUNT; ++i )
+        m_fEffectiveBonus[i] = rhs.m_fEffectiveBonus[i];
+}
+SkillInstance::~SkillInstance()
+{
+    // nothing to do
+}
+
+SkillInstance & SkillInstance::operator=( const SkillInstance & rhs )
+{
+    m_pSkill = rhs.m_pSkill;
+
+    m_iLevel = rhs.m_iLevel;
+
+    for( UInt i = 0; i < SKILL_STAT_COUNT; ++i )
+        m_fEffectiveBonus[i] = rhs.m_fEffectiveBonus[i];
+
+    return (*this);
+}
+
+UInt SkillInstance::LevelUp()
+{
+    if ( m_iLevel < m_pSkill->GetMaxLevel() ) {
+        ++m_iLevel;
+        _UpdateEffectiveStats();
+    }
+    return m_iLevel;
+}
+UInt SkillInstance::LevelDown()
+{
+    if ( m_iLevel > 0 ) {
+        --m_iLevel;
+        _UpdateEffectiveStats();
+    }
+    return m_iLevel;
+}
+Void SkillInstance::SetLevel( UInt iLevel )
+{
+    Assert( iLevel < m_pSkill->GetMaxLevel() );
+    if ( m_iLevel != iLevel ) {
+        m_iLevel = iLevel;
+        _UpdateEffectiveStats();
     }
 }
 
 /////////////////////////////////////////////////////////////////////////////////
 
-UInt SkillEffectDamage::_ComputeDamage( MonsterBattleInstance * pCaster, MonsterBattleInstance * pTarget ) const
+Void SkillInstance::_UpdateEffectiveStats()
 {
-    // Compute base damage
-    UInt iCasterMaxHP = pCaster->GetHP();
-    UInt iCasterHP = pCaster->GetCurrentHP();
-    UInt iCasterAttack = pCaster->GetATT();
+    for( UInt i = 0; i < SKILL_STAT_COUNT; ++i )
+        m_fEffectiveBonus[i] = 0.0f;
 
-    UInt iTargetMaxHP = pTarget->GetHP();
-    UInt iTargetHP = pTarget->GetCurrentHP();
-    UInt iTargetDefense = pTarget->GetDEF();
-
-    Float fBaseDamage = 0.0f;
-    switch( m_iScalingType ) {
-        case SKILLEFFECT_SCALING_DEFAULT:
-            fBaseDamage = ( m_fScalingMultiplier * (Float)(iCasterAttack - iTargetDefense) );
-            if ( fBaseDamage < 0.0f )
-                fBaseDamage = 0.0f;
-            break;
-        case SKILLEFFECT_SCALING_SELF_HP_CURRENT:
-            fBaseDamage = ( m_fScalingMultiplier * (Float)iCasterHP );
-            break;
-        case SKILLEFFECT_SCALING_SELF_HP_MAX:
-            fBaseDamage = ( m_fScalingMultiplier * (Float)iCasterMaxHP );
-            break;
-        case SKILLEFFECT_SCALING_TARGET_HP_CURRENT:
-            fBaseDamage = ( m_fScalingMultiplier * (Float)iTargetHP );
-            break;
-        case SKILLEFFECT_SCALING_TARGET_HP_MAX:
-            fBaseDamage = ( m_fScalingMultiplier * (Float)iTargetMaxHP );
-            break;
-        default: Assert( false ); break;
+    for( UInt i = 0; i < m_iLevel; ++i ) {
+        const SkillLevelBonus * pBonus = m_pSkill->GetLevelBonus( i );
+        m_fEffectiveBonus[pBonus->iStat] += pBonus->fAmount;
     }
+}
 
-    // Check for a critical hit
-    Float fCasterCritRate = pCaster->GetCritR() + m_fSkillBonusCritRate;
-    if ( fCasterCritRate > 1.0f )
-        fCasterCritRate = 1.0f;
-    Float fCasterCritDmg = pCaster->GetCritD() + m_fSkillBonusCritDmg;
+/////////////////////////////////////////////////////////////////////////////////
+// SkillSet implementation
+SkillSet::SkillSet()
+{
+    m_iSkillCount = 0;
+}
+SkillSet::~SkillSet()
+{
+    // nothing to do
+}
 
-    if ( GameplayFn->CheckRandomEvent(fCasterCritRate) )
-        fBaseDamage += ( fBaseDamage * fCasterCritDmg );
+Void SkillSet::Add( Skill * pSkill, UInt iLevel )
+{
+    Assert( pSkill != NULL );
+    Assert( iLevel <= pSkill->GetMaxLevel() );
+    Assert( m_iSkillCount < SKILL_SLOT_COUNT );
 
-    // Apply element correction
-    MonsterElement iCasterElement = pCaster->GetBaseInstance()->GetElement();
-    MonsterElement iTargetElement = pTarget->GetBaseInstance()->GetElement();
+    m_arrSkills[m_iSkillCount] = SkillInstance( pSkill );
+    m_arrSkills[m_iSkillCount].SetLevel( iLevel );
+    ++m_iSkillCount;
+}
+Void SkillSet::RemoveAll()
+{
+    for( UInt i = 0; i < m_iSkillCount; ++i )
+        m_arrSkills[i] = SkillInstance();
 
-    if ( Monster::IsElementStrongAgainst(iCasterElement, iTargetElement) ) {
-        // Chance at a crushing hit
-        if ( GameplayFn->CheckRandomEvent(0.50f) )
-            fBaseDamage *= 1.5f;
-    } else if ( Monster::IsElementWeakAgainst(iCasterElement, iTargetElement) ) {
-        // Chance at a glancing hit
-        if ( GameplayFn->CheckRandomEvent(0.50f) )
-            fBaseDamage *= 0.5f;
-    }
-
-    // Convert to damage value
-    UInt iDamageAmount = MathFn->Floor( fBaseDamage * 100.0f );
-
-    // Done
-    return iDamageAmount;
+    m_iSkillCount = 0;
 }
 

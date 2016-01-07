@@ -21,13 +21,15 @@
 // Includes
 #include "Monster.h"
 
+#include "../GameplayManager.h"
+
 /////////////////////////////////////////////////////////////////////////////////
 // Monster implementation
 Monster::Monster( XMLNode * pMonsterNode ):
-    m_hLevelingStats(), m_hSkillSet()
+    m_hLevelingStats()
 {
     Assert( pMonsterNode != NULL );
-    Assert( StringFn->Cmp( pMonsterNode->GetTagName(), TEXT( "Monster" ) ) == 0 );
+    Assert( StringFn->Cmp( pMonsterNode->GetTagName(), TEXT("Monster") ) == 0 );
 
     // Load everything
         // Identifier
@@ -43,7 +45,22 @@ Monster::Monster( XMLNode * pMonsterNode ):
         // Skill set
     XMLNode * pSkillSetNode = pMonsterNode->GetChildByTag( TEXT("SkillSet"), 0 );
     Assert( pSkillSetNode != NULL );
-    m_hSkillSet.Load( pSkillSetNode );
+
+    m_iSkillCount = (UInt)( StringFn->ToUInt(pSkillSetNode->GetAttribute(TEXT("SkillCount"))->GetValue()) );
+    for( UInt i = 0; i < SKILL_SLOT_COUNT; ++i )
+        m_arrSkills[i] = INVALID_OFFSET;
+    if ( m_iSkillCount > 0 ) {
+        m_arrSkills[0] = (SkillID)( StringFn->ToUInt(pSkillSetNode->GetAttribute(TEXT("Slot0"))->GetValue()) );
+        if ( m_iSkillCount > 1 ) {
+            m_arrSkills[1] = (SkillID)( StringFn->ToUInt(pSkillSetNode->GetAttribute(TEXT("Slot1"))->GetValue()) );
+            if ( m_iSkillCount > 2 ) {
+                m_arrSkills[2] = (SkillID)( StringFn->ToUInt(pSkillSetNode->GetAttribute(TEXT("Slot2"))->GetValue()) );
+                if ( m_iSkillCount > 3 ) {
+                    m_arrSkills[3] = (SkillID)( StringFn->ToUInt(pSkillSetNode->GetAttribute(TEXT("Slot3"))->GetValue()) );
+                }
+            }
+        }
+    }
 }
 Monster::~Monster()
 {
@@ -51,28 +68,9 @@ Monster::~Monster()
 }
 
 /////////////////////////////////////////////////////////////////////////////////
-
-MonsterElement Monster::sm_arrElementWeakAgainst[MONSTER_ELEMENT_COUNT] = {
-    MONSTER_ELEMENT_COUNT, // Weak vs MONSTER_ELEMENT_NONE
-    MONSTER_ELEMENT_WIND,  // Weak vs MONSTER_ELEMENT_FIRE
-    MONSTER_ELEMENT_FIRE,  // Weak vs MONSTER_ELEMENT_WATER
-    MONSTER_ELEMENT_WATER, // Weak vs MONSTER_ELEMENT_WIND
-    MONSTER_ELEMENT_COUNT, // Weak vs MONSTER_ELEMENT_LIGHT
-    MONSTER_ELEMENT_COUNT  // Weak vs MONSTER_ELEMENT_DARK
-};
-MonsterElement Monster::sm_arrElementStrongAgainst[MONSTER_ELEMENT_COUNT] = {
-    MONSTER_ELEMENT_COUNT, // Strong vs MONSTER_ELEMENT_NONE
-    MONSTER_ELEMENT_WATER, // Strong vs MONSTER_ELEMENT_FIRE
-    MONSTER_ELEMENT_WIND,  // Strong vs MONSTER_ELEMENT_WATER
-    MONSTER_ELEMENT_FIRE,  // Strong vs MONSTER_ELEMENT_WIND
-    MONSTER_ELEMENT_DARK,  // Strong vs MONSTER_ELEMENT_LIGHT
-    MONSTER_ELEMENT_LIGHT  // Strong vs MONSTER_ELEMENT_DARK
-};
-
-/////////////////////////////////////////////////////////////////////////////////
 // MonsterInstance implementation
 MonsterInstance::MonsterInstance( const Monster * pMonster ):
-    m_hStats( pMonster->GetLevelingStats() ), m_hSkillSet( pMonster->GetSkillSet() ), m_hRuneSet()
+    m_hStats( pMonster->GetLevelingStats() ), m_hSkillSet(), m_hRuneSet()
 {
     m_pMonster = pMonster;
 
@@ -141,9 +139,43 @@ UInt MonsterInstance::LevelDown()
 }
 Void MonsterInstance::SetLevel( UInt iLevel )
 {
-    Assert( m_hStats.GetLevel() < MONSTER_MAX_LEVELBYRANK(m_hStats.GetRank()) );
+    Assert( iLevel < MONSTER_MAX_LEVELBYRANK(m_hStats.GetRank()) );
     if ( m_hStats.GetLevel() != iLevel ) {
         m_hStats.SetLevel( iLevel );
+        _UpdateEffectiveStats();
+    }
+}
+
+UInt MonsterInstance::SkillLevelUp( UInt iSlot )
+{
+    Assert( iSlot < m_hSkillSet.GetSkillCount() );
+    SkillInstance * pSkillInstance = m_hSkillSet.GetSkillInstance( iSlot );
+
+    if ( pSkillInstance->GetLevel() < (pSkillInstance->GetMaxLevel() - 1) ) {
+        pSkillInstance->LevelUp();
+        _UpdateEffectiveStats();
+    }
+    return pSkillInstance->GetLevel();
+}
+UInt MonsterInstance::SkillLevelDown( UInt iSlot )
+{
+    Assert( iSlot < m_hSkillSet.GetSkillCount() );
+    SkillInstance * pSkillInstance = m_hSkillSet.GetSkillInstance( iSlot );
+
+    if ( pSkillInstance->GetLevel() > 0 ) {
+        pSkillInstance->LevelDown();
+        _UpdateEffectiveStats();
+    }
+    return pSkillInstance->GetLevel();
+}
+Void MonsterInstance::SetSkillLevel( UInt iSlot, UInt iLevel )
+{
+    Assert( iSlot < m_hSkillSet.GetSkillCount() );
+    SkillInstance * pSkillInstance = m_hSkillSet.GetSkillInstance( iSlot );
+
+    Assert( iLevel < pSkillInstance->GetMaxLevel() );
+    if ( pSkillInstance->GetLevel() != iLevel ) {
+        pSkillInstance->SetLevel( iLevel );
         _UpdateEffectiveStats();
     }
 }
@@ -152,6 +184,25 @@ Void MonsterInstance::SetLevel( UInt iLevel )
 
 Void MonsterInstance::_UpdateEffectiveStats()
 {
+    // Resolve skill set
+    UInt m_arrLevels[SKILL_SLOT_COUNT];
+    for( UInt i = 0; i < m_hSkillSet.GetSkillCount(); ++i )
+        m_arrLevels[i] = m_hSkillSet.GetSkillInstance(i)->GetLevel();
+
+    m_hSkillSet.RemoveAll();
+
+    for( UInt i = 0; i < m_pMonster->GetSkillCount(); ++i ) {
+        Skill * pSkill = GameplayFn->GetSkill( m_pMonster->GetSkill(i) );
+
+        if ( m_hStats.IsAwakened() && pSkill->HasAwakeningUpgrade() )
+            pSkill = GameplayFn->GetSkill( pSkill->GetAwakeningUpgrade() );
+
+        if ( pSkill->RequiresAwakening() && !(m_hStats.IsAwakened()) )
+            continue;
+
+        m_hSkillSet.Add( pSkill, m_arrLevels[i] );
+    }
+
     // Compile rune stats
     UInt arrFlatBonuses[4];       // HP, ATT, DEF, SPD
     Float arrRatioBonuses[3];     // %HP, %ATT, %DEF

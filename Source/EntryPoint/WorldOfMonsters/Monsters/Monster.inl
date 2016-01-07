@@ -19,20 +19,6 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // Monster implementation
-inline Bool Monster::IsElementWeakAgainst( MonsterElement iElement, MonsterElement iOpposingElement ) {
-    return ( sm_arrElementWeakAgainst[iOpposingElement] == iElement );
-}
-inline Bool Monster::IsElementStrongAgainst( MonsterElement iElement, MonsterElement iOpposingElement ) {
-    return ( sm_arrElementStrongAgainst[iOpposingElement] == iElement );
-}
-
-inline MonsterElement Monster::GetElementWeakAgainst( MonsterElement iElement ) {
-    return sm_arrElementWeakAgainst[iElement];
-}
-inline MonsterElement Monster::GetElementStrongAgainst( MonsterElement iElement ) {
-    return sm_arrElementStrongAgainst[iElement];
-}
-
 inline MonsterID Monster::GetID() const {
     return m_iMonsterID;
 }
@@ -47,8 +33,12 @@ inline const MonsterLevelingStats * Monster::GetLevelingStats() const {
     return &m_hLevelingStats;
 }
 
-inline const SkillSet * Monster::GetSkillSet() const {
-    return &m_hSkillSet;
+inline UInt Monster::GetSkillCount() const {
+    return m_iSkillCount;
+}
+inline SkillID Monster::GetSkill( UInt iSlot ) const {
+    Assert( iSlot < m_iSkillCount );
+    return m_arrSkills[iSlot];
 }
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -122,6 +112,14 @@ inline Float MonsterInstance::GetACC() const {
 }
 inline Float MonsterInstance::GetRES() const {
     return m_hStats.GetRES();
+}
+
+inline UInt MonsterInstance::GetSkillCount() const {
+    return m_hSkillSet.GetSkillCount();
+}
+inline SkillInstance * MonsterInstance::GetSkillInstance( UInt iSlot ) {
+    Assert( iSlot < m_hSkillSet.GetSkillCount() );
+    return m_hSkillSet.GetSkillInstance( iSlot );
 }
 
 inline Bool MonsterInstance::HasRune( UInt iSlot ) const {
