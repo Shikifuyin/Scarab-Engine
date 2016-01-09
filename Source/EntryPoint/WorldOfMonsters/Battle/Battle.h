@@ -34,6 +34,11 @@
 // Battle teams
 #define BATTLE_TEAM_MAX_SIZE 16
 
+#define BATTLE_TEAMSIZE_SCENARIO 4
+#define BATTLE_TEAMSIZE_DUNGEON  5
+#define BATTLE_TEAMSIZE_ARENA 4
+#define BATTLE_TEAMSIZE_GUILD 3
+
 // Battle types
 enum BattleType {
     BATTLE_SCENARIO = 0,

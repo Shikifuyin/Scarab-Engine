@@ -150,6 +150,9 @@ Void MonsterBattleInstance::Initialize()
     // Start full health, no shield, 0 ATB
     m_iCurrentHP = m_iHealth;
     m_iShieldHP = 0;
+    m_iHPLostCounter_Nemesis = 0;
+    m_iHPLostCounter_Destroy = 0;
+
     m_iATB = 0;
 
     // Handle shield runes
@@ -600,7 +603,7 @@ Bool Battle::EndTurn()
 /////////////////////////////////////////////////////////////////////////////////
 
 MonsterElement Battle::sm_arrElementWeakAgainst[MONSTER_ELEMENT_COUNT] = {
-    MONSTER_ELEMENT_COUNT, // Weak vs MONSTER_ELEMENT_NONE
+    MONSTER_ELEMENT_COUNT, // Weak vs MONSTER_ELEMENT_MAGIC
     MONSTER_ELEMENT_WIND,  // Weak vs MONSTER_ELEMENT_FIRE
     MONSTER_ELEMENT_FIRE,  // Weak vs MONSTER_ELEMENT_WATER
     MONSTER_ELEMENT_WATER, // Weak vs MONSTER_ELEMENT_WIND
@@ -608,7 +611,7 @@ MonsterElement Battle::sm_arrElementWeakAgainst[MONSTER_ELEMENT_COUNT] = {
     MONSTER_ELEMENT_COUNT  // Weak vs MONSTER_ELEMENT_DARK
 };
 MonsterElement Battle::sm_arrElementStrongAgainst[MONSTER_ELEMENT_COUNT] = {
-    MONSTER_ELEMENT_COUNT, // Strong vs MONSTER_ELEMENT_NONE
+    MONSTER_ELEMENT_COUNT, // Strong vs MONSTER_ELEMENT_MAGIC
     MONSTER_ELEMENT_WATER, // Strong vs MONSTER_ELEMENT_FIRE
     MONSTER_ELEMENT_WIND,  // Strong vs MONSTER_ELEMENT_WATER
     MONSTER_ELEMENT_FIRE,  // Strong vs MONSTER_ELEMENT_WIND
@@ -978,9 +981,6 @@ Void Battle::_HandleSkillEffect( BattleTeam * pCasterTeam, UInt iCaster, BattleT
                         if ( GameplayFn->CheckRandomEvent(0.25f) )
                             pTarget->AddStatusEffect( STATUSEFFECT_DEBUFF_STUN, true, 0.0f, 1, 1, 1 );
                     }
-
-                    // Handle destroy runes
-                    ////////////////////////////////////////////
 
                     // Handle passive effects
                     for( UInt j = 0; j < pCasterTeam->GetTeamSize(); ++j ) {

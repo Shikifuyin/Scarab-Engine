@@ -76,7 +76,9 @@ enum RuneQuality {
     RUNE_QUALITY_MAGIC,      // Green  (secondary + 1 sub)
     RUNE_QUALITY_RARE,       // Blue   (secondary + 2 subs)
     RUNE_QUALITY_EPIC,       // Purple (secondary + 3 subs)
-    RUNE_QUALITY_LEGEND      // Orange (secondary + 4 subs)
+    RUNE_QUALITY_LEGEND,     // Orange (secondary + 4 subs)
+
+    RUNE_QUALITY_COUNT
 };
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -138,6 +140,9 @@ public:
     inline RuneType GetType() const;
     inline UInt GetSlot() const;
 
+    inline Bool IsEquipped() const;
+    inline Void SetEquipped( Bool bEquipped );
+
     // Rank access
     inline UInt GetRank() const;
 
@@ -172,6 +177,8 @@ protected:
     // Type & slot
     RuneType m_iType;
     UInt m_iSlot;
+
+    Bool m_bEquipped;
 
     // Leveling stats
     const RuneLevelingStats * m_pLevelingStats;

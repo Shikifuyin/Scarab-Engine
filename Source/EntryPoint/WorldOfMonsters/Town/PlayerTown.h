@@ -24,10 +24,13 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // Includes
-#include "../../../Lib/Datastruct/Array/Array.h"
+#include "Building.h"
 
 /////////////////////////////////////////////////////////////////////////////////
 // Constants definitions
+
+    // Prototypes
+class PlayerGuild;
 
 /////////////////////////////////////////////////////////////////////////////////
 // The PlayerTown class
@@ -37,11 +40,25 @@ public:
     PlayerTown();
     ~PlayerTown();
 
+    // Buildings access
+    inline UInt GetArcaneTowerCount() const;
+
+    inline Bool HasBuilding( BuildingType iType ) const;
+    inline Building * GetBuilding( BuildingType iType ) const;
+
+    Void AddBuilding( BuildingType iType );
+    Void RemoveBuilding( BuildingType iType );
+
+    // Guild access
+    inline Bool HasGuild() const;
+    inline PlayerGuild * GetGuild() const;
 
 private:
-    // Helpers
+    // Buildings
+    Building * m_arrBuildings[BUILDING_COUNT];
 
-   
+    // Guild data
+    PlayerGuild * m_pGuild;
 };
 
 /////////////////////////////////////////////////////////////////////////////////

@@ -100,6 +100,13 @@ inline UInt Rune::GetSlot() const {
     return m_iSlot;
 }
 
+inline Bool Rune::IsEquipped() const {
+    return m_bEquipped;
+}
+inline Void Rune::SetEquipped( Bool bEquipped ) {
+    m_bEquipped = bEquipped;
+}
+
 inline UInt Rune::GetRank() const {
     return m_iRank;
 }

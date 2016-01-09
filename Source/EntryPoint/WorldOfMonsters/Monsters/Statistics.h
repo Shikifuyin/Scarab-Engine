@@ -67,7 +67,7 @@ enum MonsterType {
 
 // Elements
 enum MonsterElement {
-    MONSTER_ELEMENT_NONE = 0,
+    MONSTER_ELEMENT_MAGIC = 0,
     MONSTER_ELEMENT_FIRE,
     MONSTER_ELEMENT_WATER,
     MONSTER_ELEMENT_WIND,

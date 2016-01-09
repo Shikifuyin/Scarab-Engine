@@ -233,6 +233,8 @@ Rune::Rune( const RuneLevelingStats * pLevelingStats, RuneType iType, UInt iSlot
     m_iType = iType;
     m_iSlot = iSlot;
 
+    m_bEquipped = false;
+
     m_iRank = 0;
     m_iLevel = 0;
 
