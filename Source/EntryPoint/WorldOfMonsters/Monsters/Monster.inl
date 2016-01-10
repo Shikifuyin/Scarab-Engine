@@ -60,6 +60,13 @@ inline MonsterElement MonsterInstance::GetElement() const {
     return m_hStats.GetElement();
 }
 
+inline Bool MonsterInstance::IsSummoningCostHighTier( MonsterSummoningCost iCost ) const {
+    return m_hStats.IsSummoningCostHighTier( iCost );
+}
+inline UInt MonsterInstance::GetSummoningCostAmount( MonsterSummoningCost iCost ) const {
+    return m_hStats.GetSummoningCostAmount( iCost );
+}
+
 inline Bool MonsterInstance::IsAwakened() const {
     return m_hStats.IsAwakened();
 }

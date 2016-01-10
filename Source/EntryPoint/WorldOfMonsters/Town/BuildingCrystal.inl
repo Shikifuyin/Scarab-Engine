@@ -22,8 +22,8 @@
 inline UInt BuildingCrystal::GetProductionRateLevel() const {
     return m_iProductionRateLevel;
 }
-inline Float BuildingCrystal::GetProductionRate() const {
-    return m_fProductionRate;
+inline UInt BuildingCrystal::GetProductionRate() const {
+    return m_iProductionRate;
 }
 
 inline UInt BuildingCrystal::GetCapacityLevel() const {
@@ -34,7 +34,7 @@ inline UInt BuildingCrystal::GetCapacity() const {
 }
 
 inline Bool BuildingCrystal::IsEmpty() const {
-    return m_iCapacity;
+    return ( m_iCapacity == 0 );
 }
 inline UInt BuildingCrystal::GetCrystalBuffer() const {
     return m_iCrystalBuffer;

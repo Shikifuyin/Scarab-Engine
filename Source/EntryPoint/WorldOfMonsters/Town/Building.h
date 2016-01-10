@@ -34,7 +34,7 @@ enum BuildingType {
     BUILDING_DUNGEON = 0, // World & Arena access
     BUILDING_ARCANE_TOWER,
 
-    BUILDING_ESSENCES,
+    BUILDING_ESSENCE_STORAGE,
 
     BUILDING_MONSTER_STORAGE,
     BUILDING_MONSTER_SUMMONING,
@@ -88,6 +88,8 @@ enum ShopItemType {
     SHOP_ITEM_SCROLL_WIND,
     SHOP_ITEM_SCROLL_LIGHT,
     SHOP_ITEM_SCROLL_DARK,
+
+    SHOP_ITEM_COUNT
 };
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -125,101 +127,10 @@ protected:
     UInt m_iCost;
 };
 
-/////////////////////////////////////////////////////////////////////////////////
-// The BuildingEssences class
-class BuildingEssences : public Building
-{
-public:
-    BuildingEssences();
-    virtual ~BuildingEssences();
-
-    // Essence storage
-    inline UInt GetEssenceCount( MonsterElement iElement, EssenceType iType ) const;
-
-    inline Void AddEssences( MonsterElement iElement, EssenceType iType, UInt iCount );
-    inline Void RemoveEssences( MonsterElement iElement, EssenceType iType, UInt iCount );
-
-    // Fusion & Awakening
-    inline Bool FusionUnlocked() const;
-    inline Bool AwakeningUnlocked() const;
-
-    Bool CanFuse( MonsterElement iElement, EssenceType iType ) const;
-    Void Fuse( MonsterElement iElement, EssenceType iType );
-
-    Bool CanAwake( UInt iTargetMonster ) const;
-    Void Awake( UInt iTargetMonster );
-
-private:
-    // Dungeon access
-    BuildingDungeon * m_pDungeon;
-
-    // Essence storage
-    UInt m_arrEssences[MONSTER_ELEMENT_COUNT][ESSENCE_TYPE_COUNT];
-
-    // Fusion & Awakening
-    Bool m_bFusionUnlocked;
-    Bool m_bAwakeningUnlocked;
-};
 
 
-/////////////////////////////////////////////////////////////////////////////////
-// The BuildingMonsterStorage class
-class BuildingMonsterStorage : public Building
-{
-public:
-    BuildingMonsterStorage();
-    virtual ~BuildingMonsterStorage();
 
-    // Monster storage
-    inline UInt GetStorageLevel() const;
-    inline UInt GetStorageRoom() const;
 
-    Bool UpgradeStorageRoom();
-
-    inline UInt GetMonsterCount() const;
-    inline MonsterInstance * GetMonster( UInt iIndex ) const;
-
-    Bool StoreMonster( UInt iIndex );
-    Bool RetrieveMonster( UInt iStorageIndex );
-
-private:
-    // Helpers
-    inline static Int _Compare_MonsterInstance( const MonsterInstance * const & pLeft, const MonsterInstance * const & pRight, Void * pUserData );
-
-    static UInt sm_arrRoomByLevel[BUILDING_MONSTER_STORAGE_MAX_LEVEL];
-
-    // Dungeon access
-    BuildingDungeon * m_pDungeon;
-
-    // Monster storage
-    UInt m_iStorageLevel;
-    UInt m_iStorageRoom;
-
-    typedef RedBlackTree<MonsterInstance*> MonsterMap;
-    MonsterMap m_mapMonsterStorage;
-};
-
-/////////////////////////////////////////////////////////////////////////////////
-// The BuildingMonsterSummoning class
-class BuildingMonsterSummoning : public Building
-{
-public:
-    BuildingMonsterSummoning();
-    virtual ~BuildingMonsterSummoning();
-
-    // Monster summoning
-    inline Bool SummoningUnlocked() const;
-
-    Bool CanSummon( MonsterID iMonsterID ) const;
-    Void Summon( MonsterID iMonsterID );
-
-private:
-    // Dungeon access
-    BuildingDungeon * m_pDungeon;
-
-    // Monster summoning
-    Bool m_bSummoningUnlocked;
-};
 
 /////////////////////////////////////////////////////////////////////////////////
 // The BuildingMonsterEvolution class
@@ -272,43 +183,6 @@ private:
 
 
 /////////////////////////////////////////////////////////////////////////////////
-// The BuildingRuneStorage class
-class BuildingRuneStorage : public Building
-{
-public:
-    BuildingRuneStorage();
-    virtual ~BuildingRuneStorage();
-
-    // Rune storage
-    inline UInt GetStorageLevel() const;
-    inline UInt GetStorageRoom() const;
-
-    Bool UpgradeStorageRoom();
-
-    inline UInt GetRuneCount( RuneType iType ) const;
-    inline Rune * GetRune( RuneType iType, UInt iStorageIndex ) const;
-
-    Bool StoreRune( RuneType iType, UInt iIndex );
-    Bool RetrieveRune( RuneType iType, UInt iStorageIndex );
-
-private:
-    // Helpers
-    inline static Int _Compare_Rune( const Rune & rLeft, const Rune & rRight, Void * pUserData );
-
-    static UInt sm_arrRoomByLevel[BUILDING_RUNE_STORAGE_MAX_LEVEL];
-
-    // Dungeon access
-    BuildingDungeon * m_pDungeon;
-
-    // Rune storage
-    UInt m_iStorageLevel;
-    UInt m_iStorageRoom;
-
-    typedef RedBlackTree<Rune> RuneMap;
-    RuneMap m_mapRuneStorage;
-};
-
-/////////////////////////////////////////////////////////////////////////////////
 // The BuildingRuneEvolution class
 class BuildingRuneEvolution : public Building
 {
@@ -332,48 +206,6 @@ private:
     // Rune fusion
     Bool m_bEvolutionUnlocked;
 };
-
-/////////////////////////////////////////////////////////////////////////////////
-// The BuildingMana class
-class BuildingMana : public Building
-{
-public:
-    BuildingMana();
-    virtual ~BuildingMana();
-
-    // Mana production
-    inline UInt GetProductionRateLevel() const;
-    inline Float GetProductionRate() const;
-
-    Bool UpgradeProductionRate();
-
-    inline UInt GetCapacityLevel() const;
-    inline UInt GetCapacity() const;
-
-    Bool UpgradeCapacity();
-
-    inline Bool IsEmpty() const;
-    inline UInt GetManaBuffer() const;
-
-    Void RetrieveMana();
-    Void UpdateMana();
-
-private:
-    // Dungeon access
-    BuildingDungeon * m_pDungeon;
-
-    // Mana production
-    UInt m_iProductionRateLevel;
-    Float m_fProductionRate;
-
-    UInt m_iCapacityLevel;
-    UInt m_iCapacity;
-
-    UInt m_iManaBuffer;
-    Float m_fLastUpdateTime;
-};
-
-
 
 /////////////////////////////////////////////////////////////////////////////////
 // The BuildingShop class

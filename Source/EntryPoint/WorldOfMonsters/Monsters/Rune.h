@@ -170,6 +170,9 @@ public:
     Void AddBonus( RuneStat iStat, MonsterStatistic iStatType, Bool bRatio );
     Void RemoveBonus( RuneStat iStat );
 
+    // Selling price access
+    UInt ComputeSellPrice() const;
+
 protected:
     // Helpers
     Void _UpdateStats();

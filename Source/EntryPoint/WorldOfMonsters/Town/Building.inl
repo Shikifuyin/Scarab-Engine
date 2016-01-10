@@ -47,27 +47,3 @@ inline UInt Building::GetCost() const {
     return m_iCost;
 }
 
-
-
-/////////////////////////////////////////////////////////////////////////////////
-// BuildingArcaneTower implementation
-
-/////////////////////////////////////////////////////////////////////////////////
-// BuildingEssenceStorage implementation
-inline UInt BuildingEssenceStorage::GetEssenceCount( MonsterElement iElement, EssenceType iType ) const {
-    Assert( iElement < MONSTER_ELEMENT_COUNT );
-    Assert( iType < ESSENCE_TYPE_COUNT );
-    return m_arrEssences[iElement][iType];
-}
-
-inline Void BuildingEssenceStorage::AddEssences( MonsterElement iElement, EssenceType iType, UInt iCount ) {
-    Assert( iElement < MONSTER_ELEMENT_COUNT );
-    Assert( iType < ESSENCE_TYPE_COUNT );
-    m_arrEssences[iElement][iType] += iCount;
-}
-inline Void BuildingEssenceStorage::RemoveEssences( MonsterElement iElement, EssenceType iType, UInt iCount ) {
-    Assert( iElement < MONSTER_ELEMENT_COUNT );
-    Assert( iType < ESSENCE_TYPE_COUNT );
-    Assert( m_arrEssences[iElement][iType] >= iCount )
-        m_arrEssences[iElement][iType] -= iCount;
-}

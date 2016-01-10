@@ -29,17 +29,24 @@
 /////////////////////////////////////////////////////////////////////////////////
 // Constants definitions
 
+    // Crystals
+#define BUILDING_CRYSTAL_PRODUCTION_RATE_UPGRADE_COST 300 // in glory points
+#define BUILDING_CRYSTAL_PRODUCTION_RATE_MAX_LEVEL    10
+
+#define BUILDING_CRYSTAL_CAPACITY_UPGRADE_COST 100 // in glory points
+#define BUILDING_CRYSTAL_CAPACITY_MAX_LEVEL    10
+
 /////////////////////////////////////////////////////////////////////////////////
 // The BuildingCrystal class
 class BuildingCrystal : public Building
 {
 public:
-    BuildingCrystal();
+    BuildingCrystal( BuildingDungeon * pDungeon );
     virtual ~BuildingCrystal();
 
     // Crystal production
     inline UInt GetProductionRateLevel() const;
-    inline Float GetProductionRate() const;
+    inline UInt GetProductionRate() const;
 
     Bool UpgradeProductionRate();
 
@@ -60,13 +67,13 @@ private:
 
     // Crystal production
     UInt m_iProductionRateLevel;
-    Float m_fProductionRate;
+    UInt m_iProductionRate; // in crystals / hour
 
     UInt m_iCapacityLevel;
     UInt m_iCapacity;
 
     UInt m_iCrystalBuffer;
-    Float m_fLastUpdateTime;
+    TimeValue m_hLastUpdateTime;
 };
 
 /////////////////////////////////////////////////////////////////////////////////

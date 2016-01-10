@@ -30,6 +30,9 @@ MonsterLevelingStats::MonsterLevelingStats()
 
     m_iNativeRank = 0;
 
+    for( UInt i = 0; i < MONSTER_SUMMONING_COST_COUNT; ++i )
+        m_arrSummoningCosts[i] = 0;
+
     m_iAwakeningBonus = MONSTER_AWAKENING_BONUS_COUNT;
     for( UInt i = 0; i < MONSTER_AWAKENING_COST_COUNT; ++i )
         m_arrAwakeningCosts[i] = 0;
@@ -66,6 +69,10 @@ Void MonsterLevelingStats::Load( XMLNode * pNode )
 
     m_iNativeRank = (UInt)( StringFn->ToUInt( pNode->GetAttribute(TEXT("NativeRank"))->GetValue() ) );
     Assert( m_iNativeRank < MONSTER_MAX_RANK - 1 ); // Native 6* are disallowed !
+
+    m_arrSummoningCosts[MONSTER_SUMMONING_ELEMENTAL] = (UInt)( StringFn->ToUInt( pNode->GetAttribute(TEXT("SummoningCost_ELT"))->GetValue() ) );
+    m_arrSummoningCosts[MONSTER_SUMMONING_CMN] = (UInt)( StringFn->ToUInt( pNode->GetAttribute(TEXT("SummoningCost_CMN"))->GetValue() ) );
+    m_arrSummoningCosts[MONSTER_SUMMONING_RAR] = (UInt)( StringFn->ToUInt( pNode->GetAttribute(TEXT("SummoningCost_RAR"))->GetValue() ) );
 
     m_iAwakeningBonus = (MonsterAwakeningBonus)( StringFn->ToUInt( pNode->GetAttribute(TEXT("AwakeningBonus"))->GetValue() ) );
     Assert( m_iAwakeningBonus < MONSTER_AWAKENING_BONUS_COUNT );

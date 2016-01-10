@@ -36,153 +36,67 @@ Building::~Building()
 }
 
 /////////////////////////////////////////////////////////////////////////////////
-// BuildingArcaneTower implementation
-BuildingArcaneTower::BuildingArcaneTower( UInt iInstanceIndex ):
-    Building( BUILDING_ARCANE_TOWER )
-{
-    // Cost
-    m_iCostType = BUILDING_COST_MANA;
-    m_iCost = 500 * (1 << iInstanceIndex);
 
-    // Index
-    m_iInstanceIndex = iInstanceIndex;
-}
-BuildingArcaneTower::~BuildingArcaneTower()
-{
-    // nothing to do
-}
+const GChar * Building::sm_arrNames[BUILDING_COUNT] = {
+    TEXT(""), // BUILDING_DUNGEON
+    TEXT(""), // BUILDING_ARCANE_TOWER
 
-/////////////////////////////////////////////////////////////////////////////////
-// BuildingEssenceStorage implementation
-BuildingEssenceStorage::BuildingEssenceStorage():
-    Building( BUILDING_ESSENCE_STORAGE )
-{
-    // No cost, built on start
-    m_iCostType = BUILDING_COST_MANA;
-    m_iCost = 1;
+    TEXT(""), // BUILDING_ESSENCE_STORAGE
 
-    // Essence storage
-    for( UInt i = 0; i < MONSTER_ELEMENT_COUNT; ++i ) {
-        for( UInt j = 0; j < ESSENCE_TYPE_COUNT; ++j )
-            m_arrEssences[i][j] = 0;
-    }
-}
-BuildingEssenceStorage::~BuildingEssenceStorage()
-{
-    // nothing to do
-}
+    TEXT(""), // BUILDING_MONSTER_STORAGE
+    TEXT(""), // BUILDING_MONSTER_SUMMONING
+    TEXT(""), // BUILDING_MONSTER_EVOLUTION
+    TEXT(""), // BUILDING_MONSTER_FUSION
+//  TEXT(""), // BUILDING_MONSTER_SKINS
 
-Bool BuildingEssenceStorage::CheckAwakeningCost( MonsterElement iElement, UInt arrCosts[MONSTER_AWAKENING_COST_COUNT] ) const
-{
-    Assert( iElement != MONSTER_ELEMENT_MAGIC );
-    Assert( iElement < MONSTER_ELEMENT_COUNT );
+    TEXT(""), // BUILDING_RUNE_STORAGE
+    TEXT(""), // BUILDING_RUNE_EVOLUTION
 
-    UInt iMagicCMN = arrCosts[MONSTER_AWAKENING_MAGIC_CMN];
-    if ( iMagicCMN & 0x80000000 ) {
-        iMagicCMN &= 0x7fffffff;
-        if ( iMagicCMN > m_arrEssences[MONSTER_ELEMENT_MAGIC][ESSENCE_MID] )
-            return false;
-    } else {
-        if ( iMagicCMN > m_arrEssences[MONSTER_ELEMENT_MAGIC][ESSENCE_LOW] )
-            return false;
-    }
+    TEXT(""), // BUILDING_MANA
+    TEXT(""), // BUILDING_CRYSTAL
 
-    UInt iMagicRAR = arrCosts[MONSTER_AWAKENING_MAGIC_RAR];
-    if ( iMagicRAR & 0x80000000 ) {
-        iMagicRAR &= 0x7fffffff;
-        if ( iMagicRAR > m_arrEssences[MONSTER_ELEMENT_MAGIC][ESSENCE_HIGH] )
-            return false;
-    } else {
-        if ( iMagicRAR > m_arrEssences[MONSTER_ELEMENT_MAGIC][ESSENCE_MID] )
-            return false;
-    }
+    TEXT(""), // BUILDING_SHOP
+    TEXT(""), // BUILDING_WISHES
 
-    UInt iElementCMN = arrCosts[MONSTER_AWAKENING_ELEMENTAL_CMN];
-    if ( iElementCMN & 0x80000000 ) {
-        iElementCMN &= 0x7fffffff;
-        if ( iElementCMN > m_arrEssences[iElement][ESSENCE_MID] )
-            return false;
-    } else {
-        if ( iElementCMN > m_arrEssences[iElement][ESSENCE_LOW] )
-            return false;
-    }
+    TEXT(""), // BUILDING_BONUS_MONSTERS_HP
+    TEXT(""), // BUILDING_BONUS_MONSTERS_ATT
+    TEXT(""), // BUILDING_BONUS_MONSTERS_ATT_ELEMENT
+    TEXT(""), // BUILDING_BONUS_MONSTERS_DEF
+    TEXT(""), // BUILDING_BONUS_MONSTERS_SPD
+    TEXT(""), // BUILDING_BONUS_MONSTERS_CRITDMG
 
-    UInt iElementRAR = arrCosts[MONSTER_AWAKENING_ELEMENTAL_RAR];
-    if ( iElementRAR & 0x80000000 ) {
-        iElementRAR &= 0x7fffffff;
-        if ( iElementRAR > m_arrEssences[iElement][ESSENCE_HIGH] )
-            return false;
-    } else {
-        if ( iElementRAR > m_arrEssences[iElement][ESSENCE_MID] )
-            return false;
-    }
+    TEXT(""), // BUILDING_BONUS_ARCANETOWERS_ATT
+    TEXT("")  // BUILDING_BONUS_ARCANETOWERS_SPD
+};
+const GChar * Building::sm_arrInfoTexts[BUILDING_COUNT] = {
+    TEXT(""), // BUILDING_DUNGEON
+    TEXT(""), // BUILDING_ARCANE_TOWER
 
-    return true;
-}
-Void BuildingEssenceStorage::PayAwakeningCost( MonsterElement iElement, UInt arrCosts[MONSTER_AWAKENING_COST_COUNT] )
-{
-    Assert( iElement != MONSTER_ELEMENT_MAGIC );
-    Assert( iElement < MONSTER_ELEMENT_COUNT );
+    TEXT(""), // BUILDING_ESSENCE_STORAGE
 
-    UInt iMagicCMN = arrCosts[MONSTER_AWAKENING_MAGIC_CMN];
-    if ( iMagicCMN & 0x80000000 ) {
-        iMagicCMN &= 0x7fffffff;
-        m_arrEssences[MONSTER_ELEMENT_MAGIC][ESSENCE_MID] -= iMagicCMN;
-    } else {
-        m_arrEssences[MONSTER_ELEMENT_MAGIC][ESSENCE_LOW] -= iMagicCMN;
-    }
+    TEXT(""), // BUILDING_MONSTER_STORAGE
+    TEXT(""), // BUILDING_MONSTER_SUMMONING
+    TEXT(""), // BUILDING_MONSTER_EVOLUTION
+    TEXT(""), // BUILDING_MONSTER_FUSION
+//  TEXT(""), // BUILDING_MONSTER_SKINS
 
-    UInt iMagicRAR = arrCosts[MONSTER_AWAKENING_MAGIC_RAR];
-    if ( iMagicRAR & 0x80000000 ) {
-        iMagicRAR &= 0x7fffffff;
-        m_arrEssences[MONSTER_ELEMENT_MAGIC][ESSENCE_HIGH] -= iMagicRAR;
-    } else {
-        m_arrEssences[MONSTER_ELEMENT_MAGIC][ESSENCE_MID] -= iMagicRAR;
-    }
+    TEXT(""), // BUILDING_RUNE_STORAGE
+    TEXT(""), // BUILDING_RUNE_EVOLUTION
 
-    UInt iElementCMN = arrCosts[MONSTER_AWAKENING_ELEMENTAL_CMN];
-    if ( iElementCMN & 0x80000000 ) {
-        iElementCMN &= 0x7fffffff;
-        m_arrEssences[iElement][ESSENCE_MID] -= iElementCMN;
-    } else {
-        m_arrEssences[iElement][ESSENCE_LOW] -= iElementCMN;
-    }
+    TEXT(""), // BUILDING_MANA
+    TEXT(""), // BUILDING_CRYSTAL
 
-    UInt iElementRAR = arrCosts[MONSTER_AWAKENING_ELEMENTAL_RAR];
-    if ( iElementRAR & 0x80000000 ) {
-        iElementRAR &= 0x7fffffff;
-        m_arrEssences[iElement][ESSENCE_HIGH] -= iElementRAR;
-    } else {
-        m_arrEssences[iElement][ESSENCE_MID] -= iElementRAR;
-    }
-}
+    TEXT(""), // BUILDING_SHOP
+    TEXT(""), // BUILDING_WISHES
 
-/////////////////////////////////////////////////////////////////////////////////
-// BuildingEssenceFusion implementation
-BuildingEssenceFusion::BuildingEssenceFusion( BuildingEssenceStorage * pEssenceStorage ):
-    Building( BUILDING_ESSENCE_FUSION )
-{
-    // Cost
-    m_iCostType = BUILDING_COST_MANA;
-    m_iCost = 100000;
+    TEXT(""), // BUILDING_BONUS_MONSTERS_HP
+    TEXT(""), // BUILDING_BONUS_MONSTERS_ATT
+    TEXT(""), // BUILDING_BONUS_MONSTERS_ATT_ELEMENT
+    TEXT(""), // BUILDING_BONUS_MONSTERS_DEF
+    TEXT(""), // BUILDING_BONUS_MONSTERS_SPD
+    TEXT(""), // BUILDING_BONUS_MONSTERS_CRITDMG
 
-    // Essence fusion
-    m_pEssenceStorage = pEssenceStorage;
-}
-BuildingEssenceFusion::~BuildingEssenceFusion()
-{
-    // nothing to do
-}
-
-Bool BuildingEssenceFusion::CanFuse( MonsterElement iElement, EssenceType iType ) const
-{
-    Assert( iType < ESSENCE_HIGH );
-    return ( m_pEssenceStorage->GetEssenceCount(iElement, iType) >= 10 );
-}
-Void BuildingEssenceFusion::Fuse( MonsterElement iElement, EssenceType iType ) const
-{
-    Assert( iType < ESSENCE_HIGH );
-    m_pEssenceStorage->RemoveEssences( iElement, iType, 10 );
-    m_pEssenceStorage->AddEssences( iElement, (EssenceType)(iType+1), 1 );
-}
+    TEXT(""), // BUILDING_BONUS_ARCANETOWERS_ATT
+    TEXT("")  // BUILDING_BONUS_ARCANETOWERS_SPD
+};
 

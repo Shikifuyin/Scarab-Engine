@@ -26,7 +26,7 @@
 /////////////////////////////////////////////////////////////////////////////////
 // BuildingDungeon implementation
 BuildingDungeon::BuildingDungeon():
-    Building( BUILDING_DUNGEON, BUILDING_COST_MANA, 1 )
+    Building( BUILDING_DUNGEON, BUILDING_COST_MANA, 1 ) // Built-in
 {
     // Currencies
     for( UInt i = 0; i < CURRENCY_COUNT; ++i )
@@ -34,7 +34,7 @@ BuildingDungeon::BuildingDungeon():
 
     // Monster collection
     m_iMonsterCollectionLevel = 0;
-    m_iMonsterCollectionRoom = 0;
+    m_iMonsterCollectionRoom = 5;
 
     m_arrMonsterCollection.UseMemoryContext( GameplayFn->GetMemoryContext(), TEXT("Scratch") );
     m_arrMonsterCollection.Create();
@@ -42,7 +42,7 @@ BuildingDungeon::BuildingDungeon():
 
     // Rune collection
     m_iRuneCollectionLevel = 0;
-    m_iRuneCollectionRoom = 0;
+    m_iRuneCollectionRoom = 16;
 
     for( UInt i = 0; i < RUNE_TYPE_COUNT; ++i ) {
         m_arrRuneCollection[i].UseMemoryContext( GameplayFn->GetMemoryContext(), TEXT("Scratch") );
@@ -60,25 +60,30 @@ BuildingDungeon::BuildingDungeon():
 BuildingDungeon::~BuildingDungeon()
 {
     // Monster collection
+    for( UInt i = 0; i < m_arrMonsterCollection.Count(); ++i )
+        GameplayFn->DestroyMonsterInstance( m_arrMonsterCollection[i] );
     m_arrMonsterCollection.Destroy();
 
     // Rune collection
-    for( UInt i = 0; i < RUNE_TYPE_COUNT; ++i )
-        m_arrRuneCollection[i].Destroy();
+    for( UInt i = 0; i < RUNE_TYPE_COUNT; ++i ) {
+        for( UInt j = 0; j < m_arrRuneStorage[i].Count(); ++j )
+            GameplayFn->DestroyRune( (m_arrRuneStorage[i])[j] );
+        m_arrRuneStorage[i].Destroy();
+    }
 }
 
 Bool BuildingDungeon::UpgradeMonsterCollectionRoom()
 {
     if ( m_iMonsterCollectionLevel >= BUILDING_MONSTER_COLLECTION_MAX_LEVEL )
         return false;
-    if ( m_arrCurrencies[CURRENCY_MANA] < 20000 )
+    if ( m_arrCurrencies[CURRENCY_MANA] < BUILDING_MONSTER_COLLECTION_UPGRADE_COST )
         return false;
 
     static UInt s_arrRoomByLevel[BUILDING_MONSTER_COLLECTION_MAX_LEVEL] = {
         5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100
     };
 
-    m_arrCurrencies[CURRENCY_MANA] -= 20000;
+    m_arrCurrencies[CURRENCY_MANA] -= BUILDING_MONSTER_COLLECTION_UPGRADE_COST;
 
     ++m_iMonsterCollectionLevel;
     m_iMonsterCollectionRoom = s_arrRoomByLevel[m_iMonsterCollectionLevel];
@@ -88,17 +93,19 @@ Bool BuildingDungeon::UpgradeMonsterCollectionRoom()
 Void BuildingDungeon::AddMonster( MonsterInstance * pMonster )
 {
     Assert( pMonster != NULL );
+
     Assert( m_arrMonsterCollection.Count() < m_iMonsterCollectionRoom );
 
     UInt iIndex = m_arrMonsterCollection.Search( _Compare_MonsterInstance, pMonster );
     m_arrMonsterCollection.Insert( iIndex, pMonster );
 }
-MonsterInstance * BuildingDungeon::UnSummonMonster( UInt iIndex )
+MonsterInstance * BuildingDungeon::RemoveMonster( UInt iIndex )
 {
     Assert( iIndex < m_arrMonsterCollection.Count() );
 
     MonsterInstance * pMonster = NULL;
     m_arrMonsterCollection.Remove( iIndex, pMonster );
+    Assert( pMonster != NULL );
 
     return pMonster;
 }
@@ -107,14 +114,14 @@ Bool BuildingDungeon::UpgradeRuneCollectionRoom()
 {
     if ( m_iRuneCollectionLevel >= BUILDING_RUNE_COLLECTION_MAX_LEVEL )
         return false;
-    if ( m_arrCurrencies[CURRENCY_MANA] < 20000 )
+    if ( m_arrCurrencies[CURRENCY_MANA] < BUILDING_RUNE_COLLECTION_UPGRADE_COST )
         return false;
 
     static UInt s_arrRoomByLevel[BUILDING_RUNE_COLLECTION_MAX_LEVEL] = {
         16, 32, 48, 64, 80, 96, 112, 128, 144, 160, 176, 192, 208, 224, 240, 256
     };
 
-    m_arrCurrencies[CURRENCY_MANA] -= 20000;
+    m_arrCurrencies[CURRENCY_MANA] -= BUILDING_RUNE_COLLECTION_UPGRADE_COST;
 
     ++m_iRuneCollectionLevel;
     m_iRuneCollectionRoom = s_arrRoomByLevel[m_iRuneCollectionLevel];
@@ -123,27 +130,26 @@ Bool BuildingDungeon::UpgradeRuneCollectionRoom()
 
 Void BuildingDungeon::AddRune( Rune * pRune )
 {
+    Assert( pRune != NULL );
+
     RuneType iType = pRune->GetType();
     Assert( iType < RUNE_TYPE_COUNT );
+
+    Assert( m_arrRuneCollection[iType].Count() < m_iRuneCollectionRoom );
 
     UInt iIndex = m_arrRuneCollection[iType].Search( _Compare_Rune, pRune );
     m_arrRuneCollection[iType].Insert( iIndex, pRune );
 }
-Void BuildingDungeon::SellRune( RuneType iType, UInt iIndex )
+Rune * BuildingDungeon::RemoveRune( RuneType iType, UInt iIndex )
 {
     Assert( iType < RUNE_TYPE_COUNT );
     Assert( iIndex < m_arrRuneCollection[iType].Count() );
 
     Rune * pRune = NULL;
     m_arrRuneCollection[iType].Remove( iIndex, pRune );
+    Assert( pRune != NULL );
 
-    // Ranges in [1000;375000], no random fluctuation for now ...
-    static Float s_arrTypeFactor[RUNE_TYPE_COUNT] = { 1.0f, 1.0f, 1.0f, 2.0f, 3.0f, 5.0f, 3.0f, 3.0f, 3.0f, 3.0f, 4.0f, 4.0f, 4.0f, 5.0f, 5.0f, 4.0f };
-    static Float s_arrRankFactor[RUNE_MAX_RANK]   = { 1.0f, 2.0f, 5.0f, 7.0f, 10.0f, 15.0f };
-    static Float s_arrLevelFactor[RUNE_MAX_LEVEL] = { 1.0f, 1.2f, 1.5f, 1.7f, 2.0f, 2.2f, 2.5f, 2.7f, 3.0f, 3.2f, 3.5f, 3.7f, 4.0f, 4.2f, 4.5f, 5.0f };
-
-    UInt iManaPrice = (UInt)( MathFn->Floor(1000.0f * s_arrTypeFactor[iType] * s_arrRankFactor[pRune->GetRank()] * s_arrLevelFactor[pRune->GetLevel()]) );
-    m_arrCurrencies[CURRENCY_MANA] += iManaPrice;
+    return pRune;
 }
 
 /////////////////////////////////////////////////////////////////////////////////

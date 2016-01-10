@@ -77,6 +77,15 @@ enum MonsterElement {
     MONSTER_ELEMENT_COUNT
 };
 
+// Summoning
+enum MonsterSummoningCost {
+    MONSTER_SUMMONING_ELEMENTAL = 0,
+    MONSTER_SUMMONING_CMN,
+    MONSTER_SUMMONING_RAR,
+
+    MONSTER_SUMMONING_COST_COUNT
+};
+
 // Awakening
 #define MONSTER_AWAKENING_BONUS_SPEED 1
 
@@ -117,6 +126,9 @@ public:
 
     inline UInt GetNativeRank() const;
 
+    inline Bool IsSummoningCostHighTier( MonsterSummoningCost iCost ) const;
+    inline UInt GetSummoningCostAmount( MonsterSummoningCost iCost ) const;
+
     inline MonsterAwakeningBonus GetAwakeningBonus() const;
     inline Bool IsAwakeningCostHighTier( MonsterAwakeningCost iCost ) const;
     inline UInt GetAwakeningCostAmount( MonsterAwakeningCost iCost ) const;
@@ -138,6 +150,8 @@ private:
     MonsterElement m_iElement;
 
     UInt m_iNativeRank;
+
+    UInt m_arrSummoningCosts[MONSTER_SUMMONING_COST_COUNT];
 
     MonsterAwakeningBonus m_iAwakeningBonus;
     UInt m_arrAwakeningCosts[MONSTER_AWAKENING_COST_COUNT]; // MSB => 0 = lows/mids, 1 = mids/highs
@@ -163,6 +177,10 @@ public:
     // Type & element access
     inline MonsterType GetType() const;
     inline MonsterElement GetElement() const;
+
+    // Summoning access
+    inline Bool IsSummoningCostHighTier( MonsterSummoningCost iCost ) const;
+    inline UInt GetSummoningCostAmount( MonsterSummoningCost iCost ) const;
 
     // Awakening access
     inline Bool IsAwakened() const;

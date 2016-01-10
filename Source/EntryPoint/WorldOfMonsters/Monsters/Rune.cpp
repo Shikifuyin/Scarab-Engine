@@ -328,6 +328,16 @@ Void Rune::RemoveBonus( RuneStat iStat )
     _UpdateStats();
 }
 
+UInt Rune::ComputeSellPrice() const
+{
+    // Ranges in [1000;375000], no random fluctuation for now ...
+    static Float s_arrTypeFactor[RUNE_TYPE_COUNT] = { 1.0f, 1.0f, 1.0f, 2.0f, 3.0f, 5.0f, 3.0f, 3.0f, 3.0f, 3.0f, 4.0f, 4.0f, 4.0f, 5.0f, 5.0f, 4.0f };
+    static Float s_arrRankFactor[RUNE_MAX_RANK]   = { 1.0f, 2.0f, 5.0f, 7.0f, 10.0f, 15.0f };
+    static Float s_arrLevelFactor[RUNE_MAX_LEVEL] = { 1.0f, 1.2f, 1.5f, 1.7f, 2.0f, 2.2f, 2.5f, 2.7f, 3.0f, 3.2f, 3.5f, 3.7f, 4.0f, 4.2f, 4.5f, 5.0f };
+
+    return (UInt)( MathFn->Floor(1000.0f * s_arrTypeFactor[m_iType] * s_arrRankFactor[m_iRank] * s_arrLevelFactor[m_iLevel]) );
+}
+
 /////////////////////////////////////////////////////////////////////////////////
 
 Void Rune::_UpdateStats()

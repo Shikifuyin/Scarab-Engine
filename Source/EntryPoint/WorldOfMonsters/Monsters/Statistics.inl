@@ -30,6 +30,15 @@ inline UInt MonsterLevelingStats::GetNativeRank() const {
     return m_iNativeRank;
 }
 
+inline Bool MonsterLevelingStats::IsSummoningCostHighTier( MonsterSummoningCost iCost ) const {
+    Assert( iCost < MONSTER_SUMMONING_COST_COUNT );
+    return ( (m_arrSummoningCosts[iCost] & 0x80000000) != 0 );
+}
+inline UInt MonsterLevelingStats::GetSummoningCostAmount( MonsterSummoningCost iCost ) const {
+    Assert( iCost < MONSTER_SUMMONING_COST_COUNT );
+    return ( m_arrSummoningCosts[iCost] & 0x7fffffff );
+}
+
 inline MonsterAwakeningBonus MonsterLevelingStats::GetAwakeningBonus() const {
     return m_iAwakeningBonus;
 }
@@ -92,6 +101,13 @@ inline MonsterType MonsterStats::GetType() const {
 }
 inline MonsterElement MonsterStats::GetElement() const {
     return m_pLevelingStats->GetElement();
+}
+
+inline Bool MonsterStats::IsSummoningCostHighTier( MonsterSummoningCost iCost ) const {
+    return m_pLevelingStats->IsSummoningCostHighTier( iCost );
+}
+inline UInt MonsterStats::GetSummoningCostAmount( MonsterSummoningCost iCost ) const {
+    return m_pLevelingStats->GetSummoningCostAmount( iCost );
 }
 
 inline Bool MonsterStats::IsAwakened() const {

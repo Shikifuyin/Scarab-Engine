@@ -87,6 +87,10 @@ public:
     inline MonsterType GetType() const;
     inline MonsterElement GetElement() const;
 
+    // Summoning access
+    inline Bool IsSummoningCostHighTier( MonsterSummoningCost iCost ) const;
+    inline UInt GetSummoningCostAmount( MonsterSummoningCost iCost ) const;
+
     // Awakening access
     inline Bool IsAwakened() const;
 

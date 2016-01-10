@@ -51,26 +51,15 @@ enum CurrencyType {
     CURRENCY_COUNT
 };
 
-    // Essences
-enum EssenceType {
-    ESSENCE_LOW = 0,
-    ESSENCE_MID,
-    ESSENCE_HIGH,
-
-    ESSENCE_TYPE_COUNT
-};
-
     // Monsters
-#define BUILDING_MONSTER_COLLECTION_MAX_LEVEL 20
-#define BUILDING_MONSTER_COLLECTION_MAX_ROOM  100 // 5 * 20
-#define BUILDING_MONSTER_STORAGE_MAX_LEVEL    50
-#define BUILDING_MONSTER_STORAGE_MAX_ROOM     500 // 10 * 50
+#define BUILDING_MONSTER_COLLECTION_UPGRADE_COST 30000 // in mana
+#define BUILDING_MONSTER_COLLECTION_MAX_LEVEL    20
+#define BUILDING_MONSTER_COLLECTION_MAX_ROOM     100 // 5 * 20
 
     // Runes
-#define BUILDING_RUNE_COLLECTION_MAX_LEVEL 16
-#define BUILDING_RUNE_COLLECTION_MAX_ROOM  256  // 16 * 16
-#define BUILDING_RUNE_STORAGE_MAX_LEVEL    64
-#define BUILDING_RUNE_STORAGE_MAX_ROOM     1024 // 16 * 64
+#define BUILDING_RUNE_COLLECTION_UPGRADE_COST 20000 // in mana
+#define BUILDING_RUNE_COLLECTION_MAX_LEVEL    16
+#define BUILDING_RUNE_COLLECTION_MAX_ROOM     256  // 16 * 16
 
     // Arena
 enum ArenaRank {
@@ -109,7 +98,7 @@ public:
     inline MonsterInstance * GetMonster( UInt iIndex ) const;
 
     Void AddMonster( MonsterInstance * pMonster );
-    MonsterInstance * UnSummonMonster( UInt iIndex ); // DANGER !!!
+    MonsterInstance * RemoveMonster( UInt iIndex );
 
     // Rune collection
     inline UInt GetRuneCollectionLevel() const;
@@ -121,7 +110,7 @@ public:
     inline Rune * GetRune( RuneType iType, UInt iIndex ) const;
 
     Void AddRune( Rune * pRune );
-    Void SellRune( RuneType iType, UInt iIndex );
+    Rune * RemoveRune( RuneType iType, UInt iIndex );
 
     // Arena state
     inline UInt GetArenaScore() const;
