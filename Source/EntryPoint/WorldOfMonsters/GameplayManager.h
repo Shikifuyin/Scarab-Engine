@@ -30,6 +30,8 @@
 // TODO : migrate those XMLs into a database !
 #include "../../Engine/Resource/ResourceManager.h"
 
+#include "GameParameters.h"
+
 #include "Monsters\Statistics.h"
 #include "Monsters\StatusEffect.h"
 #include "Monsters\Skill.h"
@@ -38,9 +40,14 @@
 
 #include "Battle\Battle.h"
 
+#include "Town\PlayerTown.h"
+
 /////////////////////////////////////////////////////////////////////////////////
 // Constants definitions
 #define GameplayFn GameplayManager::GetInstancePtr()
+
+// Parameter filr
+#define GAMEPLAY_PARAMETERS_FILE TEXT("GameParameters.xml")
 
 // Database paths
 #define MONSTER_XML_PATH TEXT("Monsters")
@@ -69,6 +76,18 @@ public:
 
     inline Bool CheckRandomEvent( Float fSuccessRate ) const;
 
+    // Name identifiers
+    inline const GChar * GetMonsterStatName( MonsterStatistic iStat ) const;
+
+
+
+
+    // GameParameters access
+    inline const GameParameters * GetGameParameters() const;
+
+
+
+
     // Skill database
     inline Skill * GetSkill( SkillID iSkillID ) const;
 
@@ -83,7 +102,10 @@ public:
 
 private:
     // Helpers
-    Void _LoadDatabase();
+    Void _LoadGameDatabase();
+
+    // Game parameters
+    GameParameters m_hParameters;
 
     // Skill database
     inline static Int _Compare_SkillIDs( const SkillID & rLeft, const SkillID & rRight, Void * pUserData );
@@ -96,6 +118,9 @@ private:
 
     typedef TreeMap<MonsterID,Monster*> MonsterMap;
     MonsterMap m_mapMonsters;
+
+    // World database
+
 };
 
 /////////////////////////////////////////////////////////////////////////////////

@@ -29,54 +29,12 @@
 /////////////////////////////////////////////////////////////////////////////////
 // Constants definitions
 
-    // Types
-enum BuildingType {
-    BUILDING_DUNGEON = 0, // World & Arena access
-    BUILDING_ARCANE_TOWER,
-
-    BUILDING_ESSENCE_STORAGE,
-
-    BUILDING_MONSTER_STORAGE,
-    BUILDING_MONSTER_SUMMONING,
-    BUILDING_MONSTER_EVOLUTION,
-    BUILDING_MONSTER_FUSION,
-    //BUILDING_MONSTER_SKINS,
-
-    BUILDING_RUNE_STORAGE,
-    BUILDING_RUNE_EVOLUTION,
-
-    BUILDING_MANA,
-    BUILDING_CRYSTAL,
-
-    BUILDING_SHOP,   // The only tiny randomized
-    BUILDING_WISHES, // part remaining !!!
-
-    BUILDING_BONUS_MONSTERS_HP,
-    BUILDING_BONUS_MONSTERS_ATT,
-    BUILDING_BONUS_MONSTERS_ATT_ELEMENT,
-    BUILDING_BONUS_MONSTERS_DEF,
-    BUILDING_BONUS_MONSTERS_SPD,
-    BUILDING_BONUS_MONSTERS_CRITDMG,
-
-    BUILDING_BONUS_ARCANETOWERS_ATT,
-    BUILDING_BONUS_ARCANETOWERS_SPD,
-
-    BUILDING_COUNT
-};
-
-    // Costs
-enum BuildingCostType {
-    BUILDING_COST_MANA = 0,
-    BUILDING_COST_CRYSTAL,
-    BUILDING_COST_GLORY
-};
-
     // Info texts
 #define BUILDING_INFO_TEXT_LENGTH 1024
 
 
+
     // Shop
-#define BUILDING_SHOP_MAX_LEVEL 10
 #define BUILDING_SHOP_MAX_ITEMS 20 // 2 * 10
 
 enum ShopItemType {
@@ -132,30 +90,6 @@ protected:
 
 
 
-/////////////////////////////////////////////////////////////////////////////////
-// The BuildingMonsterEvolution class
-class BuildingMonsterEvolution : public Building
-{
-public:
-    BuildingMonsterEvolution();
-    virtual ~BuildingMonsterEvolution();
-
-    // Monster evolution
-    inline Bool EvolutionUnlocked() const;
-
-    Bool CanPowerUp( UInt iTargetMonster, UInt arrFoodMonsters[5], UInt iFoodCount ) const;
-    Void PowerUp( UInt iTargetMonster, UInt arrFoodMonsters[5], UInt iFoodCount );
-
-    Bool CanEvolve( UInt iTargetMonster, UInt arrFoodMonsters[5], UInt iFoodCount ) const;
-    Void Evolve( UInt iTargetMonster, UInt arrFoodMonsters[5], UInt iFoodCount );
-
-private:
-    // Dungeon access
-    BuildingDungeon * m_pDungeon;
-
-    // Monster evolution
-    Bool m_bEvolutionUnlocked;
-};
 
 /////////////////////////////////////////////////////////////////////////////////
 // The BuildingMonsterFusion class

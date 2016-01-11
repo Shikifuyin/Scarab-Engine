@@ -21,231 +21,27 @@
 // Includes
 #include "Rune.h"
 
-/////////////////////////////////////////////////////////////////////////////////
-// RuneLevelingStats implementation
-RuneLevelingStats::RuneLevelingStats( XMLNode * pNode )
-{
-    Assert( StringFn->Cmp( pNode->GetTagName(), TEXT("RuneLevelingStats") ) == 0 );
-
-    // Extract data from the node
-    XMLNode * pHealthTableNode = pNode->GetChildByTag( TEXT("HealthTable"), 0 );
-    Assert( pHealthTableNode != NULL );
-    XMLNode * pHealthRatioTableNode = pNode->GetChildByTag( TEXT("HealthRatioTable"), 0 );
-    Assert( pHealthRatioTableNode != NULL );
-
-    XMLNode * pAttackTableNode = pNode->GetChildByTag( TEXT("AttackTable"), 0 );
-    Assert( pAttackTableNode != NULL );
-    XMLNode * pAttackRatioTableNode = pNode->GetChildByTag( TEXT("AttackRatioTable"), 0 );
-    Assert( pAttackRatioTableNode != NULL );
-
-    XMLNode * pDefenseTableNode = pNode->GetChildByTag( TEXT("DefenseTable"), 0 );
-    Assert( pDefenseTableNode != NULL );
-    XMLNode * pDefenseRatioTableNode = pNode->GetChildByTag( TEXT("DefenseRatioTable"), 0 );
-    Assert( pDefenseRatioTableNode != NULL );
-
-    XMLNode * pSpeedTableNode = pNode->GetChildByTag( TEXT("SpeedTable"), 0 );
-    Assert( pSpeedTableNode != NULL );
-
-    XMLNode * pCritRateTableNode = pNode->GetChildByTag( TEXT("CritRateTable"), 0 );
-    Assert( pCritRateTableNode != NULL );
-    XMLNode * pCritDmgTableNode = pNode->GetChildByTag( TEXT("CritDmgTable"), 0 );
-    Assert( pCritDmgTableNode != NULL );
-
-    XMLNode * pAccuracyTableNode = pNode->GetChildByTag( TEXT("AccuracyTable"), 0 );
-    Assert( pAccuracyTableNode != NULL );
-    XMLNode * pResistanceTableNode = pNode->GetChildByTag( TEXT("ResistanceTable"), 0 );
-    Assert( pResistanceTableNode != NULL );
-
-    GChar arrHealth[RUNE_MAX_LEVEL][16];
-    GChar arrHealthRatio[RUNE_MAX_LEVEL][16];
-
-    GChar arrAttack[RUNE_MAX_LEVEL][16];
-    GChar arrAttackRatio[RUNE_MAX_LEVEL][16];
-
-    GChar arrDefense[RUNE_MAX_LEVEL][16];
-    GChar arrDefenseRatio[RUNE_MAX_LEVEL][16];
-
-    GChar arrSpeed[RUNE_MAX_LEVEL][16];
-
-    GChar arrCritRate[RUNE_MAX_LEVEL][16];
-    GChar arrCritDmg[RUNE_MAX_LEVEL][16];
-
-    GChar arrAccuracy[RUNE_MAX_LEVEL][16];
-    GChar arrResistance[RUNE_MAX_LEVEL][16];
-
-    for( UInt i = 0; i < 3; ++i ) {
-        XMLNode * pHealthRankNode = pHealthTableNode->GetChild( i );
-        Assert( pHealthRankNode != NULL );
-        XMLNode * pHealthRatioRankNode = pHealthRatioTableNode->GetChild( i );
-        Assert( pHealthRatioRankNode != NULL );
-
-        XMLNode * pAttackRankNode = pAttackTableNode->GetChild( i );
-        Assert( pAttackRankNode != NULL );
-        XMLNode * pAttackRatioRankNode = pAttackRatioTableNode->GetChild( i );
-        Assert( pAttackRatioRankNode != NULL );
-
-        XMLNode * pDefenseRankNode = pDefenseTableNode->GetChild( i );
-        Assert( pDefenseRankNode != NULL );
-        XMLNode * pDefenseRatioRankNode = pDefenseRatioTableNode->GetChild( i );
-        Assert( pDefenseRatioRankNode != NULL );
-
-        XMLNode * pSpeedRankNode = pSpeedTableNode->GetChild( i );
-        Assert( pSpeedRankNode != NULL );
-
-        XMLNode * pCritRateRankNode = pCritRateTableNode->GetChild( i );
-        Assert( pCritRateRankNode != NULL );
-        XMLNode * pCritDmgRankNode = pCritDmgTableNode->GetChild( i );
-        Assert( pCritDmgRankNode != NULL );
-
-        XMLNode * pAccuracyRankNode = pAccuracyTableNode->GetChild( i );
-        Assert( pAccuracyRankNode != NULL );
-        XMLNode * pResistanceRankNode = pResistanceTableNode->GetChild( i );
-        Assert( pResistanceRankNode != NULL );
-
-        for( UInt j = 0; j < RUNE_MAX_RANK; ++j ) {
-            UInt iMaxLevel = RUNE_MAX_LEVELBYRANK( j );
-
-            XMLNode * pHealthListNode = pHealthRankNode->GetChild( j );
-            Assert( pHealthListNode != NULL && pHealthListNode->GetType() == XML_TEXT );
-            XMLNode * pHealthRatioListNode = pHealthRatioRankNode->GetChild( j );
-            Assert( pHealthRatioListNode != NULL && pHealthRatioListNode->GetType() == XML_TEXT );
-
-            XMLNode * pAttackListNode = pAttackRankNode->GetChild( j );
-            Assert( pAttackListNode != NULL && pAttackListNode->GetType() == XML_TEXT );
-            XMLNode * pAttackRatioListNode = pAttackRatioRankNode->GetChild( j );
-            Assert( pAttackRatioListNode != NULL && pAttackRatioListNode->GetType() == XML_TEXT );
-
-            XMLNode * pDefenseListNode = pDefenseRankNode->GetChild( j );
-            Assert( pDefenseListNode != NULL && pDefenseListNode->GetType() == XML_TEXT );
-            XMLNode * pDefenseRatioListNode = pDefenseRatioRankNode->GetChild( j );
-            Assert( pDefenseRatioListNode != NULL && pDefenseRatioListNode->GetType() == XML_TEXT );
-
-            XMLNode * pSpeedListNode = pSpeedRankNode->GetChild( j );
-            Assert( pSpeedListNode != NULL && pSpeedListNode->GetType() == XML_TEXT );
-
-            XMLNode * pCritRateListNode = pCritRateRankNode->GetChild( j );
-            Assert( pCritRateListNode != NULL && pCritRateListNode->GetType() == XML_TEXT );
-            XMLNode * pCritDmgListNode = pCritDmgRankNode->GetChild( j );
-            Assert( pCritDmgListNode != NULL && pCritDmgListNode->GetType() == XML_TEXT );
-
-            XMLNode * pAccuracyListNode = pAccuracyRankNode->GetChild( j );
-            Assert( pAccuracyListNode != NULL && pAccuracyListNode->GetType() == XML_TEXT );
-            XMLNode * pResistanceListNode = pResistanceRankNode->GetChild( j );
-            Assert( pResistanceListNode != NULL && pResistanceListNode->GetType() == XML_TEXT );
-
-            UInt iCount = StringFn->Split( (GChar**)arrHealth, iMaxLevel, 16, ((XMLText*)pHealthListNode)->GetText(), TEXT(','), true );
-            Assert( iCount == iMaxLevel );
-            iCount = StringFn->Split( (GChar**)arrHealthRatio, iMaxLevel, 16, ((XMLText*)pHealthRatioListNode)->GetText(), TEXT(','), true );
-            Assert( iCount == iMaxLevel );
-
-            iCount = StringFn->Split( (GChar**)arrAttack, iMaxLevel, 16, ((XMLText*)pAttackListNode)->GetText(), TEXT(','), true );
-            Assert( iCount == iMaxLevel );
-            iCount = StringFn->Split( (GChar**)arrAttackRatio, iMaxLevel, 16, ((XMLText*)pAttackRatioListNode)->GetText(), TEXT(','), true );
-            Assert( iCount == iMaxLevel );
-
-            iCount = StringFn->Split( (GChar**)arrDefense, iMaxLevel, 16, ((XMLText*)pDefenseListNode)->GetText(), TEXT(','), true );
-            Assert( iCount == iMaxLevel );
-            iCount = StringFn->Split( (GChar**)arrDefenseRatio, iMaxLevel, 16, ((XMLText*)pDefenseRatioListNode)->GetText(), TEXT(','), true );
-            Assert( iCount == iMaxLevel );
-
-            iCount = StringFn->Split( (GChar**)arrSpeed, iMaxLevel, 16, ((XMLText*)pSpeedListNode)->GetText(), TEXT(','), true );
-            Assert( iCount == iMaxLevel );
-
-            iCount = StringFn->Split( (GChar**)arrCritRate, iMaxLevel, 16, ((XMLText*)pCritRateListNode)->GetText(), TEXT(','), true );
-            Assert( iCount == iMaxLevel );
-            iCount = StringFn->Split( (GChar**)arrCritDmg, iMaxLevel, 16, ((XMLText*)pCritDmgListNode)->GetText(), TEXT(','), true );
-            Assert( iCount == iMaxLevel );
-
-            iCount = StringFn->Split( (GChar**)arrAccuracy, iMaxLevel, 16, ((XMLText*)pAccuracyListNode)->GetText(), TEXT(','), true );
-            Assert( iCount == iMaxLevel );
-            iCount = StringFn->Split( (GChar**)arrResistance, iMaxLevel, 16, ((XMLText*)pResistanceListNode)->GetText(), TEXT(','), true );
-            Assert( iCount == iMaxLevel );
-
-            for ( UInt k = 0; k < iMaxLevel; ++k ) {
-                m_arrHealthI[i][j][k] = (UInt)( StringFn->ToUInt( arrHealth[k] ) );
-                m_arrHealthF[i][j][k] = StringFn->ToFloat( arrHealthRatio[k] );
-
-                m_arrAttackI[i][j][k] = (UInt)( StringFn->ToUInt( arrAttack[k] ) );
-                m_arrAttackF[i][j][k] = StringFn->ToFloat( arrAttackRatio[k] );
-
-                m_arrDefenseI[i][j][k] = (UInt)( StringFn->ToUInt( arrDefense[k] ) );
-                m_arrDefenseF[i][j][k] = StringFn->ToFloat( arrDefenseRatio[k] );
-
-                m_arrSpeed[i][j][k] = (UInt)( StringFn->ToUInt( arrSpeed[k] ) );
-
-                m_arrCritRate[i][j][k] = StringFn->ToFloat( arrCritRate[k] );
-                m_arrCritDmg[i][j][k] = StringFn->ToFloat( arrCritDmg[k] );
-
-                m_arrAccuracy[i][j][k] = StringFn->ToFloat( arrAccuracy[k] );
-                m_arrResistance[i][j][k] = StringFn->ToFloat( arrResistance[k] );
-            }
-        }
-    }
-}
-RuneLevelingStats::~RuneLevelingStats()
-{
-    // nothing to do
-}
-
-UInt RuneLevelingStats::GetSetCount( RuneType iType )
-{
-    Assert( iType < RUNE_TYPE_COUNT );
-    static UInt s_arrSetCounts[RUNE_TYPE_COUNT] = {
-        2, 4, 2, 4,
-        2, 4, 2, 2,
-        2, 2, 2, 2,
-        4, 4, 4, 2
-    };
-    return s_arrSetCounts[iType];
-}
-
-/////////////////////////////////////////////////////////////////////////////////
-
-const Byte RuneLevelingStats::sm_arrAllowedSlots[2][MONSTER_STAT_COUNT] = {
-    { // flat
-        0x3f, // MONSTER_STAT_HEALTH
-        0x3f, // MONSTER_STAT_ATTACK
-        0x3f, // MONSTER_STAT_DEFENSE
-        0x02, // MONSTER_STAT_SPEED
-        0x00, // MONSTER_STAT_CRIT_RATE  (doesn't exist)
-        0x00, // MONSTER_STAT_CRIT_DMG   (doesn't exist)
-        0x00, // MONSTER_STAT_ACCURACY   (doesn't exist)
-        0x00  // MONSTER_STAT_RESISTANCE (doesn't exist)
-    },
-    { // ratio
-        0x2a, // MONSTER_STAT_HEALTH
-        0x2a, // MONSTER_STAT_ATTACK
-        0x2a, // MONSTER_STAT_DEFENSE
-        0x00, // MONSTER_STAT_SPEED (doesn't exist)
-        0x08, // MONSTER_STAT_CRIT_RATE
-        0x08, // MONSTER_STAT_CRIT_DMG
-        0x20, // MONSTER_STAT_ACCURACY
-        0x20  // MONSTER_STAT_RESISTANCE
-    }
-};
+#include "../GameplayManager.h"
 
 /////////////////////////////////////////////////////////////////////////////////
 // Rune implementation
-Rune::Rune( const RuneLevelingStats * pLevelingStats, RuneType iType, UInt iSlot )
+Rune::Rune( RuneType iType, UInt iSlot )
 {
-    m_pLevelingStats = pLevelingStats;
-
     m_iType = iType;
     m_iSlot = iSlot;
-
-    m_bEquipped = false;
 
     m_iRank = 0;
     m_iLevel = 0;
 
-    m_iBonusCount = 1;
+    m_iQuality = RUNE_QUALITY_COMMON;
+    m_iBonusCount = 0;
     for( UInt i = 0; i < RUNE_STAT_COUNT; ++i ) {
         m_arrBonusTypes[i] = MONSTER_STAT_COUNT;
         m_arrIsBonusRatio[i] = false;
         m_arrBonusValues[i].iValue = 0;
     }
 
-    _UpdateStats();
+    m_bEquipped = false;
 }
 Rune::~Rune()
 {
@@ -279,7 +75,7 @@ Void Rune::SetRank( UInt iRank )
 
 UInt Rune::LevelUp()
 {
-    if ( m_iLevel < (RUNE_MAX_LEVELBYRANK(m_iRank) - 1) ) {
+    if ( m_iLevel < (RUNE_MAX_LEVEL - 1) ) {
         ++m_iLevel;
         _UpdateStats();
     }
@@ -295,17 +91,17 @@ UInt Rune::LevelDown()
 }
 Void Rune::SetLevel( UInt iLevel )
 {
-    Assert( iLevel < MONSTER_MAX_LEVELBYRANK(m_iRank) );
+    Assert( iLevel < RUNE_MAX_LEVEL );
     if ( m_iLevel != iLevel ) {
         m_iLevel = iLevel;
         _UpdateStats();
     }
 }
 
-Void Rune::AddBonus( RuneStat iStat, MonsterStatistic iStatType, Bool bRatio )
+Void Rune::AddBonus( RuneStatistic iStat, MonsterStatistic iStatType, Bool bRatio )
 {
     Assert( iStat < RUNE_STAT_COUNT );
-    Assert( RuneLevelingStats::IsSlotAllowed(m_iSlot, iStatType, bRatio) );
+    Assert( GameplayFn->GetGameParameters()->IsSlotAllowed(m_iSlot, iStatType, bRatio) );
 
     if ( m_arrBonusTypes[iStat] == MONSTER_STAT_COUNT )
         ++m_iBonusCount;
@@ -315,7 +111,7 @@ Void Rune::AddBonus( RuneStat iStat, MonsterStatistic iStatType, Bool bRatio )
     
     _UpdateStats();
 }
-Void Rune::RemoveBonus( RuneStat iStat )
+Void Rune::RemoveBonus( RuneStatistic iStat )
 {
     Assert( iStat < RUNE_STAT_COUNT );
 
@@ -342,32 +138,7 @@ UInt Rune::ComputeSellPrice() const
 
 Void Rune::_UpdateStats()
 {
-    // Update primary bonus
-    if ( m_arrBonusTypes[RUNE_STAT_PRIMARY] != MONSTER_STAT_COUNT ) {
-        if ( m_arrIsBonusRatio[RUNE_STAT_PRIMARY] )
-            m_arrBonusValues[RUNE_STAT_PRIMARY].fValue = m_pLevelingStats->GetStatPrimaryF( m_arrBonusTypes[RUNE_STAT_PRIMARY], m_iRank, m_iLevel );
-        else
-            m_arrBonusValues[RUNE_STAT_PRIMARY].iValue = m_pLevelingStats->GetStatPrimaryI( m_arrBonusTypes[RUNE_STAT_PRIMARY], m_iRank, m_iLevel );
-    }
-
-    // Update secondary bonus
-    if ( m_arrBonusTypes[RUNE_STAT_SECONDARY] != MONSTER_STAT_COUNT ) {
-        if ( m_arrIsBonusRatio[RUNE_STAT_SECONDARY] )
-            m_arrBonusValues[RUNE_STAT_SECONDARY].fValue = m_pLevelingStats->GetStatSecondaryF( m_arrBonusTypes[RUNE_STAT_SECONDARY], m_iRank, m_iLevel );
-        else
-            m_arrBonusValues[RUNE_STAT_SECONDARY].iValue = m_pLevelingStats->GetStatSecondaryI( m_arrBonusTypes[RUNE_STAT_SECONDARY], m_iRank, m_iLevel );
-    }
-
-    // Update substat bonuses
-    for ( UInt i = 0; i < 4; ++i ) {
-        RuneStat iStat = (RuneStat)( RUNE_STAT_SUB_1 + i );
-        if ( m_arrBonusTypes[iStat] != MONSTER_STAT_COUNT ) {
-            if ( m_arrIsBonusRatio[iStat] )
-                m_arrBonusValues[iStat].fValue = m_pLevelingStats->GetStatSubF( m_arrBonusTypes[iStat], m_iRank, m_iLevel );
-            else
-                m_arrBonusValues[iStat].iValue = m_pLevelingStats->GetStatSubI( m_arrBonusTypes[iStat], m_iRank, m_iLevel );
-        }
-    }
+    RuneLevelingStats  * pLevelingStats = GameplayFn->GetRuneLevelingStats();
 
     // Update quality
     if ( m_iLevel >= 12 || m_iBonusCount >= 6 )
@@ -382,6 +153,33 @@ Void Rune::_UpdateStats()
         m_iQuality = RUNE_QUALITY_UNCOMMON;
     else
         m_iQuality = RUNE_QUALITY_COMMON;
+
+    // Update primary bonus
+    if ( m_arrBonusTypes[RUNE_STAT_PRIMARY] != MONSTER_STAT_COUNT ) {
+        if ( m_arrIsBonusRatio[RUNE_STAT_PRIMARY] )
+            m_arrBonusValues[RUNE_STAT_PRIMARY].fValue = pLevelingStats->GetPrimaryStatF( m_arrBonusTypes[RUNE_STAT_PRIMARY], m_iRank, m_iLevel );
+        else
+            m_arrBonusValues[RUNE_STAT_PRIMARY].iValue = pLevelingStats->GetPrimaryStatI( m_arrBonusTypes[RUNE_STAT_PRIMARY], m_iRank, m_iLevel );
+    }
+
+    // Update secondary bonus
+    if ( m_arrBonusTypes[RUNE_STAT_SECONDARY] != MONSTER_STAT_COUNT ) {
+        if ( m_arrIsBonusRatio[RUNE_STAT_SECONDARY] )
+            m_arrBonusValues[RUNE_STAT_SECONDARY].fValue = pLevelingStats->GetSecondaryStatF( m_arrBonusTypes[RUNE_STAT_SECONDARY], m_iRank, m_iLevel );
+        else
+            m_arrBonusValues[RUNE_STAT_SECONDARY].iValue = pLevelingStats->GetSecondaryStatI( m_arrBonusTypes[RUNE_STAT_SECONDARY], m_iRank, m_iLevel );
+    }
+
+    // Update substat bonuses
+    for ( UInt i = 0; i < 4; ++i ) {
+        RuneStatistic iStat = (RuneStatistic)( RUNE_STAT_SUB_1 + i );
+        if ( m_arrBonusTypes[iStat] != MONSTER_STAT_COUNT ) {
+            if ( m_arrIsBonusRatio[iStat] )
+                m_arrBonusValues[iStat].fValue = pLevelingStats->GetSubStatF( m_arrBonusTypes[iStat], m_iRank, m_iLevel );
+            else
+                m_arrBonusValues[iStat].iValue = pLevelingStats->GetSubStatI( m_arrBonusTypes[iStat], m_iRank, m_iLevel );
+        }
+    }
 }
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -446,7 +244,7 @@ Void RuneSet::CompileStats( UInt arrFlatBonuses[4], Float arrRatioBonuses[3], Fl
 
         // Enumerate all stats
         for( UInt j = 0; j < RUNE_STAT_COUNT; ++j ) {
-            RuneStat iRuneStat = (RuneStat)j;
+            RuneStatistic iRuneStat = (RuneStatistic)j;
             MonsterStatistic iBonusStat = pRune->GetBonusType( iRuneStat );
             if ( iBonusStat == MONSTER_STAT_COUNT )
                 continue;
@@ -491,31 +289,34 @@ Void RuneSet::CompileStats( UInt arrFlatBonuses[4], Float arrRatioBonuses[3], Fl
     }
 
     // Add relevant set bonuses
+    const GameParameters * pGameParams = GameplayFn->GetGameParameters();
+
     for( UInt i = 0; i < m_iSetBonusCount; ++i ) {
+        Float fSetBonus = pGameParams->GetRuneSetStatBonus( m_arrSetBonuses[i] );
         switch( m_arrSetBonuses[i] ) {
             case RUNE_ENERGY:
-                arrRatioBonuses[0] += 0.15f;
+                arrRatioBonuses[0] += fSetBonus;
                 break;
             case RUNE_FATAL:
-                arrRatioBonuses[1] += 0.35f;
+                arrRatioBonuses[1] += fSetBonus;
                 break;
             case RUNE_GUARD:
-                arrRatioBonuses[2] += 0.15f;
+                arrRatioBonuses[2] += fSetBonus;
                 break;
             case RUNE_SWIFT:
-                arrFlatBonuses[3] += 25;
+                arrFlatBonuses[3] += fSetBonus;
                 break;
             case RUNE_BLADE:
-                arrSecondaryBonuses[0] += 0.12f;
+                arrSecondaryBonuses[0] += fSetBonus;
                 break;
             case RUNE_RAGE:
-                arrSecondaryBonuses[1] += 0.40f;
+                arrSecondaryBonuses[1] += fSetBonus;
                 break;
             case RUNE_FOCUS:
-                arrSecondaryBonuses[2] += 0.20f;
+                arrSecondaryBonuses[2] += fSetBonus;
                 break;
             case RUNE_ENDURE:
-                arrSecondaryBonuses[3] += 0.20f;
+                arrSecondaryBonuses[3] += fSetBonus;
                 break;
             default: // not a stat bonus, do nothing for now
                 break;
@@ -542,8 +343,10 @@ Void RuneSet::_UpdateSetBonuses()
     }
 
     // Check occurence counts against set thresholds for each type, account for multiple instances
+    const GameParameters * pGameParams = GameplayFn->GetGameParameters();
+
     for( UInt i = 0; i < RUNE_TYPE_COUNT; ++i ) {
-        UInt iSetCount = RuneLevelingStats::GetSetCount( (RuneType)i );
+        UInt iSetCount = pGameParams->GetSetCount( (RuneType)i );
         while( arrCounts[i] >= iSetCount ) {
             m_arrSetBonuses[m_iSetBonusCount] = (RuneType)i;
             ++m_iSetBonusCount;

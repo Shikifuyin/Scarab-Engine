@@ -29,15 +29,6 @@
 /////////////////////////////////////////////////////////////////////////////////
 // Constants definitions
 
-    // Essences
-enum EssenceType {
-    ESSENCE_LOW = 0,
-    ESSENCE_MID,
-    ESSENCE_HIGH,
-
-    ESSENCE_TYPE_COUNT
-};
-
     // Essence storage
 #define BUILDING_ESSENCE_STORAGE_UNLOCK_COST_AWAKENING 25000 // in mana
 #define BUILDING_ESSENCE_STORAGE_UNLOCK_COST_FUSION    50000 // in mana

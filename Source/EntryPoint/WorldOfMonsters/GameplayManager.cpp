@@ -46,7 +46,7 @@ Void GameplayManager::Initialize()
     m_mapMonsters.SetComparator( _Compare_MonsterIDs );
     m_mapMonsters.Create();
 
-    _LoadDatabase();
+    _LoadGameDatabase();
 }
 Void GameplayManager::Cleanup()
 {
@@ -65,7 +65,24 @@ Void GameplayManager::Cleanup()
 
 /////////////////////////////////////////////////////////////////////////////////
 
-Void GameplayManager::_LoadDatabase()
+Void GameplayManager::_LoadGameParameters()
+{
+    SelectMemory( TEXT("Scratch") );
+
+    // Get parameter file
+    XMLDocument * pParameterFile = XMLDocument::CreateDocument( GAMEPLAY_PARAMETERS_FILE );
+    Assert( StringFn->Cmp(pParameterFile->GetTagName(), TEXT("GameplayParameters")) == 0 );
+    Assert( pParameterFile != NULL );
+
+    // Extract global parameters
+    XMLNode * pGlobalParamsNode = pParameterFile->GetChildByTag( TEXT("Global"), 0 );
+    Assert( pGlobalParamsNode != NULL );
+
+    
+
+    UnSelectMemory();
+}
+Void GameplayManager::_LoadGameDatabase()
 {
     SelectMemory( TEXT("Scratch") );
 

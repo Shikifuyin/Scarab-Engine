@@ -35,24 +35,7 @@
 #define SKILL_NAME_LENGTH 64
 typedef UInt SkillID;
 
-// Skill leveling
-#define SKILL_MAX_LEVEL 16
 
-enum SkillStat {
-    SKILL_STAT_DAMAGE = 0,
-    SKILL_STAT_RECOVERY,
-    SKILL_STAT_STATUSEFFECTRATE,
-    SKILL_STAT_COOLDOWN,
-
-    SKILL_STAT_SPECIFIC, // Shields, etc ...
-
-    SKILL_STAT_COUNT
-};
-
-typedef struct _skilllevel_bonus {
-    SkillStat iStat;
-    Float fAmount;
-} SkillLevelBonus;
 
 // Skill types
 enum SkillType {
@@ -123,11 +106,6 @@ public:
     inline UInt GetMaxLevel() const;
     inline const SkillLevelBonus * GetLevelBonus( UInt iLevel ) const;
 
-    // Awakening
-    inline Bool RequiresAwakening() const;
-    inline Bool HasAwakeningUpgrade() const;
-    inline SkillID GetAwakeningUpgrade() const;
-
 protected:
     // Helpers
     static SkillType _SkillType_FromString( const GChar * strValue );
@@ -145,13 +123,7 @@ protected:
     UInt m_iCooldown;
 
     // Leveling stats
-    UInt m_iMaxLevel; // 0 = no level (leader, most passives)
-    SkillLevelBonus m_arrLevelBonus[SKILL_MAX_LEVEL];
-
-    // Awakening
-    Bool m_bRequiresAwakening;
-    Bool m_bHasAwakeningUpgrade;
-    SkillID m_iAwakeningUpgradeID; // INVALID_OFFSET = none
+    
 };
 
 /////////////////////////////////////////////////////////////////////////////////

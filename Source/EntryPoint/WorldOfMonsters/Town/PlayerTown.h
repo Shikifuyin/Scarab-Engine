@@ -25,6 +25,19 @@
 /////////////////////////////////////////////////////////////////////////////////
 // Includes
 #include "Building.h"
+#include "BuildingDungeon.h"
+#include "BuildingEssenceStorage.h"
+#include "BuildingMonsterStorage.h"
+#include "BuildingMonsterSummoning.h"
+#include "BuildingMonsterEvolution.h"
+#include "BuildingMonsterFusion.h"
+#include "BuildingRuneStorage.h"
+#include "BuildingRuneEvolution.h"
+#include "BuildingMana.h"
+#include "BuildingCrystal.h"
+#include "BuildingShop.h"
+#include "BuildingWishes.h"
+#include "BuildingBonus.h"
 
 /////////////////////////////////////////////////////////////////////////////////
 // Constants definitions
