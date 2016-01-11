@@ -86,7 +86,7 @@ public:
     inline const GameParameters * GetGameParameters() const;
 
 
-
+    inline RuneLevelingStats * GetRuneLevelingStats() const;
 
     // Skill database
     inline Skill * GetSkill( SkillID iSkillID ) const;

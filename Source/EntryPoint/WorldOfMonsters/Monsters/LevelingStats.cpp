@@ -54,7 +54,7 @@ Void MonsterLevelingStats::Load( XMLNode * pNode )
     // Extract data from the node
     m_iSpeed = (UInt)( StringFn->ToUInt( pNode->GetAttribute(TEXT("BaseSpeed"))->GetValue() ) );
 
-    m_iAwakeningBonus = (MonsterAwakeningBonus)( StringFn->ToUInt( pNode->GetAttribute(TEXT("AwakeningBonus"))->GetValue() ) );
+    m_iAwakeningBonus = _MonsterAwakeningBonus_FromString( pNode->GetAttribute(TEXT("AwakeningBonus"))->GetValue() );
     Assert( m_iAwakeningBonus < MONSTER_AWAKENING_BONUS_COUNT );
 
     XMLNode * pHealthTableNode = pNode->GetChildByTag( TEXT("HealthTable"), 0 );
@@ -316,8 +316,6 @@ Void RuneLevelingStats::Load( XMLNode * pNode )
         Assert( pSubListNodeF != NULL );
 
         for( UInt j = 0; j < RUNE_MAX_RANK; ++j ) {
-            UInt iMaxLevel = RUNE_MAX_LEVELBYRANK( j );
-
             StringFn->Format( strRankNodeName, TEXT("Rank_%d"), j );
 
             XMLNode * pPrimaryNodeI = pPrimaryListNodeI->GetChildByTag( strRankNodeName, 0 );
@@ -335,22 +333,22 @@ Void RuneLevelingStats::Load( XMLNode * pNode )
             XMLNode * pSubNodeF = pSubListNodeF->GetChildByTag( strRankNodeName, 0 );
             Assert( pSubNodeF != NULL && pSubNodeF->GetType() == XML_TEXT );
 
-            UInt iCount = StringFn->Split( (GChar**)arrPrimaryStatI, iMaxLevel, 16, ((XMLText*)pPrimaryNodeI)->GetText(), TEXT(','), true );
-            Assert( iCount == iMaxLevel );
-            iCount = StringFn->Split( (GChar**)arrPrimaryStatF, iMaxLevel, 16, ((XMLText*)pPrimaryNodeF)->GetText(), TEXT(','), true );
-            Assert( iCount == iMaxLevel );
+            UInt iCount = StringFn->Split( (GChar**)arrPrimaryStatI, RUNE_MAX_LEVEL, 16, ((XMLText*)pPrimaryNodeI)->GetText(), TEXT(','), true );
+            Assert( iCount == RUNE_MAX_LEVEL );
+            iCount = StringFn->Split( (GChar**)arrPrimaryStatF, RUNE_MAX_LEVEL, 16, ((XMLText*)pPrimaryNodeF)->GetText(), TEXT(','), true );
+            Assert( iCount == RUNE_MAX_LEVEL );
 
-            iCount = StringFn->Split( (GChar**)arrSecondaryStatI, iMaxLevel, 16, ((XMLText*)pSecondaryNodeI)->GetText(), TEXT(','), true );
-            Assert( iCount == iMaxLevel );
-            iCount = StringFn->Split( (GChar**)arrSecondaryStatF, iMaxLevel, 16, ((XMLText*)pSecondaryNodeF)->GetText(), TEXT(','), true );
-            Assert( iCount == iMaxLevel );
+            iCount = StringFn->Split( (GChar**)arrSecondaryStatI, RUNE_MAX_LEVEL, 16, ((XMLText*)pSecondaryNodeI)->GetText(), TEXT(','), true );
+            Assert( iCount == RUNE_MAX_LEVEL );
+            iCount = StringFn->Split( (GChar**)arrSecondaryStatF, RUNE_MAX_LEVEL, 16, ((XMLText*)pSecondaryNodeF)->GetText(), TEXT(','), true );
+            Assert( iCount == RUNE_MAX_LEVEL );
 
-            iCount = StringFn->Split( (GChar**)arrSubStatI, iMaxLevel, 16, ((XMLText*)pSubNodeI)->GetText(), TEXT(','), true );
-            Assert( iCount == iMaxLevel );
-            iCount = StringFn->Split( (GChar**)arrSubStatF, iMaxLevel, 16, ((XMLText*)pSubNodeF)->GetText(), TEXT(','), true );
-            Assert( iCount == iMaxLevel );
+            iCount = StringFn->Split( (GChar**)arrSubStatI, RUNE_MAX_LEVEL, 16, ((XMLText*)pSubNodeI)->GetText(), TEXT(','), true );
+            Assert( iCount == RUNE_MAX_LEVEL );
+            iCount = StringFn->Split( (GChar**)arrSubStatF, RUNE_MAX_LEVEL, 16, ((XMLText*)pSubNodeF)->GetText(), TEXT(','), true );
+            Assert( iCount == RUNE_MAX_LEVEL );
 
-            for( UInt k = 0; k < iMaxLevel; ++k ) {
+            for( UInt k = 0; k < RUNE_MAX_LEVEL; ++k ) {
                 m_arrPrimaryStatsI[i][j][k] = (UInt)( StringFn->ToUInt(arrPrimaryStatI[k]) );
                 m_arrPrimaryStatsF[i][j][k] = StringFn->ToFloat( arrPrimaryStatF[k] );
 

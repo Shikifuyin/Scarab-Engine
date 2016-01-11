@@ -24,7 +24,7 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // Includes
-#include "Statistics.h"
+#include "../GameParameters.h"
 
 /////////////////////////////////////////////////////////////////////////////////
 // Constants definitions
@@ -66,7 +66,7 @@ class StatusEffect
 {
 public:
     StatusEffect();
-    StatusEffect( StatusEffectType iType, Bool bRemovable, Float fAmplitude, UInt iMaxStacks, UInt iStackCount, UInt iDuration );
+    StatusEffect( StatusEffectType iType );
     StatusEffect( const StatusEffect & rhs );
     ~StatusEffect();
 
@@ -77,32 +77,26 @@ public:
     inline Bool IsNull() const;
     inline Bool IsPresent() const;
 
-    // Type access
+    // Type
     inline Bool IsBuff() const;
     inline Bool IsDebuff() const;
     inline Bool IsDisabling() const;
 
     inline StatusEffectType GetType() const;
 
-    // Properties access
-    inline Bool IsRemovable() const;
-    inline Float GetAmplitude() const;
-
-    inline Void SetRemovable( Bool bRemovable );
-    inline Void SetAmplitude( Float fAmplitude );
-
-    // Stacks access
+    // Stacks
     inline Bool IsStackable() const;
     inline UInt GetMaxStacks() const;
     inline UInt GetStackCount() const;
 
-    inline Void SetMaxStacks( UInt iMaxStacks );
-
-    Void AddStacks( UInt iStackCount, UInt iDuration );
+    Void AddStacks( UInt iStackCount, UInt iDuration, Float fAmplitude );
     Void RemoveStacks( UInt iStackCount );
-    Bool RemoveExpiredStacks();
+    Bool RemoveAllStacks();
 
-    // Durations access
+    Bool UpdateStackDurations();
+    Void RemoveExpiredStacks();
+
+    // Duration
     inline Bool IsExpired( UInt iStack ) const;
     inline UInt GetDuration( UInt iStack ) const;
 
@@ -111,21 +105,29 @@ public:
     inline Void SetDuration( UInt iStack, UInt iAmount );
     inline Void ResetDuration( UInt iStack );
 
+    // Amplitude
+    inline Bool IsExhausted( UInt iStack ) const;
+    inline Float GetAmplitude( UInt iStack ) const;
+
+    inline Void IncreaseAmplitude( UInt iStack, UInt iAmount );
+    inline Void DecreaseAmplitude( UInt iStack, UInt iAmount );
+    inline Void SetAmplitude( UInt iStack, Float fAmplitude );
+    inline Void ResetAmplitude( UInt iStack );
+
 protected:
     // Helpers
-    static Bool sm_arrIsStackable[STATUSEFFECT_COUNT];
+    static UInt sm_arrMaxStacks[STATUSEFFECT_COUNT];
 
     // Type
     StatusEffectType m_iType;
 
-    // Properties
-    Bool m_bRemovable;
-    Float m_fAmplitude;
-
-    // Stacks & durations
+    // Stacks
     UInt m_iMaxStacks;
     UInt m_iStackCount;
+
+    // Properties
     UInt m_arrDurations[STATUSEFFECT_MAX_STACKS];
+    Float m_arrAmplitudes[STATUSEFFECT_MAX_STACKS];
 };
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -136,17 +138,18 @@ public:
     StatusEffectSet();
     ~StatusEffectSet();
 
+    // Status effects access
     inline Bool HasStatusEffect( StatusEffectType iType ) const;
-
     inline StatusEffect * GetStatusEffect( StatusEffectType iType );
 
-    Void Add( StatusEffectType iType, Bool bRemovable, Float fAmplitude, UInt iMaxStacks, UInt iStackCount, UInt iDuration );
+    Void Add( StatusEffectType iType, Float fAmplitude, UInt iMaxStacks, UInt iStackCount, UInt iDuration );
     Void Remove( StatusEffectType iType, UInt iStackCount );
-    Void RemoveExpiredStatusEffects();
     Void RemoveAll();
     
+    Void RemoveExpired();
+
 private:
-    // Status effect map
+    // Status effects map
     StatusEffect m_arrEffects[STATUSEFFECT_COUNT];
 };
 

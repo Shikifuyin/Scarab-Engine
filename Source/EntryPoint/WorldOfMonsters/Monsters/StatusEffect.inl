@@ -40,35 +40,14 @@ inline StatusEffectType StatusEffect::GetType() const {
     return m_iType;
 }
 
-inline Bool StatusEffect::IsRemovable() const {
-    return m_bRemovable;
-}
-inline Float StatusEffect::GetAmplitude() const {
-    return m_fAmplitude;
-}
-
-inline Void StatusEffect::SetRemovable( Bool bRemovable ) {
-    m_bRemovable = bRemovable;
-}
-inline Void StatusEffect::SetAmplitude( Float fAmplitude ) {
-    m_fAmplitude = fAmplitude;
-}
-
 inline Bool StatusEffect::IsStackable() const {
-    return sm_arrIsStackable[m_iType];
+    return ( sm_arrMaxStacks[m_iType] > 1 );
 }
 inline UInt StatusEffect::GetMaxStacks() const {
-    return m_iMaxStacks;
+    return sm_arrMaxStacks[m_iType];
 }
 inline UInt StatusEffect::GetStackCount() const {
     return m_iStackCount;
-}
-
-inline Void StatusEffect::SetMaxStacks( UInt iMaxStacks ) {
-    Assert( iMaxStacks <= STATUSEFFECT_MAX_STACKS );
-    m_iMaxStacks = iMaxStacks;
-    if ( m_iStackCount > m_iMaxStacks )
-        m_iStackCount = m_iMaxStacks;
 }
 
 inline Bool StatusEffect::IsExpired( UInt iStack ) const {
@@ -99,6 +78,35 @@ inline Void StatusEffect::ResetDuration( UInt iStack ) {
     Assert( iStack < m_iStackCount );
     m_arrDurations[iStack] = 0;
 }
+
+inline Bool StatusEffect::IsExhausted( UInt iStack ) const {
+}
+inline Float StatusEffect::GetAmplitude( UInt iStack ) const {
+}
+
+inline Void StatusEffect::IncreaseAmplitude( UInt iStack, UInt iAmount ) {
+}
+inline Void StatusEffect::DecreaseAmplitude( UInt iStack, UInt iAmount ) {
+}
+inline Void StatusEffect::SetAmplitude( UInt iStack, Float fAmplitude ) {
+}
+inline Void StatusEffect::ResetAmplitude( UInt iStack ) {
+}
+
+inline Float StatusEffect::GetAmplitude() const {
+    return m_fAmplitude;
+}
+
+inline Void StatusEffect::SetRemovable( Bool bRemovable ) {
+    m_bRemovable = bRemovable;
+}
+inline Void StatusEffect::SetAmplitude( Float fAmplitude ) {
+    m_fAmplitude = fAmplitude;
+}
+
+
+
+
 
 /////////////////////////////////////////////////////////////////////////////////
 // StatusEffectSet implementation

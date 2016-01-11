@@ -54,6 +54,8 @@ public:
     inline Float GetAwakeningBonusAccuracy() const;
     inline Float GetAwakeningBonusResistance() const;
 
+    inline UInt GetMonsterXPByLevel( UInt iRank, UInt iLevel ) const;
+
     // Rune parameters
     inline UInt GetSetCount( RuneType iType ) const;
     inline Bool IsSlotAllowed( UInt iSlot, MonsterStatistic iStat, Bool bRatio ) const;

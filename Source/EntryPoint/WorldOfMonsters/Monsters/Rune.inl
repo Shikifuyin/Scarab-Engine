@@ -19,6 +19,13 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // Rune implementation
+inline Bool Rune::IsNull() const {
+    return ( m_iType == RUNE_TYPE_COUNT );
+}
+inline Bool Rune::IsPresent() const {
+    return ( m_iType != RUNE_TYPE_COUNT );
+}
+
 inline RuneType Rune::GetType() const {
     return m_iType;
 }
@@ -61,27 +68,21 @@ inline Float Rune::GetBonusValueF( RuneStatistic iStat ) const {
 }
 
 inline Bool Rune::IsEquipped() const {
-    return m_bEquipped;
+    return ( m_pEquippedTo != NULL );
 }
-inline Void Rune::SetEquipped( Bool bEquipped ) {
-    m_bEquipped = bEquipped;
+inline Void Rune::SetEquipped( MonsterInstance * pEquippedTo ) {
+    m_pEquippedTo = pEquippedTo;
 }
 
 /////////////////////////////////////////////////////////////////////////////////
 // RuneSet implementation
 inline Bool RuneSet::HasRune( UInt iSlot ) const {
     Assert( iSlot < RUNE_SLOT_COUNT );
-    return ( m_arrRunes[iSlot] != NULL );
+    return ( m_arrRunes[iSlot].IsPresent() );
 }
-
-inline Rune * RuneSet::GetRune( UInt iSlot ) const {
+inline Rune * RuneSet::GetRune( UInt iSlot ) {
     Assert( iSlot < RUNE_SLOT_COUNT );
-    return m_arrRunes[iSlot];
-}
-inline Void RuneSet::SetRune( UInt iSlot, Rune * pRune ) {
-    Assert( iSlot < RUNE_SLOT_COUNT );
-    m_arrRunes[iSlot] = pRune;
-    _UpdateSetBonuses();
+    return ( m_arrRunes + iSlot );
 }
 
 inline UInt RuneSet::GetSetBonusCount() const {

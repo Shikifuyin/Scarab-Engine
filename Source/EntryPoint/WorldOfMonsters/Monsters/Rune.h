@@ -29,13 +29,25 @@
 /////////////////////////////////////////////////////////////////////////////////
 // Constants definitions
 
+    // Prototypes
+class MonsterInstance;
+
 /////////////////////////////////////////////////////////////////////////////////
 // The Rune class
 class Rune
 {
 public:
+    Rune();
     Rune( RuneType iType, UInt iSlot );
+    Rune( const Rune & rhs );
     ~Rune();
+
+    // operators
+    Rune & operator=( const Rune & rhs );
+
+    // Test for validity
+    inline Bool IsNull() const;
+    inline Bool IsPresent() const;
 
     // Type & slot access
     inline RuneType GetType() const;
@@ -67,12 +79,12 @@ public:
     Void AddBonus( RuneStatistic iStat, MonsterStatistic iStatType, Bool bRatio );
     Void RemoveBonus( RuneStatistic iStat );
 
-    // Selling price access
-    UInt ComputeSellPrice() const;
-
     // Equipment support
     inline Bool IsEquipped() const;
-    inline Void SetEquipped( Bool bEquipped );
+    inline Void SetEquipped( MonsterInstance * pEquippedTo );
+
+    // Selling price access
+    UInt ComputeSellPrice() const;
 
 protected:
     // Helpers
@@ -98,7 +110,7 @@ protected:
     } m_arrBonusValues[RUNE_STAT_COUNT];
 
     // Equipment support
-    Bool m_bEquipped;
+    MonsterInstance * m_pEquippedTo;
 };
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -111,9 +123,10 @@ public:
 
     // Runes access
     inline Bool HasRune( UInt iSlot ) const;
+    inline Rune * GetRune( UInt iSlot );
 
-    inline Rune * GetRune( UInt iSlot ) const;
-    inline Void SetRune( UInt iSlot, Rune * pRune );
+    Void AddRune( const Rune & hRune );
+    Void RemoveRune( UInt iSlot );
 
     // SetBonus access
     Bool HasSetBonus( RuneType iType, UInt * outCount = NULL ) const;
@@ -122,14 +135,14 @@ public:
     inline RuneType GetSetBonus( UInt iIndex ) const;
 
     // Stats compilation
-    Void CompileStats( UInt arrFlatBonuses[4], Float arrRatioBonuses[3], Float arrSecondaryBonuses[4] ) const;
+    Void CompileStats( UInt outFlatBonuses[4], Float outRatioBonuses[4], Float outSecondaryBonuses[4] ) const;
 
 protected:
     // Helpers
     Void _UpdateSetBonuses();
 
     // Rune slots
-    Rune * m_arrRunes[RUNE_SLOT_COUNT];
+    Rune m_arrRunes[RUNE_SLOT_COUNT];
 
     // Set bonuses
     UInt m_iSetBonusCount;

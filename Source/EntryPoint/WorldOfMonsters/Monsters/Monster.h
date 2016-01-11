@@ -24,7 +24,9 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // Includes
-#include "Statistics.h"
+#include "../GameParameters.h"
+
+#include "LevelingStats.h"
 #include "StatusEffect.h"
 #include "Skill.h"
 #include "Rune.h"
@@ -41,20 +43,36 @@ typedef UInt MonsterID;
 class Monster
 {
 public:
-    Monster( XMLNode * pMonsterNode );
-    virtual ~Monster();    
+    Monster();
+    ~Monster();    
+
+    // Deferred loading
+    Void Load( XMLNode * pNode );
 
     // Identifier
     inline MonsterID GetID() const;
     inline const GChar * GetName() const;
     inline const GChar * GetAwakenedName() const;
 
+    // Type & Element
+    inline MonsterType GetType() const;
+    inline MonsterElement GetElement() const;
+
+    // Native rank
+    inline UInt GetNativeRank() const;
+
+    // Summoning cost
+    inline const ScrollCost * GetSummoningCost() const;
+
+    // Awakening cost
+    inline const EssenceCost * GetAwakeningCost() const;
+
     // Leveling stats
     inline const MonsterLevelingStats * GetLevelingStats() const;
 
-    // Skills
-    inline UInt GetSkillCount() const;
-    inline SkillID GetSkill( UInt iSlot ) const;
+    // Skill set
+    inline UInt GetSkillCount( Bool bAwaken ) const;
+    inline SkillID GetSkill( Bool bAwaken, UInt iSlot ) const;
 
 protected:
     // Identifier
@@ -62,12 +80,27 @@ protected:
     GChar m_strName[MONSTER_NAME_LENGTH];
     GChar m_strAwakenedName[MONSTER_NAME_LENGTH];
 
+    // Type & Element
+    MonsterType m_iType;
+    MonsterElement m_iElement;
+
+    // Native rank
+    UInt m_iNativeRank;
+
+    // Summoning cost
+    ScrollCost m_hSummoningCost;
+
+    // Awakening cost
+    EssenceCost m_hAwakeningCost;
+
     // Leveling stats
     MonsterLevelingStats m_hLevelingStats;
 
-    // Skills
+    // Skill set
     UInt m_iSkillCount;
-    SkillID m_arrSkills[SKILL_SLOT_COUNT];
+    SkillID m_arrSkillSet[SKILL_SLOT_COUNT];
+    UInt m_iSkillCountAwaken;
+    SkillID m_arrSkillSetAwaken[SKILL_SLOT_COUNT];
 };
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -78,30 +111,27 @@ public:
     MonsterInstance( const Monster * pMonster );
     ~MonsterInstance();
 
-    // Identifier access
+    // Identifier
     inline MonsterID GetID() const;
     inline const GChar * GetName() const;
     inline const GChar * GetAwakenedName() const;
 
-    // Type & element access
+    // Type & Element
     inline MonsterType GetType() const;
     inline MonsterElement GetElement() const;
 
-    // Summoning access
-    inline Bool IsSummoningCostHighTier( MonsterSummoningCost iCost ) const;
-    inline UInt GetSummoningCostAmount( MonsterSummoningCost iCost ) const;
+    // Summoning
+    inline const ScrollCost * GetSummoningCost() const;
 
-    // Awakening access
-    inline Bool IsAwakened() const;
-
+    // Awakening
+    inline const EssenceCost * GetAwakeningCost() const;
     inline MonsterAwakeningBonus GetAwakeningBonus() const;
-    inline Bool IsAwakeningCostHighTier( MonsterAwakeningCost iCost ) const;
-    inline UInt GetAwakeningCostAmount( MonsterAwakeningCost iCost ) const;
+    inline Bool IsAwakened() const;
 
     Void Awake();
     Void UnAwake();
 
-    // Rank access
+    // Rank
     inline UInt GetNativeRank() const;
     inline UInt GetRank() const;
 
@@ -109,7 +139,7 @@ public:
     UInt RankDown();
     Void SetRank( UInt iRank );
 
-    // Level access
+    // Level
     inline UInt GetMaxLevel() const;
     inline UInt GetLevel() const;
 
@@ -117,18 +147,22 @@ public:
     UInt LevelDown();
     Void SetLevel( UInt iLevel );
 
-    // Stats access
-    inline UInt GetHP() const;
-    inline UInt GetATT() const;
-    inline UInt GetDEF() const;
-    inline UInt GetSPD() const;
+    inline Bool CanReceiveXP() const;
 
-    inline Float GetCritR() const;
-    inline Float GetCritD() const;
-    inline Float GetACC() const;
-    inline Float GetRES() const;
+    UInt AddXP( UInt iAmount ); // returns number of levelups
 
-    // Skills access
+    // Base stats
+    inline UInt GetBaseHP() const;
+    inline UInt GetBaseATT() const;
+    inline UInt GetBaseDEF() const;
+    inline UInt GetBaseSPD() const;
+
+    inline Float GetBaseCritR() const;
+    inline Float GetBaseCritD() const;
+    inline Float GetBaseACC() const;
+    inline Float GetBaseRES() const;
+
+    // Skill set
     inline UInt GetSkillCount() const;
     inline SkillInstance * GetSkillInstance( UInt iSlot );
 
@@ -136,18 +170,19 @@ public:
     UInt SkillLevelDown( UInt iSlot );
     Void SetSkillLevel( UInt iSlot, UInt iLevel );
 
-    // Runes access
+    // Runes
     inline Bool HasRune( UInt iSlot ) const;
+    inline Rune * GetRune( UInt iSlot );
 
-    inline Rune * GetRune( UInt iSlot ) const;
-    inline Void SetRune( UInt iSlot, Rune * pRune );
+    Void EquipRune( Rune * pRune );
+    Void UnEquipRune( UInt iSlot );
 
     inline Bool HasSetBonus( RuneType iType, UInt * outCount = NULL ) const;
 
     inline UInt GetSetBonusCount() const;
     inline RuneType GetSetBonus( UInt iIndex ) const;
 
-    // Effective stats access
+    // Effective stats
     inline UInt GetEffectiveHP() const;
     inline UInt GetEffectiveATT() const;
     inline UInt GetEffectiveDEF() const;
@@ -160,31 +195,47 @@ public:
 
 private:
     // Helpers
+    Void _UpdateBaseStats();
     Void _UpdateEffectiveStats();
 
-    // Monster model
+    // Monster
     const Monster * m_pMonster;
 
-    // Statistics
-    MonsterStats m_hStats;
+    Bool m_bAwakened;
+    UInt m_iRank;
+    UInt m_iLevel;
 
-    // Skills
+    UInt m_iCurrentXP;
+
+    // Base statistics
+    UInt m_iBaseHealth;
+    UInt m_iBaseAttack;
+    UInt m_iBaseDefense;
+    UInt m_iBaseSpeed;
+
+    Float m_fBaseCriticalRate;   // in [0;1]
+    Float m_fBaseCriticalDamage; // in [1;+inf] (no cap)
+
+    Float m_fBaseAccuracy;       // in [0;1]
+    Float m_fBaseResistance;     // in [0;1]
+
+    // Skill set
     SkillSet m_hSkillSet;
 
-    // Runes
+    // Rune set
     RuneSet m_hRuneSet;
 
     // Effective statistics
-    UInt m_iHealth;
-    UInt m_iAttack;
-    UInt m_iDefense;
-    UInt m_iSpeed;
+    UInt m_iEffectiveHealth;
+    UInt m_iEffectiveAttack;
+    UInt m_iEffectiveDefense;
+    UInt m_iEffectiveSpeed;
 
-    Float m_fCriticalRate;   // in [0;1]
-    Float m_fCriticalDamage; // in [1;+inf]
+    Float m_fEffectiveCriticalRate;   // in [0;1]
+    Float m_fEffectiveCriticalDamage; // in [1;+inf]
 
-    Float m_fAccuracy;
-    Float m_fResistance;
+    Float m_fEffectiveAccuracy;
+    Float m_fEffectiveResistance;
 };
 
 /////////////////////////////////////////////////////////////////////////////////

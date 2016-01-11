@@ -128,28 +128,28 @@ Bool StatusEffect::RemoveExpiredStacks()
 
 /////////////////////////////////////////////////////////////////////////////////
 
-Bool StatusEffect::sm_arrIsStackable[STATUSEFFECT_COUNT] = {
-    false, // STATUSEFFECT_BUFF_ATTACK
-    false, // STATUSEFFECT_BUFF_DEFENSE
-    false, // STATUSEFFECT_BUFF_SPEED
-    false, // STATUSEFFECT_BUFF_CRITRATE
-    false, // STATUSEFFECT_BUFF_REGEN
-    false, // STATUSEFFECT_BUFF_SHIELD
-    false, // STATUSEFFECT_BUFF_INVINCIBILITY
-    false, // STATUSEFFECT_BUFF_IMMUNITY
+UInt StatusEffect::sm_arrMaxStacks[STATUSEFFECT_COUNT] = {
+    1,                       // STATUSEFFECT_BUFF_ATTACK
+    1,                       // STATUSEFFECT_BUFF_DEFENSE
+    1,                       // STATUSEFFECT_BUFF_SPEED
+    1,                       // STATUSEFFECT_BUFF_CRITRATE
+    1,                       // STATUSEFFECT_BUFF_REGEN
+    1,                       // STATUSEFFECT_BUFF_SHIELD
+    1,                       // STATUSEFFECT_BUFF_INVINCIBILITY
+    1,                       // STATUSEFFECT_BUFF_IMMUNITY
 
-    false, // STATUSEFFECT_DEBUFF_ATTACK
-    false, // STATUSEFFECT_DEBUFF_DEFENSE
-    false, // STATUSEFFECT_DEBUFF_SPEED
-    false, // STATUSEFFECT_DEBUFF_MISSRATE
-    true,  // STATUSEFFECT_DEBUFF_DOT
-    true,  // STATUSEFFECT_DEBUFF_BOMB
-    false, // STATUSEFFECT_DEBUFF_MARK_DMG
-    false, // STATUSEFFECT_DEBUFF_MARK_DRAIN
-    false, // STATUSEFFECT_DEBUFF_NOHEAL
-    false, // STATUSEFFECT_DEBUFF_STUN
-    false, // STATUSEFFECT_DEBUFF_FREEZE
-    false, // STATUSEFFECT_DEBUFF_SLEEP
+    1,                       // STATUSEFFECT_DEBUFF_ATTACK
+    1,                       // STATUSEFFECT_DEBUFF_DEFENSE
+    1,                       // STATUSEFFECT_DEBUFF_SPEED
+    1,                       // STATUSEFFECT_DEBUFF_MISSRATE
+    STATUSEFFECT_MAX_STACKS, // STATUSEFFECT_DEBUFF_DOT
+    STATUSEFFECT_MAX_STACKS, // STATUSEFFECT_DEBUFF_BOMB
+    1,                       // STATUSEFFECT_DEBUFF_MARK_DMG
+    1,                       // STATUSEFFECT_DEBUFF_MARK_DRAIN
+    1,                       // STATUSEFFECT_DEBUFF_NOHEAL
+    1,                       // STATUSEFFECT_DEBUFF_STUN
+    1,                       // STATUSEFFECT_DEBUFF_FREEZE
+    1,                       // STATUSEFFECT_DEBUFF_SLEEP
 };
 
 /////////////////////////////////////////////////////////////////////////////////

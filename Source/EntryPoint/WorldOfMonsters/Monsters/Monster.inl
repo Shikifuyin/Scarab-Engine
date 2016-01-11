@@ -29,16 +29,35 @@ inline const GChar * Monster::GetAwakenedName() const {
     return m_strAwakenedName;
 }
 
+inline MonsterType Monster::GetType() const {
+    return m_iType;
+}
+inline MonsterElement Monster::GetElement() const {
+    return m_iElement;
+}
+
+inline UInt Monster::GetNativeRank() const {
+    return m_iNativeRank;
+}
+
+inline const ScrollCost * Monster::GetSummoningCost() const {
+    return &m_hSummoningCost;
+}
+
+inline const EssenceCost * Monster::GetAwakeningCost() const {
+    return &m_hAwakeningCost;
+}
+
 inline const MonsterLevelingStats * Monster::GetLevelingStats() const {
     return &m_hLevelingStats;
 }
 
-inline UInt Monster::GetSkillCount() const {
-    return m_iSkillCount;
+inline UInt Monster::GetSkillCount( Bool bAwaken ) const {
+    return ( bAwaken ? m_iSkillCountAwaken : m_iSkillCount );
 }
-inline SkillID Monster::GetSkill( UInt iSlot ) const {
-    Assert( iSlot < m_iSkillCount );
-    return m_arrSkills[iSlot];
+inline SkillID Monster::GetSkill( Bool bAwaken, UInt iSlot ) const {
+    Assert( iSlot < (bAwaken ? m_iSkillCountAwaken : m_iSkillCount) );
+    return ( bAwaken ? m_arrSkillSetAwaken[iSlot] : m_arrSkillSet[iSlot] );
 }
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -54,71 +73,68 @@ inline const GChar * MonsterInstance::GetAwakenedName() const {
 }
 
 inline MonsterType MonsterInstance::GetType() const {
-    return m_hStats.GetType();
+    return m_pMonster->GetType();
 }
 inline MonsterElement MonsterInstance::GetElement() const {
-    return m_hStats.GetElement();
+    return m_pMonster->GetElement();
 }
 
-inline Bool MonsterInstance::IsSummoningCostHighTier( MonsterSummoningCost iCost ) const {
-    return m_hStats.IsSummoningCostHighTier( iCost );
-}
-inline UInt MonsterInstance::GetSummoningCostAmount( MonsterSummoningCost iCost ) const {
-    return m_hStats.GetSummoningCostAmount( iCost );
+inline const ScrollCost * MonsterInstance::GetSummoningCost() const {
+    return m_pMonster->GetSummoningCost();
 }
 
-inline Bool MonsterInstance::IsAwakened() const {
-    return m_hStats.IsAwakened();
+inline const EssenceCost * MonsterInstance::GetAwakeningCost() const {
+    return m_pMonster->GetAwakeningCost();
 }
-
 inline MonsterAwakeningBonus MonsterInstance::GetAwakeningBonus() const {
-    return m_hStats.GetAwakeningBonus();
+    return m_pMonster->GetLevelingStats()->GetAwakeningBonus();
 }
-inline Bool MonsterInstance::IsAwakeningCostHighTier( MonsterAwakeningCost iCost ) const {
-    return m_hStats.IsAwakeningCostHighTier( iCost );
-}
-inline UInt MonsterInstance::GetAwakeningCostAmount( MonsterAwakeningCost iCost ) const {
-    return m_hStats.GetAwakeningCostAmount( iCost );
+inline Bool MonsterInstance::IsAwakened() const {
+    return m_bAwakened;
 }
 
 inline UInt MonsterInstance::GetNativeRank() const {
-    return m_hStats.GetNativeRank();
+    return m_pMonster->GetNativeRank();
 }
 inline UInt MonsterInstance::GetRank() const {
-    return m_hStats.GetRank();
+    return m_iRank;
 }
 
 inline UInt MonsterInstance::GetMaxLevel() const {
-    return m_hStats.GetMaxLevel();
+    return MONSTER_MAX_LEVELBYRANK(m_iRank);
 }
 inline UInt MonsterInstance::GetLevel() const {
-    return m_hStats.GetLevel();
+    return m_iLevel;
 }
 
-inline UInt MonsterInstance::GetHP() const {
-    return m_hStats.GetHP();
-}
-inline UInt MonsterInstance::GetATT() const {
-    return m_hStats.GetATT();
-}
-inline UInt MonsterInstance::GetDEF() const {
-    return m_hStats.GetDEF();
-}
-inline UInt MonsterInstance::GetSPD() const {
-    return m_hStats.GetSPD();
+inline Bool MonsterInstance::CanReceiveXP() const {
+    return ( m_iLevel < (MONSTER_MAX_LEVELBYRANK(m_iRank) - 1) );
 }
 
-inline Float MonsterInstance::GetCritR() const {
-    return m_hStats.GetCritR();
+inline UInt MonsterInstance::GetBaseHP() const {
+    return m_iBaseHealth;
 }
-inline Float MonsterInstance::GetCritD() const {
-    return m_hStats.GetCritD();
+inline UInt MonsterInstance::GetBaseATT() const {
+    return m_iBaseAttack;
 }
-inline Float MonsterInstance::GetACC() const {
-    return m_hStats.GetACC();
+inline UInt MonsterInstance::GetBaseDEF() const {
+    return m_iBaseDefense;
 }
-inline Float MonsterInstance::GetRES() const {
-    return m_hStats.GetRES();
+inline UInt MonsterInstance::GetBaseSPD() const {
+    return m_iBaseSpeed;
+}
+
+inline Float MonsterInstance::GetBaseCritR() const {
+    return m_fBaseCriticalRate;
+}
+inline Float MonsterInstance::GetBaseCritD() const {
+    return m_fBaseCriticalDamage;
+}
+inline Float MonsterInstance::GetBaseACC() const {
+    return m_fBaseAccuracy;
+}
+inline Float MonsterInstance::GetBaseRES() const {
+    return m_fBaseResistance;
 }
 
 inline UInt MonsterInstance::GetSkillCount() const {
@@ -132,13 +148,8 @@ inline SkillInstance * MonsterInstance::GetSkillInstance( UInt iSlot ) {
 inline Bool MonsterInstance::HasRune( UInt iSlot ) const {
     return m_hRuneSet.HasRune( iSlot );
 }
-
-inline Rune * MonsterInstance::GetRune( UInt iSlot ) const {
+inline Rune * MonsterInstance::GetRune( UInt iSlot ) {
     return m_hRuneSet.GetRune( iSlot );
-}
-inline Void MonsterInstance::SetRune( UInt iSlot, Rune * pRune ) {
-    m_hRuneSet.SetRune( iSlot, pRune );
-    _UpdateEffectiveStats();
 }
 
 inline Bool MonsterInstance::HasSetBonus( RuneType iType, UInt * outCount ) const {
@@ -153,28 +164,28 @@ inline RuneType MonsterInstance::GetSetBonus( UInt iIndex ) const {
 }
 
 inline UInt MonsterInstance::GetEffectiveHP() const {
-    return m_iHealth;
+    return m_iEffectiveHealth;
 }
 inline UInt MonsterInstance::GetEffectiveATT() const {
-    return m_iAttack;
+    return m_iEffectiveAttack;
 }
 inline UInt MonsterInstance::GetEffectiveDEF() const {
-    return m_iDefense;
+    return m_iEffectiveDefense;
 }
 inline UInt MonsterInstance::GetEffectiveSPD() const {
-    return m_iSpeed;
+    return m_iEffectiveSpeed;
 }
 
 inline Float MonsterInstance::GetEffectiveCritR() const {
-    return m_fCriticalRate;
+    return m_fEffectiveCriticalRate;
 }
 inline Float MonsterInstance::GetEffectiveCritD() const {
-    return m_fCriticalDamage;
+    return m_fEffectiveCriticalDamage;
 }
 inline Float MonsterInstance::GetEffectiveACC() const {
-    return m_fAccuracy;
+    return m_fEffectiveAccuracy;
 }
 inline Float MonsterInstance::GetEffectiveRES() const {
-    return m_fResistance;
+    return m_fEffectiveResistance;
 }
 

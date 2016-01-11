@@ -25,6 +25,24 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // Rune implementation
+Rune::Rune()
+{
+    m_iType = RUNE_TYPE_COUNT;
+    m_iSlot = INVALID_OFFSET;
+
+    m_iRank = INVALID_OFFSET;
+    m_iLevel = INVALID_OFFSET;
+
+    m_iQuality = RUNE_QUALITY_COUNT;
+    m_iBonusCount = 0;
+    for( UInt i = 0; i < RUNE_STAT_COUNT; ++i ) {
+        m_arrBonusTypes[i] = MONSTER_STAT_COUNT;
+        m_arrIsBonusRatio[i] = false;
+        m_arrBonusValues[i].iValue = INVALID_OFFSET;
+    }
+
+    m_pEquippedTo = NULL;
+}
 Rune::Rune( RuneType iType, UInt iSlot )
 {
     m_iType = iType;
@@ -41,11 +59,50 @@ Rune::Rune( RuneType iType, UInt iSlot )
         m_arrBonusValues[i].iValue = 0;
     }
 
-    m_bEquipped = false;
+    m_pEquippedTo = NULL;
+}
+Rune::Rune( const Rune & rhs )
+{
+    m_iType = rhs.m_iType;
+    m_iSlot = rhs.m_iSlot;
+
+    m_iRank = rhs.m_iRank;
+    m_iLevel = rhs.m_iLevel;
+
+    m_iQuality = rhs.m_iQuality;
+    m_iBonusCount = rhs.m_iBonusCount;
+    for( UInt i = 0; i < RUNE_STAT_COUNT; ++i ) {
+        m_arrBonusTypes[i] = rhs.m_arrBonusTypes[i];
+        m_arrIsBonusRatio[i] = rhs.m_arrIsBonusRatio[i];
+        m_arrBonusValues[i].iValue = rhs.m_arrBonusValues[i].iValue;
+    }
+
+    m_pEquippedTo = rhs.m_pEquippedTo;
 }
 Rune::~Rune()
 {
     // nothing to do
+}
+
+Rune & Rune::operator=( const Rune & rhs )
+{
+    m_iType = rhs.m_iType;
+    m_iSlot = rhs.m_iSlot;
+
+    m_iRank = rhs.m_iRank;
+    m_iLevel = rhs.m_iLevel;
+
+    m_iQuality = rhs.m_iQuality;
+    m_iBonusCount = rhs.m_iBonusCount;
+    for( UInt i = 0; i < RUNE_STAT_COUNT; ++i ) {
+        m_arrBonusTypes[i] = rhs.m_arrBonusTypes[i];
+        m_arrIsBonusRatio[i] = rhs.m_arrIsBonusRatio[i];
+        m_arrBonusValues[i].iValue = rhs.m_arrBonusValues[i].iValue;
+    }
+
+    m_pEquippedTo = rhs.m_pEquippedTo;
+
+    return (*this);
 }
 
 UInt Rune::RankUp()
@@ -187,21 +244,32 @@ Void Rune::_UpdateStats()
 RuneSet::RuneSet()
 {
     m_iSetBonusCount = 0;
-    m_arrSetBonuses[0] = RUNE_TYPE_COUNT;
-    m_arrSetBonuses[1] = RUNE_TYPE_COUNT;
-    m_arrSetBonuses[2] = RUNE_TYPE_COUNT;
-    m_arrSetBonuses[3] = RUNE_TYPE_COUNT;
-
-    m_arrRunes[0] = NULL;
-    m_arrRunes[1] = NULL;
-    m_arrRunes[2] = NULL;
-    m_arrRunes[3] = NULL;
-    m_arrRunes[4] = NULL;
-    m_arrRunes[5] = NULL;
+    for( UInt i = 0; i < 4; ++i )
+        m_arrSetBonuses[i] = RUNE_TYPE_COUNT;
 }
 RuneSet::~RuneSet()
 {
     // nothing to do
+}
+
+Void RuneSet::AddRune( const Rune & hRune )
+{
+    Assert( hRune.IsPresent() );
+    UInt iSlot = hRune.GetSlot();
+    Assert( m_arrRunes[iSlot].IsNull() );
+
+    m_arrRunes[iSlot] = hRune;
+
+    _UpdateSetBonuses();
+}
+Void RuneSet::RemoveRune( UInt iSlot )
+{
+    Assert( iSlot < RUNE_SLOT_COUNT );
+    Assert( m_arrRunes[iSlot].IsPresent() );
+
+    m_arrRunes[iSlot] = Rune();
+
+    _UpdateSetBonuses();
 }
 
 Bool RuneSet::HasSetBonus( RuneType iType, UInt * outCount ) const
@@ -220,68 +288,69 @@ Bool RuneSet::HasSetBonus( RuneType iType, UInt * outCount ) const
     return ( iCount > 0 );
 }
 
-Void RuneSet::CompileStats( UInt arrFlatBonuses[4], Float arrRatioBonuses[3], Float arrSecondaryBonuses[4] ) const
+Void RuneSet::CompileStats( UInt outFlatBonuses[4], Float outRatioBonuses[4], Float outSecondaryBonuses[4] ) const
 {
-    arrFlatBonuses[0] = 0; // HP
-    arrFlatBonuses[1] = 0; // ATT
-    arrFlatBonuses[2] = 0; // DEF
-    arrFlatBonuses[3] = 0; // SPD
+    outFlatBonuses[0] = 0; // HP
+    outFlatBonuses[1] = 0; // ATT
+    outFlatBonuses[2] = 0; // DEF
+    outFlatBonuses[3] = 0; // SPD
 
-    arrRatioBonuses[0] = 0.0f; // HP%
-    arrRatioBonuses[1] = 0.0f; // ATT%
-    arrRatioBonuses[2] = 0.0f; // DEF%
+    outRatioBonuses[0] = 0.0f; // HP%
+    outRatioBonuses[1] = 0.0f; // ATT%
+    outRatioBonuses[2] = 0.0f; // DEF%
+    outRatioBonuses[3] = 0.0f; // SPD%
 
-    arrSecondaryBonuses[0] = 0.0f; // CRITR
-    arrSecondaryBonuses[1] = 0.0f; // CRITD
-    arrSecondaryBonuses[2] = 0.0f; // ACC
-    arrSecondaryBonuses[3] = 0.0f; // RES
+    outSecondaryBonuses[0] = 0.0f; // CRITR
+    outSecondaryBonuses[1] = 0.0f; // CRITD
+    outSecondaryBonuses[2] = 0.0f; // ACC
+    outSecondaryBonuses[3] = 0.0f; // RES
 
     // Enumerate all runes
     for ( UInt i = 0; i < RUNE_SLOT_COUNT; ++i ) {
-        Rune * pRune = m_arrRunes[i];
-        if ( pRune == NULL )
+        const Rune & hRune = m_arrRunes[i];
+        if ( hRune.IsNull() )
             continue;
 
         // Enumerate all stats
         for( UInt j = 0; j < RUNE_STAT_COUNT; ++j ) {
             RuneStatistic iRuneStat = (RuneStatistic)j;
-            MonsterStatistic iBonusStat = pRune->GetBonusType( iRuneStat );
+            MonsterStatistic iBonusStat = hRune.GetBonusType( iRuneStat );
             if ( iBonusStat == MONSTER_STAT_COUNT )
                 continue;
 
             switch( iBonusStat ) {
                 case MONSTER_STAT_HEALTH:
-                    if ( pRune->IsBonusRatio(iRuneStat) )
-                        arrRatioBonuses[0] += pRune->GetBonusValueF( iRuneStat );
+                    if ( hRune.IsBonusRatio(iRuneStat) )
+                        outRatioBonuses[0] += hRune.GetBonusValueF( iRuneStat );
                     else
-                        arrFlatBonuses[0] += pRune->GetBonusValueI( iRuneStat );
+                        outFlatBonuses[0] += hRune.GetBonusValueI( iRuneStat );
                     break;
                 case MONSTER_STAT_ATTACK:
-                    if ( pRune->IsBonusRatio(iRuneStat) )
-                        arrRatioBonuses[1] += pRune->GetBonusValueF( iRuneStat );
+                    if ( hRune.IsBonusRatio(iRuneStat) )
+                        outRatioBonuses[1] += hRune.GetBonusValueF( iRuneStat );
                     else
-                        arrFlatBonuses[1] += pRune->GetBonusValueI( iRuneStat );
+                        outFlatBonuses[1] += hRune.GetBonusValueI( iRuneStat );
                     break;
                 case MONSTER_STAT_DEFENSE:
-                    if ( pRune->IsBonusRatio(iRuneStat) )
-                        arrRatioBonuses[2] += pRune->GetBonusValueF( iRuneStat );
+                    if ( hRune.IsBonusRatio(iRuneStat) )
+                        outRatioBonuses[2] += hRune.GetBonusValueF( iRuneStat );
                     else
-                        arrFlatBonuses[2] += pRune->GetBonusValueI( iRuneStat );
+                        outFlatBonuses[2] += hRune.GetBonusValueI( iRuneStat );
                     break;
                 case MONSTER_STAT_SPEED:
-                    arrFlatBonuses[3] += pRune->GetBonusValueI( iRuneStat );
+                    outFlatBonuses[3] += hRune.GetBonusValueI( iRuneStat );
                     break;
                 case MONSTER_STAT_CRIT_RATE:
-                    arrSecondaryBonuses[0] += pRune->GetBonusValueF( iRuneStat );
+                    outSecondaryBonuses[0] += hRune.GetBonusValueF( iRuneStat );
                     break;
                 case MONSTER_STAT_CRIT_DMG:
-                    arrSecondaryBonuses[1] += pRune->GetBonusValueF( iRuneStat );
+                    outSecondaryBonuses[1] += hRune.GetBonusValueF( iRuneStat );
                     break;
                 case MONSTER_STAT_ACCURACY:
-                    arrSecondaryBonuses[2] += pRune->GetBonusValueF( iRuneStat );
+                    outSecondaryBonuses[2] += hRune.GetBonusValueF( iRuneStat );
                     break;
                 case MONSTER_STAT_RESISTANCE:
-                    arrSecondaryBonuses[3] += pRune->GetBonusValueF( iRuneStat );
+                    outSecondaryBonuses[3] += hRune.GetBonusValueF( iRuneStat );
                     break;
                 default: Assert( false ); break;
             }
@@ -295,28 +364,28 @@ Void RuneSet::CompileStats( UInt arrFlatBonuses[4], Float arrRatioBonuses[3], Fl
         Float fSetBonus = pGameParams->GetRuneSetStatBonus( m_arrSetBonuses[i] );
         switch( m_arrSetBonuses[i] ) {
             case RUNE_ENERGY:
-                arrRatioBonuses[0] += fSetBonus;
+                outRatioBonuses[0] += fSetBonus;
                 break;
             case RUNE_FATAL:
-                arrRatioBonuses[1] += fSetBonus;
+                outRatioBonuses[1] += fSetBonus;
                 break;
             case RUNE_GUARD:
-                arrRatioBonuses[2] += fSetBonus;
+                outRatioBonuses[2] += fSetBonus;
                 break;
             case RUNE_SWIFT:
-                arrFlatBonuses[3] += fSetBonus;
+                outRatioBonuses[3] += fSetBonus;
                 break;
             case RUNE_BLADE:
-                arrSecondaryBonuses[0] += fSetBonus;
+                outSecondaryBonuses[0] += fSetBonus;
                 break;
             case RUNE_RAGE:
-                arrSecondaryBonuses[1] += fSetBonus;
+                outSecondaryBonuses[1] += fSetBonus;
                 break;
             case RUNE_FOCUS:
-                arrSecondaryBonuses[2] += fSetBonus;
+                outSecondaryBonuses[2] += fSetBonus;
                 break;
             case RUNE_ENDURE:
-                arrSecondaryBonuses[3] += fSetBonus;
+                outSecondaryBonuses[3] += fSetBonus;
                 break;
             default: // not a stat bonus, do nothing for now
                 break;
@@ -329,17 +398,15 @@ Void RuneSet::CompileStats( UInt arrFlatBonuses[4], Float arrRatioBonuses[3], Fl
 Void RuneSet::_UpdateSetBonuses()
 {
     m_iSetBonusCount = 0;
-    m_arrSetBonuses[0] = RUNE_TYPE_COUNT;
-    m_arrSetBonuses[1] = RUNE_TYPE_COUNT;
-    m_arrSetBonuses[2] = RUNE_TYPE_COUNT;
-    m_arrSetBonuses[3] = RUNE_TYPE_COUNT;
+    for( UInt i = 0; i < 4; ++i )
+        m_arrSetBonuses[i] = RUNE_TYPE_COUNT;
 
     UInt arrCounts[RUNE_TYPE_COUNT] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
     // Count type occurences in the rune set
     for( UInt i = 0; i < RUNE_SLOT_COUNT; ++i ) {
-        if ( m_arrRunes[i] != NULL )
-            ++( arrCounts[m_arrRunes[i]->GetType()] );
+        if ( m_arrRunes[i].IsPresent() )
+            ++( arrCounts[m_arrRunes[i].GetType()] );
     }
 
     // Check occurence counts against set thresholds for each type, account for multiple instances
