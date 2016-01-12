@@ -195,7 +195,7 @@ UInt Rune::ComputeSellPrice() const
 
 Void Rune::_UpdateStats()
 {
-    RuneLevelingStats  * pLevelingStats = GameplayFn->GetRuneLevelingStats();
+    const RuneLevelingStats  * pLevelingStats = GameplayFn->GetGameParameters()->GetRuneLevelingStats();
 
     // Update quality
     if ( m_iLevel >= 12 || m_iBonusCount >= 6 )
@@ -252,24 +252,26 @@ RuneSet::~RuneSet()
     // nothing to do
 }
 
-Void RuneSet::AddRune( const Rune & hRune )
+Void RuneSet::AddRune( Rune * pRune )
 {
-    Assert( hRune.IsPresent() );
-    UInt iSlot = hRune.GetSlot();
-    Assert( m_arrRunes[iSlot].IsNull() );
+    Assert( pRune!= NULL && pRune->IsPresent() );
+    UInt iSlot = pRune->GetSlot();
+    Assert( m_arrRunes[iSlot] == NULL );
 
-    m_arrRunes[iSlot] = hRune;
+    m_arrRunes[iSlot] = pRune;
 
     _UpdateSetBonuses();
 }
-Void RuneSet::RemoveRune( UInt iSlot )
+Rune * RuneSet::RemoveRune( UInt iSlot )
 {
     Assert( iSlot < RUNE_SLOT_COUNT );
-    Assert( m_arrRunes[iSlot].IsPresent() );
+    Assert( m_arrRunes[iSlot] != NULL );
 
-    m_arrRunes[iSlot] = Rune();
+    Rune * pRune = m_arrRunes[iSlot];
+    m_arrRunes[iSlot] = NULL;
 
     _UpdateSetBonuses();
+    return pRune;
 }
 
 Bool RuneSet::HasSetBonus( RuneType iType, UInt * outCount ) const
@@ -307,50 +309,50 @@ Void RuneSet::CompileStats( UInt outFlatBonuses[4], Float outRatioBonuses[4], Fl
 
     // Enumerate all runes
     for ( UInt i = 0; i < RUNE_SLOT_COUNT; ++i ) {
-        const Rune & hRune = m_arrRunes[i];
-        if ( hRune.IsNull() )
+        const Rune * pRune = m_arrRunes[i];
+        if ( pRune->IsNull() )
             continue;
 
         // Enumerate all stats
         for( UInt j = 0; j < RUNE_STAT_COUNT; ++j ) {
             RuneStatistic iRuneStat = (RuneStatistic)j;
-            MonsterStatistic iBonusStat = hRune.GetBonusType( iRuneStat );
+            MonsterStatistic iBonusStat = pRune->GetBonusType( iRuneStat );
             if ( iBonusStat == MONSTER_STAT_COUNT )
                 continue;
 
             switch( iBonusStat ) {
                 case MONSTER_STAT_HEALTH:
-                    if ( hRune.IsBonusRatio(iRuneStat) )
-                        outRatioBonuses[0] += hRune.GetBonusValueF( iRuneStat );
+                    if ( pRune->IsBonusRatio(iRuneStat) )
+                        outRatioBonuses[0] += pRune->GetBonusValueF( iRuneStat );
                     else
-                        outFlatBonuses[0] += hRune.GetBonusValueI( iRuneStat );
+                        outFlatBonuses[0] += pRune->GetBonusValueI( iRuneStat );
                     break;
                 case MONSTER_STAT_ATTACK:
-                    if ( hRune.IsBonusRatio(iRuneStat) )
-                        outRatioBonuses[1] += hRune.GetBonusValueF( iRuneStat );
+                    if ( pRune->IsBonusRatio(iRuneStat) )
+                        outRatioBonuses[1] += pRune->GetBonusValueF( iRuneStat );
                     else
-                        outFlatBonuses[1] += hRune.GetBonusValueI( iRuneStat );
+                        outFlatBonuses[1] += pRune->GetBonusValueI( iRuneStat );
                     break;
                 case MONSTER_STAT_DEFENSE:
-                    if ( hRune.IsBonusRatio(iRuneStat) )
-                        outRatioBonuses[2] += hRune.GetBonusValueF( iRuneStat );
+                    if ( pRune->IsBonusRatio(iRuneStat) )
+                        outRatioBonuses[2] += pRune->GetBonusValueF( iRuneStat );
                     else
-                        outFlatBonuses[2] += hRune.GetBonusValueI( iRuneStat );
+                        outFlatBonuses[2] += pRune->GetBonusValueI( iRuneStat );
                     break;
                 case MONSTER_STAT_SPEED:
-                    outFlatBonuses[3] += hRune.GetBonusValueI( iRuneStat );
+                    outFlatBonuses[3] += pRune->GetBonusValueI( iRuneStat );
                     break;
                 case MONSTER_STAT_CRIT_RATE:
-                    outSecondaryBonuses[0] += hRune.GetBonusValueF( iRuneStat );
+                    outSecondaryBonuses[0] += pRune->GetBonusValueF( iRuneStat );
                     break;
                 case MONSTER_STAT_CRIT_DMG:
-                    outSecondaryBonuses[1] += hRune.GetBonusValueF( iRuneStat );
+                    outSecondaryBonuses[1] += pRune->GetBonusValueF( iRuneStat );
                     break;
                 case MONSTER_STAT_ACCURACY:
-                    outSecondaryBonuses[2] += hRune.GetBonusValueF( iRuneStat );
+                    outSecondaryBonuses[2] += pRune->GetBonusValueF( iRuneStat );
                     break;
                 case MONSTER_STAT_RESISTANCE:
-                    outSecondaryBonuses[3] += hRune.GetBonusValueF( iRuneStat );
+                    outSecondaryBonuses[3] += pRune->GetBonusValueF( iRuneStat );
                     break;
                 default: Assert( false ); break;
             }
@@ -405,8 +407,8 @@ Void RuneSet::_UpdateSetBonuses()
 
     // Count type occurences in the rune set
     for( UInt i = 0; i < RUNE_SLOT_COUNT; ++i ) {
-        if ( m_arrRunes[i].IsPresent() )
-            ++( arrCounts[m_arrRunes[i].GetType()] );
+        if ( m_arrRunes[i] != NULL )
+            ++( arrCounts[m_arrRunes[i]->GetType()] );
     }
 
     // Check occurence counts against set thresholds for each type, account for multiple instances

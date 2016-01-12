@@ -172,6 +172,17 @@ Float MonsterLevelingStats::GetResistance( Bool bAwakened ) const
 }
 
 /////////////////////////////////////////////////////////////////////////////////
+
+MonsterAwakeningBonus MonsterLevelingStats::_MonsterAwakeningBonus_FromString( const GChar * strValue )
+{
+    if ( StringFn->Cmp(strValue, TEXT("")) == 0 ) {
+        return MONSTER_AWAKENING_;
+    }
+    Assert( false );
+    return MONSTER_AWAKENING_BONUS_COUNT;
+}
+
+/////////////////////////////////////////////////////////////////////////////////
 // SkillLevelingStats implementation
 SkillLevelingStats::SkillLevelingStats()
 {

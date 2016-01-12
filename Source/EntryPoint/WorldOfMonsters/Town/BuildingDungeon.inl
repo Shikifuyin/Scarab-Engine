@@ -19,6 +19,10 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // BuildingDungeon implementation
+inline BuildingType BuildingDungeon::GetType() const {
+    return BUILDING_DUNGEON;
+}
+
 inline UInt BuildingDungeon::GetCurrency( CurrencyType iType ) const {
     Assert( iType < CURRENCY_COUNT );
     return m_arrCurrencies[iType];
@@ -48,9 +52,9 @@ inline UInt BuildingDungeon::GetMonsterCollectionRoom() const {
 inline UInt BuildingDungeon::GetMonsterCount() const {
     return m_arrMonsterCollection.Count();
 }
-inline MonsterInstance * BuildingDungeon::GetMonster( UInt iIndex ) const {
+inline MonsterInstance * BuildingDungeon::GetMonster( UInt iIndex ) {
     Assert( iIndex < m_arrMonsterCollection.Count() );
-    return m_arrMonsterCollection[iIndex];
+    return &( m_arrMonsterCollection[iIndex] );
 }
 
 inline UInt BuildingDungeon::GetRuneCollectionLevel() const {
@@ -64,10 +68,10 @@ inline UInt BuildingDungeon::GetRuneCount( RuneType iType ) const {
     Assert( iType < RUNE_TYPE_COUNT );
     return m_arrRuneCollection[iType].Count();
 }
-inline Rune * BuildingDungeon::GetRune( RuneType iType, UInt iIndex ) const {
+inline Rune * BuildingDungeon::GetRune( RuneType iType, UInt iIndex ) {
     Assert( iType < RUNE_TYPE_COUNT );
     Assert( iIndex < m_arrRuneCollection[iType].Count() );
-    return (m_arrRuneCollection[iType])[iIndex];
+    return &( (m_arrRuneCollection[iType])[iIndex] );
 }
 
 inline UInt BuildingDungeon::GetArenaScore() const {

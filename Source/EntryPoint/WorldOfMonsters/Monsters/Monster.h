@@ -24,8 +24,6 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // Includes
-#include "../GameParameters.h"
-
 #include "LevelingStats.h"
 #include "StatusEffect.h"
 #include "Skill.h"
@@ -34,9 +32,62 @@
 /////////////////////////////////////////////////////////////////////////////////
 // Constants definitions
 
-// Identifiers
+    // Monster definitions
 #define MONSTER_NAME_LENGTH 64
 typedef UInt MonsterID;
+
+enum MonsterElement {
+    MONSTER_ELEMENT_MAGIC = 0,
+    MONSTER_ELEMENT_FIRE,
+    MONSTER_ELEMENT_WATER,
+    MONSTER_ELEMENT_WIND,
+    MONSTER_ELEMENT_LIGHT,
+    MONSTER_ELEMENT_DARK,
+
+    MONSTER_ELEMENT_COUNT
+};
+
+enum MonsterType {
+    MONSTER_ATTACK = 0,
+    MONSTER_SUPPORT,
+    MONSTER_TANK_HP,
+    MONSTER_TANK_DEF,
+
+    MONSTER_TYPE_COUNT
+};
+
+    // Currencies : scrolls
+enum ScrollType {
+    SCROLL_COMMON = 0,
+    SCROLL_MYSTICAL,
+    SCROLL_LEGENDARY,
+    SCROLL_FIRE,
+    SCROLL_WATER,
+    SCROLL_WIND,
+    SCROLL_LIGHT,
+    SCROLL_DARK,
+
+    SCROLL_TYPE_COUNT
+};
+
+typedef struct _scroll_cost {
+    UInt arrCost[SCROLL_TYPE_COUNT];
+} ScrollCost;
+
+    // Currencies : Essences
+enum EssenceType {
+    ESSENCE_LOW = 0,
+    ESSENCE_MID,
+    ESSENCE_HIGH,
+
+    ESSENCE_TYPE_COUNT
+};
+
+typedef struct _essence_cost {
+    MonsterElement iElement;
+    UInt arrMagicCost[ESSENCE_TYPE_COUNT];
+    UInt arrElementalCost[ESSENCE_TYPE_COUNT];
+} EssenceCost;
 
 /////////////////////////////////////////////////////////////////////////////////
 // The Monster class
@@ -75,6 +126,10 @@ public:
     inline SkillID GetSkill( Bool bAwaken, UInt iSlot ) const;
 
 protected:
+    // Helpers
+    static MonsterType _MonsterType_FromString( const GChar * strValue );
+    static MonsterElement _MonsterElement_FromString( const GChar * strValue );
+
     // Identifier
     MonsterID m_iMonsterID;
     GChar m_strName[MONSTER_NAME_LENGTH];

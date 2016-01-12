@@ -63,7 +63,7 @@ SkillEffectScaling SkillEffect::_SkillEffectScaling_FromString( const GChar * st
 SkillEffectDamage::SkillEffectDamage( XMLNode * pNode ):
     SkillEffect(pNode)
 {
-    Assert( StringFn->Cmp(pNode->GetTagName(), TEXT("SkillEffectDamage")) == 0 );
+    Assert( StringFn->Cmp(pNode->GetTagName(), TEXT("SkillEffectDescriptor")) == 0 );
 
     m_fBonusDmg = StringFn->ToFloat( pNode->GetAttribute(TEXT("BonusDamage"))->GetValue() );
     m_fBonusCritRate = StringFn->ToFloat( pNode->GetAttribute(TEXT("BonusCritRate"))->GetValue() );
@@ -79,7 +79,7 @@ SkillEffectDamage::~SkillEffectDamage()
 SkillEffectHeal::SkillEffectHeal( XMLNode * pNode ):
     SkillEffect(pNode)
 {
-    Assert( StringFn->Cmp(pNode->GetTagName(), TEXT("SkillEffectHeal")) == 0 );
+    Assert( StringFn->Cmp(pNode->GetTagName(), TEXT("SkillEffectDescriptor")) == 0 );
 
     m_fBonusHeal = StringFn->ToFloat( pNode->GetAttribute(TEXT("BonusHeal"))->GetValue() );
 }
@@ -93,9 +93,9 @@ SkillEffectHeal::~SkillEffectHeal()
 SkillEffectATB::SkillEffectATB( XMLNode * pNode ):
     SkillEffect(pNode)
 {
-    Assert( StringFn->Cmp(pNode->GetTagName(), TEXT("SkillEffectATB")) == 0 );
+    Assert( StringFn->Cmp(pNode->GetTagName(), TEXT("SkillEffectDescriptor")) == 0 );
 
-    m_bIncrease = ( StringFn->ToUInt(pNode->GetAttribute(TEXT("BonusATB"))->GetValue()) != 0 );
+    m_bIncrease = ( StringFn->ToUInt(pNode->GetAttribute(TEXT("IsIncrease"))->GetValue()) != 0 );
 }
 SkillEffectATB::~SkillEffectATB()
 {
@@ -107,14 +107,12 @@ SkillEffectATB::~SkillEffectATB()
 SkillEffectStatus::SkillEffectStatus( XMLNode * pNode ):
     SkillEffect(pNode)
 {
-    Assert( StringFn->Cmp(pNode->GetTagName(), TEXT("SkillEffectStatus")) == 0 );
+    Assert( StringFn->Cmp(pNode->GetTagName(), TEXT("SkillEffectDescriptor")) == 0 );
 
     m_iType = _StatusEffectType_FromString( pNode->GetAttribute(TEXT("StatusEffectType"))->GetValue() );
-    m_bRemovable = ( StringFn->ToUInt(pNode->GetAttribute(TEXT("IsRemovable"))->GetValue()) != 0 );
-    m_fAmplitude = StringFn->ToFloat( pNode->GetAttribute(TEXT("Amplitude"))->GetValue() );
-    m_iMaxStacks = (UInt)( StringFn->ToUInt(pNode->GetAttribute(TEXT("MaxStacks"))->GetValue()) );
     m_iStackCount = (UInt)( StringFn->ToUInt(pNode->GetAttribute(TEXT("StackCount"))->GetValue()) );
     m_iDuration = (UInt)( StringFn->ToUInt(pNode->GetAttribute(TEXT("Duration"))->GetValue()) );
+    m_fAmplitude = StringFn->ToFloat( pNode->GetAttribute(TEXT("Amplitude"))->GetValue() );
 }
 SkillEffectStatus::~SkillEffectStatus()
 {

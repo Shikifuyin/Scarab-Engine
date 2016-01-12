@@ -29,12 +29,6 @@
 /////////////////////////////////////////////////////////////////////////////////
 // Constants definitions
 
-    // Essence storage
-#define BUILDING_ESSENCE_STORAGE_UNLOCK_COST_AWAKENING 25000 // in mana
-#define BUILDING_ESSENCE_STORAGE_UNLOCK_COST_FUSION    50000 // in mana
-
-#define BUILDING_ESSENCE_STORAGE_FUSION_COST 10
-
 /////////////////////////////////////////////////////////////////////////////////
 // The BuildingEssenceStorage class
 class BuildingEssenceStorage : public Building
@@ -43,11 +37,17 @@ public:
     BuildingEssenceStorage( BuildingDungeon * pDungeon );
     virtual ~BuildingEssenceStorage();
 
+    // Type
+    inline virtual BuildingType GetType() const;
+
     // Essence storage
     inline UInt GetEssenceCount( MonsterElement iElement, EssenceType iType ) const;
 
     inline Void AddEssences( MonsterElement iElement, EssenceType iType, UInt iCount );
     inline Void RemoveEssences( MonsterElement iElement, EssenceType iType, UInt iCount );
+
+    Bool CheckEssenceCost( const EssenceCost * pCost ) const;
+    Void PayEssenceCost( const EssenceCost * pCost );
 
     // Fusion & Awakening
     inline Bool AwakeningUnlocked() const;

@@ -30,9 +30,8 @@
 // Constants definitions
 
     // Monster storage
-#define BUILDING_MONSTER_STORAGE_UPGRADE_COST 20000 // in mana
-#define BUILDING_MONSTER_STORAGE_MAX_LEVEL    50
-#define BUILDING_MONSTER_STORAGE_MAX_ROOM     500 // 10 * 50
+#define BUILDING_MONSTER_STORAGE_MAX_LEVEL 50
+#define BUILDING_MONSTER_STORAGE_MAX_ROOM  500 // 10 * 50
 
 /////////////////////////////////////////////////////////////////////////////////
 // The BuildingMonsterStorage class
@@ -42,21 +41,23 @@ public:
     BuildingMonsterStorage( BuildingDungeon * pDungeon );
     virtual ~BuildingMonsterStorage();
 
+    // Type
+    inline virtual BuildingType GetType() const;
+
     // Monster storage
     inline UInt GetStorageLevel() const;
     inline UInt GetStorageRoom() const;
-
     Bool UpgradeStorageRoom();
 
     inline UInt GetMonsterCount() const;
-    inline MonsterInstance * GetMonster( UInt iIndex ) const;
+    inline MonsterInstance * GetMonster( UInt iStorageIndex );
 
     Bool StoreMonster( UInt iIndex );
     Bool RetrieveMonster( UInt iStorageIndex );
 
 private:
     // Helpers
-    static Int _Compare_MonsterInstance( MonsterInstance * const & pLeft, MonsterInstance * const & pRight );
+    static Int _Compare_MonsterInstance( const MonsterInstance & rLeft, const MonsterInstance & rRight );
 
     // Dungeon access
     BuildingDungeon * m_pDungeon;
@@ -64,8 +65,7 @@ private:
     // Monster storage
     UInt m_iStorageLevel;
     UInt m_iStorageRoom;
-
-    Array<MonsterInstance*> m_arrMonsterStorage;
+    Array<MonsterInstance> m_arrMonsterStorage;
 };
 
 /////////////////////////////////////////////////////////////////////////////////

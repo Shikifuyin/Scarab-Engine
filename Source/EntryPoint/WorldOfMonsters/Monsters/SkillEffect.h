@@ -24,7 +24,7 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // Includes
-#include "Statistics.h"
+#include "LevelingStats.h"
 #include "StatusEffect.h"
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -87,14 +87,18 @@ public:
     SkillEffect( XMLNode * pNode );
     virtual ~SkillEffect();
 
+    // Type
     virtual SkillEffectType GetType() const = 0;
 
+    // Probability of occurence (Proc)
     inline Float GetProc() const;
 
+    // Target pattern
     inline Bool IsOffensive() const;
     inline Bool IsDefensive() const;
     inline SkillTargetPattern GetTargetPattern() const;
 
+    // Scaling
     inline SkillEffectScaling GetScalingType() const;
     inline Float GetScalingMultiplier() const;
 
@@ -122,8 +126,10 @@ public:
     SkillEffectDamage( XMLNode * pNode );
     virtual ~SkillEffectDamage();
 
+    // Type
     inline virtual SkillEffectType GetType() const;
 
+    // Damage
     inline Float GetBonusDmg() const;
     inline Float GetBonusCritRate() const;
     inline Float GetBonusCritDmg() const;
@@ -143,8 +149,10 @@ public:
     SkillEffectHeal( XMLNode * pNode );
     virtual ~SkillEffectHeal();
 
+    // Type
     inline virtual SkillEffectType GetType() const;
 
+    // Heal
     inline Float GetBonusHeal() const;
 
 protected:
@@ -160,8 +168,10 @@ public:
     SkillEffectATB( XMLNode * pNode );
     virtual ~SkillEffectATB();
 
+    // Type
     inline virtual SkillEffectType GetType() const;
 
+    // ATB
     inline Bool IsIncrease() const;
     inline Bool IsDecrease() const;
 
@@ -178,17 +188,14 @@ public:
     SkillEffectStatus( XMLNode * pNode );
     virtual ~SkillEffectStatus();
 
+    // Type
     inline virtual SkillEffectType GetType() const;
 
+    // StatusEffect
     inline StatusEffectType GetStatusEffectType() const;
-
-    inline Bool IsRemovable() const;
-
-    inline Float GetAmplitude() const;
-
-    inline UInt GetMaxStacks() const;
     inline UInt GetStackCount() const;
     inline UInt GetDuration() const;
+    inline Float GetAmplitude() const;
 
 protected:
     // Helpers
@@ -196,11 +203,9 @@ protected:
 
     // StatusEffect
     StatusEffectType m_iType;
-    Bool m_bRemovable;
-    Float m_fAmplitude;
-    UInt m_iMaxStacks;
     UInt m_iStackCount;
     UInt m_iDuration;
+    Float m_fAmplitude;
 };
 
 /////////////////////////////////////////////////////////////////////////////////

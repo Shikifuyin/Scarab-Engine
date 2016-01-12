@@ -80,33 +80,33 @@ inline Void StatusEffect::ResetDuration( UInt iStack ) {
 }
 
 inline Bool StatusEffect::IsExhausted( UInt iStack ) const {
+    Assert( iStack < m_iStackCount );
+    return ( m_arrAmplitudes[iStack] == 0.0f );
 }
 inline Float StatusEffect::GetAmplitude( UInt iStack ) const {
+    Assert( iStack < m_iStackCount );
+    return m_arrAmplitudes[iStack];
 }
 
-inline Void StatusEffect::IncreaseAmplitude( UInt iStack, UInt iAmount ) {
+inline Void StatusEffect::IncreaseAmplitude( UInt iStack, Float fAmount ) {
+    Assert( iStack < m_iStackCount );
+    m_arrAmplitudes[iStack] += fAmount;
 }
-inline Void StatusEffect::DecreaseAmplitude( UInt iStack, UInt iAmount ) {
+inline Void StatusEffect::DecreaseAmplitude( UInt iStack, Float fAmount ) {
+    Assert( iStack < m_iStackCount );
+    if ( m_arrAmplitudes[iStack] > fAmount )
+        m_arrAmplitudes[iStack] -= fAmount;
+    else
+        m_arrAmplitudes[iStack] = 0.0f;
 }
-inline Void StatusEffect::SetAmplitude( UInt iStack, Float fAmplitude ) {
+inline Void StatusEffect::SetAmplitude( UInt iStack, Float fAmount ) {
+    Assert( iStack < m_iStackCount );
+    m_arrAmplitudes[iStack] = fAmount;
 }
 inline Void StatusEffect::ResetAmplitude( UInt iStack ) {
+    Assert( iStack < m_iStackCount );
+    m_arrAmplitudes[iStack] = 0.0f;
 }
-
-inline Float StatusEffect::GetAmplitude() const {
-    return m_fAmplitude;
-}
-
-inline Void StatusEffect::SetRemovable( Bool bRemovable ) {
-    m_bRemovable = bRemovable;
-}
-inline Void StatusEffect::SetAmplitude( Float fAmplitude ) {
-    m_fAmplitude = fAmplitude;
-}
-
-
-
-
 
 /////////////////////////////////////////////////////////////////////////////////
 // StatusEffectSet implementation

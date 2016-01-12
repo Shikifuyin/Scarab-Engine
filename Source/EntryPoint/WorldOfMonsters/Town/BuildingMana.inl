@@ -19,6 +19,10 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // BuildingMana implementation
+inline BuildingType BuildingMana::GetType() const {
+    return BUILDING_MANA;
+}
+
 inline UInt BuildingMana::GetProductionRateLevel() const {
     return m_iProductionRateLevel;
 }

@@ -29,6 +29,56 @@
 /////////////////////////////////////////////////////////////////////////////////
 // Constants definitions
 
+    // Rune definitions
+#define RUNE_SLOT_COUNT 6
+
+enum RuneType {
+    RUNE_ENERGY = 0, // (2)HP +15%
+    RUNE_FATAL,      // (4)ATT +35%
+    RUNE_GUARD,      // (2)DEF +15%
+    RUNE_SWIFT,      // (4)SPD +25%
+
+    RUNE_BLADE,      // (2)CRate +12%
+    RUNE_RAGE,       // (4)CDmg +40%
+    RUNE_FOCUS,      // (2)ACC +20%
+    RUNE_ENDURE,     // (2)RES +20%
+
+    RUNE_SHIELD,     // (2)Shield 3 turns 15% HP
+    RUNE_WILL,       // (2)Immunity 1 turn
+
+    RUNE_NEMESIS,    // (2)ATB +4% / HP loss 7%
+    RUNE_DESTROY,    // (2)HPMax -4% / Dmg dealt 30%
+
+    RUNE_VAMPIRE,    // (4)LifeDrain +35%
+    RUNE_DESPAIR,    // (4)Stun +25%
+    RUNE_VIOLENT,    // (4)ExtraTurn +22%
+    RUNE_REVENGE,    // (2)Counterattack +15%
+
+    RUNE_TYPE_COUNT
+};
+
+enum RuneStatistic {
+    RUNE_STAT_PRIMARY = 0,
+    RUNE_STAT_SECONDARY,
+    RUNE_STAT_SUB_1,
+    RUNE_STAT_SUB_2,
+    RUNE_STAT_SUB_3,
+    RUNE_STAT_SUB_4,
+
+    RUNE_STAT_COUNT
+};
+
+enum RuneQuality {
+    RUNE_QUALITY_COMMON = 0, // White  (nothing)
+    RUNE_QUALITY_UNCOMMON,   // White  (secondary only)
+    RUNE_QUALITY_MAGIC,      // Green  (secondary + 1 sub)
+    RUNE_QUALITY_RARE,       // Blue   (secondary + 2 subs)
+    RUNE_QUALITY_EPIC,       // Purple (secondary + 3 subs)
+    RUNE_QUALITY_LEGEND,     // Orange (secondary + 4 subs)
+
+    RUNE_QUALITY_COUNT
+};
+
     // Prototypes
 class MonsterInstance;
 
@@ -125,8 +175,8 @@ public:
     inline Bool HasRune( UInt iSlot ) const;
     inline Rune * GetRune( UInt iSlot );
 
-    Void AddRune( const Rune & hRune );
-    Void RemoveRune( UInt iSlot );
+    Void AddRune( Rune * pRune );
+    Rune * RemoveRune( UInt iSlot );
 
     // SetBonus access
     Bool HasSetBonus( RuneType iType, UInt * outCount = NULL ) const;
@@ -142,7 +192,7 @@ protected:
     Void _UpdateSetBonuses();
 
     // Rune slots
-    Rune m_arrRunes[RUNE_SLOT_COUNT];
+    Rune * m_arrRunes[RUNE_SLOT_COUNT];
 
     // Set bonuses
     UInt m_iSetBonusCount;

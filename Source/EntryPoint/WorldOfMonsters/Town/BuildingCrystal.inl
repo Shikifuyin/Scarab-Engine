@@ -19,6 +19,10 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // BuildingCrystal implementation
+inline BuildingType BuildingCrystal::GetType() const {
+    return BUILDING_CRYSTAL;
+}
+
 inline UInt BuildingCrystal::GetProductionRateLevel() const {
     return m_iProductionRateLevel;
 }

@@ -29,9 +29,6 @@
 /////////////////////////////////////////////////////////////////////////////////
 // Constants definitions
 
-    // Monster summoning
-#define BUILDING_MONSTER_SUMMONING_UNLOCK_COST_SUMMONING 5000 // in mana
-
 /////////////////////////////////////////////////////////////////////////////////
 // The BuildingMonsterSummoning class
 class BuildingMonsterSummoning : public Building
@@ -40,10 +37,17 @@ public:
     BuildingMonsterSummoning( BuildingDungeon * pDungeon );
     virtual ~BuildingMonsterSummoning();
 
-    // Monster summoning
-    inline Bool SummoningUnlocked() const;
+    // Type
+    inline virtual BuildingType GetType() const;
 
-    Bool UnlockSummoning();
+    // Monster summoning
+    inline UInt GetScrollCount( ScrollType iType ) const;
+
+    inline Void AddScrolls( ScrollType iType, UInt iCount );
+    inline Void RemoveScrolls( ScrollType iType, UInt iCount );
+
+    Bool CheckScrollCost( const ScrollCost * pCost ) const;
+    Void PayScrollCost( const ScrollCost * pCost );
 
     Bool CanSummon( Monster * pMonster ) const;
     Void Summon( Monster * pMonster );
@@ -53,7 +57,7 @@ private:
     BuildingDungeon * m_pDungeon;
 
     // Monster summoning
-    Bool m_bSummoningUnlocked;
+    UInt m_arrScrolls[SCROLL_TYPE_COUNT];
 };
 
 /////////////////////////////////////////////////////////////////////////////////

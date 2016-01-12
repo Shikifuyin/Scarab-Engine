@@ -19,31 +19,14 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // Building implementation
-inline BuildingType Building::GetType() const {
-    return m_iType;
-}
-
 inline const GChar * Building::GetName() const {
-    return sm_arrNames[m_iType];
+    return sm_arrNames[GetType()];
 }
 inline const GChar * Building::GetInfoText() const {
-    return sm_arrInfoTexts[m_iType];
+    return sm_arrInfoTexts[GetType()];
 }
 
-inline Bool Building::IsManaCost() const {
-    return ( m_iCostType == BUILDING_COST_MANA );
-}
-inline Bool Building::IsCrystalCost() const {
-    return ( m_iCostType == BUILDING_COST_CRYSTAL );
-}
-inline Bool Building::IsGloryCost() const {
-    return ( m_iCostType == BUILDING_COST_GLORY );
-}
-
-inline BuildingCostType Building::GetCostType() const {
-    return m_iCostType;
-}
-inline UInt Building::GetCost() const {
-    return m_iCost;
+inline const CurrencyCost * Building::GetCost() const {
+    return &m_hCost;
 }
 

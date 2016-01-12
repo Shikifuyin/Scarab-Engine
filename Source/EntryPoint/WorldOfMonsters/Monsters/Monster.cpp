@@ -142,6 +142,25 @@ Void Monster::Load( XMLNode * pNode )
 }
 
 /////////////////////////////////////////////////////////////////////////////////
+
+MonsterType Monster::_MonsterType_FromString( const GChar * strValue )
+{
+    if ( StringFn->Cmp(strValue, TEXT("")) == 0 ) {
+        return MONSTER_;
+    }
+    Assert( false );
+    return MONSTER_TYPE_COUNT;
+}
+MonsterElement Monster::_MonsterElement_FromString( const GChar * strValue )
+{
+    if ( StringFn->Cmp(strValue, TEXT("")) == 0 ) {
+        return MONSTER_ELEMENT_;
+    }
+    Assert( false );
+    return MONSTER_ELEMENT_COUNT;
+}
+
+/////////////////////////////////////////////////////////////////////////////////
 // MonsterInstance implementation
 MonsterInstance::MonsterInstance( const Monster * pMonster ):
     m_hSkillSet(), m_hRuneSet()

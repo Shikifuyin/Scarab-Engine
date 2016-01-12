@@ -29,13 +29,6 @@
 /////////////////////////////////////////////////////////////////////////////////
 // Constants definitions
 
-    // Crystals
-#define BUILDING_CRYSTAL_PRODUCTION_RATE_UPGRADE_COST 300 // in glory points
-#define BUILDING_CRYSTAL_PRODUCTION_RATE_MAX_LEVEL    10
-
-#define BUILDING_CRYSTAL_CAPACITY_UPGRADE_COST 100 // in glory points
-#define BUILDING_CRYSTAL_CAPACITY_MAX_LEVEL    10
-
 /////////////////////////////////////////////////////////////////////////////////
 // The BuildingCrystal class
 class BuildingCrystal : public Building
@@ -44,15 +37,16 @@ public:
     BuildingCrystal( BuildingDungeon * pDungeon );
     virtual ~BuildingCrystal();
 
+    // Type
+    inline virtual BuildingType GetType() const;
+
     // Crystal production
     inline UInt GetProductionRateLevel() const;
     inline UInt GetProductionRate() const;
-
     Bool UpgradeProductionRate();
 
     inline UInt GetCapacityLevel() const;
     inline UInt GetCapacity() const;
-
     Bool UpgradeCapacity();
 
     inline Bool IsEmpty() const;

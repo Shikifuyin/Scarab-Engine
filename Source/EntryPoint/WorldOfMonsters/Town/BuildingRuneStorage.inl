@@ -19,6 +19,10 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // BuildingRuneStorage implementation
+inline BuildingType BuildingRuneStorage::GetType() const {
+    return BUILDING_RUNE_STORAGE;
+}
+
 inline UInt BuildingRuneStorage::GetStorageLevel() const {
     return m_iStorageLevel;
 }
@@ -30,9 +34,9 @@ inline UInt BuildingRuneStorage::GetRuneCount( RuneType iType ) const {
     Assert( iType < RUNE_TYPE_COUNT );
     return m_arrRuneStorage[iType].Count();
 }
-inline Rune * BuildingRuneStorage::GetRune( RuneType iType, UInt iStorageIndex ) const {
+inline Rune * BuildingRuneStorage::GetRune( RuneType iType, UInt iStorageIndex ) {
     Assert( iType < RUNE_TYPE_COUNT );
     Assert( iStorageIndex < m_arrRuneStorage[iType].Count() );
-    return (m_arrRuneStorage[iType])[iStorageIndex];
+    return &( (m_arrRuneStorage[iType])[iStorageIndex] );
 }
 

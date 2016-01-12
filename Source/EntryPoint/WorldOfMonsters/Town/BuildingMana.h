@@ -29,13 +29,6 @@
 /////////////////////////////////////////////////////////////////////////////////
 // Constants definitions
 
-// Mana
-#define BUILDING_MANA_PRODUCTION_RATE_UPGRADE_COST 300 // in glory points
-#define BUILDING_MANA_PRODUCTION_RATE_MAX_LEVEL    10
-
-#define BUILDING_MANA_CAPACITY_UPGRADE_COST 100 // in glory points
-#define BUILDING_MANA_CAPACITY_MAX_LEVEL    10
-
 /////////////////////////////////////////////////////////////////////////////////
 // The BuildingMana class
 class BuildingMana : public Building
@@ -44,15 +37,16 @@ public:
     BuildingMana( BuildingDungeon * pDungeon );
     virtual ~BuildingMana();
 
+    // Type
+    inline virtual BuildingType GetType() const;
+
     // Mana production
     inline UInt GetProductionRateLevel() const;
     inline UInt GetProductionRate() const;
-
     Bool UpgradeProductionRate();
 
     inline UInt GetCapacityLevel() const;
     inline UInt GetCapacity() const;
-
     Bool UpgradeCapacity();
 
     inline Bool IsEmpty() const;

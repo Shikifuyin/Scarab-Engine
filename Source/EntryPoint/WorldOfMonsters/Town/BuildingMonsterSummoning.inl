@@ -19,6 +19,23 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // BuildingMonsterSummoning implementation
-inline Bool BuildingMonsterSummoning::SummoningUnlocked() const {
-    return m_bSummoningUnlocked;
+inline BuildingType BuildingMonsterSummoning::GetType() const {
+    return BUILDING_MONSTER_SUMMONING;
 }
+
+inline UInt BuildingMonsterSummoning::GetScrollCount( ScrollType iType ) const {
+    Assert( iType < SCROLL_TYPE_COUNT );
+    return m_arrScrolls[iType];
+}
+
+inline Void BuildingMonsterSummoning::AddScrolls( ScrollType iType, UInt iCount ) {
+    Assert( iType < SCROLL_TYPE_COUNT );
+    m_arrScrolls[iType] += iCount;
+}
+inline Void BuildingMonsterSummoning::RemoveScrolls( ScrollType iType, UInt iCount ) {
+    Assert( iType < SCROLL_TYPE_COUNT );
+    Assert( m_arrScrolls[iType] >= iCount );
+    m_arrScrolls[iType] -= iCount;
+}
+
+

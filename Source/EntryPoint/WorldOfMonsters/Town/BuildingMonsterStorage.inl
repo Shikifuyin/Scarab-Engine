@@ -19,6 +19,10 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // BuildingMonsterStorage implementation
+inline BuildingType BuildingMonsterStorage::GetType() const {
+    return BUILDING_MONSTER_STORAGE;
+}
+
 inline UInt BuildingMonsterStorage::GetStorageLevel() const {
     return m_iStorageLevel;
 }
@@ -29,7 +33,7 @@ inline UInt BuildingMonsterStorage::GetStorageRoom() const {
 inline UInt BuildingMonsterStorage::GetMonsterCount() const {
     return m_arrMonsterStorage.Count();
 }
-inline MonsterInstance * BuildingMonsterStorage::GetMonster( UInt iIndex ) const {
-    Assert( iIndex < m_arrMonsterStorage.Count() );
-    return m_arrMonsterStorage[iIndex];
+inline MonsterInstance * BuildingMonsterStorage::GetMonster( UInt iStorageIndex ) {
+    Assert( iStorageIndex < m_arrMonsterStorage.Count() );
+    return &( m_arrMonsterStorage[iStorageIndex] );
 }

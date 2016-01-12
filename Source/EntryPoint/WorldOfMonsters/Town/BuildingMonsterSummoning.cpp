@@ -26,112 +26,56 @@
 /////////////////////////////////////////////////////////////////////////////////
 // BuildingMonsterSummoning implementation
 BuildingMonsterSummoning::BuildingMonsterSummoning( BuildingDungeon * pDungeon ):
-    Building( BUILDING_MONSTER_SUMMONING, BUILDING_COST_MANA, 5000 )
+    Building()
 {
+    const GameParameters * pGameParams = GameplayFn->GetGameParameters();
+
+    // Cost
+    const CurrencyCost * pCost = pGameParams->GetBuildingCost( BUILDING_MONSTER_SUMMONING );
+    for( UInt i = 0; i < CURRENCY_COUNT; ++i )
+        m_hCost.arrCost[i] = pCost->arrCost[i];
+
+    // Dungeon access
     m_pDungeon = pDungeon;
 
-    m_bSummoningUnlocked = false;
+    // Monster summoning
+    for( UInt i = 0; i < SCROLL_TYPE_COUNT; ++i )
+        m_arrScrolls[i] = 0;
 }
 BuildingMonsterSummoning::~BuildingMonsterSummoning()
 {
     // nothing to do
 }
 
-Bool BuildingMonsterSummoning::UnlockSummoning()
+Bool BuildingMonsterSummoning::CheckScrollCost( const ScrollCost * pCost ) const
 {
-    if ( m_bSummoningUnlocked )
-        return true;
-
-    if ( m_pDungeon->GetCurrency(CURRENCY_MANA) < BUILDING_MONSTER_SUMMONING_UNLOCK_COST_SUMMONING )
-        return false;
-
-    m_pDungeon->RemoveCurrency( CURRENCY_MANA, BUILDING_MONSTER_SUMMONING_UNLOCK_COST_SUMMONING );
-    m_bSummoningUnlocked = true;
+    for( UInt i = 0; i < ESSENCE_TYPE_COUNT; ++i ) {
+        if ( m_arrScrolls[i] < pCost->arrCost[i] )
+            return false;
+    }
     return true;
+}
+Void BuildingMonsterSummoning::PayScrollCost( const ScrollCost * pCost )
+{
+    for( UInt i = 0; i < ESSENCE_TYPE_COUNT; ++i ) {
+        Assert( m_arrScrolls[i] >= pCost->arrCost[i] );
+        m_arrScrolls[i] -= pCost->arrCost[i];
+    }
 }
 
 Bool BuildingMonsterSummoning::CanSummon( Monster * pMonster ) const
 {
-    if ( !m_bSummoningUnlocked )
-        return false;
+    Assert( pMonster != NULL );
 
-    // Get levelingstats & element
-    const MonsterLevelingStats * pLevelingStats = pMonster->GetLevelingStats();
-    MonsterElement iElement = pLevelingStats->GetElement();
-
-    // Check summoning cost
-    UInt iCost = pLevelingStats->GetSummoningCostAmount( MONSTER_SUMMONING_CMN );
-    if ( pLevelingStats->IsSummoningCostHighTier(MONSTER_SUMMONING_CMN) ) {
-        if ( iCost > m_pDungeon->GetCurrency(CURRENCY_SCROLL_MYSTICAL) )
-            return false;
-    } else {
-        if ( iCost > m_pDungeon->GetCurrency(CURRENCY_SCROLL_COMMON) )
-            return false;
-    }
-
-    iCost = pLevelingStats->GetSummoningCostAmount( MONSTER_SUMMONING_RAR );
-    if ( pLevelingStats->IsSummoningCostHighTier(MONSTER_SUMMONING_RAR) ) {
-        if ( iCost > m_pDungeon->GetCurrency(CURRENCY_SCROLL_LEGENDARY) )
-            return false;
-    } else {
-        if ( iCost > m_pDungeon->GetCurrency(CURRENCY_SCROLL_MYSTICAL) )
-            return false;
-    }
-
-    iCost = pLevelingStats->GetSummoningCostAmount( MONSTER_SUMMONING_ELEMENTAL );
-    CurrencyType iCurrency = CURRENCY_SCROLL_FIRE;
-    switch( iElement ) {
-        case MONSTER_ELEMENT_FIRE:  iCurrency = CURRENCY_SCROLL_FIRE; break;
-        case MONSTER_ELEMENT_WATER: iCurrency = CURRENCY_SCROLL_WATER; break;
-        case MONSTER_ELEMENT_WIND:  iCurrency = CURRENCY_SCROLL_WIND; break;
-        case MONSTER_ELEMENT_LIGHT: iCurrency = CURRENCY_SCROLL_LIGHT; break;
-        case MONSTER_ELEMENT_DARK:  iCurrency = CURRENCY_SCROLL_DARK; break;
-        default: Assert(false); break;
-    }
-    if ( iCost > m_pDungeon->GetCurrency(iCurrency) )
-        return false;
-
-    // Pass !
-    return true;
+    return CheckScrollCost( pMonster->GetSummoningCost() );
 }
 Void BuildingMonsterSummoning::Summon( Monster * pMonster )
 {
-    Assert( m_bSummoningUnlocked );
+    Assert( pMonster != NULL );
     Assert( m_pDungeon->GetMonsterCount() < m_pDungeon->GetMonsterCollectionRoom() );
 
-    // Get levelingstats & element
-    const MonsterLevelingStats * pLevelingStats = pMonster->GetLevelingStats();
-    MonsterElement iElement = pLevelingStats->GetElement();
+    PayScrollCost( pMonster->GetSummoningCost() );
 
-    // Pay summoning cost
-    UInt iCost = pLevelingStats->GetSummoningCostAmount( MONSTER_SUMMONING_CMN );
-    if ( pLevelingStats->IsSummoningCostHighTier(MONSTER_SUMMONING_CMN) )
-        m_pDungeon->RemoveCurrency( CURRENCY_SCROLL_MYSTICAL, iCost );
-    else
-        m_pDungeon->RemoveCurrency( CURRENCY_SCROLL_COMMON, iCost );
-
-    iCost = pLevelingStats->GetSummoningCostAmount( MONSTER_SUMMONING_RAR );
-    if ( pLevelingStats->IsSummoningCostHighTier(MONSTER_SUMMONING_RAR) )
-        m_pDungeon->RemoveCurrency( CURRENCY_SCROLL_LEGENDARY, iCost );
-    else
-        m_pDungeon->RemoveCurrency( CURRENCY_SCROLL_MYSTICAL, iCost );
-
-    iCost = pLevelingStats->GetSummoningCostAmount( MONSTER_SUMMONING_ELEMENTAL );
-    CurrencyType iCurrency = CURRENCY_SCROLL_FIRE;
-    switch( iElement ) {
-        case MONSTER_ELEMENT_FIRE:  iCurrency = CURRENCY_SCROLL_FIRE; break;
-        case MONSTER_ELEMENT_WATER: iCurrency = CURRENCY_SCROLL_WATER; break;
-        case MONSTER_ELEMENT_WIND:  iCurrency = CURRENCY_SCROLL_WIND; break;
-        case MONSTER_ELEMENT_LIGHT: iCurrency = CURRENCY_SCROLL_LIGHT; break;
-        case MONSTER_ELEMENT_DARK:  iCurrency = CURRENCY_SCROLL_DARK; break;
-        default: Assert(false); break;
-    }
-    m_pDungeon->RemoveCurrency( iCurrency, iCost );
-
-    // Summon the monster
-    MonsterInstance * pMonsterInstance = GameplayFn->CreateMonsterInstance( pMonster );
-    Assert( pMonsterInstance != NULL );
-
-    m_pDungeon->AddMonster( pMonsterInstance );
+    m_pDungeon->AddMonster( MonsterInstance(pMonster) );
 }
 

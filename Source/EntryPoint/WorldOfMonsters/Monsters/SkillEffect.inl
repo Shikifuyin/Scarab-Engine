@@ -88,22 +88,13 @@ inline SkillEffectType SkillEffectStatus::GetType() const {
 inline StatusEffectType SkillEffectStatus::GetStatusEffectType() const {
     return m_iType;
 }
-
-inline Bool SkillEffectStatus::IsRemovable() const {
-    return m_bRemovable;
-}
-
-inline Float SkillEffectStatus::GetAmplitude() const {
-    return m_fAmplitude;
-}
-
-inline UInt SkillEffectStatus::GetMaxStacks() const {
-    return m_iMaxStacks;
-}
 inline UInt SkillEffectStatus::GetStackCount() const {
     return m_iStackCount;
 }
 inline UInt SkillEffectStatus::GetDuration() const {
     return m_iDuration;
+}
+inline Float SkillEffectStatus::GetAmplitude() const {
+    return m_fAmplitude;
 }
 

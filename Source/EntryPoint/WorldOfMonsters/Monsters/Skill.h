@@ -24,20 +24,17 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // Includes
-#include "Statistics.h"
+#include "LevelingStats.h"
 #include "StatusEffect.h"
 #include "SkillEffect.h"
 
 /////////////////////////////////////////////////////////////////////////////////
 // Constants definitions
 
-// Identifiers
+    // Skill definitions
 #define SKILL_NAME_LENGTH 64
 typedef UInt SkillID;
 
-
-
-// Skill types
 enum SkillType {
     SKILL_TYPE_ACTIVE = 0,
     SKILL_TYPE_PASSIVE,
@@ -76,15 +73,24 @@ enum SkillPassiveType {
     SKILL_PASSIVE_COUNT
 };
 
-// Skill sets
-#define SKILL_SLOT_COUNT 4
+enum SkillLeaderConstraint {
+    SKILL_LEADERCONSTRAINT_NONE = 0,
+    SKILL_LEADERCONSTRAINT_FIRE,
+    SKILL_LEADERCONSTRAINT_WATER,
+    SKILL_LEADERCONSTRAINT_WIND,
+    SKILL_LEADERCONSTRAINT_LIGHT,
+    SKILL_LEADERCONSTRAINT_DARK,
+    SKILL_LEADERCONSTRAINT_DUNGEON,
+    SKILL_LEADERCONSTRAINT_ARENA,
+    SKILL_LEADERCONSTRAINT_GUILDBATTLE
+};
 
 /////////////////////////////////////////////////////////////////////////////////
 // The Skill class
 class Skill
 {
 public:
-    Skill( XMLNode * pSkillNode );
+    Skill( XMLNode * pNode );
     virtual ~Skill();
 
     // Identifier
@@ -92,19 +98,14 @@ public:
     inline const GChar * GetName() const;
 
     // Type
+    virtual SkillType GetType() const = 0;
+
     inline Bool IsActive() const;
     inline Bool IsPassive() const;
     inline Bool IsLeader() const;
 
-    inline SkillType GetType() const;
-
-    // Cooldown acces
-    inline Bool HasCooldown() const;
-    inline UInt GetCooldown() const;
-
     // Leveling stats
-    inline UInt GetMaxLevel() const;
-    inline const SkillLevelBonus * GetLevelBonus( UInt iLevel ) const;
+    inline const SkillLevelingStats * GetLevelingStats() const;
 
 protected:
     // Helpers
@@ -116,14 +117,8 @@ protected:
     SkillID m_iSkillID;
     GChar m_strName[SKILL_NAME_LENGTH];
 
-    // Type
-    SkillType m_iType;
-
-    // Cooldown
-    UInt m_iCooldown;
-
     // Leveling stats
-    
+    SkillLevelingStats m_hLevelingStats;
 };
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -131,18 +126,18 @@ protected:
 class ActiveSkill : public Skill
 {
 public:
-    ActiveSkill( XMLNode * pSkillNode );
+    ActiveSkill( XMLNode * pNode );
     virtual ~ActiveSkill();
 
     // Type
+    inline virtual SkillType GetType() const;
+
     inline Bool IsAttack() const;
     inline Bool IsDefense() const;
 
-    inline SkillActiveType GetActiveType() const;
-
     // Effects access
     inline UInt GetEffectCount( SkillActiveType iType );
-    inline SkillEffect * GetEffect( SkillActiveType iType, UInt iIndex ) const;
+    inline const SkillEffect * GetEffect( SkillActiveType iType, UInt iIndex ) const;
 
 protected:
     // Helpers
@@ -165,7 +160,7 @@ public:
     virtual ~PassiveSkill();
 
     // Type
-    inline SkillPassiveType GetPassiveType() const;
+    inline virtual SkillType GetType() const;
 
     // Effects access
     inline UInt GetEffectCount( SkillPassiveType iType );
@@ -185,37 +180,28 @@ protected:
 class LeaderSkill : public Skill
 {
 public:
-    enum LeaderConstraint {
-        LEADER_CONSTRAINT_NONE = 0,
-        LEADER_CONSTRAINT_FIRE,
-        LEADER_CONSTRAINT_WATER,
-        LEADER_CONSTRAINT_WIND,
-        LEADER_CONSTRAINT_LIGHT,
-        LEADER_CONSTRAINT_DARK,
-        LEADER_CONSTRAINT_DUNGEON,
-        LEADER_CONSTRAINT_ARENA,
-        LEADER_CONSTRAINT_GUILDBATTLE
-    };
-public:
     LeaderSkill( XMLNode * pSkillNode );
     virtual ~LeaderSkill();
+
+    // Type
+    inline virtual SkillType GetType() const;
 
     // Effect access
     inline MonsterStatistic GetLeaderBonusStat() const;
     inline Float GetLeaderBonusAmount() const;
 
-    inline LeaderConstraint GetLeaderConstraint() const;
+    inline SkillLeaderConstraint GetLeaderConstraint() const;
 
 protected:
     // Helpers
     static MonsterStatistic _MonsterStatistic_FromString( const GChar * strValue );
-    static LeaderConstraint _LeaderConstraint_FromString( const GChar * strValue );
+    static SkillLeaderConstraint _SkillLeaderConstraint_FromString( const GChar * strValue );
 
     // Effect
     MonsterStatistic m_iBonusStat;
     Float m_fBonusAmount;
 
-    LeaderConstraint m_iConstraint;
+    SkillLeaderConstraint m_iConstraint;
 };
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -249,15 +235,6 @@ public:
 
     inline SkillType GetType() const;
 
-    // Cooldown acces
-    inline Bool HasCooldown() const;
-    inline UInt GetCooldown() const;
-
-    // Awakening access
-    inline Bool RequiresAwakening() const;
-    inline Bool HasAwakeningUpgrade() const;
-    inline SkillID GetAwakeningUpgrade() const;
-
     // Level access
     inline UInt GetMaxLevel() const;
     inline UInt GetLevel() const;
@@ -266,21 +243,31 @@ public:
     UInt LevelDown();
     Void SetLevel( UInt iLevel );
 
-    // Effective stats access
-    inline Bool HasEffectiveBonus( SkillStat iStat ) const;
-    inline Float GetEffectiveBonus( SkillStat iStat ) const;
+    // Effective stats
+    inline Float GetBonusDamage() const;
+    inline Float GetBonusRecovery() const;
+    inline Float GetBonusStatusEffectRate() const;
+    inline Float GetBonusSpecific() const;
+
+    inline Bool HasCooldown() const;
+    inline UInt GetCooldown() const;
 
 private:
     // Helpers
     Void _UpdateEffectiveStats();
 
-    // Skill model
+    // Skill
     Skill * m_pSkill;
 
     UInt m_iLevel;
 
     // Effective stats
-    Float m_fEffectiveBonus[SKILL_STAT_COUNT];
+    Float m_fBonusDamage;
+    Float m_fBonusRecovery;
+    Float m_fBonusStatusEffectRate;
+    Float m_fBonusSpecific;
+
+    UInt m_iCooldown;
 };
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -291,6 +278,7 @@ public:
     SkillSet();
     ~SkillSet();
 
+    // Skill set
     inline UInt GetSkillCount() const;
     inline SkillInstance * GetSkillInstance( UInt iSlot );
 
@@ -298,6 +286,7 @@ public:
     Void RemoveAll();
 
 private:
+    // Skill set
     UInt m_iSkillCount;
     SkillInstance m_arrSkills[SKILL_SLOT_COUNT];
 };

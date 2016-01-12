@@ -26,42 +26,51 @@
 /////////////////////////////////////////////////////////////////////////////////
 // BuildingRuneStorage implementation
 BuildingRuneStorage::BuildingRuneStorage( BuildingDungeon * pDungeon ):
-    Building( BUILDING_MONSTER_STORAGE, BUILDING_COST_MANA, 100000 )
+    Building()
 {
+    const GameParameters * pGameParams = GameplayFn->GetGameParameters();
+
+    // Cost
+    const CurrencyCost * pCost = pGameParams->GetBuildingCost( BUILDING_RUNE_STORAGE );
+    for( UInt i = 0; i < CURRENCY_COUNT; ++i )
+        m_hCost.arrCost[i] = pCost->arrCost[i];
+
+    // Dungeon access
     m_pDungeon = pDungeon;
 
     // Rune storage
     m_iStorageLevel = 0;
     m_iStorageRoom = 16;
-
     for( UInt i = 0; i < RUNE_TYPE_COUNT; ++i ) {
         m_arrRuneStorage[i].UseMemoryContext( GameplayFn->GetMemoryContext(), TEXT("Scratch") );
         m_arrRuneStorage[i].Create();
-        m_arrRuneStorage[i].EnsureCapacity( BUILDING_RUNE_COLLECTION_MAX_ROOM );
+        m_arrRuneStorage[i].EnsureCapacity( BUILDING_RUNE_STORAGE_MAX_ROOM );
     }
 }
 BuildingRuneStorage::~BuildingRuneStorage()
 {
     // Rune storage
-    for( UInt i = 0; i < RUNE_TYPE_COUNT; ++i ) {
-        for( UInt j = 0; j < m_arrRuneStorage[i].Count(); ++j )
-            GameplayFn->DestroyRune( (m_arrRuneStorage[i])[j] );
+    for( UInt i = 0; i < RUNE_TYPE_COUNT; ++i )
         m_arrRuneStorage[i].Destroy();
-    }
 }
 
 Bool BuildingRuneStorage::UpgradeStorageRoom()
 {
-    if ( m_iStorageLevel >= BUILDING_RUNE_COLLECTION_MAX_LEVEL )
+    const GameParameters * pGameParams = GameplayFn->GetGameParameters();
+    const CurrencyCost * pCost = pGameParams->GetRuneStorageUpgradeCost();
+
+    if ( m_iStorageLevel >= BUILDING_RUNE_STORAGE_MAX_LEVEL - 1 )
         return false;
-    if ( m_pDungeon->GetCurrency(CURRENCY_MANA) < BUILDING_RUNE_STORAGE_UPGRADE_COST )
+    if ( !(m_pDungeon->CheckCurrencyCost(pCost)) )
         return false;
 
-    static UInt s_arrRoomByLevel[BUILDING_RUNE_COLLECTION_MAX_LEVEL] = {
-        16, 32, 48, 64, 80, 96, 112, 128, 144, 160, 176, 192, 208, 224, 240, 256
+    static UInt s_arrRoomByLevel[BUILDING_RUNE_STORAGE_MAX_LEVEL] = {
+        16, 32, 48, 64, 80, 96, 112, 128, 144, 160, 176, 192, 208, 224, 240, 256, 272, 288, 304, 320, 336, 352, 368, 384, 400,
+        416, 432, 448, 464, 480, 496, 512, 528, 544, 560, 576, 592, 608, 624, 640, 656, 672, 688, 704, 720, 736, 752, 768, 784, 800,
+        816, 832, 848, 864, 880, 896, 912, 928, 944, 960, 976, 992, 1008, 1024
     };
 
-    m_pDungeon->RemoveCurrency( CURRENCY_MANA, BUILDING_RUNE_STORAGE_UPGRADE_COST );
+    m_pDungeon->PayCurrencyCost( pCost );
 
     ++m_iStorageLevel;
     m_iStorageRoom = s_arrRoomByLevel[m_iStorageLevel];
@@ -77,12 +86,13 @@ Bool BuildingRuneStorage::StoreRune( RuneType iType, UInt iIndex )
         return false;
 
     // Remove rune from collection
-    Rune * pRune = m_pDungeon->RemoveRune( iType, iIndex );
-    Assert( pRune != NULL );
+    Rune hRune;
+    m_pDungeon->RemoveRune( iType, iIndex, &hRune );
+    Assert( hRune.IsPresent() );
 
     // Add it to storage
-    UInt iIndex = m_arrRuneStorage[iType].Search( _Compare_Rune, pRune );
-    m_arrRuneStorage[iType].Insert( iIndex, pRune );
+    UInt iIndex = m_arrRuneStorage[iType].Search( _Compare_Rune, hRune );
+    m_arrRuneStorage[iType].Insert( iIndex, hRune );
 
     // Done
     return true;
@@ -96,12 +106,12 @@ Bool BuildingRuneStorage::RetrieveRune( RuneType iType, UInt iStorageIndex )
         return false;
 
     // Remove rune from storage
-    Rune * pRune = NULL;
-    m_arrRuneStorage[iType].Remove( iStorageIndex, pRune );
-    Assert( pRune != NULL );
+    Rune hRune;
+    m_arrRuneStorage[iType].Remove( iStorageIndex, hRune );
+    Assert( hRune.IsPresent() );
 
     // Add it to collection
-    m_pDungeon->AddRune( pRune );
+    m_pDungeon->AddRune( hRune );
 
     // Done
     return true;
@@ -109,23 +119,23 @@ Bool BuildingRuneStorage::RetrieveRune( RuneType iType, UInt iStorageIndex )
 
 /////////////////////////////////////////////////////////////////////////////////
 
-Int BuildingRuneStorage::_Compare_Rune( Rune * const & pLeft, Rune * const & pRight )
+Int BuildingRuneStorage::_Compare_Rune( const Rune & rLeft, const Rune & rRight )
 {
-    if ( pLeft->GetSlot() < pRight->GetSlot() )
+    if ( rLeft.GetSlot() < rRight.GetSlot() )
         return +1;
-    if ( pLeft->GetSlot() > pRight->GetSlot() )
+    if ( rLeft.GetSlot() > rRight.GetSlot() )
         return -1;
-    if ( pLeft->GetRank() < pRight->GetRank() )
+    if ( rLeft.GetRank() < rRight.GetRank() )
         return +1;
-    if ( pLeft->GetRank() > pRight->GetRank() )
+    if ( rLeft.GetRank() > rRight.GetRank() )
         return -1;
-    if ( pLeft->GetLevel() < pRight->GetLevel() )
+    if ( rLeft.GetLevel() < rRight.GetLevel() )
         return +1;
-    if ( pLeft->GetLevel() > pRight->GetLevel() )
+    if ( rLeft.GetLevel() > rRight.GetLevel() )
         return -1;
-    if ( pLeft->GetQuality() < pRight->GetQuality() )
+    if ( rLeft.GetQuality() < rRight.GetQuality() )
         return +1;
-    if ( pLeft->GetQuality() > pRight->GetQuality() )
+    if ( rLeft.GetQuality() > rRight.GetQuality() )
         return -1;
     return 0;
 }

@@ -24,23 +24,7 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // Includes
-#include "../../Lib/Datastruct/Table/TreeMap.h"
-#include "../../Lib/Math/Random/Random.h"
-
-// TODO : migrate those XMLs into a database !
-#include "../../Engine/Resource/ResourceManager.h"
-
 #include "GameParameters.h"
-
-#include "Monsters\Statistics.h"
-#include "Monsters\StatusEffect.h"
-#include "Monsters\Skill.h"
-#include "Monsters\Rune.h"
-#include "Monsters\Monster.h"
-
-#include "Battle\Battle.h"
-
-#include "Town\PlayerTown.h"
 
 /////////////////////////////////////////////////////////////////////////////////
 // Constants definitions
@@ -86,7 +70,6 @@ public:
     inline const GameParameters * GetGameParameters() const;
 
 
-    inline RuneLevelingStats * GetRuneLevelingStats() const;
 
     // Skill database
     inline Skill * GetSkill( SkillID iSkillID ) const;
@@ -102,10 +85,11 @@ public:
 
 private:
     // Helpers
+    Void _LoadGameParameters();
     Void _LoadGameDatabase();
 
     // Game parameters
-    GameParameters m_hParameters;
+    GameParameters m_hGameParameters;
 
     // Skill database
     inline static Int _Compare_SkillIDs( const SkillID & rLeft, const SkillID & rRight, Void * pUserData );

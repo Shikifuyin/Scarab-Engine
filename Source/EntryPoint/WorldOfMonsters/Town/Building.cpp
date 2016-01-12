@@ -23,12 +23,12 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // Building implementation
-Building::Building( BuildingType iType, BuildingCostType iCostType, UInt iCost )
+Building::Building()
 {
-    m_iType = iType;
-
-    m_iCostType = iCostType;
-    m_iCost = iCost;
+    m_hCost.arrCost[CURRENCY_MANA] = 0;
+    m_hCost.arrCost[CURRENCY_CRYSTAL] = 0;
+    m_hCost.arrCost[CURRENCY_GLORYPOINTS] = 0;
+    m_hCost.arrCost[CURRENCY_GUILDPOINTS] = 0;
 }
 Building::~Building()
 {

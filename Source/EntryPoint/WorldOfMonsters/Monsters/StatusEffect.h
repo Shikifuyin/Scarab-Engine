@@ -24,7 +24,7 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // Includes
-#include "../GameParameters.h"
+#include "../Monsters/LevelingStats.h"
 
 /////////////////////////////////////////////////////////////////////////////////
 // Constants definitions
@@ -90,11 +90,11 @@ public:
     inline UInt GetStackCount() const;
 
     Void AddStacks( UInt iStackCount, UInt iDuration, Float fAmplitude );
-    Void RemoveStacks( UInt iStackCount );
-    Bool RemoveAllStacks();
+    Bool RemoveStacks( UInt iStackCount );
+    Void RemoveAllStacks();
 
     Bool UpdateStackDurations();
-    Void RemoveExpiredStacks();
+    Bool RemoveExpiredStacks();
 
     // Duration
     inline Bool IsExpired( UInt iStack ) const;
@@ -109,9 +109,9 @@ public:
     inline Bool IsExhausted( UInt iStack ) const;
     inline Float GetAmplitude( UInt iStack ) const;
 
-    inline Void IncreaseAmplitude( UInt iStack, UInt iAmount );
-    inline Void DecreaseAmplitude( UInt iStack, UInt iAmount );
-    inline Void SetAmplitude( UInt iStack, Float fAmplitude );
+    inline Void IncreaseAmplitude( UInt iStack, Float fAmount );
+    inline Void DecreaseAmplitude( UInt iStack, Float fAmount );
+    inline Void SetAmplitude( UInt iStack, Float fAmount );
     inline Void ResetAmplitude( UInt iStack );
 
 protected:
@@ -122,10 +122,7 @@ protected:
     StatusEffectType m_iType;
 
     // Stacks
-    UInt m_iMaxStacks;
     UInt m_iStackCount;
-
-    // Properties
     UInt m_arrDurations[STATUSEFFECT_MAX_STACKS];
     Float m_arrAmplitudes[STATUSEFFECT_MAX_STACKS];
 };
@@ -142,7 +139,7 @@ public:
     inline Bool HasStatusEffect( StatusEffectType iType ) const;
     inline StatusEffect * GetStatusEffect( StatusEffectType iType );
 
-    Void Add( StatusEffectType iType, Float fAmplitude, UInt iMaxStacks, UInt iStackCount, UInt iDuration );
+    Void Add( StatusEffectType iType, UInt iStackCount, UInt iDuration, Float fAmplitude );
     Void Remove( StatusEffectType iType, UInt iStackCount );
     Void RemoveAll();
     

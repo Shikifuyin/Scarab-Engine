@@ -24,10 +24,60 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // Includes
-#include "../GameParameters.h"
+#include "../../../Engine/Resource/ResourceManager.h"
 
 /////////////////////////////////////////////////////////////////////////////////
 // Constants definitions
+
+    // Monster definitions
+#define MONSTER_MAX_RANK               6
+#define MONSTER_MAX_LEVEL              40
+#define MONSTER_MAX_LEVELBYRANK(_rank) ( 15 + (5*(_rank)) ) // 15, 20, 25, 30, 35, 40
+
+enum MonsterStatistic {
+    MONSTER_STAT_HEALTH = 0,
+    MONSTER_STAT_ATTACK,
+    MONSTER_STAT_DEFENSE,
+    MONSTER_STAT_SPEED,
+
+    MONSTER_STAT_CRIT_RATE,
+    MONSTER_STAT_CRIT_DMG,
+    MONSTER_STAT_ACCURACY,
+    MONSTER_STAT_RESISTANCE,
+
+    MONSTER_STAT_COUNT
+};
+
+enum MonsterAwakeningBonus {
+    MONSTER_AWAKENING_SPEED = 0,
+    MONSTER_AWAKENING_CRITICALRATE,
+    MONSTER_AWAKENING_ACCURACY,
+    MONSTER_AWAKENING_RESISTANCE,
+    MONSTER_AWAKENING_SKILLNEW,
+    MONSTER_AWAKENING_SKILLUPGRADE,
+
+    MONSTER_AWAKENING_BONUS_COUNT
+};
+
+    // Skill definitions
+#define SKILL_MAX_LEVEL 16
+
+#define SKILL_SLOT_COUNT 4
+
+enum SkillStat {
+    SKILL_STAT_DAMAGE = 0,
+    SKILL_STAT_RECOVERY,
+    SKILL_STAT_STATUSEFFECTRATE,
+    SKILL_STAT_SPECIFIC, // Shields, etc ...
+
+    SKILL_STAT_COOLDOWN,
+
+    SKILL_STAT_COUNT
+};
+
+    // Rune definitions
+#define RUNE_MAX_RANK  6
+#define RUNE_MAX_LEVEL 16
 
 /////////////////////////////////////////////////////////////////////////////////
 // The MonsterLevelingStats class
@@ -54,6 +104,9 @@ public:
     inline MonsterAwakeningBonus GetAwakeningBonus() const;
 
 private:
+    // Helpers
+    static MonsterAwakeningBonus _MonsterAwakeningBonus_FromString( const GChar * strValue );
+
     // Leveling stats
     UInt m_arrHealth[MONSTER_MAX_RANK][MONSTER_MAX_LEVEL];
     UInt m_arrHealthAwaken[MONSTER_MAX_RANK][MONSTER_MAX_LEVEL];

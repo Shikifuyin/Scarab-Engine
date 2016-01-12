@@ -23,35 +23,19 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // Skill implementation
-Skill::Skill( XMLNode * pSkillNode )
+Skill::Skill( XMLNode * pNode ):
+    m_hLevelingStats()
 {
-    Assert( pSkillNode != NULL );
-    Assert( StringFn->Cmp(pSkillNode->GetTagName(), TEXT("Skill")) == 0 );
+    Assert( pNode != NULL );
+    Assert( StringFn->Cmp(pNode->GetTagName(), TEXT("Skill")) == 0 );
 
-    m_iSkillID = (SkillID)( StringFn->ToUInt(pSkillNode->GetAttribute(TEXT("ID"))->GetValue()) );
-    StringFn->NCopy( m_strName, pSkillNode->GetAttribute(TEXT("Name"))->GetValue(), SKILL_NAME_LENGTH - 1 );
+    m_iSkillID = (SkillID)( StringFn->ToUInt(pNode->GetAttribute(TEXT("SkillID"))->GetValue()) );
+    StringFn->NCopy( m_strName, pNode->GetAttribute(TEXT("Name"))->GetValue(), SKILL_NAME_LENGTH - 1 );
 
-    m_iType = _SkillType_FromString( pSkillNode->GetAttribute(TEXT("Type"))->GetValue() );
+    XMLNode * pLevelingStatsNode = pNode->GetChildByTag( TEXT("SkillLevelingStats"), 0 );
+    Assert( pLevelingStatsNode != NULL );
 
-    m_iCooldown = (UInt)( StringFn->ToUInt(pSkillNode->GetAttribute(TEXT("Cooldown"))->GetValue()) );
-
-    m_iMaxLevel = (UInt)( StringFn->ToUInt(pSkillNode->GetAttribute(TEXT("MaxLevel"))->GetValue()) );
-    Assert( m_iMaxLevel <= SKILL_MAX_LEVEL );
-
-    XMLNode * pLevelBonusListNode = pSkillNode->GetChildByTag( TEXT("LevelBonusList"), 0 );
-    Assert( pLevelBonusListNode != NULL );
-
-    for( UInt i = 0; i < m_iMaxLevel; ++i ) {
-        XMLNode * pLevelBonusNode = pLevelBonusListNode->GetChildByTag( TEXT("LevelBonus"), i );
-        Assert( pLevelBonusNode != NULL );
-
-        m_arrLevelBonus[i].iStat = _SkillStat_FromString( pLevelBonusNode->GetAttribute(TEXT("Stat"))->GetValue() );
-        m_arrLevelBonus[i].fAmount = StringFn->ToFloat( pLevelBonusNode->GetAttribute(TEXT("Amount"))->GetValue() );
-    }
-
-    m_bRequiresAwakening = ( StringFn->ToUInt(pSkillNode->GetAttribute(TEXT("RequiresAwakening"))->GetValue()) != 0 );
-    m_bHasAwakeningUpgrade = ( StringFn->ToUInt(pSkillNode->GetAttribute(TEXT("HasAwakeningUpgrade"))->GetValue()) != 0 );
-    m_iAwakeningUpgradeID = (SkillID)( StringFn->ToUInt(pSkillNode->GetAttribute(TEXT("AwakeningUpgradeID"))->GetValue()) );
+    m_hLevelingStats.Load( pLevelingStatsNode );
 }
 Skill::~Skill()
 {
@@ -87,16 +71,16 @@ SkillEffectType Skill::_SkillEffectType_FromString( const GChar * strValue )
 
 /////////////////////////////////////////////////////////////////////////////////
 // ActiveSkill implementation
-ActiveSkill::ActiveSkill( XMLNode * pSkillNode ):
-    Skill( pSkillNode )
+ActiveSkill::ActiveSkill( XMLNode * pNode ):
+    Skill( pNode )
 {
     for ( UInt i = 0; i < SKILL_ACTIVE_COUNT; ++i )
         m_arrEffectCounts[i] = 0;
 
-    XMLNode * pActiveSkillDescriptorNode = pSkillNode->GetChildByTag( TEXT("ActiveSkillDescriptor"), 0 );
+    XMLNode * pActiveSkillDescriptorNode = pNode->GetChildByTag( TEXT("ActiveSkillDescriptor"), 0 );
     Assert( pActiveSkillDescriptorNode != NULL );
 
-    m_bIsAttack = ( StringFn->ToUInt(pSkillNode->GetAttribute(TEXT("IsAttack"))->GetValue()) != 0 );
+    m_bIsAttack = ( StringFn->ToUInt(pActiveSkillDescriptorNode->GetAttribute(TEXT("IsAttack"))->GetValue()) != 0 );
 
     UInt iCount = pActiveSkillDescriptorNode->GetChildCount();
     for( UInt i = 0; i < iCount; ++i ) {
@@ -108,19 +92,11 @@ ActiveSkill::ActiveSkill( XMLNode * pSkillNode ):
 
         SkillEffect * pEffect = NULL;
         switch( iEffectType ) {
-            case SKILLEFFECT_DAMAGE:
-                pEffect = New SkillEffectDamage( pEffectDescriptorNode );
-                break;
-            case SKILLEFFECT_HEAL:
-                pEffect = New SkillEffectHeal( pEffectDescriptorNode );
-                break;
-            case SKILLEFFECT_ATB:
-                pEffect = New SkillEffectATB( pEffectDescriptorNode );
-                break;
-            case SKILLEFFECT_STATUS:
-                pEffect = New SkillEffectStatus( pEffectDescriptorNode );
-                break;
-            default: Assert(false);  break;
+            case SKILLEFFECT_DAMAGE: pEffect = New SkillEffectDamage( pEffectDescriptorNode ); break;
+            case SKILLEFFECT_HEAL:   pEffect = New SkillEffectHeal( pEffectDescriptorNode ); break;
+            case SKILLEFFECT_ATB:    pEffect = New SkillEffectATB( pEffectDescriptorNode ); break;
+            case SKILLEFFECT_STATUS: pEffect = New SkillEffectStatus( pEffectDescriptorNode ); break;
+            default: Assert(false); break;
         }
 
         m_arrEffects[iActiveType][m_arrEffectCounts[iActiveType]] = pEffect;
@@ -164,19 +140,11 @@ PassiveSkill::PassiveSkill( XMLNode * pSkillNode ):
 
         SkillEffect * pEffect = NULL;
         switch( iEffectType ) {
-            case SKILLEFFECT_DAMAGE:
-                pEffect = New SkillEffectDamage( pEffectDescriptorNode );
-                break;
-            case SKILLEFFECT_HEAL:
-                pEffect = New SkillEffectHeal( pEffectDescriptorNode );
-                break;
-            case SKILLEFFECT_ATB:
-                pEffect = New SkillEffectATB( pEffectDescriptorNode );
-                break;
-            case SKILLEFFECT_STATUS:
-                pEffect = New SkillEffectStatus( pEffectDescriptorNode );
-                break;
-            default: Assert(false);  break;
+            case SKILLEFFECT_DAMAGE: pEffect = New SkillEffectDamage( pEffectDescriptorNode ); break;
+            case SKILLEFFECT_HEAL:   pEffect = New SkillEffectHeal( pEffectDescriptorNode ); break;
+            case SKILLEFFECT_ATB:    pEffect = New SkillEffectATB( pEffectDescriptorNode ); break;
+            case SKILLEFFECT_STATUS: pEffect = New SkillEffectStatus( pEffectDescriptorNode ); break;
+            default: Assert(false); break;
         }
 
         m_arrEffects[iPassiveType][m_arrEffectCounts[iPassiveType]] = pEffect;
@@ -210,7 +178,7 @@ LeaderSkill::LeaderSkill( XMLNode * pSkillNode ):
     m_iBonusStat = _MonsterStatistic_FromString( pLeaderSkillDescriptorNode->GetAttribute(TEXT("Stat"))->GetValue() );
     m_fBonusAmount = StringFn->ToFloat( pLeaderSkillDescriptorNode->GetAttribute(TEXT("Amount"))->GetValue() );
 
-    m_iConstraint = _LeaderConstraint_FromString( pLeaderSkillDescriptorNode->GetAttribute(TEXT("Constraint"))->GetValue() );
+    m_iConstraint = _SkillLeaderConstraint_FromString( pLeaderSkillDescriptorNode->GetAttribute(TEXT("Constraint"))->GetValue() );
 }
 LeaderSkill::~LeaderSkill()
 {
@@ -227,13 +195,13 @@ MonsterStatistic LeaderSkill::_MonsterStatistic_FromString( const GChar * strVal
     Assert( false );
     return MONSTER_STAT_COUNT;
 }
-LeaderSkill::LeaderConstraint LeaderSkill::_LeaderConstraint_FromString( const GChar * strValue )
+SkillLeaderConstraint LeaderSkill::_SkillLeaderConstraint_FromString( const GChar * strValue )
 {
     if ( StringFn->Cmp(strValue, TEXT("")) == 0 ) {
-        return LEADER_CONSTRAINT_;
+        return SKILL_LEADERCONSTRAINT_;
     }
     Assert( false );
-    return LEADER_CONSTRAINT_NONE;
+    return SKILL_LEADERCONSTRAINT_NONE;
 }
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -244,8 +212,12 @@ SkillInstance::SkillInstance()
 
     m_iLevel = 0;
 
-    for( UInt i = 0; i < SKILL_STAT_COUNT; ++i )
-        m_fEffectiveBonus[i] = 0.0f;
+    m_fBonusDamage = 0.0f;
+    m_fBonusRecovery = 0.0f;
+    m_fBonusStatusEffectRate = 0.0f;
+    m_fBonusSpecific = 0.0f;
+
+    m_iCooldown = 0;
 }
 SkillInstance::SkillInstance( Skill * pSkill )
 {
@@ -255,8 +227,14 @@ SkillInstance::SkillInstance( Skill * pSkill )
 
     m_iLevel = 0;
 
-    for( UInt i = 0; i < SKILL_STAT_COUNT; ++i )
-        m_fEffectiveBonus[i] = 0.0f;
+    m_fBonusDamage = 0.0f;
+    m_fBonusRecovery = 0.0f;
+    m_fBonusStatusEffectRate = 0.0f;
+    m_fBonusSpecific = 0.0f;
+
+    m_iCooldown = 0;
+
+    _UpdateEffectiveStats();
 }
 SkillInstance::SkillInstance( const SkillInstance & rhs )
 {
@@ -264,8 +242,12 @@ SkillInstance::SkillInstance( const SkillInstance & rhs )
 
     m_iLevel = rhs.m_iLevel;
 
-    for( UInt i = 0; i < SKILL_STAT_COUNT; ++i )
-        m_fEffectiveBonus[i] = rhs.m_fEffectiveBonus[i];
+    m_fBonusDamage = rhs.m_fBonusDamage;
+    m_fBonusRecovery = rhs.m_fBonusRecovery;
+    m_fBonusStatusEffectRate = rhs.m_fBonusStatusEffectRate;
+    m_fBonusSpecific = rhs.m_fBonusSpecific;
+
+    m_iCooldown = rhs.m_iCooldown;
 }
 SkillInstance::~SkillInstance()
 {
@@ -278,15 +260,19 @@ SkillInstance & SkillInstance::operator=( const SkillInstance & rhs )
 
     m_iLevel = rhs.m_iLevel;
 
-    for( UInt i = 0; i < SKILL_STAT_COUNT; ++i )
-        m_fEffectiveBonus[i] = rhs.m_fEffectiveBonus[i];
+    m_fBonusDamage = rhs.m_fBonusDamage;
+    m_fBonusRecovery = rhs.m_fBonusRecovery;
+    m_fBonusStatusEffectRate = rhs.m_fBonusStatusEffectRate;
+    m_fBonusSpecific = rhs.m_fBonusSpecific;
+
+    m_iCooldown = rhs.m_iCooldown;
 
     return (*this);
 }
 
 UInt SkillInstance::LevelUp()
 {
-    if ( m_iLevel < m_pSkill->GetMaxLevel() ) {
+    if ( m_iLevel < (m_pSkill->GetLevelingStats()->GetMaxLevel() - 1) ) {
         ++m_iLevel;
         _UpdateEffectiveStats();
     }
@@ -302,7 +288,7 @@ UInt SkillInstance::LevelDown()
 }
 Void SkillInstance::SetLevel( UInt iLevel )
 {
-    Assert( iLevel < m_pSkill->GetMaxLevel() );
+    Assert( iLevel < m_pSkill->GetLevelingStats()->GetMaxLevel() );
     if ( m_iLevel != iLevel ) {
         m_iLevel = iLevel;
         _UpdateEffectiveStats();
@@ -313,13 +299,21 @@ Void SkillInstance::SetLevel( UInt iLevel )
 
 Void SkillInstance::_UpdateEffectiveStats()
 {
-    for( UInt i = 0; i < SKILL_STAT_COUNT; ++i )
-        m_fEffectiveBonus[i] = 0.0f;
+    const SkillLevelingStats * pLevelingStats = m_pSkill->GetLevelingStats();
+
+    m_fBonusDamage = 0.0f;
+    m_fBonusRecovery = 0.0f;
+    m_fBonusStatusEffectRate = 0.0f;
+    m_fBonusSpecific = 0.0f;
 
     for( UInt i = 0; i < m_iLevel; ++i ) {
-        const SkillLevelBonus * pBonus = m_pSkill->GetLevelBonus( i );
-        m_fEffectiveBonus[pBonus->iStat] += pBonus->fAmount;
+        m_fBonusDamage += pLevelingStats->GetBonusDamage( i );
+        m_fBonusRecovery += pLevelingStats->GetBonusRecovery( i );
+        m_fBonusStatusEffectRate += pLevelingStats->GetBonusStatusEffectRate( i );
+        m_fBonusSpecific += pLevelingStats->GetBonusSpecific( i );
     }
+
+    m_iCooldown = pLevelingStats->GetCooldown( m_iLevel );
 }
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -336,7 +330,7 @@ SkillSet::~SkillSet()
 Void SkillSet::Add( Skill * pSkill, UInt iLevel )
 {
     Assert( pSkill != NULL );
-    Assert( iLevel <= pSkill->GetMaxLevel() );
+    Assert( iLevel < pSkill->GetLevelingStats()->GetMaxLevel() );
     Assert( m_iSkillCount < SKILL_SLOT_COUNT );
 
     m_arrSkills[m_iSkillCount] = SkillInstance( pSkill );

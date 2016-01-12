@@ -19,6 +19,10 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // BuildingEssenceStorage implementation
+inline BuildingType BuildingEssenceStorage::GetType() const {
+    return BUILDING_ESSENCE_STORAGE;
+}
+
 inline UInt BuildingEssenceStorage::GetEssenceCount( MonsterElement iElement, EssenceType iType ) const {
     Assert( iElement < MONSTER_ELEMENT_COUNT );
     Assert( iType < ESSENCE_TYPE_COUNT );
@@ -33,8 +37,8 @@ inline Void BuildingEssenceStorage::AddEssences( MonsterElement iElement, Essenc
 inline Void BuildingEssenceStorage::RemoveEssences( MonsterElement iElement, EssenceType iType, UInt iCount ) {
     Assert( iElement < MONSTER_ELEMENT_COUNT );
     Assert( iType < ESSENCE_TYPE_COUNT );
-    Assert( m_arrEssences[iElement][iType] >= iCount )
-        m_arrEssences[iElement][iType] -= iCount;
+    Assert( m_arrEssences[iElement][iType] >= iCount );
+    m_arrEssences[iElement][iType] -= iCount;
 }
 
 inline Bool BuildingEssenceStorage::AwakeningUnlocked() const {

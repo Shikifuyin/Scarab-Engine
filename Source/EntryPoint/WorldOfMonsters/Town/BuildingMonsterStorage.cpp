@@ -26,14 +26,21 @@
 /////////////////////////////////////////////////////////////////////////////////
 // BuildingMonsterStorage implementation
 BuildingMonsterStorage::BuildingMonsterStorage( BuildingDungeon * pDungeon ):
-    Building( BUILDING_MONSTER_STORAGE, BUILDING_COST_MANA, 100000 )
+    Building()
 {
+    const GameParameters * pGameParams = GameplayFn->GetGameParameters();
+
+    // Cost
+    const CurrencyCost * pCost = pGameParams->GetBuildingCost( BUILDING_MONSTER_STORAGE );
+    for( UInt i = 0; i < CURRENCY_COUNT; ++i )
+        m_hCost.arrCost[i] = pCost->arrCost[i];
+
+    // Dungeon access
     m_pDungeon = pDungeon;
 
     // Monster storage
     m_iStorageLevel = 0;
     m_iStorageRoom = 5;
-
     m_arrMonsterStorage.UseMemoryContext( GameplayFn->GetMemoryContext(), TEXT("Scratch") );
     m_arrMonsterStorage.Create();
     m_arrMonsterStorage.EnsureCapacity( BUILDING_MONSTER_STORAGE_MAX_ROOM );
@@ -41,23 +48,26 @@ BuildingMonsterStorage::BuildingMonsterStorage( BuildingDungeon * pDungeon ):
 BuildingMonsterStorage::~BuildingMonsterStorage()
 {
     // Monster storage
-    for( UInt i = 0; i < m_arrMonsterStorage.Count(); ++i )
-        GameplayFn->DestroyMonsterInstance( m_arrMonsterStorage[i] );
     m_arrMonsterStorage.Destroy();
 }
 
 Bool BuildingMonsterStorage::UpgradeStorageRoom()
 {
-    if ( m_iStorageLevel >= BUILDING_MONSTER_STORAGE_MAX_LEVEL )
+    const GameParameters * pGameParams = GameplayFn->GetGameParameters();
+    const CurrencyCost * pCost = pGameParams->GetMonsterStorageUpgradeCost();
+
+    if ( m_iStorageLevel >= BUILDING_MONSTER_STORAGE_MAX_LEVEL - 1 )
         return false;
-    if ( m_pDungeon->GetCurrency(CURRENCY_MANA) < BUILDING_MONSTER_STORAGE_UPGRADE_COST )
+    if ( !(m_pDungeon->CheckCurrencyCost(pCost)) )
         return false;
 
-    static UInt s_arrRoomByLevel[BUILDING_MONSTER_COLLECTION_MAX_LEVEL] = {
-        5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100
+    static UInt s_arrRoomByLevel[BUILDING_MONSTER_STORAGE_MAX_LEVEL] = {
+        20, 30, 40, 50, 60, 70, 80, 90, 95, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200,
+        210, 220, 230, 240, 250, 260, 270, 280, 290, 300, 310, 320, 330, 340, 350, 360, 370, 380, 390, 400,
+        410, 420, 430, 440, 450, 460, 470, 480, 490, 500
     };
 
-    m_pDungeon->RemoveCurrency( CURRENCY_MANA, BUILDING_MONSTER_STORAGE_UPGRADE_COST );
+    m_pDungeon->PayCurrencyCost( pCost );
 
     ++m_iStorageLevel;
     m_iStorageRoom = s_arrRoomByLevel[m_iStorageLevel];
@@ -72,12 +82,13 @@ Bool BuildingMonsterStorage::StoreMonster( UInt iIndex )
         return false;
 
     // Remove monster from collection
-    MonsterInstance * pMonster = m_pDungeon->RemoveMonster( iIndex );
-    Assert( pMonster != NULL );
+    MonsterInstance hMonster;
+    m_pDungeon->RemoveMonster( iIndex, &hMonster );
+    Assert( hMonster.IsPresent() );
 
     // Add it to storage
-    UInt iIndex = m_arrMonsterStorage.Search( _Compare_MonsterInstance, pMonster );
-    m_arrMonsterStorage.Insert( iIndex, pMonster );
+    UInt iIndex = m_arrMonsterStorage.Search( _Compare_MonsterInstance, hMonster );
+    m_arrMonsterStorage.Insert( iIndex, hMonster );
 
     // Done
     return true;
@@ -90,12 +101,12 @@ Bool BuildingMonsterStorage::RetrieveMonster( UInt iStorageIndex )
         return false;
 
     // Remove monster from storage
-    MonsterInstance * pMonster = NULL;
-    m_arrMonsterStorage.Remove( iStorageIndex, pMonster );
-    Assert( pMonster != NULL );
+    MonsterInstance hMonster;
+    m_arrMonsterStorage.Remove( iStorageIndex, hMonster );
+    Assert( hMonster.IsPresent() );
 
     // Add it to collection
-    m_pDungeon->AddMonster( pMonster );
+    m_pDungeon->AddMonster( hMonster );
 
     // Done
     return true;
@@ -103,23 +114,23 @@ Bool BuildingMonsterStorage::RetrieveMonster( UInt iStorageIndex )
 
 /////////////////////////////////////////////////////////////////////////////////
 
-Int BuildingMonsterStorage::_Compare_MonsterInstance( MonsterInstance * const & pLeft, MonsterInstance * const & pRight )
+Int BuildingMonsterStorage::_Compare_MonsterInstance( const MonsterInstance & rLeft, const MonsterInstance & rRight )
 {
-    if ( pLeft->GetElement() < pRight->GetElement() )
+    if ( rLeft.GetElement() < rRight.GetElement() )
         return +1;
-    if ( pLeft->GetElement() > pRight->GetElement() )
+    if ( rLeft.GetElement() > rRight.GetElement() )
         return -1;
-    if ( pLeft->GetRank() < pRight->GetRank() )
+    if ( rLeft.GetRank() < rRight.GetRank() )
         return +1;
-    if ( pLeft->GetRank() > pRight->GetRank() )
+    if ( rLeft.GetRank() > rRight.GetRank() )
         return -1;
-    if ( pLeft->GetLevel() < pRight->GetLevel() )
+    if ( rLeft.GetLevel() < rRight.GetLevel() )
         return +1;
-    if ( pLeft->GetLevel() > pRight->GetLevel() )
+    if ( rLeft.GetLevel() > rRight.GetLevel() )
         return -1;
-    if ( pLeft->GetID() < pRight->GetID() )
+    if ( rLeft.GetID() < rRight.GetID() )
         return +1;
-    if ( pLeft->GetID() > pRight->GetID() )
+    if ( rLeft.GetID() > rRight.GetID() )
         return -1;
     return 0;
 }

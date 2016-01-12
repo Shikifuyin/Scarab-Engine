@@ -24,7 +24,19 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // Includes
-#include "GameDefinitions.h"
+#include "../../Lib/Math/Random/Random.h"
+
+#include "../../Lib/Datastruct/Array/Array.h"
+#include "../../Lib/Datastruct/Table/TreeMap.h"
+
+#include "Monsters\StatusEffect.h"
+#include "Monsters\Skill.h"
+#include "Monsters\Rune.h"
+#include "Monsters\Monster.h"
+
+#include "Battle\Battle.h"
+
+#include "Town\PlayerTown.h"
 
 /////////////////////////////////////////////////////////////////////////////////
 // Constants definitions
@@ -62,8 +74,13 @@ public:
 
     inline Float GetRuneSetStatBonus( RuneType iType ) const;
 
+    inline const RuneLevelingStats * GetRuneLevelingStats() const;
+
     // Economy parameters
-    inline UInt GetBuildingCost( BuildingType iType, CurrencyType * outCurrencyType ) const;
+    inline const CurrencyCost * GetMonsterCollectionUpgradeCost() const;
+    inline const CurrencyCost * GetRuneCollectionUpgradeCost() const;
+
+    inline const CurrencyCost * GetBuildingCost( BuildingType iType ) const;
     inline UInt GetBuildingUpgradeCost( BuildingType iType, CurrencyType * outCurrencyType ) const;
 
     inline UInt GetEssenceFusionCost( EssenceType iType ) const;
@@ -82,7 +99,7 @@ private:
 
     // Global parameters
 
-    // Leveling parameters
+    // Monster parameters
     Float m_fMonsterBaseCritRate;
     Float m_fMonsterBaseCritDamage;
     Float m_fMonsterBaseAccuracy;
@@ -96,11 +113,13 @@ private:
 
     UInt m_arrMonsterXPByLevel[MONSTER_MAX_RANK][MONSTER_MAX_LEVEL];
 
+    // Skill parameters
+
     // Rune parameters
     UInt m_arrRuneSetCounts[RUNE_TYPE_COUNT];
     Byte m_arrRuneAllowedSlots[2][MONSTER_STAT_COUNT]; // (flat/ratio,type)
 
-    Float m_arrRuneSetStatBonus[RUNE_TYPE_COUNT];
+    RuneLevelingStats m_hRuneLevelingStats;
 
     //UInt RuneLevelingStats::GetSetCount( RuneType iType )
     //{
@@ -137,19 +156,32 @@ private:
     //};
 
 
-    // Economy parameters
-    CurrencyType m_arrBuildingCostCurrencies[BUILDING_COUNT];
-    UInt m_arrBuildingCosts[BUILDING_COUNT];
-    CurrencyType m_arrBuildingUpgradeCostCurrencies[BUILDING_COUNT];
-    UInt m_arrBuildingUpgradeCosts[BUILDING_COUNT][BUILDING_MAX_LEVEL];
+    // Building parameters
+    CurrencyCost m_arrBuildingCost[BUILDING_COUNT];
 
-    UInt m_arrEssenceFusionCosts[ESSENCE_TYPE_COUNT];
+    CurrencyCost m_arrMonsterCollectionUpgradeCost[BUILDING_DUNGEON_MONSTER_COLLECTION_MAX_LEVEL];
+    CurrencyCost m_arrRuneCollectionUpgradeCost[BUILDING_DUNGEON_RUNE_COLLECTION_MAX_LEVEL];
+
+    CurrencyCost m_hMonsterAwakeningUnlockCost;
+    CurrencyCost m_hEssenceFusionUnlockCost;
+    UInt m_arrEssenceFusionCost[ESSENCE_TYPE_COUNT];
+
+    CurrencyCost m_arrMonsterStorageUpgradeCost[BUILDING_MONSTER_STORAGE_MAX_LEVEL];
+    CurrencyCost m_arrRuneStorageUpgradeCost[BUILDING_RUNE_STORAGE_MAX_LEVEL];
+
+    CurrencyCost m_arrManaProductionRateUpgradeCost[BUILDING_MAX_LEVEL];
+    CurrencyCost m_arrManaCapacityUpgradeCost[BUILDING_MAX_LEVEL];
+    CurrencyCost m_arrCrystalProductionRateUpgradeCost[BUILDING_MAX_LEVEL];
+    CurrencyCost m_arrCrystalCapacityUpgradeCost[BUILDING_MAX_LEVEL];
+
+
+
+
+
 
     UInt m_arrMonsterSummoningCosts[MONSTER_MAX_RANK];
     UInt m_arrMonsterPowerUpCosts[MONSTER_MAX_RANK][MONSTER_MAX_RANK];
     UInt m_arrMonsterEvolutionCosts[MONSTER_MAX_RANK];
-    UInt m_arrMonsterAwakeningCosts[MONSTER_MAX_RANK];
-    UInt m_arrMonsterFusionCosts[MONSTER_MAX_RANK];
 
     UInt m_arrRunePowerUpCosts[MONSTER_MAX_RANK];
     UInt m_arrRuneEvolutionCosts[MONSTER_MAX_RANK];

@@ -32,20 +32,13 @@
 /////////////////////////////////////////////////////////////////////////////////
 // Constants definitions
 
-    // Currencies
+    // Dungeon definitions
+#define BUILDING_DUNGEON_MONSTER_COLLECTION_MAX_LEVEL 20
+#define BUILDING_DUNGEON_MONSTER_COLLECTION_MAX_ROOM  100 // 5 * 20
 
+#define BUILDING_DUNGEON_RUNE_COLLECTION_MAX_LEVEL 16
+#define BUILDING_DUNGEON_RUNE_COLLECTION_MAX_ROOM  256  // 16 * 16
 
-    // Monsters
-#define BUILDING_MONSTER_COLLECTION_UPGRADE_COST 30000 // in mana
-#define BUILDING_MONSTER_COLLECTION_MAX_LEVEL    20
-#define BUILDING_MONSTER_COLLECTION_MAX_ROOM     100 // 5 * 20
-
-    // Runes
-#define BUILDING_RUNE_COLLECTION_UPGRADE_COST 20000 // in mana
-#define BUILDING_RUNE_COLLECTION_MAX_LEVEL    16
-#define BUILDING_RUNE_COLLECTION_MAX_ROOM     256  // 16 * 16
-
-    // Arena
 enum ArenaRank {
     ARENA_RANK_BEGINNER = 0,
     ARENA_RANK_CHALLENGER,
@@ -65,6 +58,9 @@ public:
     BuildingDungeon();
     virtual ~BuildingDungeon();
 
+    // Type
+    inline virtual BuildingType GetType() const;
+
     // Currencies
     inline UInt GetCurrency( CurrencyType iType ) const;
 
@@ -72,29 +68,30 @@ public:
     inline Void RemoveCurrency( CurrencyType iType, UInt iAmount );
     inline Void SetCurrency( CurrencyType iType, UInt iAmount );
 
+    Bool CheckCurrencyCost( const CurrencyCost * pCost ) const;
+    Void PayCurrencyCost( const CurrencyCost * pCost );
+
     // Monster collection
     inline UInt GetMonsterCollectionLevel() const;
     inline UInt GetMonsterCollectionRoom() const;
-
-    Bool UpgradeMonsterCollectionRoom();
+    Bool UpgradeMonsterCollection();
 
     inline UInt GetMonsterCount() const;
-    inline MonsterInstance * GetMonster( UInt iIndex ) const;
+    inline MonsterInstance * GetMonster( UInt iIndex );
 
-    Void AddMonster( MonsterInstance * pMonster );
-    MonsterInstance * RemoveMonster( UInt iIndex );
+    MonsterInstance * AddMonster( const MonsterInstance & hMonster );
+    Void RemoveMonster( UInt iIndex, MonsterInstance * outMonster );
 
     // Rune collection
     inline UInt GetRuneCollectionLevel() const;
     inline UInt GetRuneCollectionRoom() const;
-
-    Bool UpgradeRuneCollectionRoom();
+    Bool UpgradeRuneCollection();
 
     inline UInt GetRuneCount( RuneType iType ) const;
-    inline Rune * GetRune( RuneType iType, UInt iIndex ) const;
+    inline Rune * GetRune( RuneType iType, UInt iIndex );
 
-    Void AddRune( Rune * pRune );
-    Rune * RemoveRune( RuneType iType, UInt iIndex );
+    Rune * AddRune( const Rune & hRune );
+    Void RemoveRune( RuneType iType, UInt iIndex, Rune * outRune );
 
     // Arena state
     inline UInt GetArenaScore() const;
@@ -108,8 +105,8 @@ public:
 
 private:
     // Helpers
-    static Int _Compare_MonsterInstance( MonsterInstance * const & pLeft, MonsterInstance * const & pRight );
-    static Int _Compare_Rune( Rune * const & pLeft, Rune * const & pRight );
+    static Int _Compare_MonsterInstance( const MonsterInstance & rLeft, const MonsterInstance & rRight );
+    static Int _Compare_Rune( const Rune & rLeft, const Rune & rRight );
 
     // Currencies
     UInt m_arrCurrencies[CURRENCY_COUNT];
@@ -117,14 +114,12 @@ private:
     // Monster collection
     UInt m_iMonsterCollectionLevel;
     UInt m_iMonsterCollectionRoom;
-
-    Array<MonsterInstance*> m_arrMonsterCollection;
+    Array<MonsterInstance> m_arrMonsterCollection;
 
     // Rune collection
     UInt m_iRuneCollectionLevel;
     UInt m_iRuneCollectionRoom;
-
-    Array<Rune*> m_arrRuneCollection[RUNE_TYPE_COUNT];
+    Array<Rune> m_arrRuneCollection[RUNE_TYPE_COUNT];
 
     // Arena state
     UInt m_iArenaScore;

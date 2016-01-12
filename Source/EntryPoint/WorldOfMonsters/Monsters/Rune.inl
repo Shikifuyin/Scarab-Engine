@@ -78,11 +78,11 @@ inline Void Rune::SetEquipped( MonsterInstance * pEquippedTo ) {
 // RuneSet implementation
 inline Bool RuneSet::HasRune( UInt iSlot ) const {
     Assert( iSlot < RUNE_SLOT_COUNT );
-    return ( m_arrRunes[iSlot].IsPresent() );
+    return ( m_arrRunes[iSlot] != NULL );
 }
 inline Rune * RuneSet::GetRune( UInt iSlot ) {
     Assert( iSlot < RUNE_SLOT_COUNT );
-    return ( m_arrRunes + iSlot );
+    return m_arrRunes[iSlot];
 }
 
 inline UInt RuneSet::GetSetBonusCount() const {

@@ -29,10 +29,9 @@
 /////////////////////////////////////////////////////////////////////////////////
 // Constants definitions
 
-// Monster storage
-#define BUILDING_RUNE_STORAGE_UPGRADE_COST 20000 // in mana
-#define BUILDING_RUNE_STORAGE_MAX_LEVEL    64
-#define BUILDING_RUNE_STORAGE_MAX_ROOM     1024 // 16 * 64
+    // Rune storage
+#define BUILDING_RUNE_STORAGE_MAX_LEVEL 64
+#define BUILDING_RUNE_STORAGE_MAX_ROOM  1024 // 16 * 64
 
 /////////////////////////////////////////////////////////////////////////////////
 // The BuildingRuneStorage class
@@ -42,21 +41,23 @@ public:
     BuildingRuneStorage( BuildingDungeon * pDungeon );
     virtual ~BuildingRuneStorage();
 
+    // Type
+    inline virtual BuildingType GetType() const;
+
     // Rune storage
     inline UInt GetStorageLevel() const;
     inline UInt GetStorageRoom() const;
-
     Bool UpgradeStorageRoom();
 
     inline UInt GetRuneCount( RuneType iType ) const;
-    inline Rune * GetRune( RuneType iType, UInt iStorageIndex ) const;
+    inline Rune * GetRune( RuneType iType, UInt iStorageIndex );
 
     Bool StoreRune( RuneType iType, UInt iIndex );
     Bool RetrieveRune( RuneType iType, UInt iStorageIndex );
 
 private:
     // Helpers
-    static Int _Compare_Rune( Rune * const & pLeft, Rune * const & pRight );
+    static Int _Compare_Rune( const Rune & rLeft, const Rune & rRight );
 
     // Dungeon access
     BuildingDungeon * m_pDungeon;
@@ -64,8 +65,7 @@ private:
     // Rune storage
     UInt m_iStorageLevel;
     UInt m_iStorageRoom;
-
-    Array<Rune*> m_arrRuneStorage[RUNE_TYPE_COUNT];
+    Array<Rune> m_arrRuneStorage[RUNE_TYPE_COUNT];
 };
 
 /////////////////////////////////////////////////////////////////////////////////
