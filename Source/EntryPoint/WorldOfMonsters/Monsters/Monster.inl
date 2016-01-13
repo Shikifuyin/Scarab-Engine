@@ -40,8 +40,20 @@ inline UInt Monster::GetNativeRank() const {
     return m_iNativeRank;
 }
 
+inline Bool Monster::IsSummon() const {
+    return !m_bIsFusion;
+}
 inline const ScrollCost * Monster::GetSummoningCost() const {
+    Assert( !m_bIsFusion );
     return &m_hSummoningCost;
+}
+
+inline Bool Monster::IsFusion() const {
+    return m_bIsFusion;
+}
+inline const MonsterCost * Monster::GetFusionCost() const {
+    Assert( m_bIsFusion );
+    return &m_hFusionCost;
 }
 
 inline const EssenceCost * Monster::GetAwakeningCost() const {
@@ -62,6 +74,13 @@ inline SkillID Monster::GetSkill( Bool bAwaken, UInt iSlot ) const {
 
 /////////////////////////////////////////////////////////////////////////////////
 // MonsterInstance implementation
+inline Bool MonsterInstance::IsNull() const {
+    return ( m_pMonster == NULL );
+}
+inline Bool MonsterInstance::IsPresent() const {
+    return ( m_pMonster != NULL );
+}
+
 inline MonsterID MonsterInstance::GetID() const {
     return m_pMonster->GetID();
 }
@@ -79,8 +98,18 @@ inline MonsterElement MonsterInstance::GetElement() const {
     return m_pMonster->GetElement();
 }
 
+inline Bool MonsterInstance::IsSummon() const {
+    return m_pMonster->IsSummon();
+}
 inline const ScrollCost * MonsterInstance::GetSummoningCost() const {
     return m_pMonster->GetSummoningCost();
+}
+
+inline Bool MonsterInstance::IsFusion() const {
+    return m_pMonster->IsFusion();
+}
+inline const MonsterCost * MonsterInstance::GetFusionCost() const {
+    return m_pMonster->GetFusionCost();
 }
 
 inline const EssenceCost * MonsterInstance::GetAwakeningCost() const {
@@ -99,6 +128,9 @@ inline UInt MonsterInstance::GetNativeRank() const {
 inline UInt MonsterInstance::GetRank() const {
     return m_iRank;
 }
+inline Bool MonsterInstance::IsMaxRank() const {
+    return ( m_iRank == MONSTER_MAX_RANK - 1 );
+}
 
 inline UInt MonsterInstance::GetMaxLevel() const {
     return MONSTER_MAX_LEVELBYRANK(m_iRank);
@@ -106,9 +138,12 @@ inline UInt MonsterInstance::GetMaxLevel() const {
 inline UInt MonsterInstance::GetLevel() const {
     return m_iLevel;
 }
+inline Bool MonsterInstance::IsMaxLevel() const {
+    return ( m_iLevel == MONSTER_MAX_LEVELBYRANK(m_iRank) - 1 );
+}
 
-inline Bool MonsterInstance::CanReceiveXP() const {
-    return ( m_iLevel < (MONSTER_MAX_LEVELBYRANK(m_iRank) - 1) );
+inline UInt MonsterInstance::GetCurrentXP() const {
+    return m_iCurrentXP;
 }
 
 inline UInt MonsterInstance::GetBaseHP() const {
@@ -148,7 +183,7 @@ inline SkillInstance * MonsterInstance::GetSkillInstance( UInt iSlot ) {
 inline Bool MonsterInstance::HasRune( UInt iSlot ) const {
     return m_hRuneSet.HasRune( iSlot );
 }
-inline Rune * MonsterInstance::GetRune( UInt iSlot ) {
+inline Rune * MonsterInstance::GetRune( UInt iSlot ) const {
     return m_hRuneSet.GetRune( iSlot );
 }
 

@@ -24,23 +24,92 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // Includes
+#include "../Monsters/Monster.h"
+#include "../Battle/Battle.h"
+
 #include "Building.h"
-#include "BuildingDungeon.h"
-#include "BuildingEssenceStorage.h"
-#include "BuildingMonsterStorage.h"
-#include "BuildingMonsterSummoning.h"
-#include "BuildingMonsterEvolution.h"
-#include "BuildingMonsterFusion.h"
-#include "BuildingRuneStorage.h"
-#include "BuildingRuneEvolution.h"
-#include "BuildingMana.h"
-#include "BuildingCrystal.h"
-#include "BuildingShop.h"
-#include "BuildingWishes.h"
-#include "BuildingBonus.h"
 
 /////////////////////////////////////////////////////////////////////////////////
 // Constants definitions
+
+    // Monsters definitions
+#define MONSTER_COLLECTION_MAX_LEVEL 20
+#define MONSTER_COLLECTION_MAX_ROOM  100 // 5 * 20
+
+#define MONSTER_STORAGE_MAX_LEVEL 50
+#define MONSTER_STORAGE_MAX_ROOM  500 // 10 * 50
+
+    // Runes definitions
+#define RUNE_COLLECTION_MAX_LEVEL 16
+#define RUNE_COLLECTION_MAX_ROOM  256  // 16 * 16
+
+#define RUNE_STORAGE_MAX_LEVEL 64
+#define RUNE_STORAGE_MAX_ROOM  1024 // 16 * 64
+
+    // Currencies : resources
+enum CurrencyType {
+    CURRENCY_MANA = 0,
+    CURRENCY_CRYSTAL,
+    CURRENCY_GLORYPOINTS,
+    CURRENCY_GUILDPOINTS,
+
+    CURRENCY_COUNT
+};
+
+typedef struct _currency_cost {
+    UInt arrCost[CURRENCY_COUNT];
+} CurrencyCost;
+
+    // Building definitions
+#define BUILDING_MAX_LEVEL 10
+
+#define BUILDING_INFO_TEXT_LENGTH 1024
+
+enum BuildingType {
+    BUILDING_DUNGEON = 0,
+    BUILDING_ARCANE_TOWER,
+
+    BUILDING_ESSENCE_STORAGE,
+
+    BUILDING_MONSTER_STORAGE,
+    BUILDING_MONSTER_SUMMONING,
+    BUILDING_MONSTER_EVOLUTION,
+    BUILDING_MONSTER_FUSION,
+    //BUILDING_MONSTER_SKINS,
+
+    BUILDING_RUNE_STORAGE,
+    BUILDING_RUNE_EVOLUTION,
+
+    BUILDING_MANA,
+    BUILDING_CRYSTAL,
+
+    BUILDING_SHOP,   // The only tiny randomized
+    BUILDING_WISHES, // part remaining !!!
+
+    BUILDING_BONUS_MONSTERS_HP,
+    BUILDING_BONUS_MONSTERS_ATT,
+    BUILDING_BONUS_MONSTERS_ATT_ELEMENT,
+    BUILDING_BONUS_MONSTERS_DEF,
+    BUILDING_BONUS_MONSTERS_SPD,
+    BUILDING_BONUS_MONSTERS_CRITDMG,
+
+    BUILDING_BONUS_ARCANETOWERS_ATT,
+    BUILDING_BONUS_ARCANETOWERS_SPD,
+
+    BUILDING_COUNT
+};
+
+    // Arena definitions
+enum ArenaRank {
+    ARENA_RANK_BEGINNER = 0,
+    ARENA_RANK_CHALLENGER,
+    ARENA_RANK_FIGHTER,
+    ARENA_RANK_CONQUEROR,
+    ARENA_RANK_GUARDIAN,
+    ARENA_RANK_LEGEND,
+
+    ARENA_RANK_COUNT
+};
 
     // Prototypes
 class PlayerGuild;
@@ -53,24 +122,222 @@ public:
     PlayerTown();
     ~PlayerTown();
 
-    // Buildings access
-    inline UInt GetArcaneTowerCount() const;
+    // Deferred loading
+    Void Load( XMLNode * pNode );
+    Void Save( XMLNode * pNode ) const;
 
-    inline Bool HasBuilding( BuildingType iType ) const;
-    inline Building * GetBuilding( BuildingType iType ) const;
+    // Currencies, scrolls & essences
+    inline UInt GetCurrency( CurrencyType iType ) const;
+    inline UInt GetScrollCount( ScrollType iType ) const;
+    inline UInt GetEssenceCount( MonsterElement iElement, EssenceType iType ) const;
 
-    Void AddBuilding( BuildingType iType );
-    Void RemoveBuilding( BuildingType iType );
+    inline Void AddCurrency( CurrencyType iType, UInt iAmount );
+    inline Void AddScrolls( ScrollType iType, UInt iCount );
+    inline Void AddEssences( MonsterElement iElement, EssenceType iType, UInt iCount );
+
+    inline Void RemoveCurrency( CurrencyType iType, UInt iAmount );
+    inline Void RemoveScrolls( ScrollType iType, UInt iCount );
+    inline Void RemoveEssences( MonsterElement iElement, EssenceType iType, UInt iCount );
+
+    Bool CheckCurrencyCost( const CurrencyCost * pCost ) const;
+    Bool CheckScrollCost( const ScrollCost * pCost ) const;
+    Bool CheckEssenceCost( const EssenceCost * pCost ) const;
+
+    Void PayCurrencyCost( const CurrencyCost * pCost );
+    Void PayScrollCost( const ScrollCost * pCost );
+    Void PayEssenceCost( const EssenceCost * pCost );
+
+    // Monster collection & storage
+    inline UInt GetMonsterCollectionLevel() const;
+    inline UInt GetMonsterStorageLevel() const;
+    inline UInt GetMonsterCollectionRoom() const;
+    inline UInt GetMonsterStorageRoom() const;
+    Bool UpgradeMonsterCollection();
+    Bool UpgradeMonsterStorage();
+
+    inline UInt GetMonsterCount() const;
+    inline UInt GetStoredMonsterCount() const;
+    inline MonsterInstance * GetMonster( UInt iIndex );
+    inline MonsterInstance * GetStoredMonster( UInt iStorageIndex );
+
+    Void UnSummonMonster( UInt iIndex, MonsterInstance * outMonster ); // DANGER !!!
+
+    Bool StoreMonster( UInt iIndex );
+    Bool RetrieveMonster( UInt iStorageIndex );
+
+    // Rune collection & storage
+    inline UInt GetRuneCollectionLevel() const;
+    inline UInt GetRuneStorageLevel() const;
+    inline UInt GetRuneCollectionRoom() const;
+    inline UInt GetRuneStorageRoom() const;
+    Bool UpgradeRuneCollection();
+    Bool UpgradeRuneStorage();
+
+    inline UInt GetRuneCount( RuneType iType ) const;
+    inline UInt GetStoredRuneCount( RuneType iType ) const;
+    inline Rune * GetRune( RuneType iType, UInt iIndex );
+    inline Rune * GetStoredRune( RuneType iType, UInt iStorageIndex );
+
+    Rune * AddRune( const Rune & hRune );
+    Void RemoveRune( RuneType iType, UInt iIndex, Rune * outRune );
+
+    Bool StoreRune( RuneType iType, UInt iIndex );
+    Bool RetrieveRune( RuneType iType, UInt iStorageIndex );
+
+    // Mana & Crystal production
+    inline UInt GetManaProductionRateLevel() const;
+    inline UInt GetCrystalProductionRateLevel() const;
+    inline UInt GetManaProductionRate() const;
+    inline UInt GetCrystalProductionRate() const;
+    Bool UpgradeManaProductionRate();
+    Bool UpgradeCrystalProductionRate();
+
+    inline UInt GetManaCapacityLevel() const;
+    inline UInt GetCrystalCapacityLevel() const;
+    inline UInt GetManaCapacity() const;
+    inline UInt GetCrystalCapacity() const;
+    Bool UpgradeManaCapacity();
+    Bool UpgradeCrystalCapacity();
+
+    inline Bool IsManaBufferEmpty() const;
+    inline Bool IsCrystalBufferEmpty() const;
+    inline UInt GetManaBuffer() const;
+    inline UInt GetCrystalBuffer() const;
+
+    Void RetrieveMana();
+    Void RetrieveCrystals();
+    Void UpdateManaAndCrystals();
+
+    // Shop
+
+    // Wishes
+
+    // Building operations
+    inline Bool EssenceFusionUnlocked() const;
+    inline Bool MonsterSummoningUnlocked() const;
+    inline Bool MonsterFusionUnlocked() const;
+    inline Bool MonsterPowerUpUnlocked() const;
+    inline Bool MonsterEvolutionUnlocked() const;
+    inline Bool MonsterAwakeningUnlocked() const;
+    inline Bool RunePowerUpUnlocked() const;
+    inline Bool RuneEvolutionUnlocked() const;
+
+    Bool UnlockEssenceFusion();
+    Bool UnlockMonsterSummoning();
+    Bool UnlockMonsterFusion();
+    Bool UnlockMonsterPowerUp();
+    Bool UnlockMonsterEvolution();
+    Bool UnlockMonsterAwakening();
+    Bool UnlockRunePowerUp();
+    Bool UnlockRuneEvolution();
+
+    Bool CanFuseEssences( MonsterElement iElement, EssenceType iType ) const;
+    Bool CanSummonMonster( const Monster * pMonster ) const;
+    Bool CanFuseMonster( const Monster * pMonster, UInt arrFoodMonsters[4] ) const;
+    Bool CanPowerUpMonster( UInt iTargetMonster, UInt arrFoodMonsters[5], UInt iFoodCount ) const;
+    Bool CanEvolveMonster( UInt iTargetMonster, UInt arrFoodMonsters[5], UInt iFoodCount ) const;
+    Bool CanAwakeMonster( UInt iTargetMonster ) const;
+    Bool CanPowerUpRune( RuneType iRuneType, UInt iTargetRune, UInt arrFoodRunes[5], UInt iFoodCount ) const;
+    Bool CanEvolveRune( RuneType iRuneType, UInt iTargetRune, UInt arrFoodRunes[5], UInt iFoodCount ) const;
+
+    Void FuseEssences( MonsterElement iElement, EssenceType iType );
+    Void SummonMonster( const Monster * pMonster );
+    Void FuseMonster( const Monster * pMonster, UInt arrFoodMonsters[4] );
+    Void PowerUpMonster( UInt iTargetMonster, UInt arrFoodMonsters[5], UInt iFoodCount );
+    Void EvolveMonster( UInt iTargetMonster, UInt arrFoodMonsters[5], UInt iFoodCount );
+    Void AwakeMonster( UInt iTargetMonster );
+    Void PowerUpRune( RuneType iRuneType, UInt iTargetRune, UInt arrFoodRunes[5], UInt iFoodCount );
+    Void EvolveRune( RuneType iRuneType, UInt iTargetRune, UInt arrFoodRunes[5], UInt iFoodCount );
+
+    // Arena
+    inline UInt GetArenaScore() const;
+    inline ArenaRank GetArenaRank() const;
+
+    inline Void SetArenaScore( UInt iArenaScore );
+    inline Void SetArenaRank( ArenaRank iRank );
+
+    inline MonsterInstance * GetArenaDefenseMonster( UInt iIndex ) const;
+    inline Void SetArenaDefenseMonster( UInt iIndex, MonsterInstance * pMonsterInstance );
 
     // Guild access
     inline Bool HasGuild() const;
     inline PlayerGuild * GetGuild() const;
 
 private:
-    // Buildings
-    Building * m_arrBuildings[BUILDING_COUNT];
+    // Helpers
+    static const GChar * sm_arrCurrencyNames[MONSTER_ELEMENT_COUNT];
+    static const GChar * sm_arrScrollNames[MONSTER_ELEMENT_COUNT];
+    static const GChar * sm_arrElementNames[MONSTER_ELEMENT_COUNT];
+    static const GChar * sm_arrRuneTypeNames[RUNE_TYPE_COUNT];
 
-    // Guild data
+    static Int _Compare_UInt( const UInt & rLeft, const UInt & rRight, Void * pUserData );
+    static Int _Compare_MonsterInstance( const MonsterInstance & rLeft, const MonsterInstance & rRight );
+    static Int _Compare_Rune( const Rune & rLeft, const Rune & rRight );
+
+    Void _Load_MonsterInstance( XMLNode * pNode, MonsterInstance * outMonsterInstance );
+    Void _Save_MonsterInstance( XMLNode * outNode, MonsterInstance * pMonsterInstance ) const;
+
+    Void _Load_Rune( XMLNode * pNode, Rune * outRune );
+    Void _Save_Rune( XMLNode * outNode, Rune * pRune ) const;
+
+    // Currencies, scrolls & essences
+    UInt m_arrCurrencies[CURRENCY_COUNT];
+    UInt m_arrScrolls[SCROLL_TYPE_COUNT];
+    UInt m_arrEssences[MONSTER_ELEMENT_COUNT][ESSENCE_TYPE_COUNT];
+
+    // Monster collection & storage
+    UInt m_iMonsterCollectionLevel;
+    UInt m_iMonsterStorageLevel;
+    UInt m_iMonsterCollectionRoom;
+    UInt m_iMonsterStorageRoom;
+    Array<MonsterInstance> m_arrMonsterCollection;
+    Array<MonsterInstance> m_arrMonsterStorage;
+
+    // Rune collection & storage
+    UInt m_iRuneCollectionLevel;
+    UInt m_iRuneStorageLevel;
+    UInt m_iRuneCollectionRoom;
+    UInt m_iRuneStorageRoom;
+    Array<Rune> m_arrRuneCollection[RUNE_TYPE_COUNT];
+    Array<Rune> m_arrRuneStorage[RUNE_TYPE_COUNT];
+
+    // Mana & Crystal production
+    UInt m_iManaProductionRateLevel;
+    UInt m_iCrystalProductionRateLevel;
+    UInt m_iManaProductionRate; // in mana / hour
+    UInt m_iCrystalProductionRate; // in crystals / hour
+
+    UInt m_iManaCapacityLevel;
+    UInt m_iCrystalCapacityLevel;
+    UInt m_iManaCapacity;
+    UInt m_iCrystalCapacity;
+
+    UInt m_iManaBuffer;
+    UInt m_iCrystalBuffer;
+
+    TimeValue m_hLastUpdateTime;
+
+    // Shop
+
+    // Wishes
+
+    // Building operations
+    Bool m_bEssenceFusionUnlocked;
+    Bool m_bMonsterSummoningUnlocked;
+    Bool m_bMonsterFusionUnlocked;
+    Bool m_bMonsterPowerUpUnlocked;
+    Bool m_bMonsterEvolutionUnlocked;
+    Bool m_bMonsterAwakeningUnlocked;
+    Bool m_bRunePowerUpUnlocked;
+    Bool m_bRuneEvolutionUnlocked;
+
+    // Arena
+    UInt m_iArenaScore;
+    ArenaRank m_iArenaRank;
+
+    MonsterInstance * m_arrArenaDefense[BATTLE_TEAMSIZE_ARENA]; // first is leader
+
+    // Guild
     PlayerGuild * m_pGuild;
 };
 

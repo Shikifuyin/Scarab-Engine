@@ -238,6 +238,7 @@ public:
     // Level access
     inline UInt GetMaxLevel() const;
     inline UInt GetLevel() const;
+    inline Bool IsMaxLevel() const;
 
     UInt LevelUp();
     UInt LevelDown();

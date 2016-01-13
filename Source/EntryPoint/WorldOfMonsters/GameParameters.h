@@ -86,12 +86,13 @@ public:
     inline UInt GetEssenceFusionCost( EssenceType iType ) const;
 
     inline UInt GetMonsterSummoningCost( UInt iNativeRank ) const;
-    inline UInt GetMonsterPowerUpCost( UInt iRank ) const;
-    inline UInt GetMonsterEvolutionCost( UInt iRank ) const;
-    inline UInt GetMonsterFusionCost( UInt iRank ) const;
+    inline const CurrencyCost * GetMonsterPowerUpCost( UInt iTargetRank, UInt iFoodRank ) const;
+    inline const CurrencyCost * GetMonsterEvolutionCost( UInt iRank ) const;
+    inline const CurrencyCost * GetMonsterFusionCost( UInt iRank ) const;
 
-    inline UInt GetRunePowerUpCost( UInt iRank ) const;
-    inline UInt GetRuneEvolutionCost( UInt iRank ) const;
+    inline const CurrencyCost * GetRunePowerUpCost( UInt iTargetRank, UInt iFoodRank ) const;
+    inline const CurrencyCost * GetRuneEvolutionCost( UInt iRank ) const;
+
     inline UInt GetRuneStatCost( UInt iRank, MonsterStatistic iStat ) const;
 
 private:
@@ -166,6 +167,16 @@ private:
     CurrencyCost m_hEssenceFusionUnlockCost;
     UInt m_arrEssenceFusionCost[ESSENCE_TYPE_COUNT];
 
+    CurrencyCost m_arrMonsterPowerUpCost[MONSTER_MAX_RANK][MONSTER_MAX_RANK];
+    UInt m_arrMonsterPowerUpXP[MONSTER_MAX_RANK][MONSTER_MAX_LEVEL];
+
+    CurrencyCost m_arrMonsterEvolutionCost[MONSTER_MAX_RANK];
+    CurrencyCost m_arrMonsterFusionCost[MONSTER_MAX_RANK];
+
+    CurrencyCost m_arrRunePowerUpCosts[MONSTER_MAX_RANK][MONSTER_MAX_RANK];
+    CurrencyCost m_arrRuneEvolutionCosts[MONSTER_MAX_RANK];
+
+
     CurrencyCost m_arrMonsterStorageUpgradeCost[BUILDING_MONSTER_STORAGE_MAX_LEVEL];
     CurrencyCost m_arrRuneStorageUpgradeCost[BUILDING_RUNE_STORAGE_MAX_LEVEL];
 
@@ -178,13 +189,6 @@ private:
 
 
 
-
-    UInt m_arrMonsterSummoningCosts[MONSTER_MAX_RANK];
-    UInt m_arrMonsterPowerUpCosts[MONSTER_MAX_RANK][MONSTER_MAX_RANK];
-    UInt m_arrMonsterEvolutionCosts[MONSTER_MAX_RANK];
-
-    UInt m_arrRunePowerUpCosts[MONSTER_MAX_RANK];
-    UInt m_arrRuneEvolutionCosts[MONSTER_MAX_RANK];
     UInt m_arrRuneStatCosts[MONSTER_STAT_COUNT][MONSTER_MAX_RANK];
 };
 

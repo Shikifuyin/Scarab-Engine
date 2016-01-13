@@ -109,6 +109,7 @@ UInt Rune::RankUp()
 {
     if ( m_iRank < (RUNE_MAX_RANK - 1) ) {
         ++m_iRank;
+        m_iLevel = 0;
         _UpdateStats();
     }
     return m_iRank;
@@ -117,6 +118,7 @@ UInt Rune::RankDown()
 {
     if ( m_iRank > 0 ) {
         --m_iRank;
+        m_iLevel = 0;
         _UpdateStats();
     }
     return m_iRank;
@@ -126,6 +128,7 @@ Void Rune::SetRank( UInt iRank )
     Assert( iRank < RUNE_MAX_RANK );
     if ( m_iRank != iRank ) {
         m_iRank = iRank;
+        m_iLevel = 0;
         _UpdateStats();
     }
 }

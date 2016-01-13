@@ -105,6 +105,7 @@ public:
 
     // Rank access
     inline UInt GetRank() const;
+    inline Bool IsMaxRank() const;
 
     UInt RankUp();
     UInt RankDown();
@@ -112,6 +113,7 @@ public:
 
     // Level access
     inline UInt GetLevel() const;
+    inline Bool IsMaxLevel() const;
 
     UInt LevelUp();
     UInt LevelDown();
@@ -173,7 +175,7 @@ public:
 
     // Runes access
     inline Bool HasRune( UInt iSlot ) const;
-    inline Rune * GetRune( UInt iSlot );
+    inline Rune * GetRune( UInt iSlot ) const;
 
     Void AddRune( Rune * pRune );
     Rune * RemoveRune( UInt iSlot );

@@ -56,6 +56,10 @@ enum MonsterType {
     MONSTER_TYPE_COUNT
 };
 
+typedef struct _monster_cost {
+    MonsterID arrCost[4];
+} MonsterCost;
+
     // Currencies : scrolls
 enum ScrollType {
     SCROLL_COMMON = 0,
@@ -113,7 +117,11 @@ public:
     inline UInt GetNativeRank() const;
 
     // Summoning cost
+    inline Bool IsSummon() const;
     inline const ScrollCost * GetSummoningCost() const;
+
+    inline Bool IsFusion() const;
+    inline const MonsterCost * GetFusionCost() const;
 
     // Awakening cost
     inline const EssenceCost * GetAwakeningCost() const;
@@ -143,7 +151,9 @@ protected:
     UInt m_iNativeRank;
 
     // Summoning cost
+    Bool m_bIsFusion;
     ScrollCost m_hSummoningCost;
+    MonsterCost m_hFusionCost;
 
     // Awakening cost
     EssenceCost m_hAwakeningCost;
@@ -163,8 +173,17 @@ protected:
 class MonsterInstance
 {
 public:
+    MonsterInstance();
     MonsterInstance( const Monster * pMonster );
+    MonsterInstance( const MonsterInstance & rhs );
     ~MonsterInstance();
+
+    // operators
+    MonsterInstance & operator=( const MonsterInstance & rhs );
+
+    // Test for validity
+    inline Bool IsNull() const;
+    inline Bool IsPresent() const;
 
     // Identifier
     inline MonsterID GetID() const;
@@ -176,7 +195,11 @@ public:
     inline MonsterElement GetElement() const;
 
     // Summoning
+    inline Bool IsSummon() const;
     inline const ScrollCost * GetSummoningCost() const;
+
+    inline Bool IsFusion() const;
+    inline const MonsterCost * GetFusionCost() const;
 
     // Awakening
     inline const EssenceCost * GetAwakeningCost() const;
@@ -189,6 +212,7 @@ public:
     // Rank
     inline UInt GetNativeRank() const;
     inline UInt GetRank() const;
+    inline Bool IsMaxRank() const;
 
     UInt RankUp();
     UInt RankDown();
@@ -197,13 +221,13 @@ public:
     // Level
     inline UInt GetMaxLevel() const;
     inline UInt GetLevel() const;
+    inline Bool IsMaxLevel() const;
 
     UInt LevelUp();
     UInt LevelDown();
     Void SetLevel( UInt iLevel );
 
-    inline Bool CanReceiveXP() const;
-
+    inline UInt GetCurrentXP() const;
     UInt AddXP( UInt iAmount ); // returns number of levelups
 
     // Base stats
@@ -227,7 +251,7 @@ public:
 
     // Runes
     inline Bool HasRune( UInt iSlot ) const;
-    inline Rune * GetRune( UInt iSlot );
+    inline Rune * GetRune( UInt iSlot ) const;
 
     Void EquipRune( Rune * pRune );
     Void UnEquipRune( UInt iSlot );

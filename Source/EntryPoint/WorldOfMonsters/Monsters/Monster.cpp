@@ -37,8 +37,11 @@ Monster::Monster():
 
     m_iNativeRank = 0;
 
+    m_bIsFusion = false;
     for( UInt i = 0; i < SCROLL_TYPE_COUNT; ++i )
         m_hSummoningCost.arrCost[i] = 0;
+    for( UInt i = 0; i < 4; ++i )
+        m_hFusionCost.arrCost[i] = INVALID_OFFSET;
 
     m_hAwakeningCost.iElement = MONSTER_ELEMENT_COUNT;
     for( UInt i = 0; i < ESSENCE_TYPE_COUNT; ++i ) {
@@ -73,29 +76,43 @@ Void Monster::Load( XMLNode * pNode )
 
     m_iNativeRank = (UInt)( StringFn->ToUInt( pNode->GetAttribute(TEXT("NativeRank"))->GetValue() ) );
 
-    XMLNode * pSummoningCostNode = pNode->GetChildByTag( TEXT("SummoningCost"), 0 );
-    Assert( pSummoningCostNode != NULL );
+    m_bIsFusion = ( StringFn->ToUInt(pNode->GetAttribute(TEXT("IsFusion"))->GetValue()) != 0 );
 
     for( UInt i = 0; i < SCROLL_TYPE_COUNT; ++i )
         m_hSummoningCost.arrCost[i] = 0;
+    for( UInt i = 0; i < 4; ++i )
+        m_hFusionCost.arrCost[i] = INVALID_OFFSET;
 
-    if ( pSummoningCostNode->HasAttribute(TEXT("Common")) )
-        m_hSummoningCost.arrCost[SCROLL_COMMON] = (UInt)( StringFn->ToUInt( pSummoningCostNode->GetAttribute(TEXT("Common"))->GetValue() ) );
-    if ( pSummoningCostNode->HasAttribute(TEXT("Mystical")) )
-        m_hSummoningCost.arrCost[SCROLL_MYSTICAL] = (UInt)( StringFn->ToUInt( pSummoningCostNode->GetAttribute(TEXT("Mystical"))->GetValue() ) );
-    if ( pSummoningCostNode->HasAttribute(TEXT("Legendary")) )
-        m_hSummoningCost.arrCost[SCROLL_LEGENDARY] = (UInt)( StringFn->ToUInt( pSummoningCostNode->GetAttribute(TEXT("Legendary"))->GetValue() ) );
-    if ( pSummoningCostNode->HasAttribute(TEXT("Fire")) )
-        m_hSummoningCost.arrCost[SCROLL_FIRE] = (UInt)( StringFn->ToUInt( pSummoningCostNode->GetAttribute(TEXT("Fire"))->GetValue() ) );
-    if ( pSummoningCostNode->HasAttribute(TEXT("Water")) )
-        m_hSummoningCost.arrCost[SCROLL_WATER] = (UInt)( StringFn->ToUInt( pSummoningCostNode->GetAttribute(TEXT("Water"))->GetValue() ) );
-    if ( pSummoningCostNode->HasAttribute(TEXT("Wind")) )
-        m_hSummoningCost.arrCost[SCROLL_WIND] = (UInt)( StringFn->ToUInt( pSummoningCostNode->GetAttribute(TEXT("Wind"))->GetValue() ) );
-    if ( pSummoningCostNode->HasAttribute(TEXT("Light")) )
-        m_hSummoningCost.arrCost[SCROLL_LIGHT] = (UInt)( StringFn->ToUInt( pSummoningCostNode->GetAttribute(TEXT("Light"))->GetValue() ) );
-    if ( pSummoningCostNode->HasAttribute(TEXT("Dark")) )
-        m_hSummoningCost.arrCost[SCROLL_DARK] = (UInt)( StringFn->ToUInt( pSummoningCostNode->GetAttribute(TEXT("Dark"))->GetValue() ) );
-    
+    if ( m_bIsFusion ) {
+        XMLNode * pFusionCostNode = pNode->GetChildByTag( TEXT( "FusionCost" ), 0 );
+        Assert( pFusionCostNode != NULL );
+
+        m_hFusionCost.arrCost[0] = (MonsterID)( StringFn->ToUInt( pFusionCostNode->GetAttribute(TEXT("Monster0"))->GetValue() ) );
+        m_hFusionCost.arrCost[1] = (MonsterID)( StringFn->ToUInt( pFusionCostNode->GetAttribute(TEXT("Monster1"))->GetValue() ) );
+        m_hFusionCost.arrCost[2] = (MonsterID)( StringFn->ToUInt( pFusionCostNode->GetAttribute(TEXT("Monster2"))->GetValue() ) );
+        m_hFusionCost.arrCost[3] = (MonsterID)( StringFn->ToUInt( pFusionCostNode->GetAttribute(TEXT("Monster3"))->GetValue() ) );
+    } else {
+        XMLNode * pSummoningCostNode = pNode->GetChildByTag( TEXT( "SummoningCost" ), 0 );
+        Assert( pSummoningCostNode != NULL );
+
+        if ( pSummoningCostNode->HasAttribute(TEXT("Common")) )
+            m_hSummoningCost.arrCost[SCROLL_COMMON] = (UInt)( StringFn->ToUInt( pSummoningCostNode->GetAttribute(TEXT("Common"))->GetValue() ) );
+        if ( pSummoningCostNode->HasAttribute(TEXT("Mystical")) )
+            m_hSummoningCost.arrCost[SCROLL_MYSTICAL] = (UInt)( StringFn->ToUInt( pSummoningCostNode->GetAttribute(TEXT("Mystical"))->GetValue() ) );
+        if ( pSummoningCostNode->HasAttribute(TEXT("Legendary")) )
+            m_hSummoningCost.arrCost[SCROLL_LEGENDARY] = (UInt)( StringFn->ToUInt( pSummoningCostNode->GetAttribute(TEXT("Legendary"))->GetValue() ) );
+        if ( pSummoningCostNode->HasAttribute(TEXT("Fire")) )
+            m_hSummoningCost.arrCost[SCROLL_FIRE] = (UInt)( StringFn->ToUInt( pSummoningCostNode->GetAttribute(TEXT("Fire"))->GetValue() ) );
+        if ( pSummoningCostNode->HasAttribute(TEXT("Water")) )
+            m_hSummoningCost.arrCost[SCROLL_WATER] = (UInt)( StringFn->ToUInt( pSummoningCostNode->GetAttribute(TEXT("Water"))->GetValue() ) );
+        if ( pSummoningCostNode->HasAttribute(TEXT("Wind")) )
+            m_hSummoningCost.arrCost[SCROLL_WIND] = (UInt)( StringFn->ToUInt( pSummoningCostNode->GetAttribute(TEXT("Wind"))->GetValue() ) );
+        if ( pSummoningCostNode->HasAttribute(TEXT("Light")) )
+            m_hSummoningCost.arrCost[SCROLL_LIGHT] = (UInt)( StringFn->ToUInt( pSummoningCostNode->GetAttribute(TEXT("Light"))->GetValue() ) );
+        if ( pSummoningCostNode->HasAttribute(TEXT("Dark")) )
+            m_hSummoningCost.arrCost[SCROLL_DARK] = (UInt)( StringFn->ToUInt( pSummoningCostNode->GetAttribute(TEXT("Dark"))->GetValue() ) );
+    }
+
     XMLNode * pAwakeningCostNode = pNode->GetChildByTag( TEXT("AwakeningCost"), 0 );
     Assert( pAwakeningCostNode != NULL );
 
@@ -162,6 +179,17 @@ MonsterElement Monster::_MonsterElement_FromString( const GChar * strValue )
 
 /////////////////////////////////////////////////////////////////////////////////
 // MonsterInstance implementation
+MonsterInstance::MonsterInstance():
+    m_hSkillSet(), m_hRuneSet()
+{
+    m_pMonster = NULL;
+
+    m_bAwakened = false;
+    m_iRank = 0;
+    m_iLevel = 0;
+
+    m_iCurrentXP = 0;
+}
 MonsterInstance::MonsterInstance( const Monster * pMonster ):
     m_hSkillSet(), m_hRuneSet()
 {
@@ -175,9 +203,47 @@ MonsterInstance::MonsterInstance( const Monster * pMonster ):
 
     _UpdateBaseStats();
 }
+MonsterInstance::MonsterInstance( const MonsterInstance & rhs ):
+    m_hSkillSet(), m_hRuneSet()
+{
+    m_pMonster = rhs.m_pMonster;
+
+    m_bAwakened = rhs.m_bAwakened;
+    m_iRank = rhs.m_iRank;
+    m_iLevel = rhs.m_iLevel;
+
+    m_iCurrentXP = rhs.m_iCurrentXP;
+
+    for ( UInt i = 0; i < RUNE_SLOT_COUNT; ++i ) {
+        if ( rhs.HasRune(i) )
+            m_hRuneSet.AddRune( rhs.GetRune(i) );
+    }
+
+    _UpdateBaseStats();
+}
 MonsterInstance::~MonsterInstance()
 {
     // nothing to do
+}
+
+MonsterInstance & MonsterInstance::operator=( const MonsterInstance & rhs )
+{
+    m_pMonster = rhs.m_pMonster;
+
+    m_bAwakened = rhs.m_bAwakened;
+    m_iRank = rhs.m_iRank;
+    m_iLevel = rhs.m_iLevel;
+
+    m_iCurrentXP = rhs.m_iCurrentXP;
+
+    for ( UInt i = 0; i < RUNE_SLOT_COUNT; ++i ) {
+        if ( rhs.HasRune(i) )
+            m_hRuneSet.AddRune( rhs.GetRune(i) );
+    }
+
+    _UpdateBaseStats();
+
+    return (*this);
 }
 
 Void MonsterInstance::Awake()
@@ -199,6 +265,7 @@ UInt MonsterInstance::RankUp()
 {
     if ( m_iRank < (MONSTER_MAX_RANK - 1) ) {
         ++m_iRank;
+        m_iLevel = 0;
         m_iCurrentXP = 0;
         _UpdateBaseStats();
     }
@@ -208,6 +275,7 @@ UInt MonsterInstance::RankDown()
 {
     if ( m_iRank > 0 ) {
         --m_iRank;
+        m_iLevel = 0;
         m_iCurrentXP = 0;
         _UpdateBaseStats();
     }
@@ -218,6 +286,7 @@ Void MonsterInstance::SetRank( UInt iRank )
     Assert( iRank < MONSTER_MAX_RANK );
     if ( m_iRank != iRank ) {
         m_iRank = iRank;
+        m_iLevel = 0;
         m_iCurrentXP = 0;
         _UpdateBaseStats();
     }

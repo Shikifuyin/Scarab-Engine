@@ -136,6 +136,9 @@ inline UInt SkillInstance::GetMaxLevel() const {
 inline UInt SkillInstance::GetLevel() const {
     return m_iLevel;
 }
+inline Bool SkillInstance::IsMaxLevel() const {
+    return ( m_iLevel == (m_pSkill->GetLevelingStats()->GetMaxLevel() - 1) );
+}
 
 inline Float SkillInstance::GetBonusDamage() const {
     return m_fBonusDamage;

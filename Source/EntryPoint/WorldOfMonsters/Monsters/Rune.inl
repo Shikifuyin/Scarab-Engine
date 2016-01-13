@@ -36,9 +36,15 @@ inline UInt Rune::GetSlot() const {
 inline UInt Rune::GetRank() const {
     return m_iRank;
 }
+inline Bool Rune::IsMaxRank() const {
+    return ( m_iRank == RUNE_MAX_RANK - 1 );
+}
 
 inline UInt Rune::GetLevel() const {
     return m_iLevel;
+}
+inline Bool Rune::IsMaxLevel() const {
+    return ( m_iLevel == RUNE_MAX_LEVEL - 1 );
 }
 
 inline RuneQuality Rune::GetQuality() const {
@@ -80,7 +86,7 @@ inline Bool RuneSet::HasRune( UInt iSlot ) const {
     Assert( iSlot < RUNE_SLOT_COUNT );
     return ( m_arrRunes[iSlot] != NULL );
 }
-inline Rune * RuneSet::GetRune( UInt iSlot ) {
+inline Rune * RuneSet::GetRune( UInt iSlot ) const {
     Assert( iSlot < RUNE_SLOT_COUNT );
     return m_arrRunes[iSlot];
 }
