@@ -30,8 +30,7 @@
 // Constants definitions
 
 // Battle teams
-#define BATTLE_TEAM_MAX_SIZE 16
-
+#define BATTLE_TEAMSIZE_MAX 16
 #define BATTLE_TEAMSIZE_SCENARIO 4
 #define BATTLE_TEAMSIZE_DUNGEON  5
 #define BATTLE_TEAMSIZE_ARENA 4
@@ -50,16 +49,20 @@ enum BattleType {
 class BattleTeam
 {
 public:
-    BattleTeam( UInt iTeamSize );
+    BattleTeam( BattleType iType, const PlayerTown * pPlayerTown, const MonsterInstance * arrMonsters );
     ~BattleTeam();
 
     // Getters
     inline UInt GetTeamSize() const;
+    inline const BattleMonsterInstance * GetTeamMember( UInt iIndex ) const;
     inline BattleMonsterInstance * GetTeamMember( UInt iIndex );
 
 private:
+    BattleType m_iType;
+    const PlayerTown * m_pPlayerTown;
+
     UInt m_iTeamSize;
-    BattleMonsterInstance m_arrMonsters[BATTLE_TEAM_MAX_SIZE];
+    BattleMonsterInstance m_arrMonsters[BATTLE_TEAMSIZE_MAX];
 };
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -73,8 +76,8 @@ public:
     // Getters
     inline BattleType GetType() const;
 
-    inline BattleTeam * GetPlayerTeam() const;
-    inline BattleTeam * GetAITeam() const;
+    inline const BattleTeam * GetPlayerTeam() const;
+    inline const BattleTeam * GetAITeam() const;
 
     // Battle interface
     inline Bool IsTurnPending() const;
@@ -84,7 +87,7 @@ public:
     Bool IsPlayerDead() const;
     Bool IsAIDead() const;
 
-    inline BattleMonsterInstance * GetTurnMonster() const;
+    inline const BattleMonsterInstance * GetTurnMonster() const;
 
     Void Initialize();
 
@@ -105,37 +108,17 @@ protected:
     static MonsterElement sm_arrElementWeakAgainst[MONSTER_ELEMENT_COUNT];
     static MonsterElement sm_arrElementStrongAgainst[MONSTER_ELEMENT_COUNT];
 
-    static UInt _ResolveEnnemyTargets( BattleMonsterInstance ** outTargets, SkillTargetPattern iPattern,
-                                       BattleTeam * pCasterTeam, UInt iCaster, BattleTeam * pTargetTeam, UInt iTarget );
-    static UInt _ResolveAllyTargets( BattleMonsterInstance ** outTargets, SkillTargetPattern iPattern,
-                                     BattleTeam * pCasterTeam, UInt iCaster, BattleTeam * pTargetTeam, UInt iTarget );
+    static UInt _ResolveEnnemyTargets( BattleMonsterInstance ** outTargets, SkillTargetPattern iPattern, BattleTeam * pTargetTeam, UInt iTarget );
+    static UInt _ResolveAllyTargets( BattleMonsterInstance ** outTargets, SkillTargetPattern iPattern, BattleTeam * pCasterTeam, UInt iCaster, UInt iTarget );
 
-    static UInt _ComputeDamage( SkillInstance * pSkillInstance, SkillEffectDamage * pDamageEffect, BattleMonsterInstance * pCaster, BattleMonsterInstance * pTarget,
+    static UInt _ComputeDamage( const SkillInstance * pSkillInstance, const SkillEffectDamage * pDamageEffect, BattleMonsterInstance * pCaster, BattleMonsterInstance * pTarget,
                                 Bool * outIsCrit, Bool * outIsGlancing, Bool * outIsCrushing );
-    static UInt _ComputeHeal( SkillInstance * pSkillInstance, SkillEffectHeal * pHealEffect, BattleMonsterInstance * pCaster, BattleMonsterInstance * pTarget );
+    static UInt _ComputeHeal( const SkillInstance * pSkillInstance, const SkillEffectHeal * pHealEffect, BattleMonsterInstance * pCaster, BattleMonsterInstance * pTarget );
 
     static Void _HandleSkillEffect( BattleTeam * pCasterTeam, UInt iCaster, BattleTeam * pTargetTeam,
-                                    SkillInstance * pSkillInstance, SkillEffect * pSkillEffect, BattleMonsterInstance ** arrTargets, UInt iTargetCount );
+                                    const SkillInstance * pSkillInstance, const SkillEffect * pSkillEffect, BattleMonsterInstance ** arrTargets, UInt iTargetCount );
 
     static Void _HandlePassives( SkillPassiveType iPassiveType, BattleTeam * pCasterTeam, UInt iCaster, BattleTeam * pTargetTeam, UInt iTarget );
-
-    //SKILL_PASSIVE_PERSISTENT = 0,
-    //    SKILL_PASSIVE_PERIODIC_SELF,
-    //    SKILL_PASSIVE_PERIODIC_ALLIES,
-    //    SKILL_PASSIVE_PERIODIC_ENNEMIES,
-    //    SKILL_PASSIVE_PERIODIC_ALL,
-    //    SKILL_PASSIVE_ONHIT,
-    //    SKILL_PASSIVE_ONHIT_ALLY,
-    //    SKILL_PASSIVE_ONHIT_ENNEMY,
-    //    SKILL_PASSIVE_ONCRIT,
-    //    SKILL_PASSIVE_ONCRIT_ALLY,
-    //    SKILL_PASSIVE_ONCRIT_ENNEMY,
-    //    SKILL_PASSIVE_ONBEINGHIT,
-    //    SKILL_PASSIVE_ONBEINGHIT_ALLY,
-    //    SKILL_PASSIVE_ONBEINGHIT_ENNEMY,
-    //    SKILL_PASSIVE_ONBEINGCRIT,
-    //    SKILL_PASSIVE_ONBEINGCRIT_ALLY,
-    //    SKILL_PASSIVE_ONBEINGCRIT_ENNEMY,
 
     // Battle type
     BattleType m_iType;

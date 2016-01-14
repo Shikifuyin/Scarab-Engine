@@ -243,6 +243,7 @@ public:
 
     // Skill set
     inline UInt GetSkillCount() const;
+    inline const SkillInstance * GetSkillInstance( UInt iSlot ) const;
     inline SkillInstance * GetSkillInstance( UInt iSlot );
     inline Void SkillLevelUp( UInt iSlot );
     inline Void SkillLevelDown( UInt iSlot );

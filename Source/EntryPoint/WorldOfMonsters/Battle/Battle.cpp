@@ -25,12 +25,66 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // BattleTeam implementation
-BattleTeam::BattleTeam( UInt iTeamSize )
+BattleTeam::BattleTeam( BattleType iType, const PlayerTown * pPlayerTown, const MonsterInstance * arrMonsters )
 {
-    m_iTeamSize = iTeamSize;
+    m_iType = iType;
+    m_pPlayerTown = pPlayerTown;
 
-    for( UInt i = 0; i < BATTLE_TEAM_MAX_SIZE; ++i )
-        m_arrMonsters[i] = NULL;
+    m_iTeamSize = 0;
+    switch( m_iType ) {
+        case BATTLE_SCENARIO: m_iTeamSize = BATTLE_TEAMSIZE_SCENARIO; break;
+        case BATTLE_DUNGEON:  m_iTeamSize = BATTLE_TEAMSIZE_DUNGEON;  break;
+        case BATTLE_ARENA:    m_iTeamSize = BATTLE_TEAMSIZE_ARENA;    break;
+        case BATTLE_GUILD:    m_iTeamSize = BATTLE_TEAMSIZE_GUILD;    break;
+        default: Assert( false ); break;
+    }
+
+    const LeaderSkill * pActiveLeaderSkill = NULL;
+    UInt iSkillCount = arrMonsters[0].GetSkillCount();
+    for( UInt i = 0; i < iSkillCount; ++i ) {
+        if ( arrMonsters[0].GetSkillInstance(i)->IsLeader() ) {
+            pActiveLeaderSkill = (const LeaderSkill *)( arrMonsters[0].GetSkillInstance(i)->GetSkill() );
+            break;
+        }
+    }
+
+    for( UInt i = 0; i < m_iTeamSize; ++i ) {
+        const MonsterInstance * pMonsterInstance = ( arrMonsters + i );
+
+        Bool bValid = false;
+        switch( pActiveLeaderSkill->GetLeaderConstraint() ) {
+            case SKILL_LEADERCONSTRAINT_NONE:
+                bValid = true;
+                break;
+            case SKILL_LEADERCONSTRAINT_FIRE:
+                bValid = ( pMonsterInstance->GetElement() == MONSTER_ELEMENT_FIRE );
+                break;
+            case SKILL_LEADERCONSTRAINT_WATER:
+                bValid = ( pMonsterInstance->GetElement() == MONSTER_ELEMENT_WATER );
+                break;
+            case SKILL_LEADERCONSTRAINT_WIND:
+                bValid = ( pMonsterInstance->GetElement() == MONSTER_ELEMENT_WIND );
+                break;
+            case SKILL_LEADERCONSTRAINT_LIGHT:
+                bValid = ( pMonsterInstance->GetElement() == MONSTER_ELEMENT_LIGHT );
+                break;
+            case SKILL_LEADERCONSTRAINT_DARK:
+                bValid = ( pMonsterInstance->GetElement() == MONSTER_ELEMENT_DARK );
+                break;
+            case SKILL_LEADERCONSTRAINT_DUNGEON:
+                bValid = ( m_iType == BATTLE_DUNGEON );
+                break;
+            case SKILL_LEADERCONSTRAINT_ARENA:
+                bValid = ( m_iType == BATTLE_ARENA );
+                break;
+            case SKILL_LEADERCONSTRAINT_GUILDBATTLE:
+                bValid = ( m_iType == BATTLE_GUILD );
+                break;
+            default: Assert(false); break;
+        }
+
+        m_arrMonsters[i] = BattleMonsterInstance( arrMonsters + i, bValid ? pActiveLeaderSkill : NULL );
+    }
 }
 BattleTeam::~BattleTeam()
 {
@@ -70,7 +124,7 @@ Bool Battle::IsPlayerDead() const
 Bool Battle::IsAIDead() const
 {
     for( UInt i = 0; i < m_pAITeam->GetTeamSize(); ++i ) {
-        BattleMonsterInstance * pBattleInstance = m_pPlayerTeam->GetTeamMember( i );
+        BattleMonsterInstance * pBattleInstance = m_pAITeam->GetTeamMember( i );
         if ( pBattleInstance->IsAlive() )
             return false;
     }
@@ -187,7 +241,7 @@ Bool Battle::StartTurn()
     // Start a turn
     m_bTurnInProgress = true;
     m_bExtraTurn = false;
-    m_pTurnMonster->ResetATB();
+    m_pTurnMonster->DecreaseATB( BATTLE_ATB_CAPACITY );
 
     // Handle cooldowns
     for( UInt i = 0; i < m_pPlayerTeam->GetTeamSize(); ++i ) {
@@ -204,22 +258,29 @@ Bool Battle::StartTurn()
     // Handle status effects
     if ( m_pTurnMonster->HasStatusEffect(STATUSEFFECT_BUFF_REGEN) ) {
         StatusEffect * pStatusEffect = m_pTurnMonster->GetStatusEffect(STATUSEFFECT_BUFF_REGEN);
+        Float fHP = (Float)( m_pTurnMonster->GetHP() );
 
-        UInt iHealAmount = (UInt)( MathFn->Floor(pStatusEffect->GetAmplitude() * (Float)(m_pTurnMonster->GetHP())) );
+        UInt iHealAmount = (UInt)( MathFn->Floor(pStatusEffect->GetAmplitude(0) * fHP) );
 
         m_pTurnMonster->Heal( iHealAmount );
     }
     if ( m_pTurnMonster->HasStatusEffect(STATUSEFFECT_DEBUFF_DOT) ) {
         StatusEffect * pStatusEffect = m_pTurnMonster->GetStatusEffect(STATUSEFFECT_DEBUFF_DOT);
+        Float fHP = (Float)( m_pTurnMonster->GetHP() );
 
-        UInt iDamageAmount = (UInt)( MathFn->Floor(pStatusEffect->GetAmplitude() * (Float)(m_pTurnMonster->GetHP())) );
+        UInt iDamageAmount = 0;
+        for ( UInt i = 0; i < pStatusEffect->GetStackCount(); ++i )
+            iDamageAmount += (UInt)( MathFn->Floor(pStatusEffect->GetAmplitude(i) * fHP) );
 
         m_pTurnMonster->Damage( iDamageAmount );
     }
     if ( m_pTurnMonster->HasStatusEffect(STATUSEFFECT_DEBUFF_BOMB) ) {
         StatusEffect * pStatusEffect = m_pTurnMonster->GetStatusEffect(STATUSEFFECT_DEBUFF_BOMB);
 
-        UInt iDamageAmount = (UInt)( MathFn->Floor(pStatusEffect->GetAmplitude()) ); // this is the final dmg value already, passed as float
+        // Final dmg value already, passed as amplitude
+        UInt iDamageAmount = 0;
+        for ( UInt i = 0; i < pStatusEffect->GetStackCount(); ++i )
+            iDamageAmount += (UInt)( MathFn->Floor(pStatusEffect->GetAmplitude(i)) ); 
 
         m_pTurnMonster->Damage( iDamageAmount );
     }
@@ -231,10 +292,9 @@ Bool Battle::StartTurn()
     for( UInt i = 0; i < pAllyTeam->GetTeamSize(); ++i ) {
         if ( i == m_iTurnMonster )
             _HandlePassives( SKILL_PASSIVE_PERIODIC_SELF, pAllyTeam, m_iTurnMonster, pAllyTeam, m_iTurnMonster );
-        else {
+        else
             _HandlePassives( SKILL_PASSIVE_PERIODIC_ALLIES, pAllyTeam, i, pAllyTeam, m_iTurnMonster );
-            _HandlePassives( SKILL_PASSIVE_PERIODIC_ALL, pAllyTeam, i, pAllyTeam, m_iTurnMonster );
-        }
+        _HandlePassives( SKILL_PASSIVE_PERIODIC_ALL, pAllyTeam, i, pAllyTeam, m_iTurnMonster );
     }
     for( UInt i = 0; i < pEnnemyTeam->GetTeamSize(); ++i ) {
         _HandlePassives( SKILL_PASSIVE_PERIODIC_ENNEMIES, pEnnemyTeam, i, pAllyTeam, m_iTurnMonster );
@@ -258,63 +318,67 @@ Void Battle::HandleChoice( UInt iSkillChoice, Bool bTargetPlayerTeamElseAI, UInt
     BattleMonsterInstance * pTarget = pTargetTeam->GetTeamMember( iTargetMonster );
 
     // Get skill instance
-    SkillInstance * pSkillInstance = m_pTurnMonster->GetSkillInstance( iSkillChoice );
+    const SkillInstance * pSkillInstance = m_pTurnMonster->GetSkillInstance( iSkillChoice );
     Assert( pSkillInstance->IsActive() );
+
+    // Trigger cooldown
+    if ( pSkillInstance->HasCooldown() )
+        m_pTurnMonster->TriggerSkillCooldown( iSkillChoice );
 
     // Enum all types of effects
     for ( UInt i = 0; i < SKILL_ACTIVE_COUNT; ++i ) {
         SkillActiveType iActiveType = (SkillActiveType)i;
 
         // Check if there are effects to handle
-        ActiveSkill * pActiveSkill = (ActiveSkill*)(pSkillInstance->GetSkill());
+        const ActiveSkill * pActiveSkill = (const ActiveSkill *)( pSkillInstance->GetSkill() );
         UInt iEffectCount = pActiveSkill->GetEffectCount( iActiveType );
         Assert( iEffectCount > 0 );
 
-        // Trigger cooldown
-        if ( pActiveSkill->HasCooldown() )
-            m_pTurnMonster->TriggerSkillCooldown( iSkillChoice );
-
         // Handle all effects
-        BattleMonsterInstance * arrTargets[BATTLE_TEAM_MAX_SIZE];
+        BattleMonsterInstance * arrTargets[BATTLE_TEAMSIZE_MAX];
         UInt iTargetCount = 0;
 
         for ( UInt j = 0; j < iEffectCount; ++j ) {
-            SkillEffect * pSkillEffect = pActiveSkill->GetEffect( iActiveType, j );
+            const SkillEffect * pSkillEffect = pActiveSkill->GetEffect( iActiveType, j );
 
             // Resolve target pattern
-            iTargetCount = _ResolveAllyTargets( arrTargets, pSkillEffect->GetTargetPattern(), pAllyTeam, m_iTurnMonster, pTargetTeam, iTargetMonster );
+            iTargetCount = _ResolveAllyTargets( arrTargets, pSkillEffect->GetTargetPattern(), pAllyTeam, m_iTurnMonster, iTargetMonster );
 
             // Handle effect
             _HandleSkillEffect( pAllyTeam, m_iTurnMonster, pTargetTeam, pSkillInstance, pSkillEffect, arrTargets, iTargetCount );
 
             // Resolve target pattern
-            iTargetCount = _ResolveEnnemyTargets( arrTargets, pSkillEffect->GetTargetPattern(), pAllyTeam, m_iTurnMonster, pTargetTeam, iTargetMonster );
+            iTargetCount = _ResolveEnnemyTargets( arrTargets, pSkillEffect->GetTargetPattern(), pTargetTeam, iTargetMonster );
 
             // Handle effect
             _HandleSkillEffect( pAllyTeam, m_iTurnMonster, pTargetTeam, pSkillInstance, pSkillEffect, arrTargets, iTargetCount );
-        }
-    }
-
-    // Handle violent runes
-    if ( m_pTurnMonster->GetBaseInstance()->HasSetBonus(RUNE_VIOLENT) ) {
-        if ( GameplayFn->CheckRandomEvent(0.22f) )
-            m_bExtraTurn = true;
-    }
-
-    // Handle revenge runes
-    UInt iCount = 0;
-    if ( m_pTurnMonster->GetBaseInstance()->HasSetBonus(RUNE_REVENGE, &iCount) ) {
-        if ( GameplayFn->CheckRandomEvent(0.15f * (Float)iCount) ) {
-            m_bPlayerTurn = !m_bPlayerTurn;
-            m_iTurnMonster = iTargetMonster;
-            m_pTurnMonster = pTarget;
-            m_bExtraTurn = true;
         }
     }
 
     // Handle extra turn skills
     //if ( )
     //    m_bExtraTurn = true;
+
+    const GameParameters * pGameParams = GameplayFn->GetGameParameters();
+
+    // Handle violent runes
+    if ( m_pTurnMonster->GetMonsterInstance()->HasSetBonus(RUNE_VIOLENT) ) {
+        Float fProc = pGameParams->GetRuneSetStatBonus( RUNE_VIOLENT );
+        if ( GameplayFn->CheckRandomEvent(fProc) )
+            m_bExtraTurn = true;
+    }
+
+    // Handle revenge runes
+    UInt iSetCount = 0;
+    if ( pTargetTeam == pEnnemyTeam && pTarget->GetMonsterInstance()->HasSetBonus(RUNE_REVENGE, &iSetCount) ) {
+        Float fProc = ( pGameParams->GetRuneSetStatBonus(RUNE_REVENGE) * (Float)iSetCount );
+        if ( GameplayFn->CheckRandomEvent(fProc) ) {
+            m_bPlayerTurn = !m_bPlayerTurn;
+            m_iTurnMonster = iTargetMonster;
+            m_pTurnMonster = pTarget;
+            m_bExtraTurn = true;
+        }
+    }
 }
 Bool Battle::EndTurn()
 {
@@ -325,8 +389,9 @@ Bool Battle::EndTurn()
 
     // Update status effects durations
     for ( UInt i = 0; i < STATUSEFFECT_COUNT; ++i ) {
-        if ( m_pTurnMonster->HasStatusEffect( (StatusEffectType)i ) ) {
-            StatusEffect * pStatusEffect = m_pTurnMonster->GetStatusEffect( (StatusEffectType)i );
+        StatusEffectType iType = (StatusEffectType)i;
+        if ( m_pTurnMonster->HasStatusEffect(iType) ) {
+            StatusEffect * pStatusEffect = m_pTurnMonster->GetStatusEffect( iType );
             for ( UInt j = 0; j < pStatusEffect->GetStackCount(); ++j )
                 pStatusEffect->DecreaseDuration( j, 1 );
         }
@@ -336,11 +401,9 @@ Bool Battle::EndTurn()
     // Done with this turn
     m_bTurnInProgress = false;
 
-    // Handle "additional turn" effects
+    // Handle "extra turn" effects
     if ( !m_bExtraTurn )
         m_bTurnPending = false;
-
-    // Returns whether an extra turn is pending
     return m_bTurnPending;
 }
 
@@ -363,8 +426,7 @@ MonsterElement Battle::sm_arrElementStrongAgainst[MONSTER_ELEMENT_COUNT] = {
     MONSTER_ELEMENT_LIGHT  // Strong vs MONSTER_ELEMENT_DARK
 };
 
-UInt Battle::_ResolveEnnemyTargets( BattleMonsterInstance ** outTargets, SkillTargetPattern iPattern,
-                                    BattleTeam * pCasterTeam, UInt iCaster, BattleTeam * pTargetTeam, UInt iTarget )
+UInt Battle::_ResolveEnnemyTargets( BattleMonsterInstance ** outTargets, SkillTargetPattern iPattern, BattleTeam * pTargetTeam, UInt iTarget )
 {
     UInt iTargetCount = 0;
     UInt iFirstRoll, iSecondRoll, iThirdRoll;
@@ -459,8 +521,7 @@ UInt Battle::_ResolveEnnemyTargets( BattleMonsterInstance ** outTargets, SkillTa
 
     return iTargetCount;
 }
-UInt Battle::_ResolveAllyTargets( BattleMonsterInstance ** outTargets, SkillTargetPattern iPattern,
-                                  BattleTeam * pCasterTeam, UInt iCaster, BattleTeam * pTargetTeam, UInt iTarget )
+UInt Battle::_ResolveAllyTargets( BattleMonsterInstance ** outTargets, SkillTargetPattern iPattern, BattleTeam * pCasterTeam, UInt iCaster, UInt iTarget )
 {
     UInt iTargetCount = 0;
     UInt iFirstRoll, iSecondRoll, iThirdRoll;
@@ -557,7 +618,7 @@ UInt Battle::_ResolveAllyTargets( BattleMonsterInstance ** outTargets, SkillTarg
     return iTargetCount;
 }
 
-UInt Battle::_ComputeDamage( SkillInstance * pSkillInstance, SkillEffectDamage * pDamageEffect, BattleMonsterInstance * pCaster, BattleMonsterInstance * pTarget,
+UInt Battle::_ComputeDamage( const SkillInstance * pSkillInstance, const SkillEffectDamage * pDamageEffect, BattleMonsterInstance * pCaster, BattleMonsterInstance * pTarget,
                              Bool * outIsCrit, Bool * outIsGlancing, Bool * outIsCrushing )
 {
     // Base damage
@@ -593,8 +654,8 @@ UInt Battle::_ComputeDamage( SkillInstance * pSkillInstance, SkillEffectDamage *
     }
 
     // Apply element correction
-    MonsterElement iCasterElement = pCaster->GetBaseInstance()->GetElement();
-    MonsterElement iTargetElement = pTarget->GetBaseInstance()->GetElement();
+    MonsterElement iCasterElement = pCaster->GetMonsterInstance()->GetElement();
+    MonsterElement iTargetElement = pTarget->GetMonsterInstance()->GetElement();
 
     *outIsGlancing = false;
     *outIsCrushing = false;
@@ -613,7 +674,7 @@ UInt Battle::_ComputeDamage( SkillInstance * pSkillInstance, SkillEffectDamage *
     }
 
     // Skill damage
-    Float fSkillDamage = ( pSkillInstance->GetEffectiveBonus(SKILL_STAT_DAMAGE) + pDamageEffect->GetBonusDmg() );
+    Float fSkillDamage = ( pSkillInstance->GetBonusDamage() + pDamageEffect->GetBonusDmg() );
 
     // Critical damage
     Float fCriticalDamage = 0.0f;
@@ -635,7 +696,7 @@ UInt Battle::_ComputeDamage( SkillInstance * pSkillInstance, SkillEffectDamage *
     // Done
     return iDamageAmount;
 }
-UInt Battle::_ComputeHeal( SkillInstance * pSkillInstance, SkillEffectHeal * pHealEffect, BattleMonsterInstance * pCaster, BattleMonsterInstance * pTarget )
+UInt Battle::_ComputeHeal( const SkillInstance * pSkillInstance, const SkillEffectHeal * pHealEffect, BattleMonsterInstance * pCaster, BattleMonsterInstance * pTarget )
 {
     // Base heal
     Float fBaseHeal = 0.0f;
@@ -669,7 +730,7 @@ UInt Battle::_ComputeHeal( SkillInstance * pSkillInstance, SkillEffectHeal * pHe
     }
 
     // Skill heal
-    Float fSkillHeal = ( pSkillInstance->GetEffectiveBonus(SKILL_STAT_RECOVERY) + pHealEffect->GetBonusHeal() );
+    Float fSkillHeal = ( pSkillInstance->GetBonusRecovery() + pHealEffect->GetBonusHeal() );
 
     // Convert to heal value
     UInt iHealAmount = (UInt)( MathFn->Floor((1.0f + fSkillHeal) * fBaseHeal) );
@@ -679,8 +740,10 @@ UInt Battle::_ComputeHeal( SkillInstance * pSkillInstance, SkillEffectHeal * pHe
 }
 
 Void Battle::_HandleSkillEffect( BattleTeam * pCasterTeam, UInt iCaster, BattleTeam * pTargetTeam,
-                                 SkillInstance * pSkillInstance, SkillEffect * pSkillEffect, BattleMonsterInstance ** arrTargets, UInt iTargetCount )
+                                 const SkillInstance * pSkillInstance, const SkillEffect * pSkillEffect, BattleMonsterInstance ** arrTargets, UInt iTargetCount )
 {
+    const GameParameters * pGameParams = GameplayFn->GetGameParameters();
+
     // Get caster
     BattleMonsterInstance * pCaster = pCasterTeam->GetTeamMember( iCaster );
 
@@ -691,7 +754,7 @@ Void Battle::_HandleSkillEffect( BattleTeam * pCasterTeam, UInt iCaster, BattleT
         // Check effect type
         switch( pSkillEffect->GetType() ) {
             case SKILLEFFECT_DAMAGE: {
-                    SkillEffectDamage * pDamageEffect = (SkillEffectDamage*)pSkillEffect;
+                    const SkillEffectDamage * pDamageEffect = (const SkillEffectDamage *)pSkillEffect;
 
                     Bool bIsCrit, bIsGlancing, bIsCrushing;
                     UInt iDamage = _ComputeDamage( pSkillInstance, pDamageEffect, pCaster, pTarget, &bIsCrit, &bIsGlancing, &bIsCrushing );
@@ -699,31 +762,34 @@ Void Battle::_HandleSkillEffect( BattleTeam * pCasterTeam, UInt iCaster, BattleT
                     // Handle mark_dmg status
                     if ( pTarget->HasStatusEffect(STATUSEFFECT_DEBUFF_MARK_DMG) ) {
                         StatusEffect * pStatusEffect = pTarget->GetStatusEffect( STATUSEFFECT_DEBUFF_MARK_DMG );
-                        Float fEffectiveAmplitude = ( pStatusEffect->GetAmplitude() * (Float)(pStatusEffect->GetStackCount()) );
-                        iDamage += (UInt)( MathFn->Floor(fEffectiveAmplitude * (Float)iDamage) );
+                        iDamage += (UInt)( MathFn->Floor(pStatusEffect->GetAmplitude(0) * (Float)iDamage) );
                     }
 
-                    // Apply (shield status is handled inside)
+                    // Apply damage
                     UInt iInflictedDamage = pTarget->Damage( iDamage );
 
                     // Handle mark_drain status
                     if ( pTarget->HasStatusEffect(STATUSEFFECT_DEBUFF_MARK_DRAIN) ) {
                         StatusEffect * pStatusEffect = pTarget->GetStatusEffect( STATUSEFFECT_DEBUFF_MARK_DRAIN );
-                        Float fEffectiveAmplitude = ( pStatusEffect->GetAmplitude() * (Float)(pStatusEffect->GetStackCount()) );
-                        UInt iHealAmount = (UInt)( MathFn->Floor(fEffectiveAmplitude * (Float)iInflictedDamage) );
+                        UInt iHealAmount = (UInt)( MathFn->Floor(pStatusEffect->GetAmplitude(0) * (Float)iInflictedDamage) );
+
                         pCaster->Heal( iHealAmount );
                     }
 
                     // Handle vampire runes
-                    if ( pCaster->GetBaseInstance()->HasSetBonus(RUNE_VAMPIRE) ) {
-                        UInt iHealAmount = (UInt)( MathFn->Floor(0.35f * (Float)iInflictedDamage) );
+                    if ( pCaster->GetMonsterInstance()->HasSetBonus(RUNE_VAMPIRE) ) {
+                        Float fAmplitude = pGameParams->GetRuneSetStatBonus( RUNE_VAMPIRE );
+                        UInt iHealAmount = (UInt)( MathFn->Floor(fAmplitude * (Float)iInflictedDamage) );
+
                         pCaster->Heal( iHealAmount );
                     }
 
                     // Handle despair runes
-                    if ( pCaster->GetBaseInstance()->HasSetBonus(RUNE_DESPAIR) ) {
-                        if ( GameplayFn->CheckRandomEvent(0.25f) )
-                            pTarget->AddStatusEffect( STATUSEFFECT_DEBUFF_STUN, true, 0.0f, 1, 1, 1 );
+                    if ( pCaster->GetMonsterInstance()->HasSetBonus(RUNE_DESPAIR) ) {
+                        Float fAmplitude = pGameParams->GetRuneSetStatBonus( RUNE_DESPAIR );
+
+                        if ( GameplayFn->CheckRandomEvent(fAmplitude) )
+                            pTarget->AddStatusEffect( STATUSEFFECT_DEBUFF_STUN, 1, 1, 0.0f );
                     }
 
                     // Handle passive effects
@@ -771,7 +837,7 @@ Void Battle::_HandleSkillEffect( BattleTeam * pCasterTeam, UInt iCaster, BattleT
                     }
                 } break;
             case SKILLEFFECT_HEAL: {
-                    SkillEffectHeal * pHealEffect = (SkillEffectHeal*)pSkillEffect;
+                    const SkillEffectHeal * pHealEffect = (const SkillEffectHeal *)pSkillEffect;
 
                     UInt iHeal = _ComputeHeal( pSkillInstance, pHealEffect, pCaster, pTarget );
 
@@ -782,7 +848,7 @@ Void Battle::_HandleSkillEffect( BattleTeam * pCasterTeam, UInt iCaster, BattleT
                     //_HandlePassives( SKILL_PASSIVE_ONHEAL, pCaster, pTarget );
                 } break;
             case SKILLEFFECT_ATB: {
-                    SkillEffectATB * pATBEffect = (SkillEffectATB*)pSkillEffect;
+                    const SkillEffectATB * pATBEffect = (const SkillEffectATB *)pSkillEffect;
 
                     Float fATB = ( pATBEffect->GetScalingMultiplier() * BATTLE_ATB_CAPACITY );
 
@@ -796,11 +862,11 @@ Void Battle::_HandleSkillEffect( BattleTeam * pCasterTeam, UInt iCaster, BattleT
                     //_HandlePassives( SKILL_PASSIVE_ONATB, pCaster, pTarget );
                 } break;
             case SKILLEFFECT_STATUS: {
-                    SkillEffectStatus * pStatusEffect = (SkillEffectStatus*)pSkillEffect;
+                    const SkillEffectStatus * pStatusEffect = (const SkillEffectStatus *)pSkillEffect;
 
                     // Apply
-                    pTarget->AddStatusEffect( pStatusEffect->GetStatusEffectType(), pStatusEffect->IsRemovable(), pStatusEffect->GetAmplitude(),
-                                              pStatusEffect->GetMaxStacks(), pStatusEffect->GetStackCount(), pStatusEffect->GetDuration() );
+                    pTarget->AddStatusEffect( pStatusEffect->GetStatusEffectType(), pStatusEffect->GetStackCount(),
+                                              pStatusEffect->GetDuration(), pStatusEffect->GetAmplitude() );
 
                     // Handle passive effects
                     //_HandlePassives( SKILL_PASSIVE_ONSTATUS, pCaster, pTarget );
@@ -814,7 +880,6 @@ Void Battle::_HandlePassives( SkillPassiveType iPassiveType, BattleTeam * pCaste
 {
     // Get caster & target
     BattleMonsterInstance * pCaster = pCasterTeam->GetTeamMember( iCaster );
-    BattleMonsterInstance * pTarget = pTargetTeam->GetTeamMember( iTarget );
 
     // Check caster's skill set
     for ( UInt i = 0; i < pCaster->GetSkillCount(); ++i ) {
@@ -823,35 +888,35 @@ Void Battle::_HandlePassives( SkillPassiveType iPassiveType, BattleTeam * pCaste
             continue;
 
         // Look for passives
-        SkillInstance * pSkillInstance = pCaster->GetSkillInstance(i);
+        const SkillInstance * pSkillInstance = pCaster->GetSkillInstance(i);
         if ( !(pSkillInstance->IsPassive()) )
             continue;
 
         // Check if there are effects to handle
-        PassiveSkill * pPassiveSkill = (PassiveSkill*)( pSkillInstance->GetSkill() );
+        const PassiveSkill * pPassiveSkill = (const PassiveSkill *)( pSkillInstance->GetSkill() );
         UInt iEffectCount = pPassiveSkill->GetEffectCount( iPassiveType );
         if ( iEffectCount == 0 )
             continue;
 
         // Trigger cooldown
-        if ( pPassiveSkill->HasCooldown() )
+        if ( pSkillInstance->HasCooldown() )
             pCaster->TriggerSkillCooldown(i);
 
         // Handle all effects
-        BattleMonsterInstance * arrTargets[BATTLE_TEAM_MAX_SIZE];
+        BattleMonsterInstance * arrTargets[BATTLE_TEAMSIZE_MAX];
         UInt iTargetCount = 0;
 
         for ( UInt j = 0; j < iEffectCount; ++j ) {
             SkillEffect * pSkillEffect = pPassiveSkill->GetEffect( iPassiveType, j );
 
             // Resolve target pattern
-            iTargetCount = _ResolveAllyTargets( arrTargets, pSkillEffect->GetTargetPattern(), pCasterTeam, iCaster, pTargetTeam, iTarget );
+            iTargetCount = _ResolveAllyTargets( arrTargets, pSkillEffect->GetTargetPattern(), pCasterTeam, iCaster, iTarget );
 
             // Handle effect
             _HandleSkillEffect( pCasterTeam, iCaster, pTargetTeam, pSkillInstance, pSkillEffect, arrTargets, iTargetCount );
 
             // Resolve target pattern
-            iTargetCount = _ResolveEnnemyTargets( arrTargets, pSkillEffect->GetTargetPattern(), pCasterTeam, iCaster, pTargetTeam, iTarget );
+            iTargetCount = _ResolveEnnemyTargets( arrTargets, pSkillEffect->GetTargetPattern(), pTargetTeam, iTarget );
 
             // Handle effect
             _HandleSkillEffect( pCasterTeam, iCaster, pTargetTeam, pSkillInstance, pSkillEffect, arrTargets, iTargetCount );

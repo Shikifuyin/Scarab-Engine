@@ -218,6 +218,10 @@ inline Float MonsterInstance::GetBaseRES() const {
 inline UInt MonsterInstance::GetSkillCount() const {
     return m_hSkillSet.GetSkillCount();
 }
+inline const SkillInstance * MonsterInstance::GetSkillInstance( UInt iSlot ) const {
+    Assert( iSlot < m_hSkillSet.GetSkillCount() );
+    return m_hSkillSet.GetSkillInstance( iSlot );
+}
 inline SkillInstance * MonsterInstance::GetSkillInstance( UInt iSlot ) {
     Assert( iSlot < m_hSkillSet.GetSkillCount() );
     return m_hSkillSet.GetSkillInstance( iSlot );

@@ -30,11 +30,11 @@
 // Constants definitions
 #define GameplayFn GameplayManager::GetInstancePtr()
 
-// Parameter filr
+// XML files
 #define GAMEPLAY_PARAMETERS_FILE TEXT("GameParameters.xml")
 
-// Database paths
-#define MONSTER_XML_PATH TEXT("Monsters")
+#define GAMEPLAY_MONSTERFILES_PATH    TEXT("Monsters")
+#define GAMEPLAY_PLAYERTOWNFILES_PATH TEXT("PlayerTowns")
 
 /////////////////////////////////////////////////////////////////////////////////
 // The GameplayManager class
@@ -69,16 +69,19 @@ public:
     // Monster database
     inline Monster * GetMonster( MonsterID iMonsterID ) const;
 
-    // Battle system
+    // World database
 
     // Town system
+    PlayerTown * LoadPlayerTown( const GChar * strTownName ) const;
+    PlayerTown * CreatePlayerTown( const GChar * strTownName ) const;
+    Void SavePlayerTown( const PlayerTown * pPlayerTown ) const;
+    Void ReleasePlayerTown( PlayerTown * pPlayerTown, Bool bSave = true ) const;
 
-    // World system
+    // Battle system
 
 private:
     // Helpers
-    Void _LoadGameParameters();
-    Void _LoadGameDatabase();
+    Void _LoadGameDatabase( const GChar * strPath );
 
     // Game parameters
     GameParameters m_hGameParameters;
@@ -108,36 +111,3 @@ private:
 #endif // SCARAB_ENTRYPOINT_WORLDOFMONSTERS_GAMEPLAYMANAGER_H
 
 
-
-//Bool bValid = false;
-//switch( m_pActiveLeaderSkill->GetLeaderConstraint() ) {
-//case LeaderSkill::LEADER_CONSTRAINT_NONE:
-//    bValid = true;
-//    break;
-//case LeaderSkill::LEADER_CONSTRAINT_FIRE:
-//    bValid = ( m_pMonsterInstance->GetElement() == MONSTER_ELEMENT_FIRE );
-//    break;
-//case LeaderSkill::LEADER_CONSTRAINT_WATER:
-//    bValid = ( m_pMonsterInstance->GetElement() == MONSTER_ELEMENT_WATER );
-//    break;
-//case LeaderSkill::LEADER_CONSTRAINT_WIND:
-//    bValid = ( m_pMonsterInstance->GetElement() == MONSTER_ELEMENT_WIND );
-//    break;
-//case LeaderSkill::LEADER_CONSTRAINT_LIGHT:
-//    bValid = ( m_pMonsterInstance->GetElement() == MONSTER_ELEMENT_LIGHT );
-//    break;
-//case LeaderSkill::LEADER_CONSTRAINT_DARK:
-//    bValid = ( m_pMonsterInstance->GetElement() == MONSTER_ELEMENT_DARK );
-//    break;
-//case LeaderSkill::LEADER_CONSTRAINT_DUNGEON:
-//    bValid = ( m_iBattleType == BATTLE_DUNGEON );
-//    break;
-//case LeaderSkill::LEADER_CONSTRAINT_ARENA:
-//    bValid = ( m_iBattleType == BATTLE_ARENA );
-//    break;
-//case LeaderSkill::LEADER_CONSTRAINT_GUILDBATTLE:
-//    bValid = ( m_iBattleType == BATTLE_GUILD );
-//    break;
-//default: Assert(false); break;
-//}
-//

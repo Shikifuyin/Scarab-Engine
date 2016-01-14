@@ -31,8 +31,8 @@
 // Constants definitions
 
 // ATB Capacity
-#define BATTLE_ATB_CAPACITY 1000 // Base speed is 100, 10 steps to take a turn
-                                 // Max speeds around 200-300, 3-5 steps to take a turn
+#define BATTLE_ATB_CAPACITY 1000u // Base speed is 100, 10 steps to take a turn
+                                  // Max speeds around 200-300, 3-5 steps to take a turn
 
 /////////////////////////////////////////////////////////////////////////////////
 // The BattleMonsterInstance class
@@ -40,7 +40,7 @@ class BattleMonsterInstance
 {
 public:
     BattleMonsterInstance();
-    BattleMonsterInstance( PlayerTown * pPlayerTown, MonsterInstance * pMonsterInstance, LeaderSkill * pActiveLeaderSkill );
+    BattleMonsterInstance( const MonsterInstance * pMonsterInstance, const LeaderSkill * pActiveLeaderSkill );
     BattleMonsterInstance( const BattleMonsterInstance & rhs );
     ~BattleMonsterInstance();
 
@@ -52,8 +52,8 @@ public:
     inline Bool IsPresent() const;
 
     // Base instance
-    inline MonsterInstance * GetBaseInstance() const;
-    inline LeaderSkill * GetActiveLeaderSkill() const;
+    inline const MonsterInstance * GetMonsterInstance() const;
+    inline const LeaderSkill * GetActiveLeaderSkill() const;
 
     // Battle stats
     inline UInt GetHP() const;
@@ -94,7 +94,7 @@ public:
 
         // Skills & cooldowns
     inline UInt GetSkillCount() const;
-    inline SkillInstance * GetSkillInstance( UInt iSlot );
+    inline const SkillInstance * GetSkillInstance( UInt iSlot ) const;
 
     inline Bool HasSkillUp( UInt iSlot ) const;
     inline UInt GetSkillCooldown( UInt iSlot ) const;
@@ -123,9 +123,8 @@ private:
     Void _UpdateBattleStats();
 
     // Base instances
-    PlayerTown * m_pPlayerTown;
-    MonsterInstance * m_pMonsterInstance;
-    LeaderSkill * m_pActiveLeaderSkill;
+    const MonsterInstance * m_pMonsterInstance;
+    const LeaderSkill * m_pActiveLeaderSkill;
 
     // Battle stats
     UInt m_iHealth;

@@ -140,7 +140,7 @@ public:
     inline Bool IsDefense() const;
 
     // Effects access
-    inline UInt GetEffectCount( SkillActiveType iType );
+    inline UInt GetEffectCount( SkillActiveType iType ) const;
     inline const SkillEffect * GetEffect( SkillActiveType iType, UInt iIndex ) const;
 
 protected:
@@ -167,7 +167,7 @@ public:
     inline virtual SkillType GetType() const;
 
     // Effects access
-    inline UInt GetEffectCount( SkillPassiveType iType );
+    inline UInt GetEffectCount( SkillPassiveType iType ) const;
     inline SkillEffect * GetEffect( SkillPassiveType iType, UInt iIndex ) const;
 
 protected:

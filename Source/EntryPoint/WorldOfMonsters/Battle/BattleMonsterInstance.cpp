@@ -25,10 +25,27 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // BattleMonsterInstance implementation
-BattleMonsterInstance::BattleMonsterInstance( PlayerTown * pPlayerTown, MonsterInstance * pMonsterInstance, LeaderSkill * pActiveLeaderSkill ):
+BattleMonsterInstance::BattleMonsterInstance():
     m_hActiveEffects()
 {
-    m_pPlayerTown = pPlayerTown;
+    m_pMonsterInstance = NULL;
+    m_pActiveLeaderSkill = NULL;
+
+    m_iCurrentHP = 0;
+    m_iShieldHP = 0;
+    m_iHPLostCounter_Nemesis = 0;
+    m_iHPLostCounter_Destroy = 0;
+
+    m_iATB = 0;
+
+    for( UInt i = 0; i < SKILL_SLOT_COUNT; ++i )
+        m_arrSkillCooldowns[i] = 0;
+
+    m_bDisabled = false;
+}
+BattleMonsterInstance::BattleMonsterInstance( const MonsterInstance * pMonsterInstance, const LeaderSkill * pActiveLeaderSkill ):
+    m_hActiveEffects()
+{
     m_pMonsterInstance = pMonsterInstance;
     m_pActiveLeaderSkill = pActiveLeaderSkill;
 
@@ -46,9 +63,95 @@ BattleMonsterInstance::BattleMonsterInstance( PlayerTown * pPlayerTown, MonsterI
 
     _UpdateBattleStats();
 }
+BattleMonsterInstance::BattleMonsterInstance( const BattleMonsterInstance & rhs ):
+    m_hActiveEffects()
+{
+    m_pMonsterInstance = rhs.m_pMonsterInstance;
+    m_pActiveLeaderSkill = rhs.m_pActiveLeaderSkill;
+
+    m_iHealth = rhs.m_iHealth;
+    m_iAttack = rhs.m_iAttack;
+    m_iDefense = rhs.m_iDefense;
+    m_iSpeed = rhs.m_iSpeed;
+    m_fCriticalRate = rhs.m_fCriticalRate;
+    m_fCriticalDamage = rhs.m_fCriticalDamage;
+    m_fAccuracy = rhs.m_fAccuracy;
+    m_fResistance = rhs.m_fResistance;
+
+    m_iCurrentHP = rhs.m_iCurrentHP;
+    m_iShieldHP = rhs.m_iShieldHP;
+    m_iHPLostCounter_Nemesis = rhs.m_iHPLostCounter_Nemesis;
+    m_iHPLostCounter_Destroy = rhs.m_iHPLostCounter_Destroy;
+
+    m_iATB = rhs.m_iATB;
+
+    for( UInt i = 0; i < SKILL_SLOT_COUNT; ++i )
+        m_arrSkillCooldowns[i] = rhs.m_arrSkillCooldowns[i];
+
+    m_hActiveEffects.RemoveAll();
+    for( UInt i = 0; i < STATUSEFFECT_COUNT; ++i ) {
+        StatusEffectType iType = (StatusEffectType)i;
+        if ( !(rhs.m_hActiveEffects.HasStatusEffect(iType)) )
+            continue;
+
+        const StatusEffect * pStatusEffect = rhs.m_hActiveEffects.GetStatusEffect( iType );
+        UInt iStackCount = pStatusEffect->GetStackCount();
+        if ( iStackCount == 0 )
+            continue;
+        
+        for ( UInt j = 0; j < iStackCount; ++j )
+            m_hActiveEffects.Add( iType, 1, pStatusEffect->GetDuration(j), pStatusEffect->GetAmplitude(j) );
+    }
+
+    m_bDisabled = rhs.m_bDisabled;
+}
 BattleMonsterInstance::~BattleMonsterInstance()
 {
     // nothing to do
+}
+
+BattleMonsterInstance & BattleMonsterInstance::operator=( const BattleMonsterInstance & rhs )
+{
+    m_pMonsterInstance = rhs.m_pMonsterInstance;
+    m_pActiveLeaderSkill = rhs.m_pActiveLeaderSkill;
+
+    m_iHealth = rhs.m_iHealth;
+    m_iAttack = rhs.m_iAttack;
+    m_iDefense = rhs.m_iDefense;
+    m_iSpeed = rhs.m_iSpeed;
+    m_fCriticalRate = rhs.m_fCriticalRate;
+    m_fCriticalDamage = rhs.m_fCriticalDamage;
+    m_fAccuracy = rhs.m_fAccuracy;
+    m_fResistance = rhs.m_fResistance;
+
+    m_iCurrentHP = rhs.m_iCurrentHP;
+    m_iShieldHP = rhs.m_iShieldHP;
+    m_iHPLostCounter_Nemesis = rhs.m_iHPLostCounter_Nemesis;
+    m_iHPLostCounter_Destroy = rhs.m_iHPLostCounter_Destroy;
+
+    m_iATB = rhs.m_iATB;
+
+    for( UInt i = 0; i < SKILL_SLOT_COUNT; ++i )
+        m_arrSkillCooldowns[i] = rhs.m_arrSkillCooldowns[i];
+
+    m_hActiveEffects.RemoveAll();
+    for( UInt i = 0; i < STATUSEFFECT_COUNT; ++i ) {
+        StatusEffectType iType = (StatusEffectType)i;
+        if ( !(rhs.m_hActiveEffects.HasStatusEffect( iType )) )
+            continue;
+
+        const StatusEffect * pStatusEffect = rhs.m_hActiveEffects.GetStatusEffect( iType );
+        UInt iStackCount = pStatusEffect->GetStackCount();
+        if ( iStackCount == 0 )
+            continue;
+        
+        for ( UInt j = 0; j < iStackCount; ++j )
+            m_hActiveEffects.Add( iType, 1, pStatusEffect->GetDuration(j), pStatusEffect->GetAmplitude(j) );
+    }
+
+    m_bDisabled = rhs.m_bDisabled;
+
+    return (*this);
 }
 
 UInt BattleMonsterInstance::Damage( UInt iAmount, UInt iDestroyRunes )
@@ -90,10 +193,7 @@ UInt BattleMonsterInstance::Damage( UInt iAmount, UInt iDestroyRunes )
         UInt iHPStep = (UInt)( MathFn->Floor(0.30f * (Float)m_iHealth) );
         UInt iCount = ( m_iHPLostCounter_Destroy / iHPStep );
 
-        if ( m_hActiveEffects.HasStatusEffect(STATUSEFFECT_DEBUFF_DESTROY) )
-            m_hActiveEffects.GetStatusEffect(STATUSEFFECT_DEBUFF_DESTROY)->IncreaseAmplitude( 0, fAmplitude * (Float)iCount );
-        else
-            m_hActiveEffects.Add( STATUSEFFECT_DEBUFF_DESTROY, 1, 0x0fffffff, fAmplitude * (Float)iCount ); // infinite duration
+        m_hActiveEffects.Add( STATUSEFFECT_DEBUFF_DESTROY, 1, 0x0fffffff, fAmplitude * (Float)iCount ); // infinite duration
         _UpdateBattleStats();
 
         m_iHPLostCounter_Destroy %= iHPStep;
@@ -254,52 +354,43 @@ Void BattleMonsterInstance::_UpdateBattleStats()
     // Handle stat-based status effects
     if ( m_hActiveEffects.HasStatusEffect(STATUSEFFECT_DEBUFF_DESTROY) ) {
         const StatusEffect * pStatusEffect = m_hActiveEffects.GetStatusEffect( STATUSEFFECT_DEBUFF_DESTROY );
-        Float fEffectiveAmplitude = ( pStatusEffect->GetAmplitude(0) * (Float)(pStatusEffect->GetStackCount()) );
-        m_iHealth -= (UInt)( MathFn->Floor(fEffectiveAmplitude * (Float)(arrFlats[0])) );
+        m_iHealth -= (UInt)( MathFn->Floor(pStatusEffect->GetAmplitude(0) * (Float)(arrFlats[0])) );
     }
 
     if ( m_hActiveEffects.HasStatusEffect(STATUSEFFECT_BUFF_ATTACK) ) {
         const StatusEffect * pStatusEffect = m_hActiveEffects.GetStatusEffect( STATUSEFFECT_BUFF_ATTACK );
-        Float fEffectiveAmplitude = ( pStatusEffect->GetAmplitude(0) * (Float)(pStatusEffect->GetStackCount()) );
-        m_iAttack += (UInt)( MathFn->Floor(fEffectiveAmplitude * (Float)(arrFlats[1])) );
+        m_iAttack += (UInt)( MathFn->Floor(pStatusEffect->GetAmplitude(0) * (Float)(arrFlats[1])) );
     }
     if ( m_hActiveEffects.HasStatusEffect(STATUSEFFECT_DEBUFF_ATTACK) ) {
         const StatusEffect * pStatusEffect = m_hActiveEffects.GetStatusEffect( STATUSEFFECT_DEBUFF_ATTACK );
-        Float fEffectiveAmplitude = ( pStatusEffect->GetAmplitude(0) * (Float)(pStatusEffect->GetStackCount()) );
-        m_iAttack -= (UInt)( MathFn->Floor(fEffectiveAmplitude * (Float)(arrFlats[1])) );
+        m_iAttack -= (UInt)( MathFn->Floor(pStatusEffect->GetAmplitude(0) * (Float)(arrFlats[1])) );
     }
 
     if ( m_hActiveEffects.HasStatusEffect(STATUSEFFECT_BUFF_DEFENSE) ) {
         const StatusEffect * pStatusEffect = m_hActiveEffects.GetStatusEffect( STATUSEFFECT_BUFF_DEFENSE );
-        Float fEffectiveAmplitude = ( pStatusEffect->GetAmplitude(0) * (Float)(pStatusEffect->GetStackCount()) );
-        m_iDefense += (UInt)( MathFn->Floor(fEffectiveAmplitude * (Float)(arrFlats[2])) );
+        m_iDefense += (UInt)( MathFn->Floor(pStatusEffect->GetAmplitude(0) * (Float)(arrFlats[2])) );
     }
     if ( m_hActiveEffects.HasStatusEffect(STATUSEFFECT_DEBUFF_DEFENSE) ) {
         const StatusEffect * pStatusEffect = m_hActiveEffects.GetStatusEffect( STATUSEFFECT_DEBUFF_DEFENSE );
-        Float fEffectiveAmplitude = ( pStatusEffect->GetAmplitude(0) * (Float)(pStatusEffect->GetStackCount()) );
-        m_iDefense -= (UInt)( MathFn->Floor(fEffectiveAmplitude * (Float)(arrFlats[2])) );
+        m_iDefense -= (UInt)( MathFn->Floor(pStatusEffect->GetAmplitude(0) * (Float)(arrFlats[2])) );
     }
 
     if ( m_hActiveEffects.HasStatusEffect(STATUSEFFECT_BUFF_SPEED) ) {
         const StatusEffect * pStatusEffect = m_hActiveEffects.GetStatusEffect( STATUSEFFECT_BUFF_SPEED );
-        Float fEffectiveAmplitude = ( pStatusEffect->GetAmplitude(0) * (Float)(pStatusEffect->GetStackCount()) );
-        m_iSpeed += (UInt)( MathFn->Floor(fEffectiveAmplitude * (Float)(arrFlats[3])) );
+        m_iSpeed += (UInt)( MathFn->Floor(pStatusEffect->GetAmplitude(0) * (Float)(arrFlats[3])) );
     }
     if ( m_hActiveEffects.HasStatusEffect(STATUSEFFECT_DEBUFF_SPEED) ) {
         const StatusEffect * pStatusEffect = m_hActiveEffects.GetStatusEffect( STATUSEFFECT_DEBUFF_SPEED );
-        Float fEffectiveAmplitude = ( pStatusEffect->GetAmplitude(0) * (Float)(pStatusEffect->GetStackCount()) );
-        m_iSpeed -= (UInt)( MathFn->Floor(fEffectiveAmplitude * (Float)(arrFlats[3])) );
+        m_iSpeed -= (UInt)( MathFn->Floor(pStatusEffect->GetAmplitude(0) * (Float)(arrFlats[3])) );
     }
 
     if ( m_hActiveEffects.HasStatusEffect(STATUSEFFECT_BUFF_CRITRATE) ) {
         const StatusEffect * pStatusEffect = m_hActiveEffects.GetStatusEffect( STATUSEFFECT_BUFF_CRITRATE );
-        Float fEffectiveAmplitude = ( pStatusEffect->GetAmplitude(0) * (Float)(pStatusEffect->GetStackCount()) );
-        m_fCriticalRate += fEffectiveAmplitude;
+        m_fCriticalRate += pStatusEffect->GetAmplitude(0);
     }
     if ( m_hActiveEffects.HasStatusEffect(STATUSEFFECT_DEBUFF_CRITRATE) ) {
         const StatusEffect * pStatusEffect = m_hActiveEffects.GetStatusEffect( STATUSEFFECT_DEBUFF_CRITRATE );
-        Float fEffectiveAmplitude = ( pStatusEffect->GetAmplitude(0) * (Float)(pStatusEffect->GetStackCount()) );
-        m_fCriticalRate -= fEffectiveAmplitude;
+        m_fCriticalRate -= pStatusEffect->GetAmplitude(0);
     }
 }
 

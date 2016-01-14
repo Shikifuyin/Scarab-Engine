@@ -19,6 +19,10 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // PlayerTown implementation
+inline const GChar * PlayerTown::GetName() const {
+    return m_strName;
+}
+
 inline UInt PlayerTown::GetCurrency( CurrencyType iType ) const {
     Assert( iType < CURRENCY_COUNT );
     return m_arrCurrencies[iType];

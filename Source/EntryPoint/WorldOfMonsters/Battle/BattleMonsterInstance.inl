@@ -19,10 +19,17 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // BattleMonsterInstance implementation
-inline MonsterInstance * BattleMonsterInstance::GetBaseInstance() const {
+inline Bool BattleMonsterInstance::IsNull() const {
+    return ( m_pMonsterInstance == NULL );
+}
+inline Bool BattleMonsterInstance::IsPresent() const {
+    return ( m_pMonsterInstance != NULL );
+}
+
+inline const MonsterInstance * BattleMonsterInstance::GetMonsterInstance() const {
     return m_pMonsterInstance;
 }
-inline LeaderSkill * BattleMonsterInstance::GetActiveLeaderSkill() const {
+inline const LeaderSkill * BattleMonsterInstance::GetActiveLeaderSkill() const {
     return m_pActiveLeaderSkill;
 }
 
@@ -117,7 +124,7 @@ inline Void BattleMonsterInstance::ResetATB() {
 inline UInt BattleMonsterInstance::GetSkillCount() const {
     return m_pMonsterInstance->GetSkillCount();
 }
-inline SkillInstance * BattleMonsterInstance::GetSkillInstance( UInt iSlot ) {
+inline const SkillInstance * BattleMonsterInstance::GetSkillInstance( UInt iSlot ) const {
     return m_pMonsterInstance->GetSkillInstance( iSlot );
 }
 

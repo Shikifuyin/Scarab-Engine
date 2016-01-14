@@ -25,9 +25,12 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // PlayerTown implementation
-PlayerTown::PlayerTown()
+PlayerTown::PlayerTown( const GChar * strName )
 {
     const GameParameters * pGameParams = GameplayFn->GetGameParameters();
+
+    // Name
+    StringFn->NCopy( m_strName, strName, PLAYERTOWN_NAME_LENGTH - 1 );
 
     // Currencies, scrolls & essences
     for( UInt i = 0; i < CURRENCY_COUNT; ++i )

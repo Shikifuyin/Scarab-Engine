@@ -31,6 +31,9 @@
 /////////////////////////////////////////////////////////////////////////////////
 // Constants definitions
 
+    // Names
+#define PLAYERTOWN_NAME_LENGTH 64
+
     // Currencies : resources
 enum CurrencyType {
     CURRENCY_MANA = 0,
@@ -81,12 +84,15 @@ class PlayerGuild;
 class PlayerTown
 {
 public:
-    PlayerTown();
+    PlayerTown( const GChar * strName );
     ~PlayerTown();
 
     // XML serialization
     Void Load( const XMLNode * pNode );
     Void Save( XMLNode * outNode ) const;
+
+    // Name
+    inline const GChar * GetName() const;
 
     // Currencies, scrolls & essences
     inline UInt GetCurrency( CurrencyType iType ) const;
@@ -230,6 +236,9 @@ private:
     static Int _Compare_UInt( const UInt & rLeft, const UInt & rRight, Void * pUserData );
     static Int _Compare_MonsterInstance( const MonsterInstance & rLeft, const MonsterInstance & rRight );
     static Int _Compare_Rune( const Rune & rLeft, const Rune & rRight );
+
+    // Name
+    GChar m_strName[PLAYERTOWN_NAME_LENGTH];
 
     // Currencies, scrolls & essences
     UInt m_arrCurrencies[CURRENCY_COUNT];

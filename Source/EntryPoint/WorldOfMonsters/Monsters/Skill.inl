@@ -53,7 +53,7 @@ inline Bool ActiveSkill::IsDefense() const {
     return !m_bIsAttack;
 }
 
-inline UInt ActiveSkill::GetEffectCount( SkillActiveType iType ) {
+inline UInt ActiveSkill::GetEffectCount( SkillActiveType iType ) const {
     Assert( iType < SKILL_ACTIVE_COUNT );
     return m_arrEffectCounts[iType];
 }
@@ -69,7 +69,7 @@ inline SkillType PassiveSkill::GetType() const {
     return SKILL_TYPE_PASSIVE;
 }
 
-inline UInt PassiveSkill::GetEffectCount( SkillPassiveType iType ) {
+inline UInt PassiveSkill::GetEffectCount( SkillPassiveType iType ) const {
     Assert( iType < SKILL_PASSIVE_COUNT );
     return m_arrEffectCounts[iType];
 }

@@ -22,6 +22,10 @@
 inline UInt BattleTeam::GetTeamSize() const {
     return m_iTeamSize;
 }
+inline const BattleMonsterInstance * BattleTeam::GetTeamMember( UInt iIndex ) const {
+    Assert( iIndex < m_iTeamSize );
+    return ( m_arrMonsters + iIndex );
+}
 inline BattleMonsterInstance * BattleTeam::GetTeamMember( UInt iIndex ) {
     Assert( iIndex < m_iTeamSize );
     return ( m_arrMonsters + iIndex );
@@ -33,10 +37,10 @@ inline BattleType Battle::GetType() const {
     return m_iType;
 }
 
-inline BattleTeam * Battle::GetPlayerTeam() const {
+inline const BattleTeam * Battle::GetPlayerTeam() const {
     return m_pPlayerTeam;
 }
-inline BattleTeam * Battle::GetAITeam() const {
+inline const BattleTeam * Battle::GetAITeam() const {
     return m_pAITeam;
 }
 
@@ -53,7 +57,7 @@ inline Bool Battle::IsAITurn() const {
     return ( m_bTurnPending && !m_bPlayerTurn );
 }
 
-inline BattleMonsterInstance * Battle::GetTurnMonster() const {
+inline const BattleMonsterInstance * Battle::GetTurnMonster() const {
     return m_pTurnMonster;
 }
 

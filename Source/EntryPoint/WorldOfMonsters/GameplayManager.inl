@@ -53,7 +53,7 @@ inline Monster * GameplayManager::GetMonster( MonsterID iMonsterID ) const {
     MonsterMap::Iterator it = m_mapMonsters.Get( iMonsterID );
     if ( it.IsNull() )
         return NULL;
-    return it.GetItem();
+    return it.GetItemPtr();
 }
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -66,7 +66,7 @@ inline Int GameplayManager::_Compare_SkillIDs( const SkillID & rLeft, const Skil
     return 0;
 }
 
-inline Int GameplayManager::_Compare_MonsterIDs( const MonsterID & rLeft, const SkillID & rRight, Void * /*pUserData*/ ) {
+inline Int GameplayManager::_Compare_MonsterIDs( const MonsterID & rLeft, const MonsterID & rRight, Void * /*pUserData*/ ) {
     if ( rLeft < rRight )
         return +1;
     if ( rLeft > rRight )
