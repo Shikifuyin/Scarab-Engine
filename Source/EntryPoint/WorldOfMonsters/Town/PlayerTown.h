@@ -32,20 +32,6 @@
 /////////////////////////////////////////////////////////////////////////////////
 // Constants definitions
 
-    // Monsters definitions
-#define MONSTER_COLLECTION_MAX_LEVEL 20
-#define MONSTER_COLLECTION_MAX_ROOM  100 // 5 * 20
-
-#define MONSTER_STORAGE_MAX_LEVEL 50
-#define MONSTER_STORAGE_MAX_ROOM  500 // 10 * 50
-
-    // Runes definitions
-#define RUNE_COLLECTION_MAX_LEVEL 16
-#define RUNE_COLLECTION_MAX_ROOM  256  // 16 * 16
-
-#define RUNE_STORAGE_MAX_LEVEL 64
-#define RUNE_STORAGE_MAX_ROOM  1024 // 16 * 64
-
     // Currencies : resources
 enum CurrencyType {
     CURRENCY_MANA = 0,
@@ -60,44 +46,19 @@ typedef struct _currency_cost {
     UInt arrCost[CURRENCY_COUNT];
 } CurrencyCost;
 
-    // Building definitions
-#define BUILDING_MAX_LEVEL 10
+    // Monsters definitions
+#define MONSTER_COLLECTION_MAX_LEVEL 20
+#define MONSTER_COLLECTION_MAX_ROOM  100 // 5 * 20
 
-#define BUILDING_INFO_TEXT_LENGTH 1024
+#define MONSTER_STORAGE_MAX_LEVEL 50
+#define MONSTER_STORAGE_MAX_ROOM  500 // 10 * 50
 
-enum BuildingType {
-    BUILDING_DUNGEON = 0,
-    BUILDING_ARCANE_TOWER,
+    // Runes definitions
+#define RUNE_COLLECTION_MAX_LEVEL 16
+#define RUNE_COLLECTION_MAX_ROOM  256  // 16 * 16
 
-    BUILDING_ESSENCE_STORAGE,
-
-    BUILDING_MONSTER_STORAGE,
-    BUILDING_MONSTER_SUMMONING,
-    BUILDING_MONSTER_EVOLUTION,
-    BUILDING_MONSTER_FUSION,
-    //BUILDING_MONSTER_SKINS,
-
-    BUILDING_RUNE_STORAGE,
-    BUILDING_RUNE_EVOLUTION,
-
-    BUILDING_MANA,
-    BUILDING_CRYSTAL,
-
-    BUILDING_SHOP,   // The only tiny randomized
-    BUILDING_WISHES, // part remaining !!!
-
-    BUILDING_BONUS_MONSTERS_HP,
-    BUILDING_BONUS_MONSTERS_ATT,
-    BUILDING_BONUS_MONSTERS_ATT_ELEMENT,
-    BUILDING_BONUS_MONSTERS_DEF,
-    BUILDING_BONUS_MONSTERS_SPD,
-    BUILDING_BONUS_MONSTERS_CRITDMG,
-
-    BUILDING_BONUS_ARCANETOWERS_ATT,
-    BUILDING_BONUS_ARCANETOWERS_SPD,
-
-    BUILDING_COUNT
-};
+#define RUNE_STORAGE_MAX_LEVEL 64
+#define RUNE_STORAGE_MAX_ROOM  1024 // 16 * 64
 
     // Arena definitions
 enum ArenaRank {
@@ -122,9 +83,9 @@ public:
     PlayerTown();
     ~PlayerTown();
 
-    // Deferred loading
-    Void Load( XMLNode * pNode );
-    Void Save( XMLNode * pNode ) const;
+    // XML serialization
+    Void Load( const XMLNode * pNode );
+    Void Save( XMLNode * outNode ) const;
 
     // Currencies, scrolls & essences
     inline UInt GetCurrency( CurrencyType iType ) const;
@@ -256,8 +217,8 @@ public:
     inline Void SetArenaScore( UInt iArenaScore );
     inline Void SetArenaRank( ArenaRank iRank );
 
-    inline MonsterInstance * GetArenaDefenseMonster( UInt iIndex ) const;
-    inline Void SetArenaDefenseMonster( UInt iIndex, MonsterInstance * pMonsterInstance );
+    inline UInt GetArenaDefenseMonster( UInt iIndex ) const;
+    inline Void SetArenaDefenseMonster( UInt iIndex, UInt iMonsterCollectionIndex );
 
     // Guild access
     inline Bool HasGuild() const;
@@ -265,20 +226,9 @@ public:
 
 private:
     // Helpers
-    static const GChar * sm_arrCurrencyNames[MONSTER_ELEMENT_COUNT];
-    static const GChar * sm_arrScrollNames[MONSTER_ELEMENT_COUNT];
-    static const GChar * sm_arrElementNames[MONSTER_ELEMENT_COUNT];
-    static const GChar * sm_arrRuneTypeNames[RUNE_TYPE_COUNT];
-
     static Int _Compare_UInt( const UInt & rLeft, const UInt & rRight, Void * pUserData );
     static Int _Compare_MonsterInstance( const MonsterInstance & rLeft, const MonsterInstance & rRight );
     static Int _Compare_Rune( const Rune & rLeft, const Rune & rRight );
-
-    Void _Load_MonsterInstance( XMLNode * pNode, MonsterInstance * outMonsterInstance );
-    Void _Save_MonsterInstance( XMLNode * outNode, MonsterInstance * pMonsterInstance ) const;
-
-    Void _Load_Rune( XMLNode * pNode, Rune * outRune );
-    Void _Save_Rune( XMLNode * outNode, Rune * pRune ) const;
 
     // Currencies, scrolls & essences
     UInt m_arrCurrencies[CURRENCY_COUNT];
@@ -335,7 +285,7 @@ private:
     UInt m_iArenaScore;
     ArenaRank m_iArenaRank;
 
-    MonsterInstance * m_arrArenaDefense[BATTLE_TEAMSIZE_ARENA]; // first is leader
+    UInt m_arrArenaDefense[BATTLE_TEAMSIZE_ARENA]; // first is leader
 
     // Guild
     PlayerGuild * m_pGuild;

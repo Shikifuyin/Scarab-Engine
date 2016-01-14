@@ -21,112 +21,235 @@
 // Includes
 #include "SkillEffect.h"
 
+#include "../GameplayManager.h"
+
 /////////////////////////////////////////////////////////////////////////////////
 // SkillEffect implementation
-SkillEffect::SkillEffect( XMLNode * pNode )
+SkillEffect::SkillEffect()
 {
-    Assert( pNode != NULL );
+    m_fProc = 0.0f;
 
-    m_fProc = StringFn->ToFloat( pNode->GetAttribute(TEXT("Proc"))->GetValue() );
+    m_iTargetPattern = SKILL_TARGET_COUNT;
 
-    m_iTargetPattern = _SkillTargetPattern_FromString( pNode->GetAttribute(TEXT("TargetPattern"))->GetValue() );
-
-    m_iScalingType = _SkillEffectScaling_FromString( pNode->GetAttribute(TEXT("ScalingType"))->GetValue() );
-    m_fScalingMultiplier = StringFn->ToFloat( pNode->GetAttribute(TEXT("ScalingMultiplier"))->GetValue() );
+    m_iScalingType = SKILLEFFECT_SCALING_COUNT;
+    m_fScalingMultiplier = 0.0f;
 }
 SkillEffect::~SkillEffect()
 {
     // nothing to do
 }
 
-/////////////////////////////////////////////////////////////////////////////////
+SkillEffect * SkillEffect::StaticLoad( const XMLNode * pNode )
+{
+    Assert( pNode != NULL );
+    Assert( StringFn->Cmp( pNode->GetTagName(), TEXT("SkillEffect") ) == 0 );
 
-SkillTargetPattern SkillEffect::_SkillTargetPattern_FromString( const GChar * strValue )
-{
-    if ( StringFn->Cmp(strValue, TEXT("")) == 0 ) {
-        return SKILL_TARGET_;
+    const GameParameters * pGameParams = GameplayFn->GetGameParameters();
+
+    SkillEffectType iType = pGameParams->SkillEffectTypeFromString( pNode->GetAttribute(TEXT("Type"))->GetValue() );
+    SkillEffect * pSkillEffect = NULL;
+
+    GameplayFn->SelectMemory( TEXT("Scratch") );
+    switch( iType ) {
+        case SKILLEFFECT_DAMAGE: pSkillEffect = New SkillEffectDamage(); break;
+        case SKILLEFFECT_HEAL:   pSkillEffect = New SkillEffectHeal();   break;
+        case SKILLEFFECT_ATB:    pSkillEffect = New SkillEffectATB();    break;
+        case SKILLEFFECT_STATUS: pSkillEffect = New SkillEffectStatus(); break;
+        default: Assert( false ); break;
     }
-    Assert( false );
-    return SKILL_TARGET_COUNT;
+    GameplayFn->UnSelectMemory();
+
+    pSkillEffect->Load( pNode );
+
+    return pSkillEffect;
 }
-SkillEffectScaling SkillEffect::_SkillEffectScaling_FromString( const GChar * strValue )
+Void SkillEffect::Load( const XMLNode * pNode )
 {
-    if ( StringFn->Cmp(strValue, TEXT("")) == 0 ) {
-        return SKILLEFFECT_SCALING_;
-    }
-    Assert( false );
-    return SKILLEFFECT_SCALING_COUNT;
+    Assert( pNode != NULL );
+    Assert( StringFn->Cmp( pNode->GetTagName(), TEXT("SkillEffect") ) == 0 );
+
+    const GameParameters * pGameParams = GameplayFn->GetGameParameters();
+
+    m_fProc = StringFn->ToFloat( pNode->GetAttribute(TEXT("Proc"))->GetValue() );
+    m_iTargetPattern = pGameParams->SkillTargetPatternFromString( pNode->GetAttribute(TEXT("TargetPattern"))->GetValue() );
+    m_iScalingType = pGameParams->SkillEffectScalingFromString( pNode->GetAttribute(TEXT("ScalingType"))->GetValue() );
+    m_fScalingMultiplier = StringFn->ToFloat( pNode->GetAttribute(TEXT("ScalingMultiplier"))->GetValue() );
+}
+Void SkillEffect::Save( XMLNode * outNode ) const
+{
+    Assert( outNode != NULL );
+    Assert( StringFn->Cmp( outNode->GetTagName(), TEXT("SkillEffect") ) == 0 );
+
+    const GameParameters * pGameParams = GameplayFn->GetGameParameters();
+    GChar strBuffer[1024];
+    const GChar * strValue;
+
+    StringFn->FromUInt( strBuffer, GetType() );
+    outNode->CreateAttribute( TEXT("Type"), strBuffer );
+    StringFn->FromFloat( strBuffer, m_fProc );
+    outNode->CreateAttribute( TEXT("Proc"), strBuffer );
+    strValue = pGameParams->SkillTargetPatternToString( m_iTargetPattern );
+    outNode->CreateAttribute( TEXT("TargetPattern"), strValue );
+    strValue = pGameParams->SkillEffectScalingToString( m_iScalingType );
+    outNode->CreateAttribute( TEXT("ScalingType"), strValue );
+    StringFn->FromFloat( strBuffer, m_fScalingMultiplier );
+    outNode->CreateAttribute( TEXT("ScalingMultiplier"), strBuffer );
 }
 
 /////////////////////////////////////////////////////////////////////////////////
 // SkillEffectDamage implementation
-SkillEffectDamage::SkillEffectDamage( XMLNode * pNode ):
-    SkillEffect(pNode)
+SkillEffectDamage::SkillEffectDamage():
+    SkillEffect()
 {
-    Assert( StringFn->Cmp(pNode->GetTagName(), TEXT("SkillEffectDescriptor")) == 0 );
-
-    m_fBonusDmg = StringFn->ToFloat( pNode->GetAttribute(TEXT("BonusDamage"))->GetValue() );
-    m_fBonusCritRate = StringFn->ToFloat( pNode->GetAttribute(TEXT("BonusCritRate"))->GetValue() );
-    m_fBonusCritDmg = StringFn->ToFloat( pNode->GetAttribute(TEXT("BonusCritDmg"))->GetValue() );
+    m_fBonusDmg = 0.0f;
+    m_fBonusCritRate = 0.0f;
+    m_fBonusCritDmg = 0.0f;
 }
 SkillEffectDamage::~SkillEffectDamage()
 {
     // nothing to do
 }
 
+Void SkillEffectDamage::Load( const XMLNode * pNode )
+{
+    Assert( pNode != NULL );
+    Assert( StringFn->Cmp( pNode->GetTagName(), TEXT("SkillEffect") ) == 0 );
+
+    SkillEffect::Load( pNode );
+
+    m_fBonusDmg = StringFn->ToFloat( pNode->GetAttribute(TEXT("BonusDamage"))->GetValue() );
+    m_fBonusCritRate = StringFn->ToFloat( pNode->GetAttribute(TEXT("BonusCritRate"))->GetValue() );
+    m_fBonusCritDmg = StringFn->ToFloat( pNode->GetAttribute(TEXT("BonusCritDmg"))->GetValue() );
+}
+Void SkillEffectDamage::Save( XMLNode * outNode ) const
+{
+    Assert( outNode != NULL );
+    Assert( StringFn->Cmp( outNode->GetTagName(), TEXT("SkillEffect") ) == 0 );
+
+    SkillEffect::Save( outNode );
+
+    GChar strBuffer[1024];
+
+    StringFn->FromFloat( strBuffer, m_fBonusDmg );
+    outNode->CreateAttribute( TEXT("BonusDmg"), strBuffer );
+    StringFn->FromFloat( strBuffer, m_fBonusCritRate );
+    outNode->CreateAttribute( TEXT("BonusCritRate"), strBuffer );
+    StringFn->FromFloat( strBuffer, m_fBonusCritDmg );
+    outNode->CreateAttribute( TEXT("BonusCritDmg"), strBuffer );
+}
+
 /////////////////////////////////////////////////////////////////////////////////
 // SkillEffectHeal implementation
-SkillEffectHeal::SkillEffectHeal( XMLNode * pNode ):
-    SkillEffect(pNode)
+SkillEffectHeal::SkillEffectHeal():
+    SkillEffect()
 {
-    Assert( StringFn->Cmp(pNode->GetTagName(), TEXT("SkillEffectDescriptor")) == 0 );
-
-    m_fBonusHeal = StringFn->ToFloat( pNode->GetAttribute(TEXT("BonusHeal"))->GetValue() );
+    m_fBonusHeal = 0.0f;
 }
 SkillEffectHeal::~SkillEffectHeal()
 {
     // nothing to do
 }
 
+Void SkillEffectHeal::Load( const XMLNode * pNode )
+{
+    Assert( pNode != NULL );
+    Assert( StringFn->Cmp( pNode->GetTagName(), TEXT("SkillEffect") ) == 0 );
+
+    SkillEffect::Load( pNode );
+
+    m_fBonusHeal = StringFn->ToFloat( pNode->GetAttribute(TEXT("BonusHeal"))->GetValue() );
+}
+Void SkillEffectHeal::Save( XMLNode * outNode ) const
+{
+    Assert( outNode != NULL );
+    Assert( StringFn->Cmp( outNode->GetTagName(), TEXT("SkillEffect") ) == 0 );
+
+    SkillEffect::Save( outNode );
+
+    GChar strBuffer[1024];
+
+    StringFn->FromFloat( strBuffer, m_fBonusHeal );
+    outNode->CreateAttribute( TEXT("BonusHeal"), strBuffer );
+}
+
 /////////////////////////////////////////////////////////////////////////////////
 // SkillEffectATB implementation
-SkillEffectATB::SkillEffectATB( XMLNode * pNode ):
-    SkillEffect(pNode)
+SkillEffectATB::SkillEffectATB():
+    SkillEffect()
 {
-    Assert( StringFn->Cmp(pNode->GetTagName(), TEXT("SkillEffectDescriptor")) == 0 );
-
-    m_bIncrease = ( StringFn->ToUInt(pNode->GetAttribute(TEXT("IsIncrease"))->GetValue()) != 0 );
+    m_bIncrease = false;
 }
 SkillEffectATB::~SkillEffectATB()
 {
     // nothing to do
 }
 
+Void SkillEffectATB::Load( const XMLNode * pNode )
+{
+    Assert( pNode != NULL );
+    Assert( StringFn->Cmp( pNode->GetTagName(), TEXT("SkillEffect") ) == 0 );
+
+    SkillEffect::Load( pNode );
+
+    m_bIncrease = ( StringFn->ToUInt(pNode->GetAttribute(TEXT("IsIncrease"))->GetValue()) != 0 );
+}
+Void SkillEffectATB::Save( XMLNode * outNode ) const
+{
+    Assert( outNode != NULL );
+    Assert( StringFn->Cmp( outNode->GetTagName(), TEXT("SkillEffect") ) == 0 );
+
+    SkillEffect::Save( outNode );
+
+    outNode->CreateAttribute( TEXT("IsIncrease"), m_bIncrease ? TEXT("1") : TEXT("0") );
+}
+
 /////////////////////////////////////////////////////////////////////////////////
 // SkillEffectStatus implementation
-SkillEffectStatus::SkillEffectStatus( XMLNode * pNode ):
-    SkillEffect(pNode)
+SkillEffectStatus::SkillEffectStatus():
+    SkillEffect()
 {
-    Assert( StringFn->Cmp(pNode->GetTagName(), TEXT("SkillEffectDescriptor")) == 0 );
-
-    m_iType = _StatusEffectType_FromString( pNode->GetAttribute(TEXT("StatusEffectType"))->GetValue() );
-    m_iStackCount = (UInt)( StringFn->ToUInt(pNode->GetAttribute(TEXT("StackCount"))->GetValue()) );
-    m_iDuration = (UInt)( StringFn->ToUInt(pNode->GetAttribute(TEXT("Duration"))->GetValue()) );
-    m_fAmplitude = StringFn->ToFloat( pNode->GetAttribute(TEXT("Amplitude"))->GetValue() );
+    m_iType = STATUSEFFECT_COUNT;
+    m_iStackCount = 0;
+    m_iDuration = 0;
+    m_fAmplitude = 0.0f;
 }
 SkillEffectStatus::~SkillEffectStatus()
 {
     // nothing to do
 }
 
-/////////////////////////////////////////////////////////////////////////////////
-
-StatusEffectType SkillEffectStatus::_StatusEffectType_FromString( const GChar * strValue )
+Void SkillEffectStatus::Load( const XMLNode * pNode )
 {
-    if ( StringFn->Cmp(strValue, TEXT("")) == 0 ) {
-        return STATUSEFFECT_;
-    }
-    Assert( false );
-    return STATUSEFFECT_COUNT;
+    Assert( pNode != NULL );
+    Assert( StringFn->Cmp( pNode->GetTagName(), TEXT("SkillEffect") ) == 0 );
+
+    SkillEffect::Load( pNode );
+
+    const GameParameters * pGameParams = GameplayFn->GetGameParameters();
+
+    m_iType = pGameParams->StatusEffectTypeFromString( pNode->GetAttribute(TEXT("StatusEffectType"))->GetValue() );
+    m_iStackCount = (UInt)( StringFn->ToUInt(pNode->GetAttribute(TEXT("StackCount"))->GetValue()) );
+    m_iDuration = (UInt)( StringFn->ToUInt(pNode->GetAttribute(TEXT("Duration"))->GetValue()) );
+    m_fAmplitude = StringFn->ToFloat( pNode->GetAttribute(TEXT("Amplitude"))->GetValue() );
+}
+Void SkillEffectStatus::Save( XMLNode * outNode ) const
+{
+    Assert( outNode != NULL );
+    Assert( StringFn->Cmp( outNode->GetTagName(), TEXT("SkillEffect") ) == 0 );
+
+    SkillEffect::Save( outNode );
+
+    const GameParameters * pGameParams = GameplayFn->GetGameParameters();
+    GChar strBuffer[1024];
+    const GChar * strValue;
+
+    strValue = pGameParams->StatusEffectTypeToString( m_iType );
+    outNode->CreateAttribute( TEXT("StatusEffectType"), strValue );
+    StringFn->FromUInt( strBuffer, m_iStackCount );
+    outNode->CreateAttribute( TEXT("StackCount"), strBuffer );
+    StringFn->FromUInt( strBuffer, m_iDuration );
+    outNode->CreateAttribute( TEXT("Duration"), strBuffer );
+    StringFn->FromFloat( strBuffer, m_fAmplitude );
+    outNode->CreateAttribute( TEXT("Amplitude"), strBuffer );
 }
 

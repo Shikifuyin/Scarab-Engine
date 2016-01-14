@@ -29,6 +29,45 @@
 /////////////////////////////////////////////////////////////////////////////////
 // Constants definitions
 
+// Building definitions
+#define BUILDING_MAX_LEVEL 10
+
+#define BUILDING_INFO_TEXT_LENGTH 1024
+
+enum BuildingType {
+    BUILDING_DUNGEON = 0,
+    BUILDING_ARCANE_TOWER,
+
+    BUILDING_ESSENCE_STORAGE,
+
+    BUILDING_MONSTER_STORAGE,
+    BUILDING_MONSTER_SUMMONING,
+    BUILDING_MONSTER_EVOLUTION,
+    BUILDING_MONSTER_FUSION,
+    //BUILDING_MONSTER_SKINS,
+
+    BUILDING_RUNE_STORAGE,
+    BUILDING_RUNE_EVOLUTION,
+
+    BUILDING_MANA,
+    BUILDING_CRYSTAL,
+
+    BUILDING_SHOP,   // The only tiny randomized
+    BUILDING_WISHES, // part remaining !!!
+
+    BUILDING_BONUS_MONSTERS_HP,
+    BUILDING_BONUS_MONSTERS_ATT,
+    BUILDING_BONUS_MONSTERS_ATT_ELEMENT,
+    BUILDING_BONUS_MONSTERS_DEF,
+    BUILDING_BONUS_MONSTERS_SPD,
+    BUILDING_BONUS_MONSTERS_CRITDMG,
+
+    BUILDING_BONUS_ARCANETOWERS_ATT,
+    BUILDING_BONUS_ARCANETOWERS_SPD,
+
+    BUILDING_COUNT
+};
+
 /////////////////////////////////////////////////////////////////////////////////
 // The Building class
 class Building
@@ -45,7 +84,7 @@ public:
     inline const GChar * GetInfoText() const;
 
     // Cost
-    inline const CurrencyCost * GetCost() const;
+    //inline const CurrencyCost * GetCost() const;
 
 protected:
     // Helpers
@@ -53,7 +92,7 @@ protected:
     static const GChar * sm_arrInfoTexts[BUILDING_COUNT];
 
     // Cost
-    CurrencyCost m_hCost;
+    //CurrencyCost m_hCost;
 };
 
 /////////////////////////////////////////////////////////////////////////////////

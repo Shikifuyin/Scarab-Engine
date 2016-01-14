@@ -56,7 +56,6 @@ enum RuneType {
 
     RUNE_TYPE_COUNT
 };
-
 enum RuneStatistic {
     RUNE_STAT_PRIMARY = 0,
     RUNE_STAT_SECONDARY,
@@ -67,10 +66,13 @@ enum RuneStatistic {
 
     RUNE_STAT_COUNT
 };
+typedef struct _rune_stat_bonus {
+    MonsterStatistic iStat;
+    Bool bIsRatio;
+} RuneStatBonus;
 
 enum RuneQuality {
-    RUNE_QUALITY_COMMON = 0, // White  (nothing)
-    RUNE_QUALITY_UNCOMMON,   // White  (secondary only)
+    RUNE_QUALITY_COMMON = 0, // White  (secondary only)
     RUNE_QUALITY_MAGIC,      // Green  (secondary + 1 sub)
     RUNE_QUALITY_RARE,       // Blue   (secondary + 2 subs)
     RUNE_QUALITY_EPIC,       // Purple (secondary + 3 subs)
@@ -78,9 +80,6 @@ enum RuneQuality {
 
     RUNE_QUALITY_COUNT
 };
-
-    // Prototypes
-class MonsterInstance;
 
 /////////////////////////////////////////////////////////////////////////////////
 // The Rune class
@@ -99,49 +98,44 @@ public:
     inline Bool IsNull() const;
     inline Bool IsPresent() const;
 
-    // Type & slot access
+    // XML serialization
+    Void Load( const XMLNode * pNode );
+    Void Save( XMLNode * outNode ) const;
+
+    // Type & slot
     inline RuneType GetType() const;
     inline UInt GetSlot() const;
 
-    // Rank access
+    // Rank
     inline UInt GetRank() const;
     inline Bool IsMaxRank() const;
+    inline Void RankUp();
+    inline Void RankDown();
+    inline Void SetRank( UInt iRank );
 
-    UInt RankUp();
-    UInt RankDown();
-    Void SetRank( UInt iRank );
-
-    // Level access
+    // Level
     inline UInt GetLevel() const;
     inline Bool IsMaxLevel() const;
+    inline Void LevelUp();
+    inline Void LevelDown();
+    inline Void SetLevel( UInt iLevel );
 
-    UInt LevelUp();
-    UInt LevelDown();
-    Void SetLevel( UInt iLevel );
-
-    // Stats access
-    inline RuneQuality GetQuality() const;
-    inline UInt GetBonusCount() const;
-
+    // Stat bonuses
+    inline Bool HasBonus( RuneStatistic iStat ) const;
     inline MonsterStatistic GetBonusType( RuneStatistic iStat ) const;
     inline Bool IsBonusRatio( RuneStatistic iStat ) const;
-    inline UInt GetBonusValueI( RuneStatistic iStat ) const;
-    inline Float GetBonusValueF( RuneStatistic iStat ) const;
 
-    Void AddBonus( RuneStatistic iStat, MonsterStatistic iStatType, Bool bRatio );
+    UInt GetBonusValueI( RuneStatistic iStat ) const;
+    Float GetBonusValueF( RuneStatistic iStat ) const;
+
+    Void SetBonus( RuneStatistic iStat, MonsterStatistic iStatType, Bool bRatio );
     Void RemoveBonus( RuneStatistic iStat );
 
-    // Equipment support
-    inline Bool IsEquipped() const;
-    inline Void SetEquipped( MonsterInstance * pEquippedTo );
-
-    // Selling price access
+    // Methods
+    RuneQuality ComputeQuality() const;
     UInt ComputeSellPrice() const;
 
 protected:
-    // Helpers
-    Void _UpdateStats();
-
     // Type & slot
     RuneType m_iType;
     UInt m_iSlot;
@@ -151,18 +145,7 @@ protected:
     UInt m_iLevel;
 
     // Stats
-    RuneQuality m_iQuality;
-
-    UInt m_iBonusCount;
-    MonsterStatistic m_arrBonusTypes[RUNE_STAT_COUNT];
-    Bool m_arrIsBonusRatio[RUNE_STAT_COUNT];
-    union {
-        UInt iValue;
-        Float fValue;
-    } m_arrBonusValues[RUNE_STAT_COUNT];
-
-    // Equipment support
-    MonsterInstance * m_pEquippedTo;
+    RuneStatBonus m_arrBonuses[RUNE_STAT_COUNT];
 };
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -173,32 +156,26 @@ public:
     RuneSet();
     ~RuneSet();
 
+    // XML serialization
+    Void Load( const XMLNode * pNode );
+    Void Save( XMLNode * outNode ) const;
+
     // Runes access
     inline Bool HasRune( UInt iSlot ) const;
-    inline Rune * GetRune( UInt iSlot ) const;
+    inline const Rune * GetRune( UInt iSlot ) const;
+    inline Rune * GetRune( UInt iSlot );
 
-    Void AddRune( Rune * pRune );
-    Rune * RemoveRune( UInt iSlot );
+    Rune * AddRune( const Rune & hRune );
+    Void RemoveRune( UInt iSlot, Rune * outRune );
 
-    // SetBonus access
+    // Methods
     Bool HasSetBonus( RuneType iType, UInt * outCount = NULL ) const;
-
-    inline UInt GetSetBonusCount() const;
-    inline RuneType GetSetBonus( UInt iIndex ) const;
-
-    // Stats compilation
-    Void CompileStats( UInt outFlatBonuses[4], Float outRatioBonuses[4], Float outSecondaryBonuses[4] ) const;
+    Void ComputeBonusStat( MonsterStatistic iStat, UInt * outFlatBonus, Float * outRatioBonus ) const;
+    Void ComputeBonusStats( UInt outFlatBonus[MONSTER_STAT_COUNT], Float outRatioBonus[MONSTER_STAT_COUNT] ) const;
 
 protected:
-    // Helpers
-    Void _UpdateSetBonuses();
-
     // Rune slots
-    Rune * m_arrRunes[RUNE_SLOT_COUNT];
-
-    // Set bonuses
-    UInt m_iSetBonusCount;
-    RuneType m_arrSetBonuses[4];
+    Rune m_arrRunes[RUNE_SLOT_COUNT];
 };
 
 /////////////////////////////////////////////////////////////////////////////////

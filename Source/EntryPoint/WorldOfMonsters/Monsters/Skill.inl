@@ -139,18 +139,30 @@ inline UInt SkillInstance::GetLevel() const {
 inline Bool SkillInstance::IsMaxLevel() const {
     return ( m_iLevel == (m_pSkill->GetLevelingStats()->GetMaxLevel() - 1) );
 }
+inline Void SkillInstance::LevelUp() {
+    if ( m_iLevel < (m_pSkill->GetLevelingStats()->GetMaxLevel() - 1) )
+        ++m_iLevel;
+}
+inline Void SkillInstance::LevelDown() {
+    if ( m_iLevel > 0 )
+        --m_iLevel;
+}
+inline Void SkillInstance::SetLevel( UInt iLevel ) {
+    Assert( iLevel < m_pSkill->GetLevelingStats()->GetMaxLevel() );
+    m_iLevel = iLevel;
+}
 
 inline Float SkillInstance::GetBonusDamage() const {
-    return m_fBonusDamage;
+    return m_pSkill->GetLevelingStats()->GetBonusDamage( m_iLevel );
 }
 inline Float SkillInstance::GetBonusRecovery() const {
-    return m_fBonusRecovery;
+    return m_pSkill->GetLevelingStats()->GetBonusRecovery( m_iLevel );
 }
 inline Float SkillInstance::GetBonusStatusEffectRate() const {
-    return m_fBonusStatusEffectRate;
+    return m_pSkill->GetLevelingStats()->GetBonusStatusEffectRate( m_iLevel );
 }
 inline Float SkillInstance::GetBonusSpecific() const {
-    return m_fBonusSpecific;
+    return m_pSkill->GetLevelingStats()->GetBonusSpecific( m_iLevel );
 }
 
 inline Bool SkillInstance::HasCooldown() const {
@@ -164,6 +176,10 @@ inline UInt SkillInstance::GetCooldown() const {
 // SkillSet implementation
 inline UInt SkillSet::GetSkillCount() const {
     return m_iSkillCount;
+}
+inline const SkillInstance * SkillSet::GetSkillInstance( UInt iSlot ) const {
+    Assert( iSlot < m_iSkillCount );
+    return ( m_arrSkills + iSlot );
 }
 inline SkillInstance * SkillSet::GetSkillInstance( UInt iSlot ) {
     Assert( iSlot < m_iSkillCount );

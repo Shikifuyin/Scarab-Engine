@@ -87,8 +87,8 @@ public:
     MonsterLevelingStats();
     ~MonsterLevelingStats();
 
-    // Deferred loading
-    Void Load( XMLNode * pNode );
+    // XML serialization
+    Void Load( const XMLNode * pNode );
 
     // Leveling stats access
     inline UInt GetHP( UInt iRank, UInt iLevel, Bool bAwakened ) const;
@@ -104,9 +104,6 @@ public:
     inline MonsterAwakeningBonus GetAwakeningBonus() const;
 
 private:
-    // Helpers
-    static MonsterAwakeningBonus _MonsterAwakeningBonus_FromString( const GChar * strValue );
-
     // Leveling stats
     UInt m_arrHealth[MONSTER_MAX_RANK][MONSTER_MAX_LEVEL];
     UInt m_arrHealthAwaken[MONSTER_MAX_RANK][MONSTER_MAX_LEVEL];
@@ -130,8 +127,8 @@ public:
     SkillLevelingStats();
     ~SkillLevelingStats();
 
-    // Deferred loading
-    Void Load( XMLNode * pNode );
+    // XML serialization
+    Void Load( const XMLNode * pNode );
 
     // Leveling stats access
     inline UInt GetMaxLevel() const;
@@ -163,8 +160,8 @@ public:
     RuneLevelingStats();
     ~RuneLevelingStats();
 
-    // Deferred loading
-    Void Load( XMLNode * pNode );
+    // XML serialization
+    Void Load( const XMLNode * pNode );
 
     // Leveling stats access
     inline UInt GetPrimaryStatI( MonsterStatistic iStat, UInt iRank, UInt iLevel ) const;

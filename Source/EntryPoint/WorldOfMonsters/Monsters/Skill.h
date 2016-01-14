@@ -82,7 +82,9 @@ enum SkillLeaderConstraint {
     SKILL_LEADERCONSTRAINT_DARK,
     SKILL_LEADERCONSTRAINT_DUNGEON,
     SKILL_LEADERCONSTRAINT_ARENA,
-    SKILL_LEADERCONSTRAINT_GUILDBATTLE
+    SKILL_LEADERCONSTRAINT_GUILDBATTLE,
+
+    SKILL_LEADERCONSTRAINT_COUNT
 };
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -90,8 +92,12 @@ enum SkillLeaderConstraint {
 class Skill
 {
 public:
-    Skill( XMLNode * pNode );
+    Skill();
     virtual ~Skill();
+
+    // XML serialization
+    static Skill * StaticLoad( const XMLNode * pNode );
+    virtual Void Load( const XMLNode * pNode );
 
     // Identifier
     inline SkillID GetID() const;
@@ -108,11 +114,6 @@ public:
     inline const SkillLevelingStats * GetLevelingStats() const;
 
 protected:
-    // Helpers
-    static SkillType _SkillType_FromString( const GChar * strValue );
-    static SkillStat _SkillStat_FromString( const GChar * strValue );
-    static SkillEffectType _SkillEffectType_FromString( const GChar * strValue );
-
     // Identifier
     SkillID m_iSkillID;
     GChar m_strName[SKILL_NAME_LENGTH];
@@ -126,8 +127,11 @@ protected:
 class ActiveSkill : public Skill
 {
 public:
-    ActiveSkill( XMLNode * pNode );
+    ActiveSkill();
     virtual ~ActiveSkill();
+
+    // XML serialization
+    virtual Void Load( const XMLNode * pNode );
 
     // Type
     inline virtual SkillType GetType() const;
@@ -140,9 +144,6 @@ public:
     inline const SkillEffect * GetEffect( SkillActiveType iType, UInt iIndex ) const;
 
 protected:
-    // Helpers
-    static SkillActiveType _SkillActiveType_FromString( const GChar * strValue );
-
     // Type
     Bool m_bIsAttack; // else defense
 
@@ -156,8 +157,11 @@ protected:
 class PassiveSkill : public Skill
 {
 public:
-    PassiveSkill( XMLNode * pSkillNode );
+    PassiveSkill();
     virtual ~PassiveSkill();
+
+    // XML serialization
+    virtual Void Load( const XMLNode * pNode );
 
     // Type
     inline virtual SkillType GetType() const;
@@ -167,9 +171,6 @@ public:
     inline SkillEffect * GetEffect( SkillPassiveType iType, UInt iIndex ) const;
 
 protected:
-    // Helpers
-    static SkillPassiveType _SkillPassiveType_FromString( const GChar * strValue );
-
     // Effects
     UInt m_arrEffectCounts[SKILL_PASSIVE_COUNT];
     SkillEffect * m_arrEffects[SKILL_PASSIVE_COUNT][SKILL_MAX_EFFECTS];
@@ -180,8 +181,11 @@ protected:
 class LeaderSkill : public Skill
 {
 public:
-    LeaderSkill( XMLNode * pSkillNode );
+    LeaderSkill();
     virtual ~LeaderSkill();
+
+    // XML serialization
+    virtual Void Load( const XMLNode * pNode );
 
     // Type
     inline virtual SkillType GetType() const;
@@ -193,10 +197,6 @@ public:
     inline SkillLeaderConstraint GetLeaderConstraint() const;
 
 protected:
-    // Helpers
-    static MonsterStatistic _MonsterStatistic_FromString( const GChar * strValue );
-    static SkillLeaderConstraint _SkillLeaderConstraint_FromString( const GChar * strValue );
-
     // Effect
     MonsterStatistic m_iBonusStat;
     Float m_fBonusAmount;
@@ -221,6 +221,10 @@ public:
     inline Bool IsNull() const;
     inline Bool IsPresent() const;
 
+    // XML serialization
+    Void Load( const XMLNode * pNode );
+    Void Save( XMLNode * outNode ) const;
+
     // Base instance access
     inline Skill * GetSkill() const;
 
@@ -239,10 +243,9 @@ public:
     inline UInt GetMaxLevel() const;
     inline UInt GetLevel() const;
     inline Bool IsMaxLevel() const;
-
-    UInt LevelUp();
-    UInt LevelDown();
-    Void SetLevel( UInt iLevel );
+    inline Void LevelUp();
+    inline Void LevelDown();
+    inline Void SetLevel( UInt iLevel );
 
     // Effective stats
     inline Float GetBonusDamage() const;
@@ -254,21 +257,10 @@ public:
     inline UInt GetCooldown() const;
 
 private:
-    // Helpers
-    Void _UpdateEffectiveStats();
-
     // Skill
     Skill * m_pSkill;
 
     UInt m_iLevel;
-
-    // Effective stats
-    Float m_fBonusDamage;
-    Float m_fBonusRecovery;
-    Float m_fBonusStatusEffectRate;
-    Float m_fBonusSpecific;
-
-    UInt m_iCooldown;
 };
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -279,11 +271,16 @@ public:
     SkillSet();
     ~SkillSet();
 
-    // Skill set
+    // XML serialization
+    Void Load( const XMLNode * pNode );
+    Void Save( XMLNode * outNode ) const;
+
+    // Skills access
     inline UInt GetSkillCount() const;
+    inline const SkillInstance * GetSkillInstance( UInt iSlot ) const;
     inline SkillInstance * GetSkillInstance( UInt iSlot );
 
-    Void Add( Skill * pSkill, UInt iLevel );
+    SkillInstance * AddSkill( SkillID iSkillID, UInt iLevel );
     Void RemoveAll();
 
 private:

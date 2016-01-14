@@ -25,10 +25,10 @@
 // Building implementation
 Building::Building()
 {
-    m_hCost.arrCost[CURRENCY_MANA] = 0;
-    m_hCost.arrCost[CURRENCY_CRYSTAL] = 0;
-    m_hCost.arrCost[CURRENCY_GLORYPOINTS] = 0;
-    m_hCost.arrCost[CURRENCY_GUILDPOINTS] = 0;
+    //m_hCost.arrCost[CURRENCY_MANA] = 0;
+    //m_hCost.arrCost[CURRENCY_CRYSTAL] = 0;
+    //m_hCost.arrCost[CURRENCY_GLORYPOINTS] = 0;
+    //m_hCost.arrCost[CURRENCY_GUILDPOINTS] = 0;
 }
 Building::~Building()
 {

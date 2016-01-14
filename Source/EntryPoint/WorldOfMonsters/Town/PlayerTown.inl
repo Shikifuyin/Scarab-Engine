@@ -203,13 +203,14 @@ inline Void PlayerTown::SetArenaRank( ArenaRank iRank ) {
     m_iArenaRank = iRank;
 }
 
-inline MonsterInstance * PlayerTown::GetArenaDefenseMonster( UInt iIndex ) const {
+inline UInt PlayerTown::GetArenaDefenseMonster( UInt iIndex ) const {
     Assert( iIndex < BATTLE_TEAMSIZE_ARENA );
     return m_arrArenaDefense[iIndex];
 }
-inline Void PlayerTown::SetArenaDefenseMonster( UInt iIndex, MonsterInstance * pMonsterInstance ) {
+inline Void PlayerTown::SetArenaDefenseMonster( UInt iIndex, UInt iMonsterCollectionIndex ) {
     Assert( iIndex < BATTLE_TEAMSIZE_ARENA );
-    m_arrArenaDefense[iIndex] = pMonsterInstance;
+    Assert( iMonsterCollectionIndex < m_arrMonsterCollection.Count() );
+    m_arrArenaDefense[iIndex] = iMonsterCollectionIndex;
 }
 
 inline Bool PlayerTown::HasGuild() const {

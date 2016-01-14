@@ -84,8 +84,13 @@ enum SkillEffectScaling {
 class SkillEffect
 {
 public:
-    SkillEffect( XMLNode * pNode );
+    SkillEffect();
     virtual ~SkillEffect();
+
+    // XML serialization
+    static SkillEffect * StaticLoad( const XMLNode * pNode );
+    virtual Void Load( const XMLNode * pNode );
+    virtual Void Save( XMLNode * outNode ) const;
 
     // Type
     virtual SkillEffectType GetType() const = 0;
@@ -103,11 +108,7 @@ public:
     inline Float GetScalingMultiplier() const;
 
 protected:
-    // Helpers
-    static SkillTargetPattern _SkillTargetPattern_FromString( const GChar * strValue );
-    static SkillEffectScaling _SkillEffectScaling_FromString( const GChar * strValue );
-
-    // Probability of occurence (Proc)
+    // Probability of Occurence (Proc)
     Float m_fProc;
 
     // Target pattern
@@ -123,8 +124,12 @@ protected:
 class SkillEffectDamage : public SkillEffect
 {
 public:
-    SkillEffectDamage( XMLNode * pNode );
+    SkillEffectDamage();
     virtual ~SkillEffectDamage();
+
+    // XML serialization
+    virtual Void Load( const XMLNode * pNode );
+    virtual Void Save( XMLNode * outNode ) const;
 
     // Type
     inline virtual SkillEffectType GetType() const;
@@ -146,8 +151,12 @@ protected:
 class SkillEffectHeal : public SkillEffect
 {
 public:
-    SkillEffectHeal( XMLNode * pNode );
+    SkillEffectHeal();
     virtual ~SkillEffectHeal();
+
+    // XML serialization
+    virtual Void Load( const XMLNode * pNode );
+    virtual Void Save( XMLNode * outNode ) const;
 
     // Type
     inline virtual SkillEffectType GetType() const;
@@ -165,8 +174,12 @@ protected:
 class SkillEffectATB : public SkillEffect
 {
 public:
-    SkillEffectATB( XMLNode * pNode );
+    SkillEffectATB();
     virtual ~SkillEffectATB();
+
+    // XML serialization
+    virtual Void Load( const XMLNode * pNode );
+    virtual Void Save( XMLNode * outNode ) const;
 
     // Type
     inline virtual SkillEffectType GetType() const;
@@ -185,8 +198,12 @@ protected:
 class SkillEffectStatus : public SkillEffect
 {
 public:
-    SkillEffectStatus( XMLNode * pNode );
+    SkillEffectStatus();
     virtual ~SkillEffectStatus();
+
+    // XML serialization
+    virtual Void Load( const XMLNode * pNode );
+    virtual Void Save( XMLNode * outNode ) const;
 
     // Type
     inline virtual SkillEffectType GetType() const;
@@ -198,9 +215,6 @@ public:
     inline Float GetAmplitude() const;
 
 protected:
-    // Helpers
-    static StatusEffectType _StatusEffectType_FromString( const GChar * strValue );
-
     // StatusEffect
     StatusEffectType m_iType;
     UInt m_iStackCount;

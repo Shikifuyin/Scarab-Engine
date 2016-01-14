@@ -101,8 +101,8 @@ public:
     Monster();
     ~Monster();    
 
-    // Deferred loading
-    Void Load( XMLNode * pNode );
+    // XML serialization
+    Void Load( const XMLNode * pNode );
 
     // Identifier
     inline MonsterID GetID() const;
@@ -134,10 +134,6 @@ public:
     inline SkillID GetSkill( Bool bAwaken, UInt iSlot ) const;
 
 protected:
-    // Helpers
-    static MonsterType _MonsterType_FromString( const GChar * strValue );
-    static MonsterElement _MonsterElement_FromString( const GChar * strValue );
-
     // Identifier
     MonsterID m_iMonsterID;
     GChar m_strName[MONSTER_NAME_LENGTH];
@@ -151,6 +147,7 @@ protected:
     UInt m_iNativeRank;
 
     // Summoning cost
+    Bool m_bIsSummon;
     Bool m_bIsFusion;
     ScrollCost m_hSummoningCost;
     MonsterCost m_hFusionCost;
@@ -185,6 +182,10 @@ public:
     inline Bool IsNull() const;
     inline Bool IsPresent() const;
 
+    // XML serialization
+    Void Load( const XMLNode * pNode );
+    Void Save( XMLNode * outNode ) const;
+
     // Identifier
     inline MonsterID GetID() const;
     inline const GChar * GetName() const;
@@ -205,27 +206,24 @@ public:
     inline const EssenceCost * GetAwakeningCost() const;
     inline MonsterAwakeningBonus GetAwakeningBonus() const;
     inline Bool IsAwakened() const;
-
-    Void Awake();
-    Void UnAwake();
+    inline Void Awake();
+    inline Void UnAwake();
 
     // Rank
     inline UInt GetNativeRank() const;
     inline UInt GetRank() const;
     inline Bool IsMaxRank() const;
-
-    UInt RankUp();
-    UInt RankDown();
-    Void SetRank( UInt iRank );
+    inline Void RankUp();
+    inline Void RankDown();
+    inline Void SetRank( UInt iRank );
 
     // Level
     inline UInt GetMaxLevel() const;
     inline UInt GetLevel() const;
     inline Bool IsMaxLevel() const;
-
-    UInt LevelUp();
-    UInt LevelDown();
-    Void SetLevel( UInt iLevel );
+    inline Void LevelUp();
+    inline Void LevelDown();
+    inline Void SetLevel( UInt iLevel );
 
     inline UInt GetCurrentXP() const;
     UInt AddXP( UInt iAmount ); // returns number of levelups
@@ -241,25 +239,24 @@ public:
     inline Float GetBaseACC() const;
     inline Float GetBaseRES() const;
 
+    Void GetBaseStats( UInt outFlatStats[4], Float outRatioStats[4] ) const;
+
     // Skill set
     inline UInt GetSkillCount() const;
     inline SkillInstance * GetSkillInstance( UInt iSlot );
-
-    UInt SkillLevelUp( UInt iSlot );
-    UInt SkillLevelDown( UInt iSlot );
-    Void SetSkillLevel( UInt iSlot, UInt iLevel );
+    inline Void SkillLevelUp( UInt iSlot );
+    inline Void SkillLevelDown( UInt iSlot );
+    inline Void SetSkillLevel( UInt iSlot, UInt iLevel );
 
     // Runes
     inline Bool HasRune( UInt iSlot ) const;
-    inline Rune * GetRune( UInt iSlot ) const;
+    inline const Rune * GetRune( UInt iSlot ) const;
+    inline Rune * GetRune( UInt iSlot );
 
-    Void EquipRune( Rune * pRune );
-    Void UnEquipRune( UInt iSlot );
+    inline Rune * EquipRune( const Rune & hRune );
+    inline Void UnEquipRune( UInt iSlot, Rune * outRune );
 
     inline Bool HasSetBonus( RuneType iType, UInt * outCount = NULL ) const;
-
-    inline UInt GetSetBonusCount() const;
-    inline RuneType GetSetBonus( UInt iIndex ) const;
 
     // Effective stats
     inline UInt GetEffectiveHP() const;
@@ -272,11 +269,9 @@ public:
     inline Float GetEffectiveACC() const;
     inline Float GetEffectiveRES() const;
 
-private:
-    // Helpers
-    Void _UpdateBaseStats();
-    Void _UpdateEffectiveStats();
+    Void GetEffectiveStats( UInt outFlatStats[4], Float outRatioStats[4] ) const;
 
+private:
     // Monster
     const Monster * m_pMonster;
 
@@ -286,35 +281,11 @@ private:
 
     UInt m_iCurrentXP;
 
-    // Base statistics
-    UInt m_iBaseHealth;
-    UInt m_iBaseAttack;
-    UInt m_iBaseDefense;
-    UInt m_iBaseSpeed;
-
-    Float m_fBaseCriticalRate;   // in [0;1]
-    Float m_fBaseCriticalDamage; // in [1;+inf] (no cap)
-
-    Float m_fBaseAccuracy;       // in [0;1]
-    Float m_fBaseResistance;     // in [0;1]
-
     // Skill set
     SkillSet m_hSkillSet;
 
     // Rune set
     RuneSet m_hRuneSet;
-
-    // Effective statistics
-    UInt m_iEffectiveHealth;
-    UInt m_iEffectiveAttack;
-    UInt m_iEffectiveDefense;
-    UInt m_iEffectiveSpeed;
-
-    Float m_fEffectiveCriticalRate;   // in [0;1]
-    Float m_fEffectiveCriticalDamage; // in [1;+inf]
-
-    Float m_fEffectiveAccuracy;
-    Float m_fEffectiveResistance;
 };
 
 /////////////////////////////////////////////////////////////////////////////////

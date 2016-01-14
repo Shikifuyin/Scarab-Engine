@@ -122,7 +122,7 @@ PlayerTown::~PlayerTown()
     }
 }
 
-Void PlayerTown::Load( XMLNode * pNode )
+Void PlayerTown::Load( const XMLNode * pNode )
 {
     Assert( pNode != NULL );
     Assert( StringFn->Cmp(pNode->GetTagName(), TEXT("PlayerTown")) == 0 );
@@ -130,29 +130,36 @@ Void PlayerTown::Load( XMLNode * pNode )
     const GameParameters * pGameParams = GameplayFn->GetGameParameters();
 
     // Currencies, scrolls & essences
-    XMLNode * pCurrenciesNode = pNode->GetChildByTag( TEXT("Currencies"), 0 );
+    const XMLNode * pCurrenciesNode = pNode->GetChildByTag( TEXT("Currencies"), 0 );
     Assert( pCurrenciesNode != NULL );
-    XMLNode * pScrollsNode = pNode->GetChildByTag( TEXT("Scrolls"), 0 );
+    const XMLNode * pScrollsNode = pNode->GetChildByTag( TEXT("Scrolls"), 0 );
     Assert( pScrollsNode != NULL );
-    XMLNode * pEssencesNode = pNode->GetChildByTag( TEXT("Essences"), 0 );
+    const XMLNode * pEssencesNode = pNode->GetChildByTag( TEXT("Essences"), 0 );
     Assert( pEssencesNode != NULL );
 
-    for( UInt i = 0; i < CURRENCY_COUNT; ++i )
-        m_arrCurrencies[i] = (UInt)( StringFn->ToUInt( pCurrenciesNode->GetAttribute(sm_arrCurrencyNames[i])->GetValue() ) );
-    for( UInt i = 0; i < SCROLL_TYPE_COUNT; ++i )
-        m_arrScrolls[i] = (UInt)( StringFn->ToUInt( pScrollsNode->GetAttribute(sm_arrScrollNames[i])->GetValue() ) );
+    for( UInt i = 0; i < CURRENCY_COUNT; ++i ) {
+        const GChar * strName = pGameParams->CurrencyTypeToString( (CurrencyType)i );
+        m_arrCurrencies[i] = (UInt)( StringFn->ToUInt( pCurrenciesNode->GetAttribute(strName)->GetValue() ) );
+    }
+    for( UInt i = 0; i < SCROLL_TYPE_COUNT; ++i ) {
+        const GChar * strName = pGameParams->ScrollTypeToString( (ScrollType)i );
+        m_arrScrolls[i] = (UInt)( StringFn->ToUInt( pScrollsNode->GetAttribute(strName)->GetValue() ) );
+    }
     for( UInt i = 0; i < MONSTER_ELEMENT_COUNT; ++i ) {
+        const GChar * strName = pGameParams->MonsterElementToString( (MonsterElement)i );
         GChar arrEssenceCount[ESSENCE_TYPE_COUNT][16];
-        UInt iCount = StringFn->Split( (GChar**)arrEssenceCount, ESSENCE_TYPE_COUNT, 16, pEssencesNode->GetAttribute(sm_arrElementNames[i])->GetValue(), TEXT(','), true );
+
+        UInt iCount = StringFn->Split( (GChar**)arrEssenceCount, ESSENCE_TYPE_COUNT, 16, pEssencesNode->GetAttribute(strName)->GetValue(), TEXT(','), true );
         Assert( iCount == ESSENCE_TYPE_COUNT );
+
         for( UInt j = 0; j < ESSENCE_TYPE_COUNT; ++j )
             m_arrEssences[i][j] = (UInt)( StringFn->ToUInt(arrEssenceCount[i]) );
     }
     
     // Monster collection & storage
-    XMLNode * pMonsterCollectionNode = pNode->GetChildByTag( TEXT("MonsterCollection"), 0 );
+    const XMLNode * pMonsterCollectionNode = pNode->GetChildByTag( TEXT("MonsterCollection"), 0 );
     Assert( pMonsterCollectionNode != NULL );
-    XMLNode * pMonsterStorageNode = pNode->GetChildByTag( TEXT("MonsterStorage"), 0 );
+    const XMLNode * pMonsterStorageNode = pNode->GetChildByTag( TEXT("MonsterStorage"), 0 );
     Assert( pMonsterStorageNode != NULL );
 
     m_iMonsterCollectionLevel = (UInt)( StringFn->ToUInt( pMonsterCollectionNode->GetAttribute(TEXT("Level"))->GetValue() ) );
@@ -165,30 +172,30 @@ Void PlayerTown::Load( XMLNode * pNode )
 
     UInt iMonsterCount = pMonsterCollectionNode->GetChildCount();
     for( UInt i = 0; i < iMonsterCount; ++i ) {
-        XMLNode * pMonsterInstanceNode = pMonsterCollectionNode->GetChildByTag( TEXT("MonsterInstance"), i );
+        const XMLNode * pMonsterInstanceNode = pMonsterCollectionNode->GetChildByTag( TEXT("MonsterInstance"), i );
         Assert( pMonsterInstanceNode != NULL );
 
         MonsterInstance hMonsterInstance;
-        _Load_MonsterInstance( pMonsterInstanceNode, &hMonsterInstance );
+        hMonsterInstance.Load( pMonsterInstanceNode );
 
         m_arrMonsterCollection.Push( hMonsterInstance );
     }
 
     iMonsterCount = pMonsterStorageNode->GetChildCount();
     for( UInt i = 0; i < iMonsterCount; ++i ) {
-        XMLNode * pMonsterInstanceNode = pMonsterStorageNode->GetChildByTag( TEXT("MonsterInstance"), i );
+        const XMLNode * pMonsterInstanceNode = pMonsterStorageNode->GetChildByTag( TEXT("MonsterInstance"), i );
         Assert( pMonsterInstanceNode != NULL );
 
         MonsterInstance hMonsterInstance;
-        _Load_MonsterInstance( pMonsterInstanceNode, &hMonsterInstance );
+        hMonsterInstance.Load( pMonsterInstanceNode );
 
         m_arrMonsterStorage.Push( hMonsterInstance );
     }
 
     // Rune collection & storage
-    XMLNode * pRuneCollectionNode = pNode->GetChildByTag( TEXT("RuneCollection"), 0 );
+    const XMLNode * pRuneCollectionNode = pNode->GetChildByTag( TEXT("RuneCollection"), 0 );
     Assert( pRuneCollectionNode != NULL );
-    XMLNode * pRuneStorageNode = pNode->GetChildByTag( TEXT("RuneStorage"), 0 );
+    const XMLNode * pRuneStorageNode = pNode->GetChildByTag( TEXT("RuneStorage"), 0 );
     Assert( pRuneStorageNode != NULL );
 
     m_iRuneCollectionLevel = (UInt)( StringFn->ToUInt( pRuneCollectionNode->GetAttribute(TEXT("Level"))->GetValue() ) );
@@ -199,32 +206,33 @@ Void PlayerTown::Load( XMLNode * pNode )
     for( UInt i = 0; i < RUNE_TYPE_COUNT; ++i ) {
         m_arrRuneCollection[i].Clear();
         m_arrRuneStorage[i].Clear();
-
-        UInt iRuneCount = pRuneCollectionNode->GetChildCount();
-        for( UInt i = 0; i < iMonsterCount; ++i ) {
-            XMLNode * pRuneNode = pRuneCollectionNode->GetChildByTag( TEXT("Rune"), i );
-            Assert( pRuneNode != NULL );
-
-            Rune hRune;
-            _Load_Rune( pRuneNode, &hRune );
-
-            m_arrRuneCollection[i].Push( hRune );
-        }
-
-        iRuneCount = pRuneStorageNode->GetChildCount();
-        for( UInt i = 0; i < iMonsterCount; ++i ) {
-            XMLNode * pRuneNode = pRuneStorageNode->GetChildByTag( TEXT("Rune"), i );
-            Assert( pRuneNode != NULL );
-
-            Rune hRune;
-            _Load_Rune( pRuneNode, &hRune );
-
-            m_arrRuneStorage[i].Push( hRune );
-        }
     }
 
+    UInt iRuneCount = pRuneCollectionNode->GetChildCount();
+    for( UInt i = 0; i < iRuneCount; ++i ) {
+        const XMLNode * pRuneNode = pRuneCollectionNode->GetChildByTag( TEXT("Rune"), i );
+        Assert( pRuneNode != NULL );
+
+        Rune hRune;
+        hRune.Load( pRuneNode );
+
+        m_arrRuneCollection[hRune.GetType()].Push( hRune );
+    }
+
+    iRuneCount = pRuneStorageNode->GetChildCount();
+    for( UInt i = 0; i < iRuneCount; ++i ) {
+        const XMLNode * pRuneNode = pRuneStorageNode->GetChildByTag( TEXT("Rune"), i );
+        Assert( pRuneNode != NULL );
+
+        Rune hRune;
+        hRune.Load( pRuneNode );
+
+        m_arrRuneStorage[hRune.GetType()].Push( hRune );
+    }
+
+
     // Mana & Crystal production
-    XMLNode * pManaCrystalProductionNode = pNode->GetChildByTag( TEXT("ManaCrystalProduction"), 0 );
+    const XMLNode * pManaCrystalProductionNode = pNode->GetChildByTag( TEXT("ManaCrystalProduction"), 0 );
     Assert( pManaCrystalProductionNode != NULL );
 
     m_iManaProductionRateLevel = (UInt)( StringFn->ToUInt( pManaCrystalProductionNode->GetAttribute(TEXT("ManaRateLevel"))->GetValue() ) );
@@ -247,7 +255,7 @@ Void PlayerTown::Load( XMLNode * pNode )
     // Wishes
 
     // Building operations
-    XMLNode * pBuildingOperationsNode = pNode->GetChildByTag( TEXT("BuildingOperations"), 0 );
+    const XMLNode * pBuildingOperationsNode = pNode->GetChildByTag( TEXT("BuildingOperations"), 0 );
     Assert( pBuildingOperationsNode != NULL );
 
     m_bEssenceFusionUnlocked = ( StringFn->ToUInt(pBuildingOperationsNode->GetAttribute(TEXT("EssenceFusion"))->GetValue()) != 0 );
@@ -260,25 +268,181 @@ Void PlayerTown::Load( XMLNode * pNode )
     m_bRuneEvolutionUnlocked = ( StringFn->ToUInt(pBuildingOperationsNode->GetAttribute(TEXT("RuneEvolution"))->GetValue()) != 0 );
 
     // Arena
-    XMLNode * pArenaNode = pNode->GetChildByTag( TEXT("Arena"), 0 );
+    const XMLNode * pArenaNode = pNode->GetChildByTag( TEXT("Arena"), 0 );
     Assert( pArenaNode != NULL );
 
     m_iArenaScore = (UInt)( StringFn->ToUInt( pArenaNode->GetAttribute(TEXT("Score"))->GetValue() ) );
     m_iArenaRank = (ArenaRank)( StringFn->ToUInt( pArenaNode->GetAttribute(TEXT("Rank"))->GetValue() ) );
     Assert( m_iArenaRank < ARENA_RANK_COUNT );
 
-    m_arrArenaDefense
+    for( UInt i = 0; i < BATTLE_TEAMSIZE_ARENA; ++i ) {
+        GChar strName[16];
+        StringFn->Format( strName, TEXT("DefenseSlot_%d"), i );
+
+        m_arrArenaDefense[i] = (UInt)( StringFn->ToUInt( pArenaNode->GetAttribute(strName)->GetValue() ) );
+        Assert( m_arrArenaDefense[i] < m_arrMonsterCollection.Count() );
+    }
 
     // Guild
     m_pGuild = NULL;
-
     ////////////////////////////////
 }
-Void PlayerTown::Save( XMLNode * pNode ) const
+Void PlayerTown::Save( XMLNode * outNode ) const
 {
-    Assert( pNode != NULL );
-    Assert( StringFn->Cmp(pNode->GetTagName(), TEXT("PlayerTown")) == 0 );
+    Assert( outNode != NULL );
+    Assert( StringFn->Cmp(outNode->GetTagName(), TEXT("PlayerTown")) == 0 );
 
+    const GameParameters * pGameParams = GameplayFn->GetGameParameters();
+    GChar strBuffer[1024];
+    const GChar * strValue;
+
+    // Currencies, scrolls & essences
+    XMLNode * pCurrenciesNode = XMLDocument::CreateNode( TEXT("Currencies"), true );
+    XMLNode * pScrollsNode = XMLDocument::CreateNode( TEXT("Scrolls"), true );
+    XMLNode * pEssencesNode = XMLDocument::CreateNode( TEXT("Essences"), true );
+
+    for( UInt i = 0; i < CURRENCY_COUNT; ++i ) {
+        const GChar * strName = pGameParams->CurrencyTypeToString( (CurrencyType)i );
+        StringFn->FromUInt( strBuffer, m_arrCurrencies[i] );
+        pCurrenciesNode->CreateAttribute( strName, strBuffer );
+    }
+    for( UInt i = 0; i < SCROLL_TYPE_COUNT; ++i ) {
+        const GChar * strName = pGameParams->ScrollTypeToString( (ScrollType)i );
+        StringFn->FromUInt( strBuffer, m_arrScrolls[i] );
+        pCurrenciesNode->CreateAttribute( strName, strBuffer );
+    }
+    for( UInt i = 0; i < MONSTER_ELEMENT_COUNT; ++i ) {
+        const GChar * strName = pGameParams->MonsterElementToString( (MonsterElement)i );
+        StringFn->Format( strBuffer, TEXT("%d,%d,%d"), m_arrEssences[i][0], m_arrEssences[i][1], m_arrEssences[i][2] );
+        pCurrenciesNode->CreateAttribute( strName, strBuffer );
+    }
+
+    outNode->AppendChild( pCurrenciesNode );
+    outNode->AppendChild( pScrollsNode );
+    outNode->AppendChild( pEssencesNode );
+
+    // Monster collection & storage
+    XMLNode * pMonsterCollectionNode = XMLDocument::CreateNode( TEXT("MonsterCollection"), false );
+    XMLNode * pMonsterStorageNode = XMLDocument::CreateNode( TEXT("MonsterStorage"), false );
+
+    StringFn->FromUInt( strBuffer, m_iMonsterCollectionLevel );
+    pMonsterCollectionNode->CreateAttribute( TEXT("Level"), strBuffer );
+    StringFn->FromUInt( strBuffer, m_iMonsterStorageLevel );
+    pMonsterStorageNode->CreateAttribute( TEXT("Level"), strBuffer );
+
+    UInt iMonsterCount = m_arrMonsterCollection.Count();
+    for( UInt i = 0; i < iMonsterCount; ++i ) {
+        XMLNode * pMonsterInstanceNode = XMLDocument::CreateNode( TEXT("MonsterInstance"), false );
+
+        m_arrMonsterCollection[i].Save( pMonsterInstanceNode );
+
+        pMonsterCollectionNode->AppendChild( pMonsterInstanceNode );
+    }
+
+    iMonsterCount = m_arrMonsterStorage.Count();
+    for( UInt i = 0; i < iMonsterCount; ++i ) {
+        XMLNode * pMonsterInstanceNode = XMLDocument::CreateNode( TEXT("MonsterInstance"), false );
+
+        m_arrMonsterStorage[i].Save( pMonsterInstanceNode );
+
+        pMonsterStorageNode->AppendChild( pMonsterInstanceNode );
+    }
+
+    outNode->AppendChild( pMonsterCollectionNode );
+    outNode->AppendChild( pMonsterStorageNode );
+
+    // Rune collection & storage
+    XMLNode * pRuneCollectionNode = XMLDocument::CreateNode( TEXT("RuneCollection"), false );
+    XMLNode * pRuneStorageNode = XMLDocument::CreateNode( TEXT("RuneStorage"), false );
+
+    StringFn->FromUInt( strBuffer, m_iRuneCollectionLevel );
+    pRuneCollectionNode->CreateAttribute( TEXT("Level"), strBuffer );
+    StringFn->FromUInt( strBuffer, m_iRuneStorageLevel );
+    pRuneStorageNode->CreateAttribute( TEXT("Level"), strBuffer );
+
+    for( UInt i = 0; i < RUNE_TYPE_COUNT; ++i ) {
+        UInt iRuneCount = m_arrRuneCollection[i].Count();
+        for( UInt j = 0; j < iRuneCount; ++j ) {
+            XMLNode * pRuneNode = XMLDocument::CreateNode( TEXT("Rune"), false );
+
+            (m_arrRuneCollection[i])[j].Save( pRuneNode );
+
+            pRuneCollectionNode->AppendChild( pRuneNode );
+        }
+
+        iRuneCount = m_arrRuneStorage[i].Count();
+        for( UInt j = 0; j < iRuneCount; ++j ) {
+            XMLNode * pRuneNode = XMLDocument::CreateNode( TEXT("Rune"), false );
+
+            (m_arrRuneStorage[i])[j].Save( pRuneNode );
+
+            pRuneStorageNode->AppendChild( pRuneNode );
+        }
+    }
+
+    outNode->AppendChild( pRuneCollectionNode );
+    outNode->AppendChild( pRuneStorageNode );
+
+    // Mana & Crystal production
+    XMLNode * pManaCrystalProductionNode = XMLDocument::CreateNode( TEXT("ManaCrystalProduction"), true );
+
+    StringFn->FromUInt( strBuffer, m_iManaProductionRateLevel );
+    pManaCrystalProductionNode->CreateAttribute( TEXT("ManaRateLevel"), strBuffer );
+    StringFn->FromUInt( strBuffer, m_iCrystalProductionRateLevel );
+    pManaCrystalProductionNode->CreateAttribute( TEXT("CrystalRateLevel"), strBuffer );
+
+    StringFn->FromUInt( strBuffer, m_iManaCapacityLevel );
+    pManaCrystalProductionNode->CreateAttribute( TEXT("ManaCapacityLevel"), strBuffer );
+    StringFn->FromUInt( strBuffer, m_iCrystalCapacityLevel );
+    pManaCrystalProductionNode->CreateAttribute( TEXT("CrystalCapacityLevel"), strBuffer );
+
+    StringFn->FromUInt( strBuffer, m_iManaBuffer );
+    pManaCrystalProductionNode->CreateAttribute( TEXT("ManaBuffer"), strBuffer );
+    StringFn->FromUInt( strBuffer, m_iCrystalBuffer );
+    pManaCrystalProductionNode->CreateAttribute( TEXT("CrystalBuffer"), strBuffer );
+
+    StringFn->FromUInt( strBuffer, m_hLastUpdateTime );
+    pManaCrystalProductionNode->CreateAttribute( TEXT("LastUpdateTime"), strBuffer );
+
+    outNode->AppendChild( pManaCrystalProductionNode );
+
+    // Shop
+
+    // Wishes
+
+    // Building operations
+    XMLNode * pBuildingOperationsNode = XMLDocument::CreateNode( TEXT("BuildingOperations"), true );
+
+    pBuildingOperationsNode->CreateAttribute( TEXT("EssenceFusion"), m_bEssenceFusionUnlocked ? TEXT("1") : TEXT("0") );
+    pBuildingOperationsNode->CreateAttribute( TEXT("MonsterSummoning"), m_bMonsterSummoningUnlocked ? TEXT("1") : TEXT("0") );
+    pBuildingOperationsNode->CreateAttribute( TEXT("MonsterFusion"), m_bMonsterFusionUnlocked ? TEXT("1") : TEXT("0") );
+    pBuildingOperationsNode->CreateAttribute( TEXT("MonsterPowerUp"), m_bMonsterPowerUpUnlocked ? TEXT("1") : TEXT("0") );
+    pBuildingOperationsNode->CreateAttribute( TEXT("MonsterEvolution"), m_bMonsterEvolutionUnlocked ? TEXT("1") : TEXT("0") );
+    pBuildingOperationsNode->CreateAttribute( TEXT("MonsterAwakening"), m_bMonsterAwakeningUnlocked ? TEXT("1") : TEXT("0") );
+    pBuildingOperationsNode->CreateAttribute( TEXT("RunePowerUp"), m_bRunePowerUpUnlocked ? TEXT("1") : TEXT("0") );
+    pBuildingOperationsNode->CreateAttribute( TEXT("RuneEvolution"), m_bRuneEvolutionUnlocked ? TEXT("1") : TEXT("0") );
+
+    outNode->AppendChild( pBuildingOperationsNode );
+
+    // Arena
+    XMLNode * pArenaNode = XMLDocument::CreateNode( TEXT("Arena"), true );
+
+    StringFn->FromUInt( strBuffer, m_iArenaScore );
+    pArenaNode->CreateAttribute( TEXT("Score"), strBuffer );
+    StringFn->FromUInt( strBuffer, m_iArenaRank );
+    pArenaNode->CreateAttribute( TEXT("Rank"), strBuffer );
+
+    for( UInt i = 0; i < BATTLE_TEAMSIZE_ARENA; ++i ) {
+        GChar strName[16];
+        StringFn->Format( strName, TEXT("DefenseSlot_%d"), i );
+
+        StringFn->FromUInt( strBuffer, m_arrArenaDefense[i] );
+        pArenaNode->CreateAttribute( strName, strBuffer );
+    }
+
+    outNode->AppendChild( pArenaNode );
+
+    // Guild
     /////////////////////////////////////
 }
 
@@ -336,7 +500,7 @@ Void PlayerTown::PayEssenceCost( const EssenceCost * pCost )
 Bool PlayerTown::UpgradeMonsterCollection()
 {
     const GameParameters * pGameParams = GameplayFn->GetGameParameters();
-    const CurrencyCost * pCost = pGameParams->GetMonsterCollectionUpgradeCost();
+    const CurrencyCost * pCost = pGameParams->GetMonsterCollectionUpgradeCost( m_iMonsterCollectionLevel );
 
     if ( m_iMonsterCollectionLevel >= MONSTER_COLLECTION_MAX_LEVEL - 1 )
         return false;
@@ -352,7 +516,7 @@ Bool PlayerTown::UpgradeMonsterCollection()
 Bool PlayerTown::UpgradeMonsterStorage()
 {
     const GameParameters * pGameParams = GameplayFn->GetGameParameters();
-    const CurrencyCost * pCost = pGameParams->GetMonsterStorageUpgradeCost();
+    const CurrencyCost * pCost = pGameParams->GetMonsterStorageUpgradeCost( m_iMonsterStorageLevel );
 
     if ( m_iMonsterStorageLevel >= MONSTER_STORAGE_MAX_LEVEL - 1 )
         return false;
@@ -410,7 +574,7 @@ Bool PlayerTown::RetrieveMonster( UInt iStorageIndex )
 Bool PlayerTown::UpgradeRuneCollection()
 {
     const GameParameters * pGameParams = GameplayFn->GetGameParameters();
-    const CurrencyCost * pCost = pGameParams->GetRuneCollectionUpgradeCost();
+    const CurrencyCost * pCost = pGameParams->GetRuneCollectionUpgradeCost( m_iRuneCollectionLevel );
 
     if ( m_iRuneCollectionLevel >= RUNE_COLLECTION_MAX_LEVEL - 1 )
         return false;
@@ -426,7 +590,7 @@ Bool PlayerTown::UpgradeRuneCollection()
 Bool PlayerTown::UpgradeRuneStorage()
 {
     const GameParameters * pGameParams = GameplayFn->GetGameParameters();
-    const CurrencyCost * pCost = pGameParams->GetRuneStorageUpgradeCost();
+    const CurrencyCost * pCost = pGameParams->GetRuneStorageUpgradeCost( m_iRuneStorageLevel );
 
     if ( m_iRuneStorageLevel >= RUNE_STORAGE_MAX_LEVEL - 1 )
         return false;
@@ -980,7 +1144,7 @@ Void PlayerTown::PowerUpMonster( UInt iTargetMonster, UInt arrFoodMonsters[5], U
         const CurrencyCost * pCost = pGameParams->GetMonsterPowerUpCost( hTargetMonster.GetRank(), hFoodMonster.GetRank() );
         PayCurrencyCost( pCost );
 
-        UInt iXP = pGameParams->GetMonsterPowerUpXP( hFoodMonster.GetRank(), hFoodMonster.GetLevel() );
+        UInt iXP = pGameParams->GetMonsterXPFromPowerUp( hFoodMonster.GetRank(), hFoodMonster.GetLevel() );
         if ( !(hTargetMonster.IsMaxLevel()) )
             hTargetMonster.AddXP( iXP );
 
@@ -1124,129 +1288,6 @@ Int PlayerTown::_Compare_Rune( const Rune & rLeft, const Rune & rRight )
         return +1;
     if ( rLeft.GetLevel() > rRight.GetLevel() )
         return -1;
-    if ( rLeft.GetQuality() < rRight.GetQuality() )
-        return +1;
-    if ( rLeft.GetQuality() > rRight.GetQuality() )
-        return -1;
     return 0;
-}
-
-Void PlayerTown::_Load_MonsterInstance( XMLNode * pNode, MonsterInstance * outMonsterInstance )
-{
-    Assert( pNode != NULL );
-    Assert( StringFn->Cmp(pNode->GetTagName(), TEXT("MonsterInstance")) == 0 );
-
-    const GameParameters * pGameParams = GameplayFn->GetGameParameters();
-
-    MonsterID iMonsterID = (MonsterID)( StringFn->ToUInt( pNode->GetAttribute(TEXT("MonsterID"))->GetValue() ) );
-    const Monster * pMonster = GameplayFn->GetMonster( iMonsterID );
-    Assert( pMonster != NULL );
-
-    *outMonsterInstance = MonsterInstance( pMonster );
-
-    Bool bAwaken = ( StringFn->ToUInt( pNode->GetAttribute(TEXT("Awaken"))->GetValue() ) != 0 );
-    UInt iRank = (UInt)( StringFn->ToUInt( pNode->GetAttribute(TEXT("Rank"))->GetValue() ) );
-    Assert( iRank < MONSTER_MAX_RANK );
-    UInt iLevel = (UInt)( StringFn->ToUInt( pNode->GetAttribute(TEXT("Level"))->GetValue() ) );
-    Assert( iLevel < MONSTER_MAX_LEVELBYRANK(iRank) );
-    UInt iXP = (UInt)( StringFn->ToUInt( pNode->GetAttribute(TEXT("XP"))->GetValue() ) );
-    Assert( iXP < pGameParams->GetMonsterXPByLevel(iRank,iLevel) );
-
-    if ( bAwaken )
-        outMonsterInstance->Awake();
-    outMonsterInstance->SetRank( iRank );
-    outMonsterInstance->SetLevel( iLevel );
-    outMonsterInstance->AddXP( iXP );
-
-    UInt iSkillCount = outMonsterInstance->GetSkillCount();
-    for( UInt i = 0; i < iSkillCount; ++i ) {
-        GChar strTemp[16];
-        StringFn->Format( strTemp, TEXT("Skill%d_Level"), i );
-
-        UInt iLevel = (UInt)( StringFn->ToUInt(pNode->GetAttribute(strTemp)->GetValue()) );
-
-        outMonsterInstance->SetSkillLevel( i, iLevel );
-    }
-
-    for( UInt i = 0; i < RUNE_SLOT_COUNT; ++i ) {
-        GChar strTemp[16];
-        StringFn->Format( strTemp, TEXT("Rune%d_TypeIndex"), i );
-
-        if ( !(pNode->HasAttribute( strTemp )) )
-            continue;
-
-        GChar arrTypeIndex[2][16];
-        UInt iCount = StringFn->Split( (GChar**)arrTypeIndex, 2, 16, pNode->GetAttribute(strTemp)->GetValue(), TEXT(','), true );
-        Assert( iCount == 2 );
-
-        RuneType iRuneType = _RuneType_FromString( arrTypeIndex[0] );
-        Assert( iRuneType < RUNE_TYPE_COUNT );
-        UInt iIndex = (UInt)( StringFn->ToUInt(arrTypeIndex[1]) );
-        Assert( iIndex < m_arrRuneCollection[iRuneType].Count() );
-
-        Rune * pRune = &( (m_arrRuneCollection[iRuneType])[iIndex] );
-        Assert( pRune->IsPresent() && pRune->GetSlot() == i );
-
-        outMonsterInstance->EquipRune( pRune );
-    }
-}
-Void PlayerTown::_Save_MonsterInstance( XMLNode * outNode, MonsterInstance * pMonsterInstance ) const
-{
-    Assert( outNode != NULL );
-    Assert( StringFn->Cmp(outNode->GetTagName(), TEXT("MonsterInstance")) == 0 );
-
-    GChar strValue[1024];
-
-    StringFn->FromUInt( strValue, pMonsterInstance->GetID() );
-    outNode->CreateAttribute( TEXT("MonsterID"), strValue );
-
-    StringFn->FromUInt( strValue, pMonsterInstance->IsAwakened() ? 1 : 0 );
-    outNode->CreateAttribute( TEXT("Awaken"), strValue );
-    StringFn->FromUInt( strValue, pMonsterInstance->GetRank() );
-    outNode->CreateAttribute( TEXT("Rank"), strValue );
-    StringFn->FromUInt( strValue, pMonsterInstance->GetLevel() );
-    outNode->CreateAttribute( TEXT("Level"), strValue );
-    StringFn->FromUInt( strValue, pMonsterInstance->GetCurrentXP() );
-    outNode->CreateAttribute( TEXT("XP"), strValue );
-
-    UInt iSkillCount = pMonsterInstance->GetSkillCount();
-    for( UInt i = 0; i < iSkillCount; ++i ) {
-        GChar strTemp[16];
-        StringFn->Format( strTemp, TEXT("Skill%d_Level"), i );
-
-        StringFn->FromUInt( strValue, pMonsterInstance->GetSkillInstance(i)->GetLevel() );
-        outNode->CreateAttribute( strTemp, strValue );
-    }
-
-    for( UInt i = 0; i < RUNE_SLOT_COUNT; ++i ) {
-        GChar strTemp[16];
-        StringFn->Format( strTemp, TEXT("Rune%d_TypeIndex"), i );
-
-        if ( !(pMonsterInstance->HasRune(i)) )
-            continue;
-
-        Rune * pRune = pMonsterInstance->GetRune(i);
-        UInt iIndex = m_arrRuneCollection[pRune->GetType()].Search( _Compare_Rune, *pRune );
-
-        StringFn->Format( strValue, TEXT("%s,%d"), sm_arrRuneTypeNames[pRune->GetType()], iIndex );
-        outNode->CreateAttribute( strTemp, strValue );
-    }
-}
-
-Void PlayerTown::_Load_Rune( XMLNode * pNode, Rune * outRune )
-{
-    Assert( pNode != NULL );
-    Assert( StringFn->Cmp(pNode->GetTagName(), TEXT("Rune")) == 0 );
-
-
-
-}
-Void PlayerTown::_Save_Rune( XMLNode * outNode, Rune * pRune ) const
-{
-    Assert( outNode != NULL );
-    Assert( StringFn->Cmp(outNode->GetTagName(), TEXT("Rune")) == 0 );
-
-
-
 }
 

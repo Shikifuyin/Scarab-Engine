@@ -70,7 +70,7 @@ UInt MonsterBattleInstance::Damage( UInt iAmount, Bool bDestroyRunes )
         UInt iHPStep = (UInt)( MathFn->Floor(0.07f * (Float)m_iHealth) );
         UInt iCount = ( m_iHPLostCounter_Nemesis / iHPStep );
         
-        m_iATB += iCount * ( 0.04f * BATTLE_ATB_CAPACITY );
+        m_iATB += (UInt)( MathFn->Floor(0.04f * ((Float)iCount) * (Float)BATTLE_ATB_CAPACITY) );
 
         m_iHPLostCounter_Nemesis = ( m_iHPLostCounter_Nemesis % iHPStep );
     }

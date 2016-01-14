@@ -26,7 +26,7 @@ inline const GChar * Building::GetInfoText() const {
     return sm_arrInfoTexts[GetType()];
 }
 
-inline const CurrencyCost * Building::GetCost() const {
-    return &m_hCost;
-}
+//inline const CurrencyCost * Building::GetCost() const {
+//    return &m_hCost;
+//}
 
