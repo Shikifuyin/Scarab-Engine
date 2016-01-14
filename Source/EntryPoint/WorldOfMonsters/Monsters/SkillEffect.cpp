@@ -75,26 +75,6 @@ Void SkillEffect::Load( const XMLNode * pNode )
     m_iScalingType = pGameParams->SkillEffectScalingFromString( pNode->GetAttribute(TEXT("ScalingType"))->GetValue() );
     m_fScalingMultiplier = StringFn->ToFloat( pNode->GetAttribute(TEXT("ScalingMultiplier"))->GetValue() );
 }
-Void SkillEffect::Save( XMLNode * outNode ) const
-{
-    Assert( outNode != NULL );
-    Assert( StringFn->Cmp( outNode->GetTagName(), TEXT("SkillEffect") ) == 0 );
-
-    const GameParameters * pGameParams = GameplayFn->GetGameParameters();
-    GChar strBuffer[1024];
-    const GChar * strValue;
-
-    StringFn->FromUInt( strBuffer, GetType() );
-    outNode->CreateAttribute( TEXT("Type"), strBuffer );
-    StringFn->FromFloat( strBuffer, m_fProc );
-    outNode->CreateAttribute( TEXT("Proc"), strBuffer );
-    strValue = pGameParams->SkillTargetPatternToString( m_iTargetPattern );
-    outNode->CreateAttribute( TEXT("TargetPattern"), strValue );
-    strValue = pGameParams->SkillEffectScalingToString( m_iScalingType );
-    outNode->CreateAttribute( TEXT("ScalingType"), strValue );
-    StringFn->FromFloat( strBuffer, m_fScalingMultiplier );
-    outNode->CreateAttribute( TEXT("ScalingMultiplier"), strBuffer );
-}
 
 /////////////////////////////////////////////////////////////////////////////////
 // SkillEffectDamage implementation
@@ -121,22 +101,6 @@ Void SkillEffectDamage::Load( const XMLNode * pNode )
     m_fBonusCritRate = StringFn->ToFloat( pNode->GetAttribute(TEXT("BonusCritRate"))->GetValue() );
     m_fBonusCritDmg = StringFn->ToFloat( pNode->GetAttribute(TEXT("BonusCritDmg"))->GetValue() );
 }
-Void SkillEffectDamage::Save( XMLNode * outNode ) const
-{
-    Assert( outNode != NULL );
-    Assert( StringFn->Cmp( outNode->GetTagName(), TEXT("SkillEffect") ) == 0 );
-
-    SkillEffect::Save( outNode );
-
-    GChar strBuffer[1024];
-
-    StringFn->FromFloat( strBuffer, m_fBonusDmg );
-    outNode->CreateAttribute( TEXT("BonusDmg"), strBuffer );
-    StringFn->FromFloat( strBuffer, m_fBonusCritRate );
-    outNode->CreateAttribute( TEXT("BonusCritRate"), strBuffer );
-    StringFn->FromFloat( strBuffer, m_fBonusCritDmg );
-    outNode->CreateAttribute( TEXT("BonusCritDmg"), strBuffer );
-}
 
 /////////////////////////////////////////////////////////////////////////////////
 // SkillEffectHeal implementation
@@ -159,18 +123,6 @@ Void SkillEffectHeal::Load( const XMLNode * pNode )
 
     m_fBonusHeal = StringFn->ToFloat( pNode->GetAttribute(TEXT("BonusHeal"))->GetValue() );
 }
-Void SkillEffectHeal::Save( XMLNode * outNode ) const
-{
-    Assert( outNode != NULL );
-    Assert( StringFn->Cmp( outNode->GetTagName(), TEXT("SkillEffect") ) == 0 );
-
-    SkillEffect::Save( outNode );
-
-    GChar strBuffer[1024];
-
-    StringFn->FromFloat( strBuffer, m_fBonusHeal );
-    outNode->CreateAttribute( TEXT("BonusHeal"), strBuffer );
-}
 
 /////////////////////////////////////////////////////////////////////////////////
 // SkillEffectATB implementation
@@ -192,15 +144,6 @@ Void SkillEffectATB::Load( const XMLNode * pNode )
     SkillEffect::Load( pNode );
 
     m_bIncrease = ( StringFn->ToUInt(pNode->GetAttribute(TEXT("IsIncrease"))->GetValue()) != 0 );
-}
-Void SkillEffectATB::Save( XMLNode * outNode ) const
-{
-    Assert( outNode != NULL );
-    Assert( StringFn->Cmp( outNode->GetTagName(), TEXT("SkillEffect") ) == 0 );
-
-    SkillEffect::Save( outNode );
-
-    outNode->CreateAttribute( TEXT("IsIncrease"), m_bIncrease ? TEXT("1") : TEXT("0") );
 }
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -232,24 +175,3 @@ Void SkillEffectStatus::Load( const XMLNode * pNode )
     m_iDuration = (UInt)( StringFn->ToUInt(pNode->GetAttribute(TEXT("Duration"))->GetValue()) );
     m_fAmplitude = StringFn->ToFloat( pNode->GetAttribute(TEXT("Amplitude"))->GetValue() );
 }
-Void SkillEffectStatus::Save( XMLNode * outNode ) const
-{
-    Assert( outNode != NULL );
-    Assert( StringFn->Cmp( outNode->GetTagName(), TEXT("SkillEffect") ) == 0 );
-
-    SkillEffect::Save( outNode );
-
-    const GameParameters * pGameParams = GameplayFn->GetGameParameters();
-    GChar strBuffer[1024];
-    const GChar * strValue;
-
-    strValue = pGameParams->StatusEffectTypeToString( m_iType );
-    outNode->CreateAttribute( TEXT("StatusEffectType"), strValue );
-    StringFn->FromUInt( strBuffer, m_iStackCount );
-    outNode->CreateAttribute( TEXT("StackCount"), strBuffer );
-    StringFn->FromUInt( strBuffer, m_iDuration );
-    outNode->CreateAttribute( TEXT("Duration"), strBuffer );
-    StringFn->FromFloat( strBuffer, m_fAmplitude );
-    outNode->CreateAttribute( TEXT("Amplitude"), strBuffer );
-}
-

@@ -103,7 +103,9 @@ Void Rune::Load( const XMLNode * pNode )
     Assert( m_iLevel < RUNE_MAX_LEVEL );
 
     for( UInt i = 0; i < RUNE_STAT_COUNT; ++i ) {
-        const XMLNode * pStatBonusNode = pNode->GetChildByTag( pGameParams->RuneStatisticToString((RuneStatistic)i), 0 );
+        const GChar * strNameI = pGameParams->RuneStatisticToString( (RuneStatistic)i );
+
+        const XMLNode * pStatBonusNode = pNode->GetChildByTag( strNameI, 0 );
         if ( pStatBonusNode != NULL ) {
             m_arrBonuses[i].iStat = pGameParams->MonsterStatisticFromString( pStatBonusNode->GetAttribute(TEXT("Stat"))->GetValue() );
             m_arrBonuses[i].bIsRatio = ( StringFn->ToUInt(pStatBonusNode->GetAttribute(TEXT("IsRatio"))->GetValue()) != 0 );
@@ -134,16 +136,18 @@ Void Rune::Save( XMLNode * outNode ) const
     Assert( m_arrBonuses[RUNE_STAT_PRIMARY].iStat != MONSTER_STAT_COUNT );
 
     for( UInt i = 0; i < RUNE_STAT_COUNT; ++i ) {
-        if ( m_arrBonuses[i].iStat != MONSTER_STAT_COUNT ) {
-            XMLNode * pStatBonusNode = XMLDocument::CreateNode( pGameParams->RuneStatisticToString((RuneStatistic)i), true );
+        if ( m_arrBonuses[i].iStat == MONSTER_STAT_COUNT )
+            continue;
+        const GChar * strNameI = pGameParams->RuneStatisticToString( (RuneStatistic)i );
 
-            strValue = pGameParams->MonsterStatisticToString( m_arrBonuses[i].iStat );
-            pStatBonusNode->CreateAttribute( TEXT("Stat"), strValue );
-            StringFn->FromUInt( strBuffer, m_arrBonuses[i].bIsRatio ? 1 : 0 );
-            pStatBonusNode->CreateAttribute( TEXT("IsRatio"), strBuffer );
+        XMLNode * pStatBonusNode = XMLDocument::CreateNode( strNameI, true );
 
-            outNode->AppendChild( pStatBonusNode );
-        }
+        strValue = pGameParams->MonsterStatisticToString( m_arrBonuses[i].iStat );
+        pStatBonusNode->CreateAttribute( TEXT("Stat"), strValue );
+        StringFn->FromUInt( strBuffer, m_arrBonuses[i].bIsRatio ? 1 : 0 );
+        pStatBonusNode->CreateAttribute( TEXT("IsRatio"), strBuffer );
+
+        outNode->AppendChild( pStatBonusNode );
     }
 }
 

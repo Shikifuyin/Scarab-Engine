@@ -77,6 +77,7 @@ Void Monster::Load( const XMLNode * pNode )
     m_iElement = pGameParams->MonsterElementFromString( pNode->GetAttribute(TEXT("Element"))->GetValue() );
 
     m_iNativeRank = (UInt)( StringFn->ToUInt( pNode->GetAttribute(TEXT("NativeRank"))->GetValue() ) );
+    Assert( m_iNativeRank < (MONSTER_MAX_RANK - 1) ); // forbid native 6* !
 
     m_bIsSummon = ( StringFn->ToUInt(pNode->GetAttribute(TEXT("IsSummon"))->GetValue()) != 0 );
     m_bIsFusion = ( StringFn->ToUInt(pNode->GetAttribute(TEXT("IsFusion"))->GetValue()) != 0 );
@@ -91,22 +92,12 @@ Void Monster::Load( const XMLNode * pNode )
         const XMLNode * pSummoningCostNode = pNode->GetChildByTag( TEXT( "SummoningCost" ), 0 );
         Assert( pSummoningCostNode != NULL );
 
-        if ( pSummoningCostNode->HasAttribute(TEXT("Common")) )
-            m_hSummoningCost.arrCost[SCROLL_COMMON] = (UInt)( StringFn->ToUInt( pSummoningCostNode->GetAttribute(TEXT("Common"))->GetValue() ) );
-        if ( pSummoningCostNode->HasAttribute(TEXT("Mystical")) )
-            m_hSummoningCost.arrCost[SCROLL_MYSTICAL] = (UInt)( StringFn->ToUInt( pSummoningCostNode->GetAttribute(TEXT("Mystical"))->GetValue() ) );
-        if ( pSummoningCostNode->HasAttribute(TEXT("Legendary")) )
-            m_hSummoningCost.arrCost[SCROLL_LEGENDARY] = (UInt)( StringFn->ToUInt( pSummoningCostNode->GetAttribute(TEXT("Legendary"))->GetValue() ) );
-        if ( pSummoningCostNode->HasAttribute(TEXT("Fire")) )
-            m_hSummoningCost.arrCost[SCROLL_FIRE] = (UInt)( StringFn->ToUInt( pSummoningCostNode->GetAttribute(TEXT("Fire"))->GetValue() ) );
-        if ( pSummoningCostNode->HasAttribute(TEXT("Water")) )
-            m_hSummoningCost.arrCost[SCROLL_WATER] = (UInt)( StringFn->ToUInt( pSummoningCostNode->GetAttribute(TEXT("Water"))->GetValue() ) );
-        if ( pSummoningCostNode->HasAttribute(TEXT("Wind")) )
-            m_hSummoningCost.arrCost[SCROLL_WIND] = (UInt)( StringFn->ToUInt( pSummoningCostNode->GetAttribute(TEXT("Wind"))->GetValue() ) );
-        if ( pSummoningCostNode->HasAttribute(TEXT("Light")) )
-            m_hSummoningCost.arrCost[SCROLL_LIGHT] = (UInt)( StringFn->ToUInt( pSummoningCostNode->GetAttribute(TEXT("Light"))->GetValue() ) );
-        if ( pSummoningCostNode->HasAttribute(TEXT("Dark")) )
-            m_hSummoningCost.arrCost[SCROLL_DARK] = (UInt)( StringFn->ToUInt( pSummoningCostNode->GetAttribute(TEXT("Dark"))->GetValue() ) );
+        for( UInt i = 0; i < SCROLL_TYPE_COUNT; ++i ) {
+            const GChar * strNameI = pGameParams->ScrollTypeToString( (ScrollType)i );
+
+            if ( pSummoningCostNode->HasAttribute(strNameI) )
+                m_hSummoningCost.arrCost[i] = (UInt)( StringFn->ToUInt( pSummoningCostNode->GetAttribute(strNameI)->GetValue() ) );
+        }
     } else if ( m_bIsFusion ) {
         const XMLNode * pFusionCostNode = pNode->GetChildByTag( TEXT( "FusionCost" ), 0 );
         Assert( pFusionCostNode != NULL );
@@ -120,24 +111,23 @@ Void Monster::Load( const XMLNode * pNode )
     const XMLNode * pAwakeningCostNode = pNode->GetChildByTag( TEXT("AwakeningCost"), 0 );
     Assert( pAwakeningCostNode != NULL );
 
+    const XMLNode * pAwakeningCostMagicNode = pAwakeningCostNode->GetChildByTag( TEXT("Magic"), 0 );
+    Assert( pAwakeningCostMagicNode != NULL );
+    const XMLNode * pAwakeningCostElementNode = pAwakeningCostNode->GetChildByTag( TEXT("Element"), 0 );
+    Assert( pAwakeningCostElementNode != NULL );
+
     m_hAwakeningCost.iElement = m_iElement;
     for( UInt i = 0; i < ESSENCE_TYPE_COUNT; ++i ) {
-        m_hAwakeningCost.arrMagicCost[i] = 0;
-        m_hAwakeningCost.arrElementalCost[i] = 0;
-    }
+        const GChar * strNameI = pGameParams->EssenceTypeToString( (EssenceType)i );
 
-    if ( pAwakeningCostNode->HasAttribute(TEXT("MagicLow")) )
-        m_hAwakeningCost.arrMagicCost[ESSENCE_LOW] = (UInt)( StringFn->ToUInt( pAwakeningCostNode->GetAttribute(TEXT("MagicLow"))->GetValue() ) );
-    if ( pAwakeningCostNode->HasAttribute(TEXT("MagicMid")) )
-        m_hAwakeningCost.arrMagicCost[ESSENCE_MID] = (UInt)( StringFn->ToUInt( pAwakeningCostNode->GetAttribute(TEXT("MagicMid"))->GetValue() ) );
-    if ( pAwakeningCostNode->HasAttribute(TEXT("MagicHigh")) )
-        m_hAwakeningCost.arrMagicCost[ESSENCE_HIGH] = (UInt)( StringFn->ToUInt( pAwakeningCostNode->GetAttribute(TEXT("MagicHigh"))->GetValue() ) );
-    if ( pAwakeningCostNode->HasAttribute(TEXT("ElementLow")) )
-        m_hAwakeningCost.arrElementalCost[ESSENCE_LOW] = (UInt)( StringFn->ToUInt( pAwakeningCostNode->GetAttribute(TEXT("ElementLow"))->GetValue() ) );
-    if ( pAwakeningCostNode->HasAttribute(TEXT("ElementMid")) )
-        m_hAwakeningCost.arrElementalCost[ESSENCE_MID] = (UInt)( StringFn->ToUInt( pAwakeningCostNode->GetAttribute(TEXT("ElementMid"))->GetValue() ) );
-    if ( pAwakeningCostNode->HasAttribute(TEXT("ElementHigh")) )
-        m_hAwakeningCost.arrElementalCost[ESSENCE_HIGH] = (UInt)( StringFn->ToUInt( pAwakeningCostNode->GetAttribute(TEXT("ElementHigh"))->GetValue() ) );
+        m_hAwakeningCost.arrMagicCost[i] = 0;
+        if ( pAwakeningCostMagicNode->HasAttribute(strNameI) )
+            m_hAwakeningCost.arrMagicCost[i] = (UInt)( StringFn->ToUInt( pAwakeningCostMagicNode->GetAttribute(strNameI)->GetValue() ) );
+
+        m_hAwakeningCost.arrElementalCost[i] = 0;
+        if ( pAwakeningCostElementNode->HasAttribute(strNameI) )
+            m_hAwakeningCost.arrMagicCost[i] = (UInt)( StringFn->ToUInt( pAwakeningCostElementNode->GetAttribute(strNameI)->GetValue() ) );
+    }
 
     const XMLNode * pLevelingStatsNode = pNode->GetChildByTag( TEXT("MonsterLevelingStats"), 0 );
     Assert( pLevelingStatsNode != NULL );
@@ -161,22 +151,22 @@ Void Monster::Load( const XMLNode * pNode )
     if ( m_iSkillCount > 3 )
         m_arrSkillSet[3] = (SkillID)( StringFn->ToUInt(pSkillSetNode->GetAttribute(TEXT("Slot3"))->GetValue()) );
 
-    pSkillSetNode = pNode->GetChildByTag( TEXT("SkillSetAwaken"), 0 );
-    Assert( pSkillSetNode != NULL );
+    const XMLNode * pSkillSetAwakenNode = pNode->GetChildByTag( TEXT("SkillSetAwaken"), 0 );
+    Assert( pSkillSetAwakenNode != NULL );
 
-    m_iSkillCountAwaken = (UInt)( StringFn->ToUInt(pSkillSetNode->GetAttribute(TEXT("SkillCount"))->GetValue()) );
+    m_iSkillCountAwaken = (UInt)( StringFn->ToUInt(pSkillSetAwakenNode->GetAttribute(TEXT("SkillCount"))->GetValue()) );
 
     for( UInt i = 0; i < SKILL_SLOT_COUNT; ++i )
         m_arrSkillSetAwaken[i] = INVALID_OFFSET;
 
     if ( m_iSkillCountAwaken > 0 )
-        m_arrSkillSetAwaken[0] = (SkillID)( StringFn->ToUInt(pSkillSetNode->GetAttribute(TEXT("Slot0"))->GetValue()) );
+        m_arrSkillSetAwaken[0] = (SkillID)( StringFn->ToUInt(pSkillSetAwakenNode->GetAttribute(TEXT("Slot0"))->GetValue()) );
     if ( m_iSkillCountAwaken > 1 )
-        m_arrSkillSetAwaken[1] = (SkillID)( StringFn->ToUInt(pSkillSetNode->GetAttribute(TEXT("Slot1"))->GetValue()) );
+        m_arrSkillSetAwaken[1] = (SkillID)( StringFn->ToUInt(pSkillSetAwakenNode->GetAttribute(TEXT("Slot1"))->GetValue()) );
     if ( m_iSkillCountAwaken > 2 )
-        m_arrSkillSetAwaken[2] = (SkillID)( StringFn->ToUInt(pSkillSetNode->GetAttribute(TEXT("Slot2"))->GetValue()) );
+        m_arrSkillSetAwaken[2] = (SkillID)( StringFn->ToUInt(pSkillSetAwakenNode->GetAttribute(TEXT("Slot2"))->GetValue()) );
     if ( m_iSkillCountAwaken > 3 )
-        m_arrSkillSetAwaken[3] = (SkillID)( StringFn->ToUInt(pSkillSetNode->GetAttribute(TEXT("Slot3"))->GetValue()) );
+        m_arrSkillSetAwaken[3] = (SkillID)( StringFn->ToUInt(pSkillSetAwakenNode->GetAttribute(TEXT("Slot3"))->GetValue()) );
 }
 
 /////////////////////////////////////////////////////////////////////////////////

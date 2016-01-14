@@ -90,7 +90,6 @@ public:
     // XML serialization
     static SkillEffect * StaticLoad( const XMLNode * pNode );
     virtual Void Load( const XMLNode * pNode );
-    virtual Void Save( XMLNode * outNode ) const;
 
     // Type
     virtual SkillEffectType GetType() const = 0;
@@ -129,7 +128,6 @@ public:
 
     // XML serialization
     virtual Void Load( const XMLNode * pNode );
-    virtual Void Save( XMLNode * outNode ) const;
 
     // Type
     inline virtual SkillEffectType GetType() const;
@@ -156,7 +154,6 @@ public:
 
     // XML serialization
     virtual Void Load( const XMLNode * pNode );
-    virtual Void Save( XMLNode * outNode ) const;
 
     // Type
     inline virtual SkillEffectType GetType() const;
@@ -179,7 +176,6 @@ public:
 
     // XML serialization
     virtual Void Load( const XMLNode * pNode );
-    virtual Void Save( XMLNode * outNode ) const;
 
     // Type
     inline virtual SkillEffectType GetType() const;
@@ -203,7 +199,6 @@ public:
 
     // XML serialization
     virtual Void Load( const XMLNode * pNode );
-    virtual Void Save( XMLNode * outNode ) const;
 
     // Type
     inline virtual SkillEffectType GetType() const;

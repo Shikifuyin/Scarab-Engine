@@ -114,7 +114,12 @@ inline Bool StatusEffectSet::HasStatusEffect( StatusEffectType iType ) const {
     Assert( iType < STATUSEFFECT_COUNT );
     return m_arrEffects[iType].IsPresent();
 }
-
+inline const StatusEffect * StatusEffectSet::GetStatusEffect( StatusEffectType iType ) const {
+    Assert( iType < STATUSEFFECT_COUNT );
+    if ( m_arrEffects[iType].IsNull() )
+        return NULL;
+    return ( m_arrEffects + iType );
+}
 inline StatusEffect * StatusEffectSet::GetStatusEffect( StatusEffectType iType ) {
     Assert( iType < STATUSEFFECT_COUNT );
     if ( m_arrEffects[iType].IsNull() )

@@ -138,22 +138,23 @@ Void PlayerTown::Load( const XMLNode * pNode )
     Assert( pEssencesNode != NULL );
 
     for( UInt i = 0; i < CURRENCY_COUNT; ++i ) {
-        const GChar * strName = pGameParams->CurrencyTypeToString( (CurrencyType)i );
-        m_arrCurrencies[i] = (UInt)( StringFn->ToUInt( pCurrenciesNode->GetAttribute(strName)->GetValue() ) );
+        const GChar * strNameI = pGameParams->CurrencyTypeToString( (CurrencyType)i );
+        m_arrCurrencies[i] = (UInt)( StringFn->ToUInt( pCurrenciesNode->GetAttribute(strNameI)->GetValue() ) );
     }
     for( UInt i = 0; i < SCROLL_TYPE_COUNT; ++i ) {
-        const GChar * strName = pGameParams->ScrollTypeToString( (ScrollType)i );
-        m_arrScrolls[i] = (UInt)( StringFn->ToUInt( pScrollsNode->GetAttribute(strName)->GetValue() ) );
+        const GChar * strNameI = pGameParams->ScrollTypeToString( (ScrollType)i );
+        m_arrScrolls[i] = (UInt)( StringFn->ToUInt( pScrollsNode->GetAttribute(strNameI)->GetValue() ) );
     }
     for( UInt i = 0; i < MONSTER_ELEMENT_COUNT; ++i ) {
-        const GChar * strName = pGameParams->MonsterElementToString( (MonsterElement)i );
-        GChar arrEssenceCount[ESSENCE_TYPE_COUNT][16];
+        const GChar * strNameI = pGameParams->MonsterElementToString( (MonsterElement)i );
+        
+        const XMLNode * pElementNode = pEssencesNode->GetChildByTag( strNameI, 0 );
+        Assert( pElementNode != NULL );
 
-        UInt iCount = StringFn->Split( (GChar**)arrEssenceCount, ESSENCE_TYPE_COUNT, 16, pEssencesNode->GetAttribute(strName)->GetValue(), TEXT(','), true );
-        Assert( iCount == ESSENCE_TYPE_COUNT );
-
-        for( UInt j = 0; j < ESSENCE_TYPE_COUNT; ++j )
-            m_arrEssences[i][j] = (UInt)( StringFn->ToUInt(arrEssenceCount[i]) );
+        for( UInt j = 0; j < ESSENCE_TYPE_COUNT; ++j ) {
+            const GChar * strNameJ = pGameParams->EssenceTypeToString( (EssenceType)j );
+            m_arrEssences[i][j] = (UInt)( StringFn->ToUInt( pElementNode->GetAttribute(strNameJ)->GetValue() ) );
+        }
     }
     
     // Monster collection & storage
@@ -230,7 +231,6 @@ Void PlayerTown::Load( const XMLNode * pNode )
         m_arrRuneStorage[hRune.GetType()].Push( hRune );
     }
 
-
     // Mana & Crystal production
     const XMLNode * pManaCrystalProductionNode = pNode->GetChildByTag( TEXT("ManaCrystalProduction"), 0 );
     Assert( pManaCrystalProductionNode != NULL );
@@ -276,10 +276,10 @@ Void PlayerTown::Load( const XMLNode * pNode )
     Assert( m_iArenaRank < ARENA_RANK_COUNT );
 
     for( UInt i = 0; i < BATTLE_TEAMSIZE_ARENA; ++i ) {
-        GChar strName[16];
-        StringFn->Format( strName, TEXT("DefenseSlot_%d"), i );
+        GChar strNameI[16];
+        StringFn->Format( strNameI, TEXT("DefenseSlot_%d"), i );
 
-        m_arrArenaDefense[i] = (UInt)( StringFn->ToUInt( pArenaNode->GetAttribute(strName)->GetValue() ) );
+        m_arrArenaDefense[i] = (UInt)( StringFn->ToUInt( pArenaNode->GetAttribute(strNameI)->GetValue() ) );
         Assert( m_arrArenaDefense[i] < m_arrMonsterCollection.Count() );
     }
 
@@ -294,27 +294,35 @@ Void PlayerTown::Save( XMLNode * outNode ) const
 
     const GameParameters * pGameParams = GameplayFn->GetGameParameters();
     GChar strBuffer[1024];
-    const GChar * strValue;
 
     // Currencies, scrolls & essences
     XMLNode * pCurrenciesNode = XMLDocument::CreateNode( TEXT("Currencies"), true );
     XMLNode * pScrollsNode = XMLDocument::CreateNode( TEXT("Scrolls"), true );
-    XMLNode * pEssencesNode = XMLDocument::CreateNode( TEXT("Essences"), true );
+    XMLNode * pEssencesNode = XMLDocument::CreateNode( TEXT("Essences"), false );
 
     for( UInt i = 0; i < CURRENCY_COUNT; ++i ) {
-        const GChar * strName = pGameParams->CurrencyTypeToString( (CurrencyType)i );
+        const GChar * strNameI = pGameParams->CurrencyTypeToString( (CurrencyType)i );
         StringFn->FromUInt( strBuffer, m_arrCurrencies[i] );
-        pCurrenciesNode->CreateAttribute( strName, strBuffer );
+        pCurrenciesNode->CreateAttribute( strNameI, strBuffer );
     }
     for( UInt i = 0; i < SCROLL_TYPE_COUNT; ++i ) {
-        const GChar * strName = pGameParams->ScrollTypeToString( (ScrollType)i );
+        const GChar * strNameI = pGameParams->ScrollTypeToString( (ScrollType)i );
         StringFn->FromUInt( strBuffer, m_arrScrolls[i] );
-        pCurrenciesNode->CreateAttribute( strName, strBuffer );
+        pScrollsNode->CreateAttribute( strNameI, strBuffer );
     }
     for( UInt i = 0; i < MONSTER_ELEMENT_COUNT; ++i ) {
-        const GChar * strName = pGameParams->MonsterElementToString( (MonsterElement)i );
-        StringFn->Format( strBuffer, TEXT("%d,%d,%d"), m_arrEssences[i][0], m_arrEssences[i][1], m_arrEssences[i][2] );
-        pCurrenciesNode->CreateAttribute( strName, strBuffer );
+        const GChar * strNameI = pGameParams->MonsterElementToString( (MonsterElement)i );
+
+        XMLNode * pElementNode = XMLDocument::CreateNode( strNameI, true );
+
+        for( UInt j = 0; j < ESSENCE_TYPE_COUNT; ++j ) {
+            const GChar * strNameJ = pGameParams->EssenceTypeToString( (EssenceType)j );
+
+            StringFn->FromUInt( strBuffer, m_arrEssences[i][j] );
+            pElementNode->CreateAttribute( strNameJ, strBuffer );
+        }
+
+        pEssencesNode->AppendChild( pElementNode );
     }
 
     outNode->AppendChild( pCurrenciesNode );
@@ -433,11 +441,11 @@ Void PlayerTown::Save( XMLNode * outNode ) const
     pArenaNode->CreateAttribute( TEXT("Rank"), strBuffer );
 
     for( UInt i = 0; i < BATTLE_TEAMSIZE_ARENA; ++i ) {
-        GChar strName[16];
-        StringFn->Format( strName, TEXT("DefenseSlot_%d"), i );
+        GChar strNameI[16];
+        StringFn->Format( strNameI, TEXT("DefenseSlot_%d"), i );
 
         StringFn->FromUInt( strBuffer, m_arrArenaDefense[i] );
-        pArenaNode->CreateAttribute( strName, strBuffer );
+        pArenaNode->CreateAttribute( strNameI, strBuffer );
     }
 
     outNode->AppendChild( pArenaNode );

@@ -137,6 +137,7 @@ public:
 
     // Status effects access
     inline Bool HasStatusEffect( StatusEffectType iType ) const;
+    inline const StatusEffect * GetStatusEffect( StatusEffectType iType ) const;
     inline StatusEffect * GetStatusEffect( StatusEffectType iType );
 
     Void Add( StatusEffectType iType, UInt iStackCount, UInt iDuration, Float fAmplitude );

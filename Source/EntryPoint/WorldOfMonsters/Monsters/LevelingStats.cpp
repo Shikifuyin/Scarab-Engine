@@ -73,57 +73,38 @@ Void MonsterLevelingStats::Load( const XMLNode * pNode )
     const XMLNode * pAwakenedDefenseTableNode = pNode->GetChildByTag( TEXT("AwakenedDefenseTable"), 0 );
     Assert( pAwakenedDefenseTableNode != NULL );
 
-    GChar arrHealth[MONSTER_MAX_LEVEL][16];
-    GChar arrAwakenedHealth[MONSTER_MAX_LEVEL][16];
-
-    GChar arrAttack[MONSTER_MAX_LEVEL][16];
-    GChar arrAwakenedAttack[MONSTER_MAX_LEVEL][16];
-
-    GChar arrDefense[MONSTER_MAX_LEVEL][16];
-    GChar arrAwakenedDefense[MONSTER_MAX_LEVEL][16];
-
     for( UInt i = 0; i < MONSTER_MAX_RANK; ++i ) {
+        GChar strNameI[16];
+        StringFn->Format( strNameI, TEXT("Rank_%d"), i );
+
+        const XMLNode * pHealthListNode = pHealthTableNode->GetChildByTag( strNameI, 0 );
+        Assert( pHealthListNode != NULL );
+        const XMLNode * pAwakenedHealthListNode = pAwakenedHealthTableNode->GetChildByTag( strNameI, 0 );
+        Assert( pAwakenedHealthListNode != NULL );
+
+        const XMLNode * pAttackListNode = pAttackTableNode->GetChildByTag( strNameI, 0 );
+        Assert( pAttackListNode != NULL );
+        const XMLNode * pAwakenedAttackListNode = pAwakenedAttackTableNode->GetChildByTag( strNameI, 0 );
+        Assert( pAwakenedAttackListNode != NULL );
+
+        const XMLNode * pDefenseListNode = pDefenseTableNode->GetChildByTag( strNameI, 0 );
+        Assert( pDefenseListNode != NULL );
+        const XMLNode * pAwakenedDefenseListNode = pAwakenedDefenseTableNode->GetChildByTag( strNameI, 0 );
+        Assert( pAwakenedDefenseListNode != NULL );
+
         UInt iMaxLevel = MONSTER_MAX_LEVELBYRANK( i );
-
-        const XMLNode * pHealthListNode = pHealthTableNode->GetChild( i );
-        Assert( pHealthListNode != NULL && pHealthListNode->GetType() == XML_TEXT );
-        const XMLNode * pAwakenedHealthListNode = pAwakenedHealthTableNode->GetChild( i );
-        Assert( pAwakenedHealthListNode != NULL && pAwakenedHealthListNode->GetType() == XML_TEXT );
-
-        const XMLNode * pAttackListNode = pAttackTableNode->GetChild( i );
-        Assert( pAttackListNode != NULL && pAttackListNode->GetType() == XML_TEXT );
-        const XMLNode * pAwakenedAttackListNode = pAwakenedAttackTableNode->GetChild( i );
-        Assert( pAwakenedAttackListNode != NULL && pAwakenedAttackListNode->GetType() == XML_TEXT );
-
-        const XMLNode * pDefenseListNode = pDefenseTableNode->GetChild( i );
-        Assert( pDefenseListNode != NULL && pDefenseListNode->GetType() == XML_TEXT );
-        const XMLNode * pAwakenedDefenseListNode = pAwakenedDefenseTableNode->GetChild( i );
-        Assert( pAwakenedDefenseListNode != NULL && pAwakenedDefenseListNode->GetType() == XML_TEXT );
-
-        UInt iCount = StringFn->Split( (GChar**)arrHealth, iMaxLevel, 16, ((const XMLText*)pHealthListNode)->GetText(), TEXT(','), true );
-        Assert( iCount == iMaxLevel );
-        iCount = StringFn->Split( (GChar**)arrAwakenedHealth, iMaxLevel, 16, ((const XMLText*)pAwakenedHealthListNode)->GetText(), TEXT(','), true );
-        Assert( iCount == iMaxLevel );
-
-        iCount = StringFn->Split( (GChar**)arrAttack, iMaxLevel, 16, ((const XMLText*)pAttackListNode)->GetText(), TEXT(','), true );
-        Assert( iCount == iMaxLevel );
-        iCount = StringFn->Split( (GChar**)arrAwakenedAttack, iMaxLevel, 16, ((const XMLText*)pAwakenedAttackListNode)->GetText(), TEXT(','), true );
-        Assert( iCount == iMaxLevel );
-
-        iCount = StringFn->Split( (GChar**)arrDefense, iMaxLevel, 16, ((const XMLText*)pDefenseListNode)->GetText(), TEXT(','), true );
-        Assert( iCount == iMaxLevel );
-        iCount = StringFn->Split( (GChar**)arrAwakenedDefense, iMaxLevel, 16, ((const XMLText*)pAwakenedDefenseListNode)->GetText(), TEXT(','), true );
-        Assert( iCount == iMaxLevel );
-
         for( UInt j = 0; j < iMaxLevel; ++j ) {
-            m_arrHealth[i][j] = (UInt)( StringFn->ToUInt( arrHealth[j] ) );
-            m_arrHealthAwaken[i][j] = (UInt)( StringFn->ToUInt( arrAwakenedHealth[j] ) );
+            GChar strNameJ[16];
+            StringFn->Format( strNameJ, TEXT("Level_%d"), j );
 
-            m_arrAttack[i][j] = (UInt)( StringFn->ToUInt( arrAttack[j] ) );
-            m_arrAttackAwaken[i][j] = (UInt)( StringFn->ToUInt( arrAwakenedAttack[j] ) );
+            m_arrHealth[i][j] = (UInt)( StringFn->ToUInt( pHealthListNode->GetAttribute(strNameJ)->GetValue() ) );
+            m_arrHealthAwaken[i][j] = (UInt)( StringFn->ToUInt( pAwakenedHealthListNode->GetAttribute(strNameJ)->GetValue() ) );
 
-            m_arrDefense[i][j] = (UInt)( StringFn->ToUInt( arrDefense[j] ) );
-            m_arrDefenseAwaken[i][j] = (UInt)( StringFn->ToUInt( arrAwakenedDefense[j] ) );
+            m_arrAttack[i][j] = (UInt)( StringFn->ToUInt( pAttackListNode->GetAttribute(strNameJ)->GetValue() ) );
+            m_arrAttackAwaken[i][j] = (UInt)( StringFn->ToUInt( pAwakenedAttackListNode->GetAttribute(strNameJ)->GetValue() ) );
+
+            m_arrDefense[i][j] = (UInt)( StringFn->ToUInt( pDefenseListNode->GetAttribute(strNameJ)->GetValue() ) );
+            m_arrDefenseAwaken[i][j] = (UInt)( StringFn->ToUInt( pAwakenedDefenseListNode->GetAttribute(strNameJ)->GetValue() ) );
         }
     }
 }
@@ -201,43 +182,27 @@ Void SkillLevelingStats::Load( const XMLNode * pNode )
     Assert( m_iMaxLevel <= SKILL_MAX_LEVEL );
 
     const XMLNode * pBonusDamageNode = pNode->GetChildByTag( TEXT("BonusDamage"), 0 );
-    Assert( pBonusDamageNode != NULL && pBonusDamageNode->GetType() == XML_TEXT );
+    Assert( pBonusDamageNode != NULL );
     const XMLNode * pBonusRecoveryNode = pNode->GetChildByTag( TEXT("BonusRecovery"), 0 );
-    Assert( pBonusRecoveryNode != NULL && pBonusRecoveryNode->GetType() == XML_TEXT );
+    Assert( pBonusRecoveryNode != NULL );
     const XMLNode * pBonusStatusEffectRateNode = pNode->GetChildByTag( TEXT("BonusStatusEffectRate"), 0 );
-    Assert( pBonusStatusEffectRateNode != NULL && pBonusStatusEffectRateNode->GetType() == XML_TEXT );
+    Assert( pBonusStatusEffectRateNode != NULL );
     const XMLNode * pBonusSpecificNode = pNode->GetChildByTag( TEXT("BonusSpecific"), 0 );
-    Assert( pBonusSpecificNode != NULL && pBonusSpecificNode->GetType() == XML_TEXT );
+    Assert( pBonusSpecificNode != NULL );
 
     const XMLNode * pCooldownNode = pNode->GetChildByTag( TEXT("Cooldown"), 0 );
-    Assert( pCooldownNode != NULL && pCooldownNode->GetType() == XML_TEXT );
-
-    GChar arrBonusDamage[SKILL_MAX_LEVEL][16];
-    GChar arrBonusRecovery[SKILL_MAX_LEVEL][16];
-    GChar arrBonusStatusEffectRate[SKILL_MAX_LEVEL][16];
-    GChar arrBonusSpecific[SKILL_MAX_LEVEL][16];
-
-    GChar arrCooldown[SKILL_MAX_LEVEL][16];
-
-    UInt iCount = StringFn->Split( (GChar**)arrBonusDamage, m_iMaxLevel, 16, ((const XMLText*)pBonusDamageNode)->GetText(), TEXT(','), true );
-    Assert( iCount == m_iMaxLevel );
-    iCount = StringFn->Split( (GChar**)arrBonusRecovery, m_iMaxLevel, 16, ((const XMLText*)pBonusRecoveryNode)->GetText(), TEXT(','), true );
-    Assert( iCount == m_iMaxLevel );
-    iCount = StringFn->Split( (GChar**)arrBonusStatusEffectRate, m_iMaxLevel, 16, ((const XMLText*)pBonusStatusEffectRateNode)->GetText(), TEXT(','), true );
-    Assert( iCount == m_iMaxLevel );
-    iCount = StringFn->Split( (GChar**)arrBonusSpecific, m_iMaxLevel, 16, ((const XMLText*)pBonusSpecificNode)->GetText(), TEXT(','), true );
-    Assert( iCount == m_iMaxLevel );
-
-    iCount = StringFn->Split( (GChar**)arrCooldown, m_iMaxLevel, 16, ((const XMLText*)pCooldownNode)->GetText(), TEXT(','), true );
-    Assert( iCount == m_iMaxLevel );
+    Assert( pCooldownNode != NULL );
 
     for( UInt i = 0; i < SKILL_MAX_LEVEL; ++i ) {
-        m_arrBonusDamage[i] = StringFn->ToFloat( arrBonusDamage[i] );
-        m_arrBonusRecovery[i] = StringFn->ToFloat( arrBonusRecovery[i] );
-        m_arrBonusStatusEffectRate[i] = StringFn->ToFloat( arrBonusStatusEffectRate[i] );
-        m_arrBonusSpecific[i] = StringFn->ToFloat( arrBonusSpecific[i] );
+        GChar strNameI[16];
+        StringFn->Format( strNameI, TEXT("Level_%d"), i );
 
-        m_arrCooldown[i] = (UInt)( StringFn->ToUInt(arrCooldown[i]) );
+        m_arrBonusDamage[i] = StringFn->ToFloat( pBonusDamageNode->GetAttribute(strNameI)->GetValue() );
+        m_arrBonusRecovery[i] = StringFn->ToFloat( pBonusRecoveryNode->GetAttribute(strNameI)->GetValue() );
+        m_arrBonusStatusEffectRate[i] = StringFn->ToFloat( pBonusStatusEffectRateNode->GetAttribute(strNameI)->GetValue() );
+        m_arrBonusSpecific[i] = StringFn->ToFloat( pBonusSpecificNode->GetAttribute(strNameI)->GetValue() );
+
+        m_arrCooldown[i] = (UInt)( StringFn->ToUInt( pCooldownNode->GetAttribute(strNameI)->GetValue() ) );
     }
 }
 
@@ -270,6 +235,8 @@ Void RuneLevelingStats::Load( const XMLNode * pNode )
     Assert( pNode != NULL );
     Assert( StringFn->Cmp(pNode->GetTagName(), TEXT("RuneLevelingStats")) == 0 );
 
+    const GameParameters * pGameParams = GameplayFn->GetGameParameters();
+
     const XMLNode * pPrimaryTableNodeI = pNode->GetChildByTag( TEXT("PrimaryTableI"), 0 );
     Assert( pPrimaryTableNodeI != NULL );
     const XMLNode * pPrimaryTableNodeF = pNode->GetChildByTag( TEXT("PrimaryTableF"), 0 );
@@ -285,77 +252,55 @@ Void RuneLevelingStats::Load( const XMLNode * pNode )
     const XMLNode * pSubTableNodeF = pNode->GetChildByTag( TEXT("SubTableNodeF"), 0 );
     Assert( pSubTableNodeF != NULL );
 
-    GChar arrPrimaryStatI[RUNE_MAX_LEVEL][16];
-    GChar arrPrimaryStatF[RUNE_MAX_LEVEL][16];
-
-    GChar arrSecondaryStatI[RUNE_MAX_LEVEL][16];
-    GChar arrSecondaryStatF[RUNE_MAX_LEVEL][16];
-
-    GChar arrSubStatI[RUNE_MAX_LEVEL][16];
-    GChar arrSubStatF[RUNE_MAX_LEVEL][16];
-
-    GChar strRankNodeName[16];
-
     for( UInt i = 0; i < MONSTER_STAT_COUNT; ++i ) {
-        const GChar * strStatName = GameplayFn->GetMonsterStatName( (MonsterStatistic)i );
+        const GChar * strNameI = pGameParams->MonsterStatisticToString( (MonsterStatistic)i );
 
-        const XMLNode * pPrimaryListNodeI = pPrimaryTableNodeI->GetChildByTag( strStatName, 0 );
+        const XMLNode * pPrimaryListNodeI = pPrimaryTableNodeI->GetChildByTag( strNameI, 0 );
         Assert( pPrimaryListNodeI != NULL );
-        const XMLNode * pPrimaryListNodeF = pPrimaryTableNodeF->GetChildByTag( strStatName, 0 );
+        const XMLNode * pPrimaryListNodeF = pPrimaryTableNodeF->GetChildByTag( strNameI, 0 );
         Assert( pPrimaryListNodeF != NULL );
 
-        const XMLNode * pSecondaryListNodeI = pSecondaryTableNodeI->GetChildByTag( strStatName, 0 );
+        const XMLNode * pSecondaryListNodeI = pSecondaryTableNodeI->GetChildByTag( strNameI, 0 );
         Assert( pSecondaryListNodeI != NULL );
-        const XMLNode * pSecondaryListNodeF = pSecondaryTableNodeF->GetChildByTag( strStatName, 0 );
+        const XMLNode * pSecondaryListNodeF = pSecondaryTableNodeF->GetChildByTag( strNameI, 0 );
         Assert( pSecondaryListNodeF != NULL );
 
-        const XMLNode * pSubListNodeI = pSubTableNodeI->GetChildByTag( strStatName, 0 );
+        const XMLNode * pSubListNodeI = pSubTableNodeI->GetChildByTag( strNameI, 0 );
         Assert( pSubListNodeI != NULL );
-        const XMLNode * pSubListNodeF = pSubTableNodeF->GetChildByTag( strStatName, 0 );
+        const XMLNode * pSubListNodeF = pSubTableNodeF->GetChildByTag( strNameI, 0 );
         Assert( pSubListNodeF != NULL );
 
         for( UInt j = 0; j < RUNE_MAX_RANK; ++j ) {
-            StringFn->Format( strRankNodeName, TEXT("Rank_%d"), j );
+            GChar strNameJ[16];
+            StringFn->Format( strNameJ, TEXT("Rank_%d"), j );
 
-            const XMLNode * pPrimaryNodeI = pPrimaryListNodeI->GetChildByTag( strRankNodeName, 0 );
-            Assert( pPrimaryNodeI != NULL && pPrimaryNodeI->GetType() == XML_TEXT );
-            const XMLNode * pPrimaryNodeF = pPrimaryListNodeF->GetChildByTag( strRankNodeName, 0 );
-            Assert( pPrimaryNodeF != NULL && pPrimaryNodeF->GetType() == XML_TEXT );
+            const XMLNode * pPrimaryNodeI = pPrimaryListNodeI->GetChildByTag( strNameJ, 0 );
+            Assert( pPrimaryNodeI != NULL );
+            const XMLNode * pPrimaryNodeF = pPrimaryListNodeF->GetChildByTag( strNameJ, 0 );
+            Assert( pPrimaryNodeF != NULL );
 
-            const XMLNode * pSecondaryNodeI = pSecondaryListNodeI->GetChildByTag( strRankNodeName, 0 );
-            Assert( pSecondaryNodeI != NULL && pSecondaryNodeI->GetType() == XML_TEXT );
-            const XMLNode * pSecondaryNodeF = pSecondaryListNodeF->GetChildByTag( strRankNodeName, 0 );
-            Assert( pSecondaryNodeF != NULL && pSecondaryNodeF->GetType() == XML_TEXT );
+            const XMLNode * pSecondaryNodeI = pSecondaryListNodeI->GetChildByTag( strNameJ, 0 );
+            Assert( pSecondaryNodeI != NULL );
+            const XMLNode * pSecondaryNodeF = pSecondaryListNodeF->GetChildByTag( strNameJ, 0 );
+            Assert( pSecondaryNodeF != NULL );
 
-            const XMLNode * pSubNodeI = pSubListNodeI->GetChildByTag( strRankNodeName, 0 );
-            Assert( pSubNodeI != NULL && pSubNodeI->GetType() == XML_TEXT );
-            const XMLNode * pSubNodeF = pSubListNodeF->GetChildByTag( strRankNodeName, 0 );
-            Assert( pSubNodeF != NULL && pSubNodeF->GetType() == XML_TEXT );
-
-            UInt iCount = StringFn->Split( (GChar**)arrPrimaryStatI, RUNE_MAX_LEVEL, 16, ((const XMLText*)pPrimaryNodeI)->GetText(), TEXT(','), true );
-            Assert( iCount == RUNE_MAX_LEVEL );
-            iCount = StringFn->Split( (GChar**)arrPrimaryStatF, RUNE_MAX_LEVEL, 16, ((const XMLText*)pPrimaryNodeF)->GetText(), TEXT(','), true );
-            Assert( iCount == RUNE_MAX_LEVEL );
-
-            iCount = StringFn->Split( (GChar**)arrSecondaryStatI, RUNE_MAX_LEVEL, 16, ((const XMLText*)pSecondaryNodeI)->GetText(), TEXT(','), true );
-            Assert( iCount == RUNE_MAX_LEVEL );
-            iCount = StringFn->Split( (GChar**)arrSecondaryStatF, RUNE_MAX_LEVEL, 16, ((const XMLText*)pSecondaryNodeF)->GetText(), TEXT(','), true );
-            Assert( iCount == RUNE_MAX_LEVEL );
-
-            iCount = StringFn->Split( (GChar**)arrSubStatI, RUNE_MAX_LEVEL, 16, ((const XMLText*)pSubNodeI)->GetText(), TEXT(','), true );
-            Assert( iCount == RUNE_MAX_LEVEL );
-            iCount = StringFn->Split( (GChar**)arrSubStatF, RUNE_MAX_LEVEL, 16, ((const XMLText*)pSubNodeF)->GetText(), TEXT(','), true );
-            Assert( iCount == RUNE_MAX_LEVEL );
+            const XMLNode * pSubNodeI = pSubListNodeI->GetChildByTag( strNameJ, 0 );
+            Assert( pSubNodeI != NULL );
+            const XMLNode * pSubNodeF = pSubListNodeF->GetChildByTag( strNameJ, 0 );
+            Assert( pSubNodeF != NULL );
 
             for( UInt k = 0; k < RUNE_MAX_LEVEL; ++k ) {
-                m_arrPrimaryStatsI[i][j][k] = (UInt)( StringFn->ToUInt(arrPrimaryStatI[k]) );
-                m_arrPrimaryStatsF[i][j][k] = StringFn->ToFloat( arrPrimaryStatF[k] );
+                GChar strNameK[16];
+                StringFn->Format( strNameK, TEXT("Level_%d"), k );
 
-                m_arrSecondaryStatsI[i][j][k] = (UInt)( StringFn->ToUInt(arrSecondaryStatI[k]) );
-                m_arrSecondaryStatsF[i][j][k] = StringFn->ToFloat( arrSecondaryStatF[k] );
+                m_arrPrimaryStatsI[i][j][k] = (UInt)( StringFn->ToUInt( pPrimaryNodeI->GetAttribute(strNameK)->GetValue() ) );
+                m_arrPrimaryStatsF[i][j][k] = StringFn->ToFloat( pPrimaryNodeF->GetAttribute(strNameK)->GetValue() );
 
-                m_arrSubStatsI[i][j][k] = (UInt)( StringFn->ToUInt(arrSubStatI[k]) );
-                m_arrSubStatsF[i][j][k] = StringFn->ToFloat( arrSubStatF[k] );
+                m_arrSecondaryStatsI[i][j][k] = (UInt)( StringFn->ToUInt( pSecondaryNodeI->GetAttribute(strNameK)->GetValue() ) );
+                m_arrSecondaryStatsF[i][j][k] = StringFn->ToFloat( pSecondaryNodeF->GetAttribute(strNameK)->GetValue() );
+
+                m_arrSubStatsI[i][j][k] = (UInt)( StringFn->ToUInt( pSubNodeI->GetAttribute(strNameK)->GetValue() ) );
+                m_arrSubStatsF[i][j][k] = StringFn->ToFloat( pSubNodeF->GetAttribute(strNameK)->GetValue() );
             }
         }
     }

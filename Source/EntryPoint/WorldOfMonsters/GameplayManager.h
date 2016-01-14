@@ -60,16 +60,8 @@ public:
 
     inline Bool CheckRandomEvent( Float fSuccessRate ) const;
 
-    // Name identifiers
-    inline const GChar * GetMonsterStatName( MonsterStatistic iStat ) const;
-
-
-
-
     // GameParameters access
     inline const GameParameters * GetGameParameters() const;
-
-
 
     // Skill database
     inline Skill * GetSkill( SkillID iSkillID ) const;
@@ -98,9 +90,9 @@ private:
     SkillMap m_mapSkills;
 
     // Monster database
-    inline static Int _Compare_MonsterIDs( const MonsterID & rLeft, const SkillID & rRight, Void * pUserData );
+    inline static Int _Compare_MonsterIDs( const MonsterID & rLeft, const MonsterID & rRight, Void * pUserData );
 
-    typedef TreeMap<MonsterID,Monster*> MonsterMap;
+    typedef TreeMap<MonsterID,Monster> MonsterMap;
     MonsterMap m_mapMonsters;
 
     // World database

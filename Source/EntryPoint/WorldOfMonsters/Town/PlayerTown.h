@@ -25,7 +25,6 @@
 /////////////////////////////////////////////////////////////////////////////////
 // Includes
 #include "../Monsters/Monster.h"
-#include "../Battle/Battle.h"
 
 #include "Building.h"
 
@@ -61,6 +60,8 @@ typedef struct _currency_cost {
 #define RUNE_STORAGE_MAX_ROOM  1024 // 16 * 64
 
     // Arena definitions
+#define BATTLE_TEAMSIZE_ARENA 4
+
 enum ArenaRank {
     ARENA_RANK_BEGINNER = 0,
     ARENA_RANK_CHALLENGER,
