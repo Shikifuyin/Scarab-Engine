@@ -27,7 +27,6 @@
 #include "../../Lib/Math/Random/Random.h"
 
 #include "../../Lib/Datastruct/Array/Array.h"
-#include "../../Lib/Datastruct/Table/TreeMap.h"
 
 #include "Monsters\StatusEffect.h"
 #include "Monsters\Skill.h"
@@ -53,11 +52,17 @@ public:
     Void Load( const XMLNode * pNode );
 
     // String conversions
+    const GChar * BuildingTypeToString( BuildingType iBuildingType ) const;
+    BuildingType BuildingTypeFromString( const GChar * strValue ) const;
+
     const GChar * CurrencyTypeToString( CurrencyType iCurrencyType ) const;
     CurrencyType CurrencyTypeFromString( const GChar * strValue ) const;
 
     const GChar * ScrollTypeToString( ScrollType iScrollType ) const;
     ScrollType ScrollTypeFromString( const GChar * strValue ) const;
+
+    const GChar * EssenceTypeToString( EssenceType iEssenceType ) const;
+    EssenceType EssenceTypeFromString( const GChar * strValue ) const;
 
     const GChar * MonsterTypeToString( MonsterType iMonsterType ) const;
     MonsterType MonsterTypeFromString( const GChar * strValue ) const;
@@ -168,6 +173,15 @@ public:
     inline UInt GetCrystalCapacity( UInt iLevel ) const;
 
 private:
+    // Helpers
+    Void _LoadMonsterParameters( const XMLNode * pNode );
+    Void _LoadRuneParameters( const XMLNode * pNode );
+    Void _LoadTownParameters_BuildingCosts( const XMLNode * pNode );
+    Void _LoadTownParameters_UnlockCosts( const XMLNode * pNode );
+    Void _LoadTownParameters_OperationCosts( const XMLNode * pNode );
+    Void _LoadTownParameters_UpgradeCosts( const XMLNode * pNode );
+    Void _LoadTownParameters_UpgradeParameters( const XMLNode * pNode );
+
     // Monster parameters
     Float m_fMonsterBaseCritRate;
     Float m_fMonsterBaseCritDamage;
@@ -233,43 +247,6 @@ private:
     CurrencyCost m_arrCrystalCapacityUpgradeCost[BUILDING_MAX_LEVEL];
     UInt m_arrCrystalProductionRate[BUILDING_MAX_LEVEL];
     UInt m_arrCrystalCapacity[BUILDING_MAX_LEVEL];
-
-
-    //UInt RuneLevelingStats::GetSetCount( RuneType iType )
-    //{
-    //    Assert( iType < RUNE_TYPE_COUNT );
-    //    static UInt s_arrSetCounts[RUNE_TYPE_COUNT] = {
-    //        2, 4, 2, 4,
-    //        2, 4, 2, 2,
-    //        2, 2, 2, 2,
-    //        4, 4, 4, 2
-    //    };
-    //    return s_arrSetCounts[iType];
-    //}
-    //const Byte RuneLevelingStats::sm_arrAllowedSlots[2][MONSTER_STAT_COUNT] = {
-    //    { // flat
-    //        0x3f, // MONSTER_STAT_HEALTH
-    //        0x3f, // MONSTER_STAT_ATTACK
-    //    0x3f, // MONSTER_STAT_DEFENSE
-    //    0x02, // MONSTER_STAT_SPEED
-    //    0x00, // MONSTER_STAT_CRIT_RATE  (doesn't exist)
-    //    0x00, // MONSTER_STAT_CRIT_DMG   (doesn't exist)
-    //    0x00, // MONSTER_STAT_ACCURACY   (doesn't exist)
-    //    0x00  // MONSTER_STAT_RESISTANCE (doesn't exist)
-    //    },
-    //    { // ratio
-    //        0x2a, // MONSTER_STAT_HEALTH
-    //        0x2a, // MONSTER_STAT_ATTACK
-    //    0x2a, // MONSTER_STAT_DEFENSE
-    //    0x00, // MONSTER_STAT_SPEED (doesn't exist)
-    //    0x08, // MONSTER_STAT_CRIT_RATE
-    //    0x08, // MONSTER_STAT_CRIT_DMG
-    //    0x20, // MONSTER_STAT_ACCURACY
-    //    0x20  // MONSTER_STAT_RESISTANCE
-    //    }
-    //};
-
-
 };
 
 /////////////////////////////////////////////////////////////////////////////////
