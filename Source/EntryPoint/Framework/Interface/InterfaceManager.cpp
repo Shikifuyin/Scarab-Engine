@@ -108,6 +108,15 @@ Void HUDBackboardModel::OnAction( Action iAction )
 	}
 }
 
+Void HUDBackboardModel::OnStartAction( Action iAction )
+{
+    ///////////////////////////////////////////////////////
+}
+Void HUDBackboardModel::OnStopAction( Action iAction )
+{
+    ///////////////////////////////////////////////////////
+}
+
 /////////////////////////////////////////////////////////////////////////////////
 
 Void HUDBackboardModel::OnKeyPress( KeyCode iKey, GUIEventFlag iFlags )
@@ -262,38 +271,9 @@ Void InterfaceManager::Initialize()
 {
     // HUD bitmaps
     //m_pSkinBitmap = GraphicsFn->GetBitmap( TEXT("Bitmap_HUD_Skin") );
-    //m_pStatusEffectsBitmap = GraphicsFn->GetBitmap( TEXT("Bitmap_HUD_StatusEffects") );
-    //m_pSkillsBitmap = GraphicsFn->GetBitmap( TEXT("Bitmap_HUD_Skills") );
-    //m_pItemsBitmap = GraphicsFn->GetBitmap( TEXT("Bitmap_HUD_Items") );
 
     // Initialize HUD locations
-    m_arrHUDLocations[HUD_IMAGE_BACKGROUND_HPBAR] = HUD_LOCATION_BACKGROUND_HPBAR;
-    m_arrHUDLocations[HUD_IMAGE_FOREGROUND_HPBAR] = HUD_LOCATION_FOREGROUND_HPBAR;
-    m_arrHUDLocations[HUD_IMAGE_BACKGROUND_MPBAR] = HUD_LOCATION_BACKGROUND_MPBAR;
-    m_arrHUDLocations[HUD_IMAGE_FOREGROUND_MPBAR] = HUD_LOCATION_FOREGROUND_MPBAR;
-
-    m_arrHUDLocations[HUD_IMAGE_BACKGROUND_CASTBAR] = HUD_LOCATION_BACKGROUND_CASTBAR;
-    m_arrHUDLocations[HUD_IMAGE_FOREGROUND_CASTBAR] = HUD_LOCATION_FOREGROUND_CASTBAR;
-
-    m_arrHUDLocations[HUD_IMAGE_BACKGROUND_STATUSEFFECTBAR] = HUD_LOCATION_BACKGROUND_STATUSEFFECTBAR;
-    m_arrHUDLocations[HUD_IMAGE_FOREGROUND_STATUSEFFECTBAR] = HUD_LOCATION_FOREGROUND_STATUSEFFECTBAR;
-
-    m_arrHUDLocations[HUD_IMAGE_BACKGROUND_SKILLBAR] = HUD_LOCATION_BACKGROUND_SKILLBAR;
-    m_arrHUDLocations[HUD_IMAGE_FOREGROUND_SKILLBAR_GCD] = HUD_LOCATION_FOREGROUND_SKILLBAR_GCD;
-    m_arrHUDLocations[HUD_IMAGE_FOREGROUND_SKILLBAR_CD] = HUD_LOCATION_FOREGROUND_SKILLBAR_CD;
-
-    m_arrHUDLocations[HUD_IMAGE_BACKGROUND_CHARACTERVIEW] = HUD_LOCATION_BACKGROUND_CHARACTERVIEW;
-
-    m_arrHUDLocations[HUD_IMAGE_BACKGROUND_SKILLBOOKVIEW] = HUD_LOCATION_BACKGROUND_SKILLBOOKVIEW;
-    
-    m_arrHUDLocations[HUD_IMAGE_BACKGROUND_INVENTORYVIEW] = HUD_LOCATION_BACKGROUND_INVENTORYVIEW;
-    m_arrHUDLocations[HUD_IMAGE_FOREGROUND_INVENTORYVIEW] = HUD_LOCATION_FOREGROUND_INVENTORYVIEW;
-    m_arrHUDLocations[HUD_IMAGE_FOREGROUND_INVENTORYVIEW_BAGBUTTON_TRASH] = HUD_LOCATION_FOREGROUND_INVENTORYVIEW_BAGBUTTON_TRASH;
-    m_arrHUDLocations[HUD_IMAGE_FOREGROUND_INVENTORYVIEW_BAGBUTTON_CONSUMMABLE] = HUD_LOCATION_FOREGROUND_INVENTORYVIEW_BAGBUTTON_CONSUMMABLE;
-    m_arrHUDLocations[HUD_IMAGE_FOREGROUND_INVENTORYVIEW_BAGBUTTON_EQUIPMENT] = HUD_LOCATION_FOREGROUND_INVENTORYVIEW_BAGBUTTON_EQUIPMENT;
-    m_arrHUDLocations[HUD_IMAGE_FOREGROUND_INVENTORYVIEW_BAGBUTTON_QUEST] = HUD_LOCATION_FOREGROUND_INVENTORYVIEW_BAGBUTTON_QUEST;
-    m_arrHUDLocations[HUD_IMAGE_FOREGROUND_INVENTORYVIEW_BAGBUTTON_BUFFER] = HUD_LOCATION_FOREGROUND_INVENTORYVIEW_BAGBUTTON_BUFFER;
-    m_arrHUDLocations[HUD_IMAGE_FOREGROUND_INVENTORYVIEW_ACTIVEBAGBUTTON] = HUD_LOCATION_FOREGROUND_INVENTORYVIEW_ACTIVEBAGBUTTON;
+    //m_arrHUDLocations[HUD_IMAGE_BACKGROUND_] = HUD_LOCATION_BACKGROUND_;
 
     // Initialize status effect icons locations
 
@@ -303,49 +283,19 @@ Void InterfaceManager::Initialize()
 
     // Initialize skin colors
     m_hColorBrush.Bind();
-
-    m_arrHUDColors[HUD_COLOR_SELFBAR_TEXT] = Color4::White;
+    //m_arrHUDColors[HUD_COLOR_] = Color4::White;
     
-    m_arrHUDColors[HUD_COLOR_TARGETBAR_TEXT] = Color4::White;
-    
-    m_arrHUDColors[HUD_COLOR_CASTBAR_TEXT] = Color4::White;
-
-    m_arrHUDColors[HUD_COLOR_CHARACTERVIEW_TITLE] = Color4::Yellow;
-    m_arrHUDColors[HUD_COLOR_CHARACTERVIEW_VALUE] = Color4::Green;
-
-    m_arrHUDColors[HUD_COLOR_SKILLBOOK_TEXT] = Color4::White;
-
     // Initialize skin text formats
     m_hTextBrush.Bind();
     m_hTextFormat.Bind( LOCALENAME_EN_US, GPU2DFONTFAMILY_ARIAL, GPU2DFONT_WEIGHT_NORMAL, GPU2DFONT_STYLE_NORMAL, GPU2DFONT_STRETCH_NORMAL, 10.0f, NULL );
-
-    m_arrTextFormats[HUD_FONT_SELFBAR_TEXT] = &m_hTextFormat;
-    m_arrTextFormats[HUD_FONT_TARGET_TEXT] = &m_hTextFormat;
-    m_arrTextFormats[HUD_FONT_CASTBAR_TEXT] = &m_hTextFormat;
-    m_arrTextFormats[HUD_FONT_CHARACTERVIEW_TITLE] = &m_hTextFormat;
-    m_arrTextFormats[HUD_FONT_CHARACTERVIEW_VALUE] = &m_hTextFormat;
-    m_arrTextFormats[HUD_FONT_SKILLBOOK_TEXT] = &m_hTextFormat;
+    //m_arrTextFormats[HUD_FONT_] = &m_hTextFormat;
 
     // Create HUD
     m_pBackboardModel = NULL;
 
-    //m_pSelfBarModel = NULL;
-    //m_pTargetBarModel = NULL;
-    //m_pFocusBarModel = NULL;
+    /////////////////////////////////
 
-    //m_pStatusEffectBarModel = NULL;
-    //m_pSkillBarModel = NULL;
-
-    //m_pCastBarModel = NULL;
-
-    //m_pCharacterViewModel = NULL;
-    //m_pCharacterView = NULL;
-    //m_pSkillBookViewModel = NULL;
-    //m_pSkillBookView = NULL;
-    //m_pInventoryViewModel = NULL;
-    //m_pInventoryView = NULL;
-
-    m_pHUDWindow = NULL;
+    m_pWindow = NULL;
 
     _CreateHeadUpDisplay();
 
@@ -384,28 +334,15 @@ Void InterfaceManager::_CreateHeadUpDisplay()
 
     m_pBackboardModel = New HUDBackboardModel();
 
-    //m_pSelfBarModel = New SelfBarModel( pPlayer );
-    //m_pTargetBarModel = New TargetBarModel( pPlayer, false );
-    //m_pFocusBarModel = New TargetBarModel( pPlayer, true );
-
-    //m_pStatusEffectBarModel = New StatusEffectBarModel( pPlayer );
-    //m_pSkillBarModel = New SkillBarModel( pPlayer, 1, 16 );
-    //m_pSkillBarModel->SetSlot( 0, SKILLID_MAGE_FIREBOLT );
-    //m_pSkillBarModel->SetSlot( 1, SKILLID_MAGE_ICENOVA );
-
-    //m_pCastBarModel = New CastBarModel( pPlayer );
-
-    //m_pCharacterViewModel = New CharacterViewModel( pPlayer );
-    //m_pSkillBookViewModel = New SkillBookViewModel( pPlayer );
-    //m_pInventoryViewModel = New InventoryViewModel( pPlayer );
+    ////////////////////////////////////////////////
 
     UnSelectMemory();
 
     // HUD window
     UInt iWidth, iHeight;
     GUIFn->GetScreenSize( &iWidth, &iHeight );
-    m_pHUDWindow = GUIFn->CreateWindow( TEXT("HUD"), Rectangle2( Point2(4,4), iWidth - 4, iHeight - 4 ), GUIWINDOW_STYLE_NAKED );
-    GUIWidget * pHUDRoot = m_pHUDWindow->GetClientRoot();
+    m_pWindow = GUIFn->CreateWindow( TEXT("HUD"), Rectangle2( Point2(4,4), iWidth - 4, iHeight - 4 ), GUIWINDOW_STYLE_NAKED );
+    GUIWidget * pHUDRoot = m_pWindow->GetClientRoot();
 
     // HUD layout
     GUIFn->SelectMemory( TEXT("LayoutData") );
@@ -415,109 +352,32 @@ Void InterfaceManager::_CreateHeadUpDisplay()
     hudLayout.FillY = GUILAYOUT_FILL_FIXED;
     hudLayout.Anchor = GUILAYOUT_ANCHOR_FIXED;
 
-    //hudLayout.FixedPos.X = 0;
-    //hudLayout.FixedPos.Y = 0;
-    //hudLayout.FixedSize.X = 150;
-    //hudLayout.FixedSize.Y = 60;
-    //SelfBar * pSelfBar = New SelfBar( m_pSelfBarModel, pHUDRoot, hudLayout, TEXT("SelfBar") );
-    //hudLayout.FixedPos.X = 150 + 4;
-    //hudLayout.FixedPos.Y = 0;
-    //hudLayout.FixedSize.X = 200;
-    //hudLayout.FixedSize.Y = 80;
-    //TargetBar * pTargetBar = New TargetBar( m_pTargetBarModel, pHUDRoot, hudLayout, TEXT("TargetBar") );
-    //hudLayout.FixedPos.X = 150 + 4;
-    //hudLayout.FixedPos.Y = 60 + 4;
-    //hudLayout.FixedSize.X = 200;
-    //hudLayout.FixedSize.Y = 80;
-    //TargetBar * pFocusBar = New TargetBar( m_pFocusBarModel, pHUDRoot, hudLayout, TEXT("FocusBar") );
-
-    //hudLayout.FixedPos.X = iWidth - 256 - 8;
-    //hudLayout.FixedPos.Y = 4;
-    //hudLayout.FixedSize.X = 256;
-    //hudLayout.FixedSize.Y = 32;
-    //StatusEffectBar * pStatusEffectBar = New StatusEffectBar( m_pStatusEffectBarModel, pHUDRoot, hudLayout, TEXT("StatusEffectBar") );
-    //hudLayout.FixedPos.X = ( (iWidth - 512) >> 1 );
-    //hudLayout.FixedPos.Y = 704;
-    //hudLayout.FixedSize.X = 512;
-    //hudLayout.FixedSize.Y = 32;
-    //SkillBar * pSkillBar = New SkillBar( m_pSkillBarModel, pHUDRoot, hudLayout, TEXT("SkillBar") );
-
-    //hudLayout.FixedPos.X = ( (iWidth - 192) >> 1 );
-    //hudLayout.FixedPos.Y = 672;
-    //hudLayout.FixedSize.X = 192;
-    //hudLayout.FixedSize.Y = 24;
-    //CastBar * pCastBar = New CastBar( m_pCastBarModel, pHUDRoot, hudLayout, TEXT("CastBar") );
-
-    //hudLayout.FixedPos.X = ( (iWidth - 384) >> 1 );
-    //hudLayout.FixedPos.Y = ( (iHeight - 640) >> 1 );
-    //hudLayout.FixedSize.X = 384;
-    //hudLayout.FixedSize.Y = 640;
-    //m_pCharacterView = New CharacterView( m_pCharacterViewModel, pHUDRoot, hudLayout, TEXT("CharacterView") );
-
-    //hudLayout.FixedPos.X = ( (iWidth - 332) >> 1 );
-    //hudLayout.FixedPos.Y = ( (iHeight - 156) >> 1 );
-    //hudLayout.FixedSize.X = 332;
-    //hudLayout.FixedSize.Y = 156;
-    //m_pSkillBookView = New SkillBookView( m_pSkillBookViewModel, pHUDRoot, hudLayout, TEXT("SkillBookView") );
-
-    //hudLayout.FixedPos.X = ( (iWidth - 400) >> 1 );
-    //hudLayout.FixedPos.Y = ( (iHeight - 264) >> 1 );
-    //hudLayout.FixedSize.X = 400;
-    //hudLayout.FixedSize.Y = 264;
-    //m_pInventoryView = New InventoryView( m_pInventoryViewModel, pHUDRoot, hudLayout, TEXT("InventoryView") );
+    ////////////////////////////////////////////////
 
     GUIFn->UnSelectMemory();
 
     // HUD setup
     GUIFn->SetBackboardModel( m_pBackboardModel );
 
-    GUIFn->RegisterWindow( m_pHUDWindow );
-    m_pHUDWindow->SetEventBlocking( false );
-    m_pHUDWindow->SetVisible( true );
-
-    //m_pCharacterView->SetVisible( false );
-    //m_pSkillBookView->SetVisible( false );
-    //m_pInventoryView->SetVisible( false );
+    GUIFn->RegisterWindow( m_pWindow );
+    m_pWindow->SetEventBlocking( false );
+    m_pWindow->SetVisible( true );
 }
 Void InterfaceManager::_DestroyHeadUpDisplay()
 {
     // HUD setup
-    GUIFn->UnregisterWindow( m_pHUDWindow );
+    GUIFn->UnregisterWindow( m_pWindow );
    
     GUIFn->SetBackboardModel( NULL );
 
     // HUD window
-    GUIFn->DestroyWindow( m_pHUDWindow );
-    m_pHUDWindow = NULL;
-
-    //m_pCharacterView = NULL;
-    //m_pSkillBookView = NULL;
-    //m_pInventoryView = NULL;
+    GUIFn->DestroyWindow( m_pWindow );
+    m_pWindow = NULL;
 
     // HUD models
     SelectMemory( TEXT("Scratch") );
 
-    //Delete( m_pInventoryViewModel );
-    //m_pInventoryViewModel = NULL;
-    //Delete( m_pSkillBookViewModel );
-    //m_pSkillBookViewModel = NULL;
-    //Delete( m_pCharacterViewModel );
-    //m_pCharacterViewModel = NULL;
-
-    //Delete( m_pCastBarModel );
-    //m_pCastBarModel = NULL;
-
-    //Delete( m_pSkillBarModel );
-    //m_pSkillBarModel = NULL;
-    //Delete( m_pStatusEffectBarModel );
-    //m_pStatusEffectBarModel = NULL;
-
-    //Delete( m_pFocusBarModel );
-    //m_pFocusBarModel = NULL;
-    //Delete( m_pTargetBarModel );
-    //m_pTargetBarModel = NULL;
-    //Delete( m_pSelfBarModel );
-    //m_pSelfBarModel = NULL;
+    /////////////////////////////////////////////////
 
     Delete( m_pBackboardModel );
     m_pBackboardModel = NULL;

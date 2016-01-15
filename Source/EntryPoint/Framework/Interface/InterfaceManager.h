@@ -36,63 +36,22 @@
 // Interface Skin
 typedef UInt GUIImageID;
 enum HUDImage {
-    HUD_IMAGE_BACKGROUND_HPBAR = 0,
-    HUD_IMAGE_FOREGROUND_HPBAR,
-    HUD_IMAGE_BACKGROUND_MPBAR,
-    HUD_IMAGE_FOREGROUND_MPBAR,
-
-    HUD_IMAGE_BACKGROUND_STATUSEFFECTBAR,
-    HUD_IMAGE_FOREGROUND_STATUSEFFECTBAR,
-
-    HUD_IMAGE_BACKGROUND_CASTBAR,
-    HUD_IMAGE_FOREGROUND_CASTBAR,
-
-    HUD_IMAGE_BACKGROUND_SKILLBAR,
-    HUD_IMAGE_FOREGROUND_SKILLBAR_GCD,
-    HUD_IMAGE_FOREGROUND_SKILLBAR_CD,
-
-    HUD_IMAGE_BACKGROUND_CHARACTERVIEW,
-
-    HUD_IMAGE_BACKGROUND_SKILLBOOKVIEW,
-
-    HUD_IMAGE_BACKGROUND_INVENTORYVIEW,
-    HUD_IMAGE_FOREGROUND_INVENTORYVIEW,
-    HUD_IMAGE_FOREGROUND_INVENTORYVIEW_BAGBUTTON_TRASH,
-    HUD_IMAGE_FOREGROUND_INVENTORYVIEW_BAGBUTTON_CONSUMMABLE,
-    HUD_IMAGE_FOREGROUND_INVENTORYVIEW_BAGBUTTON_EQUIPMENT,
-    HUD_IMAGE_FOREGROUND_INVENTORYVIEW_BAGBUTTON_QUEST,
-    HUD_IMAGE_FOREGROUND_INVENTORYVIEW_BAGBUTTON_BUFFER,
-    HUD_IMAGE_FOREGROUND_INVENTORYVIEW_ACTIVEBAGBUTTON,
+    HUD_IMAGE_BACKGROUND_ = 0,
+    //HUD_IMAGE_FOREGROUND_,
 
     HUD_IMAGE_COUNT
 };
 
 enum HUDColor {
-    HUD_COLOR_SELFBAR_TEXT = 0,
-    
-    HUD_COLOR_TARGETBAR_TEXT,
-    
-    HUD_COLOR_CASTBAR_TEXT,
-
-    HUD_COLOR_CHARACTERVIEW_TITLE,
-    HUD_COLOR_CHARACTERVIEW_VALUE,
-
-    HUD_COLOR_SKILLBOOK_TEXT,
+    HUD_COLOR_ = 0,
+    //HUD_COLOR_,
 
     HUD_COLOR_COUNT
 };
 
 enum HUDFont {
-    HUD_FONT_SELFBAR_TEXT = 0,
-
-    HUD_FONT_TARGET_TEXT,
-
-    HUD_FONT_CASTBAR_TEXT,
-
-    HUD_FONT_CHARACTERVIEW_TITLE,
-    HUD_FONT_CHARACTERVIEW_VALUE,
-
-    HUD_FONT_SKILLBOOK_TEXT,
+    HUD_FONT_ = 0,
+    //HUD_FONT_,
 
     HUD_FONT_COUNT
 };
@@ -100,33 +59,8 @@ enum HUDFont {
 // HUD skin texture locations
 #define HUD_TEXTURE_SIZE 128
 
-#define HUD_LOCATION_BACKGROUND_HPBAR Rectangle2( Point2(  0, 0 ), 32, 32 )
-#define HUD_LOCATION_FOREGROUND_HPBAR Rectangle2( Point2( 32, 0 ), 32, 32 )
-#define HUD_LOCATION_BACKGROUND_MPBAR Rectangle2( Point2( 64, 0 ), 32, 32 )
-#define HUD_LOCATION_FOREGROUND_MPBAR Rectangle2( Point2( 96, 0 ), 32, 32 )
-
-#define HUD_LOCATION_BACKGROUND_CASTBAR Rectangle2( Point2( 128, 0 ), 32, 32 )
-#define HUD_LOCATION_FOREGROUND_CASTBAR Rectangle2( Point2( 160, 0 ), 32, 32 )
-
-#define HUD_LOCATION_BACKGROUND_STATUSEFFECTBAR Rectangle2( Point2( 192, 0 ), 32, 32 )
-#define HUD_LOCATION_FOREGROUND_STATUSEFFECTBAR Rectangle2( Point2( 224, 0 ), 32, 32 )
-
-#define HUD_LOCATION_BACKGROUND_SKILLBAR     Rectangle2( Point2(  0, 32 ), 32, 32 )
-#define HUD_LOCATION_FOREGROUND_SKILLBAR_GCD Rectangle2( Point2( 32, 32 ), 32, 32 )
-#define HUD_LOCATION_FOREGROUND_SKILLBAR_CD  Rectangle2( Point2( 64, 32 ), 32, 32 )
-
-#define HUD_LOCATION_BACKGROUND_CHARACTERVIEW Rectangle2( Point2( 96, 32 ), 32, 32 )
-
-#define HUD_LOCATION_BACKGROUND_SKILLBOOKVIEW Rectangle2( Point2( 128, 32 ), 32, 32 )
-
-#define HUD_LOCATION_BACKGROUND_INVENTORYVIEW                       Rectangle2( Point2( 160, 32 ), 32, 32 )
-#define HUD_LOCATION_FOREGROUND_INVENTORYVIEW                       Rectangle2( Point2( 192, 32 ), 32, 32 )
-#define HUD_LOCATION_FOREGROUND_INVENTORYVIEW_BAGBUTTON_TRASH       Rectangle2( Point2( 224, 32 ), 32, 32 )
-#define HUD_LOCATION_FOREGROUND_INVENTORYVIEW_BAGBUTTON_CONSUMMABLE Rectangle2( Point2(   0, 64 ), 32, 32 )
-#define HUD_LOCATION_FOREGROUND_INVENTORYVIEW_BAGBUTTON_EQUIPMENT   Rectangle2( Point2(  32, 64 ), 32, 32 )
-#define HUD_LOCATION_FOREGROUND_INVENTORYVIEW_BAGBUTTON_QUEST       Rectangle2( Point2(  64, 64 ), 32, 32 )
-#define HUD_LOCATION_FOREGROUND_INVENTORYVIEW_BAGBUTTON_BUFFER      Rectangle2( Point2(  96, 64 ), 32, 32 )
-#define HUD_LOCATION_FOREGROUND_INVENTORYVIEW_ACTIVEBAGBUTTON       Rectangle2( Point2( 128, 64 ), 32, 32 )
+#define HUD_LOCATION_BACKGROUND_ Rectangle2( Point2(  0, 0 ), 32, 32 )
+#define HUD_LOCATION_FOREGROUND_ Rectangle2( Point2( 32, 0 ), 32, 32 )
 
 // HUD status effects icons texture locations
 #define HUDICON_LOCATION_STATUSEFFECT_CHILL Rectangle2( Point2( 0, 0 ), 32, 32 )
@@ -226,14 +160,7 @@ public:
     inline GPU2DContext * GetHUDContext() const;
 
     inline GPU2DBitmap * GetHUDSkinBitmap() const;
-    inline GPU2DBitmap * GetHUDStatusEffectBitmap() const;
-    inline GPU2DBitmap * GetHUDSkillsBitmap() const;
-    inline GPU2DBitmap * GetHUDItemsBitmap() const;
-
     inline const Rectangle2 & GetHUDLocation( HUDImage iHUDImage ) const;
-    //inline const Rectangle2 & GetHUDLocation( StatusEffectID idStatusEffect ) const;
-    //inline const Rectangle2 & GetHUDLocation( SkillID idSkill ) const;
-    //inline const Rectangle2 & GetHUDLocation( ItemID idItem ) const;
 
     inline GPU2DSolidColorBrush * GetHUDColorBrush() const;
     inline const Color4 & GetHUDColor( HUDColor iHUDColor ) const;
@@ -242,10 +169,6 @@ public:
     inline GPU2DTextFormat * GetHUDTextFormat( HUDFont iHUDFont ) const;
 
     // HUD views
-    //inline Void ToggleCharacterView();
-    //inline Void ToggleSkillBookView();
-    //inline Void UpdateSkillBookView();
-    //inline Void ToggleInventoryView();
 
     // HUD drag & drop data
     inline HUDDragNDropData * GetDragNDropData();
@@ -258,14 +181,12 @@ public:
 private:
     // HUD Skin
     GPU2DBitmap * m_pSkinBitmap;
-    GPU2DBitmap * m_pStatusEffectsBitmap;
-    GPU2DBitmap * m_pSkillsBitmap;
-    GPU2DBitmap * m_pItemsBitmap;
+    //GPU2DBitmap * m_pSkillIconsBitmap;
+    //GPU2DBitmap * m_pMonsterIconsBitmap;
+    //GPU2DBitmap * m_pRuneIconsBitmap;
+    //GPU2DBitmap * m_pCurrencyIconsBitmap;
 
     Rectangle2 m_arrHUDLocations[HUD_IMAGE_COUNT];
-    //Rectangle2 m_arrStatusEffectIcons[STATUSEFFECTID_COUNT];
-    //Rectangle2 m_arrSkillIcons[SKILLID_COUNT];
-    //Rectangle2 m_arrItemIcons[ITEMID_COUNT];
 
     mutable GPU2DSolidColorBrush m_hColorBrush;
     Color4 m_arrHUDColors[HUD_COLOR_COUNT];
@@ -279,24 +200,9 @@ private:
     Void _DestroyHeadUpDisplay();
 
     HUDBackboardModel * m_pBackboardModel;
+    GUIWindow * m_pWindow;
 
-    //SelfBarModel * m_pSelfBarModel;
-    //TargetBarModel * m_pTargetBarModel;
-    //TargetBarModel * m_pFocusBarModel;
-
-    //StatusEffectBarModel * m_pStatusEffectBarModel;
-    //SkillBarModel * m_pSkillBarModel;
-
-    //CastBarModel * m_pCastBarModel;
-
-    //CharacterViewModel * m_pCharacterViewModel;
-    //CharacterView * m_pCharacterView;
-    //SkillBookViewModel * m_pSkillBookViewModel;
-    //SkillBookView * m_pSkillBookView;
-    //InventoryViewModel * m_pInventoryViewModel;
-    //InventoryView * m_pInventoryView;
-
-    GUIWindow * m_pHUDWindow;
+    /////////////////////////////////////
 
     HUDDragNDropData m_hDragNDrop;
 };

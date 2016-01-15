@@ -33,8 +33,8 @@
 
     // Debug class selection, define one (and only one !) of those to use it
 #ifdef MAIN_DEBUG
-    //#define DEBUGMAIN_SCRATCH
-    #define DEBUGMAIN_ENGINE
+    #define DEBUGMAIN_SCRATCH
+    //#define DEBUGMAIN_ENGINE
 #endif // MAIN_DEBUG
 
 /////////////////////////////////////////////////////////////////////////////////
