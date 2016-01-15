@@ -67,12 +67,9 @@ protected:
     Void _LoadPhysics();
     Void _LoadAnimations();
 
-    // Graphical representation
-    GeometryInstance m_hGeometry;
+    
 
-    // Physical representation
-    Skeleton * m_pSkeleton;
-    CharacterController * m_pController;
+
 
     // World node
     WorldNode * m_pWorldNode;

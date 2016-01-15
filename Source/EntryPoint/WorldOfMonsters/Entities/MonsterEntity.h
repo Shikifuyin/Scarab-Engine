@@ -41,6 +41,16 @@ public:
     inline virtual EntityType GetType() const;
 
 protected:
+    // Logical representation
+    MonsterInstance * m_pMonsterInstance;
+
+    // Graphical representation
+    GeometryInstance m_hGeometry;
+
+    // Physical representation
+    Skeleton * m_pSkeleton;
+    CharacterController * m_pController;
+
 
 };
 
