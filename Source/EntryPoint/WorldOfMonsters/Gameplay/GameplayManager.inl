@@ -25,7 +25,7 @@ inline const GChar * GameplayManager::GetName() {
 inline const GChar * GameplayManager::GetMemoryBudget() {
     return TEXT (
         "Heap:Scratch(4194304);"
-        );
+    );
 }
 
 inline UInt GameplayManager::GetRandomUInt( UInt iRange ) const {

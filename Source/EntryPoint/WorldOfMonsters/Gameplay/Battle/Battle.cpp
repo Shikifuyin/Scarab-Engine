@@ -864,6 +864,8 @@ Void Battle::_HandleSkillEffect( BattleTeam * pCasterTeam, UInt iCaster, BattleT
             case SKILLEFFECT_STATUS: {
                     const SkillEffectStatus * pStatusEffect = (const SkillEffectStatus *)pSkillEffect;
 
+                    // Accuracy / Resistance, Check Proc
+
                     // Apply
                     pTarget->AddStatusEffect( pStatusEffect->GetStatusEffectType(), pStatusEffect->GetStackCount(),
                                               pStatusEffect->GetDuration(), pStatusEffect->GetAmplitude() );
