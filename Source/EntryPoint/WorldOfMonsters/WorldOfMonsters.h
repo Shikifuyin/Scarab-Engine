@@ -72,6 +72,7 @@ public:
     WorldOfMonsters();
     virtual ~WorldOfMonsters();
 
+    // Callbacks
     virtual Bool OnInitialize();
     virtual Void OnCleanup();
 
@@ -88,6 +89,9 @@ public:
     virtual Bool OnMousePress( UInt iX, UInt iY, KeyCode iButton );
     virtual Bool OnMouseRelease( UInt iX, UInt iY, KeyCode iButton );
     virtual Bool OnMouseDblClick( UInt iX, UInt iY, KeyCode iButton );
+
+    // Application state transitions
+    /////////////////////////////////////////////////
 
 private:
     friend class TestBackboardModel;

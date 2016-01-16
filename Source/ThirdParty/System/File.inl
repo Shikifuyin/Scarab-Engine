@@ -19,9 +19,6 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // HFile implementation
-inline Bool HFile::IsValid() const {
-    return ( m_hFile != NULL );
-}
 inline Bool HFile::CanRead() const {
     return ( (m_iMode & FILE_READ) != 0 );
 }

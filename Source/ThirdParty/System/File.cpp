@@ -159,6 +159,11 @@ Void HFile::Close()
     m_hFile = NULL;
 }
 
+Bool HFile::IsValid() const
+{
+    return ( m_hFile != INVALID_HANDLE_VALUE );
+}
+
 UInt64 HFile::GetSize() const
 {
     DebugAssert( m_hFile != NULL );

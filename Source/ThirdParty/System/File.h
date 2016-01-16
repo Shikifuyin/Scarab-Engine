@@ -85,7 +85,7 @@ public:
     //Bool ReOpen( FileMode iMode, FileFlags iFlags = 0 );
     Void Close();	
 
-    inline Bool IsValid() const;
+    Bool IsValid() const;
     inline Bool CanRead() const;
     inline Bool CanWrite() const;
 

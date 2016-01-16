@@ -116,10 +116,6 @@ public:
 private:
     // HUD Skin
     GPU2DBitmap * m_pSkinBitmap;
-    //GPU2DBitmap * m_pSkillIconsBitmap;
-    //GPU2DBitmap * m_pMonsterIconsBitmap;
-    //GPU2DBitmap * m_pRuneIconsBitmap;
-    //GPU2DBitmap * m_pCurrencyIconsBitmap;
 
     Rectangle2 m_arrHUDLocations[HUD_IMAGE_COUNT];
 

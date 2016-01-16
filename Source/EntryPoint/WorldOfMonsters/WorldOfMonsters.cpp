@@ -150,10 +150,10 @@ Void WorldOfMonsters::OnFrameRender()
     RenderingFn->ClearRenderTarget( RenderingFn->GetScreenRenderTarget(), (const Float*)Color4::DarkGray );
     RenderingFn->ClearDepthStencil( RenderingFn->GetScreenDepthStencil(), true, true, 1.0f );
 
-    // Render World
+    // Render world
     WorldFn->RenderWorld();
 
-    // Render GUI
+    // Render interface
     InterfaceFn->Render();
 
     // Render Debug text
