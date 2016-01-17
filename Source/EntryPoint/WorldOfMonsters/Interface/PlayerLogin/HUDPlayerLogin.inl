@@ -6,7 +6,7 @@
 // Status : Alpha
 // Portability : Any
 /////////////////////////////////////////////////////////////////////////////////
-// Description : Framework, Interface : HUDBackboard
+// Description : Framework, Interface : HUDPlayerLogin
 /////////////////////////////////////////////////////////////////////////////////
 // Part of Scarab-Engine, licensed under the
 // Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License
