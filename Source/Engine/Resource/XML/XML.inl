@@ -151,8 +151,9 @@ inline Bool XMLNode::_IsBlank( GChar ch ) {
 }
 inline Bool XMLNode::_IsNameChar( GChar ch ) {
     return ( ( TEXT('A') <= ch && ch <= TEXT('Z') )
-                || ( TEXT('a') <= ch && ch <= TEXT('z') )
-                || ch == TEXT('_') );
+          || ( TEXT('a') <= ch && ch <= TEXT('z') )
+          || ( TEXT('0') <= ch && ch <= TEXT('9') )
+          || ch == TEXT('_') );
 }
 
 /////////////////////////////////////////////////////////////////////////////////

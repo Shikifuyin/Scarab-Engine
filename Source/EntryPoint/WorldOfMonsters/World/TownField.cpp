@@ -53,19 +53,19 @@ Void TownField::Load( PlayerTown * pPlayerTown )
     m_pFloor = New TownFieldFloor();
     WorldFn->UnSelectMemory();
 
-    for ( UInt i = 0; i < BUILDING_COUNT; ++i ) {
-        BuildingType iType = (BuildingType)i;
-        if ( pPlayerTown->HasBuilding(iType) ) {
-            m_arrBuildingEntities[iType] = EntityFn->CreateBuilding( iType );
-            m_arrBuildingPositions[iType] = pPlayerTown->GetBuildingPosition( iType );
-        }
-    }
+    //for ( UInt i = 0; i < BUILDING_COUNT; ++i ) {
+    //    BuildingType iType = (BuildingType)i;
+    //    if ( pPlayerTown->HasBuilding(iType) ) {
+    //        m_arrBuildingEntities[iType] = EntityFn->CreateBuilding( iType );
+    //        m_arrBuildingPositions[iType] = pPlayerTown->GetBuildingPosition( iType );
+    //    }
+    //}
 
-    m_pRoot->AddChild( m_pFloor );
-    for( UInt i = 0; i < BUILDING_COUNT; ++i ) {
-        if ( m_arrBuildingEntities[i] != NULL )
-            m_pRoot->AddChild( m_arrBuildingEntities[i] );
-    }
+    //m_pRoot->AddChild( m_pFloor );
+    //for( UInt i = 0; i < BUILDING_COUNT; ++i ) {
+    //    if ( m_arrBuildingEntities[i] != NULL )
+    //        m_pRoot->AddChild( m_arrBuildingEntities[i] );
+    //}
 }
 Void TownField::UnLoad()
 {
@@ -89,17 +89,17 @@ Bool TownField::PlaceBuilding( BuildingEntity * pBuilding, UInt iX, UInt iY )
     Assert( iX < TOWNFIELD_CELL_COUNT_X );
     Assert( iY < TOWNFIELD_CELL_COUNT_Y );
 
-    BuildingType iType = pBuilding->GetBuildingType();
-    Assert( m_arrBuildingEntities[iType] == NULL );
+    //BuildingType iType = pBuilding->GetBuildingType();
+    //Assert( m_arrBuildingEntities[iType] == NULL );
 
-    Point2 hPosition( iX, iY );
-    Rectangle2 hNewRect( hPosition, pBuilding->GetWidth(), pBuilding->GetHeight() );
-    Bool bValidPlace = _CheckOverlaps( hNewRect );
-    if ( !bValidPlace )
-        return false;
+    //Point2 hPosition( iX, iY );
+    //Rectangle2 hNewRect( hPosition, pBuilding->GetWidth(), pBuilding->GetHeight() );
+    //Bool bValidPlace = _CheckOverlaps( hNewRect );
+    //if ( !bValidPlace )
+    //    return false;
 
-    m_arrBuildingEntities[iType] = pBuilding;
-    m_arrBuildingPositions[iType] = hPosition;
+    //m_arrBuildingEntities[iType] = pBuilding;
+    //m_arrBuildingPositions[iType] = hPosition;
 
     return true;
 }
@@ -112,13 +112,13 @@ Bool TownField::MoveBuilding( BuildingType iBuilding, UInt iX, UInt iY )
     BuildingEntity * pMovingBuilding = m_arrBuildingEntities[iBuilding];
     Assert( pMovingBuilding != NULL );
 
-    Point2 hPosition( iX, iY );
-    Rectangle2 hNewRect( hPosition, pMovingBuilding->GetWidth(), pMovingBuilding->GetHeight() );
-    Bool bValidPlace = _CheckOverlaps( hNewRect );
-    if ( !bValidPlace )
-        return false;
+    //Point2 hPosition( iX, iY );
+    //Rectangle2 hNewRect( hPosition, pMovingBuilding->GetWidth(), pMovingBuilding->GetHeight() );
+    //Bool bValidPlace = _CheckOverlaps( hNewRect );
+    //if ( !bValidPlace )
+    //    return false;
 
-    m_arrBuildingPositions[iBuilding] = hPosition;
+    //m_arrBuildingPositions[iBuilding] = hPosition;
 
     return true;
 }
@@ -129,20 +129,20 @@ Bool TownField::_CheckOverlaps( const Rectangle2 & hRect ) const
 {
     // Check against all placed buildings
     // No need for fancy SAP-like stuff here ... dataset is tiny.
-    for( UInt i = 0; i < BUILDING_COUNT; ++i ) {
-        BuildingEntity * pBuilding = m_arrBuildingEntities[i];
-        if ( pBuilding == NULL )
-            continue;
+    //for( UInt i = 0; i < BUILDING_COUNT; ++i ) {
+    //    BuildingEntity * pBuilding = m_arrBuildingEntities[i];
+    //    if ( pBuilding == NULL )
+    //        continue;
 
-        Rectangle2 hBuildingRect( m_arrBuildingPositions[i], pBuilding->GetWidth(), pBuilding->GetHeight() );
-        if ( hRect.TopLeft.X > hBuildingRect.DownRight.X || hRect.DownRight.X < hBuildingRect.TopLeft.X )
-            continue;
-        if ( hRect.TopLeft.Y > hBuildingRect.DownRight.Y || hRect.DownRight.Y < hBuildingRect.TopLeft.Y )
-            continue;
+    //    Rectangle2 hBuildingRect( m_arrBuildingPositions[i], pBuilding->GetWidth(), pBuilding->GetHeight() );
+    //    if ( hRect.TopLeft.X > hBuildingRect.DownRight.X || hRect.DownRight.X < hBuildingRect.TopLeft.X )
+    //        continue;
+    //    if ( hRect.TopLeft.Y > hBuildingRect.DownRight.Y || hRect.DownRight.Y < hBuildingRect.TopLeft.Y )
+    //        continue;
 
-        // Overlap !
-        return true;
-    }
+    //    // Overlap !
+    //    return true;
+    //}
     return false;
 }
 

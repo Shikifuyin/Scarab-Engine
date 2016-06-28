@@ -436,6 +436,32 @@ GChar * System::FormatTimeDate( GChar * strOutput, const TimeDate & hTimeDate ) 
                                                                                hTimeDate.iHours, hTimeDate.iMinutes, hTimeDate.iSeconds );
 }
 
+// Console IO //////////////////////////////////////////////////
+UInt System::ConsoleRead( GChar * outBuffer, UInt iMaxLength ) const
+{
+    HANDLE hIn = GetStdHandle( STD_INPUT_HANDLE );
+    DebugAssert( hIn != INVALID_HANDLE_VALUE );
+
+    DWord iRead = 0;
+    BOOL bOk = ReadConsole( hIn, outBuffer, iMaxLength, &iRead, NULL );
+    DebugAssert( bOk && iRead >= 2 );
+
+    outBuffer[iRead-2] = NULLBYTE; // remove trailing cr/lf
+    return (UInt)iRead;
+}
+Void System::ConsoleWrite( const GChar * strText, UInt iLength ) const
+{
+    HANDLE hOut = GetStdHandle( STD_OUTPUT_HANDLE );
+    DebugAssert( hOut != INVALID_HANDLE_VALUE );
+
+    if ( iLength == INVALID_OFFSET )
+        iLength = StringFn->Length( strText );
+
+    DWord iWritten = 0;
+    BOOL bOk = WriteConsole( hOut, strText, iLength, &iWritten, NULL );
+    DebugAssert( bOk && iWritten == iLength );
+}
+
 // File IO /////////////////////////////////////////////////////
 Bool System::CreateDirectory( const GChar * strPathName ) const
 {

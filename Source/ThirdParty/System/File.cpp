@@ -161,7 +161,7 @@ Void HFile::Close()
 
 Bool HFile::IsValid() const
 {
-    return ( m_hFile != INVALID_HANDLE_VALUE );
+    return ( m_hFile != INVALID_HANDLE_VALUE && m_hFile != NULL );
 }
 
 UInt64 HFile::GetSize() const

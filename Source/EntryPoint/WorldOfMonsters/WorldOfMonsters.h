@@ -66,7 +66,7 @@ enum GameState {
 class WorldOfMonsters : public WindowApplication
 {
     // Application class
-    DeclareApplication;
+    //DeclareApplication;
 
 public:
     WorldOfMonsters();
@@ -96,6 +96,12 @@ public:
 private:
     friend class TestBackboardModel;
 
+	// Input
+	Void _CreateActions() {}
+	Void _DestroyActions() {}
+
+	UInt m_iActionMap;
+
     // Debug
     Bool m_bWireFrame;
 
@@ -112,7 +118,7 @@ private:
 
     GameState m_iState;
 };
-RegisterApplication( WorldOfMonsters );
+//RegisterApplication( WorldOfMonsters );
 
 /////////////////////////////////////////////////////////////////////////////////
 // Backward Includes (Inlines & Templates)

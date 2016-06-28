@@ -23,7 +23,7 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // WorldOfMonsters implementation
-DefineWindowApplication( WorldOfMonsters );
+//DefineWindowApplication( WorldOfMonsters );
 
 WorldOfMonsters::WorldOfMonsters():
     WindowApplication( TEXT("World Of Monsters"), PIXEL_FMT_RGBA8, 1024, 768, 0 )

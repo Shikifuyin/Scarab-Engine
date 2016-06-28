@@ -19,17 +19,18 @@
 
 /////////////////////////////////////////////////////////////////////////////////
 // Entity implementation
-inline const GeometryInstance * Entity::GetGeometry() const {
-    return &m_hGeometry;
-}
-
-inline Skeleton * Entity::GetSkeleton() const {
-    return m_pSkeleton;
-}
-inline CharacterController * Entity::GetController() const {
-    return m_pController;
-}
-
-inline WorldNode * Entity::GetNode() const {
-    return m_pWorldNode;
-}
+//inline const GeometryInstance * Entity::GetGeometry() const {
+//    return &m_hGeometry;
+//}
+//
+//inline Skeleton * Entity::GetSkeleton() const {
+//    return m_pSkeleton;
+//}
+//inline CharacterController * Entity::GetController() const {
+//    return m_pController;
+//}
+//
+//inline WorldNode * Entity::GetNode() const {
+//    return m_pWorldNode;
+//}
+//

@@ -29,7 +29,7 @@
 /////////////////////////////////////////////////////////////////////////////////
 // Constants definitions
     // Main debug toggle, define this to enable usage of a debug class, see below
-#define MAIN_DEBUG
+//#define MAIN_DEBUG
 
     // Debug class selection, define one (and only one !) of those to use it
 #ifdef MAIN_DEBUG

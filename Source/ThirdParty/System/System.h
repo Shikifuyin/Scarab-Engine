@@ -191,6 +191,12 @@ public:
     GChar * FormatDate( GChar * strOutput, const TimeDate & hTimeDate ) const;
     GChar * FormatTimeDate( GChar * strOutput, const TimeDate & hTimeDate ) const;
     
+    // Console IO //////////////////////////////////////////////////
+    UInt ConsoleRead( GChar * outBuffer, UInt iMaxLength ) const;
+    Void ConsoleWrite( const GChar * strText, UInt iLength = INVALID_OFFSET ) const;
+
+    // Add more stuff (cursor manipulation, scrolling, clearing, ...)
+
     // File IO /////////////////////////////////////////////////////
     Bool CreateDirectory( const GChar * strPathName ) const;
     Bool DestroyDirectory( const GChar * strPathName );
